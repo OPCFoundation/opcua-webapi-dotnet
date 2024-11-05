@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **NamespaceUri** | **string** |  | [optional] 
-**UnitId** | **int** |  | [optional] 
+**UnitId** | **int** |  | [optional] [default to 0]
 **DisplayName** | [**LocalizedText**](LocalizedText.md) |  | [optional] 
 **Description** | [**LocalizedText**](LocalizedText.md) |  | [optional] 
 

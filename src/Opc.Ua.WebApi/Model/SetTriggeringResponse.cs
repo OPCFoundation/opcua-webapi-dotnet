@@ -30,7 +30,7 @@ namespace Opc.Ua.WebApi.Model
     /// SetTriggeringResponse
     /// </summary>
     [DataContract(Name = "SetTriggeringResponse")]
-    public partial class SetTriggeringResponse : IEquatable<SetTriggeringResponse>, IValidatableObject
+    public partial class SetTriggeringResponse : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="SetTriggeringResponse" /> class.
@@ -40,7 +40,7 @@ namespace Opc.Ua.WebApi.Model
         /// <param name="addDiagnosticInfos">addDiagnosticInfos.</param>
         /// <param name="removeResults">removeResults.</param>
         /// <param name="removeDiagnosticInfos">removeDiagnosticInfos.</param>
-        public SetTriggeringResponse(ResponseHeader responseHeader = default(ResponseHeader), List<long> addResults = default(List<long>), List<DiagnosticInfo> addDiagnosticInfos = default(List<DiagnosticInfo>), List<long> removeResults = default(List<long>), List<DiagnosticInfo> removeDiagnosticInfos = default(List<DiagnosticInfo>))
+        public SetTriggeringResponse(ResponseHeader responseHeader = default(ResponseHeader), List<StatusCode> addResults = default(List<StatusCode>), List<DiagnosticInfo> addDiagnosticInfos = default(List<DiagnosticInfo>), List<StatusCode> removeResults = default(List<StatusCode>), List<DiagnosticInfo> removeDiagnosticInfos = default(List<DiagnosticInfo>))
         {
             this.ResponseHeader = responseHeader;
             this.AddResults = addResults;
@@ -59,7 +59,7 @@ namespace Opc.Ua.WebApi.Model
         /// Gets or Sets AddResults
         /// </summary>
         [DataMember(Name = "AddResults", EmitDefaultValue = false)]
-        public List<long> AddResults { get; set; }
+        public List<StatusCode> AddResults { get; set; }
 
         /// <summary>
         /// Gets or Sets AddDiagnosticInfos
@@ -71,7 +71,7 @@ namespace Opc.Ua.WebApi.Model
         /// Gets or Sets RemoveResults
         /// </summary>
         [DataMember(Name = "RemoveResults", EmitDefaultValue = false)]
-        public List<long> RemoveResults { get; set; }
+        public List<StatusCode> RemoveResults { get; set; }
 
         /// <summary>
         /// Gets or Sets RemoveDiagnosticInfos
@@ -106,97 +106,11 @@ namespace Opc.Ua.WebApi.Model
         }
 
         /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as SetTriggeringResponse);
-        }
-
-        /// <summary>
-        /// Returns true if SetTriggeringResponse instances are equal
-        /// </summary>
-        /// <param name="input">Instance of SetTriggeringResponse to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(SetTriggeringResponse input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.ResponseHeader == input.ResponseHeader ||
-                    (this.ResponseHeader != null &&
-                    this.ResponseHeader.Equals(input.ResponseHeader))
-                ) && 
-                (
-                    this.AddResults == input.AddResults ||
-                    this.AddResults != null &&
-                    input.AddResults != null &&
-                    this.AddResults.SequenceEqual(input.AddResults)
-                ) && 
-                (
-                    this.AddDiagnosticInfos == input.AddDiagnosticInfos ||
-                    this.AddDiagnosticInfos != null &&
-                    input.AddDiagnosticInfos != null &&
-                    this.AddDiagnosticInfos.SequenceEqual(input.AddDiagnosticInfos)
-                ) && 
-                (
-                    this.RemoveResults == input.RemoveResults ||
-                    this.RemoveResults != null &&
-                    input.RemoveResults != null &&
-                    this.RemoveResults.SequenceEqual(input.RemoveResults)
-                ) && 
-                (
-                    this.RemoveDiagnosticInfos == input.RemoveDiagnosticInfos ||
-                    this.RemoveDiagnosticInfos != null &&
-                    input.RemoveDiagnosticInfos != null &&
-                    this.RemoveDiagnosticInfos.SequenceEqual(input.RemoveDiagnosticInfos)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.ResponseHeader != null)
-                {
-                    hashCode = (hashCode * 59) + this.ResponseHeader.GetHashCode();
-                }
-                if (this.AddResults != null)
-                {
-                    hashCode = (hashCode * 59) + this.AddResults.GetHashCode();
-                }
-                if (this.AddDiagnosticInfos != null)
-                {
-                    hashCode = (hashCode * 59) + this.AddDiagnosticInfos.GetHashCode();
-                }
-                if (this.RemoveResults != null)
-                {
-                    hashCode = (hashCode * 59) + this.RemoveResults.GetHashCode();
-                }
-                if (this.RemoveDiagnosticInfos != null)
-                {
-                    hashCode = (hashCode * 59) + this.RemoveDiagnosticInfos.GetHashCode();
-                }
-                return hashCode;
-            }
-        }
-
-        /// <summary>
         /// To validate all properties of the instance
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

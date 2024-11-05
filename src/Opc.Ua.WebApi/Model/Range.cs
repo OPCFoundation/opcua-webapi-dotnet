@@ -30,14 +30,14 @@ namespace Opc.Ua.WebApi.Model
     /// Range
     /// </summary>
     [DataContract(Name = "Range")]
-    public partial class Range : IEquatable<Range>, IValidatableObject
+    public partial class Range : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="Range" /> class.
         /// </summary>
-        /// <param name="low">low.</param>
-        /// <param name="high">high.</param>
-        public Range(double low = default(double), double high = default(double))
+        /// <param name="low">low (default to 0D).</param>
+        /// <param name="high">high (default to 0D).</param>
+        public Range(double low = 0D, double high = 0D)
         {
             this.Low = low;
             this.High = high;
@@ -79,58 +79,11 @@ namespace Opc.Ua.WebApi.Model
         }
 
         /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as Range);
-        }
-
-        /// <summary>
-        /// Returns true if Range instances are equal
-        /// </summary>
-        /// <param name="input">Instance of Range to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(Range input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.Low == input.Low ||
-                    this.Low.Equals(input.Low)
-                ) && 
-                (
-                    this.High == input.High ||
-                    this.High.Equals(input.High)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.Low.GetHashCode();
-                hashCode = (hashCode * 59) + this.High.GetHashCode();
-                return hashCode;
-            }
-        }
-
-        /// <summary>
         /// To validate all properties of the instance
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

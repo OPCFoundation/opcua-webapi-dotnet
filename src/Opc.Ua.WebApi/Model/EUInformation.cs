@@ -30,16 +30,16 @@ namespace Opc.Ua.WebApi.Model
     /// EUInformation
     /// </summary>
     [DataContract(Name = "EUInformation")]
-    public partial class EUInformation : IEquatable<EUInformation>, IValidatableObject
+    public partial class EUInformation : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="EUInformation" /> class.
         /// </summary>
         /// <param name="namespaceUri">namespaceUri.</param>
-        /// <param name="unitId">unitId.</param>
+        /// <param name="unitId">unitId (default to 0).</param>
         /// <param name="displayName">displayName.</param>
         /// <param name="description">description.</param>
-        public EUInformation(string namespaceUri = default(string), int unitId = default(int), LocalizedText displayName = default(LocalizedText), LocalizedText description = default(LocalizedText))
+        public EUInformation(string namespaceUri = default(string), int unitId = 0, LocalizedText displayName = default(LocalizedText), LocalizedText description = default(LocalizedText))
         {
             this.NamespaceUri = namespaceUri;
             this.UnitId = unitId;
@@ -97,80 +97,11 @@ namespace Opc.Ua.WebApi.Model
         }
 
         /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as EUInformation);
-        }
-
-        /// <summary>
-        /// Returns true if EUInformation instances are equal
-        /// </summary>
-        /// <param name="input">Instance of EUInformation to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(EUInformation input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.NamespaceUri == input.NamespaceUri ||
-                    (this.NamespaceUri != null &&
-                    this.NamespaceUri.Equals(input.NamespaceUri))
-                ) && 
-                (
-                    this.UnitId == input.UnitId ||
-                    this.UnitId.Equals(input.UnitId)
-                ) && 
-                (
-                    this.DisplayName == input.DisplayName ||
-                    (this.DisplayName != null &&
-                    this.DisplayName.Equals(input.DisplayName))
-                ) && 
-                (
-                    this.Description == input.Description ||
-                    (this.Description != null &&
-                    this.Description.Equals(input.Description))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.NamespaceUri != null)
-                {
-                    hashCode = (hashCode * 59) + this.NamespaceUri.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.UnitId.GetHashCode();
-                if (this.DisplayName != null)
-                {
-                    hashCode = (hashCode * 59) + this.DisplayName.GetHashCode();
-                }
-                if (this.Description != null)
-                {
-                    hashCode = (hashCode * 59) + this.Description.GetHashCode();
-                }
-                return hashCode;
-            }
-        }
-
-        /// <summary>
         /// To validate all properties of the instance
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

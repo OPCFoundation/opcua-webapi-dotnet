@@ -30,16 +30,16 @@ namespace Opc.Ua.WebApi.Model
     /// ModifyMonitoredItemsRequest
     /// </summary>
     [DataContract(Name = "ModifyMonitoredItemsRequest")]
-    public partial class ModifyMonitoredItemsRequest : IEquatable<ModifyMonitoredItemsRequest>, IValidatableObject
+    public partial class ModifyMonitoredItemsRequest : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ModifyMonitoredItemsRequest" /> class.
         /// </summary>
         /// <param name="requestHeader">requestHeader.</param>
-        /// <param name="subscriptionId">subscriptionId.</param>
+        /// <param name="subscriptionId">subscriptionId (default to 0).</param>
         /// <param name="timestampsToReturn">timestampsToReturn.</param>
         /// <param name="itemsToModify">itemsToModify.</param>
-        public ModifyMonitoredItemsRequest(RequestHeader requestHeader = default(RequestHeader), long subscriptionId = default(long), int timestampsToReturn = default(int), List<MonitoredItemModifyRequest> itemsToModify = default(List<MonitoredItemModifyRequest>))
+        public ModifyMonitoredItemsRequest(RequestHeader requestHeader = default(RequestHeader), long subscriptionId = 0, int timestampsToReturn = default(int), List<MonitoredItemModifyRequest> itemsToModify = default(List<MonitoredItemModifyRequest>))
         {
             this.RequestHeader = requestHeader;
             this.SubscriptionId = subscriptionId;
@@ -97,88 +97,22 @@ namespace Opc.Ua.WebApi.Model
         }
 
         /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as ModifyMonitoredItemsRequest);
-        }
-
-        /// <summary>
-        /// Returns true if ModifyMonitoredItemsRequest instances are equal
-        /// </summary>
-        /// <param name="input">Instance of ModifyMonitoredItemsRequest to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(ModifyMonitoredItemsRequest input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.RequestHeader == input.RequestHeader ||
-                    (this.RequestHeader != null &&
-                    this.RequestHeader.Equals(input.RequestHeader))
-                ) && 
-                (
-                    this.SubscriptionId == input.SubscriptionId ||
-                    this.SubscriptionId.Equals(input.SubscriptionId)
-                ) && 
-                (
-                    this.TimestampsToReturn == input.TimestampsToReturn ||
-                    this.TimestampsToReturn.Equals(input.TimestampsToReturn)
-                ) && 
-                (
-                    this.ItemsToModify == input.ItemsToModify ||
-                    this.ItemsToModify != null &&
-                    input.ItemsToModify != null &&
-                    this.ItemsToModify.SequenceEqual(input.ItemsToModify)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.RequestHeader != null)
-                {
-                    hashCode = (hashCode * 59) + this.RequestHeader.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.SubscriptionId.GetHashCode();
-                hashCode = (hashCode * 59) + this.TimestampsToReturn.GetHashCode();
-                if (this.ItemsToModify != null)
-                {
-                    hashCode = (hashCode * 59) + this.ItemsToModify.GetHashCode();
-                }
-                return hashCode;
-            }
-        }
-
-        /// <summary>
         /// To validate all properties of the instance
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // SubscriptionId (long) maximum
             if (this.SubscriptionId > (long)4294967295)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SubscriptionId, must be a value less than or equal to 4294967295.", new [] { "SubscriptionId" });
+                yield return new ValidationResult("Invalid value for SubscriptionId, must be a value less than or equal to 4294967295.", new [] { "SubscriptionId" });
             }
 
             // SubscriptionId (long) minimum
             if (this.SubscriptionId < (long)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SubscriptionId, must be a value greater than or equal to 0.", new [] { "SubscriptionId" });
+                yield return new ValidationResult("Invalid value for SubscriptionId, must be a value greater than or equal to 0.", new [] { "SubscriptionId" });
             }
 
             yield break;

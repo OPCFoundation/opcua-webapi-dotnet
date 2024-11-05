@@ -30,7 +30,7 @@ namespace Opc.Ua.WebApi.Model
     /// UpdateDataDetails
     /// </summary>
     [DataContract(Name = "UpdateDataDetails")]
-    public partial class UpdateDataDetails : IEquatable<UpdateDataDetails>, IValidatableObject
+    public partial class UpdateDataDetails : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="UpdateDataDetails" /> class.
@@ -88,72 +88,11 @@ namespace Opc.Ua.WebApi.Model
         }
 
         /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as UpdateDataDetails);
-        }
-
-        /// <summary>
-        /// Returns true if UpdateDataDetails instances are equal
-        /// </summary>
-        /// <param name="input">Instance of UpdateDataDetails to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(UpdateDataDetails input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.NodeId == input.NodeId ||
-                    (this.NodeId != null &&
-                    this.NodeId.Equals(input.NodeId))
-                ) && 
-                (
-                    this.PerformInsertReplace == input.PerformInsertReplace ||
-                    this.PerformInsertReplace.Equals(input.PerformInsertReplace)
-                ) && 
-                (
-                    this.UpdateValues == input.UpdateValues ||
-                    this.UpdateValues != null &&
-                    input.UpdateValues != null &&
-                    this.UpdateValues.SequenceEqual(input.UpdateValues)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.NodeId != null)
-                {
-                    hashCode = (hashCode * 59) + this.NodeId.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.PerformInsertReplace.GetHashCode();
-                if (this.UpdateValues != null)
-                {
-                    hashCode = (hashCode * 59) + this.UpdateValues.GetHashCode();
-                }
-                return hashCode;
-            }
-        }
-
-        /// <summary>
         /// To validate all properties of the instance
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

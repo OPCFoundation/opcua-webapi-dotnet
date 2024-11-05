@@ -30,17 +30,17 @@ namespace Opc.Ua.WebApi.Model
     /// AggregateConfiguration
     /// </summary>
     [DataContract(Name = "AggregateConfiguration")]
-    public partial class AggregateConfiguration : IEquatable<AggregateConfiguration>, IValidatableObject
+    public partial class AggregateConfiguration : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="AggregateConfiguration" /> class.
         /// </summary>
-        /// <param name="useServerCapabilitiesDefaults">useServerCapabilitiesDefaults.</param>
-        /// <param name="treatUncertainAsBad">treatUncertainAsBad.</param>
-        /// <param name="percentDataBad">percentDataBad.</param>
-        /// <param name="percentDataGood">percentDataGood.</param>
-        /// <param name="useSlopedExtrapolation">useSlopedExtrapolation.</param>
-        public AggregateConfiguration(bool useServerCapabilitiesDefaults = default(bool), bool treatUncertainAsBad = default(bool), int percentDataBad = default(int), int percentDataGood = default(int), bool useSlopedExtrapolation = default(bool))
+        /// <param name="useServerCapabilitiesDefaults">useServerCapabilitiesDefaults (default to false).</param>
+        /// <param name="treatUncertainAsBad">treatUncertainAsBad (default to false).</param>
+        /// <param name="percentDataBad">percentDataBad (default to 0).</param>
+        /// <param name="percentDataGood">percentDataGood (default to 0).</param>
+        /// <param name="useSlopedExtrapolation">useSlopedExtrapolation (default to false).</param>
+        public AggregateConfiguration(bool useServerCapabilitiesDefaults = false, bool treatUncertainAsBad = false, int percentDataBad = 0, int percentDataGood = 0, bool useSlopedExtrapolation = false)
         {
             this.UseServerCapabilitiesDefaults = useServerCapabilitiesDefaults;
             this.TreatUncertainAsBad = treatUncertainAsBad;
@@ -106,96 +106,34 @@ namespace Opc.Ua.WebApi.Model
         }
 
         /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as AggregateConfiguration);
-        }
-
-        /// <summary>
-        /// Returns true if AggregateConfiguration instances are equal
-        /// </summary>
-        /// <param name="input">Instance of AggregateConfiguration to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(AggregateConfiguration input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.UseServerCapabilitiesDefaults == input.UseServerCapabilitiesDefaults ||
-                    this.UseServerCapabilitiesDefaults.Equals(input.UseServerCapabilitiesDefaults)
-                ) && 
-                (
-                    this.TreatUncertainAsBad == input.TreatUncertainAsBad ||
-                    this.TreatUncertainAsBad.Equals(input.TreatUncertainAsBad)
-                ) && 
-                (
-                    this.PercentDataBad == input.PercentDataBad ||
-                    this.PercentDataBad.Equals(input.PercentDataBad)
-                ) && 
-                (
-                    this.PercentDataGood == input.PercentDataGood ||
-                    this.PercentDataGood.Equals(input.PercentDataGood)
-                ) && 
-                (
-                    this.UseSlopedExtrapolation == input.UseSlopedExtrapolation ||
-                    this.UseSlopedExtrapolation.Equals(input.UseSlopedExtrapolation)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.UseServerCapabilitiesDefaults.GetHashCode();
-                hashCode = (hashCode * 59) + this.TreatUncertainAsBad.GetHashCode();
-                hashCode = (hashCode * 59) + this.PercentDataBad.GetHashCode();
-                hashCode = (hashCode * 59) + this.PercentDataGood.GetHashCode();
-                hashCode = (hashCode * 59) + this.UseSlopedExtrapolation.GetHashCode();
-                return hashCode;
-            }
-        }
-
-        /// <summary>
         /// To validate all properties of the instance
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // PercentDataBad (int) maximum
             if (this.PercentDataBad > (int)255)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PercentDataBad, must be a value less than or equal to 255.", new [] { "PercentDataBad" });
+                yield return new ValidationResult("Invalid value for PercentDataBad, must be a value less than or equal to 255.", new [] { "PercentDataBad" });
             }
 
             // PercentDataBad (int) minimum
             if (this.PercentDataBad < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PercentDataBad, must be a value greater than or equal to 0.", new [] { "PercentDataBad" });
+                yield return new ValidationResult("Invalid value for PercentDataBad, must be a value greater than or equal to 0.", new [] { "PercentDataBad" });
             }
 
             // PercentDataGood (int) maximum
             if (this.PercentDataGood > (int)255)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PercentDataGood, must be a value less than or equal to 255.", new [] { "PercentDataGood" });
+                yield return new ValidationResult("Invalid value for PercentDataGood, must be a value less than or equal to 255.", new [] { "PercentDataGood" });
             }
 
             // PercentDataGood (int) minimum
             if (this.PercentDataGood < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for PercentDataGood, must be a value greater than or equal to 0.", new [] { "PercentDataGood" });
+                yield return new ValidationResult("Invalid value for PercentDataGood, must be a value greater than or equal to 0.", new [] { "PercentDataGood" });
             }
 
             yield break;

@@ -30,15 +30,15 @@ namespace Opc.Ua.WebApi.Model
     /// ViewDescription
     /// </summary>
     [DataContract(Name = "ViewDescription")]
-    public partial class ViewDescription : IEquatable<ViewDescription>, IValidatableObject
+    public partial class ViewDescription : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ViewDescription" /> class.
         /// </summary>
         /// <param name="viewId">viewId.</param>
-        /// <param name="timestamp">timestamp.</param>
-        /// <param name="viewVersion">viewVersion.</param>
-        public ViewDescription(string viewId = default(string), DateTime timestamp = default(DateTime), long viewVersion = default(long))
+        /// <param name="timestamp">timestamp (default to &quot;0001-01-01T00:00Z&quot;).</param>
+        /// <param name="viewVersion">viewVersion (default to 0).</param>
+        public ViewDescription(string viewId = default(string), DateTime timestamp = default(DateTime), long viewVersion = 0)
         {
             this.ViewId = viewId;
             this.Timestamp = timestamp;
@@ -88,82 +88,22 @@ namespace Opc.Ua.WebApi.Model
         }
 
         /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as ViewDescription);
-        }
-
-        /// <summary>
-        /// Returns true if ViewDescription instances are equal
-        /// </summary>
-        /// <param name="input">Instance of ViewDescription to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(ViewDescription input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.ViewId == input.ViewId ||
-                    (this.ViewId != null &&
-                    this.ViewId.Equals(input.ViewId))
-                ) && 
-                (
-                    this.Timestamp == input.Timestamp ||
-                    (this.Timestamp != null &&
-                    this.Timestamp.Equals(input.Timestamp))
-                ) && 
-                (
-                    this.ViewVersion == input.ViewVersion ||
-                    this.ViewVersion.Equals(input.ViewVersion)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.ViewId != null)
-                {
-                    hashCode = (hashCode * 59) + this.ViewId.GetHashCode();
-                }
-                if (this.Timestamp != null)
-                {
-                    hashCode = (hashCode * 59) + this.Timestamp.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.ViewVersion.GetHashCode();
-                return hashCode;
-            }
-        }
-
-        /// <summary>
         /// To validate all properties of the instance
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // ViewVersion (long) maximum
             if (this.ViewVersion > (long)4294967295)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for ViewVersion, must be a value less than or equal to 4294967295.", new [] { "ViewVersion" });
+                yield return new ValidationResult("Invalid value for ViewVersion, must be a value less than or equal to 4294967295.", new [] { "ViewVersion" });
             }
 
             // ViewVersion (long) minimum
             if (this.ViewVersion < (long)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for ViewVersion, must be a value greater than or equal to 0.", new [] { "ViewVersion" });
+                yield return new ValidationResult("Invalid value for ViewVersion, must be a value greater than or equal to 0.", new [] { "ViewVersion" });
             }
 
             yield break;

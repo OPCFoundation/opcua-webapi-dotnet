@@ -30,12 +30,12 @@ namespace Opc.Ua.WebApi.Model
     /// ModificationInfo
     /// </summary>
     [DataContract(Name = "ModificationInfo")]
-    public partial class ModificationInfo : IEquatable<ModificationInfo>, IValidatableObject
+    public partial class ModificationInfo : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ModificationInfo" /> class.
         /// </summary>
-        /// <param name="modificationTime">modificationTime.</param>
+        /// <param name="modificationTime">modificationTime (default to &quot;0001-01-01T00:00Z&quot;).</param>
         /// <param name="updateType">updateType.</param>
         /// <param name="userName">userName.</param>
         public ModificationInfo(DateTime modificationTime = default(DateTime), int updateType = default(int), string userName = default(string))
@@ -88,71 +88,11 @@ namespace Opc.Ua.WebApi.Model
         }
 
         /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as ModificationInfo);
-        }
-
-        /// <summary>
-        /// Returns true if ModificationInfo instances are equal
-        /// </summary>
-        /// <param name="input">Instance of ModificationInfo to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(ModificationInfo input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.ModificationTime == input.ModificationTime ||
-                    (this.ModificationTime != null &&
-                    this.ModificationTime.Equals(input.ModificationTime))
-                ) && 
-                (
-                    this.UpdateType == input.UpdateType ||
-                    this.UpdateType.Equals(input.UpdateType)
-                ) && 
-                (
-                    this.UserName == input.UserName ||
-                    (this.UserName != null &&
-                    this.UserName.Equals(input.UserName))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.ModificationTime != null)
-                {
-                    hashCode = (hashCode * 59) + this.ModificationTime.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.UpdateType.GetHashCode();
-                if (this.UserName != null)
-                {
-                    hashCode = (hashCode * 59) + this.UserName.GetHashCode();
-                }
-                return hashCode;
-            }
-        }
-
-        /// <summary>
         /// To validate all properties of the instance
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

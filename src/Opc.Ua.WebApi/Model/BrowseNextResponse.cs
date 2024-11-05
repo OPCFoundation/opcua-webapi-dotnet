@@ -30,7 +30,7 @@ namespace Opc.Ua.WebApi.Model
     /// BrowseNextResponse
     /// </summary>
     [DataContract(Name = "BrowseNextResponse")]
-    public partial class BrowseNextResponse : IEquatable<BrowseNextResponse>, IValidatableObject
+    public partial class BrowseNextResponse : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="BrowseNextResponse" /> class.
@@ -88,77 +88,11 @@ namespace Opc.Ua.WebApi.Model
         }
 
         /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as BrowseNextResponse);
-        }
-
-        /// <summary>
-        /// Returns true if BrowseNextResponse instances are equal
-        /// </summary>
-        /// <param name="input">Instance of BrowseNextResponse to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(BrowseNextResponse input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.ResponseHeader == input.ResponseHeader ||
-                    (this.ResponseHeader != null &&
-                    this.ResponseHeader.Equals(input.ResponseHeader))
-                ) && 
-                (
-                    this.Results == input.Results ||
-                    this.Results != null &&
-                    input.Results != null &&
-                    this.Results.SequenceEqual(input.Results)
-                ) && 
-                (
-                    this.DiagnosticInfos == input.DiagnosticInfos ||
-                    this.DiagnosticInfos != null &&
-                    input.DiagnosticInfos != null &&
-                    this.DiagnosticInfos.SequenceEqual(input.DiagnosticInfos)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.ResponseHeader != null)
-                {
-                    hashCode = (hashCode * 59) + this.ResponseHeader.GetHashCode();
-                }
-                if (this.Results != null)
-                {
-                    hashCode = (hashCode * 59) + this.Results.GetHashCode();
-                }
-                if (this.DiagnosticInfos != null)
-                {
-                    hashCode = (hashCode * 59) + this.DiagnosticInfos.GetHashCode();
-                }
-                return hashCode;
-            }
-        }
-
-        /// <summary>
         /// To validate all properties of the instance
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

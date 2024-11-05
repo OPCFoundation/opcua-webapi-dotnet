@@ -30,17 +30,17 @@ namespace Opc.Ua.WebApi.Model
     /// MonitoredItemCreateResult
     /// </summary>
     [DataContract(Name = "MonitoredItemCreateResult")]
-    public partial class MonitoredItemCreateResult : IEquatable<MonitoredItemCreateResult>, IValidatableObject
+    public partial class MonitoredItemCreateResult : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="MonitoredItemCreateResult" /> class.
         /// </summary>
         /// <param name="statusCode">statusCode.</param>
-        /// <param name="monitoredItemId">monitoredItemId.</param>
-        /// <param name="revisedSamplingInterval">revisedSamplingInterval.</param>
-        /// <param name="revisedQueueSize">revisedQueueSize.</param>
+        /// <param name="monitoredItemId">monitoredItemId (default to 0).</param>
+        /// <param name="revisedSamplingInterval">revisedSamplingInterval (default to 0D).</param>
+        /// <param name="revisedQueueSize">revisedQueueSize (default to 0).</param>
         /// <param name="filterResult">filterResult.</param>
-        public MonitoredItemCreateResult(long statusCode = default(long), long monitoredItemId = default(long), double revisedSamplingInterval = default(double), long revisedQueueSize = default(long), ExtensionObject filterResult = default(ExtensionObject))
+        public MonitoredItemCreateResult(StatusCode statusCode = default(StatusCode), long monitoredItemId = 0, double revisedSamplingInterval = 0D, long revisedQueueSize = 0, ExtensionObject filterResult = default(ExtensionObject))
         {
             this.StatusCode = statusCode;
             this.MonitoredItemId = monitoredItemId;
@@ -53,7 +53,7 @@ namespace Opc.Ua.WebApi.Model
         /// Gets or Sets StatusCode
         /// </summary>
         [DataMember(Name = "StatusCode", EmitDefaultValue = false)]
-        public long StatusCode { get; set; }
+        public StatusCode StatusCode { get; set; }
 
         /// <summary>
         /// Gets or Sets MonitoredItemId
@@ -106,112 +106,34 @@ namespace Opc.Ua.WebApi.Model
         }
 
         /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as MonitoredItemCreateResult);
-        }
-
-        /// <summary>
-        /// Returns true if MonitoredItemCreateResult instances are equal
-        /// </summary>
-        /// <param name="input">Instance of MonitoredItemCreateResult to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(MonitoredItemCreateResult input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.StatusCode == input.StatusCode ||
-                    this.StatusCode.Equals(input.StatusCode)
-                ) && 
-                (
-                    this.MonitoredItemId == input.MonitoredItemId ||
-                    this.MonitoredItemId.Equals(input.MonitoredItemId)
-                ) && 
-                (
-                    this.RevisedSamplingInterval == input.RevisedSamplingInterval ||
-                    this.RevisedSamplingInterval.Equals(input.RevisedSamplingInterval)
-                ) && 
-                (
-                    this.RevisedQueueSize == input.RevisedQueueSize ||
-                    this.RevisedQueueSize.Equals(input.RevisedQueueSize)
-                ) && 
-                (
-                    this.FilterResult == input.FilterResult ||
-                    (this.FilterResult != null &&
-                    this.FilterResult.Equals(input.FilterResult))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.StatusCode.GetHashCode();
-                hashCode = (hashCode * 59) + this.MonitoredItemId.GetHashCode();
-                hashCode = (hashCode * 59) + this.RevisedSamplingInterval.GetHashCode();
-                hashCode = (hashCode * 59) + this.RevisedQueueSize.GetHashCode();
-                if (this.FilterResult != null)
-                {
-                    hashCode = (hashCode * 59) + this.FilterResult.GetHashCode();
-                }
-                return hashCode;
-            }
-        }
-
-        /// <summary>
         /// To validate all properties of the instance
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
-            // StatusCode (long) maximum
-            if (this.StatusCode > (long)4294967295)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for StatusCode, must be a value less than or equal to 4294967295.", new [] { "StatusCode" });
-            }
-
-            // StatusCode (long) minimum
-            if (this.StatusCode < (long)0)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for StatusCode, must be a value greater than or equal to 0.", new [] { "StatusCode" });
-            }
-
             // MonitoredItemId (long) maximum
             if (this.MonitoredItemId > (long)4294967295)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for MonitoredItemId, must be a value less than or equal to 4294967295.", new [] { "MonitoredItemId" });
+                yield return new ValidationResult("Invalid value for MonitoredItemId, must be a value less than or equal to 4294967295.", new [] { "MonitoredItemId" });
             }
 
             // MonitoredItemId (long) minimum
             if (this.MonitoredItemId < (long)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for MonitoredItemId, must be a value greater than or equal to 0.", new [] { "MonitoredItemId" });
+                yield return new ValidationResult("Invalid value for MonitoredItemId, must be a value greater than or equal to 0.", new [] { "MonitoredItemId" });
             }
 
             // RevisedQueueSize (long) maximum
             if (this.RevisedQueueSize > (long)4294967295)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for RevisedQueueSize, must be a value less than or equal to 4294967295.", new [] { "RevisedQueueSize" });
+                yield return new ValidationResult("Invalid value for RevisedQueueSize, must be a value less than or equal to 4294967295.", new [] { "RevisedQueueSize" });
             }
 
             // RevisedQueueSize (long) minimum
             if (this.RevisedQueueSize < (long)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for RevisedQueueSize, must be a value greater than or equal to 0.", new [] { "RevisedQueueSize" });
+                yield return new ValidationResult("Invalid value for RevisedQueueSize, must be a value greater than or equal to 0.", new [] { "RevisedQueueSize" });
             }
 
             yield break;

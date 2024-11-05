@@ -30,38 +30,38 @@ namespace Opc.Ua.WebApi.Model
     /// ExtensionObject
     /// </summary>
     [DataContract(Name = "ExtensionObject")]
-    public partial class ExtensionObject : IEquatable<ExtensionObject>, IValidatableObject
+    public partial class ExtensionObject : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ExtensionObject" /> class.
         /// </summary>
-        /// <param name="typeId">typeId.</param>
-        /// <param name="encoding">encoding.</param>
-        /// <param name="body">body.</param>
-        public ExtensionObject(string typeId = default(string), int encoding = default(int), Object body = default(Object))
+        /// <param name="uaTypeId">uaTypeId.</param>
+        /// <param name="uaEncoding">uaEncoding.</param>
+        /// <param name="uaBody">uaBody.</param>
+        public ExtensionObject(string uaTypeId = default(string), int uaEncoding = default(int), byte[] uaBody = default(byte[]))
         {
-            this.TypeId = typeId;
-            this.Encoding = encoding;
-            this.Body = body;
+            this.UaTypeId = uaTypeId;
+            this.UaEncoding = uaEncoding;
+            this.UaBody = uaBody;
         }
 
         /// <summary>
-        /// Gets or Sets TypeId
+        /// Gets or Sets UaTypeId
         /// </summary>
-        [DataMember(Name = "TypeId", EmitDefaultValue = false)]
-        public string TypeId { get; set; }
+        [DataMember(Name = "UaTypeId", EmitDefaultValue = false)]
+        public string UaTypeId { get; set; }
 
         /// <summary>
-        /// Gets or Sets Encoding
+        /// Gets or Sets UaEncoding
         /// </summary>
-        [DataMember(Name = "Encoding", EmitDefaultValue = false)]
-        public int Encoding { get; set; }
+        [DataMember(Name = "UaEncoding", EmitDefaultValue = false)]
+        public int UaEncoding { get; set; }
 
         /// <summary>
-        /// Gets or Sets Body
+        /// Gets or Sets UaBody
         /// </summary>
-        [DataMember(Name = "Body", EmitDefaultValue = false)]
-        public Object Body { get; set; }
+        [DataMember(Name = "UaBody", EmitDefaultValue = false)]
+        public byte[] UaBody { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -71,9 +71,9 @@ namespace Opc.Ua.WebApi.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class ExtensionObject {\n");
-            sb.Append("  TypeId: ").Append(TypeId).Append("\n");
-            sb.Append("  Encoding: ").Append(Encoding).Append("\n");
-            sb.Append("  Body: ").Append(Body).Append("\n");
+            sb.Append("  UaTypeId: ").Append(UaTypeId).Append("\n");
+            sb.Append("  UaEncoding: ").Append(UaEncoding).Append("\n");
+            sb.Append("  UaBody: ").Append(UaBody).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -88,82 +88,22 @@ namespace Opc.Ua.WebApi.Model
         }
 
         /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as ExtensionObject);
-        }
-
-        /// <summary>
-        /// Returns true if ExtensionObject instances are equal
-        /// </summary>
-        /// <param name="input">Instance of ExtensionObject to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(ExtensionObject input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.TypeId == input.TypeId ||
-                    (this.TypeId != null &&
-                    this.TypeId.Equals(input.TypeId))
-                ) && 
-                (
-                    this.Encoding == input.Encoding ||
-                    this.Encoding.Equals(input.Encoding)
-                ) && 
-                (
-                    this.Body == input.Body ||
-                    (this.Body != null &&
-                    this.Body.Equals(input.Body))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.TypeId != null)
-                {
-                    hashCode = (hashCode * 59) + this.TypeId.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.Encoding.GetHashCode();
-                if (this.Body != null)
-                {
-                    hashCode = (hashCode * 59) + this.Body.GetHashCode();
-                }
-                return hashCode;
-            }
-        }
-
-        /// <summary>
         /// To validate all properties of the instance
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
-            // Encoding (int) maximum
-            if (this.Encoding > (int)255)
+            // UaEncoding (int) maximum
+            if (this.UaEncoding > (int)255)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for Encoding, must be a value less than or equal to 255.", new [] { "Encoding" });
+                yield return new ValidationResult("Invalid value for UaEncoding, must be a value less than or equal to 255.", new [] { "UaEncoding" });
             }
 
-            // Encoding (int) minimum
-            if (this.Encoding < (int)0)
+            // UaEncoding (int) minimum
+            if (this.UaEncoding < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for Encoding, must be a value greater than or equal to 0.", new [] { "Encoding" });
+                yield return new ValidationResult("Invalid value for UaEncoding, must be a value greater than or equal to 0.", new [] { "UaEncoding" });
             }
 
             yield break;

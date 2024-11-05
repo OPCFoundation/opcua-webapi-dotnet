@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Value** | **long** |  | [optional] 
+**Value** | **long** |  | [optional] [default to 0]
 **DisplayName** | [**LocalizedText**](LocalizedText.md) |  | [optional] 
 **Description** | [**LocalizedText**](LocalizedText.md) |  | [optional] 
 

@@ -30,19 +30,19 @@ namespace Opc.Ua.WebApi.Model
     /// ReferenceDescription
     /// </summary>
     [DataContract(Name = "ReferenceDescription")]
-    public partial class ReferenceDescription : IEquatable<ReferenceDescription>, IValidatableObject
+    public partial class ReferenceDescription : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ReferenceDescription" /> class.
         /// </summary>
         /// <param name="referenceTypeId">referenceTypeId.</param>
-        /// <param name="isForward">isForward.</param>
+        /// <param name="isForward">isForward (default to false).</param>
         /// <param name="nodeId">nodeId.</param>
         /// <param name="browseName">browseName.</param>
         /// <param name="displayName">displayName.</param>
         /// <param name="nodeClass">nodeClass.</param>
         /// <param name="typeDefinition">typeDefinition.</param>
-        public ReferenceDescription(string referenceTypeId = default(string), bool isForward = default(bool), string nodeId = default(string), string browseName = default(string), LocalizedText displayName = default(LocalizedText), int nodeClass = default(int), string typeDefinition = default(string))
+        public ReferenceDescription(string referenceTypeId = default(string), bool isForward = false, string nodeId = default(string), string browseName = default(string), LocalizedText displayName = default(LocalizedText), int nodeClass = default(int), string typeDefinition = default(string))
         {
             this.ReferenceTypeId = referenceTypeId;
             this.IsForward = isForward;
@@ -124,103 +124,11 @@ namespace Opc.Ua.WebApi.Model
         }
 
         /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as ReferenceDescription);
-        }
-
-        /// <summary>
-        /// Returns true if ReferenceDescription instances are equal
-        /// </summary>
-        /// <param name="input">Instance of ReferenceDescription to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(ReferenceDescription input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.ReferenceTypeId == input.ReferenceTypeId ||
-                    (this.ReferenceTypeId != null &&
-                    this.ReferenceTypeId.Equals(input.ReferenceTypeId))
-                ) && 
-                (
-                    this.IsForward == input.IsForward ||
-                    this.IsForward.Equals(input.IsForward)
-                ) && 
-                (
-                    this.NodeId == input.NodeId ||
-                    (this.NodeId != null &&
-                    this.NodeId.Equals(input.NodeId))
-                ) && 
-                (
-                    this.BrowseName == input.BrowseName ||
-                    (this.BrowseName != null &&
-                    this.BrowseName.Equals(input.BrowseName))
-                ) && 
-                (
-                    this.DisplayName == input.DisplayName ||
-                    (this.DisplayName != null &&
-                    this.DisplayName.Equals(input.DisplayName))
-                ) && 
-                (
-                    this.NodeClass == input.NodeClass ||
-                    this.NodeClass.Equals(input.NodeClass)
-                ) && 
-                (
-                    this.TypeDefinition == input.TypeDefinition ||
-                    (this.TypeDefinition != null &&
-                    this.TypeDefinition.Equals(input.TypeDefinition))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.ReferenceTypeId != null)
-                {
-                    hashCode = (hashCode * 59) + this.ReferenceTypeId.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.IsForward.GetHashCode();
-                if (this.NodeId != null)
-                {
-                    hashCode = (hashCode * 59) + this.NodeId.GetHashCode();
-                }
-                if (this.BrowseName != null)
-                {
-                    hashCode = (hashCode * 59) + this.BrowseName.GetHashCode();
-                }
-                if (this.DisplayName != null)
-                {
-                    hashCode = (hashCode * 59) + this.DisplayName.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.NodeClass.GetHashCode();
-                if (this.TypeDefinition != null)
-                {
-                    hashCode = (hashCode * 59) + this.TypeDefinition.GetHashCode();
-                }
-                return hashCode;
-            }
-        }
-
-        /// <summary>
         /// To validate all properties of the instance
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

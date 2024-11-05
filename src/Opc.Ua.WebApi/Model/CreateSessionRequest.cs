@@ -30,7 +30,7 @@ namespace Opc.Ua.WebApi.Model
     /// CreateSessionRequest
     /// </summary>
     [DataContract(Name = "CreateSessionRequest")]
-    public partial class CreateSessionRequest : IEquatable<CreateSessionRequest>, IValidatableObject
+    public partial class CreateSessionRequest : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateSessionRequest" /> class.
@@ -42,9 +42,9 @@ namespace Opc.Ua.WebApi.Model
         /// <param name="sessionName">sessionName.</param>
         /// <param name="clientNonce">clientNonce.</param>
         /// <param name="clientCertificate">clientCertificate.</param>
-        /// <param name="requestedSessionTimeout">requestedSessionTimeout.</param>
-        /// <param name="maxResponseMessageSize">maxResponseMessageSize.</param>
-        public CreateSessionRequest(RequestHeader requestHeader = default(RequestHeader), ApplicationDescription clientDescription = default(ApplicationDescription), string serverUri = default(string), string endpointUrl = default(string), string sessionName = default(string), byte[] clientNonce = default(byte[]), byte[] clientCertificate = default(byte[]), double requestedSessionTimeout = default(double), long maxResponseMessageSize = default(long))
+        /// <param name="requestedSessionTimeout">requestedSessionTimeout (default to 0D).</param>
+        /// <param name="maxResponseMessageSize">maxResponseMessageSize (default to 0).</param>
+        public CreateSessionRequest(RequestHeader requestHeader = default(RequestHeader), ApplicationDescription clientDescription = default(ApplicationDescription), string serverUri = default(string), string endpointUrl = default(string), string sessionName = default(string), byte[] clientNonce = default(byte[]), byte[] clientCertificate = default(byte[]), double requestedSessionTimeout = 0D, long maxResponseMessageSize = 0)
         {
             this.RequestHeader = requestHeader;
             this.ClientDescription = clientDescription;
@@ -142,132 +142,22 @@ namespace Opc.Ua.WebApi.Model
         }
 
         /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as CreateSessionRequest);
-        }
-
-        /// <summary>
-        /// Returns true if CreateSessionRequest instances are equal
-        /// </summary>
-        /// <param name="input">Instance of CreateSessionRequest to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(CreateSessionRequest input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.RequestHeader == input.RequestHeader ||
-                    (this.RequestHeader != null &&
-                    this.RequestHeader.Equals(input.RequestHeader))
-                ) && 
-                (
-                    this.ClientDescription == input.ClientDescription ||
-                    (this.ClientDescription != null &&
-                    this.ClientDescription.Equals(input.ClientDescription))
-                ) && 
-                (
-                    this.ServerUri == input.ServerUri ||
-                    (this.ServerUri != null &&
-                    this.ServerUri.Equals(input.ServerUri))
-                ) && 
-                (
-                    this.EndpointUrl == input.EndpointUrl ||
-                    (this.EndpointUrl != null &&
-                    this.EndpointUrl.Equals(input.EndpointUrl))
-                ) && 
-                (
-                    this.SessionName == input.SessionName ||
-                    (this.SessionName != null &&
-                    this.SessionName.Equals(input.SessionName))
-                ) && 
-                (
-                    this.ClientNonce == input.ClientNonce ||
-                    (this.ClientNonce != null &&
-                    this.ClientNonce.Equals(input.ClientNonce))
-                ) && 
-                (
-                    this.ClientCertificate == input.ClientCertificate ||
-                    (this.ClientCertificate != null &&
-                    this.ClientCertificate.Equals(input.ClientCertificate))
-                ) && 
-                (
-                    this.RequestedSessionTimeout == input.RequestedSessionTimeout ||
-                    this.RequestedSessionTimeout.Equals(input.RequestedSessionTimeout)
-                ) && 
-                (
-                    this.MaxResponseMessageSize == input.MaxResponseMessageSize ||
-                    this.MaxResponseMessageSize.Equals(input.MaxResponseMessageSize)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.RequestHeader != null)
-                {
-                    hashCode = (hashCode * 59) + this.RequestHeader.GetHashCode();
-                }
-                if (this.ClientDescription != null)
-                {
-                    hashCode = (hashCode * 59) + this.ClientDescription.GetHashCode();
-                }
-                if (this.ServerUri != null)
-                {
-                    hashCode = (hashCode * 59) + this.ServerUri.GetHashCode();
-                }
-                if (this.EndpointUrl != null)
-                {
-                    hashCode = (hashCode * 59) + this.EndpointUrl.GetHashCode();
-                }
-                if (this.SessionName != null)
-                {
-                    hashCode = (hashCode * 59) + this.SessionName.GetHashCode();
-                }
-                if (this.ClientNonce != null)
-                {
-                    hashCode = (hashCode * 59) + this.ClientNonce.GetHashCode();
-                }
-                if (this.ClientCertificate != null)
-                {
-                    hashCode = (hashCode * 59) + this.ClientCertificate.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.RequestedSessionTimeout.GetHashCode();
-                hashCode = (hashCode * 59) + this.MaxResponseMessageSize.GetHashCode();
-                return hashCode;
-            }
-        }
-
-        /// <summary>
         /// To validate all properties of the instance
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // MaxResponseMessageSize (long) maximum
             if (this.MaxResponseMessageSize > (long)4294967295)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for MaxResponseMessageSize, must be a value less than or equal to 4294967295.", new [] { "MaxResponseMessageSize" });
+                yield return new ValidationResult("Invalid value for MaxResponseMessageSize, must be a value less than or equal to 4294967295.", new [] { "MaxResponseMessageSize" });
             }
 
             // MaxResponseMessageSize (long) minimum
             if (this.MaxResponseMessageSize < (long)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for MaxResponseMessageSize, must be a value greater than or equal to 0.", new [] { "MaxResponseMessageSize" });
+                yield return new ValidationResult("Invalid value for MaxResponseMessageSize, must be a value greater than or equal to 0.", new [] { "MaxResponseMessageSize" });
             }
 
             yield break;

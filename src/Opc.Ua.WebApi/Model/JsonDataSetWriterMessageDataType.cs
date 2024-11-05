@@ -30,13 +30,13 @@ namespace Opc.Ua.WebApi.Model
     /// JsonDataSetWriterMessageDataType
     /// </summary>
     [DataContract(Name = "JsonDataSetWriterMessageDataType")]
-    public partial class JsonDataSetWriterMessageDataType : IEquatable<JsonDataSetWriterMessageDataType>, IValidatableObject
+    public partial class JsonDataSetWriterMessageDataType : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="JsonDataSetWriterMessageDataType" /> class.
         /// </summary>
-        /// <param name="dataSetMessageContentMask">dataSetMessageContentMask.</param>
-        public JsonDataSetWriterMessageDataType(long dataSetMessageContentMask = default(long))
+        /// <param name="dataSetMessageContentMask">dataSetMessageContentMask (default to 0).</param>
+        public JsonDataSetWriterMessageDataType(long dataSetMessageContentMask = 0)
         {
             this.DataSetMessageContentMask = dataSetMessageContentMask;
         }
@@ -70,64 +70,22 @@ namespace Opc.Ua.WebApi.Model
         }
 
         /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as JsonDataSetWriterMessageDataType);
-        }
-
-        /// <summary>
-        /// Returns true if JsonDataSetWriterMessageDataType instances are equal
-        /// </summary>
-        /// <param name="input">Instance of JsonDataSetWriterMessageDataType to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(JsonDataSetWriterMessageDataType input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.DataSetMessageContentMask == input.DataSetMessageContentMask ||
-                    this.DataSetMessageContentMask.Equals(input.DataSetMessageContentMask)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.DataSetMessageContentMask.GetHashCode();
-                return hashCode;
-            }
-        }
-
-        /// <summary>
         /// To validate all properties of the instance
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // DataSetMessageContentMask (long) maximum
             if (this.DataSetMessageContentMask > (long)4294967295)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DataSetMessageContentMask, must be a value less than or equal to 4294967295.", new [] { "DataSetMessageContentMask" });
+                yield return new ValidationResult("Invalid value for DataSetMessageContentMask, must be a value less than or equal to 4294967295.", new [] { "DataSetMessageContentMask" });
             }
 
             // DataSetMessageContentMask (long) minimum
             if (this.DataSetMessageContentMask < (long)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DataSetMessageContentMask, must be a value greater than or equal to 0.", new [] { "DataSetMessageContentMask" });
+                yield return new ValidationResult("Invalid value for DataSetMessageContentMask, must be a value greater than or equal to 0.", new [] { "DataSetMessageContentMask" });
             }
 
             yield break;

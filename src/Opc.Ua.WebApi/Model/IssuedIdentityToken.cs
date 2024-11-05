@@ -30,7 +30,7 @@ namespace Opc.Ua.WebApi.Model
     /// IssuedIdentityToken
     /// </summary>
     [DataContract(Name = "IssuedIdentityToken")]
-    public partial class IssuedIdentityToken : IEquatable<IssuedIdentityToken>, IValidatableObject
+    public partial class IssuedIdentityToken : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="IssuedIdentityToken" /> class.
@@ -88,75 +88,11 @@ namespace Opc.Ua.WebApi.Model
         }
 
         /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as IssuedIdentityToken);
-        }
-
-        /// <summary>
-        /// Returns true if IssuedIdentityToken instances are equal
-        /// </summary>
-        /// <param name="input">Instance of IssuedIdentityToken to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(IssuedIdentityToken input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.TokenData == input.TokenData ||
-                    (this.TokenData != null &&
-                    this.TokenData.Equals(input.TokenData))
-                ) && 
-                (
-                    this.EncryptionAlgorithm == input.EncryptionAlgorithm ||
-                    (this.EncryptionAlgorithm != null &&
-                    this.EncryptionAlgorithm.Equals(input.EncryptionAlgorithm))
-                ) && 
-                (
-                    this.PolicyId == input.PolicyId ||
-                    (this.PolicyId != null &&
-                    this.PolicyId.Equals(input.PolicyId))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.TokenData != null)
-                {
-                    hashCode = (hashCode * 59) + this.TokenData.GetHashCode();
-                }
-                if (this.EncryptionAlgorithm != null)
-                {
-                    hashCode = (hashCode * 59) + this.EncryptionAlgorithm.GetHashCode();
-                }
-                if (this.PolicyId != null)
-                {
-                    hashCode = (hashCode * 59) + this.PolicyId.GetHashCode();
-                }
-                return hashCode;
-            }
-        }
-
-        /// <summary>
         /// To validate all properties of the instance
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

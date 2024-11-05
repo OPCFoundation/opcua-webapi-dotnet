@@ -30,7 +30,7 @@ namespace Opc.Ua.WebApi.Model
     /// TranslateBrowsePathsToNodeIdsRequest
     /// </summary>
     [DataContract(Name = "TranslateBrowsePathsToNodeIdsRequest")]
-    public partial class TranslateBrowsePathsToNodeIdsRequest : IEquatable<TranslateBrowsePathsToNodeIdsRequest>, IValidatableObject
+    public partial class TranslateBrowsePathsToNodeIdsRequest : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="TranslateBrowsePathsToNodeIdsRequest" /> class.
@@ -79,67 +79,11 @@ namespace Opc.Ua.WebApi.Model
         }
 
         /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as TranslateBrowsePathsToNodeIdsRequest);
-        }
-
-        /// <summary>
-        /// Returns true if TranslateBrowsePathsToNodeIdsRequest instances are equal
-        /// </summary>
-        /// <param name="input">Instance of TranslateBrowsePathsToNodeIdsRequest to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(TranslateBrowsePathsToNodeIdsRequest input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.RequestHeader == input.RequestHeader ||
-                    (this.RequestHeader != null &&
-                    this.RequestHeader.Equals(input.RequestHeader))
-                ) && 
-                (
-                    this.BrowsePaths == input.BrowsePaths ||
-                    this.BrowsePaths != null &&
-                    input.BrowsePaths != null &&
-                    this.BrowsePaths.SequenceEqual(input.BrowsePaths)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.RequestHeader != null)
-                {
-                    hashCode = (hashCode * 59) + this.RequestHeader.GetHashCode();
-                }
-                if (this.BrowsePaths != null)
-                {
-                    hashCode = (hashCode * 59) + this.BrowsePaths.GetHashCode();
-                }
-                return hashCode;
-            }
-        }
-
-        /// <summary>
         /// To validate all properties of the instance
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

@@ -607,7 +607,7 @@ namespace Opc.Ua.WebApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ActivateSessionResponse</returns>
-        System.Threading.Tasks.Task<ActivateSessionResponse> ActivateSessionAsync(ActivateSessionRequest? activateSessionRequest = default(ActivateSessionRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ActivateSessionResponse> ActivateSessionAsync(ActivateSessionRequest? activateSessionRequest = default(ActivateSessionRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -620,7 +620,7 @@ namespace Opc.Ua.WebApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ActivateSessionResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ActivateSessionResponse>> ActivateSessionWithHttpInfoAsync(ActivateSessionRequest? activateSessionRequest = default(ActivateSessionRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ActivateSessionResponse>> ActivateSessionWithHttpInfoAsync(ActivateSessionRequest? activateSessionRequest = default(ActivateSessionRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -632,7 +632,7 @@ namespace Opc.Ua.WebApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of BrowseResponse</returns>
-        System.Threading.Tasks.Task<BrowseResponse> BrowseAsync(BrowseRequest? browseRequest = default(BrowseRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<BrowseResponse> BrowseAsync(BrowseRequest? browseRequest = default(BrowseRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -645,7 +645,7 @@ namespace Opc.Ua.WebApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (BrowseResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<BrowseResponse>> BrowseWithHttpInfoAsync(BrowseRequest? browseRequest = default(BrowseRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<BrowseResponse>> BrowseWithHttpInfoAsync(BrowseRequest? browseRequest = default(BrowseRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -657,7 +657,7 @@ namespace Opc.Ua.WebApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of BrowseNextResponse</returns>
-        System.Threading.Tasks.Task<BrowseNextResponse> BrowseNextAsync(BrowseNextRequest? browseNextRequest = default(BrowseNextRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<BrowseNextResponse> BrowseNextAsync(BrowseNextRequest? browseNextRequest = default(BrowseNextRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -670,7 +670,7 @@ namespace Opc.Ua.WebApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (BrowseNextResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<BrowseNextResponse>> BrowseNextWithHttpInfoAsync(BrowseNextRequest? browseNextRequest = default(BrowseNextRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<BrowseNextResponse>> BrowseNextWithHttpInfoAsync(BrowseNextRequest? browseNextRequest = default(BrowseNextRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -682,7 +682,7 @@ namespace Opc.Ua.WebApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CallResponse</returns>
-        System.Threading.Tasks.Task<CallResponse> CallAsync(CallRequest? callRequest = default(CallRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<CallResponse> CallAsync(CallRequest? callRequest = default(CallRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -695,7 +695,7 @@ namespace Opc.Ua.WebApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CallResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CallResponse>> CallWithHttpInfoAsync(CallRequest? callRequest = default(CallRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<CallResponse>> CallWithHttpInfoAsync(CallRequest? callRequest = default(CallRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -707,7 +707,7 @@ namespace Opc.Ua.WebApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CancelResponse</returns>
-        System.Threading.Tasks.Task<CancelResponse> CancelAsync(CancelRequest? cancelRequest = default(CancelRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<CancelResponse> CancelAsync(CancelRequest? cancelRequest = default(CancelRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -720,7 +720,7 @@ namespace Opc.Ua.WebApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CancelResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CancelResponse>> CancelWithHttpInfoAsync(CancelRequest? cancelRequest = default(CancelRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<CancelResponse>> CancelWithHttpInfoAsync(CancelRequest? cancelRequest = default(CancelRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -732,7 +732,7 @@ namespace Opc.Ua.WebApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CloseSessionResponse</returns>
-        System.Threading.Tasks.Task<CloseSessionResponse> CloseSessionAsync(CloseSessionRequest? closeSessionRequest = default(CloseSessionRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<CloseSessionResponse> CloseSessionAsync(CloseSessionRequest? closeSessionRequest = default(CloseSessionRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -745,7 +745,7 @@ namespace Opc.Ua.WebApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CloseSessionResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CloseSessionResponse>> CloseSessionWithHttpInfoAsync(CloseSessionRequest? closeSessionRequest = default(CloseSessionRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<CloseSessionResponse>> CloseSessionWithHttpInfoAsync(CloseSessionRequest? closeSessionRequest = default(CloseSessionRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -757,7 +757,7 @@ namespace Opc.Ua.WebApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CreateMonitoredItemsResponse</returns>
-        System.Threading.Tasks.Task<CreateMonitoredItemsResponse> CreateMonitoredItemsAsync(CreateMonitoredItemsRequest? createMonitoredItemsRequest = default(CreateMonitoredItemsRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<CreateMonitoredItemsResponse> CreateMonitoredItemsAsync(CreateMonitoredItemsRequest? createMonitoredItemsRequest = default(CreateMonitoredItemsRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -770,7 +770,7 @@ namespace Opc.Ua.WebApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CreateMonitoredItemsResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CreateMonitoredItemsResponse>> CreateMonitoredItemsWithHttpInfoAsync(CreateMonitoredItemsRequest? createMonitoredItemsRequest = default(CreateMonitoredItemsRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<CreateMonitoredItemsResponse>> CreateMonitoredItemsWithHttpInfoAsync(CreateMonitoredItemsRequest? createMonitoredItemsRequest = default(CreateMonitoredItemsRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -782,7 +782,7 @@ namespace Opc.Ua.WebApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CreateSessionResponse</returns>
-        System.Threading.Tasks.Task<CreateSessionResponse> CreateSessionAsync(CreateSessionRequest? createSessionRequest = default(CreateSessionRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<CreateSessionResponse> CreateSessionAsync(CreateSessionRequest? createSessionRequest = default(CreateSessionRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -795,7 +795,7 @@ namespace Opc.Ua.WebApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CreateSessionResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CreateSessionResponse>> CreateSessionWithHttpInfoAsync(CreateSessionRequest? createSessionRequest = default(CreateSessionRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<CreateSessionResponse>> CreateSessionWithHttpInfoAsync(CreateSessionRequest? createSessionRequest = default(CreateSessionRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -807,7 +807,7 @@ namespace Opc.Ua.WebApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CreateSubscriptionResponse</returns>
-        System.Threading.Tasks.Task<CreateSubscriptionResponse> CreateSubscriptionAsync(CreateSubscriptionRequest? createSubscriptionRequest = default(CreateSubscriptionRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<CreateSubscriptionResponse> CreateSubscriptionAsync(CreateSubscriptionRequest? createSubscriptionRequest = default(CreateSubscriptionRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -820,7 +820,7 @@ namespace Opc.Ua.WebApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CreateSubscriptionResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CreateSubscriptionResponse>> CreateSubscriptionWithHttpInfoAsync(CreateSubscriptionRequest? createSubscriptionRequest = default(CreateSubscriptionRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<CreateSubscriptionResponse>> CreateSubscriptionWithHttpInfoAsync(CreateSubscriptionRequest? createSubscriptionRequest = default(CreateSubscriptionRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -832,7 +832,7 @@ namespace Opc.Ua.WebApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of DeleteMonitoredItemsResponse</returns>
-        System.Threading.Tasks.Task<DeleteMonitoredItemsResponse> DeleteMonitoredItemsAsync(DeleteMonitoredItemsRequest? deleteMonitoredItemsRequest = default(DeleteMonitoredItemsRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<DeleteMonitoredItemsResponse> DeleteMonitoredItemsAsync(DeleteMonitoredItemsRequest? deleteMonitoredItemsRequest = default(DeleteMonitoredItemsRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -845,7 +845,7 @@ namespace Opc.Ua.WebApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (DeleteMonitoredItemsResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DeleteMonitoredItemsResponse>> DeleteMonitoredItemsWithHttpInfoAsync(DeleteMonitoredItemsRequest? deleteMonitoredItemsRequest = default(DeleteMonitoredItemsRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<DeleteMonitoredItemsResponse>> DeleteMonitoredItemsWithHttpInfoAsync(DeleteMonitoredItemsRequest? deleteMonitoredItemsRequest = default(DeleteMonitoredItemsRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -857,7 +857,7 @@ namespace Opc.Ua.WebApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of DeleteSubscriptionsResponse</returns>
-        System.Threading.Tasks.Task<DeleteSubscriptionsResponse> DeleteSubscriptionsAsync(DeleteSubscriptionsRequest? deleteSubscriptionsRequest = default(DeleteSubscriptionsRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<DeleteSubscriptionsResponse> DeleteSubscriptionsAsync(DeleteSubscriptionsRequest? deleteSubscriptionsRequest = default(DeleteSubscriptionsRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -870,7 +870,7 @@ namespace Opc.Ua.WebApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (DeleteSubscriptionsResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DeleteSubscriptionsResponse>> DeleteSubscriptionsWithHttpInfoAsync(DeleteSubscriptionsRequest? deleteSubscriptionsRequest = default(DeleteSubscriptionsRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<DeleteSubscriptionsResponse>> DeleteSubscriptionsWithHttpInfoAsync(DeleteSubscriptionsRequest? deleteSubscriptionsRequest = default(DeleteSubscriptionsRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -882,7 +882,7 @@ namespace Opc.Ua.WebApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of FindServersResponse</returns>
-        System.Threading.Tasks.Task<FindServersResponse> FindServersAsync(FindServersRequest? findServersRequest = default(FindServersRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<FindServersResponse> FindServersAsync(FindServersRequest? findServersRequest = default(FindServersRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -895,7 +895,7 @@ namespace Opc.Ua.WebApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (FindServersResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<FindServersResponse>> FindServersWithHttpInfoAsync(FindServersRequest? findServersRequest = default(FindServersRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<FindServersResponse>> FindServersWithHttpInfoAsync(FindServersRequest? findServersRequest = default(FindServersRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -907,7 +907,7 @@ namespace Opc.Ua.WebApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of GetEndpointsResponse</returns>
-        System.Threading.Tasks.Task<GetEndpointsResponse> GetEndpointsAsync(GetEndpointsRequest? getEndpointsRequest = default(GetEndpointsRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<GetEndpointsResponse> GetEndpointsAsync(GetEndpointsRequest? getEndpointsRequest = default(GetEndpointsRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -920,7 +920,7 @@ namespace Opc.Ua.WebApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (GetEndpointsResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<GetEndpointsResponse>> GetEndpointsWithHttpInfoAsync(GetEndpointsRequest? getEndpointsRequest = default(GetEndpointsRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<GetEndpointsResponse>> GetEndpointsWithHttpInfoAsync(GetEndpointsRequest? getEndpointsRequest = default(GetEndpointsRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -932,7 +932,7 @@ namespace Opc.Ua.WebApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of HistoryReadResponse</returns>
-        System.Threading.Tasks.Task<HistoryReadResponse> HistoryReadAsync(HistoryReadRequest? historyReadRequest = default(HistoryReadRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<HistoryReadResponse> HistoryReadAsync(HistoryReadRequest? historyReadRequest = default(HistoryReadRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -945,7 +945,7 @@ namespace Opc.Ua.WebApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (HistoryReadResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<HistoryReadResponse>> HistoryReadWithHttpInfoAsync(HistoryReadRequest? historyReadRequest = default(HistoryReadRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<HistoryReadResponse>> HistoryReadWithHttpInfoAsync(HistoryReadRequest? historyReadRequest = default(HistoryReadRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -957,7 +957,7 @@ namespace Opc.Ua.WebApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of HistoryUpdateResponse</returns>
-        System.Threading.Tasks.Task<HistoryUpdateResponse> HistoryUpdateAsync(HistoryUpdateRequest? historyUpdateRequest = default(HistoryUpdateRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<HistoryUpdateResponse> HistoryUpdateAsync(HistoryUpdateRequest? historyUpdateRequest = default(HistoryUpdateRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -970,7 +970,7 @@ namespace Opc.Ua.WebApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (HistoryUpdateResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<HistoryUpdateResponse>> HistoryUpdateWithHttpInfoAsync(HistoryUpdateRequest? historyUpdateRequest = default(HistoryUpdateRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<HistoryUpdateResponse>> HistoryUpdateWithHttpInfoAsync(HistoryUpdateRequest? historyUpdateRequest = default(HistoryUpdateRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -982,7 +982,7 @@ namespace Opc.Ua.WebApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ModifyMonitoredItemsResponse</returns>
-        System.Threading.Tasks.Task<ModifyMonitoredItemsResponse> ModifyMonitoredItemsAsync(ModifyMonitoredItemsRequest? modifyMonitoredItemsRequest = default(ModifyMonitoredItemsRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ModifyMonitoredItemsResponse> ModifyMonitoredItemsAsync(ModifyMonitoredItemsRequest? modifyMonitoredItemsRequest = default(ModifyMonitoredItemsRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -995,7 +995,7 @@ namespace Opc.Ua.WebApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ModifyMonitoredItemsResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ModifyMonitoredItemsResponse>> ModifyMonitoredItemsWithHttpInfoAsync(ModifyMonitoredItemsRequest? modifyMonitoredItemsRequest = default(ModifyMonitoredItemsRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ModifyMonitoredItemsResponse>> ModifyMonitoredItemsWithHttpInfoAsync(ModifyMonitoredItemsRequest? modifyMonitoredItemsRequest = default(ModifyMonitoredItemsRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -1007,7 +1007,7 @@ namespace Opc.Ua.WebApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ModifySubscriptionResponse</returns>
-        System.Threading.Tasks.Task<ModifySubscriptionResponse> ModifySubscriptionAsync(ModifySubscriptionRequest? modifySubscriptionRequest = default(ModifySubscriptionRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ModifySubscriptionResponse> ModifySubscriptionAsync(ModifySubscriptionRequest? modifySubscriptionRequest = default(ModifySubscriptionRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -1020,7 +1020,7 @@ namespace Opc.Ua.WebApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ModifySubscriptionResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ModifySubscriptionResponse>> ModifySubscriptionWithHttpInfoAsync(ModifySubscriptionRequest? modifySubscriptionRequest = default(ModifySubscriptionRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ModifySubscriptionResponse>> ModifySubscriptionWithHttpInfoAsync(ModifySubscriptionRequest? modifySubscriptionRequest = default(ModifySubscriptionRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -1032,7 +1032,7 @@ namespace Opc.Ua.WebApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of PublishResponse</returns>
-        System.Threading.Tasks.Task<PublishResponse> PublishAsync(PublishRequest? publishRequest = default(PublishRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<PublishResponse> PublishAsync(PublishRequest? publishRequest = default(PublishRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -1045,7 +1045,7 @@ namespace Opc.Ua.WebApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (PublishResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PublishResponse>> PublishWithHttpInfoAsync(PublishRequest? publishRequest = default(PublishRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<PublishResponse>> PublishWithHttpInfoAsync(PublishRequest? publishRequest = default(PublishRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -1057,7 +1057,7 @@ namespace Opc.Ua.WebApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ReadResponse</returns>
-        System.Threading.Tasks.Task<ReadResponse> ReadAsync(ReadRequest? readRequest = default(ReadRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ReadResponse> ReadAsync(ReadRequest? readRequest = default(ReadRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -1070,7 +1070,7 @@ namespace Opc.Ua.WebApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ReadResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ReadResponse>> ReadWithHttpInfoAsync(ReadRequest? readRequest = default(ReadRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ReadResponse>> ReadWithHttpInfoAsync(ReadRequest? readRequest = default(ReadRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -1082,7 +1082,7 @@ namespace Opc.Ua.WebApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of RegisterNodesResponse</returns>
-        System.Threading.Tasks.Task<RegisterNodesResponse> RegisterNodesAsync(RegisterNodesRequest? registerNodesRequest = default(RegisterNodesRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<RegisterNodesResponse> RegisterNodesAsync(RegisterNodesRequest? registerNodesRequest = default(RegisterNodesRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -1095,7 +1095,7 @@ namespace Opc.Ua.WebApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RegisterNodesResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RegisterNodesResponse>> RegisterNodesWithHttpInfoAsync(RegisterNodesRequest? registerNodesRequest = default(RegisterNodesRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<RegisterNodesResponse>> RegisterNodesWithHttpInfoAsync(RegisterNodesRequest? registerNodesRequest = default(RegisterNodesRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -1107,7 +1107,7 @@ namespace Opc.Ua.WebApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of RepublishResponse</returns>
-        System.Threading.Tasks.Task<RepublishResponse> RepublishAsync(RepublishRequest? republishRequest = default(RepublishRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<RepublishResponse> RepublishAsync(RepublishRequest? republishRequest = default(RepublishRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -1120,7 +1120,7 @@ namespace Opc.Ua.WebApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RepublishResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RepublishResponse>> RepublishWithHttpInfoAsync(RepublishRequest? republishRequest = default(RepublishRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<RepublishResponse>> RepublishWithHttpInfoAsync(RepublishRequest? republishRequest = default(RepublishRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -1132,7 +1132,7 @@ namespace Opc.Ua.WebApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of SetMonitoringModeResponse</returns>
-        System.Threading.Tasks.Task<SetMonitoringModeResponse> SetMonitoringModeAsync(SetMonitoringModeRequest? setMonitoringModeRequest = default(SetMonitoringModeRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<SetMonitoringModeResponse> SetMonitoringModeAsync(SetMonitoringModeRequest? setMonitoringModeRequest = default(SetMonitoringModeRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -1145,7 +1145,7 @@ namespace Opc.Ua.WebApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (SetMonitoringModeResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<SetMonitoringModeResponse>> SetMonitoringModeWithHttpInfoAsync(SetMonitoringModeRequest? setMonitoringModeRequest = default(SetMonitoringModeRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<SetMonitoringModeResponse>> SetMonitoringModeWithHttpInfoAsync(SetMonitoringModeRequest? setMonitoringModeRequest = default(SetMonitoringModeRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -1157,7 +1157,7 @@ namespace Opc.Ua.WebApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of SetPublishingModeResponse</returns>
-        System.Threading.Tasks.Task<SetPublishingModeResponse> SetPublishingModeAsync(SetPublishingModeRequest? setPublishingModeRequest = default(SetPublishingModeRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<SetPublishingModeResponse> SetPublishingModeAsync(SetPublishingModeRequest? setPublishingModeRequest = default(SetPublishingModeRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -1170,7 +1170,7 @@ namespace Opc.Ua.WebApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (SetPublishingModeResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<SetPublishingModeResponse>> SetPublishingModeWithHttpInfoAsync(SetPublishingModeRequest? setPublishingModeRequest = default(SetPublishingModeRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<SetPublishingModeResponse>> SetPublishingModeWithHttpInfoAsync(SetPublishingModeRequest? setPublishingModeRequest = default(SetPublishingModeRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -1182,7 +1182,7 @@ namespace Opc.Ua.WebApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of SetTriggeringResponse</returns>
-        System.Threading.Tasks.Task<SetTriggeringResponse> SetTriggeringAsync(SetTriggeringRequest? setTriggeringRequest = default(SetTriggeringRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<SetTriggeringResponse> SetTriggeringAsync(SetTriggeringRequest? setTriggeringRequest = default(SetTriggeringRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -1195,7 +1195,7 @@ namespace Opc.Ua.WebApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (SetTriggeringResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<SetTriggeringResponse>> SetTriggeringWithHttpInfoAsync(SetTriggeringRequest? setTriggeringRequest = default(SetTriggeringRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<SetTriggeringResponse>> SetTriggeringWithHttpInfoAsync(SetTriggeringRequest? setTriggeringRequest = default(SetTriggeringRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -1207,7 +1207,7 @@ namespace Opc.Ua.WebApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of TransferSubscriptionsResponse</returns>
-        System.Threading.Tasks.Task<TransferSubscriptionsResponse> TransferSubscriptionsAsync(TransferSubscriptionsRequest? transferSubscriptionsRequest = default(TransferSubscriptionsRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<TransferSubscriptionsResponse> TransferSubscriptionsAsync(TransferSubscriptionsRequest? transferSubscriptionsRequest = default(TransferSubscriptionsRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -1220,7 +1220,7 @@ namespace Opc.Ua.WebApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (TransferSubscriptionsResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TransferSubscriptionsResponse>> TransferSubscriptionsWithHttpInfoAsync(TransferSubscriptionsRequest? transferSubscriptionsRequest = default(TransferSubscriptionsRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<TransferSubscriptionsResponse>> TransferSubscriptionsWithHttpInfoAsync(TransferSubscriptionsRequest? transferSubscriptionsRequest = default(TransferSubscriptionsRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -1232,7 +1232,7 @@ namespace Opc.Ua.WebApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of TranslateBrowsePathsToNodeIdsResponse</returns>
-        System.Threading.Tasks.Task<TranslateBrowsePathsToNodeIdsResponse> TranslateBrowsePathsToNodeIdsAsync(TranslateBrowsePathsToNodeIdsRequest? translateBrowsePathsToNodeIdsRequest = default(TranslateBrowsePathsToNodeIdsRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<TranslateBrowsePathsToNodeIdsResponse> TranslateBrowsePathsToNodeIdsAsync(TranslateBrowsePathsToNodeIdsRequest? translateBrowsePathsToNodeIdsRequest = default(TranslateBrowsePathsToNodeIdsRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -1245,7 +1245,7 @@ namespace Opc.Ua.WebApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (TranslateBrowsePathsToNodeIdsResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TranslateBrowsePathsToNodeIdsResponse>> TranslateBrowsePathsToNodeIdsWithHttpInfoAsync(TranslateBrowsePathsToNodeIdsRequest? translateBrowsePathsToNodeIdsRequest = default(TranslateBrowsePathsToNodeIdsRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<TranslateBrowsePathsToNodeIdsResponse>> TranslateBrowsePathsToNodeIdsWithHttpInfoAsync(TranslateBrowsePathsToNodeIdsRequest? translateBrowsePathsToNodeIdsRequest = default(TranslateBrowsePathsToNodeIdsRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -1257,7 +1257,7 @@ namespace Opc.Ua.WebApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of UnregisterNodesResponse</returns>
-        System.Threading.Tasks.Task<UnregisterNodesResponse> UnregisterNodesAsync(UnregisterNodesRequest? unregisterNodesRequest = default(UnregisterNodesRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<UnregisterNodesResponse> UnregisterNodesAsync(UnregisterNodesRequest? unregisterNodesRequest = default(UnregisterNodesRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -1270,7 +1270,7 @@ namespace Opc.Ua.WebApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (UnregisterNodesResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<UnregisterNodesResponse>> UnregisterNodesWithHttpInfoAsync(UnregisterNodesRequest? unregisterNodesRequest = default(UnregisterNodesRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<UnregisterNodesResponse>> UnregisterNodesWithHttpInfoAsync(UnregisterNodesRequest? unregisterNodesRequest = default(UnregisterNodesRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -1282,7 +1282,7 @@ namespace Opc.Ua.WebApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of WriteResponse</returns>
-        System.Threading.Tasks.Task<WriteResponse> WriteAsync(WriteRequest? writeRequest = default(WriteRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<WriteResponse> WriteAsync(WriteRequest? writeRequest = default(WriteRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
 
         /// <summary>
         /// 
@@ -1295,7 +1295,7 @@ namespace Opc.Ua.WebApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (WriteResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<WriteResponse>> WriteWithHttpInfoAsync(WriteRequest? writeRequest = default(WriteRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<WriteResponse>> WriteWithHttpInfoAsync(WriteRequest? writeRequest = default(WriteRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -1489,7 +1489,7 @@ namespace Opc.Ua.WebApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ActivateSessionResponse</returns>
-        public async System.Threading.Tasks.Task<ActivateSessionResponse> ActivateSessionAsync(ActivateSessionRequest? activateSessionRequest = default(ActivateSessionRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ActivateSessionResponse> ActivateSessionAsync(ActivateSessionRequest? activateSessionRequest = default(ActivateSessionRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             Opc.Ua.WebApi.Client.ApiResponse<ActivateSessionResponse> localVarResponse = await ActivateSessionWithHttpInfoAsync(activateSessionRequest, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -1503,7 +1503,7 @@ namespace Opc.Ua.WebApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ActivateSessionResponse)</returns>
-        public async System.Threading.Tasks.Task<Opc.Ua.WebApi.Client.ApiResponse<ActivateSessionResponse>> ActivateSessionWithHttpInfoAsync(ActivateSessionRequest? activateSessionRequest = default(ActivateSessionRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Opc.Ua.WebApi.Client.ApiResponse<ActivateSessionResponse>> ActivateSessionWithHttpInfoAsync(ActivateSessionRequest? activateSessionRequest = default(ActivateSessionRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             Opc.Ua.WebApi.Client.RequestOptions localVarRequestOptions = new Opc.Ua.WebApi.Client.RequestOptions();
@@ -1623,7 +1623,7 @@ namespace Opc.Ua.WebApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of BrowseResponse</returns>
-        public async System.Threading.Tasks.Task<BrowseResponse> BrowseAsync(BrowseRequest? browseRequest = default(BrowseRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<BrowseResponse> BrowseAsync(BrowseRequest? browseRequest = default(BrowseRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             Opc.Ua.WebApi.Client.ApiResponse<BrowseResponse> localVarResponse = await BrowseWithHttpInfoAsync(browseRequest, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -1637,7 +1637,7 @@ namespace Opc.Ua.WebApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (BrowseResponse)</returns>
-        public async System.Threading.Tasks.Task<Opc.Ua.WebApi.Client.ApiResponse<BrowseResponse>> BrowseWithHttpInfoAsync(BrowseRequest? browseRequest = default(BrowseRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Opc.Ua.WebApi.Client.ApiResponse<BrowseResponse>> BrowseWithHttpInfoAsync(BrowseRequest? browseRequest = default(BrowseRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             Opc.Ua.WebApi.Client.RequestOptions localVarRequestOptions = new Opc.Ua.WebApi.Client.RequestOptions();
@@ -1757,7 +1757,7 @@ namespace Opc.Ua.WebApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of BrowseNextResponse</returns>
-        public async System.Threading.Tasks.Task<BrowseNextResponse> BrowseNextAsync(BrowseNextRequest? browseNextRequest = default(BrowseNextRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<BrowseNextResponse> BrowseNextAsync(BrowseNextRequest? browseNextRequest = default(BrowseNextRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             Opc.Ua.WebApi.Client.ApiResponse<BrowseNextResponse> localVarResponse = await BrowseNextWithHttpInfoAsync(browseNextRequest, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -1771,7 +1771,7 @@ namespace Opc.Ua.WebApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (BrowseNextResponse)</returns>
-        public async System.Threading.Tasks.Task<Opc.Ua.WebApi.Client.ApiResponse<BrowseNextResponse>> BrowseNextWithHttpInfoAsync(BrowseNextRequest? browseNextRequest = default(BrowseNextRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Opc.Ua.WebApi.Client.ApiResponse<BrowseNextResponse>> BrowseNextWithHttpInfoAsync(BrowseNextRequest? browseNextRequest = default(BrowseNextRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             Opc.Ua.WebApi.Client.RequestOptions localVarRequestOptions = new Opc.Ua.WebApi.Client.RequestOptions();
@@ -1891,7 +1891,7 @@ namespace Opc.Ua.WebApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CallResponse</returns>
-        public async System.Threading.Tasks.Task<CallResponse> CallAsync(CallRequest? callRequest = default(CallRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CallResponse> CallAsync(CallRequest? callRequest = default(CallRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             Opc.Ua.WebApi.Client.ApiResponse<CallResponse> localVarResponse = await CallWithHttpInfoAsync(callRequest, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -1905,7 +1905,7 @@ namespace Opc.Ua.WebApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CallResponse)</returns>
-        public async System.Threading.Tasks.Task<Opc.Ua.WebApi.Client.ApiResponse<CallResponse>> CallWithHttpInfoAsync(CallRequest? callRequest = default(CallRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Opc.Ua.WebApi.Client.ApiResponse<CallResponse>> CallWithHttpInfoAsync(CallRequest? callRequest = default(CallRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             Opc.Ua.WebApi.Client.RequestOptions localVarRequestOptions = new Opc.Ua.WebApi.Client.RequestOptions();
@@ -2025,7 +2025,7 @@ namespace Opc.Ua.WebApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CancelResponse</returns>
-        public async System.Threading.Tasks.Task<CancelResponse> CancelAsync(CancelRequest? cancelRequest = default(CancelRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CancelResponse> CancelAsync(CancelRequest? cancelRequest = default(CancelRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             Opc.Ua.WebApi.Client.ApiResponse<CancelResponse> localVarResponse = await CancelWithHttpInfoAsync(cancelRequest, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -2039,7 +2039,7 @@ namespace Opc.Ua.WebApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CancelResponse)</returns>
-        public async System.Threading.Tasks.Task<Opc.Ua.WebApi.Client.ApiResponse<CancelResponse>> CancelWithHttpInfoAsync(CancelRequest? cancelRequest = default(CancelRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Opc.Ua.WebApi.Client.ApiResponse<CancelResponse>> CancelWithHttpInfoAsync(CancelRequest? cancelRequest = default(CancelRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             Opc.Ua.WebApi.Client.RequestOptions localVarRequestOptions = new Opc.Ua.WebApi.Client.RequestOptions();
@@ -2159,7 +2159,7 @@ namespace Opc.Ua.WebApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CloseSessionResponse</returns>
-        public async System.Threading.Tasks.Task<CloseSessionResponse> CloseSessionAsync(CloseSessionRequest? closeSessionRequest = default(CloseSessionRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CloseSessionResponse> CloseSessionAsync(CloseSessionRequest? closeSessionRequest = default(CloseSessionRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             Opc.Ua.WebApi.Client.ApiResponse<CloseSessionResponse> localVarResponse = await CloseSessionWithHttpInfoAsync(closeSessionRequest, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -2173,7 +2173,7 @@ namespace Opc.Ua.WebApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CloseSessionResponse)</returns>
-        public async System.Threading.Tasks.Task<Opc.Ua.WebApi.Client.ApiResponse<CloseSessionResponse>> CloseSessionWithHttpInfoAsync(CloseSessionRequest? closeSessionRequest = default(CloseSessionRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Opc.Ua.WebApi.Client.ApiResponse<CloseSessionResponse>> CloseSessionWithHttpInfoAsync(CloseSessionRequest? closeSessionRequest = default(CloseSessionRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             Opc.Ua.WebApi.Client.RequestOptions localVarRequestOptions = new Opc.Ua.WebApi.Client.RequestOptions();
@@ -2293,7 +2293,7 @@ namespace Opc.Ua.WebApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CreateMonitoredItemsResponse</returns>
-        public async System.Threading.Tasks.Task<CreateMonitoredItemsResponse> CreateMonitoredItemsAsync(CreateMonitoredItemsRequest? createMonitoredItemsRequest = default(CreateMonitoredItemsRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CreateMonitoredItemsResponse> CreateMonitoredItemsAsync(CreateMonitoredItemsRequest? createMonitoredItemsRequest = default(CreateMonitoredItemsRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             Opc.Ua.WebApi.Client.ApiResponse<CreateMonitoredItemsResponse> localVarResponse = await CreateMonitoredItemsWithHttpInfoAsync(createMonitoredItemsRequest, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -2307,7 +2307,7 @@ namespace Opc.Ua.WebApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CreateMonitoredItemsResponse)</returns>
-        public async System.Threading.Tasks.Task<Opc.Ua.WebApi.Client.ApiResponse<CreateMonitoredItemsResponse>> CreateMonitoredItemsWithHttpInfoAsync(CreateMonitoredItemsRequest? createMonitoredItemsRequest = default(CreateMonitoredItemsRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Opc.Ua.WebApi.Client.ApiResponse<CreateMonitoredItemsResponse>> CreateMonitoredItemsWithHttpInfoAsync(CreateMonitoredItemsRequest? createMonitoredItemsRequest = default(CreateMonitoredItemsRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             Opc.Ua.WebApi.Client.RequestOptions localVarRequestOptions = new Opc.Ua.WebApi.Client.RequestOptions();
@@ -2427,7 +2427,7 @@ namespace Opc.Ua.WebApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CreateSessionResponse</returns>
-        public async System.Threading.Tasks.Task<CreateSessionResponse> CreateSessionAsync(CreateSessionRequest? createSessionRequest = default(CreateSessionRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CreateSessionResponse> CreateSessionAsync(CreateSessionRequest? createSessionRequest = default(CreateSessionRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             Opc.Ua.WebApi.Client.ApiResponse<CreateSessionResponse> localVarResponse = await CreateSessionWithHttpInfoAsync(createSessionRequest, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -2441,7 +2441,7 @@ namespace Opc.Ua.WebApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CreateSessionResponse)</returns>
-        public async System.Threading.Tasks.Task<Opc.Ua.WebApi.Client.ApiResponse<CreateSessionResponse>> CreateSessionWithHttpInfoAsync(CreateSessionRequest? createSessionRequest = default(CreateSessionRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Opc.Ua.WebApi.Client.ApiResponse<CreateSessionResponse>> CreateSessionWithHttpInfoAsync(CreateSessionRequest? createSessionRequest = default(CreateSessionRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             Opc.Ua.WebApi.Client.RequestOptions localVarRequestOptions = new Opc.Ua.WebApi.Client.RequestOptions();
@@ -2561,7 +2561,7 @@ namespace Opc.Ua.WebApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CreateSubscriptionResponse</returns>
-        public async System.Threading.Tasks.Task<CreateSubscriptionResponse> CreateSubscriptionAsync(CreateSubscriptionRequest? createSubscriptionRequest = default(CreateSubscriptionRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CreateSubscriptionResponse> CreateSubscriptionAsync(CreateSubscriptionRequest? createSubscriptionRequest = default(CreateSubscriptionRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             Opc.Ua.WebApi.Client.ApiResponse<CreateSubscriptionResponse> localVarResponse = await CreateSubscriptionWithHttpInfoAsync(createSubscriptionRequest, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -2575,7 +2575,7 @@ namespace Opc.Ua.WebApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CreateSubscriptionResponse)</returns>
-        public async System.Threading.Tasks.Task<Opc.Ua.WebApi.Client.ApiResponse<CreateSubscriptionResponse>> CreateSubscriptionWithHttpInfoAsync(CreateSubscriptionRequest? createSubscriptionRequest = default(CreateSubscriptionRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Opc.Ua.WebApi.Client.ApiResponse<CreateSubscriptionResponse>> CreateSubscriptionWithHttpInfoAsync(CreateSubscriptionRequest? createSubscriptionRequest = default(CreateSubscriptionRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             Opc.Ua.WebApi.Client.RequestOptions localVarRequestOptions = new Opc.Ua.WebApi.Client.RequestOptions();
@@ -2695,7 +2695,7 @@ namespace Opc.Ua.WebApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of DeleteMonitoredItemsResponse</returns>
-        public async System.Threading.Tasks.Task<DeleteMonitoredItemsResponse> DeleteMonitoredItemsAsync(DeleteMonitoredItemsRequest? deleteMonitoredItemsRequest = default(DeleteMonitoredItemsRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<DeleteMonitoredItemsResponse> DeleteMonitoredItemsAsync(DeleteMonitoredItemsRequest? deleteMonitoredItemsRequest = default(DeleteMonitoredItemsRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             Opc.Ua.WebApi.Client.ApiResponse<DeleteMonitoredItemsResponse> localVarResponse = await DeleteMonitoredItemsWithHttpInfoAsync(deleteMonitoredItemsRequest, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -2709,7 +2709,7 @@ namespace Opc.Ua.WebApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (DeleteMonitoredItemsResponse)</returns>
-        public async System.Threading.Tasks.Task<Opc.Ua.WebApi.Client.ApiResponse<DeleteMonitoredItemsResponse>> DeleteMonitoredItemsWithHttpInfoAsync(DeleteMonitoredItemsRequest? deleteMonitoredItemsRequest = default(DeleteMonitoredItemsRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Opc.Ua.WebApi.Client.ApiResponse<DeleteMonitoredItemsResponse>> DeleteMonitoredItemsWithHttpInfoAsync(DeleteMonitoredItemsRequest? deleteMonitoredItemsRequest = default(DeleteMonitoredItemsRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             Opc.Ua.WebApi.Client.RequestOptions localVarRequestOptions = new Opc.Ua.WebApi.Client.RequestOptions();
@@ -2829,7 +2829,7 @@ namespace Opc.Ua.WebApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of DeleteSubscriptionsResponse</returns>
-        public async System.Threading.Tasks.Task<DeleteSubscriptionsResponse> DeleteSubscriptionsAsync(DeleteSubscriptionsRequest? deleteSubscriptionsRequest = default(DeleteSubscriptionsRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<DeleteSubscriptionsResponse> DeleteSubscriptionsAsync(DeleteSubscriptionsRequest? deleteSubscriptionsRequest = default(DeleteSubscriptionsRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             Opc.Ua.WebApi.Client.ApiResponse<DeleteSubscriptionsResponse> localVarResponse = await DeleteSubscriptionsWithHttpInfoAsync(deleteSubscriptionsRequest, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -2843,7 +2843,7 @@ namespace Opc.Ua.WebApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (DeleteSubscriptionsResponse)</returns>
-        public async System.Threading.Tasks.Task<Opc.Ua.WebApi.Client.ApiResponse<DeleteSubscriptionsResponse>> DeleteSubscriptionsWithHttpInfoAsync(DeleteSubscriptionsRequest? deleteSubscriptionsRequest = default(DeleteSubscriptionsRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Opc.Ua.WebApi.Client.ApiResponse<DeleteSubscriptionsResponse>> DeleteSubscriptionsWithHttpInfoAsync(DeleteSubscriptionsRequest? deleteSubscriptionsRequest = default(DeleteSubscriptionsRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             Opc.Ua.WebApi.Client.RequestOptions localVarRequestOptions = new Opc.Ua.WebApi.Client.RequestOptions();
@@ -2963,7 +2963,7 @@ namespace Opc.Ua.WebApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of FindServersResponse</returns>
-        public async System.Threading.Tasks.Task<FindServersResponse> FindServersAsync(FindServersRequest? findServersRequest = default(FindServersRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<FindServersResponse> FindServersAsync(FindServersRequest? findServersRequest = default(FindServersRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             Opc.Ua.WebApi.Client.ApiResponse<FindServersResponse> localVarResponse = await FindServersWithHttpInfoAsync(findServersRequest, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -2977,7 +2977,7 @@ namespace Opc.Ua.WebApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (FindServersResponse)</returns>
-        public async System.Threading.Tasks.Task<Opc.Ua.WebApi.Client.ApiResponse<FindServersResponse>> FindServersWithHttpInfoAsync(FindServersRequest? findServersRequest = default(FindServersRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Opc.Ua.WebApi.Client.ApiResponse<FindServersResponse>> FindServersWithHttpInfoAsync(FindServersRequest? findServersRequest = default(FindServersRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             Opc.Ua.WebApi.Client.RequestOptions localVarRequestOptions = new Opc.Ua.WebApi.Client.RequestOptions();
@@ -3097,7 +3097,7 @@ namespace Opc.Ua.WebApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of GetEndpointsResponse</returns>
-        public async System.Threading.Tasks.Task<GetEndpointsResponse> GetEndpointsAsync(GetEndpointsRequest? getEndpointsRequest = default(GetEndpointsRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<GetEndpointsResponse> GetEndpointsAsync(GetEndpointsRequest? getEndpointsRequest = default(GetEndpointsRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             Opc.Ua.WebApi.Client.ApiResponse<GetEndpointsResponse> localVarResponse = await GetEndpointsWithHttpInfoAsync(getEndpointsRequest, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -3111,7 +3111,7 @@ namespace Opc.Ua.WebApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (GetEndpointsResponse)</returns>
-        public async System.Threading.Tasks.Task<Opc.Ua.WebApi.Client.ApiResponse<GetEndpointsResponse>> GetEndpointsWithHttpInfoAsync(GetEndpointsRequest? getEndpointsRequest = default(GetEndpointsRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Opc.Ua.WebApi.Client.ApiResponse<GetEndpointsResponse>> GetEndpointsWithHttpInfoAsync(GetEndpointsRequest? getEndpointsRequest = default(GetEndpointsRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             Opc.Ua.WebApi.Client.RequestOptions localVarRequestOptions = new Opc.Ua.WebApi.Client.RequestOptions();
@@ -3231,7 +3231,7 @@ namespace Opc.Ua.WebApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of HistoryReadResponse</returns>
-        public async System.Threading.Tasks.Task<HistoryReadResponse> HistoryReadAsync(HistoryReadRequest? historyReadRequest = default(HistoryReadRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<HistoryReadResponse> HistoryReadAsync(HistoryReadRequest? historyReadRequest = default(HistoryReadRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             Opc.Ua.WebApi.Client.ApiResponse<HistoryReadResponse> localVarResponse = await HistoryReadWithHttpInfoAsync(historyReadRequest, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -3245,7 +3245,7 @@ namespace Opc.Ua.WebApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (HistoryReadResponse)</returns>
-        public async System.Threading.Tasks.Task<Opc.Ua.WebApi.Client.ApiResponse<HistoryReadResponse>> HistoryReadWithHttpInfoAsync(HistoryReadRequest? historyReadRequest = default(HistoryReadRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Opc.Ua.WebApi.Client.ApiResponse<HistoryReadResponse>> HistoryReadWithHttpInfoAsync(HistoryReadRequest? historyReadRequest = default(HistoryReadRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             Opc.Ua.WebApi.Client.RequestOptions localVarRequestOptions = new Opc.Ua.WebApi.Client.RequestOptions();
@@ -3365,7 +3365,7 @@ namespace Opc.Ua.WebApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of HistoryUpdateResponse</returns>
-        public async System.Threading.Tasks.Task<HistoryUpdateResponse> HistoryUpdateAsync(HistoryUpdateRequest? historyUpdateRequest = default(HistoryUpdateRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<HistoryUpdateResponse> HistoryUpdateAsync(HistoryUpdateRequest? historyUpdateRequest = default(HistoryUpdateRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             Opc.Ua.WebApi.Client.ApiResponse<HistoryUpdateResponse> localVarResponse = await HistoryUpdateWithHttpInfoAsync(historyUpdateRequest, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -3379,7 +3379,7 @@ namespace Opc.Ua.WebApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (HistoryUpdateResponse)</returns>
-        public async System.Threading.Tasks.Task<Opc.Ua.WebApi.Client.ApiResponse<HistoryUpdateResponse>> HistoryUpdateWithHttpInfoAsync(HistoryUpdateRequest? historyUpdateRequest = default(HistoryUpdateRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Opc.Ua.WebApi.Client.ApiResponse<HistoryUpdateResponse>> HistoryUpdateWithHttpInfoAsync(HistoryUpdateRequest? historyUpdateRequest = default(HistoryUpdateRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             Opc.Ua.WebApi.Client.RequestOptions localVarRequestOptions = new Opc.Ua.WebApi.Client.RequestOptions();
@@ -3499,7 +3499,7 @@ namespace Opc.Ua.WebApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ModifyMonitoredItemsResponse</returns>
-        public async System.Threading.Tasks.Task<ModifyMonitoredItemsResponse> ModifyMonitoredItemsAsync(ModifyMonitoredItemsRequest? modifyMonitoredItemsRequest = default(ModifyMonitoredItemsRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ModifyMonitoredItemsResponse> ModifyMonitoredItemsAsync(ModifyMonitoredItemsRequest? modifyMonitoredItemsRequest = default(ModifyMonitoredItemsRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             Opc.Ua.WebApi.Client.ApiResponse<ModifyMonitoredItemsResponse> localVarResponse = await ModifyMonitoredItemsWithHttpInfoAsync(modifyMonitoredItemsRequest, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -3513,7 +3513,7 @@ namespace Opc.Ua.WebApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ModifyMonitoredItemsResponse)</returns>
-        public async System.Threading.Tasks.Task<Opc.Ua.WebApi.Client.ApiResponse<ModifyMonitoredItemsResponse>> ModifyMonitoredItemsWithHttpInfoAsync(ModifyMonitoredItemsRequest? modifyMonitoredItemsRequest = default(ModifyMonitoredItemsRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Opc.Ua.WebApi.Client.ApiResponse<ModifyMonitoredItemsResponse>> ModifyMonitoredItemsWithHttpInfoAsync(ModifyMonitoredItemsRequest? modifyMonitoredItemsRequest = default(ModifyMonitoredItemsRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             Opc.Ua.WebApi.Client.RequestOptions localVarRequestOptions = new Opc.Ua.WebApi.Client.RequestOptions();
@@ -3633,7 +3633,7 @@ namespace Opc.Ua.WebApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ModifySubscriptionResponse</returns>
-        public async System.Threading.Tasks.Task<ModifySubscriptionResponse> ModifySubscriptionAsync(ModifySubscriptionRequest? modifySubscriptionRequest = default(ModifySubscriptionRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ModifySubscriptionResponse> ModifySubscriptionAsync(ModifySubscriptionRequest? modifySubscriptionRequest = default(ModifySubscriptionRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             Opc.Ua.WebApi.Client.ApiResponse<ModifySubscriptionResponse> localVarResponse = await ModifySubscriptionWithHttpInfoAsync(modifySubscriptionRequest, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -3647,7 +3647,7 @@ namespace Opc.Ua.WebApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ModifySubscriptionResponse)</returns>
-        public async System.Threading.Tasks.Task<Opc.Ua.WebApi.Client.ApiResponse<ModifySubscriptionResponse>> ModifySubscriptionWithHttpInfoAsync(ModifySubscriptionRequest? modifySubscriptionRequest = default(ModifySubscriptionRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Opc.Ua.WebApi.Client.ApiResponse<ModifySubscriptionResponse>> ModifySubscriptionWithHttpInfoAsync(ModifySubscriptionRequest? modifySubscriptionRequest = default(ModifySubscriptionRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             Opc.Ua.WebApi.Client.RequestOptions localVarRequestOptions = new Opc.Ua.WebApi.Client.RequestOptions();
@@ -3767,7 +3767,7 @@ namespace Opc.Ua.WebApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of PublishResponse</returns>
-        public async System.Threading.Tasks.Task<PublishResponse> PublishAsync(PublishRequest? publishRequest = default(PublishRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<PublishResponse> PublishAsync(PublishRequest? publishRequest = default(PublishRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             Opc.Ua.WebApi.Client.ApiResponse<PublishResponse> localVarResponse = await PublishWithHttpInfoAsync(publishRequest, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -3781,7 +3781,7 @@ namespace Opc.Ua.WebApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (PublishResponse)</returns>
-        public async System.Threading.Tasks.Task<Opc.Ua.WebApi.Client.ApiResponse<PublishResponse>> PublishWithHttpInfoAsync(PublishRequest? publishRequest = default(PublishRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Opc.Ua.WebApi.Client.ApiResponse<PublishResponse>> PublishWithHttpInfoAsync(PublishRequest? publishRequest = default(PublishRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             Opc.Ua.WebApi.Client.RequestOptions localVarRequestOptions = new Opc.Ua.WebApi.Client.RequestOptions();
@@ -3901,7 +3901,7 @@ namespace Opc.Ua.WebApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ReadResponse</returns>
-        public async System.Threading.Tasks.Task<ReadResponse> ReadAsync(ReadRequest? readRequest = default(ReadRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ReadResponse> ReadAsync(ReadRequest? readRequest = default(ReadRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             Opc.Ua.WebApi.Client.ApiResponse<ReadResponse> localVarResponse = await ReadWithHttpInfoAsync(readRequest, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -3915,7 +3915,7 @@ namespace Opc.Ua.WebApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ReadResponse)</returns>
-        public async System.Threading.Tasks.Task<Opc.Ua.WebApi.Client.ApiResponse<ReadResponse>> ReadWithHttpInfoAsync(ReadRequest? readRequest = default(ReadRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Opc.Ua.WebApi.Client.ApiResponse<ReadResponse>> ReadWithHttpInfoAsync(ReadRequest? readRequest = default(ReadRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             Opc.Ua.WebApi.Client.RequestOptions localVarRequestOptions = new Opc.Ua.WebApi.Client.RequestOptions();
@@ -4035,7 +4035,7 @@ namespace Opc.Ua.WebApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of RegisterNodesResponse</returns>
-        public async System.Threading.Tasks.Task<RegisterNodesResponse> RegisterNodesAsync(RegisterNodesRequest? registerNodesRequest = default(RegisterNodesRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<RegisterNodesResponse> RegisterNodesAsync(RegisterNodesRequest? registerNodesRequest = default(RegisterNodesRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             Opc.Ua.WebApi.Client.ApiResponse<RegisterNodesResponse> localVarResponse = await RegisterNodesWithHttpInfoAsync(registerNodesRequest, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -4049,7 +4049,7 @@ namespace Opc.Ua.WebApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RegisterNodesResponse)</returns>
-        public async System.Threading.Tasks.Task<Opc.Ua.WebApi.Client.ApiResponse<RegisterNodesResponse>> RegisterNodesWithHttpInfoAsync(RegisterNodesRequest? registerNodesRequest = default(RegisterNodesRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Opc.Ua.WebApi.Client.ApiResponse<RegisterNodesResponse>> RegisterNodesWithHttpInfoAsync(RegisterNodesRequest? registerNodesRequest = default(RegisterNodesRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             Opc.Ua.WebApi.Client.RequestOptions localVarRequestOptions = new Opc.Ua.WebApi.Client.RequestOptions();
@@ -4169,7 +4169,7 @@ namespace Opc.Ua.WebApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of RepublishResponse</returns>
-        public async System.Threading.Tasks.Task<RepublishResponse> RepublishAsync(RepublishRequest? republishRequest = default(RepublishRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<RepublishResponse> RepublishAsync(RepublishRequest? republishRequest = default(RepublishRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             Opc.Ua.WebApi.Client.ApiResponse<RepublishResponse> localVarResponse = await RepublishWithHttpInfoAsync(republishRequest, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -4183,7 +4183,7 @@ namespace Opc.Ua.WebApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RepublishResponse)</returns>
-        public async System.Threading.Tasks.Task<Opc.Ua.WebApi.Client.ApiResponse<RepublishResponse>> RepublishWithHttpInfoAsync(RepublishRequest? republishRequest = default(RepublishRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Opc.Ua.WebApi.Client.ApiResponse<RepublishResponse>> RepublishWithHttpInfoAsync(RepublishRequest? republishRequest = default(RepublishRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             Opc.Ua.WebApi.Client.RequestOptions localVarRequestOptions = new Opc.Ua.WebApi.Client.RequestOptions();
@@ -4303,7 +4303,7 @@ namespace Opc.Ua.WebApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of SetMonitoringModeResponse</returns>
-        public async System.Threading.Tasks.Task<SetMonitoringModeResponse> SetMonitoringModeAsync(SetMonitoringModeRequest? setMonitoringModeRequest = default(SetMonitoringModeRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<SetMonitoringModeResponse> SetMonitoringModeAsync(SetMonitoringModeRequest? setMonitoringModeRequest = default(SetMonitoringModeRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             Opc.Ua.WebApi.Client.ApiResponse<SetMonitoringModeResponse> localVarResponse = await SetMonitoringModeWithHttpInfoAsync(setMonitoringModeRequest, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -4317,7 +4317,7 @@ namespace Opc.Ua.WebApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (SetMonitoringModeResponse)</returns>
-        public async System.Threading.Tasks.Task<Opc.Ua.WebApi.Client.ApiResponse<SetMonitoringModeResponse>> SetMonitoringModeWithHttpInfoAsync(SetMonitoringModeRequest? setMonitoringModeRequest = default(SetMonitoringModeRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Opc.Ua.WebApi.Client.ApiResponse<SetMonitoringModeResponse>> SetMonitoringModeWithHttpInfoAsync(SetMonitoringModeRequest? setMonitoringModeRequest = default(SetMonitoringModeRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             Opc.Ua.WebApi.Client.RequestOptions localVarRequestOptions = new Opc.Ua.WebApi.Client.RequestOptions();
@@ -4437,7 +4437,7 @@ namespace Opc.Ua.WebApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of SetPublishingModeResponse</returns>
-        public async System.Threading.Tasks.Task<SetPublishingModeResponse> SetPublishingModeAsync(SetPublishingModeRequest? setPublishingModeRequest = default(SetPublishingModeRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<SetPublishingModeResponse> SetPublishingModeAsync(SetPublishingModeRequest? setPublishingModeRequest = default(SetPublishingModeRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             Opc.Ua.WebApi.Client.ApiResponse<SetPublishingModeResponse> localVarResponse = await SetPublishingModeWithHttpInfoAsync(setPublishingModeRequest, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -4451,7 +4451,7 @@ namespace Opc.Ua.WebApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (SetPublishingModeResponse)</returns>
-        public async System.Threading.Tasks.Task<Opc.Ua.WebApi.Client.ApiResponse<SetPublishingModeResponse>> SetPublishingModeWithHttpInfoAsync(SetPublishingModeRequest? setPublishingModeRequest = default(SetPublishingModeRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Opc.Ua.WebApi.Client.ApiResponse<SetPublishingModeResponse>> SetPublishingModeWithHttpInfoAsync(SetPublishingModeRequest? setPublishingModeRequest = default(SetPublishingModeRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             Opc.Ua.WebApi.Client.RequestOptions localVarRequestOptions = new Opc.Ua.WebApi.Client.RequestOptions();
@@ -4571,7 +4571,7 @@ namespace Opc.Ua.WebApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of SetTriggeringResponse</returns>
-        public async System.Threading.Tasks.Task<SetTriggeringResponse> SetTriggeringAsync(SetTriggeringRequest? setTriggeringRequest = default(SetTriggeringRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<SetTriggeringResponse> SetTriggeringAsync(SetTriggeringRequest? setTriggeringRequest = default(SetTriggeringRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             Opc.Ua.WebApi.Client.ApiResponse<SetTriggeringResponse> localVarResponse = await SetTriggeringWithHttpInfoAsync(setTriggeringRequest, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -4585,7 +4585,7 @@ namespace Opc.Ua.WebApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (SetTriggeringResponse)</returns>
-        public async System.Threading.Tasks.Task<Opc.Ua.WebApi.Client.ApiResponse<SetTriggeringResponse>> SetTriggeringWithHttpInfoAsync(SetTriggeringRequest? setTriggeringRequest = default(SetTriggeringRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Opc.Ua.WebApi.Client.ApiResponse<SetTriggeringResponse>> SetTriggeringWithHttpInfoAsync(SetTriggeringRequest? setTriggeringRequest = default(SetTriggeringRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             Opc.Ua.WebApi.Client.RequestOptions localVarRequestOptions = new Opc.Ua.WebApi.Client.RequestOptions();
@@ -4705,7 +4705,7 @@ namespace Opc.Ua.WebApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of TransferSubscriptionsResponse</returns>
-        public async System.Threading.Tasks.Task<TransferSubscriptionsResponse> TransferSubscriptionsAsync(TransferSubscriptionsRequest? transferSubscriptionsRequest = default(TransferSubscriptionsRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<TransferSubscriptionsResponse> TransferSubscriptionsAsync(TransferSubscriptionsRequest? transferSubscriptionsRequest = default(TransferSubscriptionsRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             Opc.Ua.WebApi.Client.ApiResponse<TransferSubscriptionsResponse> localVarResponse = await TransferSubscriptionsWithHttpInfoAsync(transferSubscriptionsRequest, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -4719,7 +4719,7 @@ namespace Opc.Ua.WebApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (TransferSubscriptionsResponse)</returns>
-        public async System.Threading.Tasks.Task<Opc.Ua.WebApi.Client.ApiResponse<TransferSubscriptionsResponse>> TransferSubscriptionsWithHttpInfoAsync(TransferSubscriptionsRequest? transferSubscriptionsRequest = default(TransferSubscriptionsRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Opc.Ua.WebApi.Client.ApiResponse<TransferSubscriptionsResponse>> TransferSubscriptionsWithHttpInfoAsync(TransferSubscriptionsRequest? transferSubscriptionsRequest = default(TransferSubscriptionsRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             Opc.Ua.WebApi.Client.RequestOptions localVarRequestOptions = new Opc.Ua.WebApi.Client.RequestOptions();
@@ -4839,7 +4839,7 @@ namespace Opc.Ua.WebApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of TranslateBrowsePathsToNodeIdsResponse</returns>
-        public async System.Threading.Tasks.Task<TranslateBrowsePathsToNodeIdsResponse> TranslateBrowsePathsToNodeIdsAsync(TranslateBrowsePathsToNodeIdsRequest? translateBrowsePathsToNodeIdsRequest = default(TranslateBrowsePathsToNodeIdsRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<TranslateBrowsePathsToNodeIdsResponse> TranslateBrowsePathsToNodeIdsAsync(TranslateBrowsePathsToNodeIdsRequest? translateBrowsePathsToNodeIdsRequest = default(TranslateBrowsePathsToNodeIdsRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             Opc.Ua.WebApi.Client.ApiResponse<TranslateBrowsePathsToNodeIdsResponse> localVarResponse = await TranslateBrowsePathsToNodeIdsWithHttpInfoAsync(translateBrowsePathsToNodeIdsRequest, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -4853,7 +4853,7 @@ namespace Opc.Ua.WebApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (TranslateBrowsePathsToNodeIdsResponse)</returns>
-        public async System.Threading.Tasks.Task<Opc.Ua.WebApi.Client.ApiResponse<TranslateBrowsePathsToNodeIdsResponse>> TranslateBrowsePathsToNodeIdsWithHttpInfoAsync(TranslateBrowsePathsToNodeIdsRequest? translateBrowsePathsToNodeIdsRequest = default(TranslateBrowsePathsToNodeIdsRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Opc.Ua.WebApi.Client.ApiResponse<TranslateBrowsePathsToNodeIdsResponse>> TranslateBrowsePathsToNodeIdsWithHttpInfoAsync(TranslateBrowsePathsToNodeIdsRequest? translateBrowsePathsToNodeIdsRequest = default(TranslateBrowsePathsToNodeIdsRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             Opc.Ua.WebApi.Client.RequestOptions localVarRequestOptions = new Opc.Ua.WebApi.Client.RequestOptions();
@@ -4973,7 +4973,7 @@ namespace Opc.Ua.WebApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of UnregisterNodesResponse</returns>
-        public async System.Threading.Tasks.Task<UnregisterNodesResponse> UnregisterNodesAsync(UnregisterNodesRequest? unregisterNodesRequest = default(UnregisterNodesRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<UnregisterNodesResponse> UnregisterNodesAsync(UnregisterNodesRequest? unregisterNodesRequest = default(UnregisterNodesRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             Opc.Ua.WebApi.Client.ApiResponse<UnregisterNodesResponse> localVarResponse = await UnregisterNodesWithHttpInfoAsync(unregisterNodesRequest, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -4987,7 +4987,7 @@ namespace Opc.Ua.WebApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (UnregisterNodesResponse)</returns>
-        public async System.Threading.Tasks.Task<Opc.Ua.WebApi.Client.ApiResponse<UnregisterNodesResponse>> UnregisterNodesWithHttpInfoAsync(UnregisterNodesRequest? unregisterNodesRequest = default(UnregisterNodesRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Opc.Ua.WebApi.Client.ApiResponse<UnregisterNodesResponse>> UnregisterNodesWithHttpInfoAsync(UnregisterNodesRequest? unregisterNodesRequest = default(UnregisterNodesRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             Opc.Ua.WebApi.Client.RequestOptions localVarRequestOptions = new Opc.Ua.WebApi.Client.RequestOptions();
@@ -5107,7 +5107,7 @@ namespace Opc.Ua.WebApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of WriteResponse</returns>
-        public async System.Threading.Tasks.Task<WriteResponse> WriteAsync(WriteRequest? writeRequest = default(WriteRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<WriteResponse> WriteAsync(WriteRequest? writeRequest = default(WriteRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
             Opc.Ua.WebApi.Client.ApiResponse<WriteResponse> localVarResponse = await WriteWithHttpInfoAsync(writeRequest, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
@@ -5121,7 +5121,7 @@ namespace Opc.Ua.WebApi.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (WriteResponse)</returns>
-        public async System.Threading.Tasks.Task<Opc.Ua.WebApi.Client.ApiResponse<WriteResponse>> WriteWithHttpInfoAsync(WriteRequest? writeRequest = default(WriteRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Opc.Ua.WebApi.Client.ApiResponse<WriteResponse>> WriteWithHttpInfoAsync(WriteRequest? writeRequest = default(WriteRequest?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
         {
 
             Opc.Ua.WebApi.Client.RequestOptions localVarRequestOptions = new Opc.Ua.WebApi.Client.RequestOptions();

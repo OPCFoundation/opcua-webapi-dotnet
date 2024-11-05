@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**StatusCode** | **long** |  | [optional] 
-**InputArgumentResults** | **List&lt;long&gt;** |  | [optional] 
+**StatusCode** | [**StatusCode**](StatusCode.md) |  | [optional] 
+**InputArgumentResults** | [**List&lt;StatusCode&gt;**](StatusCode.md) |  | [optional] 
 **InputArgumentDiagnosticInfos** | [**List&lt;DiagnosticInfo&gt;**](DiagnosticInfo.md) |  | [optional] 
 **OutputArguments** | [**List&lt;Variant&gt;**](Variant.md) |  | [optional] 
 

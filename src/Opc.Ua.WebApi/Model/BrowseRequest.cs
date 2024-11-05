@@ -30,16 +30,16 @@ namespace Opc.Ua.WebApi.Model
     /// BrowseRequest
     /// </summary>
     [DataContract(Name = "BrowseRequest")]
-    public partial class BrowseRequest : IEquatable<BrowseRequest>, IValidatableObject
+    public partial class BrowseRequest : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="BrowseRequest" /> class.
         /// </summary>
         /// <param name="requestHeader">requestHeader.</param>
         /// <param name="view">view.</param>
-        /// <param name="requestedMaxReferencesPerNode">requestedMaxReferencesPerNode.</param>
+        /// <param name="requestedMaxReferencesPerNode">requestedMaxReferencesPerNode (default to 0).</param>
         /// <param name="nodesToBrowse">nodesToBrowse.</param>
-        public BrowseRequest(RequestHeader requestHeader = default(RequestHeader), ViewDescription view = default(ViewDescription), long requestedMaxReferencesPerNode = default(long), List<BrowseDescription> nodesToBrowse = default(List<BrowseDescription>))
+        public BrowseRequest(RequestHeader requestHeader = default(RequestHeader), ViewDescription view = default(ViewDescription), long requestedMaxReferencesPerNode = 0, List<BrowseDescription> nodesToBrowse = default(List<BrowseDescription>))
         {
             this.RequestHeader = requestHeader;
             this.View = view;
@@ -97,92 +97,22 @@ namespace Opc.Ua.WebApi.Model
         }
 
         /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as BrowseRequest);
-        }
-
-        /// <summary>
-        /// Returns true if BrowseRequest instances are equal
-        /// </summary>
-        /// <param name="input">Instance of BrowseRequest to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(BrowseRequest input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.RequestHeader == input.RequestHeader ||
-                    (this.RequestHeader != null &&
-                    this.RequestHeader.Equals(input.RequestHeader))
-                ) && 
-                (
-                    this.View == input.View ||
-                    (this.View != null &&
-                    this.View.Equals(input.View))
-                ) && 
-                (
-                    this.RequestedMaxReferencesPerNode == input.RequestedMaxReferencesPerNode ||
-                    this.RequestedMaxReferencesPerNode.Equals(input.RequestedMaxReferencesPerNode)
-                ) && 
-                (
-                    this.NodesToBrowse == input.NodesToBrowse ||
-                    this.NodesToBrowse != null &&
-                    input.NodesToBrowse != null &&
-                    this.NodesToBrowse.SequenceEqual(input.NodesToBrowse)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.RequestHeader != null)
-                {
-                    hashCode = (hashCode * 59) + this.RequestHeader.GetHashCode();
-                }
-                if (this.View != null)
-                {
-                    hashCode = (hashCode * 59) + this.View.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.RequestedMaxReferencesPerNode.GetHashCode();
-                if (this.NodesToBrowse != null)
-                {
-                    hashCode = (hashCode * 59) + this.NodesToBrowse.GetHashCode();
-                }
-                return hashCode;
-            }
-        }
-
-        /// <summary>
         /// To validate all properties of the instance
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // RequestedMaxReferencesPerNode (long) maximum
             if (this.RequestedMaxReferencesPerNode > (long)4294967295)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for RequestedMaxReferencesPerNode, must be a value less than or equal to 4294967295.", new [] { "RequestedMaxReferencesPerNode" });
+                yield return new ValidationResult("Invalid value for RequestedMaxReferencesPerNode, must be a value less than or equal to 4294967295.", new [] { "RequestedMaxReferencesPerNode" });
             }
 
             // RequestedMaxReferencesPerNode (long) minimum
             if (this.RequestedMaxReferencesPerNode < (long)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for RequestedMaxReferencesPerNode, must be a value greater than or equal to 0.", new [] { "RequestedMaxReferencesPerNode" });
+                yield return new ValidationResult("Invalid value for RequestedMaxReferencesPerNode, must be a value greater than or equal to 0.", new [] { "RequestedMaxReferencesPerNode" });
             }
 
             yield break;

@@ -30,7 +30,7 @@ namespace Opc.Ua.WebApi.Model
     /// RelativePath
     /// </summary>
     [DataContract(Name = "RelativePath")]
-    public partial class RelativePath : IEquatable<RelativePath>, IValidatableObject
+    public partial class RelativePath : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="RelativePath" /> class.
@@ -70,58 +70,11 @@ namespace Opc.Ua.WebApi.Model
         }
 
         /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as RelativePath);
-        }
-
-        /// <summary>
-        /// Returns true if RelativePath instances are equal
-        /// </summary>
-        /// <param name="input">Instance of RelativePath to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(RelativePath input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.Elements == input.Elements ||
-                    this.Elements != null &&
-                    input.Elements != null &&
-                    this.Elements.SequenceEqual(input.Elements)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.Elements != null)
-                {
-                    hashCode = (hashCode * 59) + this.Elements.GetHashCode();
-                }
-                return hashCode;
-            }
-        }
-
-        /// <summary>
         /// To validate all properties of the instance
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

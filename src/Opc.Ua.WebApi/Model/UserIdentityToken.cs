@@ -30,7 +30,7 @@ namespace Opc.Ua.WebApi.Model
     /// UserIdentityToken
     /// </summary>
     [DataContract(Name = "UserIdentityToken")]
-    public partial class UserIdentityToken : IEquatable<UserIdentityToken>, IValidatableObject
+    public partial class UserIdentityToken : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="UserIdentityToken" /> class.
@@ -70,57 +70,11 @@ namespace Opc.Ua.WebApi.Model
         }
 
         /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as UserIdentityToken);
-        }
-
-        /// <summary>
-        /// Returns true if UserIdentityToken instances are equal
-        /// </summary>
-        /// <param name="input">Instance of UserIdentityToken to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(UserIdentityToken input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.PolicyId == input.PolicyId ||
-                    (this.PolicyId != null &&
-                    this.PolicyId.Equals(input.PolicyId))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.PolicyId != null)
-                {
-                    hashCode = (hashCode * 59) + this.PolicyId.GetHashCode();
-                }
-                return hashCode;
-            }
-        }
-
-        /// <summary>
         /// To validate all properties of the instance
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

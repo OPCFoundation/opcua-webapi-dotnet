@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**StatusCode** | **long** |  | [optional] 
+**StatusCode** | [**StatusCode**](StatusCode.md) |  | [optional] 
 **ContinuationPoint** | **byte[]** |  | [optional] 
 **HistoryData** | [**ExtensionObject**](ExtensionObject.md) |  | [optional] 
 

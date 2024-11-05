@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Name** | **string** |  | [optional] 
 **DataType** | **string** |  | [optional] 
-**ValueRank** | **int** |  | [optional] 
+**ValueRank** | **int** |  | [optional] [default to 0]
 **ArrayDimensions** | **List&lt;long&gt;** |  | [optional] 
 **Description** | [**LocalizedText**](LocalizedText.md) |  | [optional] 
 

@@ -30,26 +30,26 @@ namespace Opc.Ua.WebApi.Model
     /// Variant
     /// </summary>
     [DataContract(Name = "Variant")]
-    public partial class Variant : IEquatable<Variant>, IValidatableObject
+    public partial class Variant : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="Variant" /> class.
         /// </summary>
-        /// <param name="type">type.</param>
+        /// <param name="uaType">uaType.</param>
         /// <param name="body">body.</param>
         /// <param name="dimensions">dimensions.</param>
-        public Variant(int type = default(int), Object body = default(Object), List<int> dimensions = default(List<int>))
+        public Variant(int uaType = default(int), Object body = default(Object), List<int> dimensions = default(List<int>))
         {
-            this.Type = type;
+            this.UaType = uaType;
             this.Body = body;
             this.Dimensions = dimensions;
         }
 
         /// <summary>
-        /// Gets or Sets Type
+        /// Gets or Sets UaType
         /// </summary>
-        [DataMember(Name = "Type", EmitDefaultValue = false)]
-        public int Type { get; set; }
+        [DataMember(Name = "UaType", EmitDefaultValue = false)]
+        public int UaType { get; set; }
 
         /// <summary>
         /// Gets or Sets Body
@@ -71,7 +71,7 @@ namespace Opc.Ua.WebApi.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class Variant {\n");
-            sb.Append("  Type: ").Append(Type).Append("\n");
+            sb.Append("  UaType: ").Append(UaType).Append("\n");
             sb.Append("  Body: ").Append(Body).Append("\n");
             sb.Append("  Dimensions: ").Append(Dimensions).Append("\n");
             sb.Append("}\n");
@@ -88,83 +88,22 @@ namespace Opc.Ua.WebApi.Model
         }
 
         /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as Variant);
-        }
-
-        /// <summary>
-        /// Returns true if Variant instances are equal
-        /// </summary>
-        /// <param name="input">Instance of Variant to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(Variant input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.Type == input.Type ||
-                    this.Type.Equals(input.Type)
-                ) && 
-                (
-                    this.Body == input.Body ||
-                    (this.Body != null &&
-                    this.Body.Equals(input.Body))
-                ) && 
-                (
-                    this.Dimensions == input.Dimensions ||
-                    this.Dimensions != null &&
-                    input.Dimensions != null &&
-                    this.Dimensions.SequenceEqual(input.Dimensions)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.Type.GetHashCode();
-                if (this.Body != null)
-                {
-                    hashCode = (hashCode * 59) + this.Body.GetHashCode();
-                }
-                if (this.Dimensions != null)
-                {
-                    hashCode = (hashCode * 59) + this.Dimensions.GetHashCode();
-                }
-                return hashCode;
-            }
-        }
-
-        /// <summary>
         /// To validate all properties of the instance
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
-            // Type (int) maximum
-            if (this.Type > (int)255)
+            // UaType (int) maximum
+            if (this.UaType > (int)255)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for Type, must be a value less than or equal to 255.", new [] { "Type" });
+                yield return new ValidationResult("Invalid value for UaType, must be a value less than or equal to 255.", new [] { "UaType" });
             }
 
-            // Type (int) minimum
-            if (this.Type < (int)0)
+            // UaType (int) minimum
+            if (this.UaType < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for Type, must be a value greater than or equal to 0.", new [] { "Type" });
+                yield return new ValidationResult("Invalid value for UaType, must be a value greater than or equal to 0.", new [] { "UaType" });
             }
 
             yield break;

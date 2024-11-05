@@ -30,15 +30,15 @@ namespace Opc.Ua.WebApi.Model
     /// BrowseNextRequest
     /// </summary>
     [DataContract(Name = "BrowseNextRequest")]
-    public partial class BrowseNextRequest : IEquatable<BrowseNextRequest>, IValidatableObject
+    public partial class BrowseNextRequest : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="BrowseNextRequest" /> class.
         /// </summary>
         /// <param name="requestHeader">requestHeader.</param>
-        /// <param name="releaseContinuationPoints">releaseContinuationPoints.</param>
+        /// <param name="releaseContinuationPoints">releaseContinuationPoints (default to false).</param>
         /// <param name="continuationPoints">continuationPoints.</param>
-        public BrowseNextRequest(RequestHeader requestHeader = default(RequestHeader), bool releaseContinuationPoints = default(bool), List<byte[]> continuationPoints = default(List<byte[]>))
+        public BrowseNextRequest(RequestHeader requestHeader = default(RequestHeader), bool releaseContinuationPoints = false, List<byte[]> continuationPoints = default(List<byte[]>))
         {
             this.RequestHeader = requestHeader;
             this.ReleaseContinuationPoints = releaseContinuationPoints;
@@ -88,72 +88,11 @@ namespace Opc.Ua.WebApi.Model
         }
 
         /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as BrowseNextRequest);
-        }
-
-        /// <summary>
-        /// Returns true if BrowseNextRequest instances are equal
-        /// </summary>
-        /// <param name="input">Instance of BrowseNextRequest to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(BrowseNextRequest input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.RequestHeader == input.RequestHeader ||
-                    (this.RequestHeader != null &&
-                    this.RequestHeader.Equals(input.RequestHeader))
-                ) && 
-                (
-                    this.ReleaseContinuationPoints == input.ReleaseContinuationPoints ||
-                    this.ReleaseContinuationPoints.Equals(input.ReleaseContinuationPoints)
-                ) && 
-                (
-                    this.ContinuationPoints == input.ContinuationPoints ||
-                    this.ContinuationPoints != null &&
-                    input.ContinuationPoints != null &&
-                    this.ContinuationPoints.SequenceEqual(input.ContinuationPoints)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.RequestHeader != null)
-                {
-                    hashCode = (hashCode * 59) + this.RequestHeader.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.ReleaseContinuationPoints.GetHashCode();
-                if (this.ContinuationPoints != null)
-                {
-                    hashCode = (hashCode * 59) + this.ContinuationPoints.GetHashCode();
-                }
-                return hashCode;
-            }
-        }
-
-        /// <summary>
         /// To validate all properties of the instance
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

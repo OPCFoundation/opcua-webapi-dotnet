@@ -30,7 +30,7 @@ namespace Opc.Ua.WebApi.Model
     /// CallMethodResult
     /// </summary>
     [DataContract(Name = "CallMethodResult")]
-    public partial class CallMethodResult : IEquatable<CallMethodResult>, IValidatableObject
+    public partial class CallMethodResult : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="CallMethodResult" /> class.
@@ -39,7 +39,7 @@ namespace Opc.Ua.WebApi.Model
         /// <param name="inputArgumentResults">inputArgumentResults.</param>
         /// <param name="inputArgumentDiagnosticInfos">inputArgumentDiagnosticInfos.</param>
         /// <param name="outputArguments">outputArguments.</param>
-        public CallMethodResult(long statusCode = default(long), List<long> inputArgumentResults = default(List<long>), List<DiagnosticInfo> inputArgumentDiagnosticInfos = default(List<DiagnosticInfo>), List<Variant> outputArguments = default(List<Variant>))
+        public CallMethodResult(StatusCode statusCode = default(StatusCode), List<StatusCode> inputArgumentResults = default(List<StatusCode>), List<DiagnosticInfo> inputArgumentDiagnosticInfos = default(List<DiagnosticInfo>), List<Variant> outputArguments = default(List<Variant>))
         {
             this.StatusCode = statusCode;
             this.InputArgumentResults = inputArgumentResults;
@@ -51,13 +51,13 @@ namespace Opc.Ua.WebApi.Model
         /// Gets or Sets StatusCode
         /// </summary>
         [DataMember(Name = "StatusCode", EmitDefaultValue = false)]
-        public long StatusCode { get; set; }
+        public StatusCode StatusCode { get; set; }
 
         /// <summary>
         /// Gets or Sets InputArgumentResults
         /// </summary>
         [DataMember(Name = "InputArgumentResults", EmitDefaultValue = false)]
-        public List<long> InputArgumentResults { get; set; }
+        public List<StatusCode> InputArgumentResults { get; set; }
 
         /// <summary>
         /// Gets or Sets InputArgumentDiagnosticInfos
@@ -97,96 +97,12 @@ namespace Opc.Ua.WebApi.Model
         }
 
         /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as CallMethodResult);
-        }
-
-        /// <summary>
-        /// Returns true if CallMethodResult instances are equal
-        /// </summary>
-        /// <param name="input">Instance of CallMethodResult to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(CallMethodResult input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.StatusCode == input.StatusCode ||
-                    this.StatusCode.Equals(input.StatusCode)
-                ) && 
-                (
-                    this.InputArgumentResults == input.InputArgumentResults ||
-                    this.InputArgumentResults != null &&
-                    input.InputArgumentResults != null &&
-                    this.InputArgumentResults.SequenceEqual(input.InputArgumentResults)
-                ) && 
-                (
-                    this.InputArgumentDiagnosticInfos == input.InputArgumentDiagnosticInfos ||
-                    this.InputArgumentDiagnosticInfos != null &&
-                    input.InputArgumentDiagnosticInfos != null &&
-                    this.InputArgumentDiagnosticInfos.SequenceEqual(input.InputArgumentDiagnosticInfos)
-                ) && 
-                (
-                    this.OutputArguments == input.OutputArguments ||
-                    this.OutputArguments != null &&
-                    input.OutputArguments != null &&
-                    this.OutputArguments.SequenceEqual(input.OutputArguments)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.StatusCode.GetHashCode();
-                if (this.InputArgumentResults != null)
-                {
-                    hashCode = (hashCode * 59) + this.InputArgumentResults.GetHashCode();
-                }
-                if (this.InputArgumentDiagnosticInfos != null)
-                {
-                    hashCode = (hashCode * 59) + this.InputArgumentDiagnosticInfos.GetHashCode();
-                }
-                if (this.OutputArguments != null)
-                {
-                    hashCode = (hashCode * 59) + this.OutputArguments.GetHashCode();
-                }
-                return hashCode;
-            }
-        }
-
-        /// <summary>
         /// To validate all properties of the instance
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
-            // StatusCode (long) maximum
-            if (this.StatusCode > (long)4294967295)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for StatusCode, must be a value less than or equal to 4294967295.", new [] { "StatusCode" });
-            }
-
-            // StatusCode (long) minimum
-            if (this.StatusCode < (long)0)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for StatusCode, must be a value greater than or equal to 0.", new [] { "StatusCode" });
-            }
-
             yield break;
         }
     }

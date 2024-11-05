@@ -30,21 +30,21 @@ namespace Opc.Ua.WebApi.Model
     /// SecurityGroupDataType
     /// </summary>
     [DataContract(Name = "SecurityGroupDataType")]
-    public partial class SecurityGroupDataType : IEquatable<SecurityGroupDataType>, IValidatableObject
+    public partial class SecurityGroupDataType : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="SecurityGroupDataType" /> class.
         /// </summary>
         /// <param name="name">name.</param>
         /// <param name="securityGroupFolder">securityGroupFolder.</param>
-        /// <param name="keyLifetime">keyLifetime.</param>
+        /// <param name="keyLifetime">keyLifetime (default to 0D).</param>
         /// <param name="securityPolicyUri">securityPolicyUri.</param>
-        /// <param name="maxFutureKeyCount">maxFutureKeyCount.</param>
-        /// <param name="maxPastKeyCount">maxPastKeyCount.</param>
+        /// <param name="maxFutureKeyCount">maxFutureKeyCount (default to 0).</param>
+        /// <param name="maxPastKeyCount">maxPastKeyCount (default to 0).</param>
         /// <param name="securityGroupId">securityGroupId.</param>
         /// <param name="rolePermissions">rolePermissions.</param>
         /// <param name="groupProperties">groupProperties.</param>
-        public SecurityGroupDataType(string name = default(string), List<string> securityGroupFolder = default(List<string>), double keyLifetime = default(double), string securityPolicyUri = default(string), long maxFutureKeyCount = default(long), long maxPastKeyCount = default(long), string securityGroupId = default(string), List<RolePermissionType> rolePermissions = default(List<RolePermissionType>), List<KeyValuePair> groupProperties = default(List<KeyValuePair>))
+        public SecurityGroupDataType(string name = default(string), List<string> securityGroupFolder = default(List<string>), double keyLifetime = 0D, string securityPolicyUri = default(string), long maxFutureKeyCount = 0, long maxPastKeyCount = 0, string securityGroupId = default(string), List<RolePermissionType> rolePermissions = default(List<RolePermissionType>), List<KeyValuePair> groupProperties = default(List<KeyValuePair>))
         {
             this.Name = name;
             this.SecurityGroupFolder = securityGroupFolder;
@@ -142,143 +142,34 @@ namespace Opc.Ua.WebApi.Model
         }
 
         /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as SecurityGroupDataType);
-        }
-
-        /// <summary>
-        /// Returns true if SecurityGroupDataType instances are equal
-        /// </summary>
-        /// <param name="input">Instance of SecurityGroupDataType to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(SecurityGroupDataType input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.Name == input.Name ||
-                    (this.Name != null &&
-                    this.Name.Equals(input.Name))
-                ) && 
-                (
-                    this.SecurityGroupFolder == input.SecurityGroupFolder ||
-                    this.SecurityGroupFolder != null &&
-                    input.SecurityGroupFolder != null &&
-                    this.SecurityGroupFolder.SequenceEqual(input.SecurityGroupFolder)
-                ) && 
-                (
-                    this.KeyLifetime == input.KeyLifetime ||
-                    this.KeyLifetime.Equals(input.KeyLifetime)
-                ) && 
-                (
-                    this.SecurityPolicyUri == input.SecurityPolicyUri ||
-                    (this.SecurityPolicyUri != null &&
-                    this.SecurityPolicyUri.Equals(input.SecurityPolicyUri))
-                ) && 
-                (
-                    this.MaxFutureKeyCount == input.MaxFutureKeyCount ||
-                    this.MaxFutureKeyCount.Equals(input.MaxFutureKeyCount)
-                ) && 
-                (
-                    this.MaxPastKeyCount == input.MaxPastKeyCount ||
-                    this.MaxPastKeyCount.Equals(input.MaxPastKeyCount)
-                ) && 
-                (
-                    this.SecurityGroupId == input.SecurityGroupId ||
-                    (this.SecurityGroupId != null &&
-                    this.SecurityGroupId.Equals(input.SecurityGroupId))
-                ) && 
-                (
-                    this.RolePermissions == input.RolePermissions ||
-                    this.RolePermissions != null &&
-                    input.RolePermissions != null &&
-                    this.RolePermissions.SequenceEqual(input.RolePermissions)
-                ) && 
-                (
-                    this.GroupProperties == input.GroupProperties ||
-                    this.GroupProperties != null &&
-                    input.GroupProperties != null &&
-                    this.GroupProperties.SequenceEqual(input.GroupProperties)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.Name != null)
-                {
-                    hashCode = (hashCode * 59) + this.Name.GetHashCode();
-                }
-                if (this.SecurityGroupFolder != null)
-                {
-                    hashCode = (hashCode * 59) + this.SecurityGroupFolder.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.KeyLifetime.GetHashCode();
-                if (this.SecurityPolicyUri != null)
-                {
-                    hashCode = (hashCode * 59) + this.SecurityPolicyUri.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.MaxFutureKeyCount.GetHashCode();
-                hashCode = (hashCode * 59) + this.MaxPastKeyCount.GetHashCode();
-                if (this.SecurityGroupId != null)
-                {
-                    hashCode = (hashCode * 59) + this.SecurityGroupId.GetHashCode();
-                }
-                if (this.RolePermissions != null)
-                {
-                    hashCode = (hashCode * 59) + this.RolePermissions.GetHashCode();
-                }
-                if (this.GroupProperties != null)
-                {
-                    hashCode = (hashCode * 59) + this.GroupProperties.GetHashCode();
-                }
-                return hashCode;
-            }
-        }
-
-        /// <summary>
         /// To validate all properties of the instance
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // MaxFutureKeyCount (long) maximum
             if (this.MaxFutureKeyCount > (long)4294967295)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for MaxFutureKeyCount, must be a value less than or equal to 4294967295.", new [] { "MaxFutureKeyCount" });
+                yield return new ValidationResult("Invalid value for MaxFutureKeyCount, must be a value less than or equal to 4294967295.", new [] { "MaxFutureKeyCount" });
             }
 
             // MaxFutureKeyCount (long) minimum
             if (this.MaxFutureKeyCount < (long)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for MaxFutureKeyCount, must be a value greater than or equal to 0.", new [] { "MaxFutureKeyCount" });
+                yield return new ValidationResult("Invalid value for MaxFutureKeyCount, must be a value greater than or equal to 0.", new [] { "MaxFutureKeyCount" });
             }
 
             // MaxPastKeyCount (long) maximum
             if (this.MaxPastKeyCount > (long)4294967295)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for MaxPastKeyCount, must be a value less than or equal to 4294967295.", new [] { "MaxPastKeyCount" });
+                yield return new ValidationResult("Invalid value for MaxPastKeyCount, must be a value less than or equal to 4294967295.", new [] { "MaxPastKeyCount" });
             }
 
             // MaxPastKeyCount (long) minimum
             if (this.MaxPastKeyCount < (long)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for MaxPastKeyCount, must be a value greater than or equal to 0.", new [] { "MaxPastKeyCount" });
+                yield return new ValidationResult("Invalid value for MaxPastKeyCount, must be a value greater than or equal to 0.", new [] { "MaxPastKeyCount" });
             }
 
             yield break;

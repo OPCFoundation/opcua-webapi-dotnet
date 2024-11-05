@@ -30,17 +30,17 @@ namespace Opc.Ua.WebApi.Model
     /// ReadRawModifiedDetails
     /// </summary>
     [DataContract(Name = "ReadRawModifiedDetails")]
-    public partial class ReadRawModifiedDetails : IEquatable<ReadRawModifiedDetails>, IValidatableObject
+    public partial class ReadRawModifiedDetails : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ReadRawModifiedDetails" /> class.
         /// </summary>
-        /// <param name="isReadModified">isReadModified.</param>
-        /// <param name="startTime">startTime.</param>
-        /// <param name="endTime">endTime.</param>
-        /// <param name="numValuesPerNode">numValuesPerNode.</param>
-        /// <param name="returnBounds">returnBounds.</param>
-        public ReadRawModifiedDetails(bool isReadModified = default(bool), DateTime startTime = default(DateTime), DateTime endTime = default(DateTime), long numValuesPerNode = default(long), bool returnBounds = default(bool))
+        /// <param name="isReadModified">isReadModified (default to false).</param>
+        /// <param name="startTime">startTime (default to &quot;0001-01-01T00:00Z&quot;).</param>
+        /// <param name="endTime">endTime (default to &quot;0001-01-01T00:00Z&quot;).</param>
+        /// <param name="numValuesPerNode">numValuesPerNode (default to 0).</param>
+        /// <param name="returnBounds">returnBounds (default to false).</param>
+        public ReadRawModifiedDetails(bool isReadModified = false, DateTime startTime = default(DateTime), DateTime endTime = default(DateTime), long numValuesPerNode = 0, bool returnBounds = false)
         {
             this.IsReadModified = isReadModified;
             this.StartTime = startTime;
@@ -106,92 +106,22 @@ namespace Opc.Ua.WebApi.Model
         }
 
         /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as ReadRawModifiedDetails);
-        }
-
-        /// <summary>
-        /// Returns true if ReadRawModifiedDetails instances are equal
-        /// </summary>
-        /// <param name="input">Instance of ReadRawModifiedDetails to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(ReadRawModifiedDetails input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.IsReadModified == input.IsReadModified ||
-                    this.IsReadModified.Equals(input.IsReadModified)
-                ) && 
-                (
-                    this.StartTime == input.StartTime ||
-                    (this.StartTime != null &&
-                    this.StartTime.Equals(input.StartTime))
-                ) && 
-                (
-                    this.EndTime == input.EndTime ||
-                    (this.EndTime != null &&
-                    this.EndTime.Equals(input.EndTime))
-                ) && 
-                (
-                    this.NumValuesPerNode == input.NumValuesPerNode ||
-                    this.NumValuesPerNode.Equals(input.NumValuesPerNode)
-                ) && 
-                (
-                    this.ReturnBounds == input.ReturnBounds ||
-                    this.ReturnBounds.Equals(input.ReturnBounds)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.IsReadModified.GetHashCode();
-                if (this.StartTime != null)
-                {
-                    hashCode = (hashCode * 59) + this.StartTime.GetHashCode();
-                }
-                if (this.EndTime != null)
-                {
-                    hashCode = (hashCode * 59) + this.EndTime.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.NumValuesPerNode.GetHashCode();
-                hashCode = (hashCode * 59) + this.ReturnBounds.GetHashCode();
-                return hashCode;
-            }
-        }
-
-        /// <summary>
         /// To validate all properties of the instance
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // NumValuesPerNode (long) maximum
             if (this.NumValuesPerNode > (long)4294967295)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for NumValuesPerNode, must be a value less than or equal to 4294967295.", new [] { "NumValuesPerNode" });
+                yield return new ValidationResult("Invalid value for NumValuesPerNode, must be a value less than or equal to 4294967295.", new [] { "NumValuesPerNode" });
             }
 
             // NumValuesPerNode (long) minimum
             if (this.NumValuesPerNode < (long)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for NumValuesPerNode, must be a value greater than or equal to 0.", new [] { "NumValuesPerNode" });
+                yield return new ValidationResult("Invalid value for NumValuesPerNode, must be a value greater than or equal to 0.", new [] { "NumValuesPerNode" });
             }
 
             yield break;

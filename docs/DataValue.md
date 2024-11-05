@@ -4,12 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Value** | [**Variant**](Variant.md) |  | [optional] 
-**StatusCode** | **long** |  | [optional] 
+**UaType** | **int** |  | [optional] [default to 0]
+**Value** | **Object** |  | [optional] 
+**Dimensions** | **List&lt;int&gt;** |  | [optional] 
+**StatusCode** | [**StatusCode**](StatusCode.md) |  | [optional] 
 **SourceTimestamp** | **DateTime** |  | [optional] 
-**SourcePicoSeconds** | **int** |  | [optional] 
+**SourcePicoseconds** | **int** |  | [optional] 
 **ServerTimestamp** | **DateTime** |  | [optional] 
-**ServerPicoSeconds** | **int** |  | [optional] 
+**ServerPicoseconds** | **int** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

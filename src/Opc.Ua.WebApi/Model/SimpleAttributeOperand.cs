@@ -30,16 +30,16 @@ namespace Opc.Ua.WebApi.Model
     /// SimpleAttributeOperand
     /// </summary>
     [DataContract(Name = "SimpleAttributeOperand")]
-    public partial class SimpleAttributeOperand : IEquatable<SimpleAttributeOperand>, IValidatableObject
+    public partial class SimpleAttributeOperand : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="SimpleAttributeOperand" /> class.
         /// </summary>
         /// <param name="typeDefinitionId">typeDefinitionId.</param>
         /// <param name="browsePath">browsePath.</param>
-        /// <param name="attributeId">attributeId.</param>
+        /// <param name="attributeId">attributeId (default to 0).</param>
         /// <param name="indexRange">indexRange.</param>
-        public SimpleAttributeOperand(string typeDefinitionId = default(string), List<string> browsePath = default(List<string>), long attributeId = default(long), string indexRange = default(string))
+        public SimpleAttributeOperand(string typeDefinitionId = default(string), List<string> browsePath = default(List<string>), long attributeId = 0, string indexRange = default(string))
         {
             this.TypeDefinitionId = typeDefinitionId;
             this.BrowsePath = browsePath;
@@ -97,92 +97,22 @@ namespace Opc.Ua.WebApi.Model
         }
 
         /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as SimpleAttributeOperand);
-        }
-
-        /// <summary>
-        /// Returns true if SimpleAttributeOperand instances are equal
-        /// </summary>
-        /// <param name="input">Instance of SimpleAttributeOperand to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(SimpleAttributeOperand input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.TypeDefinitionId == input.TypeDefinitionId ||
-                    (this.TypeDefinitionId != null &&
-                    this.TypeDefinitionId.Equals(input.TypeDefinitionId))
-                ) && 
-                (
-                    this.BrowsePath == input.BrowsePath ||
-                    this.BrowsePath != null &&
-                    input.BrowsePath != null &&
-                    this.BrowsePath.SequenceEqual(input.BrowsePath)
-                ) && 
-                (
-                    this.AttributeId == input.AttributeId ||
-                    this.AttributeId.Equals(input.AttributeId)
-                ) && 
-                (
-                    this.IndexRange == input.IndexRange ||
-                    (this.IndexRange != null &&
-                    this.IndexRange.Equals(input.IndexRange))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.TypeDefinitionId != null)
-                {
-                    hashCode = (hashCode * 59) + this.TypeDefinitionId.GetHashCode();
-                }
-                if (this.BrowsePath != null)
-                {
-                    hashCode = (hashCode * 59) + this.BrowsePath.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.AttributeId.GetHashCode();
-                if (this.IndexRange != null)
-                {
-                    hashCode = (hashCode * 59) + this.IndexRange.GetHashCode();
-                }
-                return hashCode;
-            }
-        }
-
-        /// <summary>
         /// To validate all properties of the instance
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // AttributeId (long) maximum
             if (this.AttributeId > (long)4294967295)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for AttributeId, must be a value less than or equal to 4294967295.", new [] { "AttributeId" });
+                yield return new ValidationResult("Invalid value for AttributeId, must be a value less than or equal to 4294967295.", new [] { "AttributeId" });
             }
 
             // AttributeId (long) minimum
             if (this.AttributeId < (long)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for AttributeId, must be a value greater than or equal to 0.", new [] { "AttributeId" });
+                yield return new ValidationResult("Invalid value for AttributeId, must be a value greater than or equal to 0.", new [] { "AttributeId" });
             }
 
             yield break;

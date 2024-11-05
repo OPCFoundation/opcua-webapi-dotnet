@@ -30,7 +30,7 @@ namespace Opc.Ua.WebApi.Model
     /// ApplicationDescription
     /// </summary>
     [DataContract(Name = "ApplicationDescription")]
-    public partial class ApplicationDescription : IEquatable<ApplicationDescription>, IValidatableObject
+    public partial class ApplicationDescription : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ApplicationDescription" /> class.
@@ -124,108 +124,11 @@ namespace Opc.Ua.WebApi.Model
         }
 
         /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as ApplicationDescription);
-        }
-
-        /// <summary>
-        /// Returns true if ApplicationDescription instances are equal
-        /// </summary>
-        /// <param name="input">Instance of ApplicationDescription to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(ApplicationDescription input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.ApplicationUri == input.ApplicationUri ||
-                    (this.ApplicationUri != null &&
-                    this.ApplicationUri.Equals(input.ApplicationUri))
-                ) && 
-                (
-                    this.ProductUri == input.ProductUri ||
-                    (this.ProductUri != null &&
-                    this.ProductUri.Equals(input.ProductUri))
-                ) && 
-                (
-                    this.ApplicationName == input.ApplicationName ||
-                    (this.ApplicationName != null &&
-                    this.ApplicationName.Equals(input.ApplicationName))
-                ) && 
-                (
-                    this.ApplicationType == input.ApplicationType ||
-                    this.ApplicationType.Equals(input.ApplicationType)
-                ) && 
-                (
-                    this.GatewayServerUri == input.GatewayServerUri ||
-                    (this.GatewayServerUri != null &&
-                    this.GatewayServerUri.Equals(input.GatewayServerUri))
-                ) && 
-                (
-                    this.DiscoveryProfileUri == input.DiscoveryProfileUri ||
-                    (this.DiscoveryProfileUri != null &&
-                    this.DiscoveryProfileUri.Equals(input.DiscoveryProfileUri))
-                ) && 
-                (
-                    this.DiscoveryUrls == input.DiscoveryUrls ||
-                    this.DiscoveryUrls != null &&
-                    input.DiscoveryUrls != null &&
-                    this.DiscoveryUrls.SequenceEqual(input.DiscoveryUrls)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.ApplicationUri != null)
-                {
-                    hashCode = (hashCode * 59) + this.ApplicationUri.GetHashCode();
-                }
-                if (this.ProductUri != null)
-                {
-                    hashCode = (hashCode * 59) + this.ProductUri.GetHashCode();
-                }
-                if (this.ApplicationName != null)
-                {
-                    hashCode = (hashCode * 59) + this.ApplicationName.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.ApplicationType.GetHashCode();
-                if (this.GatewayServerUri != null)
-                {
-                    hashCode = (hashCode * 59) + this.GatewayServerUri.GetHashCode();
-                }
-                if (this.DiscoveryProfileUri != null)
-                {
-                    hashCode = (hashCode * 59) + this.DiscoveryProfileUri.GetHashCode();
-                }
-                if (this.DiscoveryUrls != null)
-                {
-                    hashCode = (hashCode * 59) + this.DiscoveryUrls.GetHashCode();
-                }
-                return hashCode;
-            }
-        }
-
-        /// <summary>
         /// To validate all properties of the instance
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

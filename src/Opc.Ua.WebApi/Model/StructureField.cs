@@ -30,7 +30,7 @@ namespace Opc.Ua.WebApi.Model
     /// StructureField
     /// </summary>
     [DataContract(Name = "StructureField")]
-    public partial class StructureField : IEquatable<StructureField>, IValidatableObject
+    public partial class StructureField : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="StructureField" /> class.
@@ -38,11 +38,11 @@ namespace Opc.Ua.WebApi.Model
         /// <param name="name">name.</param>
         /// <param name="description">description.</param>
         /// <param name="dataType">dataType.</param>
-        /// <param name="valueRank">valueRank.</param>
+        /// <param name="valueRank">valueRank (default to 0).</param>
         /// <param name="arrayDimensions">arrayDimensions.</param>
-        /// <param name="maxStringLength">maxStringLength.</param>
-        /// <param name="isOptional">isOptional.</param>
-        public StructureField(string name = default(string), LocalizedText description = default(LocalizedText), string dataType = default(string), int valueRank = default(int), List<long> arrayDimensions = default(List<long>), long maxStringLength = default(long), bool isOptional = default(bool))
+        /// <param name="maxStringLength">maxStringLength (default to 0).</param>
+        /// <param name="isOptional">isOptional (default to false).</param>
+        public StructureField(string name = default(string), LocalizedText description = default(LocalizedText), string dataType = default(string), int valueRank = 0, List<long> arrayDimensions = default(List<long>), long maxStringLength = 0, bool isOptional = false)
         {
             this.Name = name;
             this.Description = description;
@@ -124,111 +124,22 @@ namespace Opc.Ua.WebApi.Model
         }
 
         /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as StructureField);
-        }
-
-        /// <summary>
-        /// Returns true if StructureField instances are equal
-        /// </summary>
-        /// <param name="input">Instance of StructureField to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(StructureField input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.Name == input.Name ||
-                    (this.Name != null &&
-                    this.Name.Equals(input.Name))
-                ) && 
-                (
-                    this.Description == input.Description ||
-                    (this.Description != null &&
-                    this.Description.Equals(input.Description))
-                ) && 
-                (
-                    this.DataType == input.DataType ||
-                    (this.DataType != null &&
-                    this.DataType.Equals(input.DataType))
-                ) && 
-                (
-                    this.ValueRank == input.ValueRank ||
-                    this.ValueRank.Equals(input.ValueRank)
-                ) && 
-                (
-                    this.ArrayDimensions == input.ArrayDimensions ||
-                    this.ArrayDimensions != null &&
-                    input.ArrayDimensions != null &&
-                    this.ArrayDimensions.SequenceEqual(input.ArrayDimensions)
-                ) && 
-                (
-                    this.MaxStringLength == input.MaxStringLength ||
-                    this.MaxStringLength.Equals(input.MaxStringLength)
-                ) && 
-                (
-                    this.IsOptional == input.IsOptional ||
-                    this.IsOptional.Equals(input.IsOptional)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.Name != null)
-                {
-                    hashCode = (hashCode * 59) + this.Name.GetHashCode();
-                }
-                if (this.Description != null)
-                {
-                    hashCode = (hashCode * 59) + this.Description.GetHashCode();
-                }
-                if (this.DataType != null)
-                {
-                    hashCode = (hashCode * 59) + this.DataType.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.ValueRank.GetHashCode();
-                if (this.ArrayDimensions != null)
-                {
-                    hashCode = (hashCode * 59) + this.ArrayDimensions.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.MaxStringLength.GetHashCode();
-                hashCode = (hashCode * 59) + this.IsOptional.GetHashCode();
-                return hashCode;
-            }
-        }
-
-        /// <summary>
         /// To validate all properties of the instance
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // MaxStringLength (long) maximum
             if (this.MaxStringLength > (long)4294967295)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for MaxStringLength, must be a value less than or equal to 4294967295.", new [] { "MaxStringLength" });
+                yield return new ValidationResult("Invalid value for MaxStringLength, must be a value less than or equal to 4294967295.", new [] { "MaxStringLength" });
             }
 
             // MaxStringLength (long) minimum
             if (this.MaxStringLength < (long)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for MaxStringLength, must be a value greater than or equal to 0.", new [] { "MaxStringLength" });
+                yield return new ValidationResult("Invalid value for MaxStringLength, must be a value greater than or equal to 0.", new [] { "MaxStringLength" });
             }
 
             yield break;

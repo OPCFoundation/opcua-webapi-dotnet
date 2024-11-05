@@ -30,7 +30,7 @@ namespace Opc.Ua.WebApi.Model
     /// PubSubConfiguration2DataType
     /// </summary>
     [DataContract(Name = "PubSubConfiguration2DataType")]
-    public partial class PubSubConfiguration2DataType : IEquatable<PubSubConfiguration2DataType>, IValidatableObject
+    public partial class PubSubConfiguration2DataType : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="PubSubConfiguration2DataType" /> class.
@@ -40,12 +40,12 @@ namespace Opc.Ua.WebApi.Model
         /// <param name="defaultSecurityKeyServices">defaultSecurityKeyServices.</param>
         /// <param name="securityGroups">securityGroups.</param>
         /// <param name="pubSubKeyPushTargets">pubSubKeyPushTargets.</param>
-        /// <param name="configurationVersion">configurationVersion.</param>
+        /// <param name="configurationVersion">configurationVersion (default to 0).</param>
         /// <param name="configurationProperties">configurationProperties.</param>
         /// <param name="publishedDataSets">publishedDataSets.</param>
         /// <param name="connections">connections.</param>
-        /// <param name="enabled">enabled.</param>
-        public PubSubConfiguration2DataType(List<StandaloneSubscribedDataSetDataType> subscribedDataSets = default(List<StandaloneSubscribedDataSetDataType>), List<DataSetMetaDataType> dataSetClasses = default(List<DataSetMetaDataType>), List<EndpointDescription> defaultSecurityKeyServices = default(List<EndpointDescription>), List<SecurityGroupDataType> securityGroups = default(List<SecurityGroupDataType>), List<PubSubKeyPushTargetDataType> pubSubKeyPushTargets = default(List<PubSubKeyPushTargetDataType>), long configurationVersion = default(long), List<KeyValuePair> configurationProperties = default(List<KeyValuePair>), List<PublishedDataSetDataType> publishedDataSets = default(List<PublishedDataSetDataType>), List<PubSubConnectionDataType> connections = default(List<PubSubConnectionDataType>), bool enabled = default(bool))
+        /// <param name="enabled">enabled (default to false).</param>
+        public PubSubConfiguration2DataType(List<StandaloneSubscribedDataSetDataType> subscribedDataSets = default(List<StandaloneSubscribedDataSetDataType>), List<DataSetMetaDataType> dataSetClasses = default(List<DataSetMetaDataType>), List<EndpointDescription> defaultSecurityKeyServices = default(List<EndpointDescription>), List<SecurityGroupDataType> securityGroups = default(List<SecurityGroupDataType>), List<PubSubKeyPushTargetDataType> pubSubKeyPushTargets = default(List<PubSubKeyPushTargetDataType>), long configurationVersion = 0, List<KeyValuePair> configurationProperties = default(List<KeyValuePair>), List<PublishedDataSetDataType> publishedDataSets = default(List<PublishedDataSetDataType>), List<PubSubConnectionDataType> connections = default(List<PubSubConnectionDataType>), bool enabled = false)
         {
             this.SubscribedDataSets = subscribedDataSets;
             this.DataSetClasses = dataSetClasses;
@@ -151,149 +151,22 @@ namespace Opc.Ua.WebApi.Model
         }
 
         /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as PubSubConfiguration2DataType);
-        }
-
-        /// <summary>
-        /// Returns true if PubSubConfiguration2DataType instances are equal
-        /// </summary>
-        /// <param name="input">Instance of PubSubConfiguration2DataType to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(PubSubConfiguration2DataType input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.SubscribedDataSets == input.SubscribedDataSets ||
-                    this.SubscribedDataSets != null &&
-                    input.SubscribedDataSets != null &&
-                    this.SubscribedDataSets.SequenceEqual(input.SubscribedDataSets)
-                ) && 
-                (
-                    this.DataSetClasses == input.DataSetClasses ||
-                    this.DataSetClasses != null &&
-                    input.DataSetClasses != null &&
-                    this.DataSetClasses.SequenceEqual(input.DataSetClasses)
-                ) && 
-                (
-                    this.DefaultSecurityKeyServices == input.DefaultSecurityKeyServices ||
-                    this.DefaultSecurityKeyServices != null &&
-                    input.DefaultSecurityKeyServices != null &&
-                    this.DefaultSecurityKeyServices.SequenceEqual(input.DefaultSecurityKeyServices)
-                ) && 
-                (
-                    this.SecurityGroups == input.SecurityGroups ||
-                    this.SecurityGroups != null &&
-                    input.SecurityGroups != null &&
-                    this.SecurityGroups.SequenceEqual(input.SecurityGroups)
-                ) && 
-                (
-                    this.PubSubKeyPushTargets == input.PubSubKeyPushTargets ||
-                    this.PubSubKeyPushTargets != null &&
-                    input.PubSubKeyPushTargets != null &&
-                    this.PubSubKeyPushTargets.SequenceEqual(input.PubSubKeyPushTargets)
-                ) && 
-                (
-                    this.ConfigurationVersion == input.ConfigurationVersion ||
-                    this.ConfigurationVersion.Equals(input.ConfigurationVersion)
-                ) && 
-                (
-                    this.ConfigurationProperties == input.ConfigurationProperties ||
-                    this.ConfigurationProperties != null &&
-                    input.ConfigurationProperties != null &&
-                    this.ConfigurationProperties.SequenceEqual(input.ConfigurationProperties)
-                ) && 
-                (
-                    this.PublishedDataSets == input.PublishedDataSets ||
-                    this.PublishedDataSets != null &&
-                    input.PublishedDataSets != null &&
-                    this.PublishedDataSets.SequenceEqual(input.PublishedDataSets)
-                ) && 
-                (
-                    this.Connections == input.Connections ||
-                    this.Connections != null &&
-                    input.Connections != null &&
-                    this.Connections.SequenceEqual(input.Connections)
-                ) && 
-                (
-                    this.Enabled == input.Enabled ||
-                    this.Enabled.Equals(input.Enabled)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.SubscribedDataSets != null)
-                {
-                    hashCode = (hashCode * 59) + this.SubscribedDataSets.GetHashCode();
-                }
-                if (this.DataSetClasses != null)
-                {
-                    hashCode = (hashCode * 59) + this.DataSetClasses.GetHashCode();
-                }
-                if (this.DefaultSecurityKeyServices != null)
-                {
-                    hashCode = (hashCode * 59) + this.DefaultSecurityKeyServices.GetHashCode();
-                }
-                if (this.SecurityGroups != null)
-                {
-                    hashCode = (hashCode * 59) + this.SecurityGroups.GetHashCode();
-                }
-                if (this.PubSubKeyPushTargets != null)
-                {
-                    hashCode = (hashCode * 59) + this.PubSubKeyPushTargets.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.ConfigurationVersion.GetHashCode();
-                if (this.ConfigurationProperties != null)
-                {
-                    hashCode = (hashCode * 59) + this.ConfigurationProperties.GetHashCode();
-                }
-                if (this.PublishedDataSets != null)
-                {
-                    hashCode = (hashCode * 59) + this.PublishedDataSets.GetHashCode();
-                }
-                if (this.Connections != null)
-                {
-                    hashCode = (hashCode * 59) + this.Connections.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.Enabled.GetHashCode();
-                return hashCode;
-            }
-        }
-
-        /// <summary>
         /// To validate all properties of the instance
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // ConfigurationVersion (long) maximum
             if (this.ConfigurationVersion > (long)4294967295)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for ConfigurationVersion, must be a value less than or equal to 4294967295.", new [] { "ConfigurationVersion" });
+                yield return new ValidationResult("Invalid value for ConfigurationVersion, must be a value less than or equal to 4294967295.", new [] { "ConfigurationVersion" });
             }
 
             // ConfigurationVersion (long) minimum
             if (this.ConfigurationVersion < (long)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for ConfigurationVersion, must be a value greater than or equal to 0.", new [] { "ConfigurationVersion" });
+                yield return new ValidationResult("Invalid value for ConfigurationVersion, must be a value greater than or equal to 0.", new [] { "ConfigurationVersion" });
             }
 
             yield break;

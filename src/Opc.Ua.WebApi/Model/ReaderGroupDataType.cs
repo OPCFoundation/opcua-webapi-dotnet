@@ -30,7 +30,7 @@ namespace Opc.Ua.WebApi.Model
     /// ReaderGroupDataType
     /// </summary>
     [DataContract(Name = "ReaderGroupDataType")]
-    public partial class ReaderGroupDataType : IEquatable<ReaderGroupDataType>, IValidatableObject
+    public partial class ReaderGroupDataType : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ReaderGroupDataType" /> class.
@@ -39,13 +39,13 @@ namespace Opc.Ua.WebApi.Model
         /// <param name="messageSettings">messageSettings.</param>
         /// <param name="dataSetReaders">dataSetReaders.</param>
         /// <param name="name">name.</param>
-        /// <param name="enabled">enabled.</param>
+        /// <param name="enabled">enabled (default to false).</param>
         /// <param name="securityMode">securityMode.</param>
         /// <param name="securityGroupId">securityGroupId.</param>
         /// <param name="securityKeyServices">securityKeyServices.</param>
-        /// <param name="maxNetworkMessageSize">maxNetworkMessageSize.</param>
+        /// <param name="maxNetworkMessageSize">maxNetworkMessageSize (default to 0).</param>
         /// <param name="groupProperties">groupProperties.</param>
-        public ReaderGroupDataType(ExtensionObject transportSettings = default(ExtensionObject), ExtensionObject messageSettings = default(ExtensionObject), List<DataSetReaderDataType> dataSetReaders = default(List<DataSetReaderDataType>), string name = default(string), bool enabled = default(bool), int securityMode = default(int), string securityGroupId = default(string), List<EndpointDescription> securityKeyServices = default(List<EndpointDescription>), long maxNetworkMessageSize = default(long), List<KeyValuePair> groupProperties = default(List<KeyValuePair>))
+        public ReaderGroupDataType(ExtensionObject transportSettings = default(ExtensionObject), ExtensionObject messageSettings = default(ExtensionObject), List<DataSetReaderDataType> dataSetReaders = default(List<DataSetReaderDataType>), string name = default(string), bool enabled = false, int securityMode = default(int), string securityGroupId = default(string), List<EndpointDescription> securityKeyServices = default(List<EndpointDescription>), long maxNetworkMessageSize = 0, List<KeyValuePair> groupProperties = default(List<KeyValuePair>))
         {
             this.TransportSettings = transportSettings;
             this.MessageSettings = messageSettings;
@@ -151,140 +151,22 @@ namespace Opc.Ua.WebApi.Model
         }
 
         /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as ReaderGroupDataType);
-        }
-
-        /// <summary>
-        /// Returns true if ReaderGroupDataType instances are equal
-        /// </summary>
-        /// <param name="input">Instance of ReaderGroupDataType to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(ReaderGroupDataType input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.TransportSettings == input.TransportSettings ||
-                    (this.TransportSettings != null &&
-                    this.TransportSettings.Equals(input.TransportSettings))
-                ) && 
-                (
-                    this.MessageSettings == input.MessageSettings ||
-                    (this.MessageSettings != null &&
-                    this.MessageSettings.Equals(input.MessageSettings))
-                ) && 
-                (
-                    this.DataSetReaders == input.DataSetReaders ||
-                    this.DataSetReaders != null &&
-                    input.DataSetReaders != null &&
-                    this.DataSetReaders.SequenceEqual(input.DataSetReaders)
-                ) && 
-                (
-                    this.Name == input.Name ||
-                    (this.Name != null &&
-                    this.Name.Equals(input.Name))
-                ) && 
-                (
-                    this.Enabled == input.Enabled ||
-                    this.Enabled.Equals(input.Enabled)
-                ) && 
-                (
-                    this.SecurityMode == input.SecurityMode ||
-                    this.SecurityMode.Equals(input.SecurityMode)
-                ) && 
-                (
-                    this.SecurityGroupId == input.SecurityGroupId ||
-                    (this.SecurityGroupId != null &&
-                    this.SecurityGroupId.Equals(input.SecurityGroupId))
-                ) && 
-                (
-                    this.SecurityKeyServices == input.SecurityKeyServices ||
-                    this.SecurityKeyServices != null &&
-                    input.SecurityKeyServices != null &&
-                    this.SecurityKeyServices.SequenceEqual(input.SecurityKeyServices)
-                ) && 
-                (
-                    this.MaxNetworkMessageSize == input.MaxNetworkMessageSize ||
-                    this.MaxNetworkMessageSize.Equals(input.MaxNetworkMessageSize)
-                ) && 
-                (
-                    this.GroupProperties == input.GroupProperties ||
-                    this.GroupProperties != null &&
-                    input.GroupProperties != null &&
-                    this.GroupProperties.SequenceEqual(input.GroupProperties)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.TransportSettings != null)
-                {
-                    hashCode = (hashCode * 59) + this.TransportSettings.GetHashCode();
-                }
-                if (this.MessageSettings != null)
-                {
-                    hashCode = (hashCode * 59) + this.MessageSettings.GetHashCode();
-                }
-                if (this.DataSetReaders != null)
-                {
-                    hashCode = (hashCode * 59) + this.DataSetReaders.GetHashCode();
-                }
-                if (this.Name != null)
-                {
-                    hashCode = (hashCode * 59) + this.Name.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.Enabled.GetHashCode();
-                hashCode = (hashCode * 59) + this.SecurityMode.GetHashCode();
-                if (this.SecurityGroupId != null)
-                {
-                    hashCode = (hashCode * 59) + this.SecurityGroupId.GetHashCode();
-                }
-                if (this.SecurityKeyServices != null)
-                {
-                    hashCode = (hashCode * 59) + this.SecurityKeyServices.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.MaxNetworkMessageSize.GetHashCode();
-                if (this.GroupProperties != null)
-                {
-                    hashCode = (hashCode * 59) + this.GroupProperties.GetHashCode();
-                }
-                return hashCode;
-            }
-        }
-
-        /// <summary>
         /// To validate all properties of the instance
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // MaxNetworkMessageSize (long) maximum
             if (this.MaxNetworkMessageSize > (long)4294967295)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for MaxNetworkMessageSize, must be a value less than or equal to 4294967295.", new [] { "MaxNetworkMessageSize" });
+                yield return new ValidationResult("Invalid value for MaxNetworkMessageSize, must be a value less than or equal to 4294967295.", new [] { "MaxNetworkMessageSize" });
             }
 
             // MaxNetworkMessageSize (long) minimum
             if (this.MaxNetworkMessageSize < (long)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for MaxNetworkMessageSize, must be a value greater than or equal to 0.", new [] { "MaxNetworkMessageSize" });
+                yield return new ValidationResult("Invalid value for MaxNetworkMessageSize, must be a value greater than or equal to 0.", new [] { "MaxNetworkMessageSize" });
             }
 
             yield break;

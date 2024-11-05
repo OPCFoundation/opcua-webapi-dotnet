@@ -30,13 +30,13 @@ namespace Opc.Ua.WebApi.Model
     /// JsonWriterGroupMessageDataType
     /// </summary>
     [DataContract(Name = "JsonWriterGroupMessageDataType")]
-    public partial class JsonWriterGroupMessageDataType : IEquatable<JsonWriterGroupMessageDataType>, IValidatableObject
+    public partial class JsonWriterGroupMessageDataType : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="JsonWriterGroupMessageDataType" /> class.
         /// </summary>
-        /// <param name="networkMessageContentMask">networkMessageContentMask.</param>
-        public JsonWriterGroupMessageDataType(long networkMessageContentMask = default(long))
+        /// <param name="networkMessageContentMask">networkMessageContentMask (default to 0).</param>
+        public JsonWriterGroupMessageDataType(long networkMessageContentMask = 0)
         {
             this.NetworkMessageContentMask = networkMessageContentMask;
         }
@@ -70,64 +70,22 @@ namespace Opc.Ua.WebApi.Model
         }
 
         /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as JsonWriterGroupMessageDataType);
-        }
-
-        /// <summary>
-        /// Returns true if JsonWriterGroupMessageDataType instances are equal
-        /// </summary>
-        /// <param name="input">Instance of JsonWriterGroupMessageDataType to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(JsonWriterGroupMessageDataType input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.NetworkMessageContentMask == input.NetworkMessageContentMask ||
-                    this.NetworkMessageContentMask.Equals(input.NetworkMessageContentMask)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.NetworkMessageContentMask.GetHashCode();
-                return hashCode;
-            }
-        }
-
-        /// <summary>
         /// To validate all properties of the instance
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // NetworkMessageContentMask (long) maximum
             if (this.NetworkMessageContentMask > (long)4294967295)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for NetworkMessageContentMask, must be a value less than or equal to 4294967295.", new [] { "NetworkMessageContentMask" });
+                yield return new ValidationResult("Invalid value for NetworkMessageContentMask, must be a value less than or equal to 4294967295.", new [] { "NetworkMessageContentMask" });
             }
 
             // NetworkMessageContentMask (long) minimum
             if (this.NetworkMessageContentMask < (long)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for NetworkMessageContentMask, must be a value greater than or equal to 0.", new [] { "NetworkMessageContentMask" });
+                yield return new ValidationResult("Invalid value for NetworkMessageContentMask, must be a value greater than or equal to 0.", new [] { "NetworkMessageContentMask" });
             }
 
             yield break;

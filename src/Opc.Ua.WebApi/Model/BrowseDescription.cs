@@ -30,7 +30,7 @@ namespace Opc.Ua.WebApi.Model
     /// BrowseDescription
     /// </summary>
     [DataContract(Name = "BrowseDescription")]
-    public partial class BrowseDescription : IEquatable<BrowseDescription>, IValidatableObject
+    public partial class BrowseDescription : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="BrowseDescription" /> class.
@@ -38,10 +38,10 @@ namespace Opc.Ua.WebApi.Model
         /// <param name="nodeId">nodeId.</param>
         /// <param name="browseDirection">browseDirection.</param>
         /// <param name="referenceTypeId">referenceTypeId.</param>
-        /// <param name="includeSubtypes">includeSubtypes.</param>
-        /// <param name="nodeClassMask">nodeClassMask.</param>
-        /// <param name="resultMask">resultMask.</param>
-        public BrowseDescription(string nodeId = default(string), int browseDirection = default(int), string referenceTypeId = default(string), bool includeSubtypes = default(bool), long nodeClassMask = default(long), long resultMask = default(long))
+        /// <param name="includeSubtypes">includeSubtypes (default to false).</param>
+        /// <param name="nodeClassMask">nodeClassMask (default to 0).</param>
+        /// <param name="resultMask">resultMask (default to 0).</param>
+        public BrowseDescription(string nodeId = default(string), int browseDirection = default(int), string referenceTypeId = default(string), bool includeSubtypes = false, long nodeClassMask = 0, long resultMask = 0)
         {
             this.NodeId = nodeId;
             this.BrowseDirection = browseDirection;
@@ -115,109 +115,34 @@ namespace Opc.Ua.WebApi.Model
         }
 
         /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as BrowseDescription);
-        }
-
-        /// <summary>
-        /// Returns true if BrowseDescription instances are equal
-        /// </summary>
-        /// <param name="input">Instance of BrowseDescription to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(BrowseDescription input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.NodeId == input.NodeId ||
-                    (this.NodeId != null &&
-                    this.NodeId.Equals(input.NodeId))
-                ) && 
-                (
-                    this.BrowseDirection == input.BrowseDirection ||
-                    this.BrowseDirection.Equals(input.BrowseDirection)
-                ) && 
-                (
-                    this.ReferenceTypeId == input.ReferenceTypeId ||
-                    (this.ReferenceTypeId != null &&
-                    this.ReferenceTypeId.Equals(input.ReferenceTypeId))
-                ) && 
-                (
-                    this.IncludeSubtypes == input.IncludeSubtypes ||
-                    this.IncludeSubtypes.Equals(input.IncludeSubtypes)
-                ) && 
-                (
-                    this.NodeClassMask == input.NodeClassMask ||
-                    this.NodeClassMask.Equals(input.NodeClassMask)
-                ) && 
-                (
-                    this.ResultMask == input.ResultMask ||
-                    this.ResultMask.Equals(input.ResultMask)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.NodeId != null)
-                {
-                    hashCode = (hashCode * 59) + this.NodeId.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.BrowseDirection.GetHashCode();
-                if (this.ReferenceTypeId != null)
-                {
-                    hashCode = (hashCode * 59) + this.ReferenceTypeId.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.IncludeSubtypes.GetHashCode();
-                hashCode = (hashCode * 59) + this.NodeClassMask.GetHashCode();
-                hashCode = (hashCode * 59) + this.ResultMask.GetHashCode();
-                return hashCode;
-            }
-        }
-
-        /// <summary>
         /// To validate all properties of the instance
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // NodeClassMask (long) maximum
             if (this.NodeClassMask > (long)4294967295)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for NodeClassMask, must be a value less than or equal to 4294967295.", new [] { "NodeClassMask" });
+                yield return new ValidationResult("Invalid value for NodeClassMask, must be a value less than or equal to 4294967295.", new [] { "NodeClassMask" });
             }
 
             // NodeClassMask (long) minimum
             if (this.NodeClassMask < (long)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for NodeClassMask, must be a value greater than or equal to 0.", new [] { "NodeClassMask" });
+                yield return new ValidationResult("Invalid value for NodeClassMask, must be a value greater than or equal to 0.", new [] { "NodeClassMask" });
             }
 
             // ResultMask (long) maximum
             if (this.ResultMask > (long)4294967295)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for ResultMask, must be a value less than or equal to 4294967295.", new [] { "ResultMask" });
+                yield return new ValidationResult("Invalid value for ResultMask, must be a value less than or equal to 4294967295.", new [] { "ResultMask" });
             }
 
             // ResultMask (long) minimum
             if (this.ResultMask < (long)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for ResultMask, must be a value greater than or equal to 0.", new [] { "ResultMask" });
+                yield return new ValidationResult("Invalid value for ResultMask, must be a value greater than or equal to 0.", new [] { "ResultMask" });
             }
 
             yield break;

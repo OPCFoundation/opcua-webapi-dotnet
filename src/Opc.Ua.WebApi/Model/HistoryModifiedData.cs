@@ -30,7 +30,7 @@ namespace Opc.Ua.WebApi.Model
     /// HistoryModifiedData
     /// </summary>
     [DataContract(Name = "HistoryModifiedData")]
-    public partial class HistoryModifiedData : IEquatable<HistoryModifiedData>, IValidatableObject
+    public partial class HistoryModifiedData : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="HistoryModifiedData" /> class.
@@ -79,68 +79,11 @@ namespace Opc.Ua.WebApi.Model
         }
 
         /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as HistoryModifiedData);
-        }
-
-        /// <summary>
-        /// Returns true if HistoryModifiedData instances are equal
-        /// </summary>
-        /// <param name="input">Instance of HistoryModifiedData to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(HistoryModifiedData input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.ModificationInfos == input.ModificationInfos ||
-                    this.ModificationInfos != null &&
-                    input.ModificationInfos != null &&
-                    this.ModificationInfos.SequenceEqual(input.ModificationInfos)
-                ) && 
-                (
-                    this.DataValues == input.DataValues ||
-                    this.DataValues != null &&
-                    input.DataValues != null &&
-                    this.DataValues.SequenceEqual(input.DataValues)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.ModificationInfos != null)
-                {
-                    hashCode = (hashCode * 59) + this.ModificationInfos.GetHashCode();
-                }
-                if (this.DataValues != null)
-                {
-                    hashCode = (hashCode * 59) + this.DataValues.GetHashCode();
-                }
-                return hashCode;
-            }
-        }
-
-        /// <summary>
         /// To validate all properties of the instance
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

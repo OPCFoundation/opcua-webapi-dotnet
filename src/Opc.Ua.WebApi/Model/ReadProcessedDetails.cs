@@ -30,17 +30,17 @@ namespace Opc.Ua.WebApi.Model
     /// ReadProcessedDetails
     /// </summary>
     [DataContract(Name = "ReadProcessedDetails")]
-    public partial class ReadProcessedDetails : IEquatable<ReadProcessedDetails>, IValidatableObject
+    public partial class ReadProcessedDetails : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ReadProcessedDetails" /> class.
         /// </summary>
-        /// <param name="startTime">startTime.</param>
-        /// <param name="endTime">endTime.</param>
-        /// <param name="processingInterval">processingInterval.</param>
+        /// <param name="startTime">startTime (default to &quot;0001-01-01T00:00Z&quot;).</param>
+        /// <param name="endTime">endTime (default to &quot;0001-01-01T00:00Z&quot;).</param>
+        /// <param name="processingInterval">processingInterval (default to 0D).</param>
         /// <param name="aggregateType">aggregateType.</param>
         /// <param name="aggregateConfiguration">aggregateConfiguration.</param>
-        public ReadProcessedDetails(DateTime startTime = default(DateTime), DateTime endTime = default(DateTime), double processingInterval = default(double), List<string> aggregateType = default(List<string>), AggregateConfiguration aggregateConfiguration = default(AggregateConfiguration))
+        public ReadProcessedDetails(DateTime startTime = default(DateTime), DateTime endTime = default(DateTime), double processingInterval = 0D, List<string> aggregateType = default(List<string>), AggregateConfiguration aggregateConfiguration = default(AggregateConfiguration))
         {
             this.StartTime = startTime;
             this.EndTime = endTime;
@@ -106,90 +106,11 @@ namespace Opc.Ua.WebApi.Model
         }
 
         /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as ReadProcessedDetails);
-        }
-
-        /// <summary>
-        /// Returns true if ReadProcessedDetails instances are equal
-        /// </summary>
-        /// <param name="input">Instance of ReadProcessedDetails to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(ReadProcessedDetails input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.StartTime == input.StartTime ||
-                    (this.StartTime != null &&
-                    this.StartTime.Equals(input.StartTime))
-                ) && 
-                (
-                    this.EndTime == input.EndTime ||
-                    (this.EndTime != null &&
-                    this.EndTime.Equals(input.EndTime))
-                ) && 
-                (
-                    this.ProcessingInterval == input.ProcessingInterval ||
-                    this.ProcessingInterval.Equals(input.ProcessingInterval)
-                ) && 
-                (
-                    this.AggregateType == input.AggregateType ||
-                    this.AggregateType != null &&
-                    input.AggregateType != null &&
-                    this.AggregateType.SequenceEqual(input.AggregateType)
-                ) && 
-                (
-                    this.AggregateConfiguration == input.AggregateConfiguration ||
-                    (this.AggregateConfiguration != null &&
-                    this.AggregateConfiguration.Equals(input.AggregateConfiguration))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.StartTime != null)
-                {
-                    hashCode = (hashCode * 59) + this.StartTime.GetHashCode();
-                }
-                if (this.EndTime != null)
-                {
-                    hashCode = (hashCode * 59) + this.EndTime.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.ProcessingInterval.GetHashCode();
-                if (this.AggregateType != null)
-                {
-                    hashCode = (hashCode * 59) + this.AggregateType.GetHashCode();
-                }
-                if (this.AggregateConfiguration != null)
-                {
-                    hashCode = (hashCode * 59) + this.AggregateConfiguration.GetHashCode();
-                }
-                return hashCode;
-            }
-        }
-
-        /// <summary>
         /// To validate all properties of the instance
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

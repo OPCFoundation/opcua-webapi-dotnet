@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **AuthenticationProfileUri** | **string** |  | [optional] 
 **RequestedDeliveryGuarantee** | **int** |  | [optional] 
 **MetaDataQueueName** | **string** |  | [optional] 
-**MetaDataUpdateTime** | **double** |  | [optional] 
+**MetaDataUpdateTime** | **double** |  | [optional] [default to 0D]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

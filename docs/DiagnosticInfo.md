@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **Locale** | **int** |  | [optional] 
 **LocalizedText** | **int** |  | [optional] 
 **AdditionalInfo** | **string** |  | [optional] 
-**InnerStatusCode** | **long** |  | [optional] 
+**InnerStatusCode** | [**StatusCode**](StatusCode.md) |  | [optional] 
 **InnerDiagnosticInfo** | [**DiagnosticInfo**](DiagnosticInfo.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

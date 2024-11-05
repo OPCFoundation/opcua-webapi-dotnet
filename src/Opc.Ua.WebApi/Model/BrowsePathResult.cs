@@ -30,14 +30,14 @@ namespace Opc.Ua.WebApi.Model
     /// BrowsePathResult
     /// </summary>
     [DataContract(Name = "BrowsePathResult")]
-    public partial class BrowsePathResult : IEquatable<BrowsePathResult>, IValidatableObject
+    public partial class BrowsePathResult : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="BrowsePathResult" /> class.
         /// </summary>
         /// <param name="statusCode">statusCode.</param>
         /// <param name="targets">targets.</param>
-        public BrowsePathResult(long statusCode = default(long), List<BrowsePathTarget> targets = default(List<BrowsePathTarget>))
+        public BrowsePathResult(StatusCode statusCode = default(StatusCode), List<BrowsePathTarget> targets = default(List<BrowsePathTarget>))
         {
             this.StatusCode = statusCode;
             this.Targets = targets;
@@ -47,7 +47,7 @@ namespace Opc.Ua.WebApi.Model
         /// Gets or Sets StatusCode
         /// </summary>
         [DataMember(Name = "StatusCode", EmitDefaultValue = false)]
-        public long StatusCode { get; set; }
+        public StatusCode StatusCode { get; set; }
 
         /// <summary>
         /// Gets or Sets Targets
@@ -79,76 +79,12 @@ namespace Opc.Ua.WebApi.Model
         }
 
         /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as BrowsePathResult);
-        }
-
-        /// <summary>
-        /// Returns true if BrowsePathResult instances are equal
-        /// </summary>
-        /// <param name="input">Instance of BrowsePathResult to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(BrowsePathResult input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.StatusCode == input.StatusCode ||
-                    this.StatusCode.Equals(input.StatusCode)
-                ) && 
-                (
-                    this.Targets == input.Targets ||
-                    this.Targets != null &&
-                    input.Targets != null &&
-                    this.Targets.SequenceEqual(input.Targets)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.StatusCode.GetHashCode();
-                if (this.Targets != null)
-                {
-                    hashCode = (hashCode * 59) + this.Targets.GetHashCode();
-                }
-                return hashCode;
-            }
-        }
-
-        /// <summary>
         /// To validate all properties of the instance
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
-            // StatusCode (long) maximum
-            if (this.StatusCode > (long)4294967295)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for StatusCode, must be a value less than or equal to 4294967295.", new [] { "StatusCode" });
-            }
-
-            // StatusCode (long) minimum
-            if (this.StatusCode < (long)0)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for StatusCode, must be a value greater than or equal to 0.", new [] { "StatusCode" });
-            }
-
             yield break;
         }
     }

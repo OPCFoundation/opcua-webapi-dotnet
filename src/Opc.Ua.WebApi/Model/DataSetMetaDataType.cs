@@ -30,7 +30,7 @@ namespace Opc.Ua.WebApi.Model
     /// DataSetMetaDataType
     /// </summary>
     [DataContract(Name = "DataSetMetaDataType")]
-    public partial class DataSetMetaDataType : IEquatable<DataSetMetaDataType>, IValidatableObject
+    public partial class DataSetMetaDataType : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="DataSetMetaDataType" /> class.
@@ -142,134 +142,11 @@ namespace Opc.Ua.WebApi.Model
         }
 
         /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as DataSetMetaDataType);
-        }
-
-        /// <summary>
-        /// Returns true if DataSetMetaDataType instances are equal
-        /// </summary>
-        /// <param name="input">Instance of DataSetMetaDataType to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(DataSetMetaDataType input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.Name == input.Name ||
-                    (this.Name != null &&
-                    this.Name.Equals(input.Name))
-                ) && 
-                (
-                    this.Description == input.Description ||
-                    (this.Description != null &&
-                    this.Description.Equals(input.Description))
-                ) && 
-                (
-                    this.Fields == input.Fields ||
-                    this.Fields != null &&
-                    input.Fields != null &&
-                    this.Fields.SequenceEqual(input.Fields)
-                ) && 
-                (
-                    this.DataSetClassId == input.DataSetClassId ||
-                    (this.DataSetClassId != null &&
-                    this.DataSetClassId.Equals(input.DataSetClassId))
-                ) && 
-                (
-                    this.ConfigurationVersion == input.ConfigurationVersion ||
-                    (this.ConfigurationVersion != null &&
-                    this.ConfigurationVersion.Equals(input.ConfigurationVersion))
-                ) && 
-                (
-                    this.Namespaces == input.Namespaces ||
-                    this.Namespaces != null &&
-                    input.Namespaces != null &&
-                    this.Namespaces.SequenceEqual(input.Namespaces)
-                ) && 
-                (
-                    this.StructureDataTypes == input.StructureDataTypes ||
-                    this.StructureDataTypes != null &&
-                    input.StructureDataTypes != null &&
-                    this.StructureDataTypes.SequenceEqual(input.StructureDataTypes)
-                ) && 
-                (
-                    this.EnumDataTypes == input.EnumDataTypes ||
-                    this.EnumDataTypes != null &&
-                    input.EnumDataTypes != null &&
-                    this.EnumDataTypes.SequenceEqual(input.EnumDataTypes)
-                ) && 
-                (
-                    this.SimpleDataTypes == input.SimpleDataTypes ||
-                    this.SimpleDataTypes != null &&
-                    input.SimpleDataTypes != null &&
-                    this.SimpleDataTypes.SequenceEqual(input.SimpleDataTypes)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.Name != null)
-                {
-                    hashCode = (hashCode * 59) + this.Name.GetHashCode();
-                }
-                if (this.Description != null)
-                {
-                    hashCode = (hashCode * 59) + this.Description.GetHashCode();
-                }
-                if (this.Fields != null)
-                {
-                    hashCode = (hashCode * 59) + this.Fields.GetHashCode();
-                }
-                if (this.DataSetClassId != null)
-                {
-                    hashCode = (hashCode * 59) + this.DataSetClassId.GetHashCode();
-                }
-                if (this.ConfigurationVersion != null)
-                {
-                    hashCode = (hashCode * 59) + this.ConfigurationVersion.GetHashCode();
-                }
-                if (this.Namespaces != null)
-                {
-                    hashCode = (hashCode * 59) + this.Namespaces.GetHashCode();
-                }
-                if (this.StructureDataTypes != null)
-                {
-                    hashCode = (hashCode * 59) + this.StructureDataTypes.GetHashCode();
-                }
-                if (this.EnumDataTypes != null)
-                {
-                    hashCode = (hashCode * 59) + this.EnumDataTypes.GetHashCode();
-                }
-                if (this.SimpleDataTypes != null)
-                {
-                    hashCode = (hashCode * 59) + this.SimpleDataTypes.GetHashCode();
-                }
-                return hashCode;
-            }
-        }
-
-        /// <summary>
         /// To validate all properties of the instance
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

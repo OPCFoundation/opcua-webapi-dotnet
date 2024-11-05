@@ -30,17 +30,17 @@ namespace Opc.Ua.WebApi.Model
     /// MonitoringParameters
     /// </summary>
     [DataContract(Name = "MonitoringParameters")]
-    public partial class MonitoringParameters : IEquatable<MonitoringParameters>, IValidatableObject
+    public partial class MonitoringParameters : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="MonitoringParameters" /> class.
         /// </summary>
-        /// <param name="clientHandle">clientHandle.</param>
-        /// <param name="samplingInterval">samplingInterval.</param>
+        /// <param name="clientHandle">clientHandle (default to 0).</param>
+        /// <param name="samplingInterval">samplingInterval (default to 0D).</param>
         /// <param name="filter">filter.</param>
-        /// <param name="queueSize">queueSize.</param>
-        /// <param name="discardOldest">discardOldest.</param>
-        public MonitoringParameters(long clientHandle = default(long), double samplingInterval = default(double), ExtensionObject filter = default(ExtensionObject), long queueSize = default(long), bool discardOldest = default(bool))
+        /// <param name="queueSize">queueSize (default to 0).</param>
+        /// <param name="discardOldest">discardOldest (default to false).</param>
+        public MonitoringParameters(long clientHandle = 0, double samplingInterval = 0D, ExtensionObject filter = default(ExtensionObject), long queueSize = 0, bool discardOldest = false)
         {
             this.ClientHandle = clientHandle;
             this.SamplingInterval = samplingInterval;
@@ -106,100 +106,34 @@ namespace Opc.Ua.WebApi.Model
         }
 
         /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as MonitoringParameters);
-        }
-
-        /// <summary>
-        /// Returns true if MonitoringParameters instances are equal
-        /// </summary>
-        /// <param name="input">Instance of MonitoringParameters to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(MonitoringParameters input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.ClientHandle == input.ClientHandle ||
-                    this.ClientHandle.Equals(input.ClientHandle)
-                ) && 
-                (
-                    this.SamplingInterval == input.SamplingInterval ||
-                    this.SamplingInterval.Equals(input.SamplingInterval)
-                ) && 
-                (
-                    this.Filter == input.Filter ||
-                    (this.Filter != null &&
-                    this.Filter.Equals(input.Filter))
-                ) && 
-                (
-                    this.QueueSize == input.QueueSize ||
-                    this.QueueSize.Equals(input.QueueSize)
-                ) && 
-                (
-                    this.DiscardOldest == input.DiscardOldest ||
-                    this.DiscardOldest.Equals(input.DiscardOldest)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.ClientHandle.GetHashCode();
-                hashCode = (hashCode * 59) + this.SamplingInterval.GetHashCode();
-                if (this.Filter != null)
-                {
-                    hashCode = (hashCode * 59) + this.Filter.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.QueueSize.GetHashCode();
-                hashCode = (hashCode * 59) + this.DiscardOldest.GetHashCode();
-                return hashCode;
-            }
-        }
-
-        /// <summary>
         /// To validate all properties of the instance
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // ClientHandle (long) maximum
             if (this.ClientHandle > (long)4294967295)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for ClientHandle, must be a value less than or equal to 4294967295.", new [] { "ClientHandle" });
+                yield return new ValidationResult("Invalid value for ClientHandle, must be a value less than or equal to 4294967295.", new [] { "ClientHandle" });
             }
 
             // ClientHandle (long) minimum
             if (this.ClientHandle < (long)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for ClientHandle, must be a value greater than or equal to 0.", new [] { "ClientHandle" });
+                yield return new ValidationResult("Invalid value for ClientHandle, must be a value greater than or equal to 0.", new [] { "ClientHandle" });
             }
 
             // QueueSize (long) maximum
             if (this.QueueSize > (long)4294967295)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for QueueSize, must be a value less than or equal to 4294967295.", new [] { "QueueSize" });
+                yield return new ValidationResult("Invalid value for QueueSize, must be a value less than or equal to 4294967295.", new [] { "QueueSize" });
             }
 
             // QueueSize (long) minimum
             if (this.QueueSize < (long)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for QueueSize, must be a value greater than or equal to 0.", new [] { "QueueSize" });
+                yield return new ValidationResult("Invalid value for QueueSize, must be a value greater than or equal to 0.", new [] { "QueueSize" });
             }
 
             yield break;

@@ -30,15 +30,15 @@ namespace Opc.Ua.WebApi.Model
     /// PubSubConfigurationDataType
     /// </summary>
     [DataContract(Name = "PubSubConfigurationDataType")]
-    public partial class PubSubConfigurationDataType : IEquatable<PubSubConfigurationDataType>, IValidatableObject
+    public partial class PubSubConfigurationDataType : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="PubSubConfigurationDataType" /> class.
         /// </summary>
         /// <param name="publishedDataSets">publishedDataSets.</param>
         /// <param name="connections">connections.</param>
-        /// <param name="enabled">enabled.</param>
-        public PubSubConfigurationDataType(List<PublishedDataSetDataType> publishedDataSets = default(List<PublishedDataSetDataType>), List<PubSubConnectionDataType> connections = default(List<PubSubConnectionDataType>), bool enabled = default(bool))
+        /// <param name="enabled">enabled (default to false).</param>
+        public PubSubConfigurationDataType(List<PublishedDataSetDataType> publishedDataSets = default(List<PublishedDataSetDataType>), List<PubSubConnectionDataType> connections = default(List<PubSubConnectionDataType>), bool enabled = false)
         {
             this.PublishedDataSets = publishedDataSets;
             this.Connections = connections;
@@ -88,73 +88,11 @@ namespace Opc.Ua.WebApi.Model
         }
 
         /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as PubSubConfigurationDataType);
-        }
-
-        /// <summary>
-        /// Returns true if PubSubConfigurationDataType instances are equal
-        /// </summary>
-        /// <param name="input">Instance of PubSubConfigurationDataType to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(PubSubConfigurationDataType input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.PublishedDataSets == input.PublishedDataSets ||
-                    this.PublishedDataSets != null &&
-                    input.PublishedDataSets != null &&
-                    this.PublishedDataSets.SequenceEqual(input.PublishedDataSets)
-                ) && 
-                (
-                    this.Connections == input.Connections ||
-                    this.Connections != null &&
-                    input.Connections != null &&
-                    this.Connections.SequenceEqual(input.Connections)
-                ) && 
-                (
-                    this.Enabled == input.Enabled ||
-                    this.Enabled.Equals(input.Enabled)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.PublishedDataSets != null)
-                {
-                    hashCode = (hashCode * 59) + this.PublishedDataSets.GetHashCode();
-                }
-                if (this.Connections != null)
-                {
-                    hashCode = (hashCode * 59) + this.Connections.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.Enabled.GetHashCode();
-                return hashCode;
-            }
-        }
-
-        /// <summary>
         /// To validate all properties of the instance
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

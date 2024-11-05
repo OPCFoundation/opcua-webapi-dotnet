@@ -30,14 +30,14 @@ namespace Opc.Ua.WebApi.Model
     /// CancelResponse
     /// </summary>
     [DataContract(Name = "CancelResponse")]
-    public partial class CancelResponse : IEquatable<CancelResponse>, IValidatableObject
+    public partial class CancelResponse : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="CancelResponse" /> class.
         /// </summary>
         /// <param name="responseHeader">responseHeader.</param>
-        /// <param name="cancelCount">cancelCount.</param>
-        public CancelResponse(ResponseHeader responseHeader = default(ResponseHeader), long cancelCount = default(long))
+        /// <param name="cancelCount">cancelCount (default to 0).</param>
+        public CancelResponse(ResponseHeader responseHeader = default(ResponseHeader), long cancelCount = 0)
         {
             this.ResponseHeader = responseHeader;
             this.CancelCount = cancelCount;
@@ -79,73 +79,22 @@ namespace Opc.Ua.WebApi.Model
         }
 
         /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as CancelResponse);
-        }
-
-        /// <summary>
-        /// Returns true if CancelResponse instances are equal
-        /// </summary>
-        /// <param name="input">Instance of CancelResponse to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(CancelResponse input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.ResponseHeader == input.ResponseHeader ||
-                    (this.ResponseHeader != null &&
-                    this.ResponseHeader.Equals(input.ResponseHeader))
-                ) && 
-                (
-                    this.CancelCount == input.CancelCount ||
-                    this.CancelCount.Equals(input.CancelCount)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.ResponseHeader != null)
-                {
-                    hashCode = (hashCode * 59) + this.ResponseHeader.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.CancelCount.GetHashCode();
-                return hashCode;
-            }
-        }
-
-        /// <summary>
         /// To validate all properties of the instance
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // CancelCount (long) maximum
             if (this.CancelCount > (long)4294967295)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for CancelCount, must be a value less than or equal to 4294967295.", new [] { "CancelCount" });
+                yield return new ValidationResult("Invalid value for CancelCount, must be a value less than or equal to 4294967295.", new [] { "CancelCount" });
             }
 
             // CancelCount (long) minimum
             if (this.CancelCount < (long)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for CancelCount, must be a value greater than or equal to 0.", new [] { "CancelCount" });
+                yield return new ValidationResult("Invalid value for CancelCount, must be a value greater than or equal to 0.", new [] { "CancelCount" });
             }
 
             yield break;

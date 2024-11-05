@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **RequestHeader** | [**RequestHeader**](RequestHeader.md) |  | [optional] 
-**SubscriptionId** | **long** |  | [optional] 
+**SubscriptionId** | **long** |  | [optional] [default to 0]
 **MonitoringMode** | **int** |  | [optional] 
 **MonitoredItemIds** | **List&lt;long&gt;** |  | [optional] 
 

@@ -30,17 +30,17 @@ namespace Opc.Ua.WebApi.Model
     /// Argument
     /// </summary>
     [DataContract(Name = "Argument")]
-    public partial class Argument : IEquatable<Argument>, IValidatableObject
+    public partial class Argument : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="Argument" /> class.
         /// </summary>
         /// <param name="name">name.</param>
         /// <param name="dataType">dataType.</param>
-        /// <param name="valueRank">valueRank.</param>
+        /// <param name="valueRank">valueRank (default to 0).</param>
         /// <param name="arrayDimensions">arrayDimensions.</param>
         /// <param name="description">description.</param>
-        public Argument(string name = default(string), string dataType = default(string), int valueRank = default(int), List<long> arrayDimensions = default(List<long>), LocalizedText description = default(LocalizedText))
+        public Argument(string name = default(string), string dataType = default(string), int valueRank = 0, List<long> arrayDimensions = default(List<long>), LocalizedText description = default(LocalizedText))
         {
             this.Name = name;
             this.DataType = dataType;
@@ -106,90 +106,11 @@ namespace Opc.Ua.WebApi.Model
         }
 
         /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as Argument);
-        }
-
-        /// <summary>
-        /// Returns true if Argument instances are equal
-        /// </summary>
-        /// <param name="input">Instance of Argument to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(Argument input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.Name == input.Name ||
-                    (this.Name != null &&
-                    this.Name.Equals(input.Name))
-                ) && 
-                (
-                    this.DataType == input.DataType ||
-                    (this.DataType != null &&
-                    this.DataType.Equals(input.DataType))
-                ) && 
-                (
-                    this.ValueRank == input.ValueRank ||
-                    this.ValueRank.Equals(input.ValueRank)
-                ) && 
-                (
-                    this.ArrayDimensions == input.ArrayDimensions ||
-                    this.ArrayDimensions != null &&
-                    input.ArrayDimensions != null &&
-                    this.ArrayDimensions.SequenceEqual(input.ArrayDimensions)
-                ) && 
-                (
-                    this.Description == input.Description ||
-                    (this.Description != null &&
-                    this.Description.Equals(input.Description))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.Name != null)
-                {
-                    hashCode = (hashCode * 59) + this.Name.GetHashCode();
-                }
-                if (this.DataType != null)
-                {
-                    hashCode = (hashCode * 59) + this.DataType.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.ValueRank.GetHashCode();
-                if (this.ArrayDimensions != null)
-                {
-                    hashCode = (hashCode * 59) + this.ArrayDimensions.GetHashCode();
-                }
-                if (this.Description != null)
-                {
-                    hashCode = (hashCode * 59) + this.Description.GetHashCode();
-                }
-                return hashCode;
-            }
-        }
-
-        /// <summary>
         /// To validate all properties of the instance
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

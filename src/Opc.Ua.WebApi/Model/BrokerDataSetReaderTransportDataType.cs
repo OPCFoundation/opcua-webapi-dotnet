@@ -30,7 +30,7 @@ namespace Opc.Ua.WebApi.Model
     /// BrokerDataSetReaderTransportDataType
     /// </summary>
     [DataContract(Name = "BrokerDataSetReaderTransportDataType")]
-    public partial class BrokerDataSetReaderTransportDataType : IEquatable<BrokerDataSetReaderTransportDataType>, IValidatableObject
+    public partial class BrokerDataSetReaderTransportDataType : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="BrokerDataSetReaderTransportDataType" /> class.
@@ -106,89 +106,11 @@ namespace Opc.Ua.WebApi.Model
         }
 
         /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as BrokerDataSetReaderTransportDataType);
-        }
-
-        /// <summary>
-        /// Returns true if BrokerDataSetReaderTransportDataType instances are equal
-        /// </summary>
-        /// <param name="input">Instance of BrokerDataSetReaderTransportDataType to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(BrokerDataSetReaderTransportDataType input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.QueueName == input.QueueName ||
-                    (this.QueueName != null &&
-                    this.QueueName.Equals(input.QueueName))
-                ) && 
-                (
-                    this.ResourceUri == input.ResourceUri ||
-                    (this.ResourceUri != null &&
-                    this.ResourceUri.Equals(input.ResourceUri))
-                ) && 
-                (
-                    this.AuthenticationProfileUri == input.AuthenticationProfileUri ||
-                    (this.AuthenticationProfileUri != null &&
-                    this.AuthenticationProfileUri.Equals(input.AuthenticationProfileUri))
-                ) && 
-                (
-                    this.RequestedDeliveryGuarantee == input.RequestedDeliveryGuarantee ||
-                    this.RequestedDeliveryGuarantee.Equals(input.RequestedDeliveryGuarantee)
-                ) && 
-                (
-                    this.MetaDataQueueName == input.MetaDataQueueName ||
-                    (this.MetaDataQueueName != null &&
-                    this.MetaDataQueueName.Equals(input.MetaDataQueueName))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.QueueName != null)
-                {
-                    hashCode = (hashCode * 59) + this.QueueName.GetHashCode();
-                }
-                if (this.ResourceUri != null)
-                {
-                    hashCode = (hashCode * 59) + this.ResourceUri.GetHashCode();
-                }
-                if (this.AuthenticationProfileUri != null)
-                {
-                    hashCode = (hashCode * 59) + this.AuthenticationProfileUri.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.RequestedDeliveryGuarantee.GetHashCode();
-                if (this.MetaDataQueueName != null)
-                {
-                    hashCode = (hashCode * 59) + this.MetaDataQueueName.GetHashCode();
-                }
-                return hashCode;
-            }
-        }
-
-        /// <summary>
         /// To validate all properties of the instance
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

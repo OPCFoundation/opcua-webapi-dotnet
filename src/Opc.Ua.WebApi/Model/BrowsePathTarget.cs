@@ -30,14 +30,14 @@ namespace Opc.Ua.WebApi.Model
     /// BrowsePathTarget
     /// </summary>
     [DataContract(Name = "BrowsePathTarget")]
-    public partial class BrowsePathTarget : IEquatable<BrowsePathTarget>, IValidatableObject
+    public partial class BrowsePathTarget : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="BrowsePathTarget" /> class.
         /// </summary>
         /// <param name="targetId">targetId.</param>
-        /// <param name="remainingPathIndex">remainingPathIndex.</param>
-        public BrowsePathTarget(string targetId = default(string), long remainingPathIndex = default(long))
+        /// <param name="remainingPathIndex">remainingPathIndex (default to 0).</param>
+        public BrowsePathTarget(string targetId = default(string), long remainingPathIndex = 0)
         {
             this.TargetId = targetId;
             this.RemainingPathIndex = remainingPathIndex;
@@ -79,73 +79,22 @@ namespace Opc.Ua.WebApi.Model
         }
 
         /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as BrowsePathTarget);
-        }
-
-        /// <summary>
-        /// Returns true if BrowsePathTarget instances are equal
-        /// </summary>
-        /// <param name="input">Instance of BrowsePathTarget to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(BrowsePathTarget input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.TargetId == input.TargetId ||
-                    (this.TargetId != null &&
-                    this.TargetId.Equals(input.TargetId))
-                ) && 
-                (
-                    this.RemainingPathIndex == input.RemainingPathIndex ||
-                    this.RemainingPathIndex.Equals(input.RemainingPathIndex)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.TargetId != null)
-                {
-                    hashCode = (hashCode * 59) + this.TargetId.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.RemainingPathIndex.GetHashCode();
-                return hashCode;
-            }
-        }
-
-        /// <summary>
         /// To validate all properties of the instance
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // RemainingPathIndex (long) maximum
             if (this.RemainingPathIndex > (long)4294967295)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for RemainingPathIndex, must be a value less than or equal to 4294967295.", new [] { "RemainingPathIndex" });
+                yield return new ValidationResult("Invalid value for RemainingPathIndex, must be a value less than or equal to 4294967295.", new [] { "RemainingPathIndex" });
             }
 
             // RemainingPathIndex (long) minimum
             if (this.RemainingPathIndex < (long)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for RemainingPathIndex, must be a value greater than or equal to 0.", new [] { "RemainingPathIndex" });
+                yield return new ValidationResult("Invalid value for RemainingPathIndex, must be a value greater than or equal to 0.", new [] { "RemainingPathIndex" });
             }
 
             yield break;

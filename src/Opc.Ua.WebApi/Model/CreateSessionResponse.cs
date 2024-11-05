@@ -30,7 +30,7 @@ namespace Opc.Ua.WebApi.Model
     /// CreateSessionResponse
     /// </summary>
     [DataContract(Name = "CreateSessionResponse")]
-    public partial class CreateSessionResponse : IEquatable<CreateSessionResponse>, IValidatableObject
+    public partial class CreateSessionResponse : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateSessionResponse" /> class.
@@ -38,14 +38,14 @@ namespace Opc.Ua.WebApi.Model
         /// <param name="responseHeader">responseHeader.</param>
         /// <param name="sessionId">sessionId.</param>
         /// <param name="authenticationToken">authenticationToken.</param>
-        /// <param name="revisedSessionTimeout">revisedSessionTimeout.</param>
+        /// <param name="revisedSessionTimeout">revisedSessionTimeout (default to 0D).</param>
         /// <param name="serverNonce">serverNonce.</param>
         /// <param name="serverCertificate">serverCertificate.</param>
         /// <param name="serverEndpoints">serverEndpoints.</param>
         /// <param name="serverSoftwareCertificates">serverSoftwareCertificates.</param>
         /// <param name="serverSignature">serverSignature.</param>
-        /// <param name="maxRequestMessageSize">maxRequestMessageSize.</param>
-        public CreateSessionResponse(ResponseHeader responseHeader = default(ResponseHeader), string sessionId = default(string), string authenticationToken = default(string), double revisedSessionTimeout = default(double), byte[] serverNonce = default(byte[]), byte[] serverCertificate = default(byte[]), List<EndpointDescription> serverEndpoints = default(List<EndpointDescription>), List<SignedSoftwareCertificate> serverSoftwareCertificates = default(List<SignedSoftwareCertificate>), SignatureData serverSignature = default(SignatureData), long maxRequestMessageSize = default(long))
+        /// <param name="maxRequestMessageSize">maxRequestMessageSize (default to 0).</param>
+        public CreateSessionResponse(ResponseHeader responseHeader = default(ResponseHeader), string sessionId = default(string), string authenticationToken = default(string), double revisedSessionTimeout = 0D, byte[] serverNonce = default(byte[]), byte[] serverCertificate = default(byte[]), List<EndpointDescription> serverEndpoints = default(List<EndpointDescription>), List<SignedSoftwareCertificate> serverSoftwareCertificates = default(List<SignedSoftwareCertificate>), SignatureData serverSignature = default(SignatureData), long maxRequestMessageSize = 0)
         {
             this.ResponseHeader = responseHeader;
             this.SessionId = sessionId;
@@ -151,143 +151,22 @@ namespace Opc.Ua.WebApi.Model
         }
 
         /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as CreateSessionResponse);
-        }
-
-        /// <summary>
-        /// Returns true if CreateSessionResponse instances are equal
-        /// </summary>
-        /// <param name="input">Instance of CreateSessionResponse to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(CreateSessionResponse input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.ResponseHeader == input.ResponseHeader ||
-                    (this.ResponseHeader != null &&
-                    this.ResponseHeader.Equals(input.ResponseHeader))
-                ) && 
-                (
-                    this.SessionId == input.SessionId ||
-                    (this.SessionId != null &&
-                    this.SessionId.Equals(input.SessionId))
-                ) && 
-                (
-                    this.AuthenticationToken == input.AuthenticationToken ||
-                    (this.AuthenticationToken != null &&
-                    this.AuthenticationToken.Equals(input.AuthenticationToken))
-                ) && 
-                (
-                    this.RevisedSessionTimeout == input.RevisedSessionTimeout ||
-                    this.RevisedSessionTimeout.Equals(input.RevisedSessionTimeout)
-                ) && 
-                (
-                    this.ServerNonce == input.ServerNonce ||
-                    (this.ServerNonce != null &&
-                    this.ServerNonce.Equals(input.ServerNonce))
-                ) && 
-                (
-                    this.ServerCertificate == input.ServerCertificate ||
-                    (this.ServerCertificate != null &&
-                    this.ServerCertificate.Equals(input.ServerCertificate))
-                ) && 
-                (
-                    this.ServerEndpoints == input.ServerEndpoints ||
-                    this.ServerEndpoints != null &&
-                    input.ServerEndpoints != null &&
-                    this.ServerEndpoints.SequenceEqual(input.ServerEndpoints)
-                ) && 
-                (
-                    this.ServerSoftwareCertificates == input.ServerSoftwareCertificates ||
-                    this.ServerSoftwareCertificates != null &&
-                    input.ServerSoftwareCertificates != null &&
-                    this.ServerSoftwareCertificates.SequenceEqual(input.ServerSoftwareCertificates)
-                ) && 
-                (
-                    this.ServerSignature == input.ServerSignature ||
-                    (this.ServerSignature != null &&
-                    this.ServerSignature.Equals(input.ServerSignature))
-                ) && 
-                (
-                    this.MaxRequestMessageSize == input.MaxRequestMessageSize ||
-                    this.MaxRequestMessageSize.Equals(input.MaxRequestMessageSize)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.ResponseHeader != null)
-                {
-                    hashCode = (hashCode * 59) + this.ResponseHeader.GetHashCode();
-                }
-                if (this.SessionId != null)
-                {
-                    hashCode = (hashCode * 59) + this.SessionId.GetHashCode();
-                }
-                if (this.AuthenticationToken != null)
-                {
-                    hashCode = (hashCode * 59) + this.AuthenticationToken.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.RevisedSessionTimeout.GetHashCode();
-                if (this.ServerNonce != null)
-                {
-                    hashCode = (hashCode * 59) + this.ServerNonce.GetHashCode();
-                }
-                if (this.ServerCertificate != null)
-                {
-                    hashCode = (hashCode * 59) + this.ServerCertificate.GetHashCode();
-                }
-                if (this.ServerEndpoints != null)
-                {
-                    hashCode = (hashCode * 59) + this.ServerEndpoints.GetHashCode();
-                }
-                if (this.ServerSoftwareCertificates != null)
-                {
-                    hashCode = (hashCode * 59) + this.ServerSoftwareCertificates.GetHashCode();
-                }
-                if (this.ServerSignature != null)
-                {
-                    hashCode = (hashCode * 59) + this.ServerSignature.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.MaxRequestMessageSize.GetHashCode();
-                return hashCode;
-            }
-        }
-
-        /// <summary>
         /// To validate all properties of the instance
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // MaxRequestMessageSize (long) maximum
             if (this.MaxRequestMessageSize > (long)4294967295)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for MaxRequestMessageSize, must be a value less than or equal to 4294967295.", new [] { "MaxRequestMessageSize" });
+                yield return new ValidationResult("Invalid value for MaxRequestMessageSize, must be a value less than or equal to 4294967295.", new [] { "MaxRequestMessageSize" });
             }
 
             // MaxRequestMessageSize (long) minimum
             if (this.MaxRequestMessageSize < (long)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for MaxRequestMessageSize, must be a value greater than or equal to 0.", new [] { "MaxRequestMessageSize" });
+                yield return new ValidationResult("Invalid value for MaxRequestMessageSize, must be a value greater than or equal to 0.", new [] { "MaxRequestMessageSize" });
             }
 
             yield break;

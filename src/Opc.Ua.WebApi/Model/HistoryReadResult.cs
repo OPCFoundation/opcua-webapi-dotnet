@@ -30,7 +30,7 @@ namespace Opc.Ua.WebApi.Model
     /// HistoryReadResult
     /// </summary>
     [DataContract(Name = "HistoryReadResult")]
-    public partial class HistoryReadResult : IEquatable<HistoryReadResult>, IValidatableObject
+    public partial class HistoryReadResult : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="HistoryReadResult" /> class.
@@ -38,7 +38,7 @@ namespace Opc.Ua.WebApi.Model
         /// <param name="statusCode">statusCode.</param>
         /// <param name="continuationPoint">continuationPoint.</param>
         /// <param name="historyData">historyData.</param>
-        public HistoryReadResult(long statusCode = default(long), byte[] continuationPoint = default(byte[]), ExtensionObject historyData = default(ExtensionObject))
+        public HistoryReadResult(StatusCode statusCode = default(StatusCode), byte[] continuationPoint = default(byte[]), ExtensionObject historyData = default(ExtensionObject))
         {
             this.StatusCode = statusCode;
             this.ContinuationPoint = continuationPoint;
@@ -49,7 +49,7 @@ namespace Opc.Ua.WebApi.Model
         /// Gets or Sets StatusCode
         /// </summary>
         [DataMember(Name = "StatusCode", EmitDefaultValue = false)]
-        public long StatusCode { get; set; }
+        public StatusCode StatusCode { get; set; }
 
         /// <summary>
         /// Gets or Sets ContinuationPoint
@@ -88,84 +88,12 @@ namespace Opc.Ua.WebApi.Model
         }
 
         /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as HistoryReadResult);
-        }
-
-        /// <summary>
-        /// Returns true if HistoryReadResult instances are equal
-        /// </summary>
-        /// <param name="input">Instance of HistoryReadResult to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(HistoryReadResult input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.StatusCode == input.StatusCode ||
-                    this.StatusCode.Equals(input.StatusCode)
-                ) && 
-                (
-                    this.ContinuationPoint == input.ContinuationPoint ||
-                    (this.ContinuationPoint != null &&
-                    this.ContinuationPoint.Equals(input.ContinuationPoint))
-                ) && 
-                (
-                    this.HistoryData == input.HistoryData ||
-                    (this.HistoryData != null &&
-                    this.HistoryData.Equals(input.HistoryData))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.StatusCode.GetHashCode();
-                if (this.ContinuationPoint != null)
-                {
-                    hashCode = (hashCode * 59) + this.ContinuationPoint.GetHashCode();
-                }
-                if (this.HistoryData != null)
-                {
-                    hashCode = (hashCode * 59) + this.HistoryData.GetHashCode();
-                }
-                return hashCode;
-            }
-        }
-
-        /// <summary>
         /// To validate all properties of the instance
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
-            // StatusCode (long) maximum
-            if (this.StatusCode > (long)4294967295)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for StatusCode, must be a value less than or equal to 4294967295.", new [] { "StatusCode" });
-            }
-
-            // StatusCode (long) minimum
-            if (this.StatusCode < (long)0)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for StatusCode, must be a value greater than or equal to 0.", new [] { "StatusCode" });
-            }
-
             yield break;
         }
     }

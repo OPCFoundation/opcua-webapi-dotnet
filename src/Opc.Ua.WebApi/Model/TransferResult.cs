@@ -30,14 +30,14 @@ namespace Opc.Ua.WebApi.Model
     /// TransferResult
     /// </summary>
     [DataContract(Name = "TransferResult")]
-    public partial class TransferResult : IEquatable<TransferResult>, IValidatableObject
+    public partial class TransferResult : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="TransferResult" /> class.
         /// </summary>
         /// <param name="statusCode">statusCode.</param>
         /// <param name="availableSequenceNumbers">availableSequenceNumbers.</param>
-        public TransferResult(long statusCode = default(long), List<long> availableSequenceNumbers = default(List<long>))
+        public TransferResult(StatusCode statusCode = default(StatusCode), List<long> availableSequenceNumbers = default(List<long>))
         {
             this.StatusCode = statusCode;
             this.AvailableSequenceNumbers = availableSequenceNumbers;
@@ -47,7 +47,7 @@ namespace Opc.Ua.WebApi.Model
         /// Gets or Sets StatusCode
         /// </summary>
         [DataMember(Name = "StatusCode", EmitDefaultValue = false)]
-        public long StatusCode { get; set; }
+        public StatusCode StatusCode { get; set; }
 
         /// <summary>
         /// Gets or Sets AvailableSequenceNumbers
@@ -79,76 +79,12 @@ namespace Opc.Ua.WebApi.Model
         }
 
         /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as TransferResult);
-        }
-
-        /// <summary>
-        /// Returns true if TransferResult instances are equal
-        /// </summary>
-        /// <param name="input">Instance of TransferResult to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(TransferResult input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.StatusCode == input.StatusCode ||
-                    this.StatusCode.Equals(input.StatusCode)
-                ) && 
-                (
-                    this.AvailableSequenceNumbers == input.AvailableSequenceNumbers ||
-                    this.AvailableSequenceNumbers != null &&
-                    input.AvailableSequenceNumbers != null &&
-                    this.AvailableSequenceNumbers.SequenceEqual(input.AvailableSequenceNumbers)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.StatusCode.GetHashCode();
-                if (this.AvailableSequenceNumbers != null)
-                {
-                    hashCode = (hashCode * 59) + this.AvailableSequenceNumbers.GetHashCode();
-                }
-                return hashCode;
-            }
-        }
-
-        /// <summary>
         /// To validate all properties of the instance
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
-            // StatusCode (long) maximum
-            if (this.StatusCode > (long)4294967295)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for StatusCode, must be a value less than or equal to 4294967295.", new [] { "StatusCode" });
-            }
-
-            // StatusCode (long) minimum
-            if (this.StatusCode < (long)0)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for StatusCode, must be a value greater than or equal to 0.", new [] { "StatusCode" });
-            }
-
             yield break;
         }
     }

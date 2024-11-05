@@ -30,7 +30,7 @@ namespace Opc.Ua.WebApi.Model
     /// LocalizedText
     /// </summary>
     [DataContract(Name = "LocalizedText")]
-    public partial class LocalizedText : IEquatable<LocalizedText>, IValidatableObject
+    public partial class LocalizedText : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="LocalizedText" /> class.
@@ -79,66 +79,11 @@ namespace Opc.Ua.WebApi.Model
         }
 
         /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as LocalizedText);
-        }
-
-        /// <summary>
-        /// Returns true if LocalizedText instances are equal
-        /// </summary>
-        /// <param name="input">Instance of LocalizedText to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(LocalizedText input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.Locale == input.Locale ||
-                    (this.Locale != null &&
-                    this.Locale.Equals(input.Locale))
-                ) && 
-                (
-                    this.Text == input.Text ||
-                    (this.Text != null &&
-                    this.Text.Equals(input.Text))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.Locale != null)
-                {
-                    hashCode = (hashCode * 59) + this.Locale.GetHashCode();
-                }
-                if (this.Text != null)
-                {
-                    hashCode = (hashCode * 59) + this.Text.GetHashCode();
-                }
-                return hashCode;
-            }
-        }
-
-        /// <summary>
         /// To validate all properties of the instance
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

@@ -30,19 +30,19 @@ namespace Opc.Ua.WebApi.Model
     /// RequestHeader
     /// </summary>
     [DataContract(Name = "RequestHeader")]
-    public partial class RequestHeader : IEquatable<RequestHeader>, IValidatableObject
+    public partial class RequestHeader : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="RequestHeader" /> class.
         /// </summary>
         /// <param name="authenticationToken">authenticationToken.</param>
-        /// <param name="timestamp">timestamp.</param>
-        /// <param name="requestHandle">requestHandle.</param>
-        /// <param name="returnDiagnostics">returnDiagnostics.</param>
+        /// <param name="timestamp">timestamp (default to &quot;0001-01-01T00:00Z&quot;).</param>
+        /// <param name="requestHandle">requestHandle (default to 0).</param>
+        /// <param name="returnDiagnostics">returnDiagnostics (default to 0).</param>
         /// <param name="auditEntryId">auditEntryId.</param>
-        /// <param name="timeoutHint">timeoutHint.</param>
+        /// <param name="timeoutHint">timeoutHint (default to 0).</param>
         /// <param name="additionalHeader">additionalHeader.</param>
-        public RequestHeader(string authenticationToken = default(string), DateTime timestamp = default(DateTime), long requestHandle = default(long), long returnDiagnostics = default(long), string auditEntryId = default(string), long timeoutHint = default(long), ExtensionObject additionalHeader = default(ExtensionObject))
+        public RequestHeader(string authenticationToken = default(string), DateTime timestamp = default(DateTime), long requestHandle = 0, long returnDiagnostics = 0, string auditEntryId = default(string), long timeoutHint = 0, ExtensionObject additionalHeader = default(ExtensionObject))
         {
             this.AuthenticationToken = authenticationToken;
             this.Timestamp = timestamp;
@@ -124,134 +124,46 @@ namespace Opc.Ua.WebApi.Model
         }
 
         /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as RequestHeader);
-        }
-
-        /// <summary>
-        /// Returns true if RequestHeader instances are equal
-        /// </summary>
-        /// <param name="input">Instance of RequestHeader to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(RequestHeader input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.AuthenticationToken == input.AuthenticationToken ||
-                    (this.AuthenticationToken != null &&
-                    this.AuthenticationToken.Equals(input.AuthenticationToken))
-                ) && 
-                (
-                    this.Timestamp == input.Timestamp ||
-                    (this.Timestamp != null &&
-                    this.Timestamp.Equals(input.Timestamp))
-                ) && 
-                (
-                    this.RequestHandle == input.RequestHandle ||
-                    this.RequestHandle.Equals(input.RequestHandle)
-                ) && 
-                (
-                    this.ReturnDiagnostics == input.ReturnDiagnostics ||
-                    this.ReturnDiagnostics.Equals(input.ReturnDiagnostics)
-                ) && 
-                (
-                    this.AuditEntryId == input.AuditEntryId ||
-                    (this.AuditEntryId != null &&
-                    this.AuditEntryId.Equals(input.AuditEntryId))
-                ) && 
-                (
-                    this.TimeoutHint == input.TimeoutHint ||
-                    this.TimeoutHint.Equals(input.TimeoutHint)
-                ) && 
-                (
-                    this.AdditionalHeader == input.AdditionalHeader ||
-                    (this.AdditionalHeader != null &&
-                    this.AdditionalHeader.Equals(input.AdditionalHeader))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.AuthenticationToken != null)
-                {
-                    hashCode = (hashCode * 59) + this.AuthenticationToken.GetHashCode();
-                }
-                if (this.Timestamp != null)
-                {
-                    hashCode = (hashCode * 59) + this.Timestamp.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.RequestHandle.GetHashCode();
-                hashCode = (hashCode * 59) + this.ReturnDiagnostics.GetHashCode();
-                if (this.AuditEntryId != null)
-                {
-                    hashCode = (hashCode * 59) + this.AuditEntryId.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.TimeoutHint.GetHashCode();
-                if (this.AdditionalHeader != null)
-                {
-                    hashCode = (hashCode * 59) + this.AdditionalHeader.GetHashCode();
-                }
-                return hashCode;
-            }
-        }
-
-        /// <summary>
         /// To validate all properties of the instance
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // RequestHandle (long) maximum
             if (this.RequestHandle > (long)4294967295)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for RequestHandle, must be a value less than or equal to 4294967295.", new [] { "RequestHandle" });
+                yield return new ValidationResult("Invalid value for RequestHandle, must be a value less than or equal to 4294967295.", new [] { "RequestHandle" });
             }
 
             // RequestHandle (long) minimum
             if (this.RequestHandle < (long)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for RequestHandle, must be a value greater than or equal to 0.", new [] { "RequestHandle" });
+                yield return new ValidationResult("Invalid value for RequestHandle, must be a value greater than or equal to 0.", new [] { "RequestHandle" });
             }
 
             // ReturnDiagnostics (long) maximum
             if (this.ReturnDiagnostics > (long)4294967295)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for ReturnDiagnostics, must be a value less than or equal to 4294967295.", new [] { "ReturnDiagnostics" });
+                yield return new ValidationResult("Invalid value for ReturnDiagnostics, must be a value less than or equal to 4294967295.", new [] { "ReturnDiagnostics" });
             }
 
             // ReturnDiagnostics (long) minimum
             if (this.ReturnDiagnostics < (long)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for ReturnDiagnostics, must be a value greater than or equal to 0.", new [] { "ReturnDiagnostics" });
+                yield return new ValidationResult("Invalid value for ReturnDiagnostics, must be a value greater than or equal to 0.", new [] { "ReturnDiagnostics" });
             }
 
             // TimeoutHint (long) maximum
             if (this.TimeoutHint > (long)4294967295)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for TimeoutHint, must be a value less than or equal to 4294967295.", new [] { "TimeoutHint" });
+                yield return new ValidationResult("Invalid value for TimeoutHint, must be a value less than or equal to 4294967295.", new [] { "TimeoutHint" });
             }
 
             // TimeoutHint (long) minimum
             if (this.TimeoutHint < (long)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for TimeoutHint, must be a value greater than or equal to 0.", new [] { "TimeoutHint" });
+                yield return new ValidationResult("Invalid value for TimeoutHint, must be a value greater than or equal to 0.", new [] { "TimeoutHint" });
             }
 
             yield break;

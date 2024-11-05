@@ -30,38 +30,54 @@ namespace Opc.Ua.WebApi.Model
     /// DataValue
     /// </summary>
     [DataContract(Name = "DataValue")]
-    public partial class DataValue : IEquatable<DataValue>, IValidatableObject
+    public partial class DataValue : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="DataValue" /> class.
         /// </summary>
+        /// <param name="uaType">uaType (default to 0).</param>
         /// <param name="value">value.</param>
+        /// <param name="dimensions">dimensions.</param>
         /// <param name="statusCode">statusCode.</param>
         /// <param name="sourceTimestamp">sourceTimestamp.</param>
-        /// <param name="sourcePicoSeconds">sourcePicoSeconds.</param>
+        /// <param name="sourcePicoseconds">sourcePicoseconds.</param>
         /// <param name="serverTimestamp">serverTimestamp.</param>
-        /// <param name="serverPicoSeconds">serverPicoSeconds.</param>
-        public DataValue(Variant value = default(Variant), long statusCode = default(long), DateTime sourceTimestamp = default(DateTime), int sourcePicoSeconds = default(int), DateTime serverTimestamp = default(DateTime), int serverPicoSeconds = default(int))
+        /// <param name="serverPicoseconds">serverPicoseconds.</param>
+        public DataValue(int uaType = 0, Object value = default(Object), List<int> dimensions = default(List<int>), StatusCode statusCode = default(StatusCode), DateTime sourceTimestamp = default(DateTime), int sourcePicoseconds = default(int), DateTime serverTimestamp = default(DateTime), int serverPicoseconds = default(int))
         {
+            this.UaType = uaType;
             this.Value = value;
+            this.Dimensions = dimensions;
             this.StatusCode = statusCode;
             this.SourceTimestamp = sourceTimestamp;
-            this.SourcePicoSeconds = sourcePicoSeconds;
+            this.SourcePicoseconds = sourcePicoseconds;
             this.ServerTimestamp = serverTimestamp;
-            this.ServerPicoSeconds = serverPicoSeconds;
+            this.ServerPicoseconds = serverPicoseconds;
         }
+
+        /// <summary>
+        /// Gets or Sets UaType
+        /// </summary>
+        [DataMember(Name = "UaType", EmitDefaultValue = false)]
+        public int UaType { get; set; }
 
         /// <summary>
         /// Gets or Sets Value
         /// </summary>
-        [DataMember(Name = "Value", EmitDefaultValue = false)]
-        public Variant Value { get; set; }
+        [DataMember(Name = "Value", EmitDefaultValue = true)]
+        public Object Value { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Dimensions
+        /// </summary>
+        [DataMember(Name = "Dimensions", EmitDefaultValue = false)]
+        public List<int> Dimensions { get; set; }
 
         /// <summary>
         /// Gets or Sets StatusCode
         /// </summary>
         [DataMember(Name = "StatusCode", EmitDefaultValue = false)]
-        public long StatusCode { get; set; }
+        public StatusCode StatusCode { get; set; }
 
         /// <summary>
         /// Gets or Sets SourceTimestamp
@@ -70,10 +86,10 @@ namespace Opc.Ua.WebApi.Model
         public DateTime SourceTimestamp { get; set; }
 
         /// <summary>
-        /// Gets or Sets SourcePicoSeconds
+        /// Gets or Sets SourcePicoseconds
         /// </summary>
-        [DataMember(Name = "SourcePicoSeconds", EmitDefaultValue = false)]
-        public int SourcePicoSeconds { get; set; }
+        [DataMember(Name = "SourcePicoseconds", EmitDefaultValue = false)]
+        public int SourcePicoseconds { get; set; }
 
         /// <summary>
         /// Gets or Sets ServerTimestamp
@@ -82,10 +98,10 @@ namespace Opc.Ua.WebApi.Model
         public DateTime ServerTimestamp { get; set; }
 
         /// <summary>
-        /// Gets or Sets ServerPicoSeconds
+        /// Gets or Sets ServerPicoseconds
         /// </summary>
-        [DataMember(Name = "ServerPicoSeconds", EmitDefaultValue = false)]
-        public int ServerPicoSeconds { get; set; }
+        [DataMember(Name = "ServerPicoseconds", EmitDefaultValue = false)]
+        public int ServerPicoseconds { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -95,12 +111,14 @@ namespace Opc.Ua.WebApi.Model
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("class DataValue {\n");
+            sb.Append("  UaType: ").Append(UaType).Append("\n");
             sb.Append("  Value: ").Append(Value).Append("\n");
+            sb.Append("  Dimensions: ").Append(Dimensions).Append("\n");
             sb.Append("  StatusCode: ").Append(StatusCode).Append("\n");
             sb.Append("  SourceTimestamp: ").Append(SourceTimestamp).Append("\n");
-            sb.Append("  SourcePicoSeconds: ").Append(SourcePicoSeconds).Append("\n");
+            sb.Append("  SourcePicoseconds: ").Append(SourcePicoseconds).Append("\n");
             sb.Append("  ServerTimestamp: ").Append(ServerTimestamp).Append("\n");
-            sb.Append("  ServerPicoSeconds: ").Append(ServerPicoSeconds).Append("\n");
+            sb.Append("  ServerPicoseconds: ").Append(ServerPicoseconds).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -115,125 +133,46 @@ namespace Opc.Ua.WebApi.Model
         }
 
         /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as DataValue);
-        }
-
-        /// <summary>
-        /// Returns true if DataValue instances are equal
-        /// </summary>
-        /// <param name="input">Instance of DataValue to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(DataValue input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.Value == input.Value ||
-                    (this.Value != null &&
-                    this.Value.Equals(input.Value))
-                ) && 
-                (
-                    this.StatusCode == input.StatusCode ||
-                    this.StatusCode.Equals(input.StatusCode)
-                ) && 
-                (
-                    this.SourceTimestamp == input.SourceTimestamp ||
-                    (this.SourceTimestamp != null &&
-                    this.SourceTimestamp.Equals(input.SourceTimestamp))
-                ) && 
-                (
-                    this.SourcePicoSeconds == input.SourcePicoSeconds ||
-                    this.SourcePicoSeconds.Equals(input.SourcePicoSeconds)
-                ) && 
-                (
-                    this.ServerTimestamp == input.ServerTimestamp ||
-                    (this.ServerTimestamp != null &&
-                    this.ServerTimestamp.Equals(input.ServerTimestamp))
-                ) && 
-                (
-                    this.ServerPicoSeconds == input.ServerPicoSeconds ||
-                    this.ServerPicoSeconds.Equals(input.ServerPicoSeconds)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.Value != null)
-                {
-                    hashCode = (hashCode * 59) + this.Value.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.StatusCode.GetHashCode();
-                if (this.SourceTimestamp != null)
-                {
-                    hashCode = (hashCode * 59) + this.SourceTimestamp.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.SourcePicoSeconds.GetHashCode();
-                if (this.ServerTimestamp != null)
-                {
-                    hashCode = (hashCode * 59) + this.ServerTimestamp.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.ServerPicoSeconds.GetHashCode();
-                return hashCode;
-            }
-        }
-
-        /// <summary>
         /// To validate all properties of the instance
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
-            // StatusCode (long) maximum
-            if (this.StatusCode > (long)4294967295)
+            // UaType (int) maximum
+            if (this.UaType > (int)255)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for StatusCode, must be a value less than or equal to 4294967295.", new [] { "StatusCode" });
+                yield return new ValidationResult("Invalid value for UaType, must be a value less than or equal to 255.", new [] { "UaType" });
             }
 
-            // StatusCode (long) minimum
-            if (this.StatusCode < (long)0)
+            // UaType (int) minimum
+            if (this.UaType < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for StatusCode, must be a value greater than or equal to 0.", new [] { "StatusCode" });
+                yield return new ValidationResult("Invalid value for UaType, must be a value greater than or equal to 0.", new [] { "UaType" });
             }
 
-            // SourcePicoSeconds (int) maximum
-            if (this.SourcePicoSeconds > (int)65535)
+            // SourcePicoseconds (int) maximum
+            if (this.SourcePicoseconds > (int)65535)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SourcePicoSeconds, must be a value less than or equal to 65535.", new [] { "SourcePicoSeconds" });
+                yield return new ValidationResult("Invalid value for SourcePicoseconds, must be a value less than or equal to 65535.", new [] { "SourcePicoseconds" });
             }
 
-            // SourcePicoSeconds (int) minimum
-            if (this.SourcePicoSeconds < (int)0)
+            // SourcePicoseconds (int) minimum
+            if (this.SourcePicoseconds < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SourcePicoSeconds, must be a value greater than or equal to 0.", new [] { "SourcePicoSeconds" });
+                yield return new ValidationResult("Invalid value for SourcePicoseconds, must be a value greater than or equal to 0.", new [] { "SourcePicoseconds" });
             }
 
-            // ServerPicoSeconds (int) maximum
-            if (this.ServerPicoSeconds > (int)65535)
+            // ServerPicoseconds (int) maximum
+            if (this.ServerPicoseconds > (int)65535)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for ServerPicoSeconds, must be a value less than or equal to 65535.", new [] { "ServerPicoSeconds" });
+                yield return new ValidationResult("Invalid value for ServerPicoseconds, must be a value less than or equal to 65535.", new [] { "ServerPicoseconds" });
             }
 
-            // ServerPicoSeconds (int) minimum
-            if (this.ServerPicoSeconds < (int)0)
+            // ServerPicoseconds (int) minimum
+            if (this.ServerPicoseconds < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for ServerPicoSeconds, must be a value greater than or equal to 0.", new [] { "ServerPicoSeconds" });
+                yield return new ValidationResult("Invalid value for ServerPicoseconds, must be a value greater than or equal to 0.", new [] { "ServerPicoseconds" });
             }
 
             yield break;

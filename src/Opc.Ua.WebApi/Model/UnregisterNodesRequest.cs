@@ -30,7 +30,7 @@ namespace Opc.Ua.WebApi.Model
     /// UnregisterNodesRequest
     /// </summary>
     [DataContract(Name = "UnregisterNodesRequest")]
-    public partial class UnregisterNodesRequest : IEquatable<UnregisterNodesRequest>, IValidatableObject
+    public partial class UnregisterNodesRequest : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="UnregisterNodesRequest" /> class.
@@ -79,67 +79,11 @@ namespace Opc.Ua.WebApi.Model
         }
 
         /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as UnregisterNodesRequest);
-        }
-
-        /// <summary>
-        /// Returns true if UnregisterNodesRequest instances are equal
-        /// </summary>
-        /// <param name="input">Instance of UnregisterNodesRequest to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(UnregisterNodesRequest input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.RequestHeader == input.RequestHeader ||
-                    (this.RequestHeader != null &&
-                    this.RequestHeader.Equals(input.RequestHeader))
-                ) && 
-                (
-                    this.NodesToUnregister == input.NodesToUnregister ||
-                    this.NodesToUnregister != null &&
-                    input.NodesToUnregister != null &&
-                    this.NodesToUnregister.SequenceEqual(input.NodesToUnregister)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.RequestHeader != null)
-                {
-                    hashCode = (hashCode * 59) + this.RequestHeader.GetHashCode();
-                }
-                if (this.NodesToUnregister != null)
-                {
-                    hashCode = (hashCode * 59) + this.NodesToUnregister.GetHashCode();
-                }
-                return hashCode;
-            }
-        }
-
-        /// <summary>
         /// To validate all properties of the instance
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

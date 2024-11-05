@@ -30,16 +30,16 @@ namespace Opc.Ua.WebApi.Model
     /// EnumField
     /// </summary>
     [DataContract(Name = "EnumField")]
-    public partial class EnumField : IEquatable<EnumField>, IValidatableObject
+    public partial class EnumField : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="EnumField" /> class.
         /// </summary>
         /// <param name="name">name.</param>
-        /// <param name="value">value.</param>
+        /// <param name="value">value (default to 0).</param>
         /// <param name="displayName">displayName.</param>
         /// <param name="description">description.</param>
-        public EnumField(string name = default(string), long value = default(long), LocalizedText displayName = default(LocalizedText), LocalizedText description = default(LocalizedText))
+        public EnumField(string name = default(string), long value = 0, LocalizedText displayName = default(LocalizedText), LocalizedText description = default(LocalizedText))
         {
             this.Name = name;
             this.Value = value;
@@ -97,80 +97,11 @@ namespace Opc.Ua.WebApi.Model
         }
 
         /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as EnumField);
-        }
-
-        /// <summary>
-        /// Returns true if EnumField instances are equal
-        /// </summary>
-        /// <param name="input">Instance of EnumField to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(EnumField input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.Name == input.Name ||
-                    (this.Name != null &&
-                    this.Name.Equals(input.Name))
-                ) && 
-                (
-                    this.Value == input.Value ||
-                    this.Value.Equals(input.Value)
-                ) && 
-                (
-                    this.DisplayName == input.DisplayName ||
-                    (this.DisplayName != null &&
-                    this.DisplayName.Equals(input.DisplayName))
-                ) && 
-                (
-                    this.Description == input.Description ||
-                    (this.Description != null &&
-                    this.Description.Equals(input.Description))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.Name != null)
-                {
-                    hashCode = (hashCode * 59) + this.Name.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.Value.GetHashCode();
-                if (this.DisplayName != null)
-                {
-                    hashCode = (hashCode * 59) + this.DisplayName.GetHashCode();
-                }
-                if (this.Description != null)
-                {
-                    hashCode = (hashCode * 59) + this.Description.GetHashCode();
-                }
-                return hashCode;
-            }
-        }
-
-        /// <summary>
         /// To validate all properties of the instance
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

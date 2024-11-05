@@ -30,14 +30,14 @@ namespace Opc.Ua.WebApi.Model
     /// CloseSessionRequest
     /// </summary>
     [DataContract(Name = "CloseSessionRequest")]
-    public partial class CloseSessionRequest : IEquatable<CloseSessionRequest>, IValidatableObject
+    public partial class CloseSessionRequest : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="CloseSessionRequest" /> class.
         /// </summary>
         /// <param name="requestHeader">requestHeader.</param>
-        /// <param name="deleteSubscriptions">deleteSubscriptions.</param>
-        public CloseSessionRequest(RequestHeader requestHeader = default(RequestHeader), bool deleteSubscriptions = default(bool))
+        /// <param name="deleteSubscriptions">deleteSubscriptions (default to false).</param>
+        public CloseSessionRequest(RequestHeader requestHeader = default(RequestHeader), bool deleteSubscriptions = false)
         {
             this.RequestHeader = requestHeader;
             this.DeleteSubscriptions = deleteSubscriptions;
@@ -79,62 +79,11 @@ namespace Opc.Ua.WebApi.Model
         }
 
         /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as CloseSessionRequest);
-        }
-
-        /// <summary>
-        /// Returns true if CloseSessionRequest instances are equal
-        /// </summary>
-        /// <param name="input">Instance of CloseSessionRequest to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(CloseSessionRequest input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.RequestHeader == input.RequestHeader ||
-                    (this.RequestHeader != null &&
-                    this.RequestHeader.Equals(input.RequestHeader))
-                ) && 
-                (
-                    this.DeleteSubscriptions == input.DeleteSubscriptions ||
-                    this.DeleteSubscriptions.Equals(input.DeleteSubscriptions)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.RequestHeader != null)
-                {
-                    hashCode = (hashCode * 59) + this.RequestHeader.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.DeleteSubscriptions.GetHashCode();
-                return hashCode;
-            }
-        }
-
-        /// <summary>
         /// To validate all properties of the instance
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

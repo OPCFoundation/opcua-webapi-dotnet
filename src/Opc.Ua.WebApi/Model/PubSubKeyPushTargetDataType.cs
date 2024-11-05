@@ -30,7 +30,7 @@ namespace Opc.Ua.WebApi.Model
     /// PubSubKeyPushTargetDataType
     /// </summary>
     [DataContract(Name = "PubSubKeyPushTargetDataType")]
-    public partial class PubSubKeyPushTargetDataType : IEquatable<PubSubKeyPushTargetDataType>, IValidatableObject
+    public partial class PubSubKeyPushTargetDataType : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="PubSubKeyPushTargetDataType" /> class.
@@ -40,11 +40,11 @@ namespace Opc.Ua.WebApi.Model
         /// <param name="endpointUrl">endpointUrl.</param>
         /// <param name="securityPolicyUri">securityPolicyUri.</param>
         /// <param name="userTokenType">userTokenType.</param>
-        /// <param name="requestedKeyCount">requestedKeyCount.</param>
-        /// <param name="retryInterval">retryInterval.</param>
+        /// <param name="requestedKeyCount">requestedKeyCount (default to 0).</param>
+        /// <param name="retryInterval">retryInterval (default to 0D).</param>
         /// <param name="pushTargetProperties">pushTargetProperties.</param>
         /// <param name="securityGroups">securityGroups.</param>
-        public PubSubKeyPushTargetDataType(string applicationUri = default(string), List<string> pushTargetFolder = default(List<string>), string endpointUrl = default(string), string securityPolicyUri = default(string), UserTokenPolicy userTokenType = default(UserTokenPolicy), int requestedKeyCount = default(int), double retryInterval = default(double), List<KeyValuePair> pushTargetProperties = default(List<KeyValuePair>), List<string> securityGroups = default(List<string>))
+        public PubSubKeyPushTargetDataType(string applicationUri = default(string), List<string> pushTargetFolder = default(List<string>), string endpointUrl = default(string), string securityPolicyUri = default(string), UserTokenPolicy userTokenType = default(UserTokenPolicy), int requestedKeyCount = 0, double retryInterval = 0D, List<KeyValuePair> pushTargetProperties = default(List<KeyValuePair>), List<string> securityGroups = default(List<string>))
         {
             this.ApplicationUri = applicationUri;
             this.PushTargetFolder = pushTargetFolder;
@@ -142,135 +142,22 @@ namespace Opc.Ua.WebApi.Model
         }
 
         /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as PubSubKeyPushTargetDataType);
-        }
-
-        /// <summary>
-        /// Returns true if PubSubKeyPushTargetDataType instances are equal
-        /// </summary>
-        /// <param name="input">Instance of PubSubKeyPushTargetDataType to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(PubSubKeyPushTargetDataType input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.ApplicationUri == input.ApplicationUri ||
-                    (this.ApplicationUri != null &&
-                    this.ApplicationUri.Equals(input.ApplicationUri))
-                ) && 
-                (
-                    this.PushTargetFolder == input.PushTargetFolder ||
-                    this.PushTargetFolder != null &&
-                    input.PushTargetFolder != null &&
-                    this.PushTargetFolder.SequenceEqual(input.PushTargetFolder)
-                ) && 
-                (
-                    this.EndpointUrl == input.EndpointUrl ||
-                    (this.EndpointUrl != null &&
-                    this.EndpointUrl.Equals(input.EndpointUrl))
-                ) && 
-                (
-                    this.SecurityPolicyUri == input.SecurityPolicyUri ||
-                    (this.SecurityPolicyUri != null &&
-                    this.SecurityPolicyUri.Equals(input.SecurityPolicyUri))
-                ) && 
-                (
-                    this.UserTokenType == input.UserTokenType ||
-                    (this.UserTokenType != null &&
-                    this.UserTokenType.Equals(input.UserTokenType))
-                ) && 
-                (
-                    this.RequestedKeyCount == input.RequestedKeyCount ||
-                    this.RequestedKeyCount.Equals(input.RequestedKeyCount)
-                ) && 
-                (
-                    this.RetryInterval == input.RetryInterval ||
-                    this.RetryInterval.Equals(input.RetryInterval)
-                ) && 
-                (
-                    this.PushTargetProperties == input.PushTargetProperties ||
-                    this.PushTargetProperties != null &&
-                    input.PushTargetProperties != null &&
-                    this.PushTargetProperties.SequenceEqual(input.PushTargetProperties)
-                ) && 
-                (
-                    this.SecurityGroups == input.SecurityGroups ||
-                    this.SecurityGroups != null &&
-                    input.SecurityGroups != null &&
-                    this.SecurityGroups.SequenceEqual(input.SecurityGroups)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.ApplicationUri != null)
-                {
-                    hashCode = (hashCode * 59) + this.ApplicationUri.GetHashCode();
-                }
-                if (this.PushTargetFolder != null)
-                {
-                    hashCode = (hashCode * 59) + this.PushTargetFolder.GetHashCode();
-                }
-                if (this.EndpointUrl != null)
-                {
-                    hashCode = (hashCode * 59) + this.EndpointUrl.GetHashCode();
-                }
-                if (this.SecurityPolicyUri != null)
-                {
-                    hashCode = (hashCode * 59) + this.SecurityPolicyUri.GetHashCode();
-                }
-                if (this.UserTokenType != null)
-                {
-                    hashCode = (hashCode * 59) + this.UserTokenType.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.RequestedKeyCount.GetHashCode();
-                hashCode = (hashCode * 59) + this.RetryInterval.GetHashCode();
-                if (this.PushTargetProperties != null)
-                {
-                    hashCode = (hashCode * 59) + this.PushTargetProperties.GetHashCode();
-                }
-                if (this.SecurityGroups != null)
-                {
-                    hashCode = (hashCode * 59) + this.SecurityGroups.GetHashCode();
-                }
-                return hashCode;
-            }
-        }
-
-        /// <summary>
         /// To validate all properties of the instance
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // RequestedKeyCount (int) maximum
             if (this.RequestedKeyCount > (int)65535)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for RequestedKeyCount, must be a value less than or equal to 65535.", new [] { "RequestedKeyCount" });
+                yield return new ValidationResult("Invalid value for RequestedKeyCount, must be a value less than or equal to 65535.", new [] { "RequestedKeyCount" });
             }
 
             // RequestedKeyCount (int) minimum
             if (this.RequestedKeyCount < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for RequestedKeyCount, must be a value greater than or equal to 0.", new [] { "RequestedKeyCount" });
+                yield return new ValidationResult("Invalid value for RequestedKeyCount, must be a value greater than or equal to 0.", new [] { "RequestedKeyCount" });
             }
 
             yield break;

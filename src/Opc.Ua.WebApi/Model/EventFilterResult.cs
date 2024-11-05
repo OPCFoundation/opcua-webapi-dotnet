@@ -30,7 +30,7 @@ namespace Opc.Ua.WebApi.Model
     /// EventFilterResult
     /// </summary>
     [DataContract(Name = "EventFilterResult")]
-    public partial class EventFilterResult : IEquatable<EventFilterResult>, IValidatableObject
+    public partial class EventFilterResult : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="EventFilterResult" /> class.
@@ -38,7 +38,7 @@ namespace Opc.Ua.WebApi.Model
         /// <param name="selectClauseResults">selectClauseResults.</param>
         /// <param name="selectClauseDiagnosticInfos">selectClauseDiagnosticInfos.</param>
         /// <param name="whereClauseResult">whereClauseResult.</param>
-        public EventFilterResult(List<long> selectClauseResults = default(List<long>), List<DiagnosticInfo> selectClauseDiagnosticInfos = default(List<DiagnosticInfo>), ContentFilterResult whereClauseResult = default(ContentFilterResult))
+        public EventFilterResult(List<StatusCode> selectClauseResults = default(List<StatusCode>), List<DiagnosticInfo> selectClauseDiagnosticInfos = default(List<DiagnosticInfo>), ContentFilterResult whereClauseResult = default(ContentFilterResult))
         {
             this.SelectClauseResults = selectClauseResults;
             this.SelectClauseDiagnosticInfos = selectClauseDiagnosticInfos;
@@ -49,7 +49,7 @@ namespace Opc.Ua.WebApi.Model
         /// Gets or Sets SelectClauseResults
         /// </summary>
         [DataMember(Name = "SelectClauseResults", EmitDefaultValue = false)]
-        public List<long> SelectClauseResults { get; set; }
+        public List<StatusCode> SelectClauseResults { get; set; }
 
         /// <summary>
         /// Gets or Sets SelectClauseDiagnosticInfos
@@ -88,77 +88,11 @@ namespace Opc.Ua.WebApi.Model
         }
 
         /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as EventFilterResult);
-        }
-
-        /// <summary>
-        /// Returns true if EventFilterResult instances are equal
-        /// </summary>
-        /// <param name="input">Instance of EventFilterResult to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(EventFilterResult input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.SelectClauseResults == input.SelectClauseResults ||
-                    this.SelectClauseResults != null &&
-                    input.SelectClauseResults != null &&
-                    this.SelectClauseResults.SequenceEqual(input.SelectClauseResults)
-                ) && 
-                (
-                    this.SelectClauseDiagnosticInfos == input.SelectClauseDiagnosticInfos ||
-                    this.SelectClauseDiagnosticInfos != null &&
-                    input.SelectClauseDiagnosticInfos != null &&
-                    this.SelectClauseDiagnosticInfos.SequenceEqual(input.SelectClauseDiagnosticInfos)
-                ) && 
-                (
-                    this.WhereClauseResult == input.WhereClauseResult ||
-                    (this.WhereClauseResult != null &&
-                    this.WhereClauseResult.Equals(input.WhereClauseResult))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.SelectClauseResults != null)
-                {
-                    hashCode = (hashCode * 59) + this.SelectClauseResults.GetHashCode();
-                }
-                if (this.SelectClauseDiagnosticInfos != null)
-                {
-                    hashCode = (hashCode * 59) + this.SelectClauseDiagnosticInfos.GetHashCode();
-                }
-                if (this.WhereClauseResult != null)
-                {
-                    hashCode = (hashCode * 59) + this.WhereClauseResult.GetHashCode();
-                }
-                return hashCode;
-            }
-        }
-
-        /// <summary>
         /// To validate all properties of the instance
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

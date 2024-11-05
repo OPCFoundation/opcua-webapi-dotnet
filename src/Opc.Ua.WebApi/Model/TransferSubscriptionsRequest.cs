@@ -30,15 +30,15 @@ namespace Opc.Ua.WebApi.Model
     /// TransferSubscriptionsRequest
     /// </summary>
     [DataContract(Name = "TransferSubscriptionsRequest")]
-    public partial class TransferSubscriptionsRequest : IEquatable<TransferSubscriptionsRequest>, IValidatableObject
+    public partial class TransferSubscriptionsRequest : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="TransferSubscriptionsRequest" /> class.
         /// </summary>
         /// <param name="requestHeader">requestHeader.</param>
         /// <param name="subscriptionIds">subscriptionIds.</param>
-        /// <param name="sendInitialValues">sendInitialValues.</param>
-        public TransferSubscriptionsRequest(RequestHeader requestHeader = default(RequestHeader), List<long> subscriptionIds = default(List<long>), bool sendInitialValues = default(bool))
+        /// <param name="sendInitialValues">sendInitialValues (default to false).</param>
+        public TransferSubscriptionsRequest(RequestHeader requestHeader = default(RequestHeader), List<long> subscriptionIds = default(List<long>), bool sendInitialValues = false)
         {
             this.RequestHeader = requestHeader;
             this.SubscriptionIds = subscriptionIds;
@@ -88,72 +88,11 @@ namespace Opc.Ua.WebApi.Model
         }
 
         /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as TransferSubscriptionsRequest);
-        }
-
-        /// <summary>
-        /// Returns true if TransferSubscriptionsRequest instances are equal
-        /// </summary>
-        /// <param name="input">Instance of TransferSubscriptionsRequest to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(TransferSubscriptionsRequest input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.RequestHeader == input.RequestHeader ||
-                    (this.RequestHeader != null &&
-                    this.RequestHeader.Equals(input.RequestHeader))
-                ) && 
-                (
-                    this.SubscriptionIds == input.SubscriptionIds ||
-                    this.SubscriptionIds != null &&
-                    input.SubscriptionIds != null &&
-                    this.SubscriptionIds.SequenceEqual(input.SubscriptionIds)
-                ) && 
-                (
-                    this.SendInitialValues == input.SendInitialValues ||
-                    this.SendInitialValues.Equals(input.SendInitialValues)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.RequestHeader != null)
-                {
-                    hashCode = (hashCode * 59) + this.RequestHeader.GetHashCode();
-                }
-                if (this.SubscriptionIds != null)
-                {
-                    hashCode = (hashCode * 59) + this.SubscriptionIds.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.SendInitialValues.GetHashCode();
-                return hashCode;
-            }
-        }
-
-        /// <summary>
         /// To validate all properties of the instance
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

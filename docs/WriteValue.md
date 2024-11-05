@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **NodeId** | **string** |  | [optional] 
-**AttributeId** | **long** |  | [optional] 
+**AttributeId** | **long** |  | [optional] [default to 0]
 **IndexRange** | **string** |  | [optional] 
 **Value** | [**DataValue**](DataValue.md) |  | [optional] 
 

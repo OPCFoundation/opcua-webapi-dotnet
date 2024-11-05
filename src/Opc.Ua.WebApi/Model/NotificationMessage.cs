@@ -30,15 +30,15 @@ namespace Opc.Ua.WebApi.Model
     /// NotificationMessage
     /// </summary>
     [DataContract(Name = "NotificationMessage")]
-    public partial class NotificationMessage : IEquatable<NotificationMessage>, IValidatableObject
+    public partial class NotificationMessage : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="NotificationMessage" /> class.
         /// </summary>
-        /// <param name="sequenceNumber">sequenceNumber.</param>
-        /// <param name="publishTime">publishTime.</param>
+        /// <param name="sequenceNumber">sequenceNumber (default to 0).</param>
+        /// <param name="publishTime">publishTime (default to &quot;0001-01-01T00:00Z&quot;).</param>
         /// <param name="notificationData">notificationData.</param>
-        public NotificationMessage(long sequenceNumber = default(long), DateTime publishTime = default(DateTime), List<ExtensionObject> notificationData = default(List<ExtensionObject>))
+        public NotificationMessage(long sequenceNumber = 0, DateTime publishTime = default(DateTime), List<ExtensionObject> notificationData = default(List<ExtensionObject>))
         {
             this.SequenceNumber = sequenceNumber;
             this.PublishTime = publishTime;
@@ -88,83 +88,22 @@ namespace Opc.Ua.WebApi.Model
         }
 
         /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as NotificationMessage);
-        }
-
-        /// <summary>
-        /// Returns true if NotificationMessage instances are equal
-        /// </summary>
-        /// <param name="input">Instance of NotificationMessage to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(NotificationMessage input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.SequenceNumber == input.SequenceNumber ||
-                    this.SequenceNumber.Equals(input.SequenceNumber)
-                ) && 
-                (
-                    this.PublishTime == input.PublishTime ||
-                    (this.PublishTime != null &&
-                    this.PublishTime.Equals(input.PublishTime))
-                ) && 
-                (
-                    this.NotificationData == input.NotificationData ||
-                    this.NotificationData != null &&
-                    input.NotificationData != null &&
-                    this.NotificationData.SequenceEqual(input.NotificationData)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.SequenceNumber.GetHashCode();
-                if (this.PublishTime != null)
-                {
-                    hashCode = (hashCode * 59) + this.PublishTime.GetHashCode();
-                }
-                if (this.NotificationData != null)
-                {
-                    hashCode = (hashCode * 59) + this.NotificationData.GetHashCode();
-                }
-                return hashCode;
-            }
-        }
-
-        /// <summary>
         /// To validate all properties of the instance
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // SequenceNumber (long) maximum
             if (this.SequenceNumber > (long)4294967295)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SequenceNumber, must be a value less than or equal to 4294967295.", new [] { "SequenceNumber" });
+                yield return new ValidationResult("Invalid value for SequenceNumber, must be a value less than or equal to 4294967295.", new [] { "SequenceNumber" });
             }
 
             // SequenceNumber (long) minimum
             if (this.SequenceNumber < (long)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SequenceNumber, must be a value greater than or equal to 0.", new [] { "SequenceNumber" });
+                yield return new ValidationResult("Invalid value for SequenceNumber, must be a value greater than or equal to 0.", new [] { "SequenceNumber" });
             }
 
             yield break;

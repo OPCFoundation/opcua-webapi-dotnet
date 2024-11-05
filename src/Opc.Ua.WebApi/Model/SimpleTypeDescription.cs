@@ -30,16 +30,16 @@ namespace Opc.Ua.WebApi.Model
     /// SimpleTypeDescription
     /// </summary>
     [DataContract(Name = "SimpleTypeDescription")]
-    public partial class SimpleTypeDescription : IEquatable<SimpleTypeDescription>, IValidatableObject
+    public partial class SimpleTypeDescription : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="SimpleTypeDescription" /> class.
         /// </summary>
         /// <param name="baseDataType">baseDataType.</param>
-        /// <param name="builtInType">builtInType.</param>
+        /// <param name="builtInType">builtInType (default to 0).</param>
         /// <param name="dataTypeId">dataTypeId.</param>
         /// <param name="name">name.</param>
-        public SimpleTypeDescription(string baseDataType = default(string), int builtInType = default(int), string dataTypeId = default(string), string name = default(string))
+        public SimpleTypeDescription(string baseDataType = default(string), int builtInType = 0, string dataTypeId = default(string), string name = default(string))
         {
             this.BaseDataType = baseDataType;
             this.BuiltInType = builtInType;
@@ -97,91 +97,22 @@ namespace Opc.Ua.WebApi.Model
         }
 
         /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as SimpleTypeDescription);
-        }
-
-        /// <summary>
-        /// Returns true if SimpleTypeDescription instances are equal
-        /// </summary>
-        /// <param name="input">Instance of SimpleTypeDescription to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(SimpleTypeDescription input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.BaseDataType == input.BaseDataType ||
-                    (this.BaseDataType != null &&
-                    this.BaseDataType.Equals(input.BaseDataType))
-                ) && 
-                (
-                    this.BuiltInType == input.BuiltInType ||
-                    this.BuiltInType.Equals(input.BuiltInType)
-                ) && 
-                (
-                    this.DataTypeId == input.DataTypeId ||
-                    (this.DataTypeId != null &&
-                    this.DataTypeId.Equals(input.DataTypeId))
-                ) && 
-                (
-                    this.Name == input.Name ||
-                    (this.Name != null &&
-                    this.Name.Equals(input.Name))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.BaseDataType != null)
-                {
-                    hashCode = (hashCode * 59) + this.BaseDataType.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.BuiltInType.GetHashCode();
-                if (this.DataTypeId != null)
-                {
-                    hashCode = (hashCode * 59) + this.DataTypeId.GetHashCode();
-                }
-                if (this.Name != null)
-                {
-                    hashCode = (hashCode * 59) + this.Name.GetHashCode();
-                }
-                return hashCode;
-            }
-        }
-
-        /// <summary>
         /// To validate all properties of the instance
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // BuiltInType (int) maximum
             if (this.BuiltInType > (int)255)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for BuiltInType, must be a value less than or equal to 255.", new [] { "BuiltInType" });
+                yield return new ValidationResult("Invalid value for BuiltInType, must be a value less than or equal to 255.", new [] { "BuiltInType" });
             }
 
             // BuiltInType (int) minimum
             if (this.BuiltInType < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for BuiltInType, must be a value greater than or equal to 0.", new [] { "BuiltInType" });
+                yield return new ValidationResult("Invalid value for BuiltInType, must be a value greater than or equal to 0.", new [] { "BuiltInType" });
             }
 
             yield break;

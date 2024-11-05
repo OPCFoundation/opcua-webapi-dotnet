@@ -30,16 +30,16 @@ namespace Opc.Ua.WebApi.Model
     /// RelativePathElement
     /// </summary>
     [DataContract(Name = "RelativePathElement")]
-    public partial class RelativePathElement : IEquatable<RelativePathElement>, IValidatableObject
+    public partial class RelativePathElement : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="RelativePathElement" /> class.
         /// </summary>
         /// <param name="referenceTypeId">referenceTypeId.</param>
-        /// <param name="isInverse">isInverse.</param>
-        /// <param name="includeSubtypes">includeSubtypes.</param>
+        /// <param name="isInverse">isInverse (default to false).</param>
+        /// <param name="includeSubtypes">includeSubtypes (default to false).</param>
         /// <param name="targetName">targetName.</param>
-        public RelativePathElement(string referenceTypeId = default(string), bool isInverse = default(bool), bool includeSubtypes = default(bool), string targetName = default(string))
+        public RelativePathElement(string referenceTypeId = default(string), bool isInverse = false, bool includeSubtypes = false, string targetName = default(string))
         {
             this.ReferenceTypeId = referenceTypeId;
             this.IsInverse = isInverse;
@@ -97,76 +97,11 @@ namespace Opc.Ua.WebApi.Model
         }
 
         /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as RelativePathElement);
-        }
-
-        /// <summary>
-        /// Returns true if RelativePathElement instances are equal
-        /// </summary>
-        /// <param name="input">Instance of RelativePathElement to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(RelativePathElement input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.ReferenceTypeId == input.ReferenceTypeId ||
-                    (this.ReferenceTypeId != null &&
-                    this.ReferenceTypeId.Equals(input.ReferenceTypeId))
-                ) && 
-                (
-                    this.IsInverse == input.IsInverse ||
-                    this.IsInverse.Equals(input.IsInverse)
-                ) && 
-                (
-                    this.IncludeSubtypes == input.IncludeSubtypes ||
-                    this.IncludeSubtypes.Equals(input.IncludeSubtypes)
-                ) && 
-                (
-                    this.TargetName == input.TargetName ||
-                    (this.TargetName != null &&
-                    this.TargetName.Equals(input.TargetName))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.ReferenceTypeId != null)
-                {
-                    hashCode = (hashCode * 59) + this.ReferenceTypeId.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.IsInverse.GetHashCode();
-                hashCode = (hashCode * 59) + this.IncludeSubtypes.GetHashCode();
-                if (this.TargetName != null)
-                {
-                    hashCode = (hashCode * 59) + this.TargetName.GetHashCode();
-                }
-                return hashCode;
-            }
-        }
-
-        /// <summary>
         /// To validate all properties of the instance
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

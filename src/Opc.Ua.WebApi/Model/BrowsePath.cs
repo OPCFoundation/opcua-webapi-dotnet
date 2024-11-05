@@ -30,7 +30,7 @@ namespace Opc.Ua.WebApi.Model
     /// BrowsePath
     /// </summary>
     [DataContract(Name = "BrowsePath")]
-    public partial class BrowsePath : IEquatable<BrowsePath>, IValidatableObject
+    public partial class BrowsePath : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="BrowsePath" /> class.
@@ -79,66 +79,11 @@ namespace Opc.Ua.WebApi.Model
         }
 
         /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as BrowsePath);
-        }
-
-        /// <summary>
-        /// Returns true if BrowsePath instances are equal
-        /// </summary>
-        /// <param name="input">Instance of BrowsePath to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(BrowsePath input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.StartingNode == input.StartingNode ||
-                    (this.StartingNode != null &&
-                    this.StartingNode.Equals(input.StartingNode))
-                ) && 
-                (
-                    this.RelativePath == input.RelativePath ||
-                    (this.RelativePath != null &&
-                    this.RelativePath.Equals(input.RelativePath))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.StartingNode != null)
-                {
-                    hashCode = (hashCode * 59) + this.StartingNode.GetHashCode();
-                }
-                if (this.RelativePath != null)
-                {
-                    hashCode = (hashCode * 59) + this.RelativePath.GetHashCode();
-                }
-                return hashCode;
-            }
-        }
-
-        /// <summary>
         /// To validate all properties of the instance
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

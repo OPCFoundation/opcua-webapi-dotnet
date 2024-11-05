@@ -30,7 +30,7 @@ namespace Opc.Ua.WebApi.Model
     /// CallRequest
     /// </summary>
     [DataContract(Name = "CallRequest")]
-    public partial class CallRequest : IEquatable<CallRequest>, IValidatableObject
+    public partial class CallRequest : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="CallRequest" /> class.
@@ -79,67 +79,11 @@ namespace Opc.Ua.WebApi.Model
         }
 
         /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as CallRequest);
-        }
-
-        /// <summary>
-        /// Returns true if CallRequest instances are equal
-        /// </summary>
-        /// <param name="input">Instance of CallRequest to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(CallRequest input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.RequestHeader == input.RequestHeader ||
-                    (this.RequestHeader != null &&
-                    this.RequestHeader.Equals(input.RequestHeader))
-                ) && 
-                (
-                    this.MethodsToCall == input.MethodsToCall ||
-                    this.MethodsToCall != null &&
-                    input.MethodsToCall != null &&
-                    this.MethodsToCall.SequenceEqual(input.MethodsToCall)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.RequestHeader != null)
-                {
-                    hashCode = (hashCode * 59) + this.RequestHeader.GetHashCode();
-                }
-                if (this.MethodsToCall != null)
-                {
-                    hashCode = (hashCode * 59) + this.MethodsToCall.GetHashCode();
-                }
-                return hashCode;
-            }
-        }
-
-        /// <summary>
         /// To validate all properties of the instance
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

@@ -30,7 +30,7 @@ namespace Opc.Ua.WebApi.Model
     /// DiagnosticInfo
     /// </summary>
     [DataContract(Name = "DiagnosticInfo")]
-    public partial class DiagnosticInfo : IEquatable<DiagnosticInfo>, IValidatableObject
+    public partial class DiagnosticInfo : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="DiagnosticInfo" /> class.
@@ -42,7 +42,7 @@ namespace Opc.Ua.WebApi.Model
         /// <param name="additionalInfo">additionalInfo.</param>
         /// <param name="innerStatusCode">innerStatusCode.</param>
         /// <param name="innerDiagnosticInfo">innerDiagnosticInfo.</param>
-        public DiagnosticInfo(int symbolicId = default(int), int namespaceUri = default(int), int locale = default(int), int localizedText = default(int), string additionalInfo = default(string), long innerStatusCode = default(long), DiagnosticInfo innerDiagnosticInfo = default(DiagnosticInfo))
+        public DiagnosticInfo(int symbolicId = default(int), int namespaceUri = default(int), int locale = default(int), int localizedText = default(int), string additionalInfo = default(string), StatusCode innerStatusCode = default(StatusCode), DiagnosticInfo innerDiagnosticInfo = default(DiagnosticInfo))
         {
             this.SymbolicId = symbolicId;
             this.NamespaceUri = namespaceUri;
@@ -87,7 +87,7 @@ namespace Opc.Ua.WebApi.Model
         /// Gets or Sets InnerStatusCode
         /// </summary>
         [DataMember(Name = "InnerStatusCode", EmitDefaultValue = false)]
-        public long InnerStatusCode { get; set; }
+        public StatusCode InnerStatusCode { get; set; }
 
         /// <summary>
         /// Gets or Sets InnerDiagnosticInfo
@@ -124,104 +124,12 @@ namespace Opc.Ua.WebApi.Model
         }
 
         /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as DiagnosticInfo);
-        }
-
-        /// <summary>
-        /// Returns true if DiagnosticInfo instances are equal
-        /// </summary>
-        /// <param name="input">Instance of DiagnosticInfo to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(DiagnosticInfo input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.SymbolicId == input.SymbolicId ||
-                    this.SymbolicId.Equals(input.SymbolicId)
-                ) && 
-                (
-                    this.NamespaceUri == input.NamespaceUri ||
-                    this.NamespaceUri.Equals(input.NamespaceUri)
-                ) && 
-                (
-                    this.Locale == input.Locale ||
-                    this.Locale.Equals(input.Locale)
-                ) && 
-                (
-                    this.LocalizedText == input.LocalizedText ||
-                    this.LocalizedText.Equals(input.LocalizedText)
-                ) && 
-                (
-                    this.AdditionalInfo == input.AdditionalInfo ||
-                    (this.AdditionalInfo != null &&
-                    this.AdditionalInfo.Equals(input.AdditionalInfo))
-                ) && 
-                (
-                    this.InnerStatusCode == input.InnerStatusCode ||
-                    this.InnerStatusCode.Equals(input.InnerStatusCode)
-                ) && 
-                (
-                    this.InnerDiagnosticInfo == input.InnerDiagnosticInfo ||
-                    (this.InnerDiagnosticInfo != null &&
-                    this.InnerDiagnosticInfo.Equals(input.InnerDiagnosticInfo))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.SymbolicId.GetHashCode();
-                hashCode = (hashCode * 59) + this.NamespaceUri.GetHashCode();
-                hashCode = (hashCode * 59) + this.Locale.GetHashCode();
-                hashCode = (hashCode * 59) + this.LocalizedText.GetHashCode();
-                if (this.AdditionalInfo != null)
-                {
-                    hashCode = (hashCode * 59) + this.AdditionalInfo.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.InnerStatusCode.GetHashCode();
-                if (this.InnerDiagnosticInfo != null)
-                {
-                    hashCode = (hashCode * 59) + this.InnerDiagnosticInfo.GetHashCode();
-                }
-                return hashCode;
-            }
-        }
-
-        /// <summary>
         /// To validate all properties of the instance
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
-            // InnerStatusCode (long) maximum
-            if (this.InnerStatusCode > (long)4294967295)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for InnerStatusCode, must be a value less than or equal to 4294967295.", new [] { "InnerStatusCode" });
-            }
-
-            // InnerStatusCode (long) minimum
-            if (this.InnerStatusCode < (long)0)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for InnerStatusCode, must be a value greater than or equal to 0.", new [] { "InnerStatusCode" });
-            }
-
             yield break;
         }
     }

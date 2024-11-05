@@ -11,8 +11,8 @@ Name | Type | Description | Notes
 **SessionName** | **string** |  | [optional] 
 **ClientNonce** | **byte[]** |  | [optional] 
 **ClientCertificate** | **byte[]** |  | [optional] 
-**RequestedSessionTimeout** | **double** |  | [optional] 
-**MaxResponseMessageSize** | **long** |  | [optional] 
+**RequestedSessionTimeout** | **double** |  | [optional] [default to 0D]
+**MaxResponseMessageSize** | **long** |  | [optional] [default to 0]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

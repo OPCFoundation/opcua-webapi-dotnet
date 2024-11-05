@@ -30,7 +30,7 @@ namespace Opc.Ua.WebApi.Model
     /// BrokerWriterGroupTransportDataType
     /// </summary>
     [DataContract(Name = "BrokerWriterGroupTransportDataType")]
-    public partial class BrokerWriterGroupTransportDataType : IEquatable<BrokerWriterGroupTransportDataType>, IValidatableObject
+    public partial class BrokerWriterGroupTransportDataType : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="BrokerWriterGroupTransportDataType" /> class.
@@ -97,80 +97,11 @@ namespace Opc.Ua.WebApi.Model
         }
 
         /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as BrokerWriterGroupTransportDataType);
-        }
-
-        /// <summary>
-        /// Returns true if BrokerWriterGroupTransportDataType instances are equal
-        /// </summary>
-        /// <param name="input">Instance of BrokerWriterGroupTransportDataType to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(BrokerWriterGroupTransportDataType input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.QueueName == input.QueueName ||
-                    (this.QueueName != null &&
-                    this.QueueName.Equals(input.QueueName))
-                ) && 
-                (
-                    this.ResourceUri == input.ResourceUri ||
-                    (this.ResourceUri != null &&
-                    this.ResourceUri.Equals(input.ResourceUri))
-                ) && 
-                (
-                    this.AuthenticationProfileUri == input.AuthenticationProfileUri ||
-                    (this.AuthenticationProfileUri != null &&
-                    this.AuthenticationProfileUri.Equals(input.AuthenticationProfileUri))
-                ) && 
-                (
-                    this.RequestedDeliveryGuarantee == input.RequestedDeliveryGuarantee ||
-                    this.RequestedDeliveryGuarantee.Equals(input.RequestedDeliveryGuarantee)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.QueueName != null)
-                {
-                    hashCode = (hashCode * 59) + this.QueueName.GetHashCode();
-                }
-                if (this.ResourceUri != null)
-                {
-                    hashCode = (hashCode * 59) + this.ResourceUri.GetHashCode();
-                }
-                if (this.AuthenticationProfileUri != null)
-                {
-                    hashCode = (hashCode * 59) + this.AuthenticationProfileUri.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.RequestedDeliveryGuarantee.GetHashCode();
-                return hashCode;
-            }
-        }
-
-        /// <summary>
         /// To validate all properties of the instance
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

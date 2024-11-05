@@ -30,7 +30,7 @@ namespace Opc.Ua.WebApi.Model
     /// HistoryReadRequest
     /// </summary>
     [DataContract(Name = "HistoryReadRequest")]
-    public partial class HistoryReadRequest : IEquatable<HistoryReadRequest>, IValidatableObject
+    public partial class HistoryReadRequest : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="HistoryReadRequest" /> class.
@@ -38,9 +38,9 @@ namespace Opc.Ua.WebApi.Model
         /// <param name="requestHeader">requestHeader.</param>
         /// <param name="historyReadDetails">historyReadDetails.</param>
         /// <param name="timestampsToReturn">timestampsToReturn.</param>
-        /// <param name="releaseContinuationPoints">releaseContinuationPoints.</param>
+        /// <param name="releaseContinuationPoints">releaseContinuationPoints (default to false).</param>
         /// <param name="nodesToRead">nodesToRead.</param>
-        public HistoryReadRequest(RequestHeader requestHeader = default(RequestHeader), ExtensionObject historyReadDetails = default(ExtensionObject), int timestampsToReturn = default(int), bool releaseContinuationPoints = default(bool), List<HistoryReadValueId> nodesToRead = default(List<HistoryReadValueId>))
+        public HistoryReadRequest(RequestHeader requestHeader = default(RequestHeader), ExtensionObject historyReadDetails = default(ExtensionObject), int timestampsToReturn = default(int), bool releaseContinuationPoints = false, List<HistoryReadValueId> nodesToRead = default(List<HistoryReadValueId>))
         {
             this.RequestHeader = requestHeader;
             this.HistoryReadDetails = historyReadDetails;
@@ -106,86 +106,11 @@ namespace Opc.Ua.WebApi.Model
         }
 
         /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as HistoryReadRequest);
-        }
-
-        /// <summary>
-        /// Returns true if HistoryReadRequest instances are equal
-        /// </summary>
-        /// <param name="input">Instance of HistoryReadRequest to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(HistoryReadRequest input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.RequestHeader == input.RequestHeader ||
-                    (this.RequestHeader != null &&
-                    this.RequestHeader.Equals(input.RequestHeader))
-                ) && 
-                (
-                    this.HistoryReadDetails == input.HistoryReadDetails ||
-                    (this.HistoryReadDetails != null &&
-                    this.HistoryReadDetails.Equals(input.HistoryReadDetails))
-                ) && 
-                (
-                    this.TimestampsToReturn == input.TimestampsToReturn ||
-                    this.TimestampsToReturn.Equals(input.TimestampsToReturn)
-                ) && 
-                (
-                    this.ReleaseContinuationPoints == input.ReleaseContinuationPoints ||
-                    this.ReleaseContinuationPoints.Equals(input.ReleaseContinuationPoints)
-                ) && 
-                (
-                    this.NodesToRead == input.NodesToRead ||
-                    this.NodesToRead != null &&
-                    input.NodesToRead != null &&
-                    this.NodesToRead.SequenceEqual(input.NodesToRead)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.RequestHeader != null)
-                {
-                    hashCode = (hashCode * 59) + this.RequestHeader.GetHashCode();
-                }
-                if (this.HistoryReadDetails != null)
-                {
-                    hashCode = (hashCode * 59) + this.HistoryReadDetails.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.TimestampsToReturn.GetHashCode();
-                hashCode = (hashCode * 59) + this.ReleaseContinuationPoints.GetHashCode();
-                if (this.NodesToRead != null)
-                {
-                    hashCode = (hashCode * 59) + this.NodesToRead.GetHashCode();
-                }
-                return hashCode;
-            }
-        }
-
-        /// <summary>
         /// To validate all properties of the instance
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

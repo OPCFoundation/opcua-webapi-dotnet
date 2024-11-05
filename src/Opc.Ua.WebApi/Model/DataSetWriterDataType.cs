@@ -30,21 +30,21 @@ namespace Opc.Ua.WebApi.Model
     /// DataSetWriterDataType
     /// </summary>
     [DataContract(Name = "DataSetWriterDataType")]
-    public partial class DataSetWriterDataType : IEquatable<DataSetWriterDataType>, IValidatableObject
+    public partial class DataSetWriterDataType : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="DataSetWriterDataType" /> class.
         /// </summary>
         /// <param name="name">name.</param>
-        /// <param name="enabled">enabled.</param>
-        /// <param name="dataSetWriterId">dataSetWriterId.</param>
-        /// <param name="dataSetFieldContentMask">dataSetFieldContentMask.</param>
-        /// <param name="keyFrameCount">keyFrameCount.</param>
+        /// <param name="enabled">enabled (default to false).</param>
+        /// <param name="dataSetWriterId">dataSetWriterId (default to 0).</param>
+        /// <param name="dataSetFieldContentMask">dataSetFieldContentMask (default to 0).</param>
+        /// <param name="keyFrameCount">keyFrameCount (default to 0).</param>
         /// <param name="dataSetName">dataSetName.</param>
         /// <param name="dataSetWriterProperties">dataSetWriterProperties.</param>
         /// <param name="transportSettings">transportSettings.</param>
         /// <param name="messageSettings">messageSettings.</param>
-        public DataSetWriterDataType(string name = default(string), bool enabled = default(bool), int dataSetWriterId = default(int), long dataSetFieldContentMask = default(long), long keyFrameCount = default(long), string dataSetName = default(string), List<KeyValuePair> dataSetWriterProperties = default(List<KeyValuePair>), ExtensionObject transportSettings = default(ExtensionObject), ExtensionObject messageSettings = default(ExtensionObject))
+        public DataSetWriterDataType(string name = default(string), bool enabled = false, int dataSetWriterId = 0, long dataSetFieldContentMask = 0, long keyFrameCount = 0, string dataSetName = default(string), List<KeyValuePair> dataSetWriterProperties = default(List<KeyValuePair>), ExtensionObject transportSettings = default(ExtensionObject), ExtensionObject messageSettings = default(ExtensionObject))
         {
             this.Name = name;
             this.Enabled = enabled;
@@ -142,149 +142,46 @@ namespace Opc.Ua.WebApi.Model
         }
 
         /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as DataSetWriterDataType);
-        }
-
-        /// <summary>
-        /// Returns true if DataSetWriterDataType instances are equal
-        /// </summary>
-        /// <param name="input">Instance of DataSetWriterDataType to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(DataSetWriterDataType input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.Name == input.Name ||
-                    (this.Name != null &&
-                    this.Name.Equals(input.Name))
-                ) && 
-                (
-                    this.Enabled == input.Enabled ||
-                    this.Enabled.Equals(input.Enabled)
-                ) && 
-                (
-                    this.DataSetWriterId == input.DataSetWriterId ||
-                    this.DataSetWriterId.Equals(input.DataSetWriterId)
-                ) && 
-                (
-                    this.DataSetFieldContentMask == input.DataSetFieldContentMask ||
-                    this.DataSetFieldContentMask.Equals(input.DataSetFieldContentMask)
-                ) && 
-                (
-                    this.KeyFrameCount == input.KeyFrameCount ||
-                    this.KeyFrameCount.Equals(input.KeyFrameCount)
-                ) && 
-                (
-                    this.DataSetName == input.DataSetName ||
-                    (this.DataSetName != null &&
-                    this.DataSetName.Equals(input.DataSetName))
-                ) && 
-                (
-                    this.DataSetWriterProperties == input.DataSetWriterProperties ||
-                    this.DataSetWriterProperties != null &&
-                    input.DataSetWriterProperties != null &&
-                    this.DataSetWriterProperties.SequenceEqual(input.DataSetWriterProperties)
-                ) && 
-                (
-                    this.TransportSettings == input.TransportSettings ||
-                    (this.TransportSettings != null &&
-                    this.TransportSettings.Equals(input.TransportSettings))
-                ) && 
-                (
-                    this.MessageSettings == input.MessageSettings ||
-                    (this.MessageSettings != null &&
-                    this.MessageSettings.Equals(input.MessageSettings))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.Name != null)
-                {
-                    hashCode = (hashCode * 59) + this.Name.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.Enabled.GetHashCode();
-                hashCode = (hashCode * 59) + this.DataSetWriterId.GetHashCode();
-                hashCode = (hashCode * 59) + this.DataSetFieldContentMask.GetHashCode();
-                hashCode = (hashCode * 59) + this.KeyFrameCount.GetHashCode();
-                if (this.DataSetName != null)
-                {
-                    hashCode = (hashCode * 59) + this.DataSetName.GetHashCode();
-                }
-                if (this.DataSetWriterProperties != null)
-                {
-                    hashCode = (hashCode * 59) + this.DataSetWriterProperties.GetHashCode();
-                }
-                if (this.TransportSettings != null)
-                {
-                    hashCode = (hashCode * 59) + this.TransportSettings.GetHashCode();
-                }
-                if (this.MessageSettings != null)
-                {
-                    hashCode = (hashCode * 59) + this.MessageSettings.GetHashCode();
-                }
-                return hashCode;
-            }
-        }
-
-        /// <summary>
         /// To validate all properties of the instance
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // DataSetWriterId (int) maximum
             if (this.DataSetWriterId > (int)65535)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DataSetWriterId, must be a value less than or equal to 65535.", new [] { "DataSetWriterId" });
+                yield return new ValidationResult("Invalid value for DataSetWriterId, must be a value less than or equal to 65535.", new [] { "DataSetWriterId" });
             }
 
             // DataSetWriterId (int) minimum
             if (this.DataSetWriterId < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DataSetWriterId, must be a value greater than or equal to 0.", new [] { "DataSetWriterId" });
+                yield return new ValidationResult("Invalid value for DataSetWriterId, must be a value greater than or equal to 0.", new [] { "DataSetWriterId" });
             }
 
             // DataSetFieldContentMask (long) maximum
             if (this.DataSetFieldContentMask > (long)4294967295)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DataSetFieldContentMask, must be a value less than or equal to 4294967295.", new [] { "DataSetFieldContentMask" });
+                yield return new ValidationResult("Invalid value for DataSetFieldContentMask, must be a value less than or equal to 4294967295.", new [] { "DataSetFieldContentMask" });
             }
 
             // DataSetFieldContentMask (long) minimum
             if (this.DataSetFieldContentMask < (long)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DataSetFieldContentMask, must be a value greater than or equal to 0.", new [] { "DataSetFieldContentMask" });
+                yield return new ValidationResult("Invalid value for DataSetFieldContentMask, must be a value greater than or equal to 0.", new [] { "DataSetFieldContentMask" });
             }
 
             // KeyFrameCount (long) maximum
             if (this.KeyFrameCount > (long)4294967295)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for KeyFrameCount, must be a value less than or equal to 4294967295.", new [] { "KeyFrameCount" });
+                yield return new ValidationResult("Invalid value for KeyFrameCount, must be a value less than or equal to 4294967295.", new [] { "KeyFrameCount" });
             }
 
             // KeyFrameCount (long) minimum
             if (this.KeyFrameCount < (long)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for KeyFrameCount, must be a value greater than or equal to 0.", new [] { "KeyFrameCount" });
+                yield return new ValidationResult("Invalid value for KeyFrameCount, must be a value greater than or equal to 0.", new [] { "KeyFrameCount" });
             }
 
             yield break;

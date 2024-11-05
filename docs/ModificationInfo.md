@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ModificationTime** | **DateTime** |  | [optional] 
+**ModificationTime** | **DateTime** |  | [optional] [default to "0001-01-01T00:00Z"]
 **UpdateType** | **int** |  | [optional] 
 **UserName** | **string** |  | [optional] 
 

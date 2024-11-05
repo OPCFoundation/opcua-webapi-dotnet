@@ -30,14 +30,14 @@ namespace Opc.Ua.WebApi.Model
     /// RolePermissionType
     /// </summary>
     [DataContract(Name = "RolePermissionType")]
-    public partial class RolePermissionType : IEquatable<RolePermissionType>, IValidatableObject
+    public partial class RolePermissionType : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="RolePermissionType" /> class.
         /// </summary>
         /// <param name="roleId">roleId.</param>
-        /// <param name="permissions">permissions.</param>
-        public RolePermissionType(string roleId = default(string), long permissions = default(long))
+        /// <param name="permissions">permissions (default to 0).</param>
+        public RolePermissionType(string roleId = default(string), long permissions = 0)
         {
             this.RoleId = roleId;
             this.Permissions = permissions;
@@ -79,73 +79,22 @@ namespace Opc.Ua.WebApi.Model
         }
 
         /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as RolePermissionType);
-        }
-
-        /// <summary>
-        /// Returns true if RolePermissionType instances are equal
-        /// </summary>
-        /// <param name="input">Instance of RolePermissionType to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(RolePermissionType input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.RoleId == input.RoleId ||
-                    (this.RoleId != null &&
-                    this.RoleId.Equals(input.RoleId))
-                ) && 
-                (
-                    this.Permissions == input.Permissions ||
-                    this.Permissions.Equals(input.Permissions)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.RoleId != null)
-                {
-                    hashCode = (hashCode * 59) + this.RoleId.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.Permissions.GetHashCode();
-                return hashCode;
-            }
-        }
-
-        /// <summary>
         /// To validate all properties of the instance
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // Permissions (long) maximum
             if (this.Permissions > (long)4294967295)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for Permissions, must be a value less than or equal to 4294967295.", new [] { "Permissions" });
+                yield return new ValidationResult("Invalid value for Permissions, must be a value less than or equal to 4294967295.", new [] { "Permissions" });
             }
 
             // Permissions (long) minimum
             if (this.Permissions < (long)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for Permissions, must be a value greater than or equal to 0.", new [] { "Permissions" });
+                yield return new ValidationResult("Invalid value for Permissions, must be a value greater than or equal to 0.", new [] { "Permissions" });
             }
 
             yield break;

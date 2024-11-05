@@ -30,15 +30,15 @@ namespace Opc.Ua.WebApi.Model
     /// EnumValueType
     /// </summary>
     [DataContract(Name = "EnumValueType")]
-    public partial class EnumValueType : IEquatable<EnumValueType>, IValidatableObject
+    public partial class EnumValueType : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="EnumValueType" /> class.
         /// </summary>
-        /// <param name="value">value.</param>
+        /// <param name="value">value (default to 0).</param>
         /// <param name="displayName">displayName.</param>
         /// <param name="description">description.</param>
-        public EnumValueType(long value = default(long), LocalizedText displayName = default(LocalizedText), LocalizedText description = default(LocalizedText))
+        public EnumValueType(long value = 0, LocalizedText displayName = default(LocalizedText), LocalizedText description = default(LocalizedText))
         {
             this.Value = value;
             this.DisplayName = displayName;
@@ -88,71 +88,11 @@ namespace Opc.Ua.WebApi.Model
         }
 
         /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as EnumValueType);
-        }
-
-        /// <summary>
-        /// Returns true if EnumValueType instances are equal
-        /// </summary>
-        /// <param name="input">Instance of EnumValueType to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(EnumValueType input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.Value == input.Value ||
-                    this.Value.Equals(input.Value)
-                ) && 
-                (
-                    this.DisplayName == input.DisplayName ||
-                    (this.DisplayName != null &&
-                    this.DisplayName.Equals(input.DisplayName))
-                ) && 
-                (
-                    this.Description == input.Description ||
-                    (this.Description != null &&
-                    this.Description.Equals(input.Description))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.Value.GetHashCode();
-                if (this.DisplayName != null)
-                {
-                    hashCode = (hashCode * 59) + this.DisplayName.GetHashCode();
-                }
-                if (this.Description != null)
-                {
-                    hashCode = (hashCode * 59) + this.Description.GetHashCode();
-                }
-                return hashCode;
-            }
-        }
-
-        /// <summary>
         /// To validate all properties of the instance
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

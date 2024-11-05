@@ -30,7 +30,7 @@ namespace Opc.Ua.WebApi.Model
     /// PublishedDataSetDataType
     /// </summary>
     [DataContract(Name = "PublishedDataSetDataType")]
-    public partial class PublishedDataSetDataType : IEquatable<PublishedDataSetDataType>, IValidatableObject
+    public partial class PublishedDataSetDataType : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="PublishedDataSetDataType" /> class.
@@ -106,95 +106,11 @@ namespace Opc.Ua.WebApi.Model
         }
 
         /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as PublishedDataSetDataType);
-        }
-
-        /// <summary>
-        /// Returns true if PublishedDataSetDataType instances are equal
-        /// </summary>
-        /// <param name="input">Instance of PublishedDataSetDataType to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(PublishedDataSetDataType input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.Name == input.Name ||
-                    (this.Name != null &&
-                    this.Name.Equals(input.Name))
-                ) && 
-                (
-                    this.DataSetFolder == input.DataSetFolder ||
-                    this.DataSetFolder != null &&
-                    input.DataSetFolder != null &&
-                    this.DataSetFolder.SequenceEqual(input.DataSetFolder)
-                ) && 
-                (
-                    this.DataSetMetaData == input.DataSetMetaData ||
-                    (this.DataSetMetaData != null &&
-                    this.DataSetMetaData.Equals(input.DataSetMetaData))
-                ) && 
-                (
-                    this.ExtensionFields == input.ExtensionFields ||
-                    this.ExtensionFields != null &&
-                    input.ExtensionFields != null &&
-                    this.ExtensionFields.SequenceEqual(input.ExtensionFields)
-                ) && 
-                (
-                    this.DataSetSource == input.DataSetSource ||
-                    (this.DataSetSource != null &&
-                    this.DataSetSource.Equals(input.DataSetSource))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.Name != null)
-                {
-                    hashCode = (hashCode * 59) + this.Name.GetHashCode();
-                }
-                if (this.DataSetFolder != null)
-                {
-                    hashCode = (hashCode * 59) + this.DataSetFolder.GetHashCode();
-                }
-                if (this.DataSetMetaData != null)
-                {
-                    hashCode = (hashCode * 59) + this.DataSetMetaData.GetHashCode();
-                }
-                if (this.ExtensionFields != null)
-                {
-                    hashCode = (hashCode * 59) + this.ExtensionFields.GetHashCode();
-                }
-                if (this.DataSetSource != null)
-                {
-                    hashCode = (hashCode * 59) + this.DataSetSource.GetHashCode();
-                }
-                return hashCode;
-            }
-        }
-
-        /// <summary>
         /// To validate all properties of the instance
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

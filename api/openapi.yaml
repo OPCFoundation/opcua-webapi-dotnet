@@ -461,6 +461,20 @@ paths:
           description: DeleteSubscriptionsResponseMessage
 components:
   schemas:
+    StatusCode:
+      additionalProperties: false
+      example:
+        Symbol: Symbol
+        Code: 2588772717
+      properties:
+        Code:
+          format: int64
+          maximum: 4294967295
+          minimum: 0
+          type: integer
+        Symbol:
+          type: string
+      type: object
     LocalizedText:
       additionalProperties: false
       example:
@@ -474,33 +488,33 @@ components:
           type: string
       type: object
     ExtensionObject:
-      additionalProperties: false
       example:
-        TypeId: TypeId
-        Encoding: 237
-        Body: "{}"
+        UaTypeId: UaTypeId
+        UaEncoding: 180
+        UaBody: UaBody
       properties:
-        TypeId:
-          format: opcuaNodeId
+        UaTypeId:
+          format: UaNodeId
           type: string
-        Encoding:
+        UaEncoding:
           format: int32
           maximum: 255
           minimum: 0
           type: integer
-        Body:
-          type: object
+        UaBody:
+          format: byte
+          type: string
       type: object
     Variant:
       additionalProperties: false
       example:
-        Type: 92
         Dimensions:
         - 0
         - 0
+        UaType: 20
         Body: ""
       properties:
-        Type:
+        UaType:
           format: int32
           maximum: 255
           minimum: 0
@@ -516,29 +530,38 @@ components:
     DataValue:
       additionalProperties: false
       example:
-        ServerPicoSeconds: 8070
-        Value:
-          Type: 92
-          Dimensions:
-          - 0
-          - 0
-          Body: ""
+        SourcePicoseconds: 13284
+        Value: ""
+        Dimensions:
+        - 0
+        - 0
         SourceTimestamp: 2000-01-23T04:56:07.000+00:00
-        SourcePicoSeconds: 48405
         ServerTimestamp: 2000-01-23T04:56:07.000+00:00
-        StatusCode: 1780525090
-      properties:
-        Value:
-          $ref: '#/components/schemas/Variant'
+        UaType: 237
         StatusCode:
-          format: int64
-          maximum: 4294967295
+          Symbol: Symbol
+          Code: 2588772717
+        ServerPicoseconds: 27168
+      properties:
+        UaType:
+          default: 0
+          format: int32
+          maximum: 255
           minimum: 0
           type: integer
+        Value: {}
+        Dimensions:
+          items:
+            format: int32
+            minimum: 0
+            type: integer
+          type: array
+        StatusCode:
+          $ref: '#/components/schemas/StatusCode'
         SourceTimestamp:
           format: date-time
           type: string
-        SourcePicoSeconds:
+        SourcePicoseconds:
           format: int32
           maximum: 65535
           minimum: 0
@@ -546,7 +569,7 @@ components:
         ServerTimestamp:
           format: date-time
           type: string
-        ServerPicoSeconds:
+        ServerPicoseconds:
           format: int32
           maximum: 65535
           minimum: 0
@@ -561,7 +584,9 @@ components:
         SymbolicId: 1
         InnerDiagnosticInfo: null
         LocalizedText: 2
-        InnerStatusCode: 3032848738
+        InnerStatusCode:
+          Symbol: Symbol
+          Code: 2588772717
       properties:
         SymbolicId:
           format: int32
@@ -578,10 +603,7 @@ components:
         AdditionalInfo:
           type: string
         InnerStatusCode:
-          format: int64
-          maximum: 4294967295
-          minimum: 0
-          type: integer
+          $ref: '#/components/schemas/StatusCode'
         InnerDiagnosticInfo:
           $ref: '#/components/schemas/DiagnosticInfo'
       type: object
@@ -589,12 +611,13 @@ components:
       additionalProperties: false
       properties:
         Scale:
+          default: 0
           format: int32
           maximum: 32767
           minimum: -32768
           type: integer
         Value:
-          format: uinteger
+          default: "0"
           type: string
       type: object
     BaseDataType:
@@ -602,7 +625,7 @@ components:
     KeyValuePair:
       properties:
         Key:
-          format: opcuaQualifiedName
+          format: UaQualifiedName
           type: string
         Value:
           $ref: '#/components/schemas/Variant'
@@ -629,10 +652,10 @@ components:
     DataTypeDescription:
       properties:
         DataTypeId:
-          format: opcuaNodeId
+          format: UaNodeId
           type: string
         Name:
-          format: opcuaQualifiedName
+          format: UaQualifiedName
           type: string
       type: object
     StructureDescription:
@@ -649,6 +672,7 @@ components:
         EnumDefinition:
           $ref: '#/components/schemas/EnumDefinition'
         BuiltInType:
+          default: 0
           format: int32
           maximum: 255
           minimum: 0
@@ -659,9 +683,10 @@ components:
       - $ref: '#/components/schemas/DataTypeDescription'
       properties:
         BaseDataType:
-          format: opcuaNodeId
+          format: UaNodeId
           type: string
         BuiltInType:
+          default: 0
           format: int32
           maximum: 255
           minimum: 0
@@ -707,29 +732,34 @@ components:
         Description:
           $ref: '#/components/schemas/LocalizedText'
         FieldFlags:
+          default: 0
           format: int32
           maximum: 65535
           minimum: 0
           type: integer
         BuiltInType:
+          default: 0
           format: int32
           maximum: 255
           minimum: 0
           type: integer
         DataType:
-          format: opcuaNodeId
+          format: UaNodeId
           type: string
         ValueRank:
+          default: 0
           format: int32
           type: integer
         ArrayDimensions:
           items:
+            default: 0
             format: int64
             maximum: 4294967295
             minimum: 0
             type: integer
           type: array
         MaxStringLength:
+          default: 0
           format: int64
           maximum: 4294967295
           minimum: 0
@@ -743,6 +773,7 @@ components:
           type: array
       type: object
     DataSetFieldFlags:
+      default: 0
       description: PromotedField=0000
       format: int64
       maximum: 4294967295
@@ -751,11 +782,13 @@ components:
     ConfigurationVersionDataType:
       properties:
         MajorVersion:
+          default: 0
           format: int64
           maximum: 4294967295
           minimum: 0
           type: integer
         MinorVersion:
+          default: 0
           format: int64
           maximum: 4294967295
           minimum: 0
@@ -778,9 +811,8 @@ components:
         DataSetSource:
           $ref: '#/components/schemas/ExtensionObject'
       type: object
-    PublishedDataSetSourceDataType:
-      type: object
     DataSetFieldContentMask:
+      default: 0
       description: "StatusCode=0000, SourceTimestamp=0001, ServerTimestamp=0002, SourcePicoSeconds=0003,\
         \ ServerPicoSeconds=0004, RawData=0005"
       format: int64
@@ -792,18 +824,22 @@ components:
         Name:
           type: string
         Enabled:
+          default: false
           type: boolean
         DataSetWriterId:
+          default: 0
           format: int32
           maximum: 65535
           minimum: 0
           type: integer
         DataSetFieldContentMask:
+          default: 0
           format: int64
           maximum: 4294967295
           minimum: 0
           type: integer
         KeyFrameCount:
+          default: 0
           format: int64
           maximum: 4294967295
           minimum: 0
@@ -828,6 +864,7 @@ components:
         Name:
           type: string
         Enabled:
+          default: false
           type: boolean
         SecurityMode:
           format: MessageSecurityMode
@@ -839,6 +876,7 @@ components:
             $ref: '#/components/schemas/EndpointDescription'
           type: array
         MaxNetworkMessageSize:
+          default: 0
           format: int64
           maximum: 4294967295
           minimum: 0
@@ -853,17 +891,21 @@ components:
       - $ref: '#/components/schemas/PubSubGroupDataType'
       properties:
         WriterGroupId:
+          default: 0
           format: int32
           maximum: 65535
           minimum: 0
           type: integer
         PublishingInterval:
+          default: 0
           format: double
           type: number
         KeepAliveTime:
+          default: 0
           format: double
           type: number
         Priority:
+          default: 0
           format: int32
           maximum: 255
           minimum: 0
@@ -892,6 +934,7 @@ components:
         Name:
           type: string
         Enabled:
+          default: false
           type: boolean
         PublisherId:
           $ref: '#/components/schemas/Variant'
@@ -943,15 +986,18 @@ components:
         Name:
           type: string
         Enabled:
+          default: false
           type: boolean
         PublisherId:
           $ref: '#/components/schemas/Variant'
         WriterGroupId:
+          default: 0
           format: int32
           maximum: 65535
           minimum: 0
           type: integer
         DataSetWriterId:
+          default: 0
           format: int32
           maximum: 65535
           minimum: 0
@@ -959,14 +1005,17 @@ components:
         DataSetMetaData:
           $ref: '#/components/schemas/DataSetMetaDataType'
         DataSetFieldContentMask:
+          default: 0
           format: int64
           maximum: 4294967295
           minimum: 0
           type: integer
         MessageReceiveTimeout:
+          default: 0
           format: double
           type: number
         KeyFrameCount:
+          default: 0
           format: int64
           maximum: 4294967295
           minimum: 0
@@ -1010,6 +1059,7 @@ components:
             $ref: '#/components/schemas/PubSubConnectionDataType'
           type: array
         Enabled:
+          default: false
           type: boolean
       type: object
     StandaloneSubscribedDataSetDataType:
@@ -1036,16 +1086,19 @@ components:
             type: string
           type: array
         KeyLifetime:
+          default: 0
           format: double
           type: number
         SecurityPolicyUri:
           type: string
         MaxFutureKeyCount:
+          default: 0
           format: int64
           maximum: 4294967295
           minimum: 0
           type: integer
         MaxPastKeyCount:
+          default: 0
           format: int64
           maximum: 4294967295
           minimum: 0
@@ -1076,11 +1129,13 @@ components:
         UserTokenType:
           $ref: '#/components/schemas/UserTokenPolicy'
         RequestedKeyCount:
+          default: 0
           format: int32
           maximum: 65535
           minimum: 0
           type: integer
         RetryInterval:
+          default: 0
           format: double
           type: number
         PushTargetProperties:
@@ -1117,6 +1172,7 @@ components:
             $ref: '#/components/schemas/PubSubKeyPushTargetDataType'
           type: array
         ConfigurationVersion:
+          default: 0
           format: int64
           maximum: 4294967295
           minimum: 0
@@ -1127,6 +1183,7 @@ components:
           type: array
       type: object
     JsonNetworkMessageContentMask:
+      default: 0
       description: "NetworkMessageHeader=0000, DataSetMessageHeader=0001, SingleDataSetMessage=0002,\
         \ PublisherId=0003, DataSetClassId=0004, ReplyTo=0005, WriterGroupName=0006"
       format: int64
@@ -1138,15 +1195,17 @@ components:
       - $ref: '#/components/schemas/WriterGroupMessageDataType'
       properties:
         NetworkMessageContentMask:
+          default: 0
           format: int64
           maximum: 4294967295
           minimum: 0
           type: integer
       type: object
     JsonDataSetMessageContentMask:
+      default: 0
       description: "DataSetWriterId=0000, MetaDataVersion=0001, SequenceNumber=0002,\
-        \ Timestamp=0003, Status=0004, MessageType=0005, DataSetWriterName=0006, ReversibleFieldEncoding=0007,\
-        \ PublisherId=0008, WriterGroupName=0009, MinorVersion=000A"
+        \ Timestamp=0003, Status=0004, MessageType=0005, DataSetWriterName=0006, FieldEncoding1=0007,\
+        \ PublisherId=0008, WriterGroupName=0009, MinorVersion=000A, FieldEncoding2=000B"
       format: int64
       maximum: 4294967295
       minimum: 0
@@ -1156,6 +1215,7 @@ components:
       - $ref: '#/components/schemas/DataSetWriterMessageDataType'
       properties:
         DataSetMessageContentMask:
+          default: 0
           format: int64
           maximum: 4294967295
           minimum: 0
@@ -1166,11 +1226,13 @@ components:
       - $ref: '#/components/schemas/DataSetReaderMessageDataType'
       properties:
         NetworkMessageContentMask:
+          default: 0
           format: int64
           maximum: 4294967295
           minimum: 0
           type: integer
         DataSetMessageContentMask:
+          default: 0
           format: int64
           maximum: 4294967295
           minimum: 0
@@ -1230,6 +1292,7 @@ components:
         MetaDataQueueName:
           type: string
         MetaDataUpdateTime:
+          default: 0
           format: double
           type: number
       type: object
@@ -1273,6 +1336,7 @@ components:
       - DataType
       - View
     PermissionType:
+      default: 0
       description: "Browse=0000, ReadRolePermissions=0001, WriteAttribute=0002, WriteRolePermissions=0003,\
         \ WriteHistorizing=0004, Read=0005, Write=0006, ReadHistory=0007, InsertHistory=0008,\
         \ ModifyHistory=0009, DeleteHistory=000A, ReceiveEvents=000B, Call=000C, AddReference=000D,\
@@ -1284,9 +1348,10 @@ components:
     RolePermissionType:
       properties:
         RoleId:
-          format: opcuaNodeId
+          format: UaNodeId
           type: string
         Permissions:
+          default: 0
           format: int64
           maximum: 4294967295
           minimum: 0
@@ -1316,24 +1381,28 @@ components:
         Description:
           $ref: '#/components/schemas/LocalizedText'
         DataType:
-          format: opcuaNodeId
+          format: UaNodeId
           type: string
         ValueRank:
+          default: 0
           format: int32
           type: integer
         ArrayDimensions:
           items:
+            default: 0
             format: int64
             maximum: 4294967295
             minimum: 0
             type: integer
           type: array
         MaxStringLength:
+          default: 0
           format: int64
           maximum: 4294967295
           minimum: 0
           type: integer
         IsOptional:
+          default: false
           type: boolean
       type: object
     StructureDefinition:
@@ -1341,10 +1410,10 @@ components:
       - $ref: '#/components/schemas/DataTypeDefinition'
       properties:
         DefaultEncodingId:
-          format: opcuaNodeId
+          format: UaNodeId
           type: string
         BaseDataType:
-          format: opcuaNodeId
+          format: UaNodeId
           type: string
         StructureType:
           format: StructureType
@@ -1368,13 +1437,15 @@ components:
         Name:
           type: string
         DataType:
-          format: opcuaNodeId
+          format: UaNodeId
           type: string
         ValueRank:
+          default: 0
           format: int32
           type: integer
         ArrayDimensions:
           items:
+            default: 0
             format: int64
             maximum: 4294967295
             minimum: 0
@@ -1386,6 +1457,7 @@ components:
     EnumValueType:
       properties:
         Value:
+          default: 0
           format: int64
           type: integer
         DisplayName:
@@ -1401,12 +1473,15 @@ components:
           type: string
       type: object
     Duration:
+      default: 0
       format: double
       type: number
     UtcTime:
+      default: 0001-01-01T00:00:00Z
       format: date-time
       type: string
     IntegerId:
+      default: 0
       format: int64
       maximum: 4294967295
       minimum: 0
@@ -1464,23 +1539,26 @@ components:
         ReturnDiagnostics: 2588772717
         TimeoutHint: 629561881
         AdditionalHeader:
-          TypeId: TypeId
-          Encoding: 237
-          Body: "{}"
+          UaTypeId: UaTypeId
+          UaEncoding: 180
+          UaBody: UaBody
         Timestamp: 2000-01-23T04:56:07.000+00:00
       properties:
         AuthenticationToken:
-          format: opcuaNodeId
+          format: UaNodeId
           type: string
         Timestamp:
+          default: 0001-01-01T00:00:00Z
           format: date-time
           type: string
         RequestHandle:
+          default: 0
           format: int64
           maximum: 4294967295
           minimum: 0
           type: integer
         ReturnDiagnostics:
+          default: 0
           format: int64
           maximum: 4294967295
           minimum: 0
@@ -1488,6 +1566,7 @@ components:
         AuditEntryId:
           type: string
         TimeoutHint:
+          default: 0
           format: int64
           maximum: 4294967295
           minimum: 0
@@ -1500,12 +1579,14 @@ components:
         StringTable:
         - StringTable
         - StringTable
-        ServiceResult: 2588772717
+        ServiceResult:
+          Symbol: Symbol
+          Code: 2588772717
         RequestHandle: 343953088
         AdditionalHeader:
-          TypeId: TypeId
-          Encoding: 237
-          Body: "{}"
+          UaTypeId: UaTypeId
+          UaEncoding: 180
+          UaBody: UaBody
         Timestamp: 2000-01-23T04:56:07.000+00:00
         ServiceDiagnostics:
           Locale: 5
@@ -1514,21 +1595,22 @@ components:
           SymbolicId: 1
           InnerDiagnosticInfo: null
           LocalizedText: 2
-          InnerStatusCode: 3032848738
+          InnerStatusCode:
+            Symbol: Symbol
+            Code: 2588772717
       properties:
         Timestamp:
+          default: 0001-01-01T00:00:00Z
           format: date-time
           type: string
         RequestHandle:
+          default: 0
           format: int64
           maximum: 4294967295
           minimum: 0
           type: integer
         ServiceResult:
-          format: int64
-          maximum: 4294967295
-          minimum: 0
-          type: integer
+          $ref: '#/components/schemas/StatusCode'
         ServiceDiagnostics:
           $ref: '#/components/schemas/DiagnosticInfo'
         StringTable:
@@ -1539,6 +1621,7 @@ components:
           $ref: '#/components/schemas/ExtensionObject'
       type: object
     VersionTime:
+      default: 0
       format: int64
       maximum: 4294967295
       minimum: 0
@@ -1555,9 +1638,9 @@ components:
           ReturnDiagnostics: 2588772717
           TimeoutHint: 629561881
           AdditionalHeader:
-            TypeId: TypeId
-            Encoding: 237
-            Body: "{}"
+            UaTypeId: UaTypeId
+            UaEncoding: 180
+            UaBody: UaBody
           Timestamp: 2000-01-23T04:56:07.000+00:00
         EndpointUrl: EndpointUrl
         LocaleIds:
@@ -1583,12 +1666,14 @@ components:
           StringTable:
           - StringTable
           - StringTable
-          ServiceResult: 2588772717
+          ServiceResult:
+            Symbol: Symbol
+            Code: 2588772717
           RequestHandle: 343953088
           AdditionalHeader:
-            TypeId: TypeId
-            Encoding: 237
-            Body: "{}"
+            UaTypeId: UaTypeId
+            UaEncoding: 180
+            UaBody: UaBody
           Timestamp: 2000-01-23T04:56:07.000+00:00
           ServiceDiagnostics:
             Locale: 5
@@ -1597,7 +1682,9 @@ components:
             SymbolicId: 1
             InnerDiagnosticInfo: null
             LocalizedText: 2
-            InnerStatusCode: 3032848738
+            InnerStatusCode:
+              Symbol: Symbol
+              Code: 2588772717
         Servers:
         - ApplicationType: 0
           ApplicationUri: ApplicationUri
@@ -1729,6 +1816,7 @@ components:
         TransportProfileUri:
           type: string
         SecurityLevel:
+          default: 0
           format: int32
           maximum: 255
           minimum: 0
@@ -1746,9 +1834,9 @@ components:
           ReturnDiagnostics: 2588772717
           TimeoutHint: 629561881
           AdditionalHeader:
-            TypeId: TypeId
-            Encoding: 237
-            Body: "{}"
+            UaTypeId: UaTypeId
+            UaEncoding: 180
+            UaBody: UaBody
           Timestamp: 2000-01-23T04:56:07.000+00:00
         EndpointUrl: EndpointUrl
         LocaleIds:
@@ -1833,12 +1921,14 @@ components:
           StringTable:
           - StringTable
           - StringTable
-          ServiceResult: 2588772717
+          ServiceResult:
+            Symbol: Symbol
+            Code: 2588772717
           RequestHandle: 343953088
           AdditionalHeader:
-            TypeId: TypeId
-            Encoding: 237
-            Body: "{}"
+            UaTypeId: UaTypeId
+            UaEncoding: 180
+            UaBody: UaBody
           Timestamp: 2000-01-23T04:56:07.000+00:00
           ServiceDiagnostics:
             Locale: 5
@@ -1847,7 +1937,9 @@ components:
             SymbolicId: 1
             InnerDiagnosticInfo: null
             LocalizedText: 2
-            InnerStatusCode: 3032848738
+            InnerStatusCode:
+              Symbol: Symbol
+              Code: 2588772717
       properties:
         ResponseHeader:
           $ref: '#/components/schemas/ResponseHeader'
@@ -1869,7 +1961,7 @@ components:
           type: string
       type: object
     SessionAuthenticationToken:
-      format: opcuaNodeId
+      format: UaNodeId
       type: string
     SignatureData:
       example:
@@ -1892,9 +1984,9 @@ components:
           ReturnDiagnostics: 2588772717
           TimeoutHint: 629561881
           AdditionalHeader:
-            TypeId: TypeId
-            Encoding: 237
-            Body: "{}"
+            UaTypeId: UaTypeId
+            UaEncoding: 180
+            UaBody: UaBody
           Timestamp: 2000-01-23T04:56:07.000+00:00
         ClientDescription:
           ApplicationType: 0
@@ -1932,9 +2024,11 @@ components:
           format: byte
           type: string
         RequestedSessionTimeout:
+          default: 0
           format: double
           type: number
         MaxResponseMessageSize:
+          default: 0
           format: int64
           maximum: 4294967295
           minimum: 0
@@ -1947,12 +2041,14 @@ components:
           StringTable:
           - StringTable
           - StringTable
-          ServiceResult: 2588772717
+          ServiceResult:
+            Symbol: Symbol
+            Code: 2588772717
           RequestHandle: 343953088
           AdditionalHeader:
-            TypeId: TypeId
-            Encoding: 237
-            Body: "{}"
+            UaTypeId: UaTypeId
+            UaEncoding: 180
+            UaBody: UaBody
           Timestamp: 2000-01-23T04:56:07.000+00:00
           ServiceDiagnostics:
             Locale: 5
@@ -1961,7 +2057,9 @@ components:
             SymbolicId: 1
             InnerDiagnosticInfo: null
             LocalizedText: 2
-            InnerStatusCode: 3032848738
+            InnerStatusCode:
+              Symbol: Symbol
+              Code: 2588772717
         AuthenticationToken: AuthenticationToken
         RevisedSessionTimeout: 0.8008281904610115
         ServerEndpoints:
@@ -2038,12 +2136,13 @@ components:
         ResponseHeader:
           $ref: '#/components/schemas/ResponseHeader'
         SessionId:
-          format: opcuaNodeId
+          format: UaNodeId
           type: string
         AuthenticationToken:
-          format: opcuaNodeId
+          format: UaNodeId
           type: string
         RevisedSessionTimeout:
+          default: 0
           format: double
           type: number
         ServerNonce:
@@ -2063,6 +2162,7 @@ components:
         ServerSignature:
           $ref: '#/components/schemas/SignatureData'
         MaxRequestMessageSize:
+          default: 0
           format: int64
           maximum: 4294967295
           minimum: 0
@@ -2125,14 +2225,14 @@ components:
           ReturnDiagnostics: 2588772717
           TimeoutHint: 629561881
           AdditionalHeader:
-            TypeId: TypeId
-            Encoding: 237
-            Body: "{}"
+            UaTypeId: UaTypeId
+            UaEncoding: 180
+            UaBody: UaBody
           Timestamp: 2000-01-23T04:56:07.000+00:00
         UserIdentityToken:
-          TypeId: TypeId
-          Encoding: 237
-          Body: "{}"
+          UaTypeId: UaTypeId
+          UaEncoding: 180
+          UaBody: UaBody
         LocaleIds:
         - LocaleIds
         - LocaleIds
@@ -2160,12 +2260,14 @@ components:
           StringTable:
           - StringTable
           - StringTable
-          ServiceResult: 2588772717
+          ServiceResult:
+            Symbol: Symbol
+            Code: 2588772717
           RequestHandle: 343953088
           AdditionalHeader:
-            TypeId: TypeId
-            Encoding: 237
-            Body: "{}"
+            UaTypeId: UaTypeId
+            UaEncoding: 180
+            UaBody: UaBody
           Timestamp: 2000-01-23T04:56:07.000+00:00
           ServiceDiagnostics:
             Locale: 5
@@ -2174,10 +2276,14 @@ components:
             SymbolicId: 1
             InnerDiagnosticInfo: null
             LocalizedText: 2
-            InnerStatusCode: 3032848738
+            InnerStatusCode:
+              Symbol: Symbol
+              Code: 2588772717
         Results:
-        - 343953088
-        - 343953088
+        - Symbol: Symbol
+          Code: 2588772717
+        - Symbol: Symbol
+          Code: 2588772717
         DiagnosticInfos:
         - Locale: 5
           AdditionalInfo: AdditionalInfo
@@ -2185,14 +2291,18 @@ components:
           SymbolicId: 1
           InnerDiagnosticInfo: null
           LocalizedText: 2
-          InnerStatusCode: 3032848738
+          InnerStatusCode:
+            Symbol: Symbol
+            Code: 2588772717
         - Locale: 5
           AdditionalInfo: AdditionalInfo
           NamespaceUri: 5
           SymbolicId: 1
           InnerDiagnosticInfo: null
           LocalizedText: 2
-          InnerStatusCode: 3032848738
+          InnerStatusCode:
+            Symbol: Symbol
+            Code: 2588772717
         ServerNonce: ServerNonce
       properties:
         ResponseHeader:
@@ -2202,10 +2312,7 @@ components:
           type: string
         Results:
           items:
-            format: int64
-            maximum: 4294967295
-            minimum: 0
-            type: integer
+            $ref: '#/components/schemas/StatusCode'
           type: array
         DiagnosticInfos:
           items:
@@ -2221,15 +2328,16 @@ components:
           ReturnDiagnostics: 2588772717
           TimeoutHint: 629561881
           AdditionalHeader:
-            TypeId: TypeId
-            Encoding: 237
-            Body: "{}"
+            UaTypeId: UaTypeId
+            UaEncoding: 180
+            UaBody: UaBody
           Timestamp: 2000-01-23T04:56:07.000+00:00
-        DeleteSubscriptions: true
+        DeleteSubscriptions: false
       properties:
         RequestHeader:
           $ref: '#/components/schemas/RequestHeader'
         DeleteSubscriptions:
+          default: false
           type: boolean
       type: object
     CloseSessionResponse:
@@ -2238,12 +2346,14 @@ components:
           StringTable:
           - StringTable
           - StringTable
-          ServiceResult: 2588772717
+          ServiceResult:
+            Symbol: Symbol
+            Code: 2588772717
           RequestHandle: 343953088
           AdditionalHeader:
-            TypeId: TypeId
-            Encoding: 237
-            Body: "{}"
+            UaTypeId: UaTypeId
+            UaEncoding: 180
+            UaBody: UaBody
           Timestamp: 2000-01-23T04:56:07.000+00:00
           ServiceDiagnostics:
             Locale: 5
@@ -2252,7 +2362,9 @@ components:
             SymbolicId: 1
             InnerDiagnosticInfo: null
             LocalizedText: 2
-            InnerStatusCode: 3032848738
+            InnerStatusCode:
+              Symbol: Symbol
+              Code: 2588772717
       properties:
         ResponseHeader:
           $ref: '#/components/schemas/ResponseHeader'
@@ -2267,14 +2379,15 @@ components:
           ReturnDiagnostics: 2588772717
           TimeoutHint: 629561881
           AdditionalHeader:
-            TypeId: TypeId
-            Encoding: 237
-            Body: "{}"
+            UaTypeId: UaTypeId
+            UaEncoding: 180
+            UaBody: UaBody
           Timestamp: 2000-01-23T04:56:07.000+00:00
       properties:
         RequestHeader:
           $ref: '#/components/schemas/RequestHeader'
         RequestHandle:
+          default: 0
           format: int64
           maximum: 4294967295
           minimum: 0
@@ -2286,12 +2399,14 @@ components:
           StringTable:
           - StringTable
           - StringTable
-          ServiceResult: 2588772717
+          ServiceResult:
+            Symbol: Symbol
+            Code: 2588772717
           RequestHandle: 343953088
           AdditionalHeader:
-            TypeId: TypeId
-            Encoding: 237
-            Body: "{}"
+            UaTypeId: UaTypeId
+            UaEncoding: 180
+            UaBody: UaBody
           Timestamp: 2000-01-23T04:56:07.000+00:00
           ServiceDiagnostics:
             Locale: 5
@@ -2300,12 +2415,15 @@ components:
             SymbolicId: 1
             InnerDiagnosticInfo: null
             LocalizedText: 2
-            InnerStatusCode: 3032848738
+            InnerStatusCode:
+              Symbol: Symbol
+              Code: 2588772717
         CancelCount: 343953088
       properties:
         ResponseHeader:
           $ref: '#/components/schemas/ResponseHeader'
         CancelCount:
+          default: 0
           format: int64
           maximum: 4294967295
           minimum: 0
@@ -2331,12 +2449,14 @@ components:
         ViewVersion: 343953088
       properties:
         ViewId:
-          format: opcuaNodeId
+          format: UaNodeId
           type: string
         Timestamp:
+          default: 0001-01-01T00:00:00Z
           format: date-time
           type: string
         ViewVersion:
+          default: 0
           format: int64
           maximum: 4294967295
           minimum: 0
@@ -2344,7 +2464,7 @@ components:
       type: object
     BrowseDescription:
       example:
-        IncludeSubtypes: true
+        IncludeSubtypes: false
         ResultMask: 2421234836
         BrowseDirection: 1
         NodeId: NodeId
@@ -2352,22 +2472,25 @@ components:
         NodeClassMask: 2560717018
       properties:
         NodeId:
-          format: opcuaNodeId
+          format: UaNodeId
           type: string
         BrowseDirection:
           format: BrowseDirection
           type: integer
         ReferenceTypeId:
-          format: opcuaNodeId
+          format: UaNodeId
           type: string
         IncludeSubtypes:
+          default: false
           type: boolean
         NodeClassMask:
+          default: 0
           format: int64
           maximum: 4294967295
           minimum: 0
           type: integer
         ResultMask:
+          default: 0
           format: int64
           maximum: 4294967295
           minimum: 0
@@ -2375,26 +2498,27 @@ components:
       type: object
     ReferenceDescription:
       example:
-        NodeClass: 6
+        NodeClass: 0
         BrowseName: BrowseName
         NodeId: NodeId
         DisplayName:
           Locale: Locale
           Text: Text
         ReferenceTypeId: ReferenceTypeId
-        IsForward: true
+        IsForward: false
         TypeDefinition: TypeDefinition
       properties:
         ReferenceTypeId:
-          format: opcuaNodeId
+          format: UaNodeId
           type: string
         IsForward:
+          default: false
           type: boolean
         NodeId:
-          format: opcuaExpandedNodeId
+          format: UaExpandedNodeId
           type: string
         BrowseName:
-          format: opcuaQualifiedName
+          format: UaQualifiedName
           type: string
         DisplayName:
           $ref: '#/components/schemas/LocalizedText'
@@ -2402,7 +2526,7 @@ components:
           format: NodeClass
           type: integer
         TypeDefinition:
-          format: opcuaExpandedNodeId
+          format: UaExpandedNodeId
           type: string
       type: object
     ContinuationPoint:
@@ -2412,31 +2536,30 @@ components:
       example:
         ContinuationPoint: ContinuationPoint
         References:
-        - NodeClass: 6
+        - NodeClass: 0
           BrowseName: BrowseName
           NodeId: NodeId
           DisplayName:
             Locale: Locale
             Text: Text
           ReferenceTypeId: ReferenceTypeId
-          IsForward: true
+          IsForward: false
           TypeDefinition: TypeDefinition
-        - NodeClass: 6
+        - NodeClass: 0
           BrowseName: BrowseName
           NodeId: NodeId
           DisplayName:
             Locale: Locale
             Text: Text
           ReferenceTypeId: ReferenceTypeId
-          IsForward: true
+          IsForward: false
           TypeDefinition: TypeDefinition
-        StatusCode: 343953088
+        StatusCode:
+          Symbol: Symbol
+          Code: 2588772717
       properties:
         StatusCode:
-          format: int64
-          maximum: 4294967295
-          minimum: 0
-          type: integer
+          $ref: '#/components/schemas/StatusCode'
         ContinuationPoint:
           format: byte
           type: string
@@ -2449,13 +2572,13 @@ components:
       example:
         RequestedMaxReferencesPerNode: 2588772717
         NodesToBrowse:
-        - IncludeSubtypes: true
+        - IncludeSubtypes: false
           ResultMask: 2421234836
           BrowseDirection: 1
           NodeId: NodeId
           ReferenceTypeId: ReferenceTypeId
           NodeClassMask: 2560717018
-        - IncludeSubtypes: true
+        - IncludeSubtypes: false
           ResultMask: 2421234836
           BrowseDirection: 1
           NodeId: NodeId
@@ -2468,9 +2591,9 @@ components:
           ReturnDiagnostics: 2588772717
           TimeoutHint: 629561881
           AdditionalHeader:
-            TypeId: TypeId
-            Encoding: 237
-            Body: "{}"
+            UaTypeId: UaTypeId
+            UaEncoding: 180
+            UaBody: UaBody
           Timestamp: 2000-01-23T04:56:07.000+00:00
         View:
           ViewId: ViewId
@@ -2482,6 +2605,7 @@ components:
         View:
           $ref: '#/components/schemas/ViewDescription'
         RequestedMaxReferencesPerNode:
+          default: 0
           format: int64
           maximum: 4294967295
           minimum: 0
@@ -2497,12 +2621,14 @@ components:
           StringTable:
           - StringTable
           - StringTable
-          ServiceResult: 2588772717
+          ServiceResult:
+            Symbol: Symbol
+            Code: 2588772717
           RequestHandle: 343953088
           AdditionalHeader:
-            TypeId: TypeId
-            Encoding: 237
-            Body: "{}"
+            UaTypeId: UaTypeId
+            UaEncoding: 180
+            UaBody: UaBody
           Timestamp: 2000-01-23T04:56:07.000+00:00
           ServiceDiagnostics:
             Locale: 5
@@ -2511,50 +2637,56 @@ components:
             SymbolicId: 1
             InnerDiagnosticInfo: null
             LocalizedText: 2
-            InnerStatusCode: 3032848738
+            InnerStatusCode:
+              Symbol: Symbol
+              Code: 2588772717
         Results:
         - ContinuationPoint: ContinuationPoint
           References:
-          - NodeClass: 6
+          - NodeClass: 0
             BrowseName: BrowseName
             NodeId: NodeId
             DisplayName:
               Locale: Locale
               Text: Text
             ReferenceTypeId: ReferenceTypeId
-            IsForward: true
+            IsForward: false
             TypeDefinition: TypeDefinition
-          - NodeClass: 6
+          - NodeClass: 0
             BrowseName: BrowseName
             NodeId: NodeId
             DisplayName:
               Locale: Locale
               Text: Text
             ReferenceTypeId: ReferenceTypeId
-            IsForward: true
+            IsForward: false
             TypeDefinition: TypeDefinition
-          StatusCode: 343953088
+          StatusCode:
+            Symbol: Symbol
+            Code: 2588772717
         - ContinuationPoint: ContinuationPoint
           References:
-          - NodeClass: 6
+          - NodeClass: 0
             BrowseName: BrowseName
             NodeId: NodeId
             DisplayName:
               Locale: Locale
               Text: Text
             ReferenceTypeId: ReferenceTypeId
-            IsForward: true
+            IsForward: false
             TypeDefinition: TypeDefinition
-          - NodeClass: 6
+          - NodeClass: 0
             BrowseName: BrowseName
             NodeId: NodeId
             DisplayName:
               Locale: Locale
               Text: Text
             ReferenceTypeId: ReferenceTypeId
-            IsForward: true
+            IsForward: false
             TypeDefinition: TypeDefinition
-          StatusCode: 343953088
+          StatusCode:
+            Symbol: Symbol
+            Code: 2588772717
         DiagnosticInfos:
         - Locale: 5
           AdditionalInfo: AdditionalInfo
@@ -2562,14 +2694,18 @@ components:
           SymbolicId: 1
           InnerDiagnosticInfo: null
           LocalizedText: 2
-          InnerStatusCode: 3032848738
+          InnerStatusCode:
+            Symbol: Symbol
+            Code: 2588772717
         - Locale: 5
           AdditionalInfo: AdditionalInfo
           NamespaceUri: 5
           SymbolicId: 1
           InnerDiagnosticInfo: null
           LocalizedText: 2
-          InnerStatusCode: 3032848738
+          InnerStatusCode:
+            Symbol: Symbol
+            Code: 2588772717
       properties:
         ResponseHeader:
           $ref: '#/components/schemas/ResponseHeader'
@@ -2591,11 +2727,11 @@ components:
           ReturnDiagnostics: 2588772717
           TimeoutHint: 629561881
           AdditionalHeader:
-            TypeId: TypeId
-            Encoding: 237
-            Body: "{}"
+            UaTypeId: UaTypeId
+            UaEncoding: 180
+            UaBody: UaBody
           Timestamp: 2000-01-23T04:56:07.000+00:00
-        ReleaseContinuationPoints: true
+        ReleaseContinuationPoints: false
         ContinuationPoints:
         - ContinuationPoints
         - ContinuationPoints
@@ -2603,6 +2739,7 @@ components:
         RequestHeader:
           $ref: '#/components/schemas/RequestHeader'
         ReleaseContinuationPoints:
+          default: false
           type: boolean
         ContinuationPoints:
           items:
@@ -2616,12 +2753,14 @@ components:
           StringTable:
           - StringTable
           - StringTable
-          ServiceResult: 2588772717
+          ServiceResult:
+            Symbol: Symbol
+            Code: 2588772717
           RequestHandle: 343953088
           AdditionalHeader:
-            TypeId: TypeId
-            Encoding: 237
-            Body: "{}"
+            UaTypeId: UaTypeId
+            UaEncoding: 180
+            UaBody: UaBody
           Timestamp: 2000-01-23T04:56:07.000+00:00
           ServiceDiagnostics:
             Locale: 5
@@ -2630,50 +2769,56 @@ components:
             SymbolicId: 1
             InnerDiagnosticInfo: null
             LocalizedText: 2
-            InnerStatusCode: 3032848738
+            InnerStatusCode:
+              Symbol: Symbol
+              Code: 2588772717
         Results:
         - ContinuationPoint: ContinuationPoint
           References:
-          - NodeClass: 6
+          - NodeClass: 0
             BrowseName: BrowseName
             NodeId: NodeId
             DisplayName:
               Locale: Locale
               Text: Text
             ReferenceTypeId: ReferenceTypeId
-            IsForward: true
+            IsForward: false
             TypeDefinition: TypeDefinition
-          - NodeClass: 6
+          - NodeClass: 0
             BrowseName: BrowseName
             NodeId: NodeId
             DisplayName:
               Locale: Locale
               Text: Text
             ReferenceTypeId: ReferenceTypeId
-            IsForward: true
+            IsForward: false
             TypeDefinition: TypeDefinition
-          StatusCode: 343953088
+          StatusCode:
+            Symbol: Symbol
+            Code: 2588772717
         - ContinuationPoint: ContinuationPoint
           References:
-          - NodeClass: 6
+          - NodeClass: 0
             BrowseName: BrowseName
             NodeId: NodeId
             DisplayName:
               Locale: Locale
               Text: Text
             ReferenceTypeId: ReferenceTypeId
-            IsForward: true
+            IsForward: false
             TypeDefinition: TypeDefinition
-          - NodeClass: 6
+          - NodeClass: 0
             BrowseName: BrowseName
             NodeId: NodeId
             DisplayName:
               Locale: Locale
               Text: Text
             ReferenceTypeId: ReferenceTypeId
-            IsForward: true
+            IsForward: false
             TypeDefinition: TypeDefinition
-          StatusCode: 343953088
+          StatusCode:
+            Symbol: Symbol
+            Code: 2588772717
         DiagnosticInfos:
         - Locale: 5
           AdditionalInfo: AdditionalInfo
@@ -2681,14 +2826,18 @@ components:
           SymbolicId: 1
           InnerDiagnosticInfo: null
           LocalizedText: 2
-          InnerStatusCode: 3032848738
+          InnerStatusCode:
+            Symbol: Symbol
+            Code: 2588772717
         - Locale: 5
           AdditionalInfo: AdditionalInfo
           NamespaceUri: 5
           SymbolicId: 1
           InnerDiagnosticInfo: null
           LocalizedText: 2
-          InnerStatusCode: 3032848738
+          InnerStatusCode:
+            Symbol: Symbol
+            Code: 2588772717
       properties:
         ResponseHeader:
           $ref: '#/components/schemas/ResponseHeader'
@@ -2703,31 +2852,33 @@ components:
       type: object
     RelativePathElement:
       example:
-        IncludeSubtypes: true
-        IsInverse: true
+        IncludeSubtypes: false
+        IsInverse: false
         ReferenceTypeId: ReferenceTypeId
         TargetName: TargetName
       properties:
         ReferenceTypeId:
-          format: opcuaNodeId
+          format: UaNodeId
           type: string
         IsInverse:
+          default: false
           type: boolean
         IncludeSubtypes:
+          default: false
           type: boolean
         TargetName:
-          format: opcuaQualifiedName
+          format: UaQualifiedName
           type: string
       type: object
     RelativePath:
       example:
         Elements:
-        - IncludeSubtypes: true
-          IsInverse: true
+        - IncludeSubtypes: false
+          IsInverse: false
           ReferenceTypeId: ReferenceTypeId
           TargetName: TargetName
-        - IncludeSubtypes: true
-          IsInverse: true
+        - IncludeSubtypes: false
+          IsInverse: false
           ReferenceTypeId: ReferenceTypeId
           TargetName: TargetName
       properties:
@@ -2741,17 +2892,17 @@ components:
         StartingNode: StartingNode
         RelativePath:
           Elements:
-          - IncludeSubtypes: true
-            IsInverse: true
+          - IncludeSubtypes: false
+            IsInverse: false
             ReferenceTypeId: ReferenceTypeId
             TargetName: TargetName
-          - IncludeSubtypes: true
-            IsInverse: true
+          - IncludeSubtypes: false
+            IsInverse: false
             ReferenceTypeId: ReferenceTypeId
             TargetName: TargetName
       properties:
         StartingNode:
-          format: opcuaNodeId
+          format: UaNodeId
           type: string
         RelativePath:
           $ref: '#/components/schemas/RelativePath'
@@ -2759,12 +2910,13 @@ components:
     BrowsePathTarget:
       example:
         TargetId: TargetId
-        RemainingPathIndex: 2588772717
+        RemainingPathIndex: 343953088
       properties:
         TargetId:
-          format: opcuaExpandedNodeId
+          format: UaExpandedNodeId
           type: string
         RemainingPathIndex:
+          default: 0
           format: int64
           maximum: 4294967295
           minimum: 0
@@ -2774,16 +2926,15 @@ components:
       example:
         Targets:
         - TargetId: TargetId
-          RemainingPathIndex: 2588772717
+          RemainingPathIndex: 343953088
         - TargetId: TargetId
-          RemainingPathIndex: 2588772717
-        StatusCode: 343953088
+          RemainingPathIndex: 343953088
+        StatusCode:
+          Symbol: Symbol
+          Code: 2588772717
       properties:
         StatusCode:
-          format: int64
-          maximum: 4294967295
-          minimum: 0
-          type: integer
+          $ref: '#/components/schemas/StatusCode'
         Targets:
           items:
             $ref: '#/components/schemas/BrowsePathTarget'
@@ -2798,31 +2949,31 @@ components:
           ReturnDiagnostics: 2588772717
           TimeoutHint: 629561881
           AdditionalHeader:
-            TypeId: TypeId
-            Encoding: 237
-            Body: "{}"
+            UaTypeId: UaTypeId
+            UaEncoding: 180
+            UaBody: UaBody
           Timestamp: 2000-01-23T04:56:07.000+00:00
         BrowsePaths:
         - StartingNode: StartingNode
           RelativePath:
             Elements:
-            - IncludeSubtypes: true
-              IsInverse: true
+            - IncludeSubtypes: false
+              IsInverse: false
               ReferenceTypeId: ReferenceTypeId
               TargetName: TargetName
-            - IncludeSubtypes: true
-              IsInverse: true
+            - IncludeSubtypes: false
+              IsInverse: false
               ReferenceTypeId: ReferenceTypeId
               TargetName: TargetName
         - StartingNode: StartingNode
           RelativePath:
             Elements:
-            - IncludeSubtypes: true
-              IsInverse: true
+            - IncludeSubtypes: false
+              IsInverse: false
               ReferenceTypeId: ReferenceTypeId
               TargetName: TargetName
-            - IncludeSubtypes: true
-              IsInverse: true
+            - IncludeSubtypes: false
+              IsInverse: false
               ReferenceTypeId: ReferenceTypeId
               TargetName: TargetName
       properties:
@@ -2839,12 +2990,14 @@ components:
           StringTable:
           - StringTable
           - StringTable
-          ServiceResult: 2588772717
+          ServiceResult:
+            Symbol: Symbol
+            Code: 2588772717
           RequestHandle: 343953088
           AdditionalHeader:
-            TypeId: TypeId
-            Encoding: 237
-            Body: "{}"
+            UaTypeId: UaTypeId
+            UaEncoding: 180
+            UaBody: UaBody
           Timestamp: 2000-01-23T04:56:07.000+00:00
           ServiceDiagnostics:
             Locale: 5
@@ -2853,20 +3006,26 @@ components:
             SymbolicId: 1
             InnerDiagnosticInfo: null
             LocalizedText: 2
-            InnerStatusCode: 3032848738
+            InnerStatusCode:
+              Symbol: Symbol
+              Code: 2588772717
         Results:
         - Targets:
           - TargetId: TargetId
-            RemainingPathIndex: 2588772717
+            RemainingPathIndex: 343953088
           - TargetId: TargetId
-            RemainingPathIndex: 2588772717
-          StatusCode: 343953088
+            RemainingPathIndex: 343953088
+          StatusCode:
+            Symbol: Symbol
+            Code: 2588772717
         - Targets:
           - TargetId: TargetId
-            RemainingPathIndex: 2588772717
+            RemainingPathIndex: 343953088
           - TargetId: TargetId
-            RemainingPathIndex: 2588772717
-          StatusCode: 343953088
+            RemainingPathIndex: 343953088
+          StatusCode:
+            Symbol: Symbol
+            Code: 2588772717
         DiagnosticInfos:
         - Locale: 5
           AdditionalInfo: AdditionalInfo
@@ -2874,14 +3033,18 @@ components:
           SymbolicId: 1
           InnerDiagnosticInfo: null
           LocalizedText: 2
-          InnerStatusCode: 3032848738
+          InnerStatusCode:
+            Symbol: Symbol
+            Code: 2588772717
         - Locale: 5
           AdditionalInfo: AdditionalInfo
           NamespaceUri: 5
           SymbolicId: 1
           InnerDiagnosticInfo: null
           LocalizedText: 2
-          InnerStatusCode: 3032848738
+          InnerStatusCode:
+            Symbol: Symbol
+            Code: 2588772717
       properties:
         ResponseHeader:
           $ref: '#/components/schemas/ResponseHeader'
@@ -2903,9 +3066,9 @@ components:
           ReturnDiagnostics: 2588772717
           TimeoutHint: 629561881
           AdditionalHeader:
-            TypeId: TypeId
-            Encoding: 237
-            Body: "{}"
+            UaTypeId: UaTypeId
+            UaEncoding: 180
+            UaBody: UaBody
           Timestamp: 2000-01-23T04:56:07.000+00:00
         NodesToRegister:
         - NodesToRegister
@@ -2915,7 +3078,7 @@ components:
           $ref: '#/components/schemas/RequestHeader'
         NodesToRegister:
           items:
-            format: opcuaNodeId
+            format: UaNodeId
             type: string
           type: array
       type: object
@@ -2928,12 +3091,14 @@ components:
           StringTable:
           - StringTable
           - StringTable
-          ServiceResult: 2588772717
+          ServiceResult:
+            Symbol: Symbol
+            Code: 2588772717
           RequestHandle: 343953088
           AdditionalHeader:
-            TypeId: TypeId
-            Encoding: 237
-            Body: "{}"
+            UaTypeId: UaTypeId
+            UaEncoding: 180
+            UaBody: UaBody
           Timestamp: 2000-01-23T04:56:07.000+00:00
           ServiceDiagnostics:
             Locale: 5
@@ -2942,13 +3107,15 @@ components:
             SymbolicId: 1
             InnerDiagnosticInfo: null
             LocalizedText: 2
-            InnerStatusCode: 3032848738
+            InnerStatusCode:
+              Symbol: Symbol
+              Code: 2588772717
       properties:
         ResponseHeader:
           $ref: '#/components/schemas/ResponseHeader'
         RegisteredNodeIds:
           items:
-            format: opcuaNodeId
+            format: UaNodeId
             type: string
           type: array
       type: object
@@ -2964,16 +3131,16 @@ components:
           ReturnDiagnostics: 2588772717
           TimeoutHint: 629561881
           AdditionalHeader:
-            TypeId: TypeId
-            Encoding: 237
-            Body: "{}"
+            UaTypeId: UaTypeId
+            UaEncoding: 180
+            UaBody: UaBody
           Timestamp: 2000-01-23T04:56:07.000+00:00
       properties:
         RequestHeader:
           $ref: '#/components/schemas/RequestHeader'
         NodesToUnregister:
           items:
-            format: opcuaNodeId
+            format: UaNodeId
             type: string
           type: array
       type: object
@@ -2983,12 +3150,14 @@ components:
           StringTable:
           - StringTable
           - StringTable
-          ServiceResult: 2588772717
+          ServiceResult:
+            Symbol: Symbol
+            Code: 2588772717
           RequestHandle: 343953088
           AdditionalHeader:
-            TypeId: TypeId
-            Encoding: 237
-            Body: "{}"
+            UaTypeId: UaTypeId
+            UaEncoding: 180
+            UaBody: UaBody
           Timestamp: 2000-01-23T04:56:07.000+00:00
           ServiceDiagnostics:
             Locale: 5
@@ -2997,12 +3166,15 @@ components:
             SymbolicId: 1
             InnerDiagnosticInfo: null
             LocalizedText: 2
-            InnerStatusCode: 3032848738
+            InnerStatusCode:
+              Symbol: Symbol
+              Code: 2588772717
       properties:
         ResponseHeader:
           $ref: '#/components/schemas/ResponseHeader'
       type: object
     Counter:
+      default: 0
       format: int64
       maximum: 4294967295
       minimum: 0
@@ -3074,6 +3246,7 @@ components:
       - $ref: '#/components/schemas/FilterOperand'
       properties:
         Index:
+          default: 0
           format: int64
           maximum: 4294967295
           minimum: 0
@@ -3091,13 +3264,14 @@ components:
       - $ref: '#/components/schemas/FilterOperand'
       properties:
         NodeId:
-          format: opcuaNodeId
+          format: UaNodeId
           type: string
         Alias:
           type: string
         BrowsePath:
           $ref: '#/components/schemas/RelativePath'
         AttributeId:
+          default: 0
           format: int64
           maximum: 4294967295
           minimum: 0
@@ -3110,14 +3284,15 @@ components:
       - $ref: '#/components/schemas/FilterOperand'
       properties:
         TypeDefinitionId:
-          format: opcuaNodeId
+          format: UaNodeId
           type: string
         BrowsePath:
           items:
-            format: opcuaQualifiedName
+            format: UaQualifiedName
             type: string
           type: array
         AttributeId:
+          default: 0
           format: int64
           maximum: 4294967295
           minimum: 0
@@ -3128,16 +3303,10 @@ components:
     ContentFilterElementResult:
       properties:
         StatusCode:
-          format: int64
-          maximum: 4294967295
-          minimum: 0
-          type: integer
+          $ref: '#/components/schemas/StatusCode'
         OperandStatusCodes:
           items:
-            format: int64
-            maximum: 4294967295
-            minimum: 0
-            type: integer
+            $ref: '#/components/schemas/StatusCode'
           type: array
         OperandDiagnosticInfos:
           items:
@@ -3178,9 +3347,10 @@ components:
         DataEncoding: DataEncoding
       properties:
         NodeId:
-          format: opcuaNodeId
+          format: UaNodeId
           type: string
         AttributeId:
+          default: 0
           format: int64
           maximum: 4294967295
           minimum: 0
@@ -3188,7 +3358,7 @@ components:
         IndexRange:
           type: string
         DataEncoding:
-          format: opcuaQualifiedName
+          format: UaQualifiedName
           type: string
       type: object
     ReadRequest:
@@ -3202,9 +3372,9 @@ components:
           ReturnDiagnostics: 2588772717
           TimeoutHint: 629561881
           AdditionalHeader:
-            TypeId: TypeId
-            Encoding: 237
-            Body: "{}"
+            UaTypeId: UaTypeId
+            UaEncoding: 180
+            UaBody: UaBody
           Timestamp: 2000-01-23T04:56:07.000+00:00
         NodesToRead:
         - IndexRange: IndexRange
@@ -3219,6 +3389,7 @@ components:
         RequestHeader:
           $ref: '#/components/schemas/RequestHeader'
         MaxAge:
+          default: 0
           format: double
           type: number
         TimestampsToReturn:
@@ -3235,12 +3406,14 @@ components:
           StringTable:
           - StringTable
           - StringTable
-          ServiceResult: 2588772717
+          ServiceResult:
+            Symbol: Symbol
+            Code: 2588772717
           RequestHandle: 343953088
           AdditionalHeader:
-            TypeId: TypeId
-            Encoding: 237
-            Body: "{}"
+            UaTypeId: UaTypeId
+            UaEncoding: 180
+            UaBody: UaBody
           Timestamp: 2000-01-23T04:56:07.000+00:00
           ServiceDiagnostics:
             Locale: 5
@@ -3249,30 +3422,34 @@ components:
             SymbolicId: 1
             InnerDiagnosticInfo: null
             LocalizedText: 2
-            InnerStatusCode: 3032848738
+            InnerStatusCode:
+              Symbol: Symbol
+              Code: 2588772717
         Results:
-        - ServerPicoSeconds: 8070
-          Value:
-            Type: 92
-            Dimensions:
-            - 0
-            - 0
-            Body: ""
+        - SourcePicoseconds: 13284
+          Value: ""
+          Dimensions:
+          - 0
+          - 0
           SourceTimestamp: 2000-01-23T04:56:07.000+00:00
-          SourcePicoSeconds: 48405
           ServerTimestamp: 2000-01-23T04:56:07.000+00:00
-          StatusCode: 1780525090
-        - ServerPicoSeconds: 8070
-          Value:
-            Type: 92
-            Dimensions:
-            - 0
-            - 0
-            Body: ""
+          UaType: 237
+          StatusCode:
+            Symbol: Symbol
+            Code: 2588772717
+          ServerPicoseconds: 27168
+        - SourcePicoseconds: 13284
+          Value: ""
+          Dimensions:
+          - 0
+          - 0
           SourceTimestamp: 2000-01-23T04:56:07.000+00:00
-          SourcePicoSeconds: 48405
           ServerTimestamp: 2000-01-23T04:56:07.000+00:00
-          StatusCode: 1780525090
+          UaType: 237
+          StatusCode:
+            Symbol: Symbol
+            Code: 2588772717
+          ServerPicoseconds: 27168
         DiagnosticInfos:
         - Locale: 5
           AdditionalInfo: AdditionalInfo
@@ -3280,14 +3457,18 @@ components:
           SymbolicId: 1
           InnerDiagnosticInfo: null
           LocalizedText: 2
-          InnerStatusCode: 3032848738
+          InnerStatusCode:
+            Symbol: Symbol
+            Code: 2588772717
         - Locale: 5
           AdditionalInfo: AdditionalInfo
           NamespaceUri: 5
           SymbolicId: 1
           InnerDiagnosticInfo: null
           LocalizedText: 2
-          InnerStatusCode: 3032848738
+          InnerStatusCode:
+            Symbol: Symbol
+            Code: 2588772717
       properties:
         ResponseHeader:
           $ref: '#/components/schemas/ResponseHeader'
@@ -3308,12 +3489,12 @@ components:
         DataEncoding: DataEncoding
       properties:
         NodeId:
-          format: opcuaNodeId
+          format: UaNodeId
           type: string
         IndexRange:
           type: string
         DataEncoding:
-          format: opcuaQualifiedName
+          format: UaQualifiedName
           type: string
         ContinuationPoint:
           format: byte
@@ -3323,16 +3504,15 @@ components:
       example:
         ContinuationPoint: ContinuationPoint
         HistoryData:
-          TypeId: TypeId
-          Encoding: 237
-          Body: "{}"
-        StatusCode: 343953088
+          UaTypeId: UaTypeId
+          UaEncoding: 180
+          UaBody: UaBody
+        StatusCode:
+          Symbol: Symbol
+          Code: 2588772717
       properties:
         StatusCode:
-          format: int64
-          maximum: 4294967295
-          minimum: 0
-          type: integer
+          $ref: '#/components/schemas/StatusCode'
         ContinuationPoint:
           format: byte
           type: string
@@ -3346,14 +3526,17 @@ components:
       - $ref: '#/components/schemas/HistoryReadDetails'
       properties:
         NumValuesPerNode:
+          default: 0
           format: int64
           maximum: 4294967295
           minimum: 0
           type: integer
         StartTime:
+          default: 0001-01-01T00:00:00Z
           format: date-time
           type: string
         EndTime:
+          default: 0001-01-01T00:00:00Z
           format: date-time
           type: string
         Filter:
@@ -3364,6 +3547,7 @@ components:
       - $ref: '#/components/schemas/ReadEventDetails'
       properties:
         ReadModified:
+          default: false
           type: boolean
       type: object
     ReadRawModifiedDetails:
@@ -3371,19 +3555,24 @@ components:
       - $ref: '#/components/schemas/HistoryReadDetails'
       properties:
         IsReadModified:
+          default: false
           type: boolean
         StartTime:
+          default: 0001-01-01T00:00:00Z
           format: date-time
           type: string
         EndTime:
+          default: 0001-01-01T00:00:00Z
           format: date-time
           type: string
         NumValuesPerNode:
+          default: 0
           format: int64
           maximum: 4294967295
           minimum: 0
           type: integer
         ReturnBounds:
+          default: false
           type: boolean
       type: object
     ReadProcessedDetails:
@@ -3391,17 +3580,20 @@ components:
       - $ref: '#/components/schemas/HistoryReadDetails'
       properties:
         StartTime:
+          default: 0001-01-01T00:00:00Z
           format: date-time
           type: string
         EndTime:
+          default: 0001-01-01T00:00:00Z
           format: date-time
           type: string
         ProcessingInterval:
+          default: 0
           format: double
           type: number
         AggregateType:
           items:
-            format: opcuaNodeId
+            format: UaNodeId
             type: string
           type: array
         AggregateConfiguration:
@@ -3413,10 +3605,12 @@ components:
       properties:
         ReqTimes:
           items:
+            default: 0001-01-01T00:00:00Z
             format: date-time
             type: string
           type: array
         UseSimpleBounds:
+          default: false
           type: boolean
       type: object
     ReadAnnotationDataDetails:
@@ -3425,6 +3619,7 @@ components:
       properties:
         ReqTimes:
           items:
+            default: 0001-01-01T00:00:00Z
             format: date-time
             type: string
           type: array
@@ -3439,6 +3634,7 @@ components:
     ModificationInfo:
       properties:
         ModificationTime:
+          default: 0001-01-01T00:00:00Z
           format: date-time
           type: string
         UpdateType:
@@ -3467,9 +3663,9 @@ components:
       example:
         TimestampsToReturn: 0
         HistoryReadDetails:
-          TypeId: TypeId
-          Encoding: 237
-          Body: "{}"
+          UaTypeId: UaTypeId
+          UaEncoding: 180
+          UaBody: UaBody
         RequestHeader:
           AuthenticationToken: AuthenticationToken
           RequestHandle: 343953088
@@ -3477,11 +3673,11 @@ components:
           ReturnDiagnostics: 2588772717
           TimeoutHint: 629561881
           AdditionalHeader:
-            TypeId: TypeId
-            Encoding: 237
-            Body: "{}"
+            UaTypeId: UaTypeId
+            UaEncoding: 180
+            UaBody: UaBody
           Timestamp: 2000-01-23T04:56:07.000+00:00
-        ReleaseContinuationPoints: true
+        ReleaseContinuationPoints: false
         NodesToRead:
         - ContinuationPoint: ContinuationPoint
           IndexRange: IndexRange
@@ -3500,6 +3696,7 @@ components:
           format: TimestampsToReturn
           type: integer
         ReleaseContinuationPoints:
+          default: false
           type: boolean
         NodesToRead:
           items:
@@ -3512,12 +3709,14 @@ components:
           StringTable:
           - StringTable
           - StringTable
-          ServiceResult: 2588772717
+          ServiceResult:
+            Symbol: Symbol
+            Code: 2588772717
           RequestHandle: 343953088
           AdditionalHeader:
-            TypeId: TypeId
-            Encoding: 237
-            Body: "{}"
+            UaTypeId: UaTypeId
+            UaEncoding: 180
+            UaBody: UaBody
           Timestamp: 2000-01-23T04:56:07.000+00:00
           ServiceDiagnostics:
             Locale: 5
@@ -3526,20 +3725,26 @@ components:
             SymbolicId: 1
             InnerDiagnosticInfo: null
             LocalizedText: 2
-            InnerStatusCode: 3032848738
+            InnerStatusCode:
+              Symbol: Symbol
+              Code: 2588772717
         Results:
         - ContinuationPoint: ContinuationPoint
           HistoryData:
-            TypeId: TypeId
-            Encoding: 237
-            Body: "{}"
-          StatusCode: 343953088
+            UaTypeId: UaTypeId
+            UaEncoding: 180
+            UaBody: UaBody
+          StatusCode:
+            Symbol: Symbol
+            Code: 2588772717
         - ContinuationPoint: ContinuationPoint
           HistoryData:
-            TypeId: TypeId
-            Encoding: 237
-            Body: "{}"
-          StatusCode: 343953088
+            UaTypeId: UaTypeId
+            UaEncoding: 180
+            UaBody: UaBody
+          StatusCode:
+            Symbol: Symbol
+            Code: 2588772717
         DiagnosticInfos:
         - Locale: 5
           AdditionalInfo: AdditionalInfo
@@ -3547,14 +3752,18 @@ components:
           SymbolicId: 1
           InnerDiagnosticInfo: null
           LocalizedText: 2
-          InnerStatusCode: 3032848738
+          InnerStatusCode:
+            Symbol: Symbol
+            Code: 2588772717
         - Locale: 5
           AdditionalInfo: AdditionalInfo
           NamespaceUri: 5
           SymbolicId: 1
           InnerDiagnosticInfo: null
           LocalizedText: 2
-          InnerStatusCode: 3032848738
+          InnerStatusCode:
+            Symbol: Symbol
+            Code: 2588772717
       properties:
         ResponseHeader:
           $ref: '#/components/schemas/ResponseHeader'
@@ -3573,22 +3782,24 @@ components:
         AttributeId: 343953088
         NodeId: NodeId
         Value:
-          ServerPicoSeconds: 8070
-          Value:
-            Type: 92
-            Dimensions:
-            - 0
-            - 0
-            Body: ""
+          SourcePicoseconds: 13284
+          Value: ""
+          Dimensions:
+          - 0
+          - 0
           SourceTimestamp: 2000-01-23T04:56:07.000+00:00
-          SourcePicoSeconds: 48405
           ServerTimestamp: 2000-01-23T04:56:07.000+00:00
-          StatusCode: 1780525090
+          UaType: 237
+          StatusCode:
+            Symbol: Symbol
+            Code: 2588772717
+          ServerPicoseconds: 27168
       properties:
         NodeId:
-          format: opcuaNodeId
+          format: UaNodeId
           type: string
         AttributeId:
+          default: 0
           format: int64
           maximum: 4294967295
           minimum: 0
@@ -3605,32 +3816,34 @@ components:
           AttributeId: 343953088
           NodeId: NodeId
           Value:
-            ServerPicoSeconds: 8070
-            Value:
-              Type: 92
-              Dimensions:
-              - 0
-              - 0
-              Body: ""
+            SourcePicoseconds: 13284
+            Value: ""
+            Dimensions:
+            - 0
+            - 0
             SourceTimestamp: 2000-01-23T04:56:07.000+00:00
-            SourcePicoSeconds: 48405
             ServerTimestamp: 2000-01-23T04:56:07.000+00:00
-            StatusCode: 1780525090
+            UaType: 237
+            StatusCode:
+              Symbol: Symbol
+              Code: 2588772717
+            ServerPicoseconds: 27168
         - IndexRange: IndexRange
           AttributeId: 343953088
           NodeId: NodeId
           Value:
-            ServerPicoSeconds: 8070
-            Value:
-              Type: 92
-              Dimensions:
-              - 0
-              - 0
-              Body: ""
+            SourcePicoseconds: 13284
+            Value: ""
+            Dimensions:
+            - 0
+            - 0
             SourceTimestamp: 2000-01-23T04:56:07.000+00:00
-            SourcePicoSeconds: 48405
             ServerTimestamp: 2000-01-23T04:56:07.000+00:00
-            StatusCode: 1780525090
+            UaType: 237
+            StatusCode:
+              Symbol: Symbol
+              Code: 2588772717
+            ServerPicoseconds: 27168
         RequestHeader:
           AuthenticationToken: AuthenticationToken
           RequestHandle: 343953088
@@ -3638,9 +3851,9 @@ components:
           ReturnDiagnostics: 2588772717
           TimeoutHint: 629561881
           AdditionalHeader:
-            TypeId: TypeId
-            Encoding: 237
-            Body: "{}"
+            UaTypeId: UaTypeId
+            UaEncoding: 180
+            UaBody: UaBody
           Timestamp: 2000-01-23T04:56:07.000+00:00
       properties:
         RequestHeader:
@@ -3656,12 +3869,14 @@ components:
           StringTable:
           - StringTable
           - StringTable
-          ServiceResult: 2588772717
+          ServiceResult:
+            Symbol: Symbol
+            Code: 2588772717
           RequestHandle: 343953088
           AdditionalHeader:
-            TypeId: TypeId
-            Encoding: 237
-            Body: "{}"
+            UaTypeId: UaTypeId
+            UaEncoding: 180
+            UaBody: UaBody
           Timestamp: 2000-01-23T04:56:07.000+00:00
           ServiceDiagnostics:
             Locale: 5
@@ -3670,10 +3885,14 @@ components:
             SymbolicId: 1
             InnerDiagnosticInfo: null
             LocalizedText: 2
-            InnerStatusCode: 3032848738
+            InnerStatusCode:
+              Symbol: Symbol
+              Code: 2588772717
         Results:
-        - 343953088
-        - 343953088
+        - Symbol: Symbol
+          Code: 2588772717
+        - Symbol: Symbol
+          Code: 2588772717
         DiagnosticInfos:
         - Locale: 5
           AdditionalInfo: AdditionalInfo
@@ -3681,23 +3900,24 @@ components:
           SymbolicId: 1
           InnerDiagnosticInfo: null
           LocalizedText: 2
-          InnerStatusCode: 3032848738
+          InnerStatusCode:
+            Symbol: Symbol
+            Code: 2588772717
         - Locale: 5
           AdditionalInfo: AdditionalInfo
           NamespaceUri: 5
           SymbolicId: 1
           InnerDiagnosticInfo: null
           LocalizedText: 2
-          InnerStatusCode: 3032848738
+          InnerStatusCode:
+            Symbol: Symbol
+            Code: 2588772717
       properties:
         ResponseHeader:
           $ref: '#/components/schemas/ResponseHeader'
         Results:
           items:
-            format: int64
-            maximum: 4294967295
-            minimum: 0
-            type: integer
+            $ref: '#/components/schemas/StatusCode'
           type: array
         DiagnosticInfos:
           items:
@@ -3737,7 +3957,7 @@ components:
       - $ref: '#/components/schemas/HistoryUpdateDetails'
       properties:
         NodeId:
-          format: opcuaNodeId
+          format: UaNodeId
           type: string
         PerformInsertReplace:
           format: PerformUpdateType
@@ -3752,7 +3972,7 @@ components:
       - $ref: '#/components/schemas/HistoryUpdateDetails'
       properties:
         NodeId:
-          format: opcuaNodeId
+          format: UaNodeId
           type: string
         PerformInsertReplace:
           format: PerformUpdateType
@@ -3767,7 +3987,7 @@ components:
       - $ref: '#/components/schemas/HistoryUpdateDetails'
       properties:
         NodeId:
-          format: opcuaNodeId
+          format: UaNodeId
           type: string
         PerformInsertReplace:
           format: PerformUpdateType
@@ -3782,8 +4002,10 @@ components:
     HistoryUpdateResult:
       example:
         OperationResults:
-        - 2588772717
-        - 2588772717
+        - Symbol: Symbol
+          Code: 2588772717
+        - Symbol: Symbol
+          Code: 2588772717
         DiagnosticInfos:
         - Locale: 5
           AdditionalInfo: AdditionalInfo
@@ -3791,27 +4013,27 @@ components:
           SymbolicId: 1
           InnerDiagnosticInfo: null
           LocalizedText: 2
-          InnerStatusCode: 3032848738
+          InnerStatusCode:
+            Symbol: Symbol
+            Code: 2588772717
         - Locale: 5
           AdditionalInfo: AdditionalInfo
           NamespaceUri: 5
           SymbolicId: 1
           InnerDiagnosticInfo: null
           LocalizedText: 2
-          InnerStatusCode: 3032848738
-        StatusCode: 343953088
+          InnerStatusCode:
+            Symbol: Symbol
+            Code: 2588772717
+        StatusCode:
+          Symbol: Symbol
+          Code: 2588772717
       properties:
         StatusCode:
-          format: int64
-          maximum: 4294967295
-          minimum: 0
-          type: integer
+          $ref: '#/components/schemas/StatusCode'
         OperationResults:
           items:
-            format: int64
-            maximum: 4294967295
-            minimum: 0
-            type: integer
+            $ref: '#/components/schemas/StatusCode'
           type: array
         DiagnosticInfos:
           items:
@@ -3827,17 +4049,17 @@ components:
           ReturnDiagnostics: 2588772717
           TimeoutHint: 629561881
           AdditionalHeader:
-            TypeId: TypeId
-            Encoding: 237
-            Body: "{}"
+            UaTypeId: UaTypeId
+            UaEncoding: 180
+            UaBody: UaBody
           Timestamp: 2000-01-23T04:56:07.000+00:00
         HistoryUpdateDetails:
-        - TypeId: TypeId
-          Encoding: 237
-          Body: "{}"
-        - TypeId: TypeId
-          Encoding: 237
-          Body: "{}"
+        - UaTypeId: UaTypeId
+          UaEncoding: 180
+          UaBody: UaBody
+        - UaTypeId: UaTypeId
+          UaEncoding: 180
+          UaBody: UaBody
       properties:
         RequestHeader:
           $ref: '#/components/schemas/RequestHeader'
@@ -3852,12 +4074,14 @@ components:
           StringTable:
           - StringTable
           - StringTable
-          ServiceResult: 2588772717
+          ServiceResult:
+            Symbol: Symbol
+            Code: 2588772717
           RequestHandle: 343953088
           AdditionalHeader:
-            TypeId: TypeId
-            Encoding: 237
-            Body: "{}"
+            UaTypeId: UaTypeId
+            UaEncoding: 180
+            UaBody: UaBody
           Timestamp: 2000-01-23T04:56:07.000+00:00
           ServiceDiagnostics:
             Locale: 5
@@ -3866,11 +4090,15 @@ components:
             SymbolicId: 1
             InnerDiagnosticInfo: null
             LocalizedText: 2
-            InnerStatusCode: 3032848738
+            InnerStatusCode:
+              Symbol: Symbol
+              Code: 2588772717
         Results:
         - OperationResults:
-          - 2588772717
-          - 2588772717
+          - Symbol: Symbol
+            Code: 2588772717
+          - Symbol: Symbol
+            Code: 2588772717
           DiagnosticInfos:
           - Locale: 5
             AdditionalInfo: AdditionalInfo
@@ -3878,18 +4106,26 @@ components:
             SymbolicId: 1
             InnerDiagnosticInfo: null
             LocalizedText: 2
-            InnerStatusCode: 3032848738
+            InnerStatusCode:
+              Symbol: Symbol
+              Code: 2588772717
           - Locale: 5
             AdditionalInfo: AdditionalInfo
             NamespaceUri: 5
             SymbolicId: 1
             InnerDiagnosticInfo: null
             LocalizedText: 2
-            InnerStatusCode: 3032848738
-          StatusCode: 343953088
+            InnerStatusCode:
+              Symbol: Symbol
+              Code: 2588772717
+          StatusCode:
+            Symbol: Symbol
+            Code: 2588772717
         - OperationResults:
-          - 2588772717
-          - 2588772717
+          - Symbol: Symbol
+            Code: 2588772717
+          - Symbol: Symbol
+            Code: 2588772717
           DiagnosticInfos:
           - Locale: 5
             AdditionalInfo: AdditionalInfo
@@ -3897,15 +4133,21 @@ components:
             SymbolicId: 1
             InnerDiagnosticInfo: null
             LocalizedText: 2
-            InnerStatusCode: 3032848738
+            InnerStatusCode:
+              Symbol: Symbol
+              Code: 2588772717
           - Locale: 5
             AdditionalInfo: AdditionalInfo
             NamespaceUri: 5
             SymbolicId: 1
             InnerDiagnosticInfo: null
             LocalizedText: 2
-            InnerStatusCode: 3032848738
-          StatusCode: 343953088
+            InnerStatusCode:
+              Symbol: Symbol
+              Code: 2588772717
+          StatusCode:
+            Symbol: Symbol
+            Code: 2588772717
         DiagnosticInfos:
         - Locale: 5
           AdditionalInfo: AdditionalInfo
@@ -3913,14 +4155,18 @@ components:
           SymbolicId: 1
           InnerDiagnosticInfo: null
           LocalizedText: 2
-          InnerStatusCode: 3032848738
+          InnerStatusCode:
+            Symbol: Symbol
+            Code: 2588772717
         - Locale: 5
           AdditionalInfo: AdditionalInfo
           NamespaceUri: 5
           SymbolicId: 1
           InnerDiagnosticInfo: null
           LocalizedText: 2
-          InnerStatusCode: 3032848738
+          InnerStatusCode:
+            Symbol: Symbol
+            Code: 2588772717
       properties:
         ResponseHeader:
           $ref: '#/components/schemas/ResponseHeader'
@@ -3937,23 +4183,23 @@ components:
       example:
         MethodId: MethodId
         InputArguments:
-        - Type: 92
-          Dimensions:
+        - Dimensions:
           - 0
           - 0
+          UaType: 20
           Body: ""
-        - Type: 92
-          Dimensions:
+        - Dimensions:
           - 0
           - 0
+          UaType: 20
           Body: ""
         ObjectId: ObjectId
       properties:
         ObjectId:
-          format: opcuaNodeId
+          format: UaNodeId
           type: string
         MethodId:
-          format: opcuaNodeId
+          format: UaNodeId
           type: string
         InputArguments:
           items:
@@ -3963,19 +4209,21 @@ components:
     CallMethodResult:
       example:
         OutputArguments:
-        - Type: 92
-          Dimensions:
+        - Dimensions:
           - 0
           - 0
+          UaType: 20
           Body: ""
-        - Type: 92
-          Dimensions:
+        - Dimensions:
           - 0
           - 0
+          UaType: 20
           Body: ""
         InputArgumentResults:
-        - 2588772717
-        - 2588772717
+        - Symbol: Symbol
+          Code: 2588772717
+        - Symbol: Symbol
+          Code: 2588772717
         InputArgumentDiagnosticInfos:
         - Locale: 5
           AdditionalInfo: AdditionalInfo
@@ -3983,27 +4231,27 @@ components:
           SymbolicId: 1
           InnerDiagnosticInfo: null
           LocalizedText: 2
-          InnerStatusCode: 3032848738
+          InnerStatusCode:
+            Symbol: Symbol
+            Code: 2588772717
         - Locale: 5
           AdditionalInfo: AdditionalInfo
           NamespaceUri: 5
           SymbolicId: 1
           InnerDiagnosticInfo: null
           LocalizedText: 2
-          InnerStatusCode: 3032848738
-        StatusCode: 343953088
+          InnerStatusCode:
+            Symbol: Symbol
+            Code: 2588772717
+        StatusCode:
+          Symbol: Symbol
+          Code: 2588772717
       properties:
         StatusCode:
-          format: int64
-          maximum: 4294967295
-          minimum: 0
-          type: integer
+          $ref: '#/components/schemas/StatusCode'
         InputArgumentResults:
           items:
-            format: int64
-            maximum: 4294967295
-            minimum: 0
-            type: integer
+            $ref: '#/components/schemas/StatusCode'
           type: array
         InputArgumentDiagnosticInfos:
           items:
@@ -4023,35 +4271,35 @@ components:
           ReturnDiagnostics: 2588772717
           TimeoutHint: 629561881
           AdditionalHeader:
-            TypeId: TypeId
-            Encoding: 237
-            Body: "{}"
+            UaTypeId: UaTypeId
+            UaEncoding: 180
+            UaBody: UaBody
           Timestamp: 2000-01-23T04:56:07.000+00:00
         MethodsToCall:
         - MethodId: MethodId
           InputArguments:
-          - Type: 92
-            Dimensions:
+          - Dimensions:
             - 0
             - 0
+            UaType: 20
             Body: ""
-          - Type: 92
-            Dimensions:
+          - Dimensions:
             - 0
             - 0
+            UaType: 20
             Body: ""
           ObjectId: ObjectId
         - MethodId: MethodId
           InputArguments:
-          - Type: 92
-            Dimensions:
+          - Dimensions:
             - 0
             - 0
+            UaType: 20
             Body: ""
-          - Type: 92
-            Dimensions:
+          - Dimensions:
             - 0
             - 0
+            UaType: 20
             Body: ""
           ObjectId: ObjectId
       properties:
@@ -4068,12 +4316,14 @@ components:
           StringTable:
           - StringTable
           - StringTable
-          ServiceResult: 2588772717
+          ServiceResult:
+            Symbol: Symbol
+            Code: 2588772717
           RequestHandle: 343953088
           AdditionalHeader:
-            TypeId: TypeId
-            Encoding: 237
-            Body: "{}"
+            UaTypeId: UaTypeId
+            UaEncoding: 180
+            UaBody: UaBody
           Timestamp: 2000-01-23T04:56:07.000+00:00
           ServiceDiagnostics:
             Locale: 5
@@ -4082,22 +4332,26 @@ components:
             SymbolicId: 1
             InnerDiagnosticInfo: null
             LocalizedText: 2
-            InnerStatusCode: 3032848738
+            InnerStatusCode:
+              Symbol: Symbol
+              Code: 2588772717
         Results:
         - OutputArguments:
-          - Type: 92
-            Dimensions:
+          - Dimensions:
             - 0
             - 0
+            UaType: 20
             Body: ""
-          - Type: 92
-            Dimensions:
+          - Dimensions:
             - 0
             - 0
+            UaType: 20
             Body: ""
           InputArgumentResults:
-          - 2588772717
-          - 2588772717
+          - Symbol: Symbol
+            Code: 2588772717
+          - Symbol: Symbol
+            Code: 2588772717
           InputArgumentDiagnosticInfos:
           - Locale: 5
             AdditionalInfo: AdditionalInfo
@@ -4105,29 +4359,37 @@ components:
             SymbolicId: 1
             InnerDiagnosticInfo: null
             LocalizedText: 2
-            InnerStatusCode: 3032848738
+            InnerStatusCode:
+              Symbol: Symbol
+              Code: 2588772717
           - Locale: 5
             AdditionalInfo: AdditionalInfo
             NamespaceUri: 5
             SymbolicId: 1
             InnerDiagnosticInfo: null
             LocalizedText: 2
-            InnerStatusCode: 3032848738
-          StatusCode: 343953088
+            InnerStatusCode:
+              Symbol: Symbol
+              Code: 2588772717
+          StatusCode:
+            Symbol: Symbol
+            Code: 2588772717
         - OutputArguments:
-          - Type: 92
-            Dimensions:
+          - Dimensions:
             - 0
             - 0
+            UaType: 20
             Body: ""
-          - Type: 92
-            Dimensions:
+          - Dimensions:
             - 0
             - 0
+            UaType: 20
             Body: ""
           InputArgumentResults:
-          - 2588772717
-          - 2588772717
+          - Symbol: Symbol
+            Code: 2588772717
+          - Symbol: Symbol
+            Code: 2588772717
           InputArgumentDiagnosticInfos:
           - Locale: 5
             AdditionalInfo: AdditionalInfo
@@ -4135,15 +4397,21 @@ components:
             SymbolicId: 1
             InnerDiagnosticInfo: null
             LocalizedText: 2
-            InnerStatusCode: 3032848738
+            InnerStatusCode:
+              Symbol: Symbol
+              Code: 2588772717
           - Locale: 5
             AdditionalInfo: AdditionalInfo
             NamespaceUri: 5
             SymbolicId: 1
             InnerDiagnosticInfo: null
             LocalizedText: 2
-            InnerStatusCode: 3032848738
-          StatusCode: 343953088
+            InnerStatusCode:
+              Symbol: Symbol
+              Code: 2588772717
+          StatusCode:
+            Symbol: Symbol
+            Code: 2588772717
         DiagnosticInfos:
         - Locale: 5
           AdditionalInfo: AdditionalInfo
@@ -4151,14 +4419,18 @@ components:
           SymbolicId: 1
           InnerDiagnosticInfo: null
           LocalizedText: 2
-          InnerStatusCode: 3032848738
+          InnerStatusCode:
+            Symbol: Symbol
+            Code: 2588772717
         - Locale: 5
           AdditionalInfo: AdditionalInfo
           NamespaceUri: 5
           SymbolicId: 1
           InnerDiagnosticInfo: null
           LocalizedText: 2
-          InnerStatusCode: 3032848738
+          InnerStatusCode:
+            Symbol: Symbol
+            Code: 2588772717
       properties:
         ResponseHeader:
           $ref: '#/components/schemas/ResponseHeader'
@@ -4203,11 +4475,13 @@ components:
           format: DataChangeTrigger
           type: integer
         DeadbandType:
+          default: 0
           format: int64
           maximum: 4294967295
           minimum: 0
           type: integer
         DeadbandValue:
+          default: 0
           format: double
           type: number
       type: object
@@ -4225,20 +4499,25 @@ components:
     AggregateConfiguration:
       properties:
         UseServerCapabilitiesDefaults:
+          default: false
           type: boolean
         TreatUncertainAsBad:
+          default: false
           type: boolean
         PercentDataBad:
+          default: 0
           format: int32
           maximum: 255
           minimum: 0
           type: integer
         PercentDataGood:
+          default: 0
           format: int32
           maximum: 255
           minimum: 0
           type: integer
         UseSlopedExtrapolation:
+          default: false
           type: boolean
       type: object
     AggregateFilter:
@@ -4246,12 +4525,14 @@ components:
       - $ref: '#/components/schemas/MonitoringFilter'
       properties:
         StartTime:
+          default: 0001-01-01T00:00:00Z
           format: date-time
           type: string
         AggregateType:
-          format: opcuaNodeId
+          format: UaNodeId
           type: string
         ProcessingInterval:
+          default: 0
           format: double
           type: number
         AggregateConfiguration:
@@ -4265,10 +4546,7 @@ components:
       properties:
         SelectClauseResults:
           items:
-            format: int64
-            maximum: 4294967295
-            minimum: 0
-            type: integer
+            $ref: '#/components/schemas/StatusCode'
           type: array
         SelectClauseDiagnosticInfos:
           items:
@@ -4282,9 +4560,11 @@ components:
       - $ref: '#/components/schemas/MonitoringFilterResult'
       properties:
         RevisedStartTime:
+          default: 0001-01-01T00:00:00Z
           format: date-time
           type: string
         RevisedProcessingInterval:
+          default: 0
           format: double
           type: number
         RevisedAggregateConfiguration:
@@ -4294,29 +4574,33 @@ components:
       example:
         QueueSize: 988759834
         Filter:
-          TypeId: TypeId
-          Encoding: 237
-          Body: "{}"
+          UaTypeId: UaTypeId
+          UaEncoding: 180
+          UaBody: UaBody
         ClientHandle: 2560717018
         SamplingInterval: 5.637376656633329
-        DiscardOldest: true
+        DiscardOldest: false
       properties:
         ClientHandle:
+          default: 0
           format: int64
           maximum: 4294967295
           minimum: 0
           type: integer
         SamplingInterval:
+          default: 0
           format: double
           type: number
         Filter:
           $ref: '#/components/schemas/ExtensionObject'
         QueueSize:
+          default: 0
           format: int64
           maximum: 4294967295
           minimum: 0
           type: integer
         DiscardOldest:
+          default: false
           type: boolean
       type: object
     MonitoredItemCreateRequest:
@@ -4324,12 +4608,12 @@ components:
         RequestedParameters:
           QueueSize: 988759834
           Filter:
-            TypeId: TypeId
-            Encoding: 237
-            Body: "{}"
+            UaTypeId: UaTypeId
+            UaEncoding: 180
+            UaBody: UaBody
           ClientHandle: 2560717018
           SamplingInterval: 5.637376656633329
-          DiscardOldest: true
+          DiscardOldest: false
         ItemToMonitor:
           IndexRange: IndexRange
           AttributeId: 988759834
@@ -4347,29 +4631,31 @@ components:
       type: object
     MonitoredItemCreateResult:
       example:
-        RevisedSamplingInterval: 1.4658129805029452
-        MonitoredItemId: 2588772717
-        RevisedQueueSize: 2560717018
+        RevisedSamplingInterval: 6.027456183070403
+        MonitoredItemId: 343953088
+        RevisedQueueSize: 629561881
         FilterResult:
-          TypeId: TypeId
-          Encoding: 237
-          Body: "{}"
-        StatusCode: 343953088
+          UaTypeId: UaTypeId
+          UaEncoding: 180
+          UaBody: UaBody
+        StatusCode:
+          Symbol: Symbol
+          Code: 2588772717
       properties:
         StatusCode:
-          format: int64
-          maximum: 4294967295
-          minimum: 0
-          type: integer
+          $ref: '#/components/schemas/StatusCode'
         MonitoredItemId:
+          default: 0
           format: int64
           maximum: 4294967295
           minimum: 0
           type: integer
         RevisedSamplingInterval:
+          default: 0
           format: double
           type: number
         RevisedQueueSize:
+          default: 0
           format: int64
           maximum: 4294967295
           minimum: 0
@@ -4388,20 +4674,20 @@ components:
           ReturnDiagnostics: 2588772717
           TimeoutHint: 629561881
           AdditionalHeader:
-            TypeId: TypeId
-            Encoding: 237
-            Body: "{}"
+            UaTypeId: UaTypeId
+            UaEncoding: 180
+            UaBody: UaBody
           Timestamp: 2000-01-23T04:56:07.000+00:00
         ItemsToCreate:
         - RequestedParameters:
             QueueSize: 988759834
             Filter:
-              TypeId: TypeId
-              Encoding: 237
-              Body: "{}"
+              UaTypeId: UaTypeId
+              UaEncoding: 180
+              UaBody: UaBody
             ClientHandle: 2560717018
             SamplingInterval: 5.637376656633329
-            DiscardOldest: true
+            DiscardOldest: false
           ItemToMonitor:
             IndexRange: IndexRange
             AttributeId: 988759834
@@ -4411,12 +4697,12 @@ components:
         - RequestedParameters:
             QueueSize: 988759834
             Filter:
-              TypeId: TypeId
-              Encoding: 237
-              Body: "{}"
+              UaTypeId: UaTypeId
+              UaEncoding: 180
+              UaBody: UaBody
             ClientHandle: 2560717018
             SamplingInterval: 5.637376656633329
-            DiscardOldest: true
+            DiscardOldest: false
           ItemToMonitor:
             IndexRange: IndexRange
             AttributeId: 988759834
@@ -4427,6 +4713,7 @@ components:
         RequestHeader:
           $ref: '#/components/schemas/RequestHeader'
         SubscriptionId:
+          default: 0
           format: int64
           maximum: 4294967295
           minimum: 0
@@ -4445,12 +4732,14 @@ components:
           StringTable:
           - StringTable
           - StringTable
-          ServiceResult: 2588772717
+          ServiceResult:
+            Symbol: Symbol
+            Code: 2588772717
           RequestHandle: 343953088
           AdditionalHeader:
-            TypeId: TypeId
-            Encoding: 237
-            Body: "{}"
+            UaTypeId: UaTypeId
+            UaEncoding: 180
+            UaBody: UaBody
           Timestamp: 2000-01-23T04:56:07.000+00:00
           ServiceDiagnostics:
             Locale: 5
@@ -4459,24 +4748,30 @@ components:
             SymbolicId: 1
             InnerDiagnosticInfo: null
             LocalizedText: 2
-            InnerStatusCode: 3032848738
+            InnerStatusCode:
+              Symbol: Symbol
+              Code: 2588772717
         Results:
-        - RevisedSamplingInterval: 1.4658129805029452
-          MonitoredItemId: 2588772717
-          RevisedQueueSize: 2560717018
+        - RevisedSamplingInterval: 6.027456183070403
+          MonitoredItemId: 343953088
+          RevisedQueueSize: 629561881
           FilterResult:
-            TypeId: TypeId
-            Encoding: 237
-            Body: "{}"
-          StatusCode: 343953088
-        - RevisedSamplingInterval: 1.4658129805029452
-          MonitoredItemId: 2588772717
-          RevisedQueueSize: 2560717018
+            UaTypeId: UaTypeId
+            UaEncoding: 180
+            UaBody: UaBody
+          StatusCode:
+            Symbol: Symbol
+            Code: 2588772717
+        - RevisedSamplingInterval: 6.027456183070403
+          MonitoredItemId: 343953088
+          RevisedQueueSize: 629561881
           FilterResult:
-            TypeId: TypeId
-            Encoding: 237
-            Body: "{}"
-          StatusCode: 343953088
+            UaTypeId: UaTypeId
+            UaEncoding: 180
+            UaBody: UaBody
+          StatusCode:
+            Symbol: Symbol
+            Code: 2588772717
         DiagnosticInfos:
         - Locale: 5
           AdditionalInfo: AdditionalInfo
@@ -4484,14 +4779,18 @@ components:
           SymbolicId: 1
           InnerDiagnosticInfo: null
           LocalizedText: 2
-          InnerStatusCode: 3032848738
+          InnerStatusCode:
+            Symbol: Symbol
+            Code: 2588772717
         - Locale: 5
           AdditionalInfo: AdditionalInfo
           NamespaceUri: 5
           SymbolicId: 1
           InnerDiagnosticInfo: null
           LocalizedText: 2
-          InnerStatusCode: 3032848738
+          InnerStatusCode:
+            Symbol: Symbol
+            Code: 2588772717
       properties:
         ResponseHeader:
           $ref: '#/components/schemas/ResponseHeader'
@@ -4509,15 +4808,16 @@ components:
         RequestedParameters:
           QueueSize: 988759834
           Filter:
-            TypeId: TypeId
-            Encoding: 237
-            Body: "{}"
+            UaTypeId: UaTypeId
+            UaEncoding: 180
+            UaBody: UaBody
           ClientHandle: 2560717018
           SamplingInterval: 5.637376656633329
-          DiscardOldest: true
+          DiscardOldest: false
         MonitoredItemId: 629561881
       properties:
         MonitoredItemId:
+          default: 0
           format: int64
           maximum: 4294967295
           minimum: 0
@@ -4527,23 +4827,24 @@ components:
       type: object
     MonitoredItemModifyResult:
       example:
-        RevisedSamplingInterval: 6.027456183070403
-        RevisedQueueSize: 629561881
+        RevisedSamplingInterval: 0.8008281904610115
+        RevisedQueueSize: 2588772717
         FilterResult:
-          TypeId: TypeId
-          Encoding: 237
-          Body: "{}"
-        StatusCode: 343953088
+          UaTypeId: UaTypeId
+          UaEncoding: 180
+          UaBody: UaBody
+        StatusCode:
+          Symbol: Symbol
+          Code: 2588772717
       properties:
         StatusCode:
-          format: int64
-          maximum: 4294967295
-          minimum: 0
-          type: integer
+          $ref: '#/components/schemas/StatusCode'
         RevisedSamplingInterval:
+          default: 0
           format: double
           type: number
         RevisedQueueSize:
+          default: 0
           format: int64
           maximum: 4294967295
           minimum: 0
@@ -4558,22 +4859,22 @@ components:
         - RequestedParameters:
             QueueSize: 988759834
             Filter:
-              TypeId: TypeId
-              Encoding: 237
-              Body: "{}"
+              UaTypeId: UaTypeId
+              UaEncoding: 180
+              UaBody: UaBody
             ClientHandle: 2560717018
             SamplingInterval: 5.637376656633329
-            DiscardOldest: true
+            DiscardOldest: false
           MonitoredItemId: 629561881
         - RequestedParameters:
             QueueSize: 988759834
             Filter:
-              TypeId: TypeId
-              Encoding: 237
-              Body: "{}"
+              UaTypeId: UaTypeId
+              UaEncoding: 180
+              UaBody: UaBody
             ClientHandle: 2560717018
             SamplingInterval: 5.637376656633329
-            DiscardOldest: true
+            DiscardOldest: false
           MonitoredItemId: 629561881
         TimestampsToReturn: 6
         RequestHeader:
@@ -4583,14 +4884,15 @@ components:
           ReturnDiagnostics: 2588772717
           TimeoutHint: 629561881
           AdditionalHeader:
-            TypeId: TypeId
-            Encoding: 237
-            Body: "{}"
+            UaTypeId: UaTypeId
+            UaEncoding: 180
+            UaBody: UaBody
           Timestamp: 2000-01-23T04:56:07.000+00:00
       properties:
         RequestHeader:
           $ref: '#/components/schemas/RequestHeader'
         SubscriptionId:
+          default: 0
           format: int64
           maximum: 4294967295
           minimum: 0
@@ -4609,12 +4911,14 @@ components:
           StringTable:
           - StringTable
           - StringTable
-          ServiceResult: 2588772717
+          ServiceResult:
+            Symbol: Symbol
+            Code: 2588772717
           RequestHandle: 343953088
           AdditionalHeader:
-            TypeId: TypeId
-            Encoding: 237
-            Body: "{}"
+            UaTypeId: UaTypeId
+            UaEncoding: 180
+            UaBody: UaBody
           Timestamp: 2000-01-23T04:56:07.000+00:00
           ServiceDiagnostics:
             Locale: 5
@@ -4623,22 +4927,28 @@ components:
             SymbolicId: 1
             InnerDiagnosticInfo: null
             LocalizedText: 2
-            InnerStatusCode: 3032848738
+            InnerStatusCode:
+              Symbol: Symbol
+              Code: 2588772717
         Results:
-        - RevisedSamplingInterval: 6.027456183070403
-          RevisedQueueSize: 629561881
+        - RevisedSamplingInterval: 0.8008281904610115
+          RevisedQueueSize: 2588772717
           FilterResult:
-            TypeId: TypeId
-            Encoding: 237
-            Body: "{}"
-          StatusCode: 343953088
-        - RevisedSamplingInterval: 6.027456183070403
-          RevisedQueueSize: 629561881
+            UaTypeId: UaTypeId
+            UaEncoding: 180
+            UaBody: UaBody
+          StatusCode:
+            Symbol: Symbol
+            Code: 2588772717
+        - RevisedSamplingInterval: 0.8008281904610115
+          RevisedQueueSize: 2588772717
           FilterResult:
-            TypeId: TypeId
-            Encoding: 237
-            Body: "{}"
-          StatusCode: 343953088
+            UaTypeId: UaTypeId
+            UaEncoding: 180
+            UaBody: UaBody
+          StatusCode:
+            Symbol: Symbol
+            Code: 2588772717
         DiagnosticInfos:
         - Locale: 5
           AdditionalInfo: AdditionalInfo
@@ -4646,14 +4956,18 @@ components:
           SymbolicId: 1
           InnerDiagnosticInfo: null
           LocalizedText: 2
-          InnerStatusCode: 3032848738
+          InnerStatusCode:
+            Symbol: Symbol
+            Code: 2588772717
         - Locale: 5
           AdditionalInfo: AdditionalInfo
           NamespaceUri: 5
           SymbolicId: 1
           InnerDiagnosticInfo: null
           LocalizedText: 2
-          InnerStatusCode: 3032848738
+          InnerStatusCode:
+            Symbol: Symbol
+            Code: 2588772717
       properties:
         ResponseHeader:
           $ref: '#/components/schemas/ResponseHeader'
@@ -4679,15 +4993,16 @@ components:
           ReturnDiagnostics: 2588772717
           TimeoutHint: 629561881
           AdditionalHeader:
-            TypeId: TypeId
-            Encoding: 237
-            Body: "{}"
+            UaTypeId: UaTypeId
+            UaEncoding: 180
+            UaBody: UaBody
           Timestamp: 2000-01-23T04:56:07.000+00:00
         MonitoringMode: 6
       properties:
         RequestHeader:
           $ref: '#/components/schemas/RequestHeader'
         SubscriptionId:
+          default: 0
           format: int64
           maximum: 4294967295
           minimum: 0
@@ -4697,6 +5012,7 @@ components:
           type: integer
         MonitoredItemIds:
           items:
+            default: 0
             format: int64
             maximum: 4294967295
             minimum: 0
@@ -4709,12 +5025,14 @@ components:
           StringTable:
           - StringTable
           - StringTable
-          ServiceResult: 2588772717
+          ServiceResult:
+            Symbol: Symbol
+            Code: 2588772717
           RequestHandle: 343953088
           AdditionalHeader:
-            TypeId: TypeId
-            Encoding: 237
-            Body: "{}"
+            UaTypeId: UaTypeId
+            UaEncoding: 180
+            UaBody: UaBody
           Timestamp: 2000-01-23T04:56:07.000+00:00
           ServiceDiagnostics:
             Locale: 5
@@ -4723,10 +5041,14 @@ components:
             SymbolicId: 1
             InnerDiagnosticInfo: null
             LocalizedText: 2
-            InnerStatusCode: 3032848738
+            InnerStatusCode:
+              Symbol: Symbol
+              Code: 2588772717
         Results:
-        - 343953088
-        - 343953088
+        - Symbol: Symbol
+          Code: 2588772717
+        - Symbol: Symbol
+          Code: 2588772717
         DiagnosticInfos:
         - Locale: 5
           AdditionalInfo: AdditionalInfo
@@ -4734,23 +5056,24 @@ components:
           SymbolicId: 1
           InnerDiagnosticInfo: null
           LocalizedText: 2
-          InnerStatusCode: 3032848738
+          InnerStatusCode:
+            Symbol: Symbol
+            Code: 2588772717
         - Locale: 5
           AdditionalInfo: AdditionalInfo
           NamespaceUri: 5
           SymbolicId: 1
           InnerDiagnosticInfo: null
           LocalizedText: 2
-          InnerStatusCode: 3032848738
+          InnerStatusCode:
+            Symbol: Symbol
+            Code: 2588772717
       properties:
         ResponseHeader:
           $ref: '#/components/schemas/ResponseHeader'
         Results:
           items:
-            format: int64
-            maximum: 4294967295
-            minimum: 0
-            type: integer
+            $ref: '#/components/schemas/StatusCode'
           type: array
         DiagnosticInfos:
           items:
@@ -4773,26 +5096,29 @@ components:
           ReturnDiagnostics: 2588772717
           TimeoutHint: 629561881
           AdditionalHeader:
-            TypeId: TypeId
-            Encoding: 237
-            Body: "{}"
+            UaTypeId: UaTypeId
+            UaEncoding: 180
+            UaBody: UaBody
           Timestamp: 2000-01-23T04:56:07.000+00:00
         TriggeringItemId: 2588772717
       properties:
         RequestHeader:
           $ref: '#/components/schemas/RequestHeader'
         SubscriptionId:
+          default: 0
           format: int64
           maximum: 4294967295
           minimum: 0
           type: integer
         TriggeringItemId:
+          default: 0
           format: int64
           maximum: 4294967295
           minimum: 0
           type: integer
         LinksToAdd:
           items:
+            default: 0
             format: int64
             maximum: 4294967295
             minimum: 0
@@ -4800,6 +5126,7 @@ components:
           type: array
         LinksToRemove:
           items:
+            default: 0
             format: int64
             maximum: 4294967295
             minimum: 0
@@ -4812,12 +5139,14 @@ components:
           StringTable:
           - StringTable
           - StringTable
-          ServiceResult: 2588772717
+          ServiceResult:
+            Symbol: Symbol
+            Code: 2588772717
           RequestHandle: 343953088
           AdditionalHeader:
-            TypeId: TypeId
-            Encoding: 237
-            Body: "{}"
+            UaTypeId: UaTypeId
+            UaEncoding: 180
+            UaBody: UaBody
           Timestamp: 2000-01-23T04:56:07.000+00:00
           ServiceDiagnostics:
             Locale: 5
@@ -4826,7 +5155,9 @@ components:
             SymbolicId: 1
             InnerDiagnosticInfo: null
             LocalizedText: 2
-            InnerStatusCode: 3032848738
+            InnerStatusCode:
+              Symbol: Symbol
+              Code: 2588772717
         AddDiagnosticInfos:
         - Locale: 5
           AdditionalInfo: AdditionalInfo
@@ -4834,14 +5165,18 @@ components:
           SymbolicId: 1
           InnerDiagnosticInfo: null
           LocalizedText: 2
-          InnerStatusCode: 3032848738
+          InnerStatusCode:
+            Symbol: Symbol
+            Code: 2588772717
         - Locale: 5
           AdditionalInfo: AdditionalInfo
           NamespaceUri: 5
           SymbolicId: 1
           InnerDiagnosticInfo: null
           LocalizedText: 2
-          InnerStatusCode: 3032848738
+          InnerStatusCode:
+            Symbol: Symbol
+            Code: 2588772717
         RemoveDiagnosticInfos:
         - Locale: 5
           AdditionalInfo: AdditionalInfo
@@ -4849,29 +5184,34 @@ components:
           SymbolicId: 1
           InnerDiagnosticInfo: null
           LocalizedText: 2
-          InnerStatusCode: 3032848738
+          InnerStatusCode:
+            Symbol: Symbol
+            Code: 2588772717
         - Locale: 5
           AdditionalInfo: AdditionalInfo
           NamespaceUri: 5
           SymbolicId: 1
           InnerDiagnosticInfo: null
           LocalizedText: 2
-          InnerStatusCode: 3032848738
+          InnerStatusCode:
+            Symbol: Symbol
+            Code: 2588772717
         RemoveResults:
-        - 2588772717
-        - 2588772717
+        - Symbol: Symbol
+          Code: 2588772717
+        - Symbol: Symbol
+          Code: 2588772717
         AddResults:
-        - 343953088
-        - 343953088
+        - Symbol: Symbol
+          Code: 2588772717
+        - Symbol: Symbol
+          Code: 2588772717
       properties:
         ResponseHeader:
           $ref: '#/components/schemas/ResponseHeader'
         AddResults:
           items:
-            format: int64
-            maximum: 4294967295
-            minimum: 0
-            type: integer
+            $ref: '#/components/schemas/StatusCode'
           type: array
         AddDiagnosticInfos:
           items:
@@ -4879,10 +5219,7 @@ components:
           type: array
         RemoveResults:
           items:
-            format: int64
-            maximum: 4294967295
-            minimum: 0
-            type: integer
+            $ref: '#/components/schemas/StatusCode'
           type: array
         RemoveDiagnosticInfos:
           items:
@@ -4902,20 +5239,22 @@ components:
           ReturnDiagnostics: 2588772717
           TimeoutHint: 629561881
           AdditionalHeader:
-            TypeId: TypeId
-            Encoding: 237
-            Body: "{}"
+            UaTypeId: UaTypeId
+            UaEncoding: 180
+            UaBody: UaBody
           Timestamp: 2000-01-23T04:56:07.000+00:00
       properties:
         RequestHeader:
           $ref: '#/components/schemas/RequestHeader'
         SubscriptionId:
+          default: 0
           format: int64
           maximum: 4294967295
           minimum: 0
           type: integer
         MonitoredItemIds:
           items:
+            default: 0
             format: int64
             maximum: 4294967295
             minimum: 0
@@ -4928,12 +5267,14 @@ components:
           StringTable:
           - StringTable
           - StringTable
-          ServiceResult: 2588772717
+          ServiceResult:
+            Symbol: Symbol
+            Code: 2588772717
           RequestHandle: 343953088
           AdditionalHeader:
-            TypeId: TypeId
-            Encoding: 237
-            Body: "{}"
+            UaTypeId: UaTypeId
+            UaEncoding: 180
+            UaBody: UaBody
           Timestamp: 2000-01-23T04:56:07.000+00:00
           ServiceDiagnostics:
             Locale: 5
@@ -4942,10 +5283,14 @@ components:
             SymbolicId: 1
             InnerDiagnosticInfo: null
             LocalizedText: 2
-            InnerStatusCode: 3032848738
+            InnerStatusCode:
+              Symbol: Symbol
+              Code: 2588772717
         Results:
-        - 343953088
-        - 343953088
+        - Symbol: Symbol
+          Code: 2588772717
+        - Symbol: Symbol
+          Code: 2588772717
         DiagnosticInfos:
         - Locale: 5
           AdditionalInfo: AdditionalInfo
@@ -4953,23 +5298,24 @@ components:
           SymbolicId: 1
           InnerDiagnosticInfo: null
           LocalizedText: 2
-          InnerStatusCode: 3032848738
+          InnerStatusCode:
+            Symbol: Symbol
+            Code: 2588772717
         - Locale: 5
           AdditionalInfo: AdditionalInfo
           NamespaceUri: 5
           SymbolicId: 1
           InnerDiagnosticInfo: null
           LocalizedText: 2
-          InnerStatusCode: 3032848738
+          InnerStatusCode:
+            Symbol: Symbol
+            Code: 2588772717
       properties:
         ResponseHeader:
           $ref: '#/components/schemas/ResponseHeader'
         Results:
           items:
-            format: int64
-            maximum: 4294967295
-            minimum: 0
-            type: integer
+            $ref: '#/components/schemas/StatusCode'
           type: array
         DiagnosticInfos:
           items:
@@ -4980,7 +5326,7 @@ components:
       example:
         RequestedPublishingInterval: 0.8008281904610115
         RequestedMaxKeepAliveCount: 629561881
-        PublishingEnabled: true
+        PublishingEnabled: false
         Priority: 143
         RequestHeader:
           AuthenticationToken: AuthenticationToken
@@ -4989,9 +5335,9 @@ components:
           ReturnDiagnostics: 2588772717
           TimeoutHint: 629561881
           AdditionalHeader:
-            TypeId: TypeId
-            Encoding: 237
-            Body: "{}"
+            UaTypeId: UaTypeId
+            UaEncoding: 180
+            UaBody: UaBody
           Timestamp: 2000-01-23T04:56:07.000+00:00
         MaxNotificationsPerPublish: 2560717018
         RequestedLifetimeCount: 2588772717
@@ -4999,26 +5345,32 @@ components:
         RequestHeader:
           $ref: '#/components/schemas/RequestHeader'
         RequestedPublishingInterval:
+          default: 0
           format: double
           type: number
         RequestedLifetimeCount:
+          default: 0
           format: int64
           maximum: 4294967295
           minimum: 0
           type: integer
         RequestedMaxKeepAliveCount:
+          default: 0
           format: int64
           maximum: 4294967295
           minimum: 0
           type: integer
         MaxNotificationsPerPublish:
+          default: 0
           format: int64
           maximum: 4294967295
           minimum: 0
           type: integer
         PublishingEnabled:
+          default: false
           type: boolean
         Priority:
+          default: 0
           format: int32
           maximum: 255
           minimum: 0
@@ -5031,12 +5383,14 @@ components:
           StringTable:
           - StringTable
           - StringTable
-          ServiceResult: 2588772717
+          ServiceResult:
+            Symbol: Symbol
+            Code: 2588772717
           RequestHandle: 343953088
           AdditionalHeader:
-            TypeId: TypeId
-            Encoding: 237
-            Body: "{}"
+            UaTypeId: UaTypeId
+            UaEncoding: 180
+            UaBody: UaBody
           Timestamp: 2000-01-23T04:56:07.000+00:00
           ServiceDiagnostics:
             Locale: 5
@@ -5045,7 +5399,9 @@ components:
             SymbolicId: 1
             InnerDiagnosticInfo: null
             LocalizedText: 2
-            InnerStatusCode: 3032848738
+            InnerStatusCode:
+              Symbol: Symbol
+              Code: 2588772717
         SubscriptionId: 343953088
         RevisedLifetimeCount: 629561881
         RevisedPublishingInterval: 6.027456183070403
@@ -5053,19 +5409,23 @@ components:
         ResponseHeader:
           $ref: '#/components/schemas/ResponseHeader'
         SubscriptionId:
+          default: 0
           format: int64
           maximum: 4294967295
           minimum: 0
           type: integer
         RevisedPublishingInterval:
+          default: 0
           format: double
           type: number
         RevisedLifetimeCount:
+          default: 0
           format: int64
           maximum: 4294967295
           minimum: 0
           type: integer
         RevisedMaxKeepAliveCount:
+          default: 0
           format: int64
           maximum: 4294967295
           minimum: 0
@@ -5084,9 +5444,9 @@ components:
           ReturnDiagnostics: 2588772717
           TimeoutHint: 629561881
           AdditionalHeader:
-            TypeId: TypeId
-            Encoding: 237
-            Body: "{}"
+            UaTypeId: UaTypeId
+            UaEncoding: 180
+            UaBody: UaBody
           Timestamp: 2000-01-23T04:56:07.000+00:00
         MaxNotificationsPerPublish: 2421234836
         RequestedLifetimeCount: 629561881
@@ -5094,29 +5454,35 @@ components:
         RequestHeader:
           $ref: '#/components/schemas/RequestHeader'
         SubscriptionId:
+          default: 0
           format: int64
           maximum: 4294967295
           minimum: 0
           type: integer
         RequestedPublishingInterval:
+          default: 0
           format: double
           type: number
         RequestedLifetimeCount:
+          default: 0
           format: int64
           maximum: 4294967295
           minimum: 0
           type: integer
         RequestedMaxKeepAliveCount:
+          default: 0
           format: int64
           maximum: 4294967295
           minimum: 0
           type: integer
         MaxNotificationsPerPublish:
+          default: 0
           format: int64
           maximum: 4294967295
           minimum: 0
           type: integer
         Priority:
+          default: 0
           format: int32
           maximum: 255
           minimum: 0
@@ -5129,12 +5495,14 @@ components:
           StringTable:
           - StringTable
           - StringTable
-          ServiceResult: 2588772717
+          ServiceResult:
+            Symbol: Symbol
+            Code: 2588772717
           RequestHandle: 343953088
           AdditionalHeader:
-            TypeId: TypeId
-            Encoding: 237
-            Body: "{}"
+            UaTypeId: UaTypeId
+            UaEncoding: 180
+            UaBody: UaBody
           Timestamp: 2000-01-23T04:56:07.000+00:00
           ServiceDiagnostics:
             Locale: 5
@@ -5143,21 +5511,26 @@ components:
             SymbolicId: 1
             InnerDiagnosticInfo: null
             LocalizedText: 2
-            InnerStatusCode: 3032848738
+            InnerStatusCode:
+              Symbol: Symbol
+              Code: 2588772717
         RevisedLifetimeCount: 2588772717
         RevisedPublishingInterval: 0.8008281904610115
       properties:
         ResponseHeader:
           $ref: '#/components/schemas/ResponseHeader'
         RevisedPublishingInterval:
+          default: 0
           format: double
           type: number
         RevisedLifetimeCount:
+          default: 0
           format: int64
           maximum: 4294967295
           minimum: 0
           type: integer
         RevisedMaxKeepAliveCount:
+          default: 0
           format: int64
           maximum: 4294967295
           minimum: 0
@@ -5165,7 +5538,7 @@ components:
       type: object
     SetPublishingModeRequest:
       example:
-        PublishingEnabled: true
+        PublishingEnabled: false
         RequestHeader:
           AuthenticationToken: AuthenticationToken
           RequestHandle: 343953088
@@ -5173,9 +5546,9 @@ components:
           ReturnDiagnostics: 2588772717
           TimeoutHint: 629561881
           AdditionalHeader:
-            TypeId: TypeId
-            Encoding: 237
-            Body: "{}"
+            UaTypeId: UaTypeId
+            UaEncoding: 180
+            UaBody: UaBody
           Timestamp: 2000-01-23T04:56:07.000+00:00
         SubscriptionIds:
         - 343953088
@@ -5184,9 +5557,11 @@ components:
         RequestHeader:
           $ref: '#/components/schemas/RequestHeader'
         PublishingEnabled:
+          default: false
           type: boolean
         SubscriptionIds:
           items:
+            default: 0
             format: int64
             maximum: 4294967295
             minimum: 0
@@ -5199,12 +5574,14 @@ components:
           StringTable:
           - StringTable
           - StringTable
-          ServiceResult: 2588772717
+          ServiceResult:
+            Symbol: Symbol
+            Code: 2588772717
           RequestHandle: 343953088
           AdditionalHeader:
-            TypeId: TypeId
-            Encoding: 237
-            Body: "{}"
+            UaTypeId: UaTypeId
+            UaEncoding: 180
+            UaBody: UaBody
           Timestamp: 2000-01-23T04:56:07.000+00:00
           ServiceDiagnostics:
             Locale: 5
@@ -5213,10 +5590,14 @@ components:
             SymbolicId: 1
             InnerDiagnosticInfo: null
             LocalizedText: 2
-            InnerStatusCode: 3032848738
+            InnerStatusCode:
+              Symbol: Symbol
+              Code: 2588772717
         Results:
-        - 343953088
-        - 343953088
+        - Symbol: Symbol
+          Code: 2588772717
+        - Symbol: Symbol
+          Code: 2588772717
         DiagnosticInfos:
         - Locale: 5
           AdditionalInfo: AdditionalInfo
@@ -5224,23 +5605,24 @@ components:
           SymbolicId: 1
           InnerDiagnosticInfo: null
           LocalizedText: 2
-          InnerStatusCode: 3032848738
+          InnerStatusCode:
+            Symbol: Symbol
+            Code: 2588772717
         - Locale: 5
           AdditionalInfo: AdditionalInfo
           NamespaceUri: 5
           SymbolicId: 1
           InnerDiagnosticInfo: null
           LocalizedText: 2
-          InnerStatusCode: 3032848738
+          InnerStatusCode:
+            Symbol: Symbol
+            Code: 2588772717
       properties:
         ResponseHeader:
           $ref: '#/components/schemas/ResponseHeader'
         Results:
           items:
-            format: int64
-            maximum: 4294967295
-            minimum: 0
-            type: integer
+            $ref: '#/components/schemas/StatusCode'
           type: array
         DiagnosticInfos:
           items:
@@ -5252,19 +5634,21 @@ components:
         SequenceNumber: 629561881
         PublishTime: 2000-01-23T04:56:07.000+00:00
         NotificationData:
-        - TypeId: TypeId
-          Encoding: 237
-          Body: "{}"
-        - TypeId: TypeId
-          Encoding: 237
-          Body: "{}"
+        - UaTypeId: UaTypeId
+          UaEncoding: 180
+          UaBody: UaBody
+        - UaTypeId: UaTypeId
+          UaEncoding: 180
+          UaBody: UaBody
       properties:
         SequenceNumber:
+          default: 0
           format: int64
           maximum: 4294967295
           minimum: 0
           type: integer
         PublishTime:
+          default: 0001-01-01T00:00:00Z
           format: date-time
           type: string
         NotificationData:
@@ -5290,6 +5674,7 @@ components:
     MonitoredItemNotification:
       properties:
         ClientHandle:
+          default: 0
           format: int64
           maximum: 4294967295
           minimum: 0
@@ -5309,6 +5694,7 @@ components:
     EventFieldList:
       properties:
         ClientHandle:
+          default: 0
           format: int64
           maximum: 4294967295
           minimum: 0
@@ -5330,10 +5716,7 @@ components:
       - $ref: '#/components/schemas/NotificationData'
       properties:
         Status:
-          format: int64
-          maximum: 4294967295
-          minimum: 0
-          type: integer
+          $ref: '#/components/schemas/StatusCode'
         DiagnosticInfo:
           $ref: '#/components/schemas/DiagnosticInfo'
       type: object
@@ -5343,11 +5726,13 @@ components:
         SequenceNumber: 2588772717
       properties:
         SubscriptionId:
+          default: 0
           format: int64
           maximum: 4294967295
           minimum: 0
           type: integer
         SequenceNumber:
+          default: 0
           format: int64
           maximum: 4294967295
           minimum: 0
@@ -5367,9 +5752,9 @@ components:
           ReturnDiagnostics: 2588772717
           TimeoutHint: 629561881
           AdditionalHeader:
-            TypeId: TypeId
-            Encoding: 237
-            Body: "{}"
+            UaTypeId: UaTypeId
+            UaEncoding: 180
+            UaBody: UaBody
           Timestamp: 2000-01-23T04:56:07.000+00:00
       properties:
         RequestHeader:
@@ -5381,17 +5766,19 @@ components:
       type: object
     PublishResponse:
       example:
-        MoreNotifications: true
+        MoreNotifications: false
         ResponseHeader:
           StringTable:
           - StringTable
           - StringTable
-          ServiceResult: 2588772717
+          ServiceResult:
+            Symbol: Symbol
+            Code: 2588772717
           RequestHandle: 343953088
           AdditionalHeader:
-            TypeId: TypeId
-            Encoding: 237
-            Body: "{}"
+            UaTypeId: UaTypeId
+            UaEncoding: 180
+            UaBody: UaBody
           Timestamp: 2000-01-23T04:56:07.000+00:00
           ServiceDiagnostics:
             Locale: 5
@@ -5400,21 +5787,25 @@ components:
             SymbolicId: 1
             InnerDiagnosticInfo: null
             LocalizedText: 2
-            InnerStatusCode: 3032848738
+            InnerStatusCode:
+              Symbol: Symbol
+              Code: 2588772717
         SubscriptionId: 343953088
         NotificationMessage:
           SequenceNumber: 629561881
           PublishTime: 2000-01-23T04:56:07.000+00:00
           NotificationData:
-          - TypeId: TypeId
-            Encoding: 237
-            Body: "{}"
-          - TypeId: TypeId
-            Encoding: 237
-            Body: "{}"
+          - UaTypeId: UaTypeId
+            UaEncoding: 180
+            UaBody: UaBody
+          - UaTypeId: UaTypeId
+            UaEncoding: 180
+            UaBody: UaBody
         Results:
-        - 2560717018
-        - 2560717018
+        - Symbol: Symbol
+          Code: 2588772717
+        - Symbol: Symbol
+          Code: 2588772717
         DiagnosticInfos:
         - Locale: 5
           AdditionalInfo: AdditionalInfo
@@ -5422,14 +5813,18 @@ components:
           SymbolicId: 1
           InnerDiagnosticInfo: null
           LocalizedText: 2
-          InnerStatusCode: 3032848738
+          InnerStatusCode:
+            Symbol: Symbol
+            Code: 2588772717
         - Locale: 5
           AdditionalInfo: AdditionalInfo
           NamespaceUri: 5
           SymbolicId: 1
           InnerDiagnosticInfo: null
           LocalizedText: 2
-          InnerStatusCode: 3032848738
+          InnerStatusCode:
+            Symbol: Symbol
+            Code: 2588772717
         AvailableSequenceNumbers:
         - 2588772717
         - 2588772717
@@ -5437,27 +5832,27 @@ components:
         ResponseHeader:
           $ref: '#/components/schemas/ResponseHeader'
         SubscriptionId:
+          default: 0
           format: int64
           maximum: 4294967295
           minimum: 0
           type: integer
         AvailableSequenceNumbers:
           items:
+            default: 0
             format: int64
             maximum: 4294967295
             minimum: 0
             type: integer
           type: array
         MoreNotifications:
+          default: false
           type: boolean
         NotificationMessage:
           $ref: '#/components/schemas/NotificationMessage'
         Results:
           items:
-            format: int64
-            maximum: 4294967295
-            minimum: 0
-            type: integer
+            $ref: '#/components/schemas/StatusCode'
           type: array
         DiagnosticInfos:
           items:
@@ -5475,19 +5870,21 @@ components:
           ReturnDiagnostics: 2588772717
           TimeoutHint: 629561881
           AdditionalHeader:
-            TypeId: TypeId
-            Encoding: 237
-            Body: "{}"
+            UaTypeId: UaTypeId
+            UaEncoding: 180
+            UaBody: UaBody
           Timestamp: 2000-01-23T04:56:07.000+00:00
       properties:
         RequestHeader:
           $ref: '#/components/schemas/RequestHeader'
         SubscriptionId:
+          default: 0
           format: int64
           maximum: 4294967295
           minimum: 0
           type: integer
         RetransmitSequenceNumber:
+          default: 0
           format: int64
           maximum: 4294967295
           minimum: 0
@@ -5499,12 +5896,14 @@ components:
           StringTable:
           - StringTable
           - StringTable
-          ServiceResult: 2588772717
+          ServiceResult:
+            Symbol: Symbol
+            Code: 2588772717
           RequestHandle: 343953088
           AdditionalHeader:
-            TypeId: TypeId
-            Encoding: 237
-            Body: "{}"
+            UaTypeId: UaTypeId
+            UaEncoding: 180
+            UaBody: UaBody
           Timestamp: 2000-01-23T04:56:07.000+00:00
           ServiceDiagnostics:
             Locale: 5
@@ -5513,17 +5912,19 @@ components:
             SymbolicId: 1
             InnerDiagnosticInfo: null
             LocalizedText: 2
-            InnerStatusCode: 3032848738
+            InnerStatusCode:
+              Symbol: Symbol
+              Code: 2588772717
         NotificationMessage:
           SequenceNumber: 629561881
           PublishTime: 2000-01-23T04:56:07.000+00:00
           NotificationData:
-          - TypeId: TypeId
-            Encoding: 237
-            Body: "{}"
-          - TypeId: TypeId
-            Encoding: 237
-            Body: "{}"
+          - UaTypeId: UaTypeId
+            UaEncoding: 180
+            UaBody: UaBody
+          - UaTypeId: UaTypeId
+            UaEncoding: 180
+            UaBody: UaBody
       properties:
         ResponseHeader:
           $ref: '#/components/schemas/ResponseHeader'
@@ -5533,17 +5934,17 @@ components:
     TransferResult:
       example:
         AvailableSequenceNumbers:
-        - 2588772717
-        - 2588772717
-        StatusCode: 343953088
+        - 343953088
+        - 343953088
+        StatusCode:
+          Symbol: Symbol
+          Code: 2588772717
       properties:
         StatusCode:
-          format: int64
-          maximum: 4294967295
-          minimum: 0
-          type: integer
+          $ref: '#/components/schemas/StatusCode'
         AvailableSequenceNumbers:
           items:
+            default: 0
             format: int64
             maximum: 4294967295
             minimum: 0
@@ -5552,7 +5953,7 @@ components:
       type: object
     TransferSubscriptionsRequest:
       example:
-        SendInitialValues: true
+        SendInitialValues: false
         RequestHeader:
           AuthenticationToken: AuthenticationToken
           RequestHandle: 343953088
@@ -5560,9 +5961,9 @@ components:
           ReturnDiagnostics: 2588772717
           TimeoutHint: 629561881
           AdditionalHeader:
-            TypeId: TypeId
-            Encoding: 237
-            Body: "{}"
+            UaTypeId: UaTypeId
+            UaEncoding: 180
+            UaBody: UaBody
           Timestamp: 2000-01-23T04:56:07.000+00:00
         SubscriptionIds:
         - 343953088
@@ -5572,12 +5973,14 @@ components:
           $ref: '#/components/schemas/RequestHeader'
         SubscriptionIds:
           items:
+            default: 0
             format: int64
             maximum: 4294967295
             minimum: 0
             type: integer
           type: array
         SendInitialValues:
+          default: false
           type: boolean
       type: object
     TransferSubscriptionsResponse:
@@ -5586,12 +5989,14 @@ components:
           StringTable:
           - StringTable
           - StringTable
-          ServiceResult: 2588772717
+          ServiceResult:
+            Symbol: Symbol
+            Code: 2588772717
           RequestHandle: 343953088
           AdditionalHeader:
-            TypeId: TypeId
-            Encoding: 237
-            Body: "{}"
+            UaTypeId: UaTypeId
+            UaEncoding: 180
+            UaBody: UaBody
           Timestamp: 2000-01-23T04:56:07.000+00:00
           ServiceDiagnostics:
             Locale: 5
@@ -5600,16 +6005,22 @@ components:
             SymbolicId: 1
             InnerDiagnosticInfo: null
             LocalizedText: 2
-            InnerStatusCode: 3032848738
+            InnerStatusCode:
+              Symbol: Symbol
+              Code: 2588772717
         Results:
         - AvailableSequenceNumbers:
-          - 2588772717
-          - 2588772717
-          StatusCode: 343953088
+          - 343953088
+          - 343953088
+          StatusCode:
+            Symbol: Symbol
+            Code: 2588772717
         - AvailableSequenceNumbers:
-          - 2588772717
-          - 2588772717
-          StatusCode: 343953088
+          - 343953088
+          - 343953088
+          StatusCode:
+            Symbol: Symbol
+            Code: 2588772717
         DiagnosticInfos:
         - Locale: 5
           AdditionalInfo: AdditionalInfo
@@ -5617,14 +6028,18 @@ components:
           SymbolicId: 1
           InnerDiagnosticInfo: null
           LocalizedText: 2
-          InnerStatusCode: 3032848738
+          InnerStatusCode:
+            Symbol: Symbol
+            Code: 2588772717
         - Locale: 5
           AdditionalInfo: AdditionalInfo
           NamespaceUri: 5
           SymbolicId: 1
           InnerDiagnosticInfo: null
           LocalizedText: 2
-          InnerStatusCode: 3032848738
+          InnerStatusCode:
+            Symbol: Symbol
+            Code: 2588772717
       properties:
         ResponseHeader:
           $ref: '#/components/schemas/ResponseHeader'
@@ -5646,9 +6061,9 @@ components:
           ReturnDiagnostics: 2588772717
           TimeoutHint: 629561881
           AdditionalHeader:
-            TypeId: TypeId
-            Encoding: 237
-            Body: "{}"
+            UaTypeId: UaTypeId
+            UaEncoding: 180
+            UaBody: UaBody
           Timestamp: 2000-01-23T04:56:07.000+00:00
         SubscriptionIds:
         - 343953088
@@ -5658,6 +6073,7 @@ components:
           $ref: '#/components/schemas/RequestHeader'
         SubscriptionIds:
           items:
+            default: 0
             format: int64
             maximum: 4294967295
             minimum: 0
@@ -5670,12 +6086,14 @@ components:
           StringTable:
           - StringTable
           - StringTable
-          ServiceResult: 2588772717
+          ServiceResult:
+            Symbol: Symbol
+            Code: 2588772717
           RequestHandle: 343953088
           AdditionalHeader:
-            TypeId: TypeId
-            Encoding: 237
-            Body: "{}"
+            UaTypeId: UaTypeId
+            UaEncoding: 180
+            UaBody: UaBody
           Timestamp: 2000-01-23T04:56:07.000+00:00
           ServiceDiagnostics:
             Locale: 5
@@ -5684,10 +6102,14 @@ components:
             SymbolicId: 1
             InnerDiagnosticInfo: null
             LocalizedText: 2
-            InnerStatusCode: 3032848738
+            InnerStatusCode:
+              Symbol: Symbol
+              Code: 2588772717
         Results:
-        - 343953088
-        - 343953088
+        - Symbol: Symbol
+          Code: 2588772717
+        - Symbol: Symbol
+          Code: 2588772717
         DiagnosticInfos:
         - Locale: 5
           AdditionalInfo: AdditionalInfo
@@ -5695,23 +6117,24 @@ components:
           SymbolicId: 1
           InnerDiagnosticInfo: null
           LocalizedText: 2
-          InnerStatusCode: 3032848738
+          InnerStatusCode:
+            Symbol: Symbol
+            Code: 2588772717
         - Locale: 5
           AdditionalInfo: AdditionalInfo
           NamespaceUri: 5
           SymbolicId: 1
           InnerDiagnosticInfo: null
           LocalizedText: 2
-          InnerStatusCode: 3032848738
+          InnerStatusCode:
+            Symbol: Symbol
+            Code: 2588772717
       properties:
         ResponseHeader:
           $ref: '#/components/schemas/ResponseHeader'
         Results:
           items:
-            format: int64
-            maximum: 4294967295
-            minimum: 0
-            type: integer
+            $ref: '#/components/schemas/StatusCode'
           type: array
         DiagnosticInfos:
           items:
@@ -5721,9 +6144,11 @@ components:
     Range:
       properties:
         Low:
+          default: 0
           format: double
           type: number
         High:
+          default: 0
           format: double
           type: number
       type: object
@@ -5732,6 +6157,7 @@ components:
         NamespaceUri:
           type: string
         UnitId:
+          default: 0
           format: int32
           type: integer
         DisplayName:

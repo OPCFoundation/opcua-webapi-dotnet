@@ -159,6 +159,7 @@ docs/SimpleAttributeOperand.md
 docs/SimpleTypeDescription.md
 docs/StandaloneSubscribedDataSetDataType.md
 docs/StatusChangeNotification.md
+docs/StatusCode.md
 docs/StructureDefinition.md
 docs/StructureDescription.md
 docs/StructureField.md
@@ -361,6 +362,7 @@ src/Opc.Ua.WebApi/Model/SimpleAttributeOperand.cs
 src/Opc.Ua.WebApi/Model/SimpleTypeDescription.cs
 src/Opc.Ua.WebApi/Model/StandaloneSubscribedDataSetDataType.cs
 src/Opc.Ua.WebApi/Model/StatusChangeNotification.cs
+src/Opc.Ua.WebApi/Model/StatusCode.cs
 src/Opc.Ua.WebApi/Model/StructureDefinition.cs
 src/Opc.Ua.WebApi/Model/StructureDescription.cs
 src/Opc.Ua.WebApi/Model/StructureField.cs

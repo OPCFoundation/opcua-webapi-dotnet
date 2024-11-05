@@ -30,16 +30,16 @@ namespace Opc.Ua.WebApi.Model
     /// AggregateFilter
     /// </summary>
     [DataContract(Name = "AggregateFilter")]
-    public partial class AggregateFilter : IEquatable<AggregateFilter>, IValidatableObject
+    public partial class AggregateFilter : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="AggregateFilter" /> class.
         /// </summary>
-        /// <param name="startTime">startTime.</param>
+        /// <param name="startTime">startTime (default to &quot;0001-01-01T00:00Z&quot;).</param>
         /// <param name="aggregateType">aggregateType.</param>
-        /// <param name="processingInterval">processingInterval.</param>
+        /// <param name="processingInterval">processingInterval (default to 0D).</param>
         /// <param name="aggregateConfiguration">aggregateConfiguration.</param>
-        public AggregateFilter(DateTime startTime = default(DateTime), string aggregateType = default(string), double processingInterval = default(double), AggregateConfiguration aggregateConfiguration = default(AggregateConfiguration))
+        public AggregateFilter(DateTime startTime = default(DateTime), string aggregateType = default(string), double processingInterval = 0D, AggregateConfiguration aggregateConfiguration = default(AggregateConfiguration))
         {
             this.StartTime = startTime;
             this.AggregateType = aggregateType;
@@ -97,80 +97,11 @@ namespace Opc.Ua.WebApi.Model
         }
 
         /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as AggregateFilter);
-        }
-
-        /// <summary>
-        /// Returns true if AggregateFilter instances are equal
-        /// </summary>
-        /// <param name="input">Instance of AggregateFilter to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(AggregateFilter input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.StartTime == input.StartTime ||
-                    (this.StartTime != null &&
-                    this.StartTime.Equals(input.StartTime))
-                ) && 
-                (
-                    this.AggregateType == input.AggregateType ||
-                    (this.AggregateType != null &&
-                    this.AggregateType.Equals(input.AggregateType))
-                ) && 
-                (
-                    this.ProcessingInterval == input.ProcessingInterval ||
-                    this.ProcessingInterval.Equals(input.ProcessingInterval)
-                ) && 
-                (
-                    this.AggregateConfiguration == input.AggregateConfiguration ||
-                    (this.AggregateConfiguration != null &&
-                    this.AggregateConfiguration.Equals(input.AggregateConfiguration))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.StartTime != null)
-                {
-                    hashCode = (hashCode * 59) + this.StartTime.GetHashCode();
-                }
-                if (this.AggregateType != null)
-                {
-                    hashCode = (hashCode * 59) + this.AggregateType.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.ProcessingInterval.GetHashCode();
-                if (this.AggregateConfiguration != null)
-                {
-                    hashCode = (hashCode * 59) + this.AggregateConfiguration.GetHashCode();
-                }
-                return hashCode;
-            }
-        }
-
-        /// <summary>
         /// To validate all properties of the instance
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

@@ -30,17 +30,18 @@ namespace Opc.Ua.WebApi.Model
     /// Decimal
     /// </summary>
     [DataContract(Name = "Decimal")]
-    public partial class Decimal : IEquatable<Decimal>, IValidatableObject
+    public partial class Decimal : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="Decimal" /> class.
         /// </summary>
-        /// <param name="scale">scale.</param>
-        /// <param name="value">value.</param>
-        public Decimal(int scale = default(int), string value = default(string))
+        /// <param name="scale">scale (default to 0).</param>
+        /// <param name="value">value (default to &quot;0&quot;).</param>
+        public Decimal(int scale = 0, string value = @"0")
         {
             this.Scale = scale;
-            this.Value = value;
+            // use default value if no "value" provided
+            this.Value = value ?? @"0";
         }
 
         /// <summary>
@@ -79,73 +80,22 @@ namespace Opc.Ua.WebApi.Model
         }
 
         /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as Decimal);
-        }
-
-        /// <summary>
-        /// Returns true if Decimal instances are equal
-        /// </summary>
-        /// <param name="input">Instance of Decimal to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(Decimal input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.Scale == input.Scale ||
-                    this.Scale.Equals(input.Scale)
-                ) && 
-                (
-                    this.Value == input.Value ||
-                    (this.Value != null &&
-                    this.Value.Equals(input.Value))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.Scale.GetHashCode();
-                if (this.Value != null)
-                {
-                    hashCode = (hashCode * 59) + this.Value.GetHashCode();
-                }
-                return hashCode;
-            }
-        }
-
-        /// <summary>
         /// To validate all properties of the instance
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // Scale (int) maximum
             if (this.Scale > (int)32767)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for Scale, must be a value less than or equal to 32767.", new [] { "Scale" });
+                yield return new ValidationResult("Invalid value for Scale, must be a value less than or equal to 32767.", new [] { "Scale" });
             }
 
             // Scale (int) minimum
             if (this.Scale < (int)-32768)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for Scale, must be a value greater than or equal to -32768.", new [] { "Scale" });
+                yield return new ValidationResult("Invalid value for Scale, must be a value greater than or equal to -32768.", new [] { "Scale" });
             }
 
             yield break;

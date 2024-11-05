@@ -30,7 +30,7 @@ namespace Opc.Ua.WebApi.Model
     /// UpdateEventDetails
     /// </summary>
     [DataContract(Name = "UpdateEventDetails")]
-    public partial class UpdateEventDetails : IEquatable<UpdateEventDetails>, IValidatableObject
+    public partial class UpdateEventDetails : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="UpdateEventDetails" /> class.
@@ -97,81 +97,11 @@ namespace Opc.Ua.WebApi.Model
         }
 
         /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as UpdateEventDetails);
-        }
-
-        /// <summary>
-        /// Returns true if UpdateEventDetails instances are equal
-        /// </summary>
-        /// <param name="input">Instance of UpdateEventDetails to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(UpdateEventDetails input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.NodeId == input.NodeId ||
-                    (this.NodeId != null &&
-                    this.NodeId.Equals(input.NodeId))
-                ) && 
-                (
-                    this.PerformInsertReplace == input.PerformInsertReplace ||
-                    this.PerformInsertReplace.Equals(input.PerformInsertReplace)
-                ) && 
-                (
-                    this.Filter == input.Filter ||
-                    (this.Filter != null &&
-                    this.Filter.Equals(input.Filter))
-                ) && 
-                (
-                    this.EventData == input.EventData ||
-                    this.EventData != null &&
-                    input.EventData != null &&
-                    this.EventData.SequenceEqual(input.EventData)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.NodeId != null)
-                {
-                    hashCode = (hashCode * 59) + this.NodeId.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.PerformInsertReplace.GetHashCode();
-                if (this.Filter != null)
-                {
-                    hashCode = (hashCode * 59) + this.Filter.GetHashCode();
-                }
-                if (this.EventData != null)
-                {
-                    hashCode = (hashCode * 59) + this.EventData.GetHashCode();
-                }
-                return hashCode;
-            }
-        }
-
-        /// <summary>
         /// To validate all properties of the instance
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

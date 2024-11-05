@@ -1,7 +1,7 @@
 /*
  * OPC UA Web API
  *
- * This API provides simple HTTPS based access to an OPC UA server.
+ * Provides simple HTTPS based access to an OPC UA server.
  *
  * The version of the OpenAPI document: 1.05.4
  * Contact: office@opcfoundation.org
@@ -62,6 +62,42 @@ namespace Opc.Ua.WebApi.Test.Model
         public void ReadModifiedTest()
         {
             // TODO unit test for the property 'ReadModified'
+        }
+
+        /// <summary>
+        /// Test the property 'NumValuesPerNode'
+        /// </summary>
+        [Fact]
+        public void NumValuesPerNodeTest()
+        {
+            // TODO unit test for the property 'NumValuesPerNode'
+        }
+
+        /// <summary>
+        /// Test the property 'StartTime'
+        /// </summary>
+        [Fact]
+        public void StartTimeTest()
+        {
+            // TODO unit test for the property 'StartTime'
+        }
+
+        /// <summary>
+        /// Test the property 'EndTime'
+        /// </summary>
+        [Fact]
+        public void EndTimeTest()
+        {
+            // TODO unit test for the property 'EndTime'
+        }
+
+        /// <summary>
+        /// Test the property 'Filter'
+        /// </summary>
+        [Fact]
+        public void FilterTest()
+        {
+            // TODO unit test for the property 'Filter'
         }
     }
 }

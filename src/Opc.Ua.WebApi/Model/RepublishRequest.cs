@@ -30,15 +30,15 @@ namespace Opc.Ua.WebApi.Model
     /// RepublishRequest
     /// </summary>
     [DataContract(Name = "RepublishRequest")]
-    public partial class RepublishRequest : IEquatable<RepublishRequest>, IValidatableObject
+    public partial class RepublishRequest : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="RepublishRequest" /> class.
         /// </summary>
         /// <param name="requestHeader">requestHeader.</param>
-        /// <param name="subscriptionId">subscriptionId.</param>
-        /// <param name="retransmitSequenceNumber">retransmitSequenceNumber.</param>
-        public RepublishRequest(RequestHeader requestHeader = default(RequestHeader), long subscriptionId = default(long), long retransmitSequenceNumber = default(long))
+        /// <param name="subscriptionId">subscriptionId (default to 0).</param>
+        /// <param name="retransmitSequenceNumber">retransmitSequenceNumber (default to 0).</param>
+        public RepublishRequest(RequestHeader requestHeader = default(RequestHeader), long subscriptionId = 0, long retransmitSequenceNumber = 0)
         {
             this.RequestHeader = requestHeader;
             this.SubscriptionId = subscriptionId;
@@ -88,90 +88,34 @@ namespace Opc.Ua.WebApi.Model
         }
 
         /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as RepublishRequest);
-        }
-
-        /// <summary>
-        /// Returns true if RepublishRequest instances are equal
-        /// </summary>
-        /// <param name="input">Instance of RepublishRequest to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(RepublishRequest input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.RequestHeader == input.RequestHeader ||
-                    (this.RequestHeader != null &&
-                    this.RequestHeader.Equals(input.RequestHeader))
-                ) && 
-                (
-                    this.SubscriptionId == input.SubscriptionId ||
-                    this.SubscriptionId.Equals(input.SubscriptionId)
-                ) && 
-                (
-                    this.RetransmitSequenceNumber == input.RetransmitSequenceNumber ||
-                    this.RetransmitSequenceNumber.Equals(input.RetransmitSequenceNumber)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.RequestHeader != null)
-                {
-                    hashCode = (hashCode * 59) + this.RequestHeader.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.SubscriptionId.GetHashCode();
-                hashCode = (hashCode * 59) + this.RetransmitSequenceNumber.GetHashCode();
-                return hashCode;
-            }
-        }
-
-        /// <summary>
         /// To validate all properties of the instance
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // SubscriptionId (long) maximum
             if (this.SubscriptionId > (long)4294967295)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SubscriptionId, must be a value less than or equal to 4294967295.", new [] { "SubscriptionId" });
+                yield return new ValidationResult("Invalid value for SubscriptionId, must be a value less than or equal to 4294967295.", new [] { "SubscriptionId" });
             }
 
             // SubscriptionId (long) minimum
             if (this.SubscriptionId < (long)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SubscriptionId, must be a value greater than or equal to 0.", new [] { "SubscriptionId" });
+                yield return new ValidationResult("Invalid value for SubscriptionId, must be a value greater than or equal to 0.", new [] { "SubscriptionId" });
             }
 
             // RetransmitSequenceNumber (long) maximum
             if (this.RetransmitSequenceNumber > (long)4294967295)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for RetransmitSequenceNumber, must be a value less than or equal to 4294967295.", new [] { "RetransmitSequenceNumber" });
+                yield return new ValidationResult("Invalid value for RetransmitSequenceNumber, must be a value less than or equal to 4294967295.", new [] { "RetransmitSequenceNumber" });
             }
 
             // RetransmitSequenceNumber (long) minimum
             if (this.RetransmitSequenceNumber < (long)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for RetransmitSequenceNumber, must be a value greater than or equal to 0.", new [] { "RetransmitSequenceNumber" });
+                yield return new ValidationResult("Invalid value for RetransmitSequenceNumber, must be a value greater than or equal to 0.", new [] { "RetransmitSequenceNumber" });
             }
 
             yield break;

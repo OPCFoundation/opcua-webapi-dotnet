@@ -30,7 +30,7 @@ namespace Opc.Ua.WebApi.Model
     /// DataTypeSchemaHeader
     /// </summary>
     [DataContract(Name = "DataTypeSchemaHeader")]
-    public partial class DataTypeSchemaHeader : IEquatable<DataTypeSchemaHeader>, IValidatableObject
+    public partial class DataTypeSchemaHeader : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="DataTypeSchemaHeader" /> class.
@@ -97,88 +97,11 @@ namespace Opc.Ua.WebApi.Model
         }
 
         /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as DataTypeSchemaHeader);
-        }
-
-        /// <summary>
-        /// Returns true if DataTypeSchemaHeader instances are equal
-        /// </summary>
-        /// <param name="input">Instance of DataTypeSchemaHeader to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(DataTypeSchemaHeader input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.Namespaces == input.Namespaces ||
-                    this.Namespaces != null &&
-                    input.Namespaces != null &&
-                    this.Namespaces.SequenceEqual(input.Namespaces)
-                ) && 
-                (
-                    this.StructureDataTypes == input.StructureDataTypes ||
-                    this.StructureDataTypes != null &&
-                    input.StructureDataTypes != null &&
-                    this.StructureDataTypes.SequenceEqual(input.StructureDataTypes)
-                ) && 
-                (
-                    this.EnumDataTypes == input.EnumDataTypes ||
-                    this.EnumDataTypes != null &&
-                    input.EnumDataTypes != null &&
-                    this.EnumDataTypes.SequenceEqual(input.EnumDataTypes)
-                ) && 
-                (
-                    this.SimpleDataTypes == input.SimpleDataTypes ||
-                    this.SimpleDataTypes != null &&
-                    input.SimpleDataTypes != null &&
-                    this.SimpleDataTypes.SequenceEqual(input.SimpleDataTypes)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.Namespaces != null)
-                {
-                    hashCode = (hashCode * 59) + this.Namespaces.GetHashCode();
-                }
-                if (this.StructureDataTypes != null)
-                {
-                    hashCode = (hashCode * 59) + this.StructureDataTypes.GetHashCode();
-                }
-                if (this.EnumDataTypes != null)
-                {
-                    hashCode = (hashCode * 59) + this.EnumDataTypes.GetHashCode();
-                }
-                if (this.SimpleDataTypes != null)
-                {
-                    hashCode = (hashCode * 59) + this.SimpleDataTypes.GetHashCode();
-                }
-                return hashCode;
-            }
-        }
-
-        /// <summary>
         /// To validate all properties of the instance
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

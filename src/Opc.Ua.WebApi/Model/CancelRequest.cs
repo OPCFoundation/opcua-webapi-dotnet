@@ -30,14 +30,14 @@ namespace Opc.Ua.WebApi.Model
     /// CancelRequest
     /// </summary>
     [DataContract(Name = "CancelRequest")]
-    public partial class CancelRequest : IEquatable<CancelRequest>, IValidatableObject
+    public partial class CancelRequest : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="CancelRequest" /> class.
         /// </summary>
         /// <param name="requestHeader">requestHeader.</param>
-        /// <param name="requestHandle">requestHandle.</param>
-        public CancelRequest(RequestHeader requestHeader = default(RequestHeader), long requestHandle = default(long))
+        /// <param name="requestHandle">requestHandle (default to 0).</param>
+        public CancelRequest(RequestHeader requestHeader = default(RequestHeader), long requestHandle = 0)
         {
             this.RequestHeader = requestHeader;
             this.RequestHandle = requestHandle;
@@ -79,73 +79,22 @@ namespace Opc.Ua.WebApi.Model
         }
 
         /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as CancelRequest);
-        }
-
-        /// <summary>
-        /// Returns true if CancelRequest instances are equal
-        /// </summary>
-        /// <param name="input">Instance of CancelRequest to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(CancelRequest input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.RequestHeader == input.RequestHeader ||
-                    (this.RequestHeader != null &&
-                    this.RequestHeader.Equals(input.RequestHeader))
-                ) && 
-                (
-                    this.RequestHandle == input.RequestHandle ||
-                    this.RequestHandle.Equals(input.RequestHandle)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.RequestHeader != null)
-                {
-                    hashCode = (hashCode * 59) + this.RequestHeader.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.RequestHandle.GetHashCode();
-                return hashCode;
-            }
-        }
-
-        /// <summary>
         /// To validate all properties of the instance
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // RequestHandle (long) maximum
             if (this.RequestHandle > (long)4294967295)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for RequestHandle, must be a value less than or equal to 4294967295.", new [] { "RequestHandle" });
+                yield return new ValidationResult("Invalid value for RequestHandle, must be a value less than or equal to 4294967295.", new [] { "RequestHandle" });
             }
 
             // RequestHandle (long) minimum
             if (this.RequestHandle < (long)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for RequestHandle, must be a value greater than or equal to 0.", new [] { "RequestHandle" });
+                yield return new ValidationResult("Invalid value for RequestHandle, must be a value greater than or equal to 0.", new [] { "RequestHandle" });
             }
 
             yield break;

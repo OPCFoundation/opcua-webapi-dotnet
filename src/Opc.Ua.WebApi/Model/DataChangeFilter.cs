@@ -30,15 +30,15 @@ namespace Opc.Ua.WebApi.Model
     /// DataChangeFilter
     /// </summary>
     [DataContract(Name = "DataChangeFilter")]
-    public partial class DataChangeFilter : IEquatable<DataChangeFilter>, IValidatableObject
+    public partial class DataChangeFilter : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="DataChangeFilter" /> class.
         /// </summary>
         /// <param name="trigger">trigger.</param>
-        /// <param name="deadbandType">deadbandType.</param>
-        /// <param name="deadbandValue">deadbandValue.</param>
-        public DataChangeFilter(int trigger = default(int), long deadbandType = default(long), double deadbandValue = default(double))
+        /// <param name="deadbandType">deadbandType (default to 0).</param>
+        /// <param name="deadbandValue">deadbandValue (default to 0D).</param>
+        public DataChangeFilter(int trigger = default(int), long deadbandType = 0, double deadbandValue = 0D)
         {
             this.Trigger = trigger;
             this.DeadbandType = deadbandType;
@@ -88,74 +88,22 @@ namespace Opc.Ua.WebApi.Model
         }
 
         /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as DataChangeFilter);
-        }
-
-        /// <summary>
-        /// Returns true if DataChangeFilter instances are equal
-        /// </summary>
-        /// <param name="input">Instance of DataChangeFilter to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(DataChangeFilter input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.Trigger == input.Trigger ||
-                    this.Trigger.Equals(input.Trigger)
-                ) && 
-                (
-                    this.DeadbandType == input.DeadbandType ||
-                    this.DeadbandType.Equals(input.DeadbandType)
-                ) && 
-                (
-                    this.DeadbandValue == input.DeadbandValue ||
-                    this.DeadbandValue.Equals(input.DeadbandValue)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.Trigger.GetHashCode();
-                hashCode = (hashCode * 59) + this.DeadbandType.GetHashCode();
-                hashCode = (hashCode * 59) + this.DeadbandValue.GetHashCode();
-                return hashCode;
-            }
-        }
-
-        /// <summary>
         /// To validate all properties of the instance
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // DeadbandType (long) maximum
             if (this.DeadbandType > (long)4294967295)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DeadbandType, must be a value less than or equal to 4294967295.", new [] { "DeadbandType" });
+                yield return new ValidationResult("Invalid value for DeadbandType, must be a value less than or equal to 4294967295.", new [] { "DeadbandType" });
             }
 
             // DeadbandType (long) minimum
             if (this.DeadbandType < (long)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for DeadbandType, must be a value greater than or equal to 0.", new [] { "DeadbandType" });
+                yield return new ValidationResult("Invalid value for DeadbandType, must be a value greater than or equal to 0.", new [] { "DeadbandType" });
             }
 
             yield break;

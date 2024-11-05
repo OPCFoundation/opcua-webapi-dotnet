@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **ReferenceTypeId** | **string** |  | [optional] 
-**IsForward** | **bool** |  | [optional] 
+**IsForward** | **bool** |  | [optional] [default to false]
 **NodeId** | **string** |  | [optional] 
 **BrowseName** | **string** |  | [optional] 
 **DisplayName** | [**LocalizedText**](LocalizedText.md) |  | [optional] 

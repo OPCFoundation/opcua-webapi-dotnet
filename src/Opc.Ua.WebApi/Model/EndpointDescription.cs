@@ -30,7 +30,7 @@ namespace Opc.Ua.WebApi.Model
     /// EndpointDescription
     /// </summary>
     [DataContract(Name = "EndpointDescription")]
-    public partial class EndpointDescription : IEquatable<EndpointDescription>, IValidatableObject
+    public partial class EndpointDescription : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="EndpointDescription" /> class.
@@ -42,8 +42,8 @@ namespace Opc.Ua.WebApi.Model
         /// <param name="securityPolicyUri">securityPolicyUri.</param>
         /// <param name="userIdentityTokens">userIdentityTokens.</param>
         /// <param name="transportProfileUri">transportProfileUri.</param>
-        /// <param name="securityLevel">securityLevel.</param>
-        public EndpointDescription(string endpointUrl = default(string), ApplicationDescription server = default(ApplicationDescription), byte[] serverCertificate = default(byte[]), int securityMode = default(int), string securityPolicyUri = default(string), List<UserTokenPolicy> userIdentityTokens = default(List<UserTokenPolicy>), string transportProfileUri = default(string), int securityLevel = default(int))
+        /// <param name="securityLevel">securityLevel (default to 0).</param>
+        public EndpointDescription(string endpointUrl = default(string), ApplicationDescription server = default(ApplicationDescription), byte[] serverCertificate = default(byte[]), int securityMode = default(int), string securityPolicyUri = default(string), List<UserTokenPolicy> userIdentityTokens = default(List<UserTokenPolicy>), string transportProfileUri = default(string), int securityLevel = 0)
         {
             this.EndpointUrl = endpointUrl;
             this.Server = server;
@@ -133,124 +133,22 @@ namespace Opc.Ua.WebApi.Model
         }
 
         /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as EndpointDescription);
-        }
-
-        /// <summary>
-        /// Returns true if EndpointDescription instances are equal
-        /// </summary>
-        /// <param name="input">Instance of EndpointDescription to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(EndpointDescription input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.EndpointUrl == input.EndpointUrl ||
-                    (this.EndpointUrl != null &&
-                    this.EndpointUrl.Equals(input.EndpointUrl))
-                ) && 
-                (
-                    this.Server == input.Server ||
-                    (this.Server != null &&
-                    this.Server.Equals(input.Server))
-                ) && 
-                (
-                    this.ServerCertificate == input.ServerCertificate ||
-                    (this.ServerCertificate != null &&
-                    this.ServerCertificate.Equals(input.ServerCertificate))
-                ) && 
-                (
-                    this.SecurityMode == input.SecurityMode ||
-                    this.SecurityMode.Equals(input.SecurityMode)
-                ) && 
-                (
-                    this.SecurityPolicyUri == input.SecurityPolicyUri ||
-                    (this.SecurityPolicyUri != null &&
-                    this.SecurityPolicyUri.Equals(input.SecurityPolicyUri))
-                ) && 
-                (
-                    this.UserIdentityTokens == input.UserIdentityTokens ||
-                    this.UserIdentityTokens != null &&
-                    input.UserIdentityTokens != null &&
-                    this.UserIdentityTokens.SequenceEqual(input.UserIdentityTokens)
-                ) && 
-                (
-                    this.TransportProfileUri == input.TransportProfileUri ||
-                    (this.TransportProfileUri != null &&
-                    this.TransportProfileUri.Equals(input.TransportProfileUri))
-                ) && 
-                (
-                    this.SecurityLevel == input.SecurityLevel ||
-                    this.SecurityLevel.Equals(input.SecurityLevel)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.EndpointUrl != null)
-                {
-                    hashCode = (hashCode * 59) + this.EndpointUrl.GetHashCode();
-                }
-                if (this.Server != null)
-                {
-                    hashCode = (hashCode * 59) + this.Server.GetHashCode();
-                }
-                if (this.ServerCertificate != null)
-                {
-                    hashCode = (hashCode * 59) + this.ServerCertificate.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.SecurityMode.GetHashCode();
-                if (this.SecurityPolicyUri != null)
-                {
-                    hashCode = (hashCode * 59) + this.SecurityPolicyUri.GetHashCode();
-                }
-                if (this.UserIdentityTokens != null)
-                {
-                    hashCode = (hashCode * 59) + this.UserIdentityTokens.GetHashCode();
-                }
-                if (this.TransportProfileUri != null)
-                {
-                    hashCode = (hashCode * 59) + this.TransportProfileUri.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.SecurityLevel.GetHashCode();
-                return hashCode;
-            }
-        }
-
-        /// <summary>
         /// To validate all properties of the instance
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // SecurityLevel (int) maximum
             if (this.SecurityLevel > (int)255)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SecurityLevel, must be a value less than or equal to 255.", new [] { "SecurityLevel" });
+                yield return new ValidationResult("Invalid value for SecurityLevel, must be a value less than or equal to 255.", new [] { "SecurityLevel" });
             }
 
             // SecurityLevel (int) minimum
             if (this.SecurityLevel < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SecurityLevel, must be a value greater than or equal to 0.", new [] { "SecurityLevel" });
+                yield return new ValidationResult("Invalid value for SecurityLevel, must be a value greater than or equal to 0.", new [] { "SecurityLevel" });
             }
 
             yield break;

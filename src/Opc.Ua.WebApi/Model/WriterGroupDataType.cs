@@ -30,28 +30,28 @@ namespace Opc.Ua.WebApi.Model
     /// WriterGroupDataType
     /// </summary>
     [DataContract(Name = "WriterGroupDataType")]
-    public partial class WriterGroupDataType : IEquatable<WriterGroupDataType>, IValidatableObject
+    public partial class WriterGroupDataType : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="WriterGroupDataType" /> class.
         /// </summary>
-        /// <param name="writerGroupId">writerGroupId.</param>
-        /// <param name="publishingInterval">publishingInterval.</param>
-        /// <param name="keepAliveTime">keepAliveTime.</param>
-        /// <param name="priority">priority.</param>
+        /// <param name="writerGroupId">writerGroupId (default to 0).</param>
+        /// <param name="publishingInterval">publishingInterval (default to 0D).</param>
+        /// <param name="keepAliveTime">keepAliveTime (default to 0D).</param>
+        /// <param name="priority">priority (default to 0).</param>
         /// <param name="localeIds">localeIds.</param>
         /// <param name="headerLayoutUri">headerLayoutUri.</param>
         /// <param name="transportSettings">transportSettings.</param>
         /// <param name="messageSettings">messageSettings.</param>
         /// <param name="dataSetWriters">dataSetWriters.</param>
         /// <param name="name">name.</param>
-        /// <param name="enabled">enabled.</param>
+        /// <param name="enabled">enabled (default to false).</param>
         /// <param name="securityMode">securityMode.</param>
         /// <param name="securityGroupId">securityGroupId.</param>
         /// <param name="securityKeyServices">securityKeyServices.</param>
-        /// <param name="maxNetworkMessageSize">maxNetworkMessageSize.</param>
+        /// <param name="maxNetworkMessageSize">maxNetworkMessageSize (default to 0).</param>
         /// <param name="groupProperties">groupProperties.</param>
-        public WriterGroupDataType(int writerGroupId = default(int), double publishingInterval = default(double), double keepAliveTime = default(double), int priority = default(int), List<string> localeIds = default(List<string>), string headerLayoutUri = default(string), ExtensionObject transportSettings = default(ExtensionObject), ExtensionObject messageSettings = default(ExtensionObject), List<DataSetWriterDataType> dataSetWriters = default(List<DataSetWriterDataType>), string name = default(string), bool enabled = default(bool), int securityMode = default(int), string securityGroupId = default(string), List<EndpointDescription> securityKeyServices = default(List<EndpointDescription>), long maxNetworkMessageSize = default(long), List<KeyValuePair> groupProperties = default(List<KeyValuePair>))
+        public WriterGroupDataType(int writerGroupId = 0, double publishingInterval = 0D, double keepAliveTime = 0D, int priority = 0, List<string> localeIds = default(List<string>), string headerLayoutUri = default(string), ExtensionObject transportSettings = default(ExtensionObject), ExtensionObject messageSettings = default(ExtensionObject), List<DataSetWriterDataType> dataSetWriters = default(List<DataSetWriterDataType>), string name = default(string), bool enabled = false, int securityMode = default(int), string securityGroupId = default(string), List<EndpointDescription> securityKeyServices = default(List<EndpointDescription>), long maxNetworkMessageSize = 0, List<KeyValuePair> groupProperties = default(List<KeyValuePair>))
         {
             this.WriterGroupId = writerGroupId;
             this.PublishingInterval = publishingInterval;
@@ -205,203 +205,46 @@ namespace Opc.Ua.WebApi.Model
         }
 
         /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as WriterGroupDataType);
-        }
-
-        /// <summary>
-        /// Returns true if WriterGroupDataType instances are equal
-        /// </summary>
-        /// <param name="input">Instance of WriterGroupDataType to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(WriterGroupDataType input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.WriterGroupId == input.WriterGroupId ||
-                    this.WriterGroupId.Equals(input.WriterGroupId)
-                ) && 
-                (
-                    this.PublishingInterval == input.PublishingInterval ||
-                    this.PublishingInterval.Equals(input.PublishingInterval)
-                ) && 
-                (
-                    this.KeepAliveTime == input.KeepAliveTime ||
-                    this.KeepAliveTime.Equals(input.KeepAliveTime)
-                ) && 
-                (
-                    this.Priority == input.Priority ||
-                    this.Priority.Equals(input.Priority)
-                ) && 
-                (
-                    this.LocaleIds == input.LocaleIds ||
-                    this.LocaleIds != null &&
-                    input.LocaleIds != null &&
-                    this.LocaleIds.SequenceEqual(input.LocaleIds)
-                ) && 
-                (
-                    this.HeaderLayoutUri == input.HeaderLayoutUri ||
-                    (this.HeaderLayoutUri != null &&
-                    this.HeaderLayoutUri.Equals(input.HeaderLayoutUri))
-                ) && 
-                (
-                    this.TransportSettings == input.TransportSettings ||
-                    (this.TransportSettings != null &&
-                    this.TransportSettings.Equals(input.TransportSettings))
-                ) && 
-                (
-                    this.MessageSettings == input.MessageSettings ||
-                    (this.MessageSettings != null &&
-                    this.MessageSettings.Equals(input.MessageSettings))
-                ) && 
-                (
-                    this.DataSetWriters == input.DataSetWriters ||
-                    this.DataSetWriters != null &&
-                    input.DataSetWriters != null &&
-                    this.DataSetWriters.SequenceEqual(input.DataSetWriters)
-                ) && 
-                (
-                    this.Name == input.Name ||
-                    (this.Name != null &&
-                    this.Name.Equals(input.Name))
-                ) && 
-                (
-                    this.Enabled == input.Enabled ||
-                    this.Enabled.Equals(input.Enabled)
-                ) && 
-                (
-                    this.SecurityMode == input.SecurityMode ||
-                    this.SecurityMode.Equals(input.SecurityMode)
-                ) && 
-                (
-                    this.SecurityGroupId == input.SecurityGroupId ||
-                    (this.SecurityGroupId != null &&
-                    this.SecurityGroupId.Equals(input.SecurityGroupId))
-                ) && 
-                (
-                    this.SecurityKeyServices == input.SecurityKeyServices ||
-                    this.SecurityKeyServices != null &&
-                    input.SecurityKeyServices != null &&
-                    this.SecurityKeyServices.SequenceEqual(input.SecurityKeyServices)
-                ) && 
-                (
-                    this.MaxNetworkMessageSize == input.MaxNetworkMessageSize ||
-                    this.MaxNetworkMessageSize.Equals(input.MaxNetworkMessageSize)
-                ) && 
-                (
-                    this.GroupProperties == input.GroupProperties ||
-                    this.GroupProperties != null &&
-                    input.GroupProperties != null &&
-                    this.GroupProperties.SequenceEqual(input.GroupProperties)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.WriterGroupId.GetHashCode();
-                hashCode = (hashCode * 59) + this.PublishingInterval.GetHashCode();
-                hashCode = (hashCode * 59) + this.KeepAliveTime.GetHashCode();
-                hashCode = (hashCode * 59) + this.Priority.GetHashCode();
-                if (this.LocaleIds != null)
-                {
-                    hashCode = (hashCode * 59) + this.LocaleIds.GetHashCode();
-                }
-                if (this.HeaderLayoutUri != null)
-                {
-                    hashCode = (hashCode * 59) + this.HeaderLayoutUri.GetHashCode();
-                }
-                if (this.TransportSettings != null)
-                {
-                    hashCode = (hashCode * 59) + this.TransportSettings.GetHashCode();
-                }
-                if (this.MessageSettings != null)
-                {
-                    hashCode = (hashCode * 59) + this.MessageSettings.GetHashCode();
-                }
-                if (this.DataSetWriters != null)
-                {
-                    hashCode = (hashCode * 59) + this.DataSetWriters.GetHashCode();
-                }
-                if (this.Name != null)
-                {
-                    hashCode = (hashCode * 59) + this.Name.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.Enabled.GetHashCode();
-                hashCode = (hashCode * 59) + this.SecurityMode.GetHashCode();
-                if (this.SecurityGroupId != null)
-                {
-                    hashCode = (hashCode * 59) + this.SecurityGroupId.GetHashCode();
-                }
-                if (this.SecurityKeyServices != null)
-                {
-                    hashCode = (hashCode * 59) + this.SecurityKeyServices.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.MaxNetworkMessageSize.GetHashCode();
-                if (this.GroupProperties != null)
-                {
-                    hashCode = (hashCode * 59) + this.GroupProperties.GetHashCode();
-                }
-                return hashCode;
-            }
-        }
-
-        /// <summary>
         /// To validate all properties of the instance
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // WriterGroupId (int) maximum
             if (this.WriterGroupId > (int)65535)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for WriterGroupId, must be a value less than or equal to 65535.", new [] { "WriterGroupId" });
+                yield return new ValidationResult("Invalid value for WriterGroupId, must be a value less than or equal to 65535.", new [] { "WriterGroupId" });
             }
 
             // WriterGroupId (int) minimum
             if (this.WriterGroupId < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for WriterGroupId, must be a value greater than or equal to 0.", new [] { "WriterGroupId" });
+                yield return new ValidationResult("Invalid value for WriterGroupId, must be a value greater than or equal to 0.", new [] { "WriterGroupId" });
             }
 
             // Priority (int) maximum
             if (this.Priority > (int)255)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for Priority, must be a value less than or equal to 255.", new [] { "Priority" });
+                yield return new ValidationResult("Invalid value for Priority, must be a value less than or equal to 255.", new [] { "Priority" });
             }
 
             // Priority (int) minimum
             if (this.Priority < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for Priority, must be a value greater than or equal to 0.", new [] { "Priority" });
+                yield return new ValidationResult("Invalid value for Priority, must be a value greater than or equal to 0.", new [] { "Priority" });
             }
 
             // MaxNetworkMessageSize (long) maximum
             if (this.MaxNetworkMessageSize > (long)4294967295)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for MaxNetworkMessageSize, must be a value less than or equal to 4294967295.", new [] { "MaxNetworkMessageSize" });
+                yield return new ValidationResult("Invalid value for MaxNetworkMessageSize, must be a value less than or equal to 4294967295.", new [] { "MaxNetworkMessageSize" });
             }
 
             // MaxNetworkMessageSize (long) minimum
             if (this.MaxNetworkMessageSize < (long)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for MaxNetworkMessageSize, must be a value greater than or equal to 0.", new [] { "MaxNetworkMessageSize" });
+                yield return new ValidationResult("Invalid value for MaxNetworkMessageSize, must be a value greater than or equal to 0.", new [] { "MaxNetworkMessageSize" });
             }
 
             yield break;

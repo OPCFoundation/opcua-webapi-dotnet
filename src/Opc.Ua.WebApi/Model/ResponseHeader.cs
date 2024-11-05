@@ -30,18 +30,18 @@ namespace Opc.Ua.WebApi.Model
     /// ResponseHeader
     /// </summary>
     [DataContract(Name = "ResponseHeader")]
-    public partial class ResponseHeader : IEquatable<ResponseHeader>, IValidatableObject
+    public partial class ResponseHeader : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ResponseHeader" /> class.
         /// </summary>
-        /// <param name="timestamp">timestamp.</param>
-        /// <param name="requestHandle">requestHandle.</param>
+        /// <param name="timestamp">timestamp (default to &quot;0001-01-01T00:00Z&quot;).</param>
+        /// <param name="requestHandle">requestHandle (default to 0).</param>
         /// <param name="serviceResult">serviceResult.</param>
         /// <param name="serviceDiagnostics">serviceDiagnostics.</param>
         /// <param name="stringTable">stringTable.</param>
         /// <param name="additionalHeader">additionalHeader.</param>
-        public ResponseHeader(DateTime timestamp = default(DateTime), long requestHandle = default(long), long serviceResult = default(long), DiagnosticInfo serviceDiagnostics = default(DiagnosticInfo), List<string> stringTable = default(List<string>), ExtensionObject additionalHeader = default(ExtensionObject))
+        public ResponseHeader(DateTime timestamp = default(DateTime), long requestHandle = 0, StatusCode serviceResult = default(StatusCode), DiagnosticInfo serviceDiagnostics = default(DiagnosticInfo), List<string> stringTable = default(List<string>), ExtensionObject additionalHeader = default(ExtensionObject))
         {
             this.Timestamp = timestamp;
             this.RequestHandle = requestHandle;
@@ -67,7 +67,7 @@ namespace Opc.Ua.WebApi.Model
         /// Gets or Sets ServiceResult
         /// </summary>
         [DataMember(Name = "ServiceResult", EmitDefaultValue = false)]
-        public long ServiceResult { get; set; }
+        public StatusCode ServiceResult { get; set; }
 
         /// <summary>
         /// Gets or Sets ServiceDiagnostics
@@ -115,118 +115,22 @@ namespace Opc.Ua.WebApi.Model
         }
 
         /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as ResponseHeader);
-        }
-
-        /// <summary>
-        /// Returns true if ResponseHeader instances are equal
-        /// </summary>
-        /// <param name="input">Instance of ResponseHeader to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(ResponseHeader input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.Timestamp == input.Timestamp ||
-                    (this.Timestamp != null &&
-                    this.Timestamp.Equals(input.Timestamp))
-                ) && 
-                (
-                    this.RequestHandle == input.RequestHandle ||
-                    this.RequestHandle.Equals(input.RequestHandle)
-                ) && 
-                (
-                    this.ServiceResult == input.ServiceResult ||
-                    this.ServiceResult.Equals(input.ServiceResult)
-                ) && 
-                (
-                    this.ServiceDiagnostics == input.ServiceDiagnostics ||
-                    (this.ServiceDiagnostics != null &&
-                    this.ServiceDiagnostics.Equals(input.ServiceDiagnostics))
-                ) && 
-                (
-                    this.StringTable == input.StringTable ||
-                    this.StringTable != null &&
-                    input.StringTable != null &&
-                    this.StringTable.SequenceEqual(input.StringTable)
-                ) && 
-                (
-                    this.AdditionalHeader == input.AdditionalHeader ||
-                    (this.AdditionalHeader != null &&
-                    this.AdditionalHeader.Equals(input.AdditionalHeader))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.Timestamp != null)
-                {
-                    hashCode = (hashCode * 59) + this.Timestamp.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.RequestHandle.GetHashCode();
-                hashCode = (hashCode * 59) + this.ServiceResult.GetHashCode();
-                if (this.ServiceDiagnostics != null)
-                {
-                    hashCode = (hashCode * 59) + this.ServiceDiagnostics.GetHashCode();
-                }
-                if (this.StringTable != null)
-                {
-                    hashCode = (hashCode * 59) + this.StringTable.GetHashCode();
-                }
-                if (this.AdditionalHeader != null)
-                {
-                    hashCode = (hashCode * 59) + this.AdditionalHeader.GetHashCode();
-                }
-                return hashCode;
-            }
-        }
-
-        /// <summary>
         /// To validate all properties of the instance
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // RequestHandle (long) maximum
             if (this.RequestHandle > (long)4294967295)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for RequestHandle, must be a value less than or equal to 4294967295.", new [] { "RequestHandle" });
+                yield return new ValidationResult("Invalid value for RequestHandle, must be a value less than or equal to 4294967295.", new [] { "RequestHandle" });
             }
 
             // RequestHandle (long) minimum
             if (this.RequestHandle < (long)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for RequestHandle, must be a value greater than or equal to 0.", new [] { "RequestHandle" });
-            }
-
-            // ServiceResult (long) maximum
-            if (this.ServiceResult > (long)4294967295)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for ServiceResult, must be a value less than or equal to 4294967295.", new [] { "ServiceResult" });
-            }
-
-            // ServiceResult (long) minimum
-            if (this.ServiceResult < (long)0)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for ServiceResult, must be a value greater than or equal to 0.", new [] { "ServiceResult" });
+                yield return new ValidationResult("Invalid value for RequestHandle, must be a value greater than or equal to 0.", new [] { "RequestHandle" });
             }
 
             yield break;

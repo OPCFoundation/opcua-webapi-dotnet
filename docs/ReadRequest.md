@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **RequestHeader** | [**RequestHeader**](RequestHeader.md) |  | [optional] 
-**MaxAge** | **double** |  | [optional] 
+**MaxAge** | **double** |  | [optional] [default to 0D]
 **TimestampsToReturn** | **int** |  | [optional] 
 **NodesToRead** | [**List&lt;ReadValueId&gt;**](ReadValueId.md) |  | [optional] 
 

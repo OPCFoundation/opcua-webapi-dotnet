@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **SecurityPolicyUri** | **string** |  | [optional] 
 **UserIdentityTokens** | [**List&lt;UserTokenPolicy&gt;**](UserTokenPolicy.md) |  | [optional] 
 **TransportProfileUri** | **string** |  | [optional] 
-**SecurityLevel** | **int** |  | [optional] 
+**SecurityLevel** | **int** |  | [optional] [default to 0]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

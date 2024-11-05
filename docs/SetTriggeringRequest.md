@@ -5,8 +5,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **RequestHeader** | [**RequestHeader**](RequestHeader.md) |  | [optional] 
-**SubscriptionId** | **long** |  | [optional] 
-**TriggeringItemId** | **long** |  | [optional] 
+**SubscriptionId** | **long** |  | [optional] [default to 0]
+**TriggeringItemId** | **long** |  | [optional] [default to 0]
 **LinksToAdd** | **List&lt;long&gt;** |  | [optional] 
 **LinksToRemove** | **List&lt;long&gt;** |  | [optional] 
 

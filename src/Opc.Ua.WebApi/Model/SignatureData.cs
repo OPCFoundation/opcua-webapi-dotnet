@@ -30,7 +30,7 @@ namespace Opc.Ua.WebApi.Model
     /// SignatureData
     /// </summary>
     [DataContract(Name = "SignatureData")]
-    public partial class SignatureData : IEquatable<SignatureData>, IValidatableObject
+    public partial class SignatureData : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="SignatureData" /> class.
@@ -79,66 +79,11 @@ namespace Opc.Ua.WebApi.Model
         }
 
         /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as SignatureData);
-        }
-
-        /// <summary>
-        /// Returns true if SignatureData instances are equal
-        /// </summary>
-        /// <param name="input">Instance of SignatureData to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(SignatureData input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.Algorithm == input.Algorithm ||
-                    (this.Algorithm != null &&
-                    this.Algorithm.Equals(input.Algorithm))
-                ) && 
-                (
-                    this.Signature == input.Signature ||
-                    (this.Signature != null &&
-                    this.Signature.Equals(input.Signature))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.Algorithm != null)
-                {
-                    hashCode = (hashCode * 59) + this.Algorithm.GetHashCode();
-                }
-                if (this.Signature != null)
-                {
-                    hashCode = (hashCode * 59) + this.Signature.GetHashCode();
-                }
-                return hashCode;
-            }
-        }
-
-        /// <summary>
         /// To validate all properties of the instance
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

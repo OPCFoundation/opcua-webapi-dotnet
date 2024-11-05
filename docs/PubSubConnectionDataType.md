@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Name** | **string** |  | [optional] 
-**Enabled** | **bool** |  | [optional] 
+**Enabled** | **bool** |  | [optional] [default to false]
 **PublisherId** | [**Variant**](Variant.md) |  | [optional] 
 **TransportProfileUri** | **string** |  | [optional] 
 **Address** | [**ExtensionObject**](ExtensionObject.md) |  | [optional] 

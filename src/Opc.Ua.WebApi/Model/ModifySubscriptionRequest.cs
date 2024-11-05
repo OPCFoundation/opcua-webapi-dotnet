@@ -30,19 +30,19 @@ namespace Opc.Ua.WebApi.Model
     /// ModifySubscriptionRequest
     /// </summary>
     [DataContract(Name = "ModifySubscriptionRequest")]
-    public partial class ModifySubscriptionRequest : IEquatable<ModifySubscriptionRequest>, IValidatableObject
+    public partial class ModifySubscriptionRequest : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ModifySubscriptionRequest" /> class.
         /// </summary>
         /// <param name="requestHeader">requestHeader.</param>
-        /// <param name="subscriptionId">subscriptionId.</param>
-        /// <param name="requestedPublishingInterval">requestedPublishingInterval.</param>
-        /// <param name="requestedLifetimeCount">requestedLifetimeCount.</param>
-        /// <param name="requestedMaxKeepAliveCount">requestedMaxKeepAliveCount.</param>
-        /// <param name="maxNotificationsPerPublish">maxNotificationsPerPublish.</param>
-        /// <param name="priority">priority.</param>
-        public ModifySubscriptionRequest(RequestHeader requestHeader = default(RequestHeader), long subscriptionId = default(long), double requestedPublishingInterval = default(double), long requestedLifetimeCount = default(long), long requestedMaxKeepAliveCount = default(long), long maxNotificationsPerPublish = default(long), int priority = default(int))
+        /// <param name="subscriptionId">subscriptionId (default to 0).</param>
+        /// <param name="requestedPublishingInterval">requestedPublishingInterval (default to 0D).</param>
+        /// <param name="requestedLifetimeCount">requestedLifetimeCount (default to 0).</param>
+        /// <param name="requestedMaxKeepAliveCount">requestedMaxKeepAliveCount (default to 0).</param>
+        /// <param name="maxNotificationsPerPublish">maxNotificationsPerPublish (default to 0).</param>
+        /// <param name="priority">priority (default to 0).</param>
+        public ModifySubscriptionRequest(RequestHeader requestHeader = default(RequestHeader), long subscriptionId = 0, double requestedPublishingInterval = 0D, long requestedLifetimeCount = 0, long requestedMaxKeepAliveCount = 0, long maxNotificationsPerPublish = 0, int priority = 0)
         {
             this.RequestHeader = requestHeader;
             this.SubscriptionId = subscriptionId;
@@ -124,146 +124,70 @@ namespace Opc.Ua.WebApi.Model
         }
 
         /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as ModifySubscriptionRequest);
-        }
-
-        /// <summary>
-        /// Returns true if ModifySubscriptionRequest instances are equal
-        /// </summary>
-        /// <param name="input">Instance of ModifySubscriptionRequest to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(ModifySubscriptionRequest input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.RequestHeader == input.RequestHeader ||
-                    (this.RequestHeader != null &&
-                    this.RequestHeader.Equals(input.RequestHeader))
-                ) && 
-                (
-                    this.SubscriptionId == input.SubscriptionId ||
-                    this.SubscriptionId.Equals(input.SubscriptionId)
-                ) && 
-                (
-                    this.RequestedPublishingInterval == input.RequestedPublishingInterval ||
-                    this.RequestedPublishingInterval.Equals(input.RequestedPublishingInterval)
-                ) && 
-                (
-                    this.RequestedLifetimeCount == input.RequestedLifetimeCount ||
-                    this.RequestedLifetimeCount.Equals(input.RequestedLifetimeCount)
-                ) && 
-                (
-                    this.RequestedMaxKeepAliveCount == input.RequestedMaxKeepAliveCount ||
-                    this.RequestedMaxKeepAliveCount.Equals(input.RequestedMaxKeepAliveCount)
-                ) && 
-                (
-                    this.MaxNotificationsPerPublish == input.MaxNotificationsPerPublish ||
-                    this.MaxNotificationsPerPublish.Equals(input.MaxNotificationsPerPublish)
-                ) && 
-                (
-                    this.Priority == input.Priority ||
-                    this.Priority.Equals(input.Priority)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.RequestHeader != null)
-                {
-                    hashCode = (hashCode * 59) + this.RequestHeader.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.SubscriptionId.GetHashCode();
-                hashCode = (hashCode * 59) + this.RequestedPublishingInterval.GetHashCode();
-                hashCode = (hashCode * 59) + this.RequestedLifetimeCount.GetHashCode();
-                hashCode = (hashCode * 59) + this.RequestedMaxKeepAliveCount.GetHashCode();
-                hashCode = (hashCode * 59) + this.MaxNotificationsPerPublish.GetHashCode();
-                hashCode = (hashCode * 59) + this.Priority.GetHashCode();
-                return hashCode;
-            }
-        }
-
-        /// <summary>
         /// To validate all properties of the instance
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // SubscriptionId (long) maximum
             if (this.SubscriptionId > (long)4294967295)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SubscriptionId, must be a value less than or equal to 4294967295.", new [] { "SubscriptionId" });
+                yield return new ValidationResult("Invalid value for SubscriptionId, must be a value less than or equal to 4294967295.", new [] { "SubscriptionId" });
             }
 
             // SubscriptionId (long) minimum
             if (this.SubscriptionId < (long)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SubscriptionId, must be a value greater than or equal to 0.", new [] { "SubscriptionId" });
+                yield return new ValidationResult("Invalid value for SubscriptionId, must be a value greater than or equal to 0.", new [] { "SubscriptionId" });
             }
 
             // RequestedLifetimeCount (long) maximum
             if (this.RequestedLifetimeCount > (long)4294967295)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for RequestedLifetimeCount, must be a value less than or equal to 4294967295.", new [] { "RequestedLifetimeCount" });
+                yield return new ValidationResult("Invalid value for RequestedLifetimeCount, must be a value less than or equal to 4294967295.", new [] { "RequestedLifetimeCount" });
             }
 
             // RequestedLifetimeCount (long) minimum
             if (this.RequestedLifetimeCount < (long)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for RequestedLifetimeCount, must be a value greater than or equal to 0.", new [] { "RequestedLifetimeCount" });
+                yield return new ValidationResult("Invalid value for RequestedLifetimeCount, must be a value greater than or equal to 0.", new [] { "RequestedLifetimeCount" });
             }
 
             // RequestedMaxKeepAliveCount (long) maximum
             if (this.RequestedMaxKeepAliveCount > (long)4294967295)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for RequestedMaxKeepAliveCount, must be a value less than or equal to 4294967295.", new [] { "RequestedMaxKeepAliveCount" });
+                yield return new ValidationResult("Invalid value for RequestedMaxKeepAliveCount, must be a value less than or equal to 4294967295.", new [] { "RequestedMaxKeepAliveCount" });
             }
 
             // RequestedMaxKeepAliveCount (long) minimum
             if (this.RequestedMaxKeepAliveCount < (long)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for RequestedMaxKeepAliveCount, must be a value greater than or equal to 0.", new [] { "RequestedMaxKeepAliveCount" });
+                yield return new ValidationResult("Invalid value for RequestedMaxKeepAliveCount, must be a value greater than or equal to 0.", new [] { "RequestedMaxKeepAliveCount" });
             }
 
             // MaxNotificationsPerPublish (long) maximum
             if (this.MaxNotificationsPerPublish > (long)4294967295)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for MaxNotificationsPerPublish, must be a value less than or equal to 4294967295.", new [] { "MaxNotificationsPerPublish" });
+                yield return new ValidationResult("Invalid value for MaxNotificationsPerPublish, must be a value less than or equal to 4294967295.", new [] { "MaxNotificationsPerPublish" });
             }
 
             // MaxNotificationsPerPublish (long) minimum
             if (this.MaxNotificationsPerPublish < (long)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for MaxNotificationsPerPublish, must be a value greater than or equal to 0.", new [] { "MaxNotificationsPerPublish" });
+                yield return new ValidationResult("Invalid value for MaxNotificationsPerPublish, must be a value greater than or equal to 0.", new [] { "MaxNotificationsPerPublish" });
             }
 
             // Priority (int) maximum
             if (this.Priority > (int)255)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for Priority, must be a value less than or equal to 255.", new [] { "Priority" });
+                yield return new ValidationResult("Invalid value for Priority, must be a value less than or equal to 255.", new [] { "Priority" });
             }
 
             // Priority (int) minimum
             if (this.Priority < (int)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for Priority, must be a value greater than or equal to 0.", new [] { "Priority" });
+                yield return new ValidationResult("Invalid value for Priority, must be a value greater than or equal to 0.", new [] { "Priority" });
             }
 
             yield break;

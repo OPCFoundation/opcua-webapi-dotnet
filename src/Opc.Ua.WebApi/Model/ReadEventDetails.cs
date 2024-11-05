@@ -30,16 +30,16 @@ namespace Opc.Ua.WebApi.Model
     /// ReadEventDetails
     /// </summary>
     [DataContract(Name = "ReadEventDetails")]
-    public partial class ReadEventDetails : IEquatable<ReadEventDetails>, IValidatableObject
+    public partial class ReadEventDetails : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ReadEventDetails" /> class.
         /// </summary>
-        /// <param name="numValuesPerNode">numValuesPerNode.</param>
-        /// <param name="startTime">startTime.</param>
-        /// <param name="endTime">endTime.</param>
+        /// <param name="numValuesPerNode">numValuesPerNode (default to 0).</param>
+        /// <param name="startTime">startTime (default to &quot;0001-01-01T00:00Z&quot;).</param>
+        /// <param name="endTime">endTime (default to &quot;0001-01-01T00:00Z&quot;).</param>
         /// <param name="filter">filter.</param>
-        public ReadEventDetails(long numValuesPerNode = default(long), DateTime startTime = default(DateTime), DateTime endTime = default(DateTime), EventFilter filter = default(EventFilter))
+        public ReadEventDetails(long numValuesPerNode = 0, DateTime startTime = default(DateTime), DateTime endTime = default(DateTime), EventFilter filter = default(EventFilter))
         {
             this.NumValuesPerNode = numValuesPerNode;
             this.StartTime = startTime;
@@ -97,91 +97,22 @@ namespace Opc.Ua.WebApi.Model
         }
 
         /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as ReadEventDetails);
-        }
-
-        /// <summary>
-        /// Returns true if ReadEventDetails instances are equal
-        /// </summary>
-        /// <param name="input">Instance of ReadEventDetails to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(ReadEventDetails input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.NumValuesPerNode == input.NumValuesPerNode ||
-                    this.NumValuesPerNode.Equals(input.NumValuesPerNode)
-                ) && 
-                (
-                    this.StartTime == input.StartTime ||
-                    (this.StartTime != null &&
-                    this.StartTime.Equals(input.StartTime))
-                ) && 
-                (
-                    this.EndTime == input.EndTime ||
-                    (this.EndTime != null &&
-                    this.EndTime.Equals(input.EndTime))
-                ) && 
-                (
-                    this.Filter == input.Filter ||
-                    (this.Filter != null &&
-                    this.Filter.Equals(input.Filter))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.NumValuesPerNode.GetHashCode();
-                if (this.StartTime != null)
-                {
-                    hashCode = (hashCode * 59) + this.StartTime.GetHashCode();
-                }
-                if (this.EndTime != null)
-                {
-                    hashCode = (hashCode * 59) + this.EndTime.GetHashCode();
-                }
-                if (this.Filter != null)
-                {
-                    hashCode = (hashCode * 59) + this.Filter.GetHashCode();
-                }
-                return hashCode;
-            }
-        }
-
-        /// <summary>
         /// To validate all properties of the instance
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // NumValuesPerNode (long) maximum
             if (this.NumValuesPerNode > (long)4294967295)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for NumValuesPerNode, must be a value less than or equal to 4294967295.", new [] { "NumValuesPerNode" });
+                yield return new ValidationResult("Invalid value for NumValuesPerNode, must be a value less than or equal to 4294967295.", new [] { "NumValuesPerNode" });
             }
 
             // NumValuesPerNode (long) minimum
             if (this.NumValuesPerNode < (long)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for NumValuesPerNode, must be a value greater than or equal to 0.", new [] { "NumValuesPerNode" });
+                yield return new ValidationResult("Invalid value for NumValuesPerNode, must be a value greater than or equal to 0.", new [] { "NumValuesPerNode" });
             }
 
             yield break;

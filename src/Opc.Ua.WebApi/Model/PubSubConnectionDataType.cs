@@ -30,13 +30,13 @@ namespace Opc.Ua.WebApi.Model
     /// PubSubConnectionDataType
     /// </summary>
     [DataContract(Name = "PubSubConnectionDataType")]
-    public partial class PubSubConnectionDataType : IEquatable<PubSubConnectionDataType>, IValidatableObject
+    public partial class PubSubConnectionDataType : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="PubSubConnectionDataType" /> class.
         /// </summary>
         /// <param name="name">name.</param>
-        /// <param name="enabled">enabled.</param>
+        /// <param name="enabled">enabled (default to false).</param>
         /// <param name="publisherId">publisherId.</param>
         /// <param name="transportProfileUri">transportProfileUri.</param>
         /// <param name="address">address.</param>
@@ -44,7 +44,7 @@ namespace Opc.Ua.WebApi.Model
         /// <param name="transportSettings">transportSettings.</param>
         /// <param name="writerGroups">writerGroups.</param>
         /// <param name="readerGroups">readerGroups.</param>
-        public PubSubConnectionDataType(string name = default(string), bool enabled = default(bool), Variant publisherId = default(Variant), string transportProfileUri = default(string), ExtensionObject address = default(ExtensionObject), List<KeyValuePair> connectionProperties = default(List<KeyValuePair>), ExtensionObject transportSettings = default(ExtensionObject), List<WriterGroupDataType> writerGroups = default(List<WriterGroupDataType>), List<ReaderGroupDataType> readerGroups = default(List<ReaderGroupDataType>))
+        public PubSubConnectionDataType(string name = default(string), bool enabled = false, Variant publisherId = default(Variant), string transportProfileUri = default(string), ExtensionObject address = default(ExtensionObject), List<KeyValuePair> connectionProperties = default(List<KeyValuePair>), ExtensionObject transportSettings = default(ExtensionObject), List<WriterGroupDataType> writerGroups = default(List<WriterGroupDataType>), List<ReaderGroupDataType> readerGroups = default(List<ReaderGroupDataType>))
         {
             this.Name = name;
             this.Enabled = enabled;
@@ -142,128 +142,11 @@ namespace Opc.Ua.WebApi.Model
         }
 
         /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as PubSubConnectionDataType);
-        }
-
-        /// <summary>
-        /// Returns true if PubSubConnectionDataType instances are equal
-        /// </summary>
-        /// <param name="input">Instance of PubSubConnectionDataType to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(PubSubConnectionDataType input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.Name == input.Name ||
-                    (this.Name != null &&
-                    this.Name.Equals(input.Name))
-                ) && 
-                (
-                    this.Enabled == input.Enabled ||
-                    this.Enabled.Equals(input.Enabled)
-                ) && 
-                (
-                    this.PublisherId == input.PublisherId ||
-                    (this.PublisherId != null &&
-                    this.PublisherId.Equals(input.PublisherId))
-                ) && 
-                (
-                    this.TransportProfileUri == input.TransportProfileUri ||
-                    (this.TransportProfileUri != null &&
-                    this.TransportProfileUri.Equals(input.TransportProfileUri))
-                ) && 
-                (
-                    this.Address == input.Address ||
-                    (this.Address != null &&
-                    this.Address.Equals(input.Address))
-                ) && 
-                (
-                    this.ConnectionProperties == input.ConnectionProperties ||
-                    this.ConnectionProperties != null &&
-                    input.ConnectionProperties != null &&
-                    this.ConnectionProperties.SequenceEqual(input.ConnectionProperties)
-                ) && 
-                (
-                    this.TransportSettings == input.TransportSettings ||
-                    (this.TransportSettings != null &&
-                    this.TransportSettings.Equals(input.TransportSettings))
-                ) && 
-                (
-                    this.WriterGroups == input.WriterGroups ||
-                    this.WriterGroups != null &&
-                    input.WriterGroups != null &&
-                    this.WriterGroups.SequenceEqual(input.WriterGroups)
-                ) && 
-                (
-                    this.ReaderGroups == input.ReaderGroups ||
-                    this.ReaderGroups != null &&
-                    input.ReaderGroups != null &&
-                    this.ReaderGroups.SequenceEqual(input.ReaderGroups)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.Name != null)
-                {
-                    hashCode = (hashCode * 59) + this.Name.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.Enabled.GetHashCode();
-                if (this.PublisherId != null)
-                {
-                    hashCode = (hashCode * 59) + this.PublisherId.GetHashCode();
-                }
-                if (this.TransportProfileUri != null)
-                {
-                    hashCode = (hashCode * 59) + this.TransportProfileUri.GetHashCode();
-                }
-                if (this.Address != null)
-                {
-                    hashCode = (hashCode * 59) + this.Address.GetHashCode();
-                }
-                if (this.ConnectionProperties != null)
-                {
-                    hashCode = (hashCode * 59) + this.ConnectionProperties.GetHashCode();
-                }
-                if (this.TransportSettings != null)
-                {
-                    hashCode = (hashCode * 59) + this.TransportSettings.GetHashCode();
-                }
-                if (this.WriterGroups != null)
-                {
-                    hashCode = (hashCode * 59) + this.WriterGroups.GetHashCode();
-                }
-                if (this.ReaderGroups != null)
-                {
-                    hashCode = (hashCode * 59) + this.ReaderGroups.GetHashCode();
-                }
-                return hashCode;
-            }
-        }
-
-        /// <summary>
         /// To validate all properties of the instance
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

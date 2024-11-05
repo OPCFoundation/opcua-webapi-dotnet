@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **RequestHeader** | [**RequestHeader**](RequestHeader.md) |  | [optional] 
 **HistoryReadDetails** | [**ExtensionObject**](ExtensionObject.md) |  | [optional] 
 **TimestampsToReturn** | **int** |  | [optional] 
-**ReleaseContinuationPoints** | **bool** |  | [optional] 
+**ReleaseContinuationPoints** | **bool** |  | [optional] [default to false]
 **NodesToRead** | [**List&lt;HistoryReadValueId&gt;**](HistoryReadValueId.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -30,17 +30,17 @@ namespace Opc.Ua.WebApi.Model
     /// SetTriggeringRequest
     /// </summary>
     [DataContract(Name = "SetTriggeringRequest")]
-    public partial class SetTriggeringRequest : IEquatable<SetTriggeringRequest>, IValidatableObject
+    public partial class SetTriggeringRequest : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="SetTriggeringRequest" /> class.
         /// </summary>
         /// <param name="requestHeader">requestHeader.</param>
-        /// <param name="subscriptionId">subscriptionId.</param>
-        /// <param name="triggeringItemId">triggeringItemId.</param>
+        /// <param name="subscriptionId">subscriptionId (default to 0).</param>
+        /// <param name="triggeringItemId">triggeringItemId (default to 0).</param>
         /// <param name="linksToAdd">linksToAdd.</param>
         /// <param name="linksToRemove">linksToRemove.</param>
-        public SetTriggeringRequest(RequestHeader requestHeader = default(RequestHeader), long subscriptionId = default(long), long triggeringItemId = default(long), List<long> linksToAdd = default(List<long>), List<long> linksToRemove = default(List<long>))
+        public SetTriggeringRequest(RequestHeader requestHeader = default(RequestHeader), long subscriptionId = 0, long triggeringItemId = 0, List<long> linksToAdd = default(List<long>), List<long> linksToRemove = default(List<long>))
         {
             this.RequestHeader = requestHeader;
             this.SubscriptionId = subscriptionId;
@@ -106,110 +106,34 @@ namespace Opc.Ua.WebApi.Model
         }
 
         /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as SetTriggeringRequest);
-        }
-
-        /// <summary>
-        /// Returns true if SetTriggeringRequest instances are equal
-        /// </summary>
-        /// <param name="input">Instance of SetTriggeringRequest to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(SetTriggeringRequest input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.RequestHeader == input.RequestHeader ||
-                    (this.RequestHeader != null &&
-                    this.RequestHeader.Equals(input.RequestHeader))
-                ) && 
-                (
-                    this.SubscriptionId == input.SubscriptionId ||
-                    this.SubscriptionId.Equals(input.SubscriptionId)
-                ) && 
-                (
-                    this.TriggeringItemId == input.TriggeringItemId ||
-                    this.TriggeringItemId.Equals(input.TriggeringItemId)
-                ) && 
-                (
-                    this.LinksToAdd == input.LinksToAdd ||
-                    this.LinksToAdd != null &&
-                    input.LinksToAdd != null &&
-                    this.LinksToAdd.SequenceEqual(input.LinksToAdd)
-                ) && 
-                (
-                    this.LinksToRemove == input.LinksToRemove ||
-                    this.LinksToRemove != null &&
-                    input.LinksToRemove != null &&
-                    this.LinksToRemove.SequenceEqual(input.LinksToRemove)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.RequestHeader != null)
-                {
-                    hashCode = (hashCode * 59) + this.RequestHeader.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.SubscriptionId.GetHashCode();
-                hashCode = (hashCode * 59) + this.TriggeringItemId.GetHashCode();
-                if (this.LinksToAdd != null)
-                {
-                    hashCode = (hashCode * 59) + this.LinksToAdd.GetHashCode();
-                }
-                if (this.LinksToRemove != null)
-                {
-                    hashCode = (hashCode * 59) + this.LinksToRemove.GetHashCode();
-                }
-                return hashCode;
-            }
-        }
-
-        /// <summary>
         /// To validate all properties of the instance
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // SubscriptionId (long) maximum
             if (this.SubscriptionId > (long)4294967295)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SubscriptionId, must be a value less than or equal to 4294967295.", new [] { "SubscriptionId" });
+                yield return new ValidationResult("Invalid value for SubscriptionId, must be a value less than or equal to 4294967295.", new [] { "SubscriptionId" });
             }
 
             // SubscriptionId (long) minimum
             if (this.SubscriptionId < (long)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SubscriptionId, must be a value greater than or equal to 0.", new [] { "SubscriptionId" });
+                yield return new ValidationResult("Invalid value for SubscriptionId, must be a value greater than or equal to 0.", new [] { "SubscriptionId" });
             }
 
             // TriggeringItemId (long) maximum
             if (this.TriggeringItemId > (long)4294967295)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for TriggeringItemId, must be a value less than or equal to 4294967295.", new [] { "TriggeringItemId" });
+                yield return new ValidationResult("Invalid value for TriggeringItemId, must be a value less than or equal to 4294967295.", new [] { "TriggeringItemId" });
             }
 
             // TriggeringItemId (long) minimum
             if (this.TriggeringItemId < (long)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for TriggeringItemId, must be a value greater than or equal to 0.", new [] { "TriggeringItemId" });
+                yield return new ValidationResult("Invalid value for TriggeringItemId, must be a value greater than or equal to 0.", new [] { "TriggeringItemId" });
             }
 
             yield break;

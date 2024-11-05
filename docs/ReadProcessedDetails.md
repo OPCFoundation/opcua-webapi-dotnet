@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**StartTime** | **DateTime** |  | [optional] 
-**EndTime** | **DateTime** |  | [optional] 
-**ProcessingInterval** | **double** |  | [optional] 
+**StartTime** | **DateTime** |  | [optional] [default to "0001-01-01T00:00Z"]
+**EndTime** | **DateTime** |  | [optional] [default to "0001-01-01T00:00Z"]
+**ProcessingInterval** | **double** |  | [optional] [default to 0D]
 **AggregateType** | **List&lt;string&gt;** |  | [optional] 
 **AggregateConfiguration** | [**AggregateConfiguration**](AggregateConfiguration.md) |  | [optional] 
 

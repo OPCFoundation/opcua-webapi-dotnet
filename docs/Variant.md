@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Type** | **int** |  | [optional] 
+**UaType** | **int** |  | [optional] 
 **Body** | **Object** |  | [optional] 
 **Dimensions** | **List&lt;int&gt;** |  | [optional] 
 

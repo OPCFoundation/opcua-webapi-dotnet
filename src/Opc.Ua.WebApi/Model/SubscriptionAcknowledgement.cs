@@ -30,14 +30,14 @@ namespace Opc.Ua.WebApi.Model
     /// SubscriptionAcknowledgement
     /// </summary>
     [DataContract(Name = "SubscriptionAcknowledgement")]
-    public partial class SubscriptionAcknowledgement : IEquatable<SubscriptionAcknowledgement>, IValidatableObject
+    public partial class SubscriptionAcknowledgement : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="SubscriptionAcknowledgement" /> class.
         /// </summary>
-        /// <param name="subscriptionId">subscriptionId.</param>
-        /// <param name="sequenceNumber">sequenceNumber.</param>
-        public SubscriptionAcknowledgement(long subscriptionId = default(long), long sequenceNumber = default(long))
+        /// <param name="subscriptionId">subscriptionId (default to 0).</param>
+        /// <param name="sequenceNumber">sequenceNumber (default to 0).</param>
+        public SubscriptionAcknowledgement(long subscriptionId = 0, long sequenceNumber = 0)
         {
             this.SubscriptionId = subscriptionId;
             this.SequenceNumber = sequenceNumber;
@@ -79,81 +79,34 @@ namespace Opc.Ua.WebApi.Model
         }
 
         /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as SubscriptionAcknowledgement);
-        }
-
-        /// <summary>
-        /// Returns true if SubscriptionAcknowledgement instances are equal
-        /// </summary>
-        /// <param name="input">Instance of SubscriptionAcknowledgement to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(SubscriptionAcknowledgement input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.SubscriptionId == input.SubscriptionId ||
-                    this.SubscriptionId.Equals(input.SubscriptionId)
-                ) && 
-                (
-                    this.SequenceNumber == input.SequenceNumber ||
-                    this.SequenceNumber.Equals(input.SequenceNumber)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.SubscriptionId.GetHashCode();
-                hashCode = (hashCode * 59) + this.SequenceNumber.GetHashCode();
-                return hashCode;
-            }
-        }
-
-        /// <summary>
         /// To validate all properties of the instance
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // SubscriptionId (long) maximum
             if (this.SubscriptionId > (long)4294967295)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SubscriptionId, must be a value less than or equal to 4294967295.", new [] { "SubscriptionId" });
+                yield return new ValidationResult("Invalid value for SubscriptionId, must be a value less than or equal to 4294967295.", new [] { "SubscriptionId" });
             }
 
             // SubscriptionId (long) minimum
             if (this.SubscriptionId < (long)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SubscriptionId, must be a value greater than or equal to 0.", new [] { "SubscriptionId" });
+                yield return new ValidationResult("Invalid value for SubscriptionId, must be a value greater than or equal to 0.", new [] { "SubscriptionId" });
             }
 
             // SequenceNumber (long) maximum
             if (this.SequenceNumber > (long)4294967295)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SequenceNumber, must be a value less than or equal to 4294967295.", new [] { "SequenceNumber" });
+                yield return new ValidationResult("Invalid value for SequenceNumber, must be a value less than or equal to 4294967295.", new [] { "SequenceNumber" });
             }
 
             // SequenceNumber (long) minimum
             if (this.SequenceNumber < (long)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SequenceNumber, must be a value greater than or equal to 0.", new [] { "SequenceNumber" });
+                yield return new ValidationResult("Invalid value for SequenceNumber, must be a value greater than or equal to 0.", new [] { "SequenceNumber" });
             }
 
             yield break;

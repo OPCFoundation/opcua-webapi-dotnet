@@ -30,16 +30,16 @@ namespace Opc.Ua.WebApi.Model
     /// ModifySubscriptionResponse
     /// </summary>
     [DataContract(Name = "ModifySubscriptionResponse")]
-    public partial class ModifySubscriptionResponse : IEquatable<ModifySubscriptionResponse>, IValidatableObject
+    public partial class ModifySubscriptionResponse : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ModifySubscriptionResponse" /> class.
         /// </summary>
         /// <param name="responseHeader">responseHeader.</param>
-        /// <param name="revisedPublishingInterval">revisedPublishingInterval.</param>
-        /// <param name="revisedLifetimeCount">revisedLifetimeCount.</param>
-        /// <param name="revisedMaxKeepAliveCount">revisedMaxKeepAliveCount.</param>
-        public ModifySubscriptionResponse(ResponseHeader responseHeader = default(ResponseHeader), double revisedPublishingInterval = default(double), long revisedLifetimeCount = default(long), long revisedMaxKeepAliveCount = default(long))
+        /// <param name="revisedPublishingInterval">revisedPublishingInterval (default to 0D).</param>
+        /// <param name="revisedLifetimeCount">revisedLifetimeCount (default to 0).</param>
+        /// <param name="revisedMaxKeepAliveCount">revisedMaxKeepAliveCount (default to 0).</param>
+        public ModifySubscriptionResponse(ResponseHeader responseHeader = default(ResponseHeader), double revisedPublishingInterval = 0D, long revisedLifetimeCount = 0, long revisedMaxKeepAliveCount = 0)
         {
             this.ResponseHeader = responseHeader;
             this.RevisedPublishingInterval = revisedPublishingInterval;
@@ -97,95 +97,34 @@ namespace Opc.Ua.WebApi.Model
         }
 
         /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as ModifySubscriptionResponse);
-        }
-
-        /// <summary>
-        /// Returns true if ModifySubscriptionResponse instances are equal
-        /// </summary>
-        /// <param name="input">Instance of ModifySubscriptionResponse to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(ModifySubscriptionResponse input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.ResponseHeader == input.ResponseHeader ||
-                    (this.ResponseHeader != null &&
-                    this.ResponseHeader.Equals(input.ResponseHeader))
-                ) && 
-                (
-                    this.RevisedPublishingInterval == input.RevisedPublishingInterval ||
-                    this.RevisedPublishingInterval.Equals(input.RevisedPublishingInterval)
-                ) && 
-                (
-                    this.RevisedLifetimeCount == input.RevisedLifetimeCount ||
-                    this.RevisedLifetimeCount.Equals(input.RevisedLifetimeCount)
-                ) && 
-                (
-                    this.RevisedMaxKeepAliveCount == input.RevisedMaxKeepAliveCount ||
-                    this.RevisedMaxKeepAliveCount.Equals(input.RevisedMaxKeepAliveCount)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.ResponseHeader != null)
-                {
-                    hashCode = (hashCode * 59) + this.ResponseHeader.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.RevisedPublishingInterval.GetHashCode();
-                hashCode = (hashCode * 59) + this.RevisedLifetimeCount.GetHashCode();
-                hashCode = (hashCode * 59) + this.RevisedMaxKeepAliveCount.GetHashCode();
-                return hashCode;
-            }
-        }
-
-        /// <summary>
         /// To validate all properties of the instance
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // RevisedLifetimeCount (long) maximum
             if (this.RevisedLifetimeCount > (long)4294967295)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for RevisedLifetimeCount, must be a value less than or equal to 4294967295.", new [] { "RevisedLifetimeCount" });
+                yield return new ValidationResult("Invalid value for RevisedLifetimeCount, must be a value less than or equal to 4294967295.", new [] { "RevisedLifetimeCount" });
             }
 
             // RevisedLifetimeCount (long) minimum
             if (this.RevisedLifetimeCount < (long)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for RevisedLifetimeCount, must be a value greater than or equal to 0.", new [] { "RevisedLifetimeCount" });
+                yield return new ValidationResult("Invalid value for RevisedLifetimeCount, must be a value greater than or equal to 0.", new [] { "RevisedLifetimeCount" });
             }
 
             // RevisedMaxKeepAliveCount (long) maximum
             if (this.RevisedMaxKeepAliveCount > (long)4294967295)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for RevisedMaxKeepAliveCount, must be a value less than or equal to 4294967295.", new [] { "RevisedMaxKeepAliveCount" });
+                yield return new ValidationResult("Invalid value for RevisedMaxKeepAliveCount, must be a value less than or equal to 4294967295.", new [] { "RevisedMaxKeepAliveCount" });
             }
 
             // RevisedMaxKeepAliveCount (long) minimum
             if (this.RevisedMaxKeepAliveCount < (long)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for RevisedMaxKeepAliveCount, must be a value greater than or equal to 0.", new [] { "RevisedMaxKeepAliveCount" });
+                yield return new ValidationResult("Invalid value for RevisedMaxKeepAliveCount, must be a value greater than or equal to 0.", new [] { "RevisedMaxKeepAliveCount" });
             }
 
             yield break;

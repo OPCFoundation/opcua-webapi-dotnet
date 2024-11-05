@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **TypeDefinitionId** | **string** |  | [optional] 
 **BrowsePath** | **List&lt;string&gt;** |  | [optional] 
-**AttributeId** | **long** |  | [optional] 
+**AttributeId** | **long** |  | [optional] [default to 0]
 **IndexRange** | **string** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -30,16 +30,16 @@ namespace Opc.Ua.WebApi.Model
     /// ReadRequest
     /// </summary>
     [DataContract(Name = "ReadRequest")]
-    public partial class ReadRequest : IEquatable<ReadRequest>, IValidatableObject
+    public partial class ReadRequest : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ReadRequest" /> class.
         /// </summary>
         /// <param name="requestHeader">requestHeader.</param>
-        /// <param name="maxAge">maxAge.</param>
+        /// <param name="maxAge">maxAge (default to 0D).</param>
         /// <param name="timestampsToReturn">timestampsToReturn.</param>
         /// <param name="nodesToRead">nodesToRead.</param>
-        public ReadRequest(RequestHeader requestHeader = default(RequestHeader), double maxAge = default(double), int timestampsToReturn = default(int), List<ReadValueId> nodesToRead = default(List<ReadValueId>))
+        public ReadRequest(RequestHeader requestHeader = default(RequestHeader), double maxAge = 0D, int timestampsToReturn = default(int), List<ReadValueId> nodesToRead = default(List<ReadValueId>))
         {
             this.RequestHeader = requestHeader;
             this.MaxAge = maxAge;
@@ -97,77 +97,11 @@ namespace Opc.Ua.WebApi.Model
         }
 
         /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as ReadRequest);
-        }
-
-        /// <summary>
-        /// Returns true if ReadRequest instances are equal
-        /// </summary>
-        /// <param name="input">Instance of ReadRequest to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(ReadRequest input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.RequestHeader == input.RequestHeader ||
-                    (this.RequestHeader != null &&
-                    this.RequestHeader.Equals(input.RequestHeader))
-                ) && 
-                (
-                    this.MaxAge == input.MaxAge ||
-                    this.MaxAge.Equals(input.MaxAge)
-                ) && 
-                (
-                    this.TimestampsToReturn == input.TimestampsToReturn ||
-                    this.TimestampsToReturn.Equals(input.TimestampsToReturn)
-                ) && 
-                (
-                    this.NodesToRead == input.NodesToRead ||
-                    this.NodesToRead != null &&
-                    input.NodesToRead != null &&
-                    this.NodesToRead.SequenceEqual(input.NodesToRead)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.RequestHeader != null)
-                {
-                    hashCode = (hashCode * 59) + this.RequestHeader.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.MaxAge.GetHashCode();
-                hashCode = (hashCode * 59) + this.TimestampsToReturn.GetHashCode();
-                if (this.NodesToRead != null)
-                {
-                    hashCode = (hashCode * 59) + this.NodesToRead.GetHashCode();
-                }
-                return hashCode;
-            }
-        }
-
-        /// <summary>
         /// To validate all properties of the instance
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

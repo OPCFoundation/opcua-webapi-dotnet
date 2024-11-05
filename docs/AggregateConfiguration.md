@@ -4,11 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**UseServerCapabilitiesDefaults** | **bool** |  | [optional] 
-**TreatUncertainAsBad** | **bool** |  | [optional] 
-**PercentDataBad** | **int** |  | [optional] 
-**PercentDataGood** | **int** |  | [optional] 
-**UseSlopedExtrapolation** | **bool** |  | [optional] 
+**UseServerCapabilitiesDefaults** | **bool** |  | [optional] [default to false]
+**TreatUncertainAsBad** | **bool** |  | [optional] [default to false]
+**PercentDataBad** | **int** |  | [optional] [default to 0]
+**PercentDataGood** | **int** |  | [optional] [default to 0]
+**UseSlopedExtrapolation** | **bool** |  | [optional] [default to false]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

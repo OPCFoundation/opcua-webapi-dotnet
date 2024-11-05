@@ -30,7 +30,7 @@ namespace Opc.Ua.WebApi.Model
     /// UserNameIdentityToken
     /// </summary>
     [DataContract(Name = "UserNameIdentityToken")]
-    public partial class UserNameIdentityToken : IEquatable<UserNameIdentityToken>, IValidatableObject
+    public partial class UserNameIdentityToken : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="UserNameIdentityToken" /> class.
@@ -97,84 +97,11 @@ namespace Opc.Ua.WebApi.Model
         }
 
         /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as UserNameIdentityToken);
-        }
-
-        /// <summary>
-        /// Returns true if UserNameIdentityToken instances are equal
-        /// </summary>
-        /// <param name="input">Instance of UserNameIdentityToken to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(UserNameIdentityToken input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.UserName == input.UserName ||
-                    (this.UserName != null &&
-                    this.UserName.Equals(input.UserName))
-                ) && 
-                (
-                    this.Password == input.Password ||
-                    (this.Password != null &&
-                    this.Password.Equals(input.Password))
-                ) && 
-                (
-                    this.EncryptionAlgorithm == input.EncryptionAlgorithm ||
-                    (this.EncryptionAlgorithm != null &&
-                    this.EncryptionAlgorithm.Equals(input.EncryptionAlgorithm))
-                ) && 
-                (
-                    this.PolicyId == input.PolicyId ||
-                    (this.PolicyId != null &&
-                    this.PolicyId.Equals(input.PolicyId))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.UserName != null)
-                {
-                    hashCode = (hashCode * 59) + this.UserName.GetHashCode();
-                }
-                if (this.Password != null)
-                {
-                    hashCode = (hashCode * 59) + this.Password.GetHashCode();
-                }
-                if (this.EncryptionAlgorithm != null)
-                {
-                    hashCode = (hashCode * 59) + this.EncryptionAlgorithm.GetHashCode();
-                }
-                if (this.PolicyId != null)
-                {
-                    hashCode = (hashCode * 59) + this.PolicyId.GetHashCode();
-                }
-                return hashCode;
-            }
-        }
-
-        /// <summary>
         /// To validate all properties of the instance
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

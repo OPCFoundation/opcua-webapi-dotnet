@@ -30,15 +30,15 @@ namespace Opc.Ua.WebApi.Model
     /// SetPublishingModeRequest
     /// </summary>
     [DataContract(Name = "SetPublishingModeRequest")]
-    public partial class SetPublishingModeRequest : IEquatable<SetPublishingModeRequest>, IValidatableObject
+    public partial class SetPublishingModeRequest : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="SetPublishingModeRequest" /> class.
         /// </summary>
         /// <param name="requestHeader">requestHeader.</param>
-        /// <param name="publishingEnabled">publishingEnabled.</param>
+        /// <param name="publishingEnabled">publishingEnabled (default to false).</param>
         /// <param name="subscriptionIds">subscriptionIds.</param>
-        public SetPublishingModeRequest(RequestHeader requestHeader = default(RequestHeader), bool publishingEnabled = default(bool), List<long> subscriptionIds = default(List<long>))
+        public SetPublishingModeRequest(RequestHeader requestHeader = default(RequestHeader), bool publishingEnabled = false, List<long> subscriptionIds = default(List<long>))
         {
             this.RequestHeader = requestHeader;
             this.PublishingEnabled = publishingEnabled;
@@ -88,72 +88,11 @@ namespace Opc.Ua.WebApi.Model
         }
 
         /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as SetPublishingModeRequest);
-        }
-
-        /// <summary>
-        /// Returns true if SetPublishingModeRequest instances are equal
-        /// </summary>
-        /// <param name="input">Instance of SetPublishingModeRequest to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(SetPublishingModeRequest input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.RequestHeader == input.RequestHeader ||
-                    (this.RequestHeader != null &&
-                    this.RequestHeader.Equals(input.RequestHeader))
-                ) && 
-                (
-                    this.PublishingEnabled == input.PublishingEnabled ||
-                    this.PublishingEnabled.Equals(input.PublishingEnabled)
-                ) && 
-                (
-                    this.SubscriptionIds == input.SubscriptionIds ||
-                    this.SubscriptionIds != null &&
-                    input.SubscriptionIds != null &&
-                    this.SubscriptionIds.SequenceEqual(input.SubscriptionIds)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.RequestHeader != null)
-                {
-                    hashCode = (hashCode * 59) + this.RequestHeader.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.PublishingEnabled.GetHashCode();
-                if (this.SubscriptionIds != null)
-                {
-                    hashCode = (hashCode * 59) + this.SubscriptionIds.GetHashCode();
-                }
-                return hashCode;
-            }
-        }
-
-        /// <summary>
         /// To validate all properties of the instance
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

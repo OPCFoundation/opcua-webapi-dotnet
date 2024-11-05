@@ -6,12 +6,12 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Name** | **string** |  | [optional] 
 **Description** | [**LocalizedText**](LocalizedText.md) |  | [optional] 
-**FieldFlags** | **int** |  | [optional] 
-**BuiltInType** | **int** |  | [optional] 
+**FieldFlags** | **int** |  | [optional] [default to 0]
+**BuiltInType** | **int** |  | [optional] [default to 0]
 **DataType** | **string** |  | [optional] 
-**ValueRank** | **int** |  | [optional] 
+**ValueRank** | **int** |  | [optional] [default to 0]
 **ArrayDimensions** | **List&lt;long&gt;** |  | [optional] 
-**MaxStringLength** | **long** |  | [optional] 
+**MaxStringLength** | **long** |  | [optional] [default to 0]
 **DataSetFieldId** | **Guid** |  | [optional] 
 **Properties** | [**List&lt;KeyValuePair&gt;**](KeyValuePair.md) |  | [optional] 
 

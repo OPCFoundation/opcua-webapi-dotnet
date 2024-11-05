@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **EnumDefinition** | [**EnumDefinition**](EnumDefinition.md) |  | [optional] 
-**BuiltInType** | **int** |  | [optional] 
+**BuiltInType** | **int** |  | [optional] [default to 0]
 **DataTypeId** | **string** |  | [optional] 
 **Name** | **string** |  | [optional] 
 

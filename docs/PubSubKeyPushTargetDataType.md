@@ -9,8 +9,8 @@ Name | Type | Description | Notes
 **EndpointUrl** | **string** |  | [optional] 
 **SecurityPolicyUri** | **string** |  | [optional] 
 **UserTokenType** | [**UserTokenPolicy**](UserTokenPolicy.md) |  | [optional] 
-**RequestedKeyCount** | **int** |  | [optional] 
-**RetryInterval** | **double** |  | [optional] 
+**RequestedKeyCount** | **int** |  | [optional] [default to 0]
+**RetryInterval** | **double** |  | [optional] [default to 0D]
 **PushTargetProperties** | [**List&lt;KeyValuePair&gt;**](KeyValuePair.md) |  | [optional] 
 **SecurityGroups** | **List&lt;string&gt;** |  | [optional] 
 

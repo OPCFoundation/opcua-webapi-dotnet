@@ -30,7 +30,7 @@ namespace Opc.Ua.WebApi.Model
     /// StructureDescription
     /// </summary>
     [DataContract(Name = "StructureDescription")]
-    public partial class StructureDescription : IEquatable<StructureDescription>, IValidatableObject
+    public partial class StructureDescription : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="StructureDescription" /> class.
@@ -88,75 +88,11 @@ namespace Opc.Ua.WebApi.Model
         }
 
         /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as StructureDescription);
-        }
-
-        /// <summary>
-        /// Returns true if StructureDescription instances are equal
-        /// </summary>
-        /// <param name="input">Instance of StructureDescription to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(StructureDescription input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.StructureDefinition == input.StructureDefinition ||
-                    (this.StructureDefinition != null &&
-                    this.StructureDefinition.Equals(input.StructureDefinition))
-                ) && 
-                (
-                    this.DataTypeId == input.DataTypeId ||
-                    (this.DataTypeId != null &&
-                    this.DataTypeId.Equals(input.DataTypeId))
-                ) && 
-                (
-                    this.Name == input.Name ||
-                    (this.Name != null &&
-                    this.Name.Equals(input.Name))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.StructureDefinition != null)
-                {
-                    hashCode = (hashCode * 59) + this.StructureDefinition.GetHashCode();
-                }
-                if (this.DataTypeId != null)
-                {
-                    hashCode = (hashCode * 59) + this.DataTypeId.GetHashCode();
-                }
-                if (this.Name != null)
-                {
-                    hashCode = (hashCode * 59) + this.Name.GetHashCode();
-                }
-                return hashCode;
-            }
-        }
-
-        /// <summary>
         /// To validate all properties of the instance
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

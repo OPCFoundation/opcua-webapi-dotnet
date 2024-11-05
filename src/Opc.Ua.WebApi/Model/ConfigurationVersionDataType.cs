@@ -30,14 +30,14 @@ namespace Opc.Ua.WebApi.Model
     /// ConfigurationVersionDataType
     /// </summary>
     [DataContract(Name = "ConfigurationVersionDataType")]
-    public partial class ConfigurationVersionDataType : IEquatable<ConfigurationVersionDataType>, IValidatableObject
+    public partial class ConfigurationVersionDataType : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ConfigurationVersionDataType" /> class.
         /// </summary>
-        /// <param name="majorVersion">majorVersion.</param>
-        /// <param name="minorVersion">minorVersion.</param>
-        public ConfigurationVersionDataType(long majorVersion = default(long), long minorVersion = default(long))
+        /// <param name="majorVersion">majorVersion (default to 0).</param>
+        /// <param name="minorVersion">minorVersion (default to 0).</param>
+        public ConfigurationVersionDataType(long majorVersion = 0, long minorVersion = 0)
         {
             this.MajorVersion = majorVersion;
             this.MinorVersion = minorVersion;
@@ -79,81 +79,34 @@ namespace Opc.Ua.WebApi.Model
         }
 
         /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as ConfigurationVersionDataType);
-        }
-
-        /// <summary>
-        /// Returns true if ConfigurationVersionDataType instances are equal
-        /// </summary>
-        /// <param name="input">Instance of ConfigurationVersionDataType to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(ConfigurationVersionDataType input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.MajorVersion == input.MajorVersion ||
-                    this.MajorVersion.Equals(input.MajorVersion)
-                ) && 
-                (
-                    this.MinorVersion == input.MinorVersion ||
-                    this.MinorVersion.Equals(input.MinorVersion)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.MajorVersion.GetHashCode();
-                hashCode = (hashCode * 59) + this.MinorVersion.GetHashCode();
-                return hashCode;
-            }
-        }
-
-        /// <summary>
         /// To validate all properties of the instance
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // MajorVersion (long) maximum
             if (this.MajorVersion > (long)4294967295)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for MajorVersion, must be a value less than or equal to 4294967295.", new [] { "MajorVersion" });
+                yield return new ValidationResult("Invalid value for MajorVersion, must be a value less than or equal to 4294967295.", new [] { "MajorVersion" });
             }
 
             // MajorVersion (long) minimum
             if (this.MajorVersion < (long)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for MajorVersion, must be a value greater than or equal to 0.", new [] { "MajorVersion" });
+                yield return new ValidationResult("Invalid value for MajorVersion, must be a value greater than or equal to 0.", new [] { "MajorVersion" });
             }
 
             // MinorVersion (long) maximum
             if (this.MinorVersion > (long)4294967295)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for MinorVersion, must be a value less than or equal to 4294967295.", new [] { "MinorVersion" });
+                yield return new ValidationResult("Invalid value for MinorVersion, must be a value less than or equal to 4294967295.", new [] { "MinorVersion" });
             }
 
             // MinorVersion (long) minimum
             if (this.MinorVersion < (long)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for MinorVersion, must be a value greater than or equal to 0.", new [] { "MinorVersion" });
+                yield return new ValidationResult("Invalid value for MinorVersion, must be a value greater than or equal to 0.", new [] { "MinorVersion" });
             }
 
             yield break;

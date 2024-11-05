@@ -30,15 +30,15 @@ namespace Opc.Ua.WebApi.Model
     /// AggregateFilterResult
     /// </summary>
     [DataContract(Name = "AggregateFilterResult")]
-    public partial class AggregateFilterResult : IEquatable<AggregateFilterResult>, IValidatableObject
+    public partial class AggregateFilterResult : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="AggregateFilterResult" /> class.
         /// </summary>
-        /// <param name="revisedStartTime">revisedStartTime.</param>
-        /// <param name="revisedProcessingInterval">revisedProcessingInterval.</param>
+        /// <param name="revisedStartTime">revisedStartTime (default to &quot;0001-01-01T00:00Z&quot;).</param>
+        /// <param name="revisedProcessingInterval">revisedProcessingInterval (default to 0D).</param>
         /// <param name="revisedAggregateConfiguration">revisedAggregateConfiguration.</param>
-        public AggregateFilterResult(DateTime revisedStartTime = default(DateTime), double revisedProcessingInterval = default(double), AggregateConfiguration revisedAggregateConfiguration = default(AggregateConfiguration))
+        public AggregateFilterResult(DateTime revisedStartTime = default(DateTime), double revisedProcessingInterval = 0D, AggregateConfiguration revisedAggregateConfiguration = default(AggregateConfiguration))
         {
             this.RevisedStartTime = revisedStartTime;
             this.RevisedProcessingInterval = revisedProcessingInterval;
@@ -88,71 +88,11 @@ namespace Opc.Ua.WebApi.Model
         }
 
         /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as AggregateFilterResult);
-        }
-
-        /// <summary>
-        /// Returns true if AggregateFilterResult instances are equal
-        /// </summary>
-        /// <param name="input">Instance of AggregateFilterResult to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(AggregateFilterResult input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.RevisedStartTime == input.RevisedStartTime ||
-                    (this.RevisedStartTime != null &&
-                    this.RevisedStartTime.Equals(input.RevisedStartTime))
-                ) && 
-                (
-                    this.RevisedProcessingInterval == input.RevisedProcessingInterval ||
-                    this.RevisedProcessingInterval.Equals(input.RevisedProcessingInterval)
-                ) && 
-                (
-                    this.RevisedAggregateConfiguration == input.RevisedAggregateConfiguration ||
-                    (this.RevisedAggregateConfiguration != null &&
-                    this.RevisedAggregateConfiguration.Equals(input.RevisedAggregateConfiguration))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.RevisedStartTime != null)
-                {
-                    hashCode = (hashCode * 59) + this.RevisedStartTime.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.RevisedProcessingInterval.GetHashCode();
-                if (this.RevisedAggregateConfiguration != null)
-                {
-                    hashCode = (hashCode * 59) + this.RevisedAggregateConfiguration.GetHashCode();
-                }
-                return hashCode;
-            }
-        }
-
-        /// <summary>
         /// To validate all properties of the instance
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

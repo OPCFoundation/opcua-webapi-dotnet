@@ -30,7 +30,7 @@ namespace Opc.Ua.WebApi.Model
     /// ActivateSessionRequest
     /// </summary>
     [DataContract(Name = "ActivateSessionRequest")]
-    public partial class ActivateSessionRequest : IEquatable<ActivateSessionRequest>, IValidatableObject
+    public partial class ActivateSessionRequest : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ActivateSessionRequest" /> class.
@@ -115,104 +115,11 @@ namespace Opc.Ua.WebApi.Model
         }
 
         /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as ActivateSessionRequest);
-        }
-
-        /// <summary>
-        /// Returns true if ActivateSessionRequest instances are equal
-        /// </summary>
-        /// <param name="input">Instance of ActivateSessionRequest to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(ActivateSessionRequest input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.RequestHeader == input.RequestHeader ||
-                    (this.RequestHeader != null &&
-                    this.RequestHeader.Equals(input.RequestHeader))
-                ) && 
-                (
-                    this.ClientSignature == input.ClientSignature ||
-                    (this.ClientSignature != null &&
-                    this.ClientSignature.Equals(input.ClientSignature))
-                ) && 
-                (
-                    this.ClientSoftwareCertificates == input.ClientSoftwareCertificates ||
-                    this.ClientSoftwareCertificates != null &&
-                    input.ClientSoftwareCertificates != null &&
-                    this.ClientSoftwareCertificates.SequenceEqual(input.ClientSoftwareCertificates)
-                ) && 
-                (
-                    this.LocaleIds == input.LocaleIds ||
-                    this.LocaleIds != null &&
-                    input.LocaleIds != null &&
-                    this.LocaleIds.SequenceEqual(input.LocaleIds)
-                ) && 
-                (
-                    this.UserIdentityToken == input.UserIdentityToken ||
-                    (this.UserIdentityToken != null &&
-                    this.UserIdentityToken.Equals(input.UserIdentityToken))
-                ) && 
-                (
-                    this.UserTokenSignature == input.UserTokenSignature ||
-                    (this.UserTokenSignature != null &&
-                    this.UserTokenSignature.Equals(input.UserTokenSignature))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.RequestHeader != null)
-                {
-                    hashCode = (hashCode * 59) + this.RequestHeader.GetHashCode();
-                }
-                if (this.ClientSignature != null)
-                {
-                    hashCode = (hashCode * 59) + this.ClientSignature.GetHashCode();
-                }
-                if (this.ClientSoftwareCertificates != null)
-                {
-                    hashCode = (hashCode * 59) + this.ClientSoftwareCertificates.GetHashCode();
-                }
-                if (this.LocaleIds != null)
-                {
-                    hashCode = (hashCode * 59) + this.LocaleIds.GetHashCode();
-                }
-                if (this.UserIdentityToken != null)
-                {
-                    hashCode = (hashCode * 59) + this.UserIdentityToken.GetHashCode();
-                }
-                if (this.UserTokenSignature != null)
-                {
-                    hashCode = (hashCode * 59) + this.UserTokenSignature.GetHashCode();
-                }
-                return hashCode;
-            }
-        }
-
-        /// <summary>
         /// To validate all properties of the instance
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

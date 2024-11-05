@@ -30,7 +30,7 @@ namespace Opc.Ua.WebApi.Model
     /// StructureDefinition
     /// </summary>
     [DataContract(Name = "StructureDefinition")]
-    public partial class StructureDefinition : IEquatable<StructureDefinition>, IValidatableObject
+    public partial class StructureDefinition : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="StructureDefinition" /> class.
@@ -97,81 +97,11 @@ namespace Opc.Ua.WebApi.Model
         }
 
         /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as StructureDefinition);
-        }
-
-        /// <summary>
-        /// Returns true if StructureDefinition instances are equal
-        /// </summary>
-        /// <param name="input">Instance of StructureDefinition to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(StructureDefinition input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.DefaultEncodingId == input.DefaultEncodingId ||
-                    (this.DefaultEncodingId != null &&
-                    this.DefaultEncodingId.Equals(input.DefaultEncodingId))
-                ) && 
-                (
-                    this.BaseDataType == input.BaseDataType ||
-                    (this.BaseDataType != null &&
-                    this.BaseDataType.Equals(input.BaseDataType))
-                ) && 
-                (
-                    this.StructureType == input.StructureType ||
-                    this.StructureType.Equals(input.StructureType)
-                ) && 
-                (
-                    this.Fields == input.Fields ||
-                    this.Fields != null &&
-                    input.Fields != null &&
-                    this.Fields.SequenceEqual(input.Fields)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.DefaultEncodingId != null)
-                {
-                    hashCode = (hashCode * 59) + this.DefaultEncodingId.GetHashCode();
-                }
-                if (this.BaseDataType != null)
-                {
-                    hashCode = (hashCode * 59) + this.BaseDataType.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.StructureType.GetHashCode();
-                if (this.Fields != null)
-                {
-                    hashCode = (hashCode * 59) + this.Fields.GetHashCode();
-                }
-                return hashCode;
-            }
-        }
-
-        /// <summary>
         /// To validate all properties of the instance
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

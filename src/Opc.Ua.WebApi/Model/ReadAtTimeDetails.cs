@@ -30,14 +30,14 @@ namespace Opc.Ua.WebApi.Model
     /// ReadAtTimeDetails
     /// </summary>
     [DataContract(Name = "ReadAtTimeDetails")]
-    public partial class ReadAtTimeDetails : IEquatable<ReadAtTimeDetails>, IValidatableObject
+    public partial class ReadAtTimeDetails : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ReadAtTimeDetails" /> class.
         /// </summary>
         /// <param name="reqTimes">reqTimes.</param>
-        /// <param name="useSimpleBounds">useSimpleBounds.</param>
-        public ReadAtTimeDetails(List<DateTime> reqTimes = default(List<DateTime>), bool useSimpleBounds = default(bool))
+        /// <param name="useSimpleBounds">useSimpleBounds (default to false).</param>
+        public ReadAtTimeDetails(List<DateTime> reqTimes = default(List<DateTime>), bool useSimpleBounds = false)
         {
             this.ReqTimes = reqTimes;
             this.UseSimpleBounds = useSimpleBounds;
@@ -79,63 +79,11 @@ namespace Opc.Ua.WebApi.Model
         }
 
         /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as ReadAtTimeDetails);
-        }
-
-        /// <summary>
-        /// Returns true if ReadAtTimeDetails instances are equal
-        /// </summary>
-        /// <param name="input">Instance of ReadAtTimeDetails to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(ReadAtTimeDetails input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.ReqTimes == input.ReqTimes ||
-                    this.ReqTimes != null &&
-                    input.ReqTimes != null &&
-                    this.ReqTimes.SequenceEqual(input.ReqTimes)
-                ) && 
-                (
-                    this.UseSimpleBounds == input.UseSimpleBounds ||
-                    this.UseSimpleBounds.Equals(input.UseSimpleBounds)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.ReqTimes != null)
-                {
-                    hashCode = (hashCode * 59) + this.ReqTimes.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.UseSimpleBounds.GetHashCode();
-                return hashCode;
-            }
-        }
-
-        /// <summary>
         /// To validate all properties of the instance
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

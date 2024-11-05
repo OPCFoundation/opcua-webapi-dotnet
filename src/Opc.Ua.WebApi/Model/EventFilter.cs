@@ -30,7 +30,7 @@ namespace Opc.Ua.WebApi.Model
     /// EventFilter
     /// </summary>
     [DataContract(Name = "EventFilter")]
-    public partial class EventFilter : IEquatable<EventFilter>, IValidatableObject
+    public partial class EventFilter : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="EventFilter" /> class.
@@ -79,67 +79,11 @@ namespace Opc.Ua.WebApi.Model
         }
 
         /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as EventFilter);
-        }
-
-        /// <summary>
-        /// Returns true if EventFilter instances are equal
-        /// </summary>
-        /// <param name="input">Instance of EventFilter to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(EventFilter input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.SelectClauses == input.SelectClauses ||
-                    this.SelectClauses != null &&
-                    input.SelectClauses != null &&
-                    this.SelectClauses.SequenceEqual(input.SelectClauses)
-                ) && 
-                (
-                    this.WhereClause == input.WhereClause ||
-                    (this.WhereClause != null &&
-                    this.WhereClause.Equals(input.WhereClause))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.SelectClauses != null)
-                {
-                    hashCode = (hashCode * 59) + this.SelectClauses.GetHashCode();
-                }
-                if (this.WhereClause != null)
-                {
-                    hashCode = (hashCode * 59) + this.WhereClause.GetHashCode();
-                }
-                return hashCode;
-            }
-        }
-
-        /// <summary>
         /// To validate all properties of the instance
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             yield break;
         }

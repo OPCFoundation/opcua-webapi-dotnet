@@ -30,7 +30,7 @@ namespace Opc.Ua.WebApi.Model
     /// HistoryUpdateResult
     /// </summary>
     [DataContract(Name = "HistoryUpdateResult")]
-    public partial class HistoryUpdateResult : IEquatable<HistoryUpdateResult>, IValidatableObject
+    public partial class HistoryUpdateResult : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="HistoryUpdateResult" /> class.
@@ -38,7 +38,7 @@ namespace Opc.Ua.WebApi.Model
         /// <param name="statusCode">statusCode.</param>
         /// <param name="operationResults">operationResults.</param>
         /// <param name="diagnosticInfos">diagnosticInfos.</param>
-        public HistoryUpdateResult(long statusCode = default(long), List<long> operationResults = default(List<long>), List<DiagnosticInfo> diagnosticInfos = default(List<DiagnosticInfo>))
+        public HistoryUpdateResult(StatusCode statusCode = default(StatusCode), List<StatusCode> operationResults = default(List<StatusCode>), List<DiagnosticInfo> diagnosticInfos = default(List<DiagnosticInfo>))
         {
             this.StatusCode = statusCode;
             this.OperationResults = operationResults;
@@ -49,13 +49,13 @@ namespace Opc.Ua.WebApi.Model
         /// Gets or Sets StatusCode
         /// </summary>
         [DataMember(Name = "StatusCode", EmitDefaultValue = false)]
-        public long StatusCode { get; set; }
+        public StatusCode StatusCode { get; set; }
 
         /// <summary>
         /// Gets or Sets OperationResults
         /// </summary>
         [DataMember(Name = "OperationResults", EmitDefaultValue = false)]
-        public List<long> OperationResults { get; set; }
+        public List<StatusCode> OperationResults { get; set; }
 
         /// <summary>
         /// Gets or Sets DiagnosticInfos
@@ -88,86 +88,12 @@ namespace Opc.Ua.WebApi.Model
         }
 
         /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as HistoryUpdateResult);
-        }
-
-        /// <summary>
-        /// Returns true if HistoryUpdateResult instances are equal
-        /// </summary>
-        /// <param name="input">Instance of HistoryUpdateResult to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(HistoryUpdateResult input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.StatusCode == input.StatusCode ||
-                    this.StatusCode.Equals(input.StatusCode)
-                ) && 
-                (
-                    this.OperationResults == input.OperationResults ||
-                    this.OperationResults != null &&
-                    input.OperationResults != null &&
-                    this.OperationResults.SequenceEqual(input.OperationResults)
-                ) && 
-                (
-                    this.DiagnosticInfos == input.DiagnosticInfos ||
-                    this.DiagnosticInfos != null &&
-                    input.DiagnosticInfos != null &&
-                    this.DiagnosticInfos.SequenceEqual(input.DiagnosticInfos)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.StatusCode.GetHashCode();
-                if (this.OperationResults != null)
-                {
-                    hashCode = (hashCode * 59) + this.OperationResults.GetHashCode();
-                }
-                if (this.DiagnosticInfos != null)
-                {
-                    hashCode = (hashCode * 59) + this.DiagnosticInfos.GetHashCode();
-                }
-                return hashCode;
-            }
-        }
-
-        /// <summary>
         /// To validate all properties of the instance
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
-            // StatusCode (long) maximum
-            if (this.StatusCode > (long)4294967295)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for StatusCode, must be a value less than or equal to 4294967295.", new [] { "StatusCode" });
-            }
-
-            // StatusCode (long) minimum
-            if (this.StatusCode < (long)0)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for StatusCode, must be a value greater than or equal to 0.", new [] { "StatusCode" });
-            }
-
             yield break;
         }
     }

@@ -30,19 +30,19 @@ namespace Opc.Ua.WebApi.Model
     /// PublishResponse
     /// </summary>
     [DataContract(Name = "PublishResponse")]
-    public partial class PublishResponse : IEquatable<PublishResponse>, IValidatableObject
+    public partial class PublishResponse : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="PublishResponse" /> class.
         /// </summary>
         /// <param name="responseHeader">responseHeader.</param>
-        /// <param name="subscriptionId">subscriptionId.</param>
+        /// <param name="subscriptionId">subscriptionId (default to 0).</param>
         /// <param name="availableSequenceNumbers">availableSequenceNumbers.</param>
-        /// <param name="moreNotifications">moreNotifications.</param>
+        /// <param name="moreNotifications">moreNotifications (default to false).</param>
         /// <param name="notificationMessage">notificationMessage.</param>
         /// <param name="results">results.</param>
         /// <param name="diagnosticInfos">diagnosticInfos.</param>
-        public PublishResponse(ResponseHeader responseHeader = default(ResponseHeader), long subscriptionId = default(long), List<long> availableSequenceNumbers = default(List<long>), bool moreNotifications = default(bool), NotificationMessage notificationMessage = default(NotificationMessage), List<long> results = default(List<long>), List<DiagnosticInfo> diagnosticInfos = default(List<DiagnosticInfo>))
+        public PublishResponse(ResponseHeader responseHeader = default(ResponseHeader), long subscriptionId = 0, List<long> availableSequenceNumbers = default(List<long>), bool moreNotifications = false, NotificationMessage notificationMessage = default(NotificationMessage), List<StatusCode> results = default(List<StatusCode>), List<DiagnosticInfo> diagnosticInfos = default(List<DiagnosticInfo>))
         {
             this.ResponseHeader = responseHeader;
             this.SubscriptionId = subscriptionId;
@@ -87,7 +87,7 @@ namespace Opc.Ua.WebApi.Model
         /// Gets or Sets Results
         /// </summary>
         [DataMember(Name = "Results", EmitDefaultValue = false)]
-        public List<long> Results { get; set; }
+        public List<StatusCode> Results { get; set; }
 
         /// <summary>
         /// Gets or Sets DiagnosticInfos
@@ -124,117 +124,22 @@ namespace Opc.Ua.WebApi.Model
         }
 
         /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as PublishResponse);
-        }
-
-        /// <summary>
-        /// Returns true if PublishResponse instances are equal
-        /// </summary>
-        /// <param name="input">Instance of PublishResponse to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(PublishResponse input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.ResponseHeader == input.ResponseHeader ||
-                    (this.ResponseHeader != null &&
-                    this.ResponseHeader.Equals(input.ResponseHeader))
-                ) && 
-                (
-                    this.SubscriptionId == input.SubscriptionId ||
-                    this.SubscriptionId.Equals(input.SubscriptionId)
-                ) && 
-                (
-                    this.AvailableSequenceNumbers == input.AvailableSequenceNumbers ||
-                    this.AvailableSequenceNumbers != null &&
-                    input.AvailableSequenceNumbers != null &&
-                    this.AvailableSequenceNumbers.SequenceEqual(input.AvailableSequenceNumbers)
-                ) && 
-                (
-                    this.MoreNotifications == input.MoreNotifications ||
-                    this.MoreNotifications.Equals(input.MoreNotifications)
-                ) && 
-                (
-                    this.NotificationMessage == input.NotificationMessage ||
-                    (this.NotificationMessage != null &&
-                    this.NotificationMessage.Equals(input.NotificationMessage))
-                ) && 
-                (
-                    this.Results == input.Results ||
-                    this.Results != null &&
-                    input.Results != null &&
-                    this.Results.SequenceEqual(input.Results)
-                ) && 
-                (
-                    this.DiagnosticInfos == input.DiagnosticInfos ||
-                    this.DiagnosticInfos != null &&
-                    input.DiagnosticInfos != null &&
-                    this.DiagnosticInfos.SequenceEqual(input.DiagnosticInfos)
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                if (this.ResponseHeader != null)
-                {
-                    hashCode = (hashCode * 59) + this.ResponseHeader.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.SubscriptionId.GetHashCode();
-                if (this.AvailableSequenceNumbers != null)
-                {
-                    hashCode = (hashCode * 59) + this.AvailableSequenceNumbers.GetHashCode();
-                }
-                hashCode = (hashCode * 59) + this.MoreNotifications.GetHashCode();
-                if (this.NotificationMessage != null)
-                {
-                    hashCode = (hashCode * 59) + this.NotificationMessage.GetHashCode();
-                }
-                if (this.Results != null)
-                {
-                    hashCode = (hashCode * 59) + this.Results.GetHashCode();
-                }
-                if (this.DiagnosticInfos != null)
-                {
-                    hashCode = (hashCode * 59) + this.DiagnosticInfos.GetHashCode();
-                }
-                return hashCode;
-            }
-        }
-
-        /// <summary>
         /// To validate all properties of the instance
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
             // SubscriptionId (long) maximum
             if (this.SubscriptionId > (long)4294967295)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SubscriptionId, must be a value less than or equal to 4294967295.", new [] { "SubscriptionId" });
+                yield return new ValidationResult("Invalid value for SubscriptionId, must be a value less than or equal to 4294967295.", new [] { "SubscriptionId" });
             }
 
             // SubscriptionId (long) minimum
             if (this.SubscriptionId < (long)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SubscriptionId, must be a value greater than or equal to 0.", new [] { "SubscriptionId" });
+                yield return new ValidationResult("Invalid value for SubscriptionId, must be a value greater than or equal to 0.", new [] { "SubscriptionId" });
             }
 
             yield break;

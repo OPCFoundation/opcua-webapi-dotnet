@@ -30,16 +30,16 @@ namespace Opc.Ua.WebApi.Model
     /// MonitoredItemModifyResult
     /// </summary>
     [DataContract(Name = "MonitoredItemModifyResult")]
-    public partial class MonitoredItemModifyResult : IEquatable<MonitoredItemModifyResult>, IValidatableObject
+    public partial class MonitoredItemModifyResult : IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="MonitoredItemModifyResult" /> class.
         /// </summary>
         /// <param name="statusCode">statusCode.</param>
-        /// <param name="revisedSamplingInterval">revisedSamplingInterval.</param>
-        /// <param name="revisedQueueSize">revisedQueueSize.</param>
+        /// <param name="revisedSamplingInterval">revisedSamplingInterval (default to 0D).</param>
+        /// <param name="revisedQueueSize">revisedQueueSize (default to 0).</param>
         /// <param name="filterResult">filterResult.</param>
-        public MonitoredItemModifyResult(long statusCode = default(long), double revisedSamplingInterval = default(double), long revisedQueueSize = default(long), ExtensionObject filterResult = default(ExtensionObject))
+        public MonitoredItemModifyResult(StatusCode statusCode = default(StatusCode), double revisedSamplingInterval = 0D, long revisedQueueSize = 0, ExtensionObject filterResult = default(ExtensionObject))
         {
             this.StatusCode = statusCode;
             this.RevisedSamplingInterval = revisedSamplingInterval;
@@ -51,7 +51,7 @@ namespace Opc.Ua.WebApi.Model
         /// Gets or Sets StatusCode
         /// </summary>
         [DataMember(Name = "StatusCode", EmitDefaultValue = false)]
-        public long StatusCode { get; set; }
+        public StatusCode StatusCode { get; set; }
 
         /// <summary>
         /// Gets or Sets RevisedSamplingInterval
@@ -97,95 +97,22 @@ namespace Opc.Ua.WebApi.Model
         }
 
         /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="input">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object input)
-        {
-            return this.Equals(input as MonitoredItemModifyResult);
-        }
-
-        /// <summary>
-        /// Returns true if MonitoredItemModifyResult instances are equal
-        /// </summary>
-        /// <param name="input">Instance of MonitoredItemModifyResult to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(MonitoredItemModifyResult input)
-        {
-            if (input == null)
-            {
-                return false;
-            }
-            return 
-                (
-                    this.StatusCode == input.StatusCode ||
-                    this.StatusCode.Equals(input.StatusCode)
-                ) && 
-                (
-                    this.RevisedSamplingInterval == input.RevisedSamplingInterval ||
-                    this.RevisedSamplingInterval.Equals(input.RevisedSamplingInterval)
-                ) && 
-                (
-                    this.RevisedQueueSize == input.RevisedQueueSize ||
-                    this.RevisedQueueSize.Equals(input.RevisedQueueSize)
-                ) && 
-                (
-                    this.FilterResult == input.FilterResult ||
-                    (this.FilterResult != null &&
-                    this.FilterResult.Equals(input.FilterResult))
-                );
-        }
-
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hashCode = 41;
-                hashCode = (hashCode * 59) + this.StatusCode.GetHashCode();
-                hashCode = (hashCode * 59) + this.RevisedSamplingInterval.GetHashCode();
-                hashCode = (hashCode * 59) + this.RevisedQueueSize.GetHashCode();
-                if (this.FilterResult != null)
-                {
-                    hashCode = (hashCode * 59) + this.FilterResult.GetHashCode();
-                }
-                return hashCode;
-            }
-        }
-
-        /// <summary>
         /// To validate all properties of the instance
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
-            // StatusCode (long) maximum
-            if (this.StatusCode > (long)4294967295)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for StatusCode, must be a value less than or equal to 4294967295.", new [] { "StatusCode" });
-            }
-
-            // StatusCode (long) minimum
-            if (this.StatusCode < (long)0)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for StatusCode, must be a value greater than or equal to 0.", new [] { "StatusCode" });
-            }
-
             // RevisedQueueSize (long) maximum
             if (this.RevisedQueueSize > (long)4294967295)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for RevisedQueueSize, must be a value less than or equal to 4294967295.", new [] { "RevisedQueueSize" });
+                yield return new ValidationResult("Invalid value for RevisedQueueSize, must be a value less than or equal to 4294967295.", new [] { "RevisedQueueSize" });
             }
 
             // RevisedQueueSize (long) minimum
             if (this.RevisedQueueSize < (long)0)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for RevisedQueueSize, must be a value greater than or equal to 0.", new [] { "RevisedQueueSize" });
+                yield return new ValidationResult("Invalid value for RevisedQueueSize, must be a value greater than or equal to 0.", new [] { "RevisedQueueSize" });
             }
 
             yield break;

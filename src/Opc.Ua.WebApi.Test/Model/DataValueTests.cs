@@ -1,7 +1,7 @@
 /*
  * OPC UA Web API
  *
- * This API provides simple HTTPS based access to an OPC UA server.
+ * Provides simple HTTPS based access to an OPC UA server.
  *
  * The version of the OpenAPI document: 1.05.4
  * Contact: office@opcfoundation.org
@@ -56,12 +56,30 @@ namespace Opc.Ua.WebApi.Test.Model
         }
 
         /// <summary>
+        /// Test the property 'UaType'
+        /// </summary>
+        [Fact]
+        public void UaTypeTest()
+        {
+            // TODO unit test for the property 'UaType'
+        }
+
+        /// <summary>
         /// Test the property 'Value'
         /// </summary>
         [Fact]
         public void ValueTest()
         {
             // TODO unit test for the property 'Value'
+        }
+
+        /// <summary>
+        /// Test the property 'Dimensions'
+        /// </summary>
+        [Fact]
+        public void DimensionsTest()
+        {
+            // TODO unit test for the property 'Dimensions'
         }
 
         /// <summary>
@@ -83,12 +101,12 @@ namespace Opc.Ua.WebApi.Test.Model
         }
 
         /// <summary>
-        /// Test the property 'SourcePicoSeconds'
+        /// Test the property 'SourcePicoseconds'
         /// </summary>
         [Fact]
-        public void SourcePicoSecondsTest()
+        public void SourcePicosecondsTest()
         {
-            // TODO unit test for the property 'SourcePicoSeconds'
+            // TODO unit test for the property 'SourcePicoseconds'
         }
 
         /// <summary>
@@ -101,12 +119,12 @@ namespace Opc.Ua.WebApi.Test.Model
         }
 
         /// <summary>
-        /// Test the property 'ServerPicoSeconds'
+        /// Test the property 'ServerPicoseconds'
         /// </summary>
         [Fact]
-        public void ServerPicoSecondsTest()
+        public void ServerPicosecondsTest()
         {
-            // TODO unit test for the property 'ServerPicoSeconds'
+            // TODO unit test for the property 'ServerPicoseconds'
         }
     }
 }
