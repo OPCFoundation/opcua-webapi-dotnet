@@ -3403,9 +3403,15 @@ namespace Opc.Ua.WebApi
         /// <remarks />
         public const string TestingConditionClassType = "TestingConditionClassType";
         /// <remarks />
+        public const string TestOptionalFields = "TestOptionalFields";
+        /// <remarks />
+        public const string TestOptionSet = "TestOptionSet";
+        /// <remarks />
         public const string TestScalarStructure = "TestScalarStructure";
         /// <remarks />
         public const string TestStructure = "TestStructure";
+        /// <remarks />
+        public const string TestUnion = "TestUnion";
         /// <remarks />
         public const string ThreeDCartesianCoordinates = "3DCartesianCoordinates";
         /// <remarks />
@@ -4791,7 +4797,13 @@ namespace Opc.Ua.WebApi
         /// <remarks />
         public const string TestConcreteStructure = "i=15400";
         /// <remarks />
+        public const string TestUnion = "i=19431";
+        /// <remarks />
+        public const string TestOptionalFields = "i=19432";
+        /// <remarks />
         public const string TestEnumeration = "i=15432";
+        /// <remarks />
+        public const string TestOptionSet = "i=19433";
         /// <remarks />
         public const string TestScalarStructure = "i=15015";
         /// <remarks />
@@ -7759,6 +7771,10 @@ namespace Opc.Ua.WebApi
         /// <remarks />
         public const string TestConcreteStructure_Encoding_DefaultBinary = "i=15402";
         /// <remarks />
+        public const string TestUnion_Encoding_DefaultBinary = "i=19435";
+        /// <remarks />
+        public const string TestOptionalFields_Encoding_DefaultBinary = "i=19436";
+        /// <remarks />
         public const string TestScalarStructure_Encoding_DefaultBinary = "i=15024";
         /// <remarks />
         public const string TestArrayStructure_Encoding_DefaultBinary = "i=15025";
@@ -8487,6 +8503,10 @@ namespace Opc.Ua.WebApi
         /// <remarks />
         public const string TestConcreteStructure_Encoding_DefaultXml = "i=15404";
         /// <remarks />
+        public const string TestUnion_Encoding_DefaultXml = "i=19437";
+        /// <remarks />
+        public const string TestOptionalFields_Encoding_DefaultXml = "i=19438";
+        /// <remarks />
         public const string TestScalarStructure_Encoding_DefaultXml = "i=15232";
         /// <remarks />
         public const string TestArrayStructure_Encoding_DefaultXml = "i=15233";
@@ -9214,6 +9234,10 @@ namespace Opc.Ua.WebApi
         public const string TestAbstractStructure_Encoding_DefaultJson = "i=15405";
         /// <remarks />
         public const string TestConcreteStructure_Encoding_DefaultJson = "i=15431";
+        /// <remarks />
+        public const string TestUnion_Encoding_DefaultJson = "i=19439";
+        /// <remarks />
+        public const string TestOptionalFields_Encoding_DefaultJson = "i=19440";
         /// <remarks />
         public const string TestScalarStructure_Encoding_DefaultJson = "i=15396";
         /// <remarks />
@@ -20728,6 +20752,8 @@ namespace Opc.Ua.WebApi
         public const string ExceptionDeviationFormat_EnumStrings = "i=7614";
         /// <remarks />
         public const string TestEnumeration_EnumValues = "i=15433";
+        /// <remarks />
+        public const string TestOptionSet_OptionSetValues = "i=19441";
         /// <remarks />
         public const string OpcUa_BinarySchema = "i=7617";
         /// <remarks />

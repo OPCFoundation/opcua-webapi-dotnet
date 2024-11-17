@@ -39,7 +39,7 @@ namespace Opc.Ua.WebApi.Model
         /// <param name="dataSetFolder">dataSetFolder.</param>
         /// <param name="dataSetMetaData">dataSetMetaData.</param>
         /// <param name="subscribedDataSet">subscribedDataSet.</param>
-        public StandaloneSubscribedDataSetDataType(string name = default(string), List<string> dataSetFolder = default(List<string>), DataSetMetaDataType dataSetMetaData = default(DataSetMetaDataType), ExtensionObject subscribedDataSet = default(ExtensionObject))
+        public StandaloneSubscribedDataSetDataType(string name = default(string), List<string> dataSetFolder = default(List<string>), DataSetMetaDataType dataSetMetaData = default(DataSetMetaDataType), Object subscribedDataSet = default(Object))
         {
             this.Name = name;
             this.DataSetFolder = dataSetFolder;
@@ -69,7 +69,7 @@ namespace Opc.Ua.WebApi.Model
         /// Gets or Sets SubscribedDataSet
         /// </summary>
         [DataMember(Name = "SubscribedDataSet", EmitDefaultValue = false)]
-        public ExtensionObject SubscribedDataSet { get; set; }
+        public Object SubscribedDataSet { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

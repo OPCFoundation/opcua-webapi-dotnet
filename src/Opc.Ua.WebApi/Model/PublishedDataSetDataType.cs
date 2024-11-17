@@ -40,7 +40,7 @@ namespace Opc.Ua.WebApi.Model
         /// <param name="dataSetMetaData">dataSetMetaData.</param>
         /// <param name="extensionFields">extensionFields.</param>
         /// <param name="dataSetSource">dataSetSource.</param>
-        public PublishedDataSetDataType(string name = default(string), List<string> dataSetFolder = default(List<string>), DataSetMetaDataType dataSetMetaData = default(DataSetMetaDataType), List<KeyValuePair> extensionFields = default(List<KeyValuePair>), ExtensionObject dataSetSource = default(ExtensionObject))
+        public PublishedDataSetDataType(string name = default(string), List<string> dataSetFolder = default(List<string>), DataSetMetaDataType dataSetMetaData = default(DataSetMetaDataType), List<KeyValuePair> extensionFields = default(List<KeyValuePair>), Object dataSetSource = default(Object))
         {
             this.Name = name;
             this.DataSetFolder = dataSetFolder;
@@ -77,7 +77,7 @@ namespace Opc.Ua.WebApi.Model
         /// Gets or Sets DataSetSource
         /// </summary>
         [DataMember(Name = "DataSetSource", EmitDefaultValue = false)]
-        public ExtensionObject DataSetSource { get; set; }
+        public Object DataSetSource { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

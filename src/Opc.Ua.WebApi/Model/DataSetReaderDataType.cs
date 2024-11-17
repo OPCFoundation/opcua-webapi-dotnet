@@ -52,7 +52,7 @@ namespace Opc.Ua.WebApi.Model
         /// <param name="transportSettings">transportSettings.</param>
         /// <param name="messageSettings">messageSettings.</param>
         /// <param name="subscribedDataSet">subscribedDataSet.</param>
-        public DataSetReaderDataType(string name = default(string), bool enabled = false, Variant publisherId = default(Variant), int writerGroupId = 0, int dataSetWriterId = 0, DataSetMetaDataType dataSetMetaData = default(DataSetMetaDataType), long dataSetFieldContentMask = 0, double messageReceiveTimeout = 0D, long keyFrameCount = 0, string headerLayoutUri = default(string), int securityMode = default(int), string securityGroupId = default(string), List<EndpointDescription> securityKeyServices = default(List<EndpointDescription>), List<KeyValuePair> dataSetReaderProperties = default(List<KeyValuePair>), ExtensionObject transportSettings = default(ExtensionObject), ExtensionObject messageSettings = default(ExtensionObject), ExtensionObject subscribedDataSet = default(ExtensionObject))
+        public DataSetReaderDataType(string name = default(string), bool enabled = false, Variant publisherId = default(Variant), int writerGroupId = 0, int dataSetWriterId = 0, DataSetMetaDataType dataSetMetaData = default(DataSetMetaDataType), long dataSetFieldContentMask = 0, double messageReceiveTimeout = 0D, long keyFrameCount = 0, string headerLayoutUri = default(string), int securityMode = default(int), string securityGroupId = default(string), List<EndpointDescription> securityKeyServices = default(List<EndpointDescription>), List<KeyValuePair> dataSetReaderProperties = default(List<KeyValuePair>), Object transportSettings = default(Object), Object messageSettings = default(Object), Object subscribedDataSet = default(Object))
         {
             this.Name = name;
             this.Enabled = enabled;
@@ -161,19 +161,19 @@ namespace Opc.Ua.WebApi.Model
         /// Gets or Sets TransportSettings
         /// </summary>
         [DataMember(Name = "TransportSettings", EmitDefaultValue = false)]
-        public ExtensionObject TransportSettings { get; set; }
+        public Object TransportSettings { get; set; }
 
         /// <summary>
         /// Gets or Sets MessageSettings
         /// </summary>
         [DataMember(Name = "MessageSettings", EmitDefaultValue = false)]
-        public ExtensionObject MessageSettings { get; set; }
+        public Object MessageSettings { get; set; }
 
         /// <summary>
         /// Gets or Sets SubscribedDataSet
         /// </summary>
         [DataMember(Name = "SubscribedDataSet", EmitDefaultValue = false)]
-        public ExtensionObject SubscribedDataSet { get; set; }
+        public Object SubscribedDataSet { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

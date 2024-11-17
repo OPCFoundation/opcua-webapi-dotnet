@@ -35,7 +35,7 @@ All URIs are relative to *http://localhost:4840*
 
 <a id="activatesession"></a>
 # **ActivateSession**
-> ActivateSessionResponse ActivateSession (ActivateSessionRequest? activateSessionRequest = null)
+> ActivateSessionResponse ActivateSession (ActivateSessionRequest activateSessionRequest = null)
 
 
 
@@ -56,7 +56,7 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:4840";
             var apiInstance = new DefaultApi(config);
-            var activateSessionRequest = new ActivateSessionRequest?(); // ActivateSessionRequest? | ActivateSessionRequestMessage (optional) 
+            var activateSessionRequest = new ActivateSessionRequest(); // ActivateSessionRequest | ActivateSessionRequestMessage (optional) 
 
             try
             {
@@ -97,7 +97,7 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **activateSessionRequest** | [**ActivateSessionRequest?**](ActivateSessionRequest?.md) | ActivateSessionRequestMessage | [optional]  |
+| **activateSessionRequest** | [**ActivateSessionRequest**](ActivateSessionRequest.md) | ActivateSessionRequestMessage | [optional]  |
 
 ### Return type
 
@@ -122,7 +122,7 @@ No authorization required
 
 <a id="browse"></a>
 # **Browse**
-> BrowseResponse Browse (BrowseRequest? browseRequest = null)
+> BrowseResponse Browse (BrowseRequest browseRequest = null)
 
 
 
@@ -143,7 +143,7 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:4840";
             var apiInstance = new DefaultApi(config);
-            var browseRequest = new BrowseRequest?(); // BrowseRequest? | BrowseRequestMessage (optional) 
+            var browseRequest = new BrowseRequest(); // BrowseRequest | BrowseRequestMessage (optional) 
 
             try
             {
@@ -184,7 +184,7 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **browseRequest** | [**BrowseRequest?**](BrowseRequest?.md) | BrowseRequestMessage | [optional]  |
+| **browseRequest** | [**BrowseRequest**](BrowseRequest.md) | BrowseRequestMessage | [optional]  |
 
 ### Return type
 
@@ -209,7 +209,7 @@ No authorization required
 
 <a id="browsenext"></a>
 # **BrowseNext**
-> BrowseNextResponse BrowseNext (BrowseNextRequest? browseNextRequest = null)
+> BrowseNextResponse BrowseNext (BrowseNextRequest browseNextRequest = null)
 
 
 
@@ -230,7 +230,7 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:4840";
             var apiInstance = new DefaultApi(config);
-            var browseNextRequest = new BrowseNextRequest?(); // BrowseNextRequest? | BrowseNextRequestMessage (optional) 
+            var browseNextRequest = new BrowseNextRequest(); // BrowseNextRequest | BrowseNextRequestMessage (optional) 
 
             try
             {
@@ -271,7 +271,7 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **browseNextRequest** | [**BrowseNextRequest?**](BrowseNextRequest?.md) | BrowseNextRequestMessage | [optional]  |
+| **browseNextRequest** | [**BrowseNextRequest**](BrowseNextRequest.md) | BrowseNextRequestMessage | [optional]  |
 
 ### Return type
 
@@ -296,7 +296,7 @@ No authorization required
 
 <a id="call"></a>
 # **Call**
-> CallResponse Call (CallRequest? callRequest = null)
+> CallResponse Call (CallRequest callRequest = null)
 
 
 
@@ -317,7 +317,7 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:4840";
             var apiInstance = new DefaultApi(config);
-            var callRequest = new CallRequest?(); // CallRequest? | CallRequestMessage (optional) 
+            var callRequest = new CallRequest(); // CallRequest | CallRequestMessage (optional) 
 
             try
             {
@@ -358,7 +358,7 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **callRequest** | [**CallRequest?**](CallRequest?.md) | CallRequestMessage | [optional]  |
+| **callRequest** | [**CallRequest**](CallRequest.md) | CallRequestMessage | [optional]  |
 
 ### Return type
 
@@ -383,7 +383,7 @@ No authorization required
 
 <a id="cancel"></a>
 # **Cancel**
-> CancelResponse Cancel (CancelRequest? cancelRequest = null)
+> CancelResponse Cancel (CancelRequest cancelRequest = null)
 
 
 
@@ -404,7 +404,7 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:4840";
             var apiInstance = new DefaultApi(config);
-            var cancelRequest = new CancelRequest?(); // CancelRequest? | CancelRequestMessage (optional) 
+            var cancelRequest = new CancelRequest(); // CancelRequest | CancelRequestMessage (optional) 
 
             try
             {
@@ -445,7 +445,7 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **cancelRequest** | [**CancelRequest?**](CancelRequest?.md) | CancelRequestMessage | [optional]  |
+| **cancelRequest** | [**CancelRequest**](CancelRequest.md) | CancelRequestMessage | [optional]  |
 
 ### Return type
 
@@ -470,7 +470,7 @@ No authorization required
 
 <a id="closesession"></a>
 # **CloseSession**
-> CloseSessionResponse CloseSession (CloseSessionRequest? closeSessionRequest = null)
+> CloseSessionResponse CloseSession (CloseSessionRequest closeSessionRequest = null)
 
 
 
@@ -491,7 +491,7 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:4840";
             var apiInstance = new DefaultApi(config);
-            var closeSessionRequest = new CloseSessionRequest?(); // CloseSessionRequest? | CloseSessionRequestMessage (optional) 
+            var closeSessionRequest = new CloseSessionRequest(); // CloseSessionRequest | CloseSessionRequestMessage (optional) 
 
             try
             {
@@ -532,7 +532,7 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **closeSessionRequest** | [**CloseSessionRequest?**](CloseSessionRequest?.md) | CloseSessionRequestMessage | [optional]  |
+| **closeSessionRequest** | [**CloseSessionRequest**](CloseSessionRequest.md) | CloseSessionRequestMessage | [optional]  |
 
 ### Return type
 
@@ -557,7 +557,7 @@ No authorization required
 
 <a id="createmonitoreditems"></a>
 # **CreateMonitoredItems**
-> CreateMonitoredItemsResponse CreateMonitoredItems (CreateMonitoredItemsRequest? createMonitoredItemsRequest = null)
+> CreateMonitoredItemsResponse CreateMonitoredItems (CreateMonitoredItemsRequest createMonitoredItemsRequest = null)
 
 
 
@@ -578,7 +578,7 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:4840";
             var apiInstance = new DefaultApi(config);
-            var createMonitoredItemsRequest = new CreateMonitoredItemsRequest?(); // CreateMonitoredItemsRequest? | CreateMonitoredItemsRequestMessage (optional) 
+            var createMonitoredItemsRequest = new CreateMonitoredItemsRequest(); // CreateMonitoredItemsRequest | CreateMonitoredItemsRequestMessage (optional) 
 
             try
             {
@@ -619,7 +619,7 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **createMonitoredItemsRequest** | [**CreateMonitoredItemsRequest?**](CreateMonitoredItemsRequest?.md) | CreateMonitoredItemsRequestMessage | [optional]  |
+| **createMonitoredItemsRequest** | [**CreateMonitoredItemsRequest**](CreateMonitoredItemsRequest.md) | CreateMonitoredItemsRequestMessage | [optional]  |
 
 ### Return type
 
@@ -644,7 +644,7 @@ No authorization required
 
 <a id="createsession"></a>
 # **CreateSession**
-> CreateSessionResponse CreateSession (CreateSessionRequest? createSessionRequest = null)
+> CreateSessionResponse CreateSession (CreateSessionRequest createSessionRequest = null)
 
 
 
@@ -665,7 +665,7 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:4840";
             var apiInstance = new DefaultApi(config);
-            var createSessionRequest = new CreateSessionRequest?(); // CreateSessionRequest? | CreateSessionRequestMessage (optional) 
+            var createSessionRequest = new CreateSessionRequest(); // CreateSessionRequest | CreateSessionRequestMessage (optional) 
 
             try
             {
@@ -706,7 +706,7 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **createSessionRequest** | [**CreateSessionRequest?**](CreateSessionRequest?.md) | CreateSessionRequestMessage | [optional]  |
+| **createSessionRequest** | [**CreateSessionRequest**](CreateSessionRequest.md) | CreateSessionRequestMessage | [optional]  |
 
 ### Return type
 
@@ -731,7 +731,7 @@ No authorization required
 
 <a id="createsubscription"></a>
 # **CreateSubscription**
-> CreateSubscriptionResponse CreateSubscription (CreateSubscriptionRequest? createSubscriptionRequest = null)
+> CreateSubscriptionResponse CreateSubscription (CreateSubscriptionRequest createSubscriptionRequest = null)
 
 
 
@@ -752,7 +752,7 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:4840";
             var apiInstance = new DefaultApi(config);
-            var createSubscriptionRequest = new CreateSubscriptionRequest?(); // CreateSubscriptionRequest? | CreateSubscriptionRequestMessage (optional) 
+            var createSubscriptionRequest = new CreateSubscriptionRequest(); // CreateSubscriptionRequest | CreateSubscriptionRequestMessage (optional) 
 
             try
             {
@@ -793,7 +793,7 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **createSubscriptionRequest** | [**CreateSubscriptionRequest?**](CreateSubscriptionRequest?.md) | CreateSubscriptionRequestMessage | [optional]  |
+| **createSubscriptionRequest** | [**CreateSubscriptionRequest**](CreateSubscriptionRequest.md) | CreateSubscriptionRequestMessage | [optional]  |
 
 ### Return type
 
@@ -818,7 +818,7 @@ No authorization required
 
 <a id="deletemonitoreditems"></a>
 # **DeleteMonitoredItems**
-> DeleteMonitoredItemsResponse DeleteMonitoredItems (DeleteMonitoredItemsRequest? deleteMonitoredItemsRequest = null)
+> DeleteMonitoredItemsResponse DeleteMonitoredItems (DeleteMonitoredItemsRequest deleteMonitoredItemsRequest = null)
 
 
 
@@ -839,7 +839,7 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:4840";
             var apiInstance = new DefaultApi(config);
-            var deleteMonitoredItemsRequest = new DeleteMonitoredItemsRequest?(); // DeleteMonitoredItemsRequest? | DeleteMonitoredItemsRequestMessage (optional) 
+            var deleteMonitoredItemsRequest = new DeleteMonitoredItemsRequest(); // DeleteMonitoredItemsRequest | DeleteMonitoredItemsRequestMessage (optional) 
 
             try
             {
@@ -880,7 +880,7 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **deleteMonitoredItemsRequest** | [**DeleteMonitoredItemsRequest?**](DeleteMonitoredItemsRequest?.md) | DeleteMonitoredItemsRequestMessage | [optional]  |
+| **deleteMonitoredItemsRequest** | [**DeleteMonitoredItemsRequest**](DeleteMonitoredItemsRequest.md) | DeleteMonitoredItemsRequestMessage | [optional]  |
 
 ### Return type
 
@@ -905,7 +905,7 @@ No authorization required
 
 <a id="deletesubscriptions"></a>
 # **DeleteSubscriptions**
-> DeleteSubscriptionsResponse DeleteSubscriptions (DeleteSubscriptionsRequest? deleteSubscriptionsRequest = null)
+> DeleteSubscriptionsResponse DeleteSubscriptions (DeleteSubscriptionsRequest deleteSubscriptionsRequest = null)
 
 
 
@@ -926,7 +926,7 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:4840";
             var apiInstance = new DefaultApi(config);
-            var deleteSubscriptionsRequest = new DeleteSubscriptionsRequest?(); // DeleteSubscriptionsRequest? | DeleteSubscriptionsRequestMessage (optional) 
+            var deleteSubscriptionsRequest = new DeleteSubscriptionsRequest(); // DeleteSubscriptionsRequest | DeleteSubscriptionsRequestMessage (optional) 
 
             try
             {
@@ -967,7 +967,7 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **deleteSubscriptionsRequest** | [**DeleteSubscriptionsRequest?**](DeleteSubscriptionsRequest?.md) | DeleteSubscriptionsRequestMessage | [optional]  |
+| **deleteSubscriptionsRequest** | [**DeleteSubscriptionsRequest**](DeleteSubscriptionsRequest.md) | DeleteSubscriptionsRequestMessage | [optional]  |
 
 ### Return type
 
@@ -992,7 +992,7 @@ No authorization required
 
 <a id="findservers"></a>
 # **FindServers**
-> FindServersResponse FindServers (FindServersRequest? findServersRequest = null)
+> FindServersResponse FindServers (FindServersRequest findServersRequest = null)
 
 
 
@@ -1013,7 +1013,7 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:4840";
             var apiInstance = new DefaultApi(config);
-            var findServersRequest = new FindServersRequest?(); // FindServersRequest? | FindServersRequestMessage (optional) 
+            var findServersRequest = new FindServersRequest(); // FindServersRequest | FindServersRequestMessage (optional) 
 
             try
             {
@@ -1054,7 +1054,7 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **findServersRequest** | [**FindServersRequest?**](FindServersRequest?.md) | FindServersRequestMessage | [optional]  |
+| **findServersRequest** | [**FindServersRequest**](FindServersRequest.md) | FindServersRequestMessage | [optional]  |
 
 ### Return type
 
@@ -1079,7 +1079,7 @@ No authorization required
 
 <a id="getendpoints"></a>
 # **GetEndpoints**
-> GetEndpointsResponse GetEndpoints (GetEndpointsRequest? getEndpointsRequest = null)
+> GetEndpointsResponse GetEndpoints (GetEndpointsRequest getEndpointsRequest = null)
 
 
 
@@ -1100,7 +1100,7 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:4840";
             var apiInstance = new DefaultApi(config);
-            var getEndpointsRequest = new GetEndpointsRequest?(); // GetEndpointsRequest? | GetEndpointsRequestMessage (optional) 
+            var getEndpointsRequest = new GetEndpointsRequest(); // GetEndpointsRequest | GetEndpointsRequestMessage (optional) 
 
             try
             {
@@ -1141,7 +1141,7 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **getEndpointsRequest** | [**GetEndpointsRequest?**](GetEndpointsRequest?.md) | GetEndpointsRequestMessage | [optional]  |
+| **getEndpointsRequest** | [**GetEndpointsRequest**](GetEndpointsRequest.md) | GetEndpointsRequestMessage | [optional]  |
 
 ### Return type
 
@@ -1166,7 +1166,7 @@ No authorization required
 
 <a id="historyread"></a>
 # **HistoryRead**
-> HistoryReadResponse HistoryRead (HistoryReadRequest? historyReadRequest = null)
+> HistoryReadResponse HistoryRead (HistoryReadRequest historyReadRequest = null)
 
 
 
@@ -1187,7 +1187,7 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:4840";
             var apiInstance = new DefaultApi(config);
-            var historyReadRequest = new HistoryReadRequest?(); // HistoryReadRequest? | HistoryReadRequestMessage (optional) 
+            var historyReadRequest = new HistoryReadRequest(); // HistoryReadRequest | HistoryReadRequestMessage (optional) 
 
             try
             {
@@ -1228,7 +1228,7 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **historyReadRequest** | [**HistoryReadRequest?**](HistoryReadRequest?.md) | HistoryReadRequestMessage | [optional]  |
+| **historyReadRequest** | [**HistoryReadRequest**](HistoryReadRequest.md) | HistoryReadRequestMessage | [optional]  |
 
 ### Return type
 
@@ -1253,7 +1253,7 @@ No authorization required
 
 <a id="historyupdate"></a>
 # **HistoryUpdate**
-> HistoryUpdateResponse HistoryUpdate (HistoryUpdateRequest? historyUpdateRequest = null)
+> HistoryUpdateResponse HistoryUpdate (HistoryUpdateRequest historyUpdateRequest = null)
 
 
 
@@ -1274,7 +1274,7 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:4840";
             var apiInstance = new DefaultApi(config);
-            var historyUpdateRequest = new HistoryUpdateRequest?(); // HistoryUpdateRequest? | HistoryUpdateRequestMessage (optional) 
+            var historyUpdateRequest = new HistoryUpdateRequest(); // HistoryUpdateRequest | HistoryUpdateRequestMessage (optional) 
 
             try
             {
@@ -1315,7 +1315,7 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **historyUpdateRequest** | [**HistoryUpdateRequest?**](HistoryUpdateRequest?.md) | HistoryUpdateRequestMessage | [optional]  |
+| **historyUpdateRequest** | [**HistoryUpdateRequest**](HistoryUpdateRequest.md) | HistoryUpdateRequestMessage | [optional]  |
 
 ### Return type
 
@@ -1340,7 +1340,7 @@ No authorization required
 
 <a id="modifymonitoreditems"></a>
 # **ModifyMonitoredItems**
-> ModifyMonitoredItemsResponse ModifyMonitoredItems (ModifyMonitoredItemsRequest? modifyMonitoredItemsRequest = null)
+> ModifyMonitoredItemsResponse ModifyMonitoredItems (ModifyMonitoredItemsRequest modifyMonitoredItemsRequest = null)
 
 
 
@@ -1361,7 +1361,7 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:4840";
             var apiInstance = new DefaultApi(config);
-            var modifyMonitoredItemsRequest = new ModifyMonitoredItemsRequest?(); // ModifyMonitoredItemsRequest? | ModifyMonitoredItemsRequestMessage (optional) 
+            var modifyMonitoredItemsRequest = new ModifyMonitoredItemsRequest(); // ModifyMonitoredItemsRequest | ModifyMonitoredItemsRequestMessage (optional) 
 
             try
             {
@@ -1402,7 +1402,7 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **modifyMonitoredItemsRequest** | [**ModifyMonitoredItemsRequest?**](ModifyMonitoredItemsRequest?.md) | ModifyMonitoredItemsRequestMessage | [optional]  |
+| **modifyMonitoredItemsRequest** | [**ModifyMonitoredItemsRequest**](ModifyMonitoredItemsRequest.md) | ModifyMonitoredItemsRequestMessage | [optional]  |
 
 ### Return type
 
@@ -1427,7 +1427,7 @@ No authorization required
 
 <a id="modifysubscription"></a>
 # **ModifySubscription**
-> ModifySubscriptionResponse ModifySubscription (ModifySubscriptionRequest? modifySubscriptionRequest = null)
+> ModifySubscriptionResponse ModifySubscription (ModifySubscriptionRequest modifySubscriptionRequest = null)
 
 
 
@@ -1448,7 +1448,7 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:4840";
             var apiInstance = new DefaultApi(config);
-            var modifySubscriptionRequest = new ModifySubscriptionRequest?(); // ModifySubscriptionRequest? | ModifySubscriptionRequestMessage (optional) 
+            var modifySubscriptionRequest = new ModifySubscriptionRequest(); // ModifySubscriptionRequest | ModifySubscriptionRequestMessage (optional) 
 
             try
             {
@@ -1489,7 +1489,7 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **modifySubscriptionRequest** | [**ModifySubscriptionRequest?**](ModifySubscriptionRequest?.md) | ModifySubscriptionRequestMessage | [optional]  |
+| **modifySubscriptionRequest** | [**ModifySubscriptionRequest**](ModifySubscriptionRequest.md) | ModifySubscriptionRequestMessage | [optional]  |
 
 ### Return type
 
@@ -1514,7 +1514,7 @@ No authorization required
 
 <a id="publish"></a>
 # **Publish**
-> PublishResponse Publish (PublishRequest? publishRequest = null)
+> PublishResponse Publish (PublishRequest publishRequest = null)
 
 
 
@@ -1535,7 +1535,7 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:4840";
             var apiInstance = new DefaultApi(config);
-            var publishRequest = new PublishRequest?(); // PublishRequest? | PublishRequestMessage (optional) 
+            var publishRequest = new PublishRequest(); // PublishRequest | PublishRequestMessage (optional) 
 
             try
             {
@@ -1576,7 +1576,7 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **publishRequest** | [**PublishRequest?**](PublishRequest?.md) | PublishRequestMessage | [optional]  |
+| **publishRequest** | [**PublishRequest**](PublishRequest.md) | PublishRequestMessage | [optional]  |
 
 ### Return type
 
@@ -1601,7 +1601,7 @@ No authorization required
 
 <a id="read"></a>
 # **Read**
-> ReadResponse Read (ReadRequest? readRequest = null)
+> ReadResponse Read (ReadRequest readRequest = null)
 
 
 
@@ -1622,7 +1622,7 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:4840";
             var apiInstance = new DefaultApi(config);
-            var readRequest = new ReadRequest?(); // ReadRequest? | ReadRequestMessage (optional) 
+            var readRequest = new ReadRequest(); // ReadRequest | ReadRequestMessage (optional) 
 
             try
             {
@@ -1663,7 +1663,7 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **readRequest** | [**ReadRequest?**](ReadRequest?.md) | ReadRequestMessage | [optional]  |
+| **readRequest** | [**ReadRequest**](ReadRequest.md) | ReadRequestMessage | [optional]  |
 
 ### Return type
 
@@ -1688,7 +1688,7 @@ No authorization required
 
 <a id="registernodes"></a>
 # **RegisterNodes**
-> RegisterNodesResponse RegisterNodes (RegisterNodesRequest? registerNodesRequest = null)
+> RegisterNodesResponse RegisterNodes (RegisterNodesRequest registerNodesRequest = null)
 
 
 
@@ -1709,7 +1709,7 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:4840";
             var apiInstance = new DefaultApi(config);
-            var registerNodesRequest = new RegisterNodesRequest?(); // RegisterNodesRequest? | RegisterNodesRequestMessage (optional) 
+            var registerNodesRequest = new RegisterNodesRequest(); // RegisterNodesRequest | RegisterNodesRequestMessage (optional) 
 
             try
             {
@@ -1750,7 +1750,7 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **registerNodesRequest** | [**RegisterNodesRequest?**](RegisterNodesRequest?.md) | RegisterNodesRequestMessage | [optional]  |
+| **registerNodesRequest** | [**RegisterNodesRequest**](RegisterNodesRequest.md) | RegisterNodesRequestMessage | [optional]  |
 
 ### Return type
 
@@ -1775,7 +1775,7 @@ No authorization required
 
 <a id="republish"></a>
 # **Republish**
-> RepublishResponse Republish (RepublishRequest? republishRequest = null)
+> RepublishResponse Republish (RepublishRequest republishRequest = null)
 
 
 
@@ -1796,7 +1796,7 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:4840";
             var apiInstance = new DefaultApi(config);
-            var republishRequest = new RepublishRequest?(); // RepublishRequest? | RepublishRequestMessage (optional) 
+            var republishRequest = new RepublishRequest(); // RepublishRequest | RepublishRequestMessage (optional) 
 
             try
             {
@@ -1837,7 +1837,7 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **republishRequest** | [**RepublishRequest?**](RepublishRequest?.md) | RepublishRequestMessage | [optional]  |
+| **republishRequest** | [**RepublishRequest**](RepublishRequest.md) | RepublishRequestMessage | [optional]  |
 
 ### Return type
 
@@ -1862,7 +1862,7 @@ No authorization required
 
 <a id="setmonitoringmode"></a>
 # **SetMonitoringMode**
-> SetMonitoringModeResponse SetMonitoringMode (SetMonitoringModeRequest? setMonitoringModeRequest = null)
+> SetMonitoringModeResponse SetMonitoringMode (SetMonitoringModeRequest setMonitoringModeRequest = null)
 
 
 
@@ -1883,7 +1883,7 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:4840";
             var apiInstance = new DefaultApi(config);
-            var setMonitoringModeRequest = new SetMonitoringModeRequest?(); // SetMonitoringModeRequest? | SetMonitoringModeRequestMessage (optional) 
+            var setMonitoringModeRequest = new SetMonitoringModeRequest(); // SetMonitoringModeRequest | SetMonitoringModeRequestMessage (optional) 
 
             try
             {
@@ -1924,7 +1924,7 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **setMonitoringModeRequest** | [**SetMonitoringModeRequest?**](SetMonitoringModeRequest?.md) | SetMonitoringModeRequestMessage | [optional]  |
+| **setMonitoringModeRequest** | [**SetMonitoringModeRequest**](SetMonitoringModeRequest.md) | SetMonitoringModeRequestMessage | [optional]  |
 
 ### Return type
 
@@ -1949,7 +1949,7 @@ No authorization required
 
 <a id="setpublishingmode"></a>
 # **SetPublishingMode**
-> SetPublishingModeResponse SetPublishingMode (SetPublishingModeRequest? setPublishingModeRequest = null)
+> SetPublishingModeResponse SetPublishingMode (SetPublishingModeRequest setPublishingModeRequest = null)
 
 
 
@@ -1970,7 +1970,7 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:4840";
             var apiInstance = new DefaultApi(config);
-            var setPublishingModeRequest = new SetPublishingModeRequest?(); // SetPublishingModeRequest? | SetPublishingModeRequestMessage (optional) 
+            var setPublishingModeRequest = new SetPublishingModeRequest(); // SetPublishingModeRequest | SetPublishingModeRequestMessage (optional) 
 
             try
             {
@@ -2011,7 +2011,7 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **setPublishingModeRequest** | [**SetPublishingModeRequest?**](SetPublishingModeRequest?.md) | SetPublishingModeRequestMessage | [optional]  |
+| **setPublishingModeRequest** | [**SetPublishingModeRequest**](SetPublishingModeRequest.md) | SetPublishingModeRequestMessage | [optional]  |
 
 ### Return type
 
@@ -2036,7 +2036,7 @@ No authorization required
 
 <a id="settriggering"></a>
 # **SetTriggering**
-> SetTriggeringResponse SetTriggering (SetTriggeringRequest? setTriggeringRequest = null)
+> SetTriggeringResponse SetTriggering (SetTriggeringRequest setTriggeringRequest = null)
 
 
 
@@ -2057,7 +2057,7 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:4840";
             var apiInstance = new DefaultApi(config);
-            var setTriggeringRequest = new SetTriggeringRequest?(); // SetTriggeringRequest? | SetTriggeringRequestMessage (optional) 
+            var setTriggeringRequest = new SetTriggeringRequest(); // SetTriggeringRequest | SetTriggeringRequestMessage (optional) 
 
             try
             {
@@ -2098,7 +2098,7 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **setTriggeringRequest** | [**SetTriggeringRequest?**](SetTriggeringRequest?.md) | SetTriggeringRequestMessage | [optional]  |
+| **setTriggeringRequest** | [**SetTriggeringRequest**](SetTriggeringRequest.md) | SetTriggeringRequestMessage | [optional]  |
 
 ### Return type
 
@@ -2123,7 +2123,7 @@ No authorization required
 
 <a id="transfersubscriptions"></a>
 # **TransferSubscriptions**
-> TransferSubscriptionsResponse TransferSubscriptions (TransferSubscriptionsRequest? transferSubscriptionsRequest = null)
+> TransferSubscriptionsResponse TransferSubscriptions (TransferSubscriptionsRequest transferSubscriptionsRequest = null)
 
 
 
@@ -2144,7 +2144,7 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:4840";
             var apiInstance = new DefaultApi(config);
-            var transferSubscriptionsRequest = new TransferSubscriptionsRequest?(); // TransferSubscriptionsRequest? | TransferSubscriptionsRequestMessage (optional) 
+            var transferSubscriptionsRequest = new TransferSubscriptionsRequest(); // TransferSubscriptionsRequest | TransferSubscriptionsRequestMessage (optional) 
 
             try
             {
@@ -2185,7 +2185,7 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **transferSubscriptionsRequest** | [**TransferSubscriptionsRequest?**](TransferSubscriptionsRequest?.md) | TransferSubscriptionsRequestMessage | [optional]  |
+| **transferSubscriptionsRequest** | [**TransferSubscriptionsRequest**](TransferSubscriptionsRequest.md) | TransferSubscriptionsRequestMessage | [optional]  |
 
 ### Return type
 
@@ -2210,7 +2210,7 @@ No authorization required
 
 <a id="translatebrowsepathstonodeids"></a>
 # **TranslateBrowsePathsToNodeIds**
-> TranslateBrowsePathsToNodeIdsResponse TranslateBrowsePathsToNodeIds (TranslateBrowsePathsToNodeIdsRequest? translateBrowsePathsToNodeIdsRequest = null)
+> TranslateBrowsePathsToNodeIdsResponse TranslateBrowsePathsToNodeIds (TranslateBrowsePathsToNodeIdsRequest translateBrowsePathsToNodeIdsRequest = null)
 
 
 
@@ -2231,7 +2231,7 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:4840";
             var apiInstance = new DefaultApi(config);
-            var translateBrowsePathsToNodeIdsRequest = new TranslateBrowsePathsToNodeIdsRequest?(); // TranslateBrowsePathsToNodeIdsRequest? | TranslateBrowsePathsToNodeIdsRequestMessage (optional) 
+            var translateBrowsePathsToNodeIdsRequest = new TranslateBrowsePathsToNodeIdsRequest(); // TranslateBrowsePathsToNodeIdsRequest | TranslateBrowsePathsToNodeIdsRequestMessage (optional) 
 
             try
             {
@@ -2272,7 +2272,7 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **translateBrowsePathsToNodeIdsRequest** | [**TranslateBrowsePathsToNodeIdsRequest?**](TranslateBrowsePathsToNodeIdsRequest?.md) | TranslateBrowsePathsToNodeIdsRequestMessage | [optional]  |
+| **translateBrowsePathsToNodeIdsRequest** | [**TranslateBrowsePathsToNodeIdsRequest**](TranslateBrowsePathsToNodeIdsRequest.md) | TranslateBrowsePathsToNodeIdsRequestMessage | [optional]  |
 
 ### Return type
 
@@ -2297,7 +2297,7 @@ No authorization required
 
 <a id="unregisternodes"></a>
 # **UnregisterNodes**
-> UnregisterNodesResponse UnregisterNodes (UnregisterNodesRequest? unregisterNodesRequest = null)
+> UnregisterNodesResponse UnregisterNodes (UnregisterNodesRequest unregisterNodesRequest = null)
 
 
 
@@ -2318,7 +2318,7 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:4840";
             var apiInstance = new DefaultApi(config);
-            var unregisterNodesRequest = new UnregisterNodesRequest?(); // UnregisterNodesRequest? | UnregisterNodesRequestMessage (optional) 
+            var unregisterNodesRequest = new UnregisterNodesRequest(); // UnregisterNodesRequest | UnregisterNodesRequestMessage (optional) 
 
             try
             {
@@ -2359,7 +2359,7 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **unregisterNodesRequest** | [**UnregisterNodesRequest?**](UnregisterNodesRequest?.md) | UnregisterNodesRequestMessage | [optional]  |
+| **unregisterNodesRequest** | [**UnregisterNodesRequest**](UnregisterNodesRequest.md) | UnregisterNodesRequestMessage | [optional]  |
 
 ### Return type
 
@@ -2384,7 +2384,7 @@ No authorization required
 
 <a id="write"></a>
 # **Write**
-> WriteResponse Write (WriteRequest? writeRequest = null)
+> WriteResponse Write (WriteRequest writeRequest = null)
 
 
 
@@ -2405,7 +2405,7 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:4840";
             var apiInstance = new DefaultApi(config);
-            var writeRequest = new WriteRequest?(); // WriteRequest? | WriteRequestMessage (optional) 
+            var writeRequest = new WriteRequest(); // WriteRequest | WriteRequestMessage (optional) 
 
             try
             {
@@ -2446,7 +2446,7 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **writeRequest** | [**WriteRequest?**](WriteRequest?.md) | WriteRequestMessage | [optional]  |
+| **writeRequest** | [**WriteRequest**](WriteRequest.md) | WriteRequestMessage | [optional]  |
 
 ### Return type
 

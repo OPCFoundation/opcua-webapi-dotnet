@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**TransportSettings** | [**ExtensionObject**](ExtensionObject.md) |  | [optional] 
-**MessageSettings** | [**ExtensionObject**](ExtensionObject.md) |  | [optional] 
+**TransportSettings** | **Object** |  | [optional] 
+**MessageSettings** | **Object** |  | [optional] 
 **DataSetReaders** | [**List&lt;DataSetReaderDataType&gt;**](DataSetReaderDataType.md) |  | [optional] 
 **Name** | **string** |  | [optional] 
 **Enabled** | **bool** |  | [optional] [default to false]

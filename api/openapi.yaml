@@ -508,40 +508,28 @@ components:
     Variant:
       additionalProperties: false
       example:
-        Dimensions:
-        - 0
-        - 0
+        Value: ""
         UaType: 20
-        Body: ""
       properties:
         UaType:
           format: int32
           maximum: 255
           minimum: 0
           type: integer
-        Body: {}
-        Dimensions:
-          items:
-            format: int32
-            minimum: 0
-            type: integer
-          type: array
+        Value: {}
       type: object
     DataValue:
       additionalProperties: false
       example:
-        SourcePicoseconds: 13284
+        SourcePicoseconds: 23697
         Value: ""
-        Dimensions:
-        - 0
-        - 0
         SourceTimestamp: 2000-01-23T04:56:07.000+00:00
         ServerTimestamp: 2000-01-23T04:56:07.000+00:00
         UaType: 237
         StatusCode:
           Symbol: Symbol
           Code: 2588772717
-        ServerPicoseconds: 27168
+        ServerPicoseconds: 13284
       properties:
         UaType:
           default: 0
@@ -550,12 +538,6 @@ components:
           minimum: 0
           type: integer
         Value: {}
-        Dimensions:
-          items:
-            format: int32
-            minimum: 0
-            type: integer
-          type: array
         StatusCode:
           $ref: '#/components/schemas/StatusCode'
         SourceTimestamp:
@@ -619,6 +601,21 @@ components:
         Value:
           default: "0"
           type: string
+      type: object
+    Matrix:
+      additionalProperties: false
+      properties:
+        Array:
+          items: {}
+          type: array
+        Dimensions:
+          items:
+            format: int32
+            minimum: 0
+            type: integer
+          type: array
+      type: object
+    Structure:
       type: object
     BaseDataType:
       $ref: '#/components/schemas/Variant'
@@ -772,9 +769,15 @@ components:
             $ref: '#/components/schemas/KeyValuePair'
           type: array
       type: object
+    DataSetFieldFlagsBits:
+      enum:
+      - 1
+      format: int32
+      type: integer
+      x-enum-varnames:
+      - PromotedField
     DataSetFieldFlags:
       default: 0
-      description: PromotedField=0000
       format: int64
       maximum: 4294967295
       minimum: 0
@@ -809,12 +812,60 @@ components:
             $ref: '#/components/schemas/KeyValuePair'
           type: array
         DataSetSource:
-          $ref: '#/components/schemas/ExtensionObject'
+          type: object
       type: object
+    ActionTargetDataType:
+      properties:
+        ActionTargetId:
+          default: 0
+          format: int32
+          maximum: 65535
+          minimum: 0
+          type: integer
+        Name:
+          type: string
+        Description:
+          $ref: '#/components/schemas/LocalizedText'
+      type: object
+    ActionState:
+      enum:
+      - 0
+      - 1
+      - 2
+      format: int32
+      type: integer
+      x-enum-varnames:
+      - Idle
+      - Executing
+      - Done
+    ActionMethodDataType:
+      properties:
+        ObjectId:
+          format: UaNodeId
+          type: string
+        MethodId:
+          format: UaNodeId
+          type: string
+      type: object
+    DataSetFieldContentMaskBits:
+      enum:
+      - 1
+      - 2
+      - 4
+      - 8
+      - 16
+      - 32
+      format: int32
+      type: integer
+      x-enum-varnames:
+      - StatusCode
+      - SourceTimestamp
+      - ServerTimestamp
+      - SourcePicoSeconds
+      - ServerPicoSeconds
+      - RawData
     DataSetFieldContentMask:
       default: 0
-      description: "StatusCode=0000, SourceTimestamp=0001, ServerTimestamp=0002, SourcePicoSeconds=0003,\
-        \ ServerPicoSeconds=0004, RawData=0005"
       format: int64
       maximum: 4294967295
       minimum: 0
@@ -851,9 +902,9 @@ components:
             $ref: '#/components/schemas/KeyValuePair'
           type: array
         TransportSettings:
-          $ref: '#/components/schemas/ExtensionObject'
+          type: object
         MessageSettings:
-          $ref: '#/components/schemas/ExtensionObject'
+          type: object
       type: object
     DataSetWriterTransportDataType:
       type: object
@@ -917,9 +968,9 @@ components:
         HeaderLayoutUri:
           type: string
         TransportSettings:
-          $ref: '#/components/schemas/ExtensionObject'
+          type: object
         MessageSettings:
-          $ref: '#/components/schemas/ExtensionObject'
+          type: object
         DataSetWriters:
           items:
             $ref: '#/components/schemas/DataSetWriterDataType'
@@ -941,13 +992,13 @@ components:
         TransportProfileUri:
           type: string
         Address:
-          $ref: '#/components/schemas/ExtensionObject'
+          type: object
         ConnectionProperties:
           items:
             $ref: '#/components/schemas/KeyValuePair'
           type: array
         TransportSettings:
-          $ref: '#/components/schemas/ExtensionObject'
+          type: object
         WriterGroups:
           items:
             $ref: '#/components/schemas/WriterGroupDataType'
@@ -969,9 +1020,9 @@ components:
       - $ref: '#/components/schemas/PubSubGroupDataType'
       properties:
         TransportSettings:
-          $ref: '#/components/schemas/ExtensionObject'
+          type: object
         MessageSettings:
-          $ref: '#/components/schemas/ExtensionObject'
+          type: object
         DataSetReaders:
           items:
             $ref: '#/components/schemas/DataSetReaderDataType'
@@ -1036,11 +1087,11 @@ components:
             $ref: '#/components/schemas/KeyValuePair'
           type: array
         TransportSettings:
-          $ref: '#/components/schemas/ExtensionObject'
+          type: object
         MessageSettings:
-          $ref: '#/components/schemas/ExtensionObject'
+          type: object
         SubscribedDataSet:
-          $ref: '#/components/schemas/ExtensionObject'
+          type: object
       type: object
     DataSetReaderTransportDataType:
       type: object
@@ -1075,7 +1126,7 @@ components:
         DataSetMetaData:
           $ref: '#/components/schemas/DataSetMetaDataType'
         SubscribedDataSet:
-          $ref: '#/components/schemas/ExtensionObject'
+          type: object
       type: object
     SecurityGroupDataType:
       properties:
@@ -1182,10 +1233,27 @@ components:
             $ref: '#/components/schemas/KeyValuePair'
           type: array
       type: object
+    JsonNetworkMessageContentMaskBits:
+      enum:
+      - 1
+      - 2
+      - 4
+      - 8
+      - 16
+      - 32
+      - 64
+      format: int32
+      type: integer
+      x-enum-varnames:
+      - NetworkMessageHeader
+      - DataSetMessageHeader
+      - SingleDataSetMessage
+      - PublisherId
+      - DataSetClassId
+      - ReplyTo
+      - WriterGroupName
     JsonNetworkMessageContentMask:
       default: 0
-      description: "NetworkMessageHeader=0000, DataSetMessageHeader=0001, SingleDataSetMessage=0002,\
-        \ PublisherId=0003, DataSetClassId=0004, ReplyTo=0005, WriterGroupName=0006"
       format: int64
       maximum: 4294967295
       minimum: 0
@@ -1201,11 +1269,37 @@ components:
           minimum: 0
           type: integer
       type: object
+    JsonDataSetMessageContentMaskBits:
+      enum:
+      - 1
+      - 2
+      - 4
+      - 8
+      - 16
+      - 32
+      - 64
+      - 128
+      - 256
+      - 512
+      - 1024
+      - 2048
+      format: int32
+      type: integer
+      x-enum-varnames:
+      - DataSetWriterId
+      - MetaDataVersion
+      - SequenceNumber
+      - Timestamp
+      - Status
+      - MessageType
+      - DataSetWriterName
+      - FieldEncoding1
+      - PublisherId
+      - WriterGroupName
+      - MinorVersion
+      - FieldEncoding2
     JsonDataSetMessageContentMask:
       default: 0
-      description: "DataSetWriterId=0000, MetaDataVersion=0001, SequenceNumber=0002,\
-        \ Timestamp=0003, Status=0004, MessageType=0005, DataSetWriterName=0006, FieldEncoding1=0007,\
-        \ PublisherId=0008, WriterGroupName=0009, MinorVersion=000A, FieldEncoding2=000B"
       format: int64
       maximum: 4294967295
       minimum: 0
@@ -1312,6 +1406,326 @@ components:
         MetaDataQueueName:
           type: string
       type: object
+    JsonNetworkMessage:
+      properties:
+        MessageId:
+          type: string
+        MessageType:
+          type: string
+        PublisherId:
+          type: string
+        WriterGroupName:
+          type: string
+        DataSetClassId:
+          type: string
+        Messages: {}
+      type: object
+    JsonDataSetMessage:
+      properties:
+        DataSetWriterId:
+          default: 0
+          format: int32
+          maximum: 65535
+          minimum: 0
+          type: integer
+        DataSetWriterName:
+          type: string
+        PublisherId:
+          type: string
+        WriterGroupName:
+          type: string
+        SequenceNumber:
+          default: 0
+          format: int64
+          maximum: 4294967295
+          minimum: 0
+          type: integer
+        MetaDataVersion:
+          $ref: '#/components/schemas/ConfigurationVersionDataType'
+        MinorVersion:
+          default: 0
+          format: int64
+          maximum: 4294967295
+          minimum: 0
+          type: integer
+        Timestamp:
+          default: 0001-01-01T00:00:00Z
+          format: date-time
+          type: string
+        Status:
+          $ref: '#/components/schemas/StatusCode'
+        MessageType:
+          type: string
+        Payload:
+          type: object
+      type: object
+    JsonDataSetMetaDataMessage:
+      properties:
+        MessageId:
+          type: string
+        MessageType:
+          type: string
+        PublisherId:
+          type: string
+        DataSetWriterId:
+          default: 0
+          format: int32
+          maximum: 65535
+          minimum: 0
+          type: integer
+        WriterGroupName:
+          type: string
+        DataSetWriterName:
+          type: string
+        Timestamp:
+          default: 0001-01-01T00:00:00Z
+          format: date-time
+          type: string
+        MetaData:
+          $ref: '#/components/schemas/DataSetMetaDataType'
+      type: object
+    JsonApplicationDescriptionMessage:
+      properties:
+        MessageId:
+          type: string
+        MessageType:
+          type: string
+        PublisherId:
+          type: string
+        Timestamp:
+          default: 0001-01-01T00:00:00Z
+          format: date-time
+          type: string
+        Description:
+          $ref: '#/components/schemas/ApplicationDescription'
+        ServerCapabilities:
+          items:
+            type: string
+          type: array
+      type: object
+    JsonServerEndpointsMessage:
+      properties:
+        MessageId:
+          type: string
+        MessageType:
+          type: string
+        PublisherId:
+          type: string
+        Timestamp:
+          default: 0001-01-01T00:00:00Z
+          format: date-time
+          type: string
+        Description:
+          $ref: '#/components/schemas/ApplicationDescription'
+        Endpoints:
+          items:
+            $ref: '#/components/schemas/EndpointDescription'
+          type: array
+      type: object
+    JsonStatusMessage:
+      properties:
+        MessageId:
+          type: string
+        MessageType:
+          type: string
+        PublisherId:
+          type: string
+        Timestamp:
+          default: 0001-01-01T00:00:00Z
+          format: date-time
+          type: string
+        IsCyclic:
+          default: false
+          type: boolean
+        Status:
+          format: PubSubState
+          type: integer
+        NextReportTime:
+          default: 0001-01-01T00:00:00Z
+          format: date-time
+          type: string
+      type: object
+    JsonPubSubConnectionMessage:
+      properties:
+        MessageId:
+          type: string
+        MessageType:
+          type: string
+        PublisherId:
+          type: string
+        Timestamp:
+          default: 0001-01-01T00:00:00Z
+          format: date-time
+          type: string
+        Connection:
+          $ref: '#/components/schemas/PubSubConnectionDataType'
+      type: object
+    JsonActionMetaDataMessage:
+      properties:
+        MessageId:
+          type: string
+        MessageType:
+          type: string
+        PublisherId:
+          type: string
+        DataSetWriterId:
+          default: 0
+          format: int32
+          maximum: 65535
+          minimum: 0
+          type: integer
+        DataSetWriterName:
+          type: string
+        Timestamp:
+          default: 0001-01-01T00:00:00Z
+          format: date-time
+          type: string
+        ActionTargets:
+          items:
+            $ref: '#/components/schemas/ActionTargetDataType'
+          type: array
+        Request:
+          $ref: '#/components/schemas/DataSetMetaDataType'
+        Response:
+          $ref: '#/components/schemas/DataSetMetaDataType'
+        ActionMethods:
+          items:
+            $ref: '#/components/schemas/ActionMethodDataType'
+          type: array
+      type: object
+    JsonActionResponderMessage:
+      properties:
+        MessageId:
+          type: string
+        MessageType:
+          type: string
+        PublisherId:
+          type: string
+        Timestamp:
+          default: 0001-01-01T00:00:00Z
+          format: date-time
+          type: string
+        Connection:
+          $ref: '#/components/schemas/PubSubConnectionDataType'
+      type: object
+    JsonActionNetworkMessage:
+      properties:
+        MessageId:
+          type: string
+        MessageType:
+          type: string
+        PublisherId:
+          type: string
+        Timestamp:
+          default: 0001-01-01T00:00:00Z
+          format: date-time
+          type: string
+        ResponseAddress:
+          type: string
+        CorrelationData:
+          format: byte
+          type: string
+        RequestorId:
+          type: string
+        TimeoutHint:
+          default: 0
+          format: double
+          type: number
+        Messages:
+          items:
+            type: object
+          type: array
+      type: object
+    JsonActionRequestMessage:
+      properties:
+        DataSetWriterId:
+          default: 0
+          format: int32
+          maximum: 65535
+          minimum: 0
+          type: integer
+        ActionTargetId:
+          default: 0
+          format: int32
+          maximum: 65535
+          minimum: 0
+          type: integer
+        DataSetWriterName:
+          type: string
+        WriterGroupName:
+          type: string
+        MetaDataVersion:
+          $ref: '#/components/schemas/ConfigurationVersionDataType'
+        MinorVersion:
+          default: 0
+          format: int64
+          maximum: 4294967295
+          minimum: 0
+          type: integer
+        Timestamp:
+          default: 0001-01-01T00:00:00Z
+          format: date-time
+          type: string
+        MessageType:
+          type: string
+        RequestId:
+          default: 0
+          format: int32
+          maximum: 65535
+          minimum: 0
+          type: integer
+        ActionState:
+          format: ActionState
+          type: integer
+        Payload:
+          type: object
+      type: object
+    JsonActionResponseMessage:
+      properties:
+        DataSetWriterId:
+          default: 0
+          format: int32
+          maximum: 65535
+          minimum: 0
+          type: integer
+        ActionTargetId:
+          default: 0
+          format: int32
+          maximum: 65535
+          minimum: 0
+          type: integer
+        DataSetWriterName:
+          type: string
+        WriterGroupName:
+          type: string
+        MetaDataVersion:
+          $ref: '#/components/schemas/ConfigurationVersionDataType'
+        MinorVersion:
+          default: 0
+          format: int64
+          maximum: 4294967295
+          minimum: 0
+          type: integer
+        Timestamp:
+          default: 0001-01-01T00:00:00Z
+          format: date-time
+          type: string
+        Status:
+          $ref: '#/components/schemas/StatusCode'
+        MessageType:
+          type: string
+        RequestId:
+          default: 0
+          format: int32
+          maximum: 65535
+          minimum: 0
+          type: integer
+        ActionState:
+          format: ActionState
+          type: integer
+        Payload:
+          type: object
+      type: object
     NodeClass:
       enum:
       - 0
@@ -1335,12 +1749,47 @@ components:
       - ReferenceType
       - DataType
       - View
+    PermissionTypeBits:
+      enum:
+      - 1
+      - 2
+      - 4
+      - 8
+      - 16
+      - 32
+      - 64
+      - 128
+      - 256
+      - 512
+      - 1024
+      - 2048
+      - 4096
+      - 8192
+      - 16384
+      - 32768
+      - 65536
+      format: int32
+      type: integer
+      x-enum-varnames:
+      - Browse
+      - ReadRolePermissions
+      - WriteAttribute
+      - WriteRolePermissions
+      - WriteHistorizing
+      - Read
+      - Write
+      - ReadHistory
+      - InsertHistory
+      - ModifyHistory
+      - DeleteHistory
+      - ReceiveEvents
+      - Call
+      - AddReference
+      - RemoveReference
+      - DeleteNode
+      - AddNode
     PermissionType:
       default: 0
-      description: "Browse=0000, ReadRolePermissions=0001, WriteAttribute=0002, WriteRolePermissions=0003,\
-        \ WriteHistorizing=0004, Read=0005, Write=0006, ReadHistory=0007, InsertHistory=0008,\
-        \ ModifyHistory=0009, DeleteHistory=000A, ReceiveEvents=000B, Call=000C, AddReference=000D,\
-        \ RemoveReference=000E, DeleteNode=000F, AddNode=0010"
       format: int64
       maximum: 4294967295
       minimum: 0
@@ -3426,30 +3875,24 @@ components:
               Symbol: Symbol
               Code: 2588772717
         Results:
-        - SourcePicoseconds: 13284
+        - SourcePicoseconds: 23697
           Value: ""
-          Dimensions:
-          - 0
-          - 0
           SourceTimestamp: 2000-01-23T04:56:07.000+00:00
           ServerTimestamp: 2000-01-23T04:56:07.000+00:00
           UaType: 237
           StatusCode:
             Symbol: Symbol
             Code: 2588772717
-          ServerPicoseconds: 27168
-        - SourcePicoseconds: 13284
+          ServerPicoseconds: 13284
+        - SourcePicoseconds: 23697
           Value: ""
-          Dimensions:
-          - 0
-          - 0
           SourceTimestamp: 2000-01-23T04:56:07.000+00:00
           ServerTimestamp: 2000-01-23T04:56:07.000+00:00
           UaType: 237
           StatusCode:
             Symbol: Symbol
             Code: 2588772717
-          ServerPicoseconds: 27168
+          ServerPicoseconds: 13284
         DiagnosticInfos:
         - Locale: 5
           AdditionalInfo: AdditionalInfo
@@ -3782,18 +4225,15 @@ components:
         AttributeId: 343953088
         NodeId: NodeId
         Value:
-          SourcePicoseconds: 13284
+          SourcePicoseconds: 23697
           Value: ""
-          Dimensions:
-          - 0
-          - 0
           SourceTimestamp: 2000-01-23T04:56:07.000+00:00
           ServerTimestamp: 2000-01-23T04:56:07.000+00:00
           UaType: 237
           StatusCode:
             Symbol: Symbol
             Code: 2588772717
-          ServerPicoseconds: 27168
+          ServerPicoseconds: 13284
       properties:
         NodeId:
           format: UaNodeId
@@ -3816,34 +4256,28 @@ components:
           AttributeId: 343953088
           NodeId: NodeId
           Value:
-            SourcePicoseconds: 13284
+            SourcePicoseconds: 23697
             Value: ""
-            Dimensions:
-            - 0
-            - 0
             SourceTimestamp: 2000-01-23T04:56:07.000+00:00
             ServerTimestamp: 2000-01-23T04:56:07.000+00:00
             UaType: 237
             StatusCode:
               Symbol: Symbol
               Code: 2588772717
-            ServerPicoseconds: 27168
+            ServerPicoseconds: 13284
         - IndexRange: IndexRange
           AttributeId: 343953088
           NodeId: NodeId
           Value:
-            SourcePicoseconds: 13284
+            SourcePicoseconds: 23697
             Value: ""
-            Dimensions:
-            - 0
-            - 0
             SourceTimestamp: 2000-01-23T04:56:07.000+00:00
             ServerTimestamp: 2000-01-23T04:56:07.000+00:00
             UaType: 237
             StatusCode:
               Symbol: Symbol
               Code: 2588772717
-            ServerPicoseconds: 27168
+            ServerPicoseconds: 13284
         RequestHeader:
           AuthenticationToken: AuthenticationToken
           RequestHandle: 343953088
@@ -4183,16 +4617,10 @@ components:
       example:
         MethodId: MethodId
         InputArguments:
-        - Dimensions:
-          - 0
-          - 0
+        - Value: ""
           UaType: 20
-          Body: ""
-        - Dimensions:
-          - 0
-          - 0
+        - Value: ""
           UaType: 20
-          Body: ""
         ObjectId: ObjectId
       properties:
         ObjectId:
@@ -4209,16 +4637,10 @@ components:
     CallMethodResult:
       example:
         OutputArguments:
-        - Dimensions:
-          - 0
-          - 0
+        - Value: ""
           UaType: 20
-          Body: ""
-        - Dimensions:
-          - 0
-          - 0
+        - Value: ""
           UaType: 20
-          Body: ""
         InputArgumentResults:
         - Symbol: Symbol
           Code: 2588772717
@@ -4278,29 +4700,17 @@ components:
         MethodsToCall:
         - MethodId: MethodId
           InputArguments:
-          - Dimensions:
-            - 0
-            - 0
+          - Value: ""
             UaType: 20
-            Body: ""
-          - Dimensions:
-            - 0
-            - 0
+          - Value: ""
             UaType: 20
-            Body: ""
           ObjectId: ObjectId
         - MethodId: MethodId
           InputArguments:
-          - Dimensions:
-            - 0
-            - 0
+          - Value: ""
             UaType: 20
-            Body: ""
-          - Dimensions:
-            - 0
-            - 0
+          - Value: ""
             UaType: 20
-            Body: ""
           ObjectId: ObjectId
       properties:
         RequestHeader:
@@ -4337,16 +4747,10 @@ components:
               Code: 2588772717
         Results:
         - OutputArguments:
-          - Dimensions:
-            - 0
-            - 0
+          - Value: ""
             UaType: 20
-            Body: ""
-          - Dimensions:
-            - 0
-            - 0
+          - Value: ""
             UaType: 20
-            Body: ""
           InputArgumentResults:
           - Symbol: Symbol
             Code: 2588772717
@@ -4375,16 +4779,10 @@ components:
             Symbol: Symbol
             Code: 2588772717
         - OutputArguments:
-          - Dimensions:
-            - 0
-            - 0
+          - Value: ""
             UaType: 20
-            Body: ""
-          - Dimensions:
-            - 0
-            - 0
+          - Value: ""
             UaType: 20
-            Body: ""
           InputArgumentResults:
           - Symbol: Symbol
             Code: 2588772717

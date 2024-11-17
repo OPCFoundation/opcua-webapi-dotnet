@@ -18,9 +18,9 @@ Name | Type | Description | Notes
 **SecurityGroupId** | **string** |  | [optional] 
 **SecurityKeyServices** | [**List&lt;EndpointDescription&gt;**](EndpointDescription.md) |  | [optional] 
 **DataSetReaderProperties** | [**List&lt;KeyValuePair&gt;**](KeyValuePair.md) |  | [optional] 
-**TransportSettings** | [**ExtensionObject**](ExtensionObject.md) |  | [optional] 
-**MessageSettings** | [**ExtensionObject**](ExtensionObject.md) |  | [optional] 
-**SubscribedDataSet** | [**ExtensionObject**](ExtensionObject.md) |  | [optional] 
+**TransportSettings** | **Object** |  | [optional] 
+**MessageSettings** | **Object** |  | [optional] 
+**SubscribedDataSet** | **Object** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

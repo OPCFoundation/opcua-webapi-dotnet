@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **DataSetFolder** | **List&lt;string&gt;** |  | [optional] 
 **DataSetMetaData** | [**DataSetMetaDataType**](DataSetMetaDataType.md) |  | [optional] 
 **ExtensionFields** | [**List&lt;KeyValuePair&gt;**](KeyValuePair.md) |  | [optional] 
-**DataSetSource** | [**ExtensionObject**](ExtensionObject.md) |  | [optional] 
+**DataSetSource** | **Object** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -11,8 +11,8 @@ Name | Type | Description | Notes
 **KeyFrameCount** | **long** |  | [optional] [default to 0]
 **DataSetName** | **string** |  | [optional] 
 **DataSetWriterProperties** | [**List&lt;KeyValuePair&gt;**](KeyValuePair.md) |  | [optional] 
-**TransportSettings** | [**ExtensionObject**](ExtensionObject.md) |  | [optional] 
-**MessageSettings** | [**ExtensionObject**](ExtensionObject.md) |  | [optional] 
+**TransportSettings** | **Object** |  | [optional] 
+**MessageSettings** | **Object** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

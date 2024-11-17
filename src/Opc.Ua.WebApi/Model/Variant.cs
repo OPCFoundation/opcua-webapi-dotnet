@@ -36,13 +36,11 @@ namespace Opc.Ua.WebApi.Model
         /// Initializes a new instance of the <see cref="Variant" /> class.
         /// </summary>
         /// <param name="uaType">uaType.</param>
-        /// <param name="body">body.</param>
-        /// <param name="dimensions">dimensions.</param>
-        public Variant(int uaType = default(int), Object body = default(Object), List<int> dimensions = default(List<int>))
+        /// <param name="value">value.</param>
+        public Variant(int uaType = default(int), Object value = default(Object))
         {
             this.UaType = uaType;
-            this.Body = body;
-            this.Dimensions = dimensions;
+            this.Value = value;
         }
 
         /// <summary>
@@ -52,16 +50,10 @@ namespace Opc.Ua.WebApi.Model
         public int UaType { get; set; }
 
         /// <summary>
-        /// Gets or Sets Body
+        /// Gets or Sets Value
         /// </summary>
-        [DataMember(Name = "Body", EmitDefaultValue = true)]
-        public Object Body { get; set; }
-
-        /// <summary>
-        /// Gets or Sets Dimensions
-        /// </summary>
-        [DataMember(Name = "Dimensions", EmitDefaultValue = false)]
-        public List<int> Dimensions { get; set; }
+        [DataMember(Name = "Value", EmitDefaultValue = true)]
+        public Object Value { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -72,8 +64,7 @@ namespace Opc.Ua.WebApi.Model
             StringBuilder sb = new StringBuilder();
             sb.Append("class Variant {\n");
             sb.Append("  UaType: ").Append(UaType).Append("\n");
-            sb.Append("  Body: ").Append(Body).Append("\n");
-            sb.Append("  Dimensions: ").Append(Dimensions).Append("\n");
+            sb.Append("  Value: ").Append(Value).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

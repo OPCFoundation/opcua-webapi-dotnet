@@ -45,7 +45,7 @@ namespace Opc.Ua.WebApi.Model
         /// <param name="securityKeyServices">securityKeyServices.</param>
         /// <param name="maxNetworkMessageSize">maxNetworkMessageSize (default to 0).</param>
         /// <param name="groupProperties">groupProperties.</param>
-        public ReaderGroupDataType(ExtensionObject transportSettings = default(ExtensionObject), ExtensionObject messageSettings = default(ExtensionObject), List<DataSetReaderDataType> dataSetReaders = default(List<DataSetReaderDataType>), string name = default(string), bool enabled = false, int securityMode = default(int), string securityGroupId = default(string), List<EndpointDescription> securityKeyServices = default(List<EndpointDescription>), long maxNetworkMessageSize = 0, List<KeyValuePair> groupProperties = default(List<KeyValuePair>))
+        public ReaderGroupDataType(Object transportSettings = default(Object), Object messageSettings = default(Object), List<DataSetReaderDataType> dataSetReaders = default(List<DataSetReaderDataType>), string name = default(string), bool enabled = false, int securityMode = default(int), string securityGroupId = default(string), List<EndpointDescription> securityKeyServices = default(List<EndpointDescription>), long maxNetworkMessageSize = 0, List<KeyValuePair> groupProperties = default(List<KeyValuePair>))
         {
             this.TransportSettings = transportSettings;
             this.MessageSettings = messageSettings;
@@ -63,13 +63,13 @@ namespace Opc.Ua.WebApi.Model
         /// Gets or Sets TransportSettings
         /// </summary>
         [DataMember(Name = "TransportSettings", EmitDefaultValue = false)]
-        public ExtensionObject TransportSettings { get; set; }
+        public Object TransportSettings { get; set; }
 
         /// <summary>
         /// Gets or Sets MessageSettings
         /// </summary>
         [DataMember(Name = "MessageSettings", EmitDefaultValue = false)]
-        public ExtensionObject MessageSettings { get; set; }
+        public Object MessageSettings { get; set; }
 
         /// <summary>
         /// Gets or Sets DataSetReaders

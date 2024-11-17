@@ -8,9 +8,9 @@ Name | Type | Description | Notes
 **Enabled** | **bool** |  | [optional] [default to false]
 **PublisherId** | [**Variant**](Variant.md) |  | [optional] 
 **TransportProfileUri** | **string** |  | [optional] 
-**Address** | [**ExtensionObject**](ExtensionObject.md) |  | [optional] 
+**Address** | **Object** |  | [optional] 
 **ConnectionProperties** | [**List&lt;KeyValuePair&gt;**](KeyValuePair.md) |  | [optional] 
-**TransportSettings** | [**ExtensionObject**](ExtensionObject.md) |  | [optional] 
+**TransportSettings** | **Object** |  | [optional] 
 **WriterGroups** | [**List&lt;WriterGroupDataType&gt;**](WriterGroupDataType.md) |  | [optional] 
 **ReaderGroups** | [**List&lt;ReaderGroupDataType&gt;**](ReaderGroupDataType.md) |  | [optional] 
 

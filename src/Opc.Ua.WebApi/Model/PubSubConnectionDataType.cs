@@ -44,7 +44,7 @@ namespace Opc.Ua.WebApi.Model
         /// <param name="transportSettings">transportSettings.</param>
         /// <param name="writerGroups">writerGroups.</param>
         /// <param name="readerGroups">readerGroups.</param>
-        public PubSubConnectionDataType(string name = default(string), bool enabled = false, Variant publisherId = default(Variant), string transportProfileUri = default(string), ExtensionObject address = default(ExtensionObject), List<KeyValuePair> connectionProperties = default(List<KeyValuePair>), ExtensionObject transportSettings = default(ExtensionObject), List<WriterGroupDataType> writerGroups = default(List<WriterGroupDataType>), List<ReaderGroupDataType> readerGroups = default(List<ReaderGroupDataType>))
+        public PubSubConnectionDataType(string name = default(string), bool enabled = false, Variant publisherId = default(Variant), string transportProfileUri = default(string), Object address = default(Object), List<KeyValuePair> connectionProperties = default(List<KeyValuePair>), Object transportSettings = default(Object), List<WriterGroupDataType> writerGroups = default(List<WriterGroupDataType>), List<ReaderGroupDataType> readerGroups = default(List<ReaderGroupDataType>))
         {
             this.Name = name;
             this.Enabled = enabled;
@@ -85,7 +85,7 @@ namespace Opc.Ua.WebApi.Model
         /// Gets or Sets Address
         /// </summary>
         [DataMember(Name = "Address", EmitDefaultValue = false)]
-        public ExtensionObject Address { get; set; }
+        public Object Address { get; set; }
 
         /// <summary>
         /// Gets or Sets ConnectionProperties
@@ -97,7 +97,7 @@ namespace Opc.Ua.WebApi.Model
         /// Gets or Sets TransportSettings
         /// </summary>
         [DataMember(Name = "TransportSettings", EmitDefaultValue = false)]
-        public ExtensionObject TransportSettings { get; set; }
+        public Object TransportSettings { get; set; }
 
         /// <summary>
         /// Gets or Sets WriterGroups

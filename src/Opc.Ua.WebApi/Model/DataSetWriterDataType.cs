@@ -44,7 +44,7 @@ namespace Opc.Ua.WebApi.Model
         /// <param name="dataSetWriterProperties">dataSetWriterProperties.</param>
         /// <param name="transportSettings">transportSettings.</param>
         /// <param name="messageSettings">messageSettings.</param>
-        public DataSetWriterDataType(string name = default(string), bool enabled = false, int dataSetWriterId = 0, long dataSetFieldContentMask = 0, long keyFrameCount = 0, string dataSetName = default(string), List<KeyValuePair> dataSetWriterProperties = default(List<KeyValuePair>), ExtensionObject transportSettings = default(ExtensionObject), ExtensionObject messageSettings = default(ExtensionObject))
+        public DataSetWriterDataType(string name = default(string), bool enabled = false, int dataSetWriterId = 0, long dataSetFieldContentMask = 0, long keyFrameCount = 0, string dataSetName = default(string), List<KeyValuePair> dataSetWriterProperties = default(List<KeyValuePair>), Object transportSettings = default(Object), Object messageSettings = default(Object))
         {
             this.Name = name;
             this.Enabled = enabled;
@@ -103,13 +103,13 @@ namespace Opc.Ua.WebApi.Model
         /// Gets or Sets TransportSettings
         /// </summary>
         [DataMember(Name = "TransportSettings", EmitDefaultValue = false)]
-        public ExtensionObject TransportSettings { get; set; }
+        public Object TransportSettings { get; set; }
 
         /// <summary>
         /// Gets or Sets MessageSettings
         /// </summary>
         [DataMember(Name = "MessageSettings", EmitDefaultValue = false)]
-        public ExtensionObject MessageSettings { get; set; }
+        public Object MessageSettings { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

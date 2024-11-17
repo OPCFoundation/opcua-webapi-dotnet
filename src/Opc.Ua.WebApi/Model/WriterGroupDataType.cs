@@ -51,7 +51,7 @@ namespace Opc.Ua.WebApi.Model
         /// <param name="securityKeyServices">securityKeyServices.</param>
         /// <param name="maxNetworkMessageSize">maxNetworkMessageSize (default to 0).</param>
         /// <param name="groupProperties">groupProperties.</param>
-        public WriterGroupDataType(int writerGroupId = 0, double publishingInterval = 0D, double keepAliveTime = 0D, int priority = 0, List<string> localeIds = default(List<string>), string headerLayoutUri = default(string), ExtensionObject transportSettings = default(ExtensionObject), ExtensionObject messageSettings = default(ExtensionObject), List<DataSetWriterDataType> dataSetWriters = default(List<DataSetWriterDataType>), string name = default(string), bool enabled = false, int securityMode = default(int), string securityGroupId = default(string), List<EndpointDescription> securityKeyServices = default(List<EndpointDescription>), long maxNetworkMessageSize = 0, List<KeyValuePair> groupProperties = default(List<KeyValuePair>))
+        public WriterGroupDataType(int writerGroupId = 0, double publishingInterval = 0D, double keepAliveTime = 0D, int priority = 0, List<string> localeIds = default(List<string>), string headerLayoutUri = default(string), Object transportSettings = default(Object), Object messageSettings = default(Object), List<DataSetWriterDataType> dataSetWriters = default(List<DataSetWriterDataType>), string name = default(string), bool enabled = false, int securityMode = default(int), string securityGroupId = default(string), List<EndpointDescription> securityKeyServices = default(List<EndpointDescription>), long maxNetworkMessageSize = 0, List<KeyValuePair> groupProperties = default(List<KeyValuePair>))
         {
             this.WriterGroupId = writerGroupId;
             this.PublishingInterval = publishingInterval;
@@ -111,13 +111,13 @@ namespace Opc.Ua.WebApi.Model
         /// Gets or Sets TransportSettings
         /// </summary>
         [DataMember(Name = "TransportSettings", EmitDefaultValue = false)]
-        public ExtensionObject TransportSettings { get; set; }
+        public Object TransportSettings { get; set; }
 
         /// <summary>
         /// Gets or Sets MessageSettings
         /// </summary>
         [DataMember(Name = "MessageSettings", EmitDefaultValue = false)]
-        public ExtensionObject MessageSettings { get; set; }
+        public Object MessageSettings { get; set; }
 
         /// <summary>
         /// Gets or Sets DataSetWriters
