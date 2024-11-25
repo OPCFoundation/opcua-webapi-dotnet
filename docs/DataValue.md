@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **UaType** | **int** |  | [optional] [default to 0]
 **Value** | **Object** |  | [optional] 
+**Dimensions** | **List&lt;int&gt;** |  | [optional] 
 **StatusCode** | [**StatusCode**](StatusCode.md) |  | [optional] 
 **SourceTimestamp** | **DateTime** |  | [optional] 
 **SourcePicoseconds** | **int** |  | [optional] 

@@ -239,6 +239,7 @@ Class | Method | HTTP request | Description
  - [Model.JsonDataSetMetaDataMessage](docs/JsonDataSetMetaDataMessage.md)
  - [Model.JsonDataSetReaderMessageDataType](docs/JsonDataSetReaderMessageDataType.md)
  - [Model.JsonDataSetWriterMessageDataType](docs/JsonDataSetWriterMessageDataType.md)
+ - [Model.JsonMessageType](docs/JsonMessageType.md)
  - [Model.JsonNetworkMessage](docs/JsonNetworkMessage.md)
  - [Model.JsonNetworkMessageContentMaskBits](docs/JsonNetworkMessageContentMaskBits.md)
  - [Model.JsonPubSubConnectionMessage](docs/JsonPubSubConnectionMessage.md)

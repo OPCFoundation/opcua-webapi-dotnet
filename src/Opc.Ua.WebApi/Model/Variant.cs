@@ -37,10 +37,12 @@ namespace Opc.Ua.WebApi.Model
         /// </summary>
         /// <param name="uaType">uaType.</param>
         /// <param name="value">value.</param>
-        public Variant(int uaType = default(int), Object value = default(Object))
+        /// <param name="dimensions">dimensions.</param>
+        public Variant(int uaType = default(int), Object value = default(Object), List<int> dimensions = default(List<int>))
         {
             this.UaType = uaType;
             this.Value = value;
+            this.Dimensions = dimensions;
         }
 
         /// <summary>
@@ -56,6 +58,12 @@ namespace Opc.Ua.WebApi.Model
         public Object Value { get; set; }
 
         /// <summary>
+        /// Gets or Sets Dimensions
+        /// </summary>
+        [DataMember(Name = "Dimensions", EmitDefaultValue = false)]
+        public List<int> Dimensions { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -65,6 +73,7 @@ namespace Opc.Ua.WebApi.Model
             sb.Append("class Variant {\n");
             sb.Append("  UaType: ").Append(UaType).Append("\n");
             sb.Append("  Value: ").Append(Value).Append("\n");
+            sb.Append("  Dimensions: ").Append(Dimensions).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

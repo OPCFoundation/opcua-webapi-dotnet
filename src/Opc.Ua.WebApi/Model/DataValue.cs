@@ -37,15 +37,17 @@ namespace Opc.Ua.WebApi.Model
         /// </summary>
         /// <param name="uaType">uaType (default to 0).</param>
         /// <param name="value">value.</param>
+        /// <param name="dimensions">dimensions.</param>
         /// <param name="statusCode">statusCode.</param>
         /// <param name="sourceTimestamp">sourceTimestamp.</param>
         /// <param name="sourcePicoseconds">sourcePicoseconds.</param>
         /// <param name="serverTimestamp">serverTimestamp.</param>
         /// <param name="serverPicoseconds">serverPicoseconds.</param>
-        public DataValue(int uaType = 0, Object value = default(Object), StatusCode statusCode = default(StatusCode), DateTime sourceTimestamp = default(DateTime), int sourcePicoseconds = default(int), DateTime serverTimestamp = default(DateTime), int serverPicoseconds = default(int))
+        public DataValue(int uaType = 0, Object value = default(Object), List<int> dimensions = default(List<int>), StatusCode statusCode = default(StatusCode), DateTime sourceTimestamp = default(DateTime), int sourcePicoseconds = default(int), DateTime serverTimestamp = default(DateTime), int serverPicoseconds = default(int))
         {
             this.UaType = uaType;
             this.Value = value;
+            this.Dimensions = dimensions;
             this.StatusCode = statusCode;
             this.SourceTimestamp = sourceTimestamp;
             this.SourcePicoseconds = sourcePicoseconds;
@@ -64,6 +66,12 @@ namespace Opc.Ua.WebApi.Model
         /// </summary>
         [DataMember(Name = "Value", EmitDefaultValue = true)]
         public Object Value { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Dimensions
+        /// </summary>
+        [DataMember(Name = "Dimensions", EmitDefaultValue = false)]
+        public List<int> Dimensions { get; set; }
 
         /// <summary>
         /// Gets or Sets StatusCode
@@ -105,6 +113,7 @@ namespace Opc.Ua.WebApi.Model
             sb.Append("class DataValue {\n");
             sb.Append("  UaType: ").Append(UaType).Append("\n");
             sb.Append("  Value: ").Append(Value).Append("\n");
+            sb.Append("  Dimensions: ").Append(Dimensions).Append("\n");
             sb.Append("  StatusCode: ").Append(StatusCode).Append("\n");
             sb.Append("  SourceTimestamp: ").Append(SourceTimestamp).Append("\n");
             sb.Append("  SourcePicoseconds: ").Append(SourcePicoseconds).Append("\n");

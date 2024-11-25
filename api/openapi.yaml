@@ -509,6 +509,9 @@ components:
       additionalProperties: false
       example:
         Value: ""
+        Dimensions:
+        - 0
+        - 0
         UaType: 20
       properties:
         UaType:
@@ -517,19 +520,28 @@ components:
           minimum: 0
           type: integer
         Value: {}
+        Dimensions:
+          items:
+            format: int32
+            minimum: 0
+            type: integer
+          type: array
       type: object
     DataValue:
       additionalProperties: false
       example:
-        SourcePicoseconds: 23697
+        SourcePicoseconds: 13284
         Value: ""
+        Dimensions:
+        - 0
+        - 0
         SourceTimestamp: 2000-01-23T04:56:07.000+00:00
         ServerTimestamp: 2000-01-23T04:56:07.000+00:00
         UaType: 237
         StatusCode:
           Symbol: Symbol
           Code: 2588772717
-        ServerPicoseconds: 13284
+        ServerPicoseconds: 27168
       properties:
         UaType:
           default: 0
@@ -538,6 +550,12 @@ components:
           minimum: 0
           type: integer
         Value: {}
+        Dimensions:
+          items:
+            format: int32
+            minimum: 0
+            type: integer
+          type: array
         StatusCode:
           $ref: '#/components/schemas/StatusCode'
         SourceTimestamp:
@@ -3875,24 +3893,30 @@ components:
               Symbol: Symbol
               Code: 2588772717
         Results:
-        - SourcePicoseconds: 23697
+        - SourcePicoseconds: 13284
           Value: ""
+          Dimensions:
+          - 0
+          - 0
           SourceTimestamp: 2000-01-23T04:56:07.000+00:00
           ServerTimestamp: 2000-01-23T04:56:07.000+00:00
           UaType: 237
           StatusCode:
             Symbol: Symbol
             Code: 2588772717
-          ServerPicoseconds: 13284
-        - SourcePicoseconds: 23697
+          ServerPicoseconds: 27168
+        - SourcePicoseconds: 13284
           Value: ""
+          Dimensions:
+          - 0
+          - 0
           SourceTimestamp: 2000-01-23T04:56:07.000+00:00
           ServerTimestamp: 2000-01-23T04:56:07.000+00:00
           UaType: 237
           StatusCode:
             Symbol: Symbol
             Code: 2588772717
-          ServerPicoseconds: 13284
+          ServerPicoseconds: 27168
         DiagnosticInfos:
         - Locale: 5
           AdditionalInfo: AdditionalInfo
@@ -4225,15 +4249,18 @@ components:
         AttributeId: 343953088
         NodeId: NodeId
         Value:
-          SourcePicoseconds: 23697
+          SourcePicoseconds: 13284
           Value: ""
+          Dimensions:
+          - 0
+          - 0
           SourceTimestamp: 2000-01-23T04:56:07.000+00:00
           ServerTimestamp: 2000-01-23T04:56:07.000+00:00
           UaType: 237
           StatusCode:
             Symbol: Symbol
             Code: 2588772717
-          ServerPicoseconds: 13284
+          ServerPicoseconds: 27168
       properties:
         NodeId:
           format: UaNodeId
@@ -4256,28 +4283,34 @@ components:
           AttributeId: 343953088
           NodeId: NodeId
           Value:
-            SourcePicoseconds: 23697
+            SourcePicoseconds: 13284
             Value: ""
+            Dimensions:
+            - 0
+            - 0
             SourceTimestamp: 2000-01-23T04:56:07.000+00:00
             ServerTimestamp: 2000-01-23T04:56:07.000+00:00
             UaType: 237
             StatusCode:
               Symbol: Symbol
               Code: 2588772717
-            ServerPicoseconds: 13284
+            ServerPicoseconds: 27168
         - IndexRange: IndexRange
           AttributeId: 343953088
           NodeId: NodeId
           Value:
-            SourcePicoseconds: 23697
+            SourcePicoseconds: 13284
             Value: ""
+            Dimensions:
+            - 0
+            - 0
             SourceTimestamp: 2000-01-23T04:56:07.000+00:00
             ServerTimestamp: 2000-01-23T04:56:07.000+00:00
             UaType: 237
             StatusCode:
               Symbol: Symbol
               Code: 2588772717
-            ServerPicoseconds: 13284
+            ServerPicoseconds: 27168
         RequestHeader:
           AuthenticationToken: AuthenticationToken
           RequestHandle: 343953088
@@ -4618,8 +4651,14 @@ components:
         MethodId: MethodId
         InputArguments:
         - Value: ""
+          Dimensions:
+          - 0
+          - 0
           UaType: 20
         - Value: ""
+          Dimensions:
+          - 0
+          - 0
           UaType: 20
         ObjectId: ObjectId
       properties:
@@ -4638,8 +4677,14 @@ components:
       example:
         OutputArguments:
         - Value: ""
+          Dimensions:
+          - 0
+          - 0
           UaType: 20
         - Value: ""
+          Dimensions:
+          - 0
+          - 0
           UaType: 20
         InputArgumentResults:
         - Symbol: Symbol
@@ -4701,15 +4746,27 @@ components:
         - MethodId: MethodId
           InputArguments:
           - Value: ""
+            Dimensions:
+            - 0
+            - 0
             UaType: 20
           - Value: ""
+            Dimensions:
+            - 0
+            - 0
             UaType: 20
           ObjectId: ObjectId
         - MethodId: MethodId
           InputArguments:
           - Value: ""
+            Dimensions:
+            - 0
+            - 0
             UaType: 20
           - Value: ""
+            Dimensions:
+            - 0
+            - 0
             UaType: 20
           ObjectId: ObjectId
       properties:
@@ -4748,8 +4805,14 @@ components:
         Results:
         - OutputArguments:
           - Value: ""
+            Dimensions:
+            - 0
+            - 0
             UaType: 20
           - Value: ""
+            Dimensions:
+            - 0
+            - 0
             UaType: 20
           InputArgumentResults:
           - Symbol: Symbol
@@ -4780,8 +4843,14 @@ components:
             Code: 2588772717
         - OutputArguments:
           - Value: ""
+            Dimensions:
+            - 0
+            - 0
             UaType: 20
           - Value: ""
+            Dimensions:
+            - 0
+            - 0
             UaType: 20
           InputArgumentResults:
           - Symbol: Symbol
@@ -6563,4 +6632,36 @@ components:
         Description:
           $ref: '#/components/schemas/LocalizedText'
       type: object
+    JsonMessageType:
+      enum:
+      - ua-data
+      - ua-metadata
+      - ua-application
+      - ua-endpoints
+      - ua-status
+      - ua-connection
+      - ua-action-request
+      - ua-action-response
+      - ua-action-metadata
+      - ua-action-responder
+      - ua-keyframe
+      - ua-deltaframe
+      - ua-event
+      - ua-keepalive
+      type: string
+      x-enum-varnames:
+      - Data
+      - DataSetMetadata
+      - Application
+      - Endpoints
+      - Status
+      - Connection
+      - ActionRequest
+      - ActionResponse
+      - ActionMetadata
+      - ActionResponder
+      - KeyFrame
+      - DeltaFrame
+      - Event
+      - KeepAlive
 

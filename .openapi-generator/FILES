@@ -109,6 +109,7 @@ docs/JsonDataSetMessageContentMaskBits.md
 docs/JsonDataSetMetaDataMessage.md
 docs/JsonDataSetReaderMessageDataType.md
 docs/JsonDataSetWriterMessageDataType.md
+docs/JsonMessageType.md
 docs/JsonNetworkMessage.md
 docs/JsonNetworkMessageContentMaskBits.md
 docs/JsonPubSubConnectionMessage.md
@@ -209,12 +210,7 @@ docs/WriteValue.md
 docs/WriterGroupDataType.md
 docs/X509IdentityToken.md
 git_push.sh
-src/Opc.Ua.WebApi.Test/Model/DataSetFieldContentMaskBitsTests.cs
-src/Opc.Ua.WebApi.Test/Model/DataSetFieldFlagsBitsTests.cs
-src/Opc.Ua.WebApi.Test/Model/JsonDataSetMessageContentMaskBitsTests.cs
-src/Opc.Ua.WebApi.Test/Model/JsonNetworkMessageContentMaskBitsTests.cs
-src/Opc.Ua.WebApi.Test/Model/MatrixTests.cs
-src/Opc.Ua.WebApi.Test/Model/PermissionTypeBitsTests.cs
+src/Opc.Ua.WebApi.Test/Model/JsonMessageTypeTests.cs
 src/Opc.Ua.WebApi.Test/Opc.Ua.WebApi.Test.csproj
 src/Opc.Ua.WebApi/Api/DefaultApi.cs
 src/Opc.Ua.WebApi/Client/ApiClient.cs
@@ -339,6 +335,7 @@ src/Opc.Ua.WebApi/Model/JsonDataSetMessageContentMaskBits.cs
 src/Opc.Ua.WebApi/Model/JsonDataSetMetaDataMessage.cs
 src/Opc.Ua.WebApi/Model/JsonDataSetReaderMessageDataType.cs
 src/Opc.Ua.WebApi/Model/JsonDataSetWriterMessageDataType.cs
+src/Opc.Ua.WebApi/Model/JsonMessageType.cs
 src/Opc.Ua.WebApi/Model/JsonNetworkMessage.cs
 src/Opc.Ua.WebApi/Model/JsonNetworkMessageContentMaskBits.cs
 src/Opc.Ua.WebApi/Model/JsonPubSubConnectionMessage.cs
