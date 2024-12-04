@@ -323,17 +323,11 @@ namespace Opc.Ua.WebApi
         /// <remarks />
         public const string ApplicationCertificateType = "ApplicationCertificateType";
         /// <remarks />
-        public const string ApplicationConfigurationDataType = "ApplicationConfigurationDataType";
-        /// <remarks />
-        public const string ApplicationConfigurationFileType = "ApplicationConfigurationFileType";
-        /// <remarks />
         public const string ApplicationConfigurationFolderType = "ApplicationConfigurationFolderType";
         /// <remarks />
         public const string ApplicationConfigurationType = "ApplicationConfigurationType";
         /// <remarks />
         public const string ApplicationDescription = "ApplicationDescription";
-        /// <remarks />
-        public const string ApplicationIdentityDataType = "ApplicationIdentityDataType";
         /// <remarks />
         public const string ApplicationInstanceCertificate = "ApplicationInstanceCertificate";
         /// <remarks />
@@ -489,10 +483,6 @@ namespace Opc.Ua.WebApi
         /// <remarks />
         public const string AutoDelete = "AutoDelete";
         /// <remarks />
-        public const string AvailableNetworks = "AvailableNetworks";
-        /// <remarks />
-        public const string AvailablePorts = "AvailablePorts";
-        /// <remarks />
         public const string AvailableStates = "AvailableStates";
         /// <remarks />
         public const string AvailableTransitions = "AvailableTransitions";
@@ -512,10 +502,6 @@ namespace Opc.Ua.WebApi
         public const string BaseAnalogType = "BaseAnalogType";
         /// <remarks />
         public const string BaseConditionClassType = "BaseConditionClassType";
-        /// <remarks />
-        public const string BaseConfigurationDataType = "BaseConfigurationDataType";
-        /// <remarks />
-        public const string BaseConfigurationRecordDataType = "BaseConfigurationRecordDataType";
         /// <remarks />
         public const string BaseDataType = "BaseDataType";
         /// <remarks />
@@ -645,8 +631,6 @@ namespace Opc.Ua.WebApi
         /// <remarks />
         public const string CertificateGroup = "CertificateGroup";
         /// <remarks />
-        public const string CertificateGroupDataType = "CertificateGroupDataType";
-        /// <remarks />
         public const string CertificateGroupFolderType = "CertificateGroupFolderType";
         /// <remarks />
         public const string CertificateGroups = "CertificateGroups";
@@ -743,17 +727,7 @@ namespace Opc.Ua.WebApi
         /// <remarks />
         public const string ConditionVariableType = "ConditionVariableType";
         /// <remarks />
-        public const string ConfigurationFile = "ConfigurationFile";
-        /// <remarks />
-        public const string ConfigurationFileType = "ConfigurationFileType";
-        /// <remarks />
         public const string ConfigurationProperties = "ConfigurationProperties";
-        /// <remarks />
-        public const string ConfigurationUpdatedAuditEventType = "ConfigurationUpdatedAuditEventType";
-        /// <remarks />
-        public const string ConfigurationUpdateTargetType = "ConfigurationUpdateTargetType";
-        /// <remarks />
-        public const string ConfigurationUpdateType = "ConfigurationUpdateType";
         /// <remarks />
         public const string ConfigurationVersion = "ConfigurationVersion";
         /// <remarks />
@@ -764,8 +738,6 @@ namespace Opc.Ua.WebApi
         public const string Confirm = "Confirm";
         /// <remarks />
         public const string ConfirmedState = "ConfirmedState";
-        /// <remarks />
-        public const string ConfirmUpdate = "ConfirmUpdate";
         /// <remarks />
         public const string ConformanceUnits = "ConformanceUnits";
         /// <remarks />
@@ -876,8 +848,6 @@ namespace Opc.Ua.WebApi
         public const string CurrentSubscriptionsCount = "CurrentSubscriptionsCount";
         /// <remarks />
         public const string CurrentTime = "CurrentTime";
-        /// <remarks />
-        public const string CurrentVersion = "CurrentVersion";
         /// <remarks />
         public const string CustomConfiguration = "CustomConfiguration";
         /// <remarks />
@@ -1204,8 +1174,6 @@ namespace Opc.Ua.WebApi
         public const string Encoding = "Encoding";
         /// <remarks />
         public const string EndpointConfiguration = "EndpointConfiguration";
-        /// <remarks />
-        public const string EndpointDataType = "EndpointDataType";
         /// <remarks />
         public const string EndpointDescription = "EndpointDescription";
         /// <remarks />
@@ -2241,8 +2209,6 @@ namespace Opc.Ua.WebApi
         /// <remarks />
         public const string NewValues = "NewValues";
         /// <remarks />
-        public const string NewVersion = "NewVersion";
-        /// <remarks />
         public const string NextSequenceNumber = "NextSequenceNumber";
         /// <remarks />
         public const string Node = "Node";
@@ -2324,8 +2290,6 @@ namespace Opc.Ua.WebApi
         public const string OldValue = "OldValue";
         /// <remarks />
         public const string OldValues = "OldValues";
-        /// <remarks />
-        public const string OldVersion = "OldVersion";
         /// <remarks />
         public const string OnDelay = "OnDelay";
         /// <remarks />
@@ -2991,13 +2955,9 @@ namespace Opc.Ua.WebApi
         /// <remarks />
         public const string SecurityPolicyUri = "SecurityPolicyUri";
         /// <remarks />
-        public const string SecurityPolicyUris = "SecurityPolicyUris";
-        /// <remarks />
         public const string SecurityRejectedRequestsCount = "SecurityRejectedRequestsCount";
         /// <remarks />
         public const string SecurityRejectedSessionCount = "SecurityRejectedSessionCount";
-        /// <remarks />
-        public const string SecuritySettingsDataType = "SecuritySettingsDataType";
         /// <remarks />
         public const string SecurityTokenRequestType = "SecurityTokenRequestType";
         /// <remarks />
@@ -3044,8 +3004,6 @@ namespace Opc.Ua.WebApi
         public const string ServerDiagnosticsSummaryType = "ServerDiagnosticsSummaryType";
         /// <remarks />
         public const string ServerDiagnosticsType = "ServerDiagnosticsType";
-        /// <remarks />
-        public const string ServerEndpointDataType = "ServerEndpointDataType";
         /// <remarks />
         public const string ServerId = "ServerId";
         /// <remarks />
@@ -3317,8 +3275,6 @@ namespace Opc.Ua.WebApi
         /// <remarks />
         public const string SubscriptionId = "SubscriptionId";
         /// <remarks />
-        public const string SupportedDataType = "SupportedDataType";
-        /// <remarks />
         public const string SupportedPrivateKeyFormats = "SupportedPrivateKeyFormats";
         /// <remarks />
         public const string SupportedSecurityPolicyUris = "SupportedSecurityPolicyUris";
@@ -3393,25 +3349,7 @@ namespace Opc.Ua.WebApi
         /// <remarks />
         public const string TemporaryFileTransferType = "TemporaryFileTransferType";
         /// <remarks />
-        public const string TestAbstractStructure = "TestAbstractStructure";
-        /// <remarks />
-        public const string TestArrayStructure = "TestArrayStructure";
-        /// <remarks />
-        public const string TestConcreteStructure = "TestConcreteStructure";
-        /// <remarks />
-        public const string TestEnumeration = "TestEnumeration";
-        /// <remarks />
         public const string TestingConditionClassType = "TestingConditionClassType";
-        /// <remarks />
-        public const string TestOptionalFields = "TestOptionalFields";
-        /// <remarks />
-        public const string TestOptionSet = "TestOptionSet";
-        /// <remarks />
-        public const string TestScalarStructure = "TestScalarStructure";
-        /// <remarks />
-        public const string TestStructure = "TestStructure";
-        /// <remarks />
-        public const string TestUnion = "TestUnion";
         /// <remarks />
         public const string ThreeDCartesianCoordinates = "3DCartesianCoordinates";
         /// <remarks />
@@ -3677,11 +3615,7 @@ namespace Opc.Ua.WebApi
         /// <remarks />
         public const string UserTokenPolicy = "UserTokenPolicy";
         /// <remarks />
-        public const string UserTokenSettingsDataType = "UserTokenSettingsDataType";
-        /// <remarks />
         public const string UserTokenType = "UserTokenType";
-        /// <remarks />
-        public const string UserTokenTypes = "UserTokenTypes";
         /// <remarks />
         public const string UserWritable = "UserWritable";
         /// <remarks />
@@ -3963,29 +3897,7 @@ namespace Opc.Ua.WebApi
         /// <remarks />
         public const string TrustListDataType = "i=12554";
         /// <remarks />
-        public const string BaseConfigurationDataType = "i=15434";
-        /// <remarks />
-        public const string BaseConfigurationRecordDataType = "i=15435";
-        /// <remarks />
-        public const string CertificateGroupDataType = "i=15436";
-        /// <remarks />
-        public const string ConfigurationUpdateTargetType = "i=15538";
-        /// <remarks />
-        public const string ConfigurationUpdateType = "i=15539";
-        /// <remarks />
         public const string TransactionErrorType = "i=32285";
-        /// <remarks />
-        public const string ApplicationConfigurationDataType = "i=15549";
-        /// <remarks />
-        public const string ApplicationIdentityDataType = "i=15556";
-        /// <remarks />
-        public const string EndpointDataType = "i=15557";
-        /// <remarks />
-        public const string ServerEndpointDataType = "i=15558";
-        /// <remarks />
-        public const string SecuritySettingsDataType = "i=15559";
-        /// <remarks />
-        public const string UserTokenSettingsDataType = "i=15560";
         /// <remarks />
         public const string DecimalDataType = "i=17861";
         /// <remarks />
@@ -4792,24 +4704,6 @@ namespace Opc.Ua.WebApi
         public const string Annotation = "i=891";
         /// <remarks />
         public const string ExceptionDeviationFormat = "i=890";
-        /// <remarks />
-        public const string TestAbstractStructure = "i=15399";
-        /// <remarks />
-        public const string TestConcreteStructure = "i=15400";
-        /// <remarks />
-        public const string TestUnion = "i=19431";
-        /// <remarks />
-        public const string TestOptionalFields = "i=19432";
-        /// <remarks />
-        public const string TestEnumeration = "i=15432";
-        /// <remarks />
-        public const string TestOptionSet = "i=19433";
-        /// <remarks />
-        public const string TestScalarStructure = "i=15015";
-        /// <remarks />
-        public const string TestArrayStructure = "i=15016";
-        /// <remarks />
-        public const string TestStructure = "i=15017";
 
         /// <summary>
         /// Converts a value to a name for display.
@@ -5418,10 +5312,6 @@ namespace Opc.Ua.WebApi
         public const string CertificateGroupFolderType_AdditionalGroup_Placeholder_TrustListOutOfDate_ShelvingState_Unshelve = "i=21636";
         /// <remarks />
         public const string CertificateGroupFolderType_AdditionalGroup_Placeholder_TrustListOutOfDate_ShelvingState_OneShotShelve = "i=21637";
-        /// <remarks />
-        public const string ConfigurationFileType_ConfirmUpdate = "i=15508";
-        /// <remarks />
-        public const string ConfigurationFileType_CloseAndUpdate = "i=15505";
         /// <remarks />
         public const string ApplicationConfigurationFolderType_ApplicationName_Placeholder_CertificateGroups_DefaultApplicationGroup_TrustList_Open = "i=16717";
         /// <remarks />
@@ -6693,8 +6583,6 @@ namespace Opc.Ua.WebApi
         /// <remarks />
         public const string ServerConfiguration_TransactionDiagnostics = "i=32336";
         /// <remarks />
-        public const string ServerConfiguration_ConfigurationFile = "i=15892";
-        /// <remarks />
         public const string KeyCredentialConfigurationFolderType_ServiceName_Placeholder = "i=17511";
         /// <remarks />
         public const string KeyCredentialConfiguration = "i=18155";
@@ -7091,27 +6979,7 @@ namespace Opc.Ua.WebApi
         /// <remarks />
         public const string TrustListDataType_Encoding_DefaultBinary = "i=12680";
         /// <remarks />
-        public const string BaseConfigurationDataType_Encoding_DefaultBinary = "i=16538";
-        /// <remarks />
-        public const string BaseConfigurationRecordDataType_Encoding_DefaultBinary = "i=16539";
-        /// <remarks />
-        public const string CertificateGroupDataType_Encoding_DefaultBinary = "i=16540";
-        /// <remarks />
-        public const string ConfigurationUpdateTargetType_Encoding_DefaultBinary = "i=16541";
-        /// <remarks />
         public const string TransactionErrorType_Encoding_DefaultBinary = "i=32382";
-        /// <remarks />
-        public const string ApplicationConfigurationDataType_Encoding_DefaultBinary = "i=16542";
-        /// <remarks />
-        public const string ApplicationIdentityDataType_Encoding_DefaultBinary = "i=16543";
-        /// <remarks />
-        public const string EndpointDataType_Encoding_DefaultBinary = "i=16544";
-        /// <remarks />
-        public const string ServerEndpointDataType_Encoding_DefaultBinary = "i=16545";
-        /// <remarks />
-        public const string SecuritySettingsDataType_Encoding_DefaultBinary = "i=16546";
-        /// <remarks />
-        public const string UserTokenSettingsDataType_Encoding_DefaultBinary = "i=16547";
         /// <remarks />
         public const string DecimalDataType_Encoding_DefaultBinary = "i=17863";
         /// <remarks />
@@ -7258,30 +7126,6 @@ namespace Opc.Ua.WebApi
         public const string PubSubConfigurationRefDataType_Encoding_DefaultBinary = "i=25531";
         /// <remarks />
         public const string PubSubConfigurationValueDataType_Encoding_DefaultBinary = "i=25532";
-        /// <remarks />
-        public const string JsonNetworkMessage_Encoding_DefaultBinary = "i=19323";
-        /// <remarks />
-        public const string JsonDataSetMessage_Encoding_DefaultBinary = "i=19324";
-        /// <remarks />
-        public const string JsonDataSetMetaDataMessage_Encoding_DefaultBinary = "i=19325";
-        /// <remarks />
-        public const string JsonApplicationDescriptionMessage_Encoding_DefaultBinary = "i=19326";
-        /// <remarks />
-        public const string JsonServerEndpointsMessage_Encoding_DefaultBinary = "i=19327";
-        /// <remarks />
-        public const string JsonStatusMessage_Encoding_DefaultBinary = "i=19328";
-        /// <remarks />
-        public const string JsonPubSubConnectionMessage_Encoding_DefaultBinary = "i=19329";
-        /// <remarks />
-        public const string JsonActionMetaDataMessage_Encoding_DefaultBinary = "i=19330";
-        /// <remarks />
-        public const string JsonActionResponderMessage_Encoding_DefaultBinary = "i=19331";
-        /// <remarks />
-        public const string JsonActionNetworkMessage_Encoding_DefaultBinary = "i=19332";
-        /// <remarks />
-        public const string JsonActionRequestMessage_Encoding_DefaultBinary = "i=19333";
-        /// <remarks />
-        public const string JsonActionResponseMessage_Encoding_DefaultBinary = "i=19334";
         /// <remarks />
         public const string AliasNameDataType_Encoding_DefaultBinary = "i=23499";
         /// <remarks />
@@ -7767,20 +7611,6 @@ namespace Opc.Ua.WebApi
         /// <remarks />
         public const string Annotation_Encoding_DefaultBinary = "i=893";
         /// <remarks />
-        public const string TestAbstractStructure_Encoding_DefaultBinary = "i=15401";
-        /// <remarks />
-        public const string TestConcreteStructure_Encoding_DefaultBinary = "i=15402";
-        /// <remarks />
-        public const string TestUnion_Encoding_DefaultBinary = "i=19435";
-        /// <remarks />
-        public const string TestOptionalFields_Encoding_DefaultBinary = "i=19436";
-        /// <remarks />
-        public const string TestScalarStructure_Encoding_DefaultBinary = "i=15024";
-        /// <remarks />
-        public const string TestArrayStructure_Encoding_DefaultBinary = "i=15025";
-        /// <remarks />
-        public const string TestStructure_Encoding_DefaultBinary = "i=15026";
-        /// <remarks />
         public const string Union_Encoding_DefaultXml = "i=12758";
         /// <remarks />
         public const string KeyValuePair_Encoding_DefaultXml = "i=14802";
@@ -7823,27 +7653,7 @@ namespace Opc.Ua.WebApi
         /// <remarks />
         public const string TrustListDataType_Encoding_DefaultXml = "i=12676";
         /// <remarks />
-        public const string BaseConfigurationDataType_Encoding_DefaultXml = "i=16587";
-        /// <remarks />
-        public const string BaseConfigurationRecordDataType_Encoding_DefaultXml = "i=16588";
-        /// <remarks />
-        public const string CertificateGroupDataType_Encoding_DefaultXml = "i=16589";
-        /// <remarks />
-        public const string ConfigurationUpdateTargetType_Encoding_DefaultXml = "i=16590";
-        /// <remarks />
         public const string TransactionErrorType_Encoding_DefaultXml = "i=32386";
-        /// <remarks />
-        public const string ApplicationConfigurationDataType_Encoding_DefaultXml = "i=16591";
-        /// <remarks />
-        public const string ApplicationIdentityDataType_Encoding_DefaultXml = "i=16592";
-        /// <remarks />
-        public const string EndpointDataType_Encoding_DefaultXml = "i=16593";
-        /// <remarks />
-        public const string ServerEndpointDataType_Encoding_DefaultXml = "i=16594";
-        /// <remarks />
-        public const string SecuritySettingsDataType_Encoding_DefaultXml = "i=16595";
-        /// <remarks />
-        public const string UserTokenSettingsDataType_Encoding_DefaultXml = "i=16596";
         /// <remarks />
         public const string DecimalDataType_Encoding_DefaultXml = "i=17862";
         /// <remarks />
@@ -7990,30 +7800,6 @@ namespace Opc.Ua.WebApi
         public const string PubSubConfigurationRefDataType_Encoding_DefaultXml = "i=25547";
         /// <remarks />
         public const string PubSubConfigurationValueDataType_Encoding_DefaultXml = "i=25548";
-        /// <remarks />
-        public const string JsonNetworkMessage_Encoding_DefaultXml = "i=19371";
-        /// <remarks />
-        public const string JsonDataSetMessage_Encoding_DefaultXml = "i=19372";
-        /// <remarks />
-        public const string JsonDataSetMetaDataMessage_Encoding_DefaultXml = "i=19373";
-        /// <remarks />
-        public const string JsonApplicationDescriptionMessage_Encoding_DefaultXml = "i=19374";
-        /// <remarks />
-        public const string JsonServerEndpointsMessage_Encoding_DefaultXml = "i=19375";
-        /// <remarks />
-        public const string JsonStatusMessage_Encoding_DefaultXml = "i=19376";
-        /// <remarks />
-        public const string JsonPubSubConnectionMessage_Encoding_DefaultXml = "i=19377";
-        /// <remarks />
-        public const string JsonActionMetaDataMessage_Encoding_DefaultXml = "i=19378";
-        /// <remarks />
-        public const string JsonActionResponderMessage_Encoding_DefaultXml = "i=19379";
-        /// <remarks />
-        public const string JsonActionNetworkMessage_Encoding_DefaultXml = "i=19380";
-        /// <remarks />
-        public const string JsonActionRequestMessage_Encoding_DefaultXml = "i=19381";
-        /// <remarks />
-        public const string JsonActionResponseMessage_Encoding_DefaultXml = "i=19382";
         /// <remarks />
         public const string AliasNameDataType_Encoding_DefaultXml = "i=23505";
         /// <remarks />
@@ -8499,20 +8285,6 @@ namespace Opc.Ua.WebApi
         /// <remarks />
         public const string Annotation_Encoding_DefaultXml = "i=892";
         /// <remarks />
-        public const string TestAbstractStructure_Encoding_DefaultXml = "i=15403";
-        /// <remarks />
-        public const string TestConcreteStructure_Encoding_DefaultXml = "i=15404";
-        /// <remarks />
-        public const string TestUnion_Encoding_DefaultXml = "i=19437";
-        /// <remarks />
-        public const string TestOptionalFields_Encoding_DefaultXml = "i=19438";
-        /// <remarks />
-        public const string TestScalarStructure_Encoding_DefaultXml = "i=15232";
-        /// <remarks />
-        public const string TestArrayStructure_Encoding_DefaultXml = "i=15233";
-        /// <remarks />
-        public const string TestStructure_Encoding_DefaultXml = "i=15234";
-        /// <remarks />
         public const string Union_Encoding_DefaultJson = "i=15085";
         /// <remarks />
         public const string KeyValuePair_Encoding_DefaultJson = "i=15041";
@@ -8555,27 +8327,7 @@ namespace Opc.Ua.WebApi
         /// <remarks />
         public const string TrustListDataType_Encoding_DefaultJson = "i=15044";
         /// <remarks />
-        public const string BaseConfigurationDataType_Encoding_DefaultJson = "i=16632";
-        /// <remarks />
-        public const string BaseConfigurationRecordDataType_Encoding_DefaultJson = "i=16633";
-        /// <remarks />
-        public const string CertificateGroupDataType_Encoding_DefaultJson = "i=16634";
-        /// <remarks />
-        public const string ConfigurationUpdateTargetType_Encoding_DefaultJson = "i=16635";
-        /// <remarks />
         public const string TransactionErrorType_Encoding_DefaultJson = "i=32390";
-        /// <remarks />
-        public const string ApplicationConfigurationDataType_Encoding_DefaultJson = "i=16636";
-        /// <remarks />
-        public const string ApplicationIdentityDataType_Encoding_DefaultJson = "i=16637";
-        /// <remarks />
-        public const string EndpointDataType_Encoding_DefaultJson = "i=16642";
-        /// <remarks />
-        public const string ServerEndpointDataType_Encoding_DefaultJson = "i=16643";
-        /// <remarks />
-        public const string SecuritySettingsDataType_Encoding_DefaultJson = "i=16644";
-        /// <remarks />
-        public const string UserTokenSettingsDataType_Encoding_DefaultJson = "i=16645";
         /// <remarks />
         public const string DecimalDataType_Encoding_DefaultJson = "i=15045";
         /// <remarks />
@@ -8722,30 +8474,6 @@ namespace Opc.Ua.WebApi
         public const string PubSubConfigurationRefDataType_Encoding_DefaultJson = "i=25563";
         /// <remarks />
         public const string PubSubConfigurationValueDataType_Encoding_DefaultJson = "i=25564";
-        /// <remarks />
-        public const string JsonNetworkMessage_Encoding_DefaultJson = "i=19419";
-        /// <remarks />
-        public const string JsonDataSetMessage_Encoding_DefaultJson = "i=19420";
-        /// <remarks />
-        public const string JsonDataSetMetaDataMessage_Encoding_DefaultJson = "i=19421";
-        /// <remarks />
-        public const string JsonApplicationDescriptionMessage_Encoding_DefaultJson = "i=19422";
-        /// <remarks />
-        public const string JsonServerEndpointsMessage_Encoding_DefaultJson = "i=19423";
-        /// <remarks />
-        public const string JsonStatusMessage_Encoding_DefaultJson = "i=19424";
-        /// <remarks />
-        public const string JsonPubSubConnectionMessage_Encoding_DefaultJson = "i=19425";
-        /// <remarks />
-        public const string JsonActionMetaDataMessage_Encoding_DefaultJson = "i=19426";
-        /// <remarks />
-        public const string JsonActionResponderMessage_Encoding_DefaultJson = "i=19427";
-        /// <remarks />
-        public const string JsonActionNetworkMessage_Encoding_DefaultJson = "i=19428";
-        /// <remarks />
-        public const string JsonActionRequestMessage_Encoding_DefaultJson = "i=19429";
-        /// <remarks />
-        public const string JsonActionResponseMessage_Encoding_DefaultJson = "i=19430";
         /// <remarks />
         public const string AliasNameDataType_Encoding_DefaultJson = "i=23511";
         /// <remarks />
@@ -9230,20 +8958,6 @@ namespace Opc.Ua.WebApi
         public const string ProgramDiagnostic2DataType_Encoding_DefaultJson = "i=24042";
         /// <remarks />
         public const string Annotation_Encoding_DefaultJson = "i=15382";
-        /// <remarks />
-        public const string TestAbstractStructure_Encoding_DefaultJson = "i=15405";
-        /// <remarks />
-        public const string TestConcreteStructure_Encoding_DefaultJson = "i=15431";
-        /// <remarks />
-        public const string TestUnion_Encoding_DefaultJson = "i=19439";
-        /// <remarks />
-        public const string TestOptionalFields_Encoding_DefaultJson = "i=19440";
-        /// <remarks />
-        public const string TestScalarStructure_Encoding_DefaultJson = "i=15396";
-        /// <remarks />
-        public const string TestArrayStructure_Encoding_DefaultJson = "i=15397";
-        /// <remarks />
-        public const string TestStructure_Encoding_DefaultJson = "i=15398";
 
         /// <summary>
         /// Converts a value to a name for display.
@@ -9603,10 +9317,6 @@ namespace Opc.Ua.WebApi
         /// <remarks />
         public const string EccCurve448ApplicationCertificateType = "i=23543";
         /// <remarks />
-        public const string ConfigurationFileType = "i=15437";
-        /// <remarks />
-        public const string ConfigurationUpdatedAuditEventType = "i=15541";
-        /// <remarks />
         public const string TrustListUpdateRequestedAuditEventType = "i=32260";
         /// <remarks />
         public const string TrustListUpdatedAuditEventType = "i=12561";
@@ -9614,8 +9324,6 @@ namespace Opc.Ua.WebApi
         public const string TransactionDiagnosticsType = "i=32286";
         /// <remarks />
         public const string ApplicationConfigurationFolderType = "i=16662";
-        /// <remarks />
-        public const string ApplicationConfigurationFileType = "i=15550";
         /// <remarks />
         public const string ServerConfigurationType = "i=12581";
         /// <remarks />
@@ -14313,28 +14021,6 @@ namespace Opc.Ua.WebApi
         /// <remarks />
         public const string CertificateGroupFolderType_AdditionalGroup_Placeholder_TrustListOutOfDate_UpdateFrequency = "i=21678";
         /// <remarks />
-        public const string ConfigurationFileType_LastUpdateTime = "i=15438";
-        /// <remarks />
-        public const string ConfigurationFileType_CurrentVersion = "i=15439";
-        /// <remarks />
-        public const string ConfigurationFileType_ActivityTimeout = "i=15503";
-        /// <remarks />
-        public const string ConfigurationFileType_SupportedDataType = "i=15504";
-        /// <remarks />
-        public const string ConfigurationFileType_ConfirmUpdate_InputArguments = "i=15511";
-        /// <remarks />
-        public const string ConfigurationFileType_ConfirmUpdate_OutputArguments = "i=15512";
-        /// <remarks />
-        public const string ConfigurationFileType_CloseAndUpdate_InputArguments = "i=15506";
-        /// <remarks />
-        public const string ConfigurationFileType_CloseAndUpdate_OutputArguments = "i=15507";
-        /// <remarks />
-        public const string ConfigurationUpdateType_EnumValues = "i=15540";
-        /// <remarks />
-        public const string ConfigurationUpdatedAuditEventType_OldVersion = "i=15542";
-        /// <remarks />
-        public const string ConfigurationUpdatedAuditEventType_NewVersion = "i=15543";
-        /// <remarks />
         public const string TrustListUpdatedAuditEventType_TrustListId = "i=32281";
         /// <remarks />
         public const string TransactionDiagnosticsType_StartTime = "i=32287";
@@ -15194,16 +14880,6 @@ namespace Opc.Ua.WebApi
         public const string ApplicationConfigurationFolderType_ApplicationName_Placeholder_TransactionDiagnostics_Errors = "i=18553";
         /// <remarks />
         public const string ApplicationConfigurationFolderType_ApplicationName_Placeholder_Enabled = "i=18592";
-        /// <remarks />
-        public const string ApplicationConfigurationFileType_AvailableNetworks = "i=15551";
-        /// <remarks />
-        public const string ApplicationConfigurationFileType_AvailablePorts = "i=15552";
-        /// <remarks />
-        public const string ApplicationConfigurationFileType_SecurityPolicyUris = "i=15553";
-        /// <remarks />
-        public const string ApplicationConfigurationFileType_UserTokenTypes = "i=15554";
-        /// <remarks />
-        public const string ApplicationConfigurationFileType_CertificateTypes = "i=15555";
         /// <remarks />
         public const string ServerConfigurationType_CertificateGroups_DefaultApplicationGroup_TrustList_Size = "i=13953";
         /// <remarks />
@@ -20751,10 +20427,6 @@ namespace Opc.Ua.WebApi
         /// <remarks />
         public const string ExceptionDeviationFormat_EnumStrings = "i=7614";
         /// <remarks />
-        public const string TestEnumeration_EnumValues = "i=15433";
-        /// <remarks />
-        public const string TestOptionSet_OptionSetValues = "i=19441";
-        /// <remarks />
         public const string OpcUa_BinarySchema = "i=7617";
         /// <remarks />
         public const string OpcUa_BinarySchema_NamespaceUri = "i=7619";
@@ -20803,27 +20475,7 @@ namespace Opc.Ua.WebApi
         /// <remarks />
         public const string OpcUa_BinarySchema_TrustListDataType = "i=12681";
         /// <remarks />
-        public const string OpcUa_BinarySchema_BaseConfigurationDataType = "i=16548";
-        /// <remarks />
-        public const string OpcUa_BinarySchema_BaseConfigurationRecordDataType = "i=16551";
-        /// <remarks />
-        public const string OpcUa_BinarySchema_CertificateGroupDataType = "i=16554";
-        /// <remarks />
-        public const string OpcUa_BinarySchema_ConfigurationUpdateTargetType = "i=16557";
-        /// <remarks />
         public const string OpcUa_BinarySchema_TransactionErrorType = "i=32383";
-        /// <remarks />
-        public const string OpcUa_BinarySchema_ApplicationConfigurationDataType = "i=16564";
-        /// <remarks />
-        public const string OpcUa_BinarySchema_ApplicationIdentityDataType = "i=16567";
-        /// <remarks />
-        public const string OpcUa_BinarySchema_EndpointDataType = "i=16570";
-        /// <remarks />
-        public const string OpcUa_BinarySchema_ServerEndpointDataType = "i=16578";
-        /// <remarks />
-        public const string OpcUa_BinarySchema_SecuritySettingsDataType = "i=16581";
-        /// <remarks />
-        public const string OpcUa_BinarySchema_UserTokenSettingsDataType = "i=16584";
         /// <remarks />
         public const string OpcUa_BinarySchema_DataTypeSchemaHeader = "i=15741";
         /// <remarks />
@@ -20968,30 +20620,6 @@ namespace Opc.Ua.WebApi
         public const string OpcUa_BinarySchema_PubSubConfigurationRefDataType = "i=25539";
         /// <remarks />
         public const string OpcUa_BinarySchema_PubSubConfigurationValueDataType = "i=25542";
-        /// <remarks />
-        public const string OpcUa_BinarySchema_JsonNetworkMessage = "i=19335";
-        /// <remarks />
-        public const string OpcUa_BinarySchema_JsonDataSetMessage = "i=19338";
-        /// <remarks />
-        public const string OpcUa_BinarySchema_JsonDataSetMetaDataMessage = "i=19341";
-        /// <remarks />
-        public const string OpcUa_BinarySchema_JsonApplicationDescriptionMessage = "i=19344";
-        /// <remarks />
-        public const string OpcUa_BinarySchema_JsonServerEndpointsMessage = "i=19347";
-        /// <remarks />
-        public const string OpcUa_BinarySchema_JsonStatusMessage = "i=19350";
-        /// <remarks />
-        public const string OpcUa_BinarySchema_JsonPubSubConnectionMessage = "i=19353";
-        /// <remarks />
-        public const string OpcUa_BinarySchema_JsonActionMetaDataMessage = "i=19356";
-        /// <remarks />
-        public const string OpcUa_BinarySchema_JsonActionResponderMessage = "i=19359";
-        /// <remarks />
-        public const string OpcUa_BinarySchema_JsonActionNetworkMessage = "i=19362";
-        /// <remarks />
-        public const string OpcUa_BinarySchema_JsonActionRequestMessage = "i=19365";
-        /// <remarks />
-        public const string OpcUa_BinarySchema_JsonActionResponseMessage = "i=19368";
         /// <remarks />
         public const string OpcUa_BinarySchema_AliasNameDataType = "i=23502";
         /// <remarks />
@@ -21191,27 +20819,7 @@ namespace Opc.Ua.WebApi
         /// <remarks />
         public const string OpcUa_XmlSchema_TrustListDataType = "i=12677";
         /// <remarks />
-        public const string OpcUa_XmlSchema_BaseConfigurationDataType = "i=16597";
-        /// <remarks />
-        public const string OpcUa_XmlSchema_BaseConfigurationRecordDataType = "i=16604";
-        /// <remarks />
-        public const string OpcUa_XmlSchema_CertificateGroupDataType = "i=16607";
-        /// <remarks />
-        public const string OpcUa_XmlSchema_ConfigurationUpdateTargetType = "i=16610";
-        /// <remarks />
         public const string OpcUa_XmlSchema_TransactionErrorType = "i=32387";
-        /// <remarks />
-        public const string OpcUa_XmlSchema_ApplicationConfigurationDataType = "i=16614";
-        /// <remarks />
-        public const string OpcUa_XmlSchema_ApplicationIdentityDataType = "i=16617";
-        /// <remarks />
-        public const string OpcUa_XmlSchema_EndpointDataType = "i=16620";
-        /// <remarks />
-        public const string OpcUa_XmlSchema_ServerEndpointDataType = "i=16623";
-        /// <remarks />
-        public const string OpcUa_XmlSchema_SecuritySettingsDataType = "i=16626";
-        /// <remarks />
-        public const string OpcUa_XmlSchema_UserTokenSettingsDataType = "i=16629";
         /// <remarks />
         public const string OpcUa_XmlSchema_DataTypeSchemaHeader = "i=16027";
         /// <remarks />
@@ -21356,30 +20964,6 @@ namespace Opc.Ua.WebApi
         public const string OpcUa_XmlSchema_PubSubConfigurationRefDataType = "i=25555";
         /// <remarks />
         public const string OpcUa_XmlSchema_PubSubConfigurationValueDataType = "i=25558";
-        /// <remarks />
-        public const string OpcUa_XmlSchema_JsonNetworkMessage = "i=19383";
-        /// <remarks />
-        public const string OpcUa_XmlSchema_JsonDataSetMessage = "i=19386";
-        /// <remarks />
-        public const string OpcUa_XmlSchema_JsonDataSetMetaDataMessage = "i=19389";
-        /// <remarks />
-        public const string OpcUa_XmlSchema_JsonApplicationDescriptionMessage = "i=19392";
-        /// <remarks />
-        public const string OpcUa_XmlSchema_JsonServerEndpointsMessage = "i=19395";
-        /// <remarks />
-        public const string OpcUa_XmlSchema_JsonStatusMessage = "i=19398";
-        /// <remarks />
-        public const string OpcUa_XmlSchema_JsonPubSubConnectionMessage = "i=19401";
-        /// <remarks />
-        public const string OpcUa_XmlSchema_JsonActionMetaDataMessage = "i=19404";
-        /// <remarks />
-        public const string OpcUa_XmlSchema_JsonActionResponderMessage = "i=19407";
-        /// <remarks />
-        public const string OpcUa_XmlSchema_JsonActionNetworkMessage = "i=19410";
-        /// <remarks />
-        public const string OpcUa_XmlSchema_JsonActionRequestMessage = "i=19413";
-        /// <remarks />
-        public const string OpcUa_XmlSchema_JsonActionResponseMessage = "i=19416";
         /// <remarks />
         public const string OpcUa_XmlSchema_AliasNameDataType = "i=23508";
         /// <remarks />

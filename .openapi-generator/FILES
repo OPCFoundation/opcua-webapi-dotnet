@@ -210,7 +210,6 @@ docs/WriteValue.md
 docs/WriterGroupDataType.md
 docs/X509IdentityToken.md
 git_push.sh
-src/Opc.Ua.WebApi.Test/Model/JsonMessageTypeTests.cs
 src/Opc.Ua.WebApi.Test/Opc.Ua.WebApi.Test.csproj
 src/Opc.Ua.WebApi/Api/DefaultApi.cs
 src/Opc.Ua.WebApi/Client/ApiClient.cs
