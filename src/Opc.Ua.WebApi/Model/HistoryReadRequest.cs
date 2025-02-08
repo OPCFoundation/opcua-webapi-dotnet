@@ -27,7 +27,7 @@ using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 namespace Opc.Ua.WebApi.Model
 {
     /// <summary>
-    /// HistoryReadRequest
+    /// [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.11.3/#5.11.3.2).
     /// </summary>
     [DataContract(Name = "HistoryReadRequest")]
     public partial class HistoryReadRequest : IValidatableObject
@@ -37,7 +37,7 @@ namespace Opc.Ua.WebApi.Model
         /// </summary>
         /// <param name="requestHeader">requestHeader.</param>
         /// <param name="historyReadDetails">historyReadDetails.</param>
-        /// <param name="timestampsToReturn">timestampsToReturn.</param>
+        /// <param name="timestampsToReturn">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/7.40)..</param>
         /// <param name="releaseContinuationPoints">releaseContinuationPoints (default to false).</param>
         /// <param name="nodesToRead">nodesToRead.</param>
         public HistoryReadRequest(RequestHeader requestHeader = default(RequestHeader), ExtensionObject historyReadDetails = default(ExtensionObject), int timestampsToReturn = default(int), bool releaseContinuationPoints = false, List<HistoryReadValueId> nodesToRead = default(List<HistoryReadValueId>))
@@ -62,8 +62,9 @@ namespace Opc.Ua.WebApi.Model
         public ExtensionObject HistoryReadDetails { get; set; }
 
         /// <summary>
-        /// Gets or Sets TimestampsToReturn
+        /// [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/7.40).
         /// </summary>
+        /// <value>[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/7.40).</value>
         [DataMember(Name = "TimestampsToReturn", EmitDefaultValue = false)]
         public int TimestampsToReturn { get; set; }
 

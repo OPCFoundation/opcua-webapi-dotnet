@@ -27,7 +27,7 @@ using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 namespace Opc.Ua.WebApi.Model
 {
     /// <summary>
-    /// EndpointDescription
+    /// [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/7.14).
     /// </summary>
     [DataContract(Name = "EndpointDescription")]
     public partial class EndpointDescription : IValidatableObject
@@ -38,7 +38,7 @@ namespace Opc.Ua.WebApi.Model
         /// <param name="endpointUrl">endpointUrl.</param>
         /// <param name="server">server.</param>
         /// <param name="serverCertificate">serverCertificate.</param>
-        /// <param name="securityMode">securityMode.</param>
+        /// <param name="securityMode">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part5/12.3.10)..</param>
         /// <param name="securityPolicyUri">securityPolicyUri.</param>
         /// <param name="userIdentityTokens">userIdentityTokens.</param>
         /// <param name="transportProfileUri">transportProfileUri.</param>
@@ -74,8 +74,9 @@ namespace Opc.Ua.WebApi.Model
         public byte[] ServerCertificate { get; set; }
 
         /// <summary>
-        /// Gets or Sets SecurityMode
+        /// [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part5/12.3.10).
         /// </summary>
+        /// <value>[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part5/12.3.10).</value>
         [DataMember(Name = "SecurityMode", EmitDefaultValue = false)]
         public int SecurityMode { get; set; }
 

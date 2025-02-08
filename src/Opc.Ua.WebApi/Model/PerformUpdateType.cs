@@ -27,8 +27,9 @@ using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 namespace Opc.Ua.WebApi.Model
 {
     /// <summary>
-    /// Defines PerformUpdateType
+    /// [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part11/6.8).
     /// </summary>
+    /// <value>[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part11/6.8).</value>
     public enum PerformUpdateType
     {
         /// <summary>

@@ -27,7 +27,7 @@ using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 namespace Opc.Ua.WebApi.Model
 {
     /// <summary>
-    /// UnregisterNodesRequest
+    /// [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.9.6/#5.9.6.2).
     /// </summary>
     [DataContract(Name = "UnregisterNodesRequest")]
     public partial class UnregisterNodesRequest : IValidatableObject

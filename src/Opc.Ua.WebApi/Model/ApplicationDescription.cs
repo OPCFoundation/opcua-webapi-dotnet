@@ -27,7 +27,7 @@ using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 namespace Opc.Ua.WebApi.Model
 {
     /// <summary>
-    /// ApplicationDescription
+    /// [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part14/7.2.4/#7.2.4.6.5).
     /// </summary>
     [DataContract(Name = "ApplicationDescription")]
     public partial class ApplicationDescription : IValidatableObject
@@ -38,7 +38,7 @@ namespace Opc.Ua.WebApi.Model
         /// <param name="applicationUri">applicationUri.</param>
         /// <param name="productUri">productUri.</param>
         /// <param name="applicationName">applicationName.</param>
-        /// <param name="applicationType">applicationType.</param>
+        /// <param name="applicationType">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/7.4)..</param>
         /// <param name="gatewayServerUri">gatewayServerUri.</param>
         /// <param name="discoveryProfileUri">discoveryProfileUri.</param>
         /// <param name="discoveryUrls">discoveryUrls.</param>
@@ -72,8 +72,9 @@ namespace Opc.Ua.WebApi.Model
         public LocalizedText ApplicationName { get; set; }
 
         /// <summary>
-        /// Gets or Sets ApplicationType
+        /// [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/7.4).
         /// </summary>
+        /// <value>[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/7.4).</value>
         [DataMember(Name = "ApplicationType", EmitDefaultValue = false)]
         public int ApplicationType { get; set; }
 

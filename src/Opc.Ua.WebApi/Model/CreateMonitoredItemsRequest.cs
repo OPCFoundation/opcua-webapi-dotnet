@@ -27,7 +27,7 @@ using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 namespace Opc.Ua.WebApi.Model
 {
     /// <summary>
-    /// CreateMonitoredItemsRequest
+    /// [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.13.2/#5.13.2.2).
     /// </summary>
     [DataContract(Name = "CreateMonitoredItemsRequest")]
     public partial class CreateMonitoredItemsRequest : IValidatableObject
@@ -37,7 +37,7 @@ namespace Opc.Ua.WebApi.Model
         /// </summary>
         /// <param name="requestHeader">requestHeader.</param>
         /// <param name="subscriptionId">subscriptionId (default to 0).</param>
-        /// <param name="timestampsToReturn">timestampsToReturn.</param>
+        /// <param name="timestampsToReturn">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/7.40)..</param>
         /// <param name="itemsToCreate">itemsToCreate.</param>
         public CreateMonitoredItemsRequest(RequestHeader requestHeader = default(RequestHeader), long subscriptionId = 0, int timestampsToReturn = default(int), List<MonitoredItemCreateRequest> itemsToCreate = default(List<MonitoredItemCreateRequest>))
         {
@@ -60,8 +60,9 @@ namespace Opc.Ua.WebApi.Model
         public long SubscriptionId { get; set; }
 
         /// <summary>
-        /// Gets or Sets TimestampsToReturn
+        /// [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/7.40).
         /// </summary>
+        /// <value>[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/7.40).</value>
         [DataMember(Name = "TimestampsToReturn", EmitDefaultValue = false)]
         public int TimestampsToReturn { get; set; }
 

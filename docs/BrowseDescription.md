@@ -1,11 +1,12 @@
 # Opc.Ua.WebApi.Model.BrowseDescription
+[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.9.2/#5.9.2.2).
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **NodeId** | **string** |  | [optional] 
-**BrowseDirection** | **int** |  | [optional] 
+**BrowseDirection** | **int** | [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/7.5). | [optional] 
 **ReferenceTypeId** | **string** |  | [optional] 
 **IncludeSubtypes** | **bool** |  | [optional] [default to false]
 **NodeClassMask** | **long** |  | [optional] [default to 0]

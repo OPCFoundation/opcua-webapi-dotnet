@@ -1,4 +1,5 @@
 # Opc.Ua.WebApi.Model.LocalizedText
+[Link to specification](https://reference.opcfoundation.org/Core/Part3/v105/docs/8.5).
 
 ## Properties
 

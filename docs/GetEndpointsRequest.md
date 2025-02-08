@@ -1,4 +1,5 @@
 # Opc.Ua.WebApi.Model.GetEndpointsRequest
+[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.5.4/#5.5.4.2).
 
 ## Properties
 

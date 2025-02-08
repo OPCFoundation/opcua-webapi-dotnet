@@ -27,7 +27,7 @@ using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 namespace Opc.Ua.WebApi.Model
 {
     /// <summary>
-    /// BrowseNextRequest
+    /// [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.9.3/#5.9.3.2).
     /// </summary>
     [DataContract(Name = "BrowseNextRequest")]
     public partial class BrowseNextRequest : IValidatableObject

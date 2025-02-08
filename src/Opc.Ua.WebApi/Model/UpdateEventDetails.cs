@@ -27,7 +27,7 @@ using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 namespace Opc.Ua.WebApi.Model
 {
     /// <summary>
-    /// UpdateEventDetails
+    /// [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part11/6.9.4/#6.9.4.1).
     /// </summary>
     [DataContract(Name = "UpdateEventDetails")]
     public partial class UpdateEventDetails : IValidatableObject
@@ -36,7 +36,7 @@ namespace Opc.Ua.WebApi.Model
         /// Initializes a new instance of the <see cref="UpdateEventDetails" /> class.
         /// </summary>
         /// <param name="nodeId">nodeId.</param>
-        /// <param name="performInsertReplace">performInsertReplace.</param>
+        /// <param name="performInsertReplace">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part11/6.8)..</param>
         /// <param name="filter">filter.</param>
         /// <param name="eventData">eventData.</param>
         public UpdateEventDetails(string nodeId = default(string), int performInsertReplace = default(int), EventFilter filter = default(EventFilter), List<HistoryEventFieldList> eventData = default(List<HistoryEventFieldList>))
@@ -54,8 +54,9 @@ namespace Opc.Ua.WebApi.Model
         public string NodeId { get; set; }
 
         /// <summary>
-        /// Gets or Sets PerformInsertReplace
+        /// [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part11/6.8).
         /// </summary>
+        /// <value>[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part11/6.8).</value>
         [DataMember(Name = "PerformInsertReplace", EmitDefaultValue = false)]
         public int PerformInsertReplace { get; set; }
 

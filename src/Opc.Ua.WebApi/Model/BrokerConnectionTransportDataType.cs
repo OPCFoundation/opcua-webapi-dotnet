@@ -27,7 +27,7 @@ using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 namespace Opc.Ua.WebApi.Model
 {
     /// <summary>
-    /// BrokerConnectionTransportDataType
+    /// [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part14/6.4.2/#6.4.2.2.3).
     /// </summary>
     [DataContract(Name = "BrokerConnectionTransportDataType")]
     public partial class BrokerConnectionTransportDataType : IValidatableObject

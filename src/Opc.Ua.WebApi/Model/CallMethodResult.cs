@@ -27,7 +27,7 @@ using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 namespace Opc.Ua.WebApi.Model
 {
     /// <summary>
-    /// CallMethodResult
+    /// [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.12.2/#5.12.2.2).
     /// </summary>
     [DataContract(Name = "CallMethodResult")]
     public partial class CallMethodResult : IValidatableObject

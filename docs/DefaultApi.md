@@ -56,7 +56,7 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:4840";
             var apiInstance = new DefaultApi(config);
-            var activateSessionRequest = new ActivateSessionRequest(); // ActivateSessionRequest | ActivateSessionRequestMessage (optional) 
+            var activateSessionRequest = new ActivateSessionRequest(); // ActivateSessionRequest | [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.7.3/#5.7.3.2). (optional) 
 
             try
             {
@@ -97,7 +97,7 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **activateSessionRequest** | [**ActivateSessionRequest**](ActivateSessionRequest.md) | ActivateSessionRequestMessage | [optional]  |
+| **activateSessionRequest** | [**ActivateSessionRequest**](ActivateSessionRequest.md) | [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.7.3/#5.7.3.2). | [optional]  |
 
 ### Return type
 
@@ -116,7 +116,7 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | ActivateSessionResponseMessage |  -  |
+| **200** | [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.7.3/#5.7.3.2). |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -143,7 +143,7 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:4840";
             var apiInstance = new DefaultApi(config);
-            var browseRequest = new BrowseRequest(); // BrowseRequest | BrowseRequestMessage (optional) 
+            var browseRequest = new BrowseRequest(); // BrowseRequest | [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.9.2/#5.9.2.2). (optional) 
 
             try
             {
@@ -184,7 +184,7 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **browseRequest** | [**BrowseRequest**](BrowseRequest.md) | BrowseRequestMessage | [optional]  |
+| **browseRequest** | [**BrowseRequest**](BrowseRequest.md) | [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.9.2/#5.9.2.2). | [optional]  |
 
 ### Return type
 
@@ -203,7 +203,7 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | BrowseResponseMessage |  -  |
+| **200** | [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.9.2/#5.9.2.2). |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -230,7 +230,7 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:4840";
             var apiInstance = new DefaultApi(config);
-            var browseNextRequest = new BrowseNextRequest(); // BrowseNextRequest | BrowseNextRequestMessage (optional) 
+            var browseNextRequest = new BrowseNextRequest(); // BrowseNextRequest | [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.9.3/#5.9.3.2). (optional) 
 
             try
             {
@@ -271,7 +271,7 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **browseNextRequest** | [**BrowseNextRequest**](BrowseNextRequest.md) | BrowseNextRequestMessage | [optional]  |
+| **browseNextRequest** | [**BrowseNextRequest**](BrowseNextRequest.md) | [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.9.3/#5.9.3.2). | [optional]  |
 
 ### Return type
 
@@ -290,7 +290,7 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | BrowseNextResponseMessage |  -  |
+| **200** | [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.9.3/#5.9.3.2). |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -317,7 +317,7 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:4840";
             var apiInstance = new DefaultApi(config);
-            var callRequest = new CallRequest(); // CallRequest | CallRequestMessage (optional) 
+            var callRequest = new CallRequest(); // CallRequest | [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.12.2/#5.12.2.2). (optional) 
 
             try
             {
@@ -358,7 +358,7 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **callRequest** | [**CallRequest**](CallRequest.md) | CallRequestMessage | [optional]  |
+| **callRequest** | [**CallRequest**](CallRequest.md) | [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.12.2/#5.12.2.2). | [optional]  |
 
 ### Return type
 
@@ -377,7 +377,7 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | CallResponseMessage |  -  |
+| **200** | [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.12.2/#5.12.2.2). |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -404,7 +404,7 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:4840";
             var apiInstance = new DefaultApi(config);
-            var cancelRequest = new CancelRequest(); // CancelRequest | CancelRequestMessage (optional) 
+            var cancelRequest = new CancelRequest(); // CancelRequest | [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.7.5/#5.7.5.2). (optional) 
 
             try
             {
@@ -445,7 +445,7 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **cancelRequest** | [**CancelRequest**](CancelRequest.md) | CancelRequestMessage | [optional]  |
+| **cancelRequest** | [**CancelRequest**](CancelRequest.md) | [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.7.5/#5.7.5.2). | [optional]  |
 
 ### Return type
 
@@ -464,7 +464,7 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | CancelResponseMessage |  -  |
+| **200** | [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.7.5/#5.7.5.2). |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -491,7 +491,7 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:4840";
             var apiInstance = new DefaultApi(config);
-            var closeSessionRequest = new CloseSessionRequest(); // CloseSessionRequest | CloseSessionRequestMessage (optional) 
+            var closeSessionRequest = new CloseSessionRequest(); // CloseSessionRequest | [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.7.4/#5.7.4.2). (optional) 
 
             try
             {
@@ -532,7 +532,7 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **closeSessionRequest** | [**CloseSessionRequest**](CloseSessionRequest.md) | CloseSessionRequestMessage | [optional]  |
+| **closeSessionRequest** | [**CloseSessionRequest**](CloseSessionRequest.md) | [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.7.4/#5.7.4.2). | [optional]  |
 
 ### Return type
 
@@ -551,7 +551,7 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | CloseSessionResponseMessage |  -  |
+| **200** | [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.7.4/#5.7.4.2). |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -578,7 +578,7 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:4840";
             var apiInstance = new DefaultApi(config);
-            var createMonitoredItemsRequest = new CreateMonitoredItemsRequest(); // CreateMonitoredItemsRequest | CreateMonitoredItemsRequestMessage (optional) 
+            var createMonitoredItemsRequest = new CreateMonitoredItemsRequest(); // CreateMonitoredItemsRequest | [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.13.2/#5.13.2.2). (optional) 
 
             try
             {
@@ -619,7 +619,7 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **createMonitoredItemsRequest** | [**CreateMonitoredItemsRequest**](CreateMonitoredItemsRequest.md) | CreateMonitoredItemsRequestMessage | [optional]  |
+| **createMonitoredItemsRequest** | [**CreateMonitoredItemsRequest**](CreateMonitoredItemsRequest.md) | [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.13.2/#5.13.2.2). | [optional]  |
 
 ### Return type
 
@@ -638,7 +638,7 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | CreateMonitoredItemsResponseMessage |  -  |
+| **200** | [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.13.2/#5.13.2.2). |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -665,7 +665,7 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:4840";
             var apiInstance = new DefaultApi(config);
-            var createSessionRequest = new CreateSessionRequest(); // CreateSessionRequest | CreateSessionRequestMessage (optional) 
+            var createSessionRequest = new CreateSessionRequest(); // CreateSessionRequest | [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.7.2/#5.7.2.2). (optional) 
 
             try
             {
@@ -706,7 +706,7 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **createSessionRequest** | [**CreateSessionRequest**](CreateSessionRequest.md) | CreateSessionRequestMessage | [optional]  |
+| **createSessionRequest** | [**CreateSessionRequest**](CreateSessionRequest.md) | [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.7.2/#5.7.2.2). | [optional]  |
 
 ### Return type
 
@@ -725,7 +725,7 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | CreateSessionResponseMessage |  -  |
+| **200** | [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.7.2/#5.7.2.2). |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -752,7 +752,7 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:4840";
             var apiInstance = new DefaultApi(config);
-            var createSubscriptionRequest = new CreateSubscriptionRequest(); // CreateSubscriptionRequest | CreateSubscriptionRequestMessage (optional) 
+            var createSubscriptionRequest = new CreateSubscriptionRequest(); // CreateSubscriptionRequest | [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.2/#5.14.2.2). (optional) 
 
             try
             {
@@ -793,7 +793,7 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **createSubscriptionRequest** | [**CreateSubscriptionRequest**](CreateSubscriptionRequest.md) | CreateSubscriptionRequestMessage | [optional]  |
+| **createSubscriptionRequest** | [**CreateSubscriptionRequest**](CreateSubscriptionRequest.md) | [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.2/#5.14.2.2). | [optional]  |
 
 ### Return type
 
@@ -812,7 +812,7 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | CreateSubscriptionResponseMessage |  -  |
+| **200** | [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.2/#5.14.2.2). |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -839,7 +839,7 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:4840";
             var apiInstance = new DefaultApi(config);
-            var deleteMonitoredItemsRequest = new DeleteMonitoredItemsRequest(); // DeleteMonitoredItemsRequest | DeleteMonitoredItemsRequestMessage (optional) 
+            var deleteMonitoredItemsRequest = new DeleteMonitoredItemsRequest(); // DeleteMonitoredItemsRequest | [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.13.6/#5.13.6.2). (optional) 
 
             try
             {
@@ -880,7 +880,7 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **deleteMonitoredItemsRequest** | [**DeleteMonitoredItemsRequest**](DeleteMonitoredItemsRequest.md) | DeleteMonitoredItemsRequestMessage | [optional]  |
+| **deleteMonitoredItemsRequest** | [**DeleteMonitoredItemsRequest**](DeleteMonitoredItemsRequest.md) | [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.13.6/#5.13.6.2). | [optional]  |
 
 ### Return type
 
@@ -899,7 +899,7 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | DeleteMonitoredItemsResponseMessage |  -  |
+| **200** | [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.13.6/#5.13.6.2). |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -926,7 +926,7 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:4840";
             var apiInstance = new DefaultApi(config);
-            var deleteSubscriptionsRequest = new DeleteSubscriptionsRequest(); // DeleteSubscriptionsRequest | DeleteSubscriptionsRequestMessage (optional) 
+            var deleteSubscriptionsRequest = new DeleteSubscriptionsRequest(); // DeleteSubscriptionsRequest | [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.8/#5.14.8.2). (optional) 
 
             try
             {
@@ -967,7 +967,7 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **deleteSubscriptionsRequest** | [**DeleteSubscriptionsRequest**](DeleteSubscriptionsRequest.md) | DeleteSubscriptionsRequestMessage | [optional]  |
+| **deleteSubscriptionsRequest** | [**DeleteSubscriptionsRequest**](DeleteSubscriptionsRequest.md) | [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.8/#5.14.8.2). | [optional]  |
 
 ### Return type
 
@@ -986,7 +986,7 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | DeleteSubscriptionsResponseMessage |  -  |
+| **200** | [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.8/#5.14.8.2). |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -1013,7 +1013,7 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:4840";
             var apiInstance = new DefaultApi(config);
-            var findServersRequest = new FindServersRequest(); // FindServersRequest | FindServersRequestMessage (optional) 
+            var findServersRequest = new FindServersRequest(); // FindServersRequest | [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.5.2/#5.5.2.2). (optional) 
 
             try
             {
@@ -1054,7 +1054,7 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **findServersRequest** | [**FindServersRequest**](FindServersRequest.md) | FindServersRequestMessage | [optional]  |
+| **findServersRequest** | [**FindServersRequest**](FindServersRequest.md) | [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.5.2/#5.5.2.2). | [optional]  |
 
 ### Return type
 
@@ -1073,7 +1073,7 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | FindServersResponseMessage |  -  |
+| **200** | [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.5.2/#5.5.2.2). |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -1100,7 +1100,7 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:4840";
             var apiInstance = new DefaultApi(config);
-            var getEndpointsRequest = new GetEndpointsRequest(); // GetEndpointsRequest | GetEndpointsRequestMessage (optional) 
+            var getEndpointsRequest = new GetEndpointsRequest(); // GetEndpointsRequest | [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.5.4/#5.5.4.2). (optional) 
 
             try
             {
@@ -1141,7 +1141,7 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **getEndpointsRequest** | [**GetEndpointsRequest**](GetEndpointsRequest.md) | GetEndpointsRequestMessage | [optional]  |
+| **getEndpointsRequest** | [**GetEndpointsRequest**](GetEndpointsRequest.md) | [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.5.4/#5.5.4.2). | [optional]  |
 
 ### Return type
 
@@ -1160,7 +1160,7 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | GetEndpointsResponseMessage |  -  |
+| **200** | [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.5.4/#5.5.4.2). |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -1187,7 +1187,7 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:4840";
             var apiInstance = new DefaultApi(config);
-            var historyReadRequest = new HistoryReadRequest(); // HistoryReadRequest | HistoryReadRequestMessage (optional) 
+            var historyReadRequest = new HistoryReadRequest(); // HistoryReadRequest | [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.11.3/#5.11.3.2). (optional) 
 
             try
             {
@@ -1228,7 +1228,7 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **historyReadRequest** | [**HistoryReadRequest**](HistoryReadRequest.md) | HistoryReadRequestMessage | [optional]  |
+| **historyReadRequest** | [**HistoryReadRequest**](HistoryReadRequest.md) | [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.11.3/#5.11.3.2). | [optional]  |
 
 ### Return type
 
@@ -1247,7 +1247,7 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | HistoryReadResponseMessage |  -  |
+| **200** | [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.11.3/#5.11.3.2). |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -1274,7 +1274,7 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:4840";
             var apiInstance = new DefaultApi(config);
-            var historyUpdateRequest = new HistoryUpdateRequest(); // HistoryUpdateRequest | HistoryUpdateRequestMessage (optional) 
+            var historyUpdateRequest = new HistoryUpdateRequest(); // HistoryUpdateRequest | [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.11.5/#5.11.5.2). (optional) 
 
             try
             {
@@ -1315,7 +1315,7 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **historyUpdateRequest** | [**HistoryUpdateRequest**](HistoryUpdateRequest.md) | HistoryUpdateRequestMessage | [optional]  |
+| **historyUpdateRequest** | [**HistoryUpdateRequest**](HistoryUpdateRequest.md) | [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.11.5/#5.11.5.2). | [optional]  |
 
 ### Return type
 
@@ -1334,7 +1334,7 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | HistoryUpdateResponseMessage |  -  |
+| **200** | [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.11.5/#5.11.5.2). |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -1361,7 +1361,7 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:4840";
             var apiInstance = new DefaultApi(config);
-            var modifyMonitoredItemsRequest = new ModifyMonitoredItemsRequest(); // ModifyMonitoredItemsRequest | ModifyMonitoredItemsRequestMessage (optional) 
+            var modifyMonitoredItemsRequest = new ModifyMonitoredItemsRequest(); // ModifyMonitoredItemsRequest | [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.13.3/#5.13.3.2). (optional) 
 
             try
             {
@@ -1402,7 +1402,7 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **modifyMonitoredItemsRequest** | [**ModifyMonitoredItemsRequest**](ModifyMonitoredItemsRequest.md) | ModifyMonitoredItemsRequestMessage | [optional]  |
+| **modifyMonitoredItemsRequest** | [**ModifyMonitoredItemsRequest**](ModifyMonitoredItemsRequest.md) | [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.13.3/#5.13.3.2). | [optional]  |
 
 ### Return type
 
@@ -1421,7 +1421,7 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | ModifyMonitoredItemsResponseMessage |  -  |
+| **200** | [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.13.3/#5.13.3.2). |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -1448,7 +1448,7 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:4840";
             var apiInstance = new DefaultApi(config);
-            var modifySubscriptionRequest = new ModifySubscriptionRequest(); // ModifySubscriptionRequest | ModifySubscriptionRequestMessage (optional) 
+            var modifySubscriptionRequest = new ModifySubscriptionRequest(); // ModifySubscriptionRequest | [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.3/#5.14.3.2). (optional) 
 
             try
             {
@@ -1489,7 +1489,7 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **modifySubscriptionRequest** | [**ModifySubscriptionRequest**](ModifySubscriptionRequest.md) | ModifySubscriptionRequestMessage | [optional]  |
+| **modifySubscriptionRequest** | [**ModifySubscriptionRequest**](ModifySubscriptionRequest.md) | [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.3/#5.14.3.2). | [optional]  |
 
 ### Return type
 
@@ -1508,7 +1508,7 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | ModifySubscriptionResponseMessage |  -  |
+| **200** | [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.3/#5.14.3.2). |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -1535,7 +1535,7 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:4840";
             var apiInstance = new DefaultApi(config);
-            var publishRequest = new PublishRequest(); // PublishRequest | PublishRequestMessage (optional) 
+            var publishRequest = new PublishRequest(); // PublishRequest | [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.5/#5.14.5.2). (optional) 
 
             try
             {
@@ -1576,7 +1576,7 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **publishRequest** | [**PublishRequest**](PublishRequest.md) | PublishRequestMessage | [optional]  |
+| **publishRequest** | [**PublishRequest**](PublishRequest.md) | [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.5/#5.14.5.2). | [optional]  |
 
 ### Return type
 
@@ -1595,7 +1595,7 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | PublishResponseMessage |  -  |
+| **200** | [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.5/#5.14.5.2). |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -1622,7 +1622,7 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:4840";
             var apiInstance = new DefaultApi(config);
-            var readRequest = new ReadRequest(); // ReadRequest | ReadRequestMessage (optional) 
+            var readRequest = new ReadRequest(); // ReadRequest | [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.11.2/#5.11.2.2). (optional) 
 
             try
             {
@@ -1663,7 +1663,7 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **readRequest** | [**ReadRequest**](ReadRequest.md) | ReadRequestMessage | [optional]  |
+| **readRequest** | [**ReadRequest**](ReadRequest.md) | [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.11.2/#5.11.2.2). | [optional]  |
 
 ### Return type
 
@@ -1682,7 +1682,7 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | ReadResponseMessage |  -  |
+| **200** | [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.11.2/#5.11.2.2). |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -1709,7 +1709,7 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:4840";
             var apiInstance = new DefaultApi(config);
-            var registerNodesRequest = new RegisterNodesRequest(); // RegisterNodesRequest | RegisterNodesRequestMessage (optional) 
+            var registerNodesRequest = new RegisterNodesRequest(); // RegisterNodesRequest | [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.9.5/#5.9.5.2). (optional) 
 
             try
             {
@@ -1750,7 +1750,7 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **registerNodesRequest** | [**RegisterNodesRequest**](RegisterNodesRequest.md) | RegisterNodesRequestMessage | [optional]  |
+| **registerNodesRequest** | [**RegisterNodesRequest**](RegisterNodesRequest.md) | [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.9.5/#5.9.5.2). | [optional]  |
 
 ### Return type
 
@@ -1769,7 +1769,7 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | RegisterNodesResponseMessage |  -  |
+| **200** | [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.9.5/#5.9.5.2). |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -1796,7 +1796,7 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:4840";
             var apiInstance = new DefaultApi(config);
-            var republishRequest = new RepublishRequest(); // RepublishRequest | RepublishRequestMessage (optional) 
+            var republishRequest = new RepublishRequest(); // RepublishRequest | [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.6/#5.14.6.2). (optional) 
 
             try
             {
@@ -1837,7 +1837,7 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **republishRequest** | [**RepublishRequest**](RepublishRequest.md) | RepublishRequestMessage | [optional]  |
+| **republishRequest** | [**RepublishRequest**](RepublishRequest.md) | [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.6/#5.14.6.2). | [optional]  |
 
 ### Return type
 
@@ -1856,7 +1856,7 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | RepublishResponseMessage |  -  |
+| **200** | [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.6/#5.14.6.2). |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -1883,7 +1883,7 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:4840";
             var apiInstance = new DefaultApi(config);
-            var setMonitoringModeRequest = new SetMonitoringModeRequest(); // SetMonitoringModeRequest | SetMonitoringModeRequestMessage (optional) 
+            var setMonitoringModeRequest = new SetMonitoringModeRequest(); // SetMonitoringModeRequest | [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.13.4/#5.13.4.2). (optional) 
 
             try
             {
@@ -1924,7 +1924,7 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **setMonitoringModeRequest** | [**SetMonitoringModeRequest**](SetMonitoringModeRequest.md) | SetMonitoringModeRequestMessage | [optional]  |
+| **setMonitoringModeRequest** | [**SetMonitoringModeRequest**](SetMonitoringModeRequest.md) | [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.13.4/#5.13.4.2). | [optional]  |
 
 ### Return type
 
@@ -1943,7 +1943,7 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | SetMonitoringModeResponseMessage |  -  |
+| **200** | [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.13.4/#5.13.4.2). |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -1970,7 +1970,7 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:4840";
             var apiInstance = new DefaultApi(config);
-            var setPublishingModeRequest = new SetPublishingModeRequest(); // SetPublishingModeRequest | SetPublishingModeRequestMessage (optional) 
+            var setPublishingModeRequest = new SetPublishingModeRequest(); // SetPublishingModeRequest | [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.4/#5.14.4.2). (optional) 
 
             try
             {
@@ -2011,7 +2011,7 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **setPublishingModeRequest** | [**SetPublishingModeRequest**](SetPublishingModeRequest.md) | SetPublishingModeRequestMessage | [optional]  |
+| **setPublishingModeRequest** | [**SetPublishingModeRequest**](SetPublishingModeRequest.md) | [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.4/#5.14.4.2). | [optional]  |
 
 ### Return type
 
@@ -2030,7 +2030,7 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | SetPublishingModeResponseMessage |  -  |
+| **200** | [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.4/#5.14.4.2). |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -2057,7 +2057,7 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:4840";
             var apiInstance = new DefaultApi(config);
-            var setTriggeringRequest = new SetTriggeringRequest(); // SetTriggeringRequest | SetTriggeringRequestMessage (optional) 
+            var setTriggeringRequest = new SetTriggeringRequest(); // SetTriggeringRequest | [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.13.5/#5.13.5.2). (optional) 
 
             try
             {
@@ -2098,7 +2098,7 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **setTriggeringRequest** | [**SetTriggeringRequest**](SetTriggeringRequest.md) | SetTriggeringRequestMessage | [optional]  |
+| **setTriggeringRequest** | [**SetTriggeringRequest**](SetTriggeringRequest.md) | [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.13.5/#5.13.5.2). | [optional]  |
 
 ### Return type
 
@@ -2117,7 +2117,7 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | SetTriggeringResponseMessage |  -  |
+| **200** | [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.13.5/#5.13.5.2). |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -2144,7 +2144,7 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:4840";
             var apiInstance = new DefaultApi(config);
-            var transferSubscriptionsRequest = new TransferSubscriptionsRequest(); // TransferSubscriptionsRequest | TransferSubscriptionsRequestMessage (optional) 
+            var transferSubscriptionsRequest = new TransferSubscriptionsRequest(); // TransferSubscriptionsRequest | [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.7/#5.14.7.2). (optional) 
 
             try
             {
@@ -2185,7 +2185,7 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **transferSubscriptionsRequest** | [**TransferSubscriptionsRequest**](TransferSubscriptionsRequest.md) | TransferSubscriptionsRequestMessage | [optional]  |
+| **transferSubscriptionsRequest** | [**TransferSubscriptionsRequest**](TransferSubscriptionsRequest.md) | [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.7/#5.14.7.2). | [optional]  |
 
 ### Return type
 
@@ -2204,7 +2204,7 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | TransferSubscriptionsResponseMessage |  -  |
+| **200** | [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.7/#5.14.7.2). |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -2231,7 +2231,7 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:4840";
             var apiInstance = new DefaultApi(config);
-            var translateBrowsePathsToNodeIdsRequest = new TranslateBrowsePathsToNodeIdsRequest(); // TranslateBrowsePathsToNodeIdsRequest | TranslateBrowsePathsToNodeIdsRequestMessage (optional) 
+            var translateBrowsePathsToNodeIdsRequest = new TranslateBrowsePathsToNodeIdsRequest(); // TranslateBrowsePathsToNodeIdsRequest | [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.9.4/#5.9.4.2). (optional) 
 
             try
             {
@@ -2272,7 +2272,7 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **translateBrowsePathsToNodeIdsRequest** | [**TranslateBrowsePathsToNodeIdsRequest**](TranslateBrowsePathsToNodeIdsRequest.md) | TranslateBrowsePathsToNodeIdsRequestMessage | [optional]  |
+| **translateBrowsePathsToNodeIdsRequest** | [**TranslateBrowsePathsToNodeIdsRequest**](TranslateBrowsePathsToNodeIdsRequest.md) | [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.9.4/#5.9.4.2). | [optional]  |
 
 ### Return type
 
@@ -2291,7 +2291,7 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | TranslateBrowsePathsToNodeIdsResponseMessage |  -  |
+| **200** | [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.9.4/#5.9.4.2). |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -2318,7 +2318,7 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:4840";
             var apiInstance = new DefaultApi(config);
-            var unregisterNodesRequest = new UnregisterNodesRequest(); // UnregisterNodesRequest | UnregisterNodesRequestMessage (optional) 
+            var unregisterNodesRequest = new UnregisterNodesRequest(); // UnregisterNodesRequest | [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.9.6/#5.9.6.2). (optional) 
 
             try
             {
@@ -2359,7 +2359,7 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **unregisterNodesRequest** | [**UnregisterNodesRequest**](UnregisterNodesRequest.md) | UnregisterNodesRequestMessage | [optional]  |
+| **unregisterNodesRequest** | [**UnregisterNodesRequest**](UnregisterNodesRequest.md) | [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.9.6/#5.9.6.2). | [optional]  |
 
 ### Return type
 
@@ -2378,7 +2378,7 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | UnregisterNodesResponseMessage |  -  |
+| **200** | [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.9.6/#5.9.6.2). |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -2405,7 +2405,7 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:4840";
             var apiInstance = new DefaultApi(config);
-            var writeRequest = new WriteRequest(); // WriteRequest | WriteRequestMessage (optional) 
+            var writeRequest = new WriteRequest(); // WriteRequest | [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.11.4/#5.11.4.2). (optional) 
 
             try
             {
@@ -2446,7 +2446,7 @@ catch (ApiException e)
 
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
-| **writeRequest** | [**WriteRequest**](WriteRequest.md) | WriteRequestMessage | [optional]  |
+| **writeRequest** | [**WriteRequest**](WriteRequest.md) | [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.11.4/#5.11.4.2). | [optional]  |
 
 ### Return type
 
@@ -2465,7 +2465,7 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | WriteResponseMessage |  -  |
+| **200** | [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.11.4/#5.11.4.2). |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

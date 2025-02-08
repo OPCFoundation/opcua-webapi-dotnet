@@ -27,7 +27,7 @@ using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 namespace Opc.Ua.WebApi.Model
 {
     /// <summary>
-    /// UserTokenPolicy
+    /// [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/7.42).
     /// </summary>
     [DataContract(Name = "UserTokenPolicy")]
     public partial class UserTokenPolicy : IValidatableObject
@@ -36,7 +36,7 @@ namespace Opc.Ua.WebApi.Model
         /// Initializes a new instance of the <see cref="UserTokenPolicy" /> class.
         /// </summary>
         /// <param name="policyId">policyId.</param>
-        /// <param name="tokenType">tokenType.</param>
+        /// <param name="tokenType">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/7.43)..</param>
         /// <param name="issuedTokenType">issuedTokenType.</param>
         /// <param name="issuerEndpointUrl">issuerEndpointUrl.</param>
         /// <param name="securityPolicyUri">securityPolicyUri.</param>
@@ -56,8 +56,9 @@ namespace Opc.Ua.WebApi.Model
         public string PolicyId { get; set; }
 
         /// <summary>
-        /// Gets or Sets TokenType
+        /// [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/7.43).
         /// </summary>
+        /// <value>[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/7.43).</value>
         [DataMember(Name = "TokenType", EmitDefaultValue = false)]
         public int TokenType { get; set; }
 

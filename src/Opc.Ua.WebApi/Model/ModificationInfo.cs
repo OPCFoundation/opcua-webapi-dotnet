@@ -27,7 +27,7 @@ using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 namespace Opc.Ua.WebApi.Model
 {
     /// <summary>
-    /// ModificationInfo
+    /// [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part11/6.6.5).
     /// </summary>
     [DataContract(Name = "ModificationInfo")]
     public partial class ModificationInfo : IValidatableObject
@@ -36,7 +36,7 @@ namespace Opc.Ua.WebApi.Model
         /// Initializes a new instance of the <see cref="ModificationInfo" /> class.
         /// </summary>
         /// <param name="modificationTime">modificationTime (default to &quot;0001-01-01T00:00Z&quot;).</param>
-        /// <param name="updateType">updateType.</param>
+        /// <param name="updateType">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part11/6.7)..</param>
         /// <param name="userName">userName.</param>
         public ModificationInfo(DateTime modificationTime = default(DateTime), int updateType = default(int), string userName = default(string))
         {
@@ -52,8 +52,9 @@ namespace Opc.Ua.WebApi.Model
         public DateTime ModificationTime { get; set; }
 
         /// <summary>
-        /// Gets or Sets UpdateType
+        /// [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part11/6.7).
         /// </summary>
+        /// <value>[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part11/6.7).</value>
         [DataMember(Name = "UpdateType", EmitDefaultValue = false)]
         public int UpdateType { get; set; }
 

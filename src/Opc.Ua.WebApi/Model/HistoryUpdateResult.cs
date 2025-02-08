@@ -27,7 +27,7 @@ using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 namespace Opc.Ua.WebApi.Model
 {
     /// <summary>
-    /// HistoryUpdateResult
+    /// [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.11.5/#5.11.5.2).
     /// </summary>
     [DataContract(Name = "HistoryUpdateResult")]
     public partial class HistoryUpdateResult : IValidatableObject

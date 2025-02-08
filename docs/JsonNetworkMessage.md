@@ -1,4 +1,5 @@
 # Opc.Ua.WebApi.Model.JsonNetworkMessage
+[Link to specification]().
 
 ## Properties
 

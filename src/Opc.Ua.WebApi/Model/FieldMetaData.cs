@@ -27,7 +27,7 @@ using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 namespace Opc.Ua.WebApi.Model
 {
     /// <summary>
-    /// FieldMetaData
+    /// [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part14/6.2.3/#6.2.3.2.4).
     /// </summary>
     [DataContract(Name = "FieldMetaData")]
     public partial class FieldMetaData : IValidatableObject

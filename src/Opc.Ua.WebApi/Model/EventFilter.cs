@@ -27,7 +27,7 @@ using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 namespace Opc.Ua.WebApi.Model
 {
     /// <summary>
-    /// EventFilter
+    /// [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/7.22.3).
     /// </summary>
     [DataContract(Name = "EventFilter")]
     public partial class EventFilter : IValidatableObject

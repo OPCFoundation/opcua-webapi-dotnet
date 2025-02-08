@@ -27,7 +27,7 @@ using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 namespace Opc.Ua.WebApi.Model
 {
     /// <summary>
-    /// JsonStatusMessage
+    /// [Link to specification]().
     /// </summary>
     [DataContract(Name = "JsonStatusMessage")]
     public partial class JsonStatusMessage : IValidatableObject
@@ -40,7 +40,7 @@ namespace Opc.Ua.WebApi.Model
         /// <param name="publisherId">publisherId.</param>
         /// <param name="timestamp">timestamp (default to &quot;0001-01-01T00:00Z&quot;).</param>
         /// <param name="isCyclic">isCyclic (default to false).</param>
-        /// <param name="status">status.</param>
+        /// <param name="status">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part14/6.2.1)..</param>
         /// <param name="nextReportTime">nextReportTime (default to &quot;0001-01-01T00:00Z&quot;).</param>
         public JsonStatusMessage(string messageId = default(string), string messageType = default(string), string publisherId = default(string), DateTime timestamp = default(DateTime), bool isCyclic = false, int status = default(int), DateTime nextReportTime = default(DateTime))
         {
@@ -84,8 +84,9 @@ namespace Opc.Ua.WebApi.Model
         public bool IsCyclic { get; set; }
 
         /// <summary>
-        /// Gets or Sets Status
+        /// [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part14/6.2.1).
         /// </summary>
+        /// <value>[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part14/6.2.1).</value>
         [DataMember(Name = "Status", EmitDefaultValue = false)]
         public int Status { get; set; }
 

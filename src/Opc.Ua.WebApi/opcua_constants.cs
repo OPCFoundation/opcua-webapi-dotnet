@@ -12041,10 +12041,6 @@ namespace Opc.Ua.WebApi
         /// <remarks />
         public const string AlarmGroupType_AlarmConditionInstance_Placeholder_ConditionClassName = "i=16417";
         /// <remarks />
-        public const string AlarmGroupType_AlarmConditionInstance_Placeholder_ConditionSubClassId = "i=16418";
-        /// <remarks />
-        public const string AlarmGroupType_AlarmConditionInstance_Placeholder_ConditionSubClassName = "i=16419";
-        /// <remarks />
         public const string AlarmGroupType_AlarmConditionInstance_Placeholder_ConditionName = "i=16420";
         /// <remarks />
         public const string AlarmGroupType_AlarmConditionInstance_Placeholder_BranchId = "i=16421";
@@ -12745,10 +12741,6 @@ namespace Opc.Ua.WebApi
         /// <remarks />
         public const string CertificateGroupType_CertificateExpired_ConditionClassName = "i=19461";
         /// <remarks />
-        public const string CertificateGroupType_CertificateExpired_ConditionSubClassId = "i=19462";
-        /// <remarks />
-        public const string CertificateGroupType_CertificateExpired_ConditionSubClassName = "i=19463";
-        /// <remarks />
         public const string CertificateGroupType_CertificateExpired_ConditionName = "i=19464";
         /// <remarks />
         public const string CertificateGroupType_CertificateExpired_BranchId = "i=19465";
@@ -12856,10 +12848,6 @@ namespace Opc.Ua.WebApi
         public const string CertificateGroupType_TrustListOutOfDate_ConditionClassId = "i=20153";
         /// <remarks />
         public const string CertificateGroupType_TrustListOutOfDate_ConditionClassName = "i=20154";
-        /// <remarks />
-        public const string CertificateGroupType_TrustListOutOfDate_ConditionSubClassId = "i=20155";
-        /// <remarks />
-        public const string CertificateGroupType_TrustListOutOfDate_ConditionSubClassName = "i=20156";
         /// <remarks />
         public const string CertificateGroupType_TrustListOutOfDate_ConditionName = "i=20157";
         /// <remarks />
@@ -13013,10 +13001,6 @@ namespace Opc.Ua.WebApi
         /// <remarks />
         public const string CertificateGroupFolderType_DefaultApplicationGroup_CertificateExpired_ConditionClassName = "i=20302";
         /// <remarks />
-        public const string CertificateGroupFolderType_DefaultApplicationGroup_CertificateExpired_ConditionSubClassId = "i=20303";
-        /// <remarks />
-        public const string CertificateGroupFolderType_DefaultApplicationGroup_CertificateExpired_ConditionSubClassName = "i=20304";
-        /// <remarks />
         public const string CertificateGroupFolderType_DefaultApplicationGroup_CertificateExpired_ConditionName = "i=20305";
         /// <remarks />
         public const string CertificateGroupFolderType_DefaultApplicationGroup_CertificateExpired_BranchId = "i=20306";
@@ -13124,10 +13108,6 @@ namespace Opc.Ua.WebApi
         public const string CertificateGroupFolderType_DefaultApplicationGroup_TrustListOutOfDate_ConditionClassId = "i=20451";
         /// <remarks />
         public const string CertificateGroupFolderType_DefaultApplicationGroup_TrustListOutOfDate_ConditionClassName = "i=20452";
-        /// <remarks />
-        public const string CertificateGroupFolderType_DefaultApplicationGroup_TrustListOutOfDate_ConditionSubClassId = "i=20453";
-        /// <remarks />
-        public const string CertificateGroupFolderType_DefaultApplicationGroup_TrustListOutOfDate_ConditionSubClassName = "i=20454";
         /// <remarks />
         public const string CertificateGroupFolderType_DefaultApplicationGroup_TrustListOutOfDate_ConditionName = "i=20455";
         /// <remarks />
@@ -13281,10 +13261,6 @@ namespace Opc.Ua.WebApi
         /// <remarks />
         public const string CertificateGroupFolderType_DefaultHttpsGroup_CertificateExpired_ConditionClassName = "i=20600";
         /// <remarks />
-        public const string CertificateGroupFolderType_DefaultHttpsGroup_CertificateExpired_ConditionSubClassId = "i=20601";
-        /// <remarks />
-        public const string CertificateGroupFolderType_DefaultHttpsGroup_CertificateExpired_ConditionSubClassName = "i=20602";
-        /// <remarks />
         public const string CertificateGroupFolderType_DefaultHttpsGroup_CertificateExpired_ConditionName = "i=20603";
         /// <remarks />
         public const string CertificateGroupFolderType_DefaultHttpsGroup_CertificateExpired_BranchId = "i=20604";
@@ -13392,10 +13368,6 @@ namespace Opc.Ua.WebApi
         public const string CertificateGroupFolderType_DefaultHttpsGroup_TrustListOutOfDate_ConditionClassId = "i=20747";
         /// <remarks />
         public const string CertificateGroupFolderType_DefaultHttpsGroup_TrustListOutOfDate_ConditionClassName = "i=20748";
-        /// <remarks />
-        public const string CertificateGroupFolderType_DefaultHttpsGroup_TrustListOutOfDate_ConditionSubClassId = "i=20749";
-        /// <remarks />
-        public const string CertificateGroupFolderType_DefaultHttpsGroup_TrustListOutOfDate_ConditionSubClassName = "i=20750";
         /// <remarks />
         public const string CertificateGroupFolderType_DefaultHttpsGroup_TrustListOutOfDate_ConditionName = "i=20751";
         /// <remarks />
@@ -13549,10 +13521,6 @@ namespace Opc.Ua.WebApi
         /// <remarks />
         public const string CertificateGroupFolderType_DefaultUserTokenGroup_CertificateExpired_ConditionClassName = "i=20896";
         /// <remarks />
-        public const string CertificateGroupFolderType_DefaultUserTokenGroup_CertificateExpired_ConditionSubClassId = "i=20897";
-        /// <remarks />
-        public const string CertificateGroupFolderType_DefaultUserTokenGroup_CertificateExpired_ConditionSubClassName = "i=20898";
-        /// <remarks />
         public const string CertificateGroupFolderType_DefaultUserTokenGroup_CertificateExpired_ConditionName = "i=20899";
         /// <remarks />
         public const string CertificateGroupFolderType_DefaultUserTokenGroup_CertificateExpired_BranchId = "i=20900";
@@ -13660,10 +13628,6 @@ namespace Opc.Ua.WebApi
         public const string CertificateGroupFolderType_DefaultUserTokenGroup_TrustListOutOfDate_ConditionClassId = "i=21246";
         /// <remarks />
         public const string CertificateGroupFolderType_DefaultUserTokenGroup_TrustListOutOfDate_ConditionClassName = "i=21247";
-        /// <remarks />
-        public const string CertificateGroupFolderType_DefaultUserTokenGroup_TrustListOutOfDate_ConditionSubClassId = "i=21248";
-        /// <remarks />
-        public const string CertificateGroupFolderType_DefaultUserTokenGroup_TrustListOutOfDate_ConditionSubClassName = "i=21249";
         /// <remarks />
         public const string CertificateGroupFolderType_DefaultUserTokenGroup_TrustListOutOfDate_ConditionName = "i=21250";
         /// <remarks />
@@ -13817,10 +13781,6 @@ namespace Opc.Ua.WebApi
         /// <remarks />
         public const string CertificateGroupFolderType_AdditionalGroup_Placeholder_CertificateExpired_ConditionClassName = "i=21395";
         /// <remarks />
-        public const string CertificateGroupFolderType_AdditionalGroup_Placeholder_CertificateExpired_ConditionSubClassId = "i=21396";
-        /// <remarks />
-        public const string CertificateGroupFolderType_AdditionalGroup_Placeholder_CertificateExpired_ConditionSubClassName = "i=21397";
-        /// <remarks />
         public const string CertificateGroupFolderType_AdditionalGroup_Placeholder_CertificateExpired_ConditionName = "i=21398";
         /// <remarks />
         public const string CertificateGroupFolderType_AdditionalGroup_Placeholder_CertificateExpired_BranchId = "i=21399";
@@ -13928,10 +13888,6 @@ namespace Opc.Ua.WebApi
         public const string CertificateGroupFolderType_AdditionalGroup_Placeholder_TrustListOutOfDate_ConditionClassId = "i=21542";
         /// <remarks />
         public const string CertificateGroupFolderType_AdditionalGroup_Placeholder_TrustListOutOfDate_ConditionClassName = "i=21543";
-        /// <remarks />
-        public const string CertificateGroupFolderType_AdditionalGroup_Placeholder_TrustListOutOfDate_ConditionSubClassId = "i=21544";
-        /// <remarks />
-        public const string CertificateGroupFolderType_AdditionalGroup_Placeholder_TrustListOutOfDate_ConditionSubClassName = "i=21545";
         /// <remarks />
         public const string CertificateGroupFolderType_AdditionalGroup_Placeholder_TrustListOutOfDate_ConditionName = "i=21546";
         /// <remarks />
@@ -14099,10 +14055,6 @@ namespace Opc.Ua.WebApi
         /// <remarks />
         public const string ApplicationConfigurationFolderType_ApplicationName_Placeholder_CertificateGroups_DefaultApplicationGroup_CertificateExpired_ConditionClassName = "i=16767";
         /// <remarks />
-        public const string ApplicationConfigurationFolderType_ApplicationName_Placeholder_CertificateGroups_DefaultApplicationGroup_CertificateExpired_ConditionSubClassId = "i=16768";
-        /// <remarks />
-        public const string ApplicationConfigurationFolderType_ApplicationName_Placeholder_CertificateGroups_DefaultApplicationGroup_CertificateExpired_ConditionSubClassName = "i=16769";
-        /// <remarks />
         public const string ApplicationConfigurationFolderType_ApplicationName_Placeholder_CertificateGroups_DefaultApplicationGroup_CertificateExpired_ConditionName = "i=16770";
         /// <remarks />
         public const string ApplicationConfigurationFolderType_ApplicationName_Placeholder_CertificateGroups_DefaultApplicationGroup_CertificateExpired_BranchId = "i=16771";
@@ -14210,10 +14162,6 @@ namespace Opc.Ua.WebApi
         public const string ApplicationConfigurationFolderType_ApplicationName_Placeholder_CertificateGroups_DefaultApplicationGroup_TrustListOutOfDate_ConditionClassId = "i=16949";
         /// <remarks />
         public const string ApplicationConfigurationFolderType_ApplicationName_Placeholder_CertificateGroups_DefaultApplicationGroup_TrustListOutOfDate_ConditionClassName = "i=16950";
-        /// <remarks />
-        public const string ApplicationConfigurationFolderType_ApplicationName_Placeholder_CertificateGroups_DefaultApplicationGroup_TrustListOutOfDate_ConditionSubClassId = "i=16951";
-        /// <remarks />
-        public const string ApplicationConfigurationFolderType_ApplicationName_Placeholder_CertificateGroups_DefaultApplicationGroup_TrustListOutOfDate_ConditionSubClassName = "i=16952";
         /// <remarks />
         public const string ApplicationConfigurationFolderType_ApplicationName_Placeholder_CertificateGroups_DefaultApplicationGroup_TrustListOutOfDate_ConditionName = "i=16953";
         /// <remarks />
@@ -14367,10 +14315,6 @@ namespace Opc.Ua.WebApi
         /// <remarks />
         public const string ApplicationConfigurationFolderType_ApplicationName_Placeholder_CertificateGroups_DefaultHttpsGroup_CertificateExpired_ConditionClassName = "i=17177";
         /// <remarks />
-        public const string ApplicationConfigurationFolderType_ApplicationName_Placeholder_CertificateGroups_DefaultHttpsGroup_CertificateExpired_ConditionSubClassId = "i=17178";
-        /// <remarks />
-        public const string ApplicationConfigurationFolderType_ApplicationName_Placeholder_CertificateGroups_DefaultHttpsGroup_CertificateExpired_ConditionSubClassName = "i=17179";
-        /// <remarks />
         public const string ApplicationConfigurationFolderType_ApplicationName_Placeholder_CertificateGroups_DefaultHttpsGroup_CertificateExpired_ConditionName = "i=17180";
         /// <remarks />
         public const string ApplicationConfigurationFolderType_ApplicationName_Placeholder_CertificateGroups_DefaultHttpsGroup_CertificateExpired_BranchId = "i=17181";
@@ -14478,10 +14422,6 @@ namespace Opc.Ua.WebApi
         public const string ApplicationConfigurationFolderType_ApplicationName_Placeholder_CertificateGroups_DefaultHttpsGroup_TrustListOutOfDate_ConditionClassId = "i=17649";
         /// <remarks />
         public const string ApplicationConfigurationFolderType_ApplicationName_Placeholder_CertificateGroups_DefaultHttpsGroup_TrustListOutOfDate_ConditionClassName = "i=17650";
-        /// <remarks />
-        public const string ApplicationConfigurationFolderType_ApplicationName_Placeholder_CertificateGroups_DefaultHttpsGroup_TrustListOutOfDate_ConditionSubClassId = "i=17651";
-        /// <remarks />
-        public const string ApplicationConfigurationFolderType_ApplicationName_Placeholder_CertificateGroups_DefaultHttpsGroup_TrustListOutOfDate_ConditionSubClassName = "i=17652";
         /// <remarks />
         public const string ApplicationConfigurationFolderType_ApplicationName_Placeholder_CertificateGroups_DefaultHttpsGroup_TrustListOutOfDate_ConditionName = "i=17653";
         /// <remarks />
@@ -14635,10 +14575,6 @@ namespace Opc.Ua.WebApi
         /// <remarks />
         public const string ApplicationConfigurationFolderType_ApplicationName_Placeholder_CertificateGroups_DefaultUserTokenGroup_CertificateExpired_ConditionClassName = "i=18074";
         /// <remarks />
-        public const string ApplicationConfigurationFolderType_ApplicationName_Placeholder_CertificateGroups_DefaultUserTokenGroup_CertificateExpired_ConditionSubClassId = "i=18075";
-        /// <remarks />
-        public const string ApplicationConfigurationFolderType_ApplicationName_Placeholder_CertificateGroups_DefaultUserTokenGroup_CertificateExpired_ConditionSubClassName = "i=18156";
-        /// <remarks />
         public const string ApplicationConfigurationFolderType_ApplicationName_Placeholder_CertificateGroups_DefaultUserTokenGroup_CertificateExpired_ConditionName = "i=18157";
         /// <remarks />
         public const string ApplicationConfigurationFolderType_ApplicationName_Placeholder_CertificateGroups_DefaultUserTokenGroup_CertificateExpired_BranchId = "i=18159";
@@ -14746,10 +14682,6 @@ namespace Opc.Ua.WebApi
         public const string ApplicationConfigurationFolderType_ApplicationName_Placeholder_CertificateGroups_DefaultUserTokenGroup_TrustListOutOfDate_ConditionClassId = "i=18369";
         /// <remarks />
         public const string ApplicationConfigurationFolderType_ApplicationName_Placeholder_CertificateGroups_DefaultUserTokenGroup_TrustListOutOfDate_ConditionClassName = "i=18370";
-        /// <remarks />
-        public const string ApplicationConfigurationFolderType_ApplicationName_Placeholder_CertificateGroups_DefaultUserTokenGroup_TrustListOutOfDate_ConditionSubClassId = "i=18371";
-        /// <remarks />
-        public const string ApplicationConfigurationFolderType_ApplicationName_Placeholder_CertificateGroups_DefaultUserTokenGroup_TrustListOutOfDate_ConditionSubClassName = "i=18372";
         /// <remarks />
         public const string ApplicationConfigurationFolderType_ApplicationName_Placeholder_CertificateGroups_DefaultUserTokenGroup_TrustListOutOfDate_ConditionName = "i=18373";
         /// <remarks />
@@ -14945,10 +14877,6 @@ namespace Opc.Ua.WebApi
         /// <remarks />
         public const string ServerConfigurationType_CertificateGroups_DefaultApplicationGroup_CertificateExpired_ConditionClassName = "i=21691";
         /// <remarks />
-        public const string ServerConfigurationType_CertificateGroups_DefaultApplicationGroup_CertificateExpired_ConditionSubClassId = "i=21692";
-        /// <remarks />
-        public const string ServerConfigurationType_CertificateGroups_DefaultApplicationGroup_CertificateExpired_ConditionSubClassName = "i=21693";
-        /// <remarks />
         public const string ServerConfigurationType_CertificateGroups_DefaultApplicationGroup_CertificateExpired_ConditionName = "i=21694";
         /// <remarks />
         public const string ServerConfigurationType_CertificateGroups_DefaultApplicationGroup_CertificateExpired_BranchId = "i=21695";
@@ -15056,10 +14984,6 @@ namespace Opc.Ua.WebApi
         public const string ServerConfigurationType_CertificateGroups_DefaultApplicationGroup_TrustListOutOfDate_ConditionClassId = "i=21838";
         /// <remarks />
         public const string ServerConfigurationType_CertificateGroups_DefaultApplicationGroup_TrustListOutOfDate_ConditionClassName = "i=21839";
-        /// <remarks />
-        public const string ServerConfigurationType_CertificateGroups_DefaultApplicationGroup_TrustListOutOfDate_ConditionSubClassId = "i=21840";
-        /// <remarks />
-        public const string ServerConfigurationType_CertificateGroups_DefaultApplicationGroup_TrustListOutOfDate_ConditionSubClassName = "i=21841";
         /// <remarks />
         public const string ServerConfigurationType_CertificateGroups_DefaultApplicationGroup_TrustListOutOfDate_ConditionName = "i=21842";
         /// <remarks />
@@ -15213,10 +15137,6 @@ namespace Opc.Ua.WebApi
         /// <remarks />
         public const string ServerConfigurationType_CertificateGroups_DefaultHttpsGroup_CertificateExpired_ConditionClassName = "i=21987";
         /// <remarks />
-        public const string ServerConfigurationType_CertificateGroups_DefaultHttpsGroup_CertificateExpired_ConditionSubClassId = "i=21988";
-        /// <remarks />
-        public const string ServerConfigurationType_CertificateGroups_DefaultHttpsGroup_CertificateExpired_ConditionSubClassName = "i=21989";
-        /// <remarks />
         public const string ServerConfigurationType_CertificateGroups_DefaultHttpsGroup_CertificateExpired_ConditionName = "i=21990";
         /// <remarks />
         public const string ServerConfigurationType_CertificateGroups_DefaultHttpsGroup_CertificateExpired_BranchId = "i=21991";
@@ -15324,10 +15244,6 @@ namespace Opc.Ua.WebApi
         public const string ServerConfigurationType_CertificateGroups_DefaultHttpsGroup_TrustListOutOfDate_ConditionClassId = "i=22134";
         /// <remarks />
         public const string ServerConfigurationType_CertificateGroups_DefaultHttpsGroup_TrustListOutOfDate_ConditionClassName = "i=22135";
-        /// <remarks />
-        public const string ServerConfigurationType_CertificateGroups_DefaultHttpsGroup_TrustListOutOfDate_ConditionSubClassId = "i=22136";
-        /// <remarks />
-        public const string ServerConfigurationType_CertificateGroups_DefaultHttpsGroup_TrustListOutOfDate_ConditionSubClassName = "i=22137";
         /// <remarks />
         public const string ServerConfigurationType_CertificateGroups_DefaultHttpsGroup_TrustListOutOfDate_ConditionName = "i=22138";
         /// <remarks />
@@ -15481,10 +15397,6 @@ namespace Opc.Ua.WebApi
         /// <remarks />
         public const string ServerConfigurationType_CertificateGroups_DefaultUserTokenGroup_CertificateExpired_ConditionClassName = "i=22283";
         /// <remarks />
-        public const string ServerConfigurationType_CertificateGroups_DefaultUserTokenGroup_CertificateExpired_ConditionSubClassId = "i=22284";
-        /// <remarks />
-        public const string ServerConfigurationType_CertificateGroups_DefaultUserTokenGroup_CertificateExpired_ConditionSubClassName = "i=22285";
-        /// <remarks />
         public const string ServerConfigurationType_CertificateGroups_DefaultUserTokenGroup_CertificateExpired_ConditionName = "i=22286";
         /// <remarks />
         public const string ServerConfigurationType_CertificateGroups_DefaultUserTokenGroup_CertificateExpired_BranchId = "i=22287";
@@ -15592,10 +15504,6 @@ namespace Opc.Ua.WebApi
         public const string ServerConfigurationType_CertificateGroups_DefaultUserTokenGroup_TrustListOutOfDate_ConditionClassId = "i=22430";
         /// <remarks />
         public const string ServerConfigurationType_CertificateGroups_DefaultUserTokenGroup_TrustListOutOfDate_ConditionClassName = "i=22431";
-        /// <remarks />
-        public const string ServerConfigurationType_CertificateGroups_DefaultUserTokenGroup_TrustListOutOfDate_ConditionSubClassId = "i=22432";
-        /// <remarks />
-        public const string ServerConfigurationType_CertificateGroups_DefaultUserTokenGroup_TrustListOutOfDate_ConditionSubClassName = "i=22433";
         /// <remarks />
         public const string ServerConfigurationType_CertificateGroups_DefaultUserTokenGroup_TrustListOutOfDate_ConditionName = "i=22434";
         /// <remarks />
@@ -15801,10 +15709,6 @@ namespace Opc.Ua.WebApi
         /// <remarks />
         public const string ServerConfiguration_CertificateGroups_DefaultApplicationGroup_CertificateExpired_ConditionClassName = "i=22579";
         /// <remarks />
-        public const string ServerConfiguration_CertificateGroups_DefaultApplicationGroup_CertificateExpired_ConditionSubClassId = "i=22580";
-        /// <remarks />
-        public const string ServerConfiguration_CertificateGroups_DefaultApplicationGroup_CertificateExpired_ConditionSubClassName = "i=22581";
-        /// <remarks />
         public const string ServerConfiguration_CertificateGroups_DefaultApplicationGroup_CertificateExpired_ConditionName = "i=22582";
         /// <remarks />
         public const string ServerConfiguration_CertificateGroups_DefaultApplicationGroup_CertificateExpired_BranchId = "i=22583";
@@ -15912,10 +15816,6 @@ namespace Opc.Ua.WebApi
         public const string ServerConfiguration_CertificateGroups_DefaultApplicationGroup_TrustListOutOfDate_ConditionClassId = "i=22726";
         /// <remarks />
         public const string ServerConfiguration_CertificateGroups_DefaultApplicationGroup_TrustListOutOfDate_ConditionClassName = "i=22727";
-        /// <remarks />
-        public const string ServerConfiguration_CertificateGroups_DefaultApplicationGroup_TrustListOutOfDate_ConditionSubClassId = "i=22728";
-        /// <remarks />
-        public const string ServerConfiguration_CertificateGroups_DefaultApplicationGroup_TrustListOutOfDate_ConditionSubClassName = "i=22729";
         /// <remarks />
         public const string ServerConfiguration_CertificateGroups_DefaultApplicationGroup_TrustListOutOfDate_ConditionName = "i=22730";
         /// <remarks />
@@ -16069,10 +15969,6 @@ namespace Opc.Ua.WebApi
         /// <remarks />
         public const string ServerConfiguration_CertificateGroups_DefaultHttpsGroup_CertificateExpired_ConditionClassName = "i=22875";
         /// <remarks />
-        public const string ServerConfiguration_CertificateGroups_DefaultHttpsGroup_CertificateExpired_ConditionSubClassId = "i=22876";
-        /// <remarks />
-        public const string ServerConfiguration_CertificateGroups_DefaultHttpsGroup_CertificateExpired_ConditionSubClassName = "i=22877";
-        /// <remarks />
         public const string ServerConfiguration_CertificateGroups_DefaultHttpsGroup_CertificateExpired_ConditionName = "i=22878";
         /// <remarks />
         public const string ServerConfiguration_CertificateGroups_DefaultHttpsGroup_CertificateExpired_BranchId = "i=22879";
@@ -16180,10 +16076,6 @@ namespace Opc.Ua.WebApi
         public const string ServerConfiguration_CertificateGroups_DefaultHttpsGroup_TrustListOutOfDate_ConditionClassId = "i=23022";
         /// <remarks />
         public const string ServerConfiguration_CertificateGroups_DefaultHttpsGroup_TrustListOutOfDate_ConditionClassName = "i=23023";
-        /// <remarks />
-        public const string ServerConfiguration_CertificateGroups_DefaultHttpsGroup_TrustListOutOfDate_ConditionSubClassId = "i=23024";
-        /// <remarks />
-        public const string ServerConfiguration_CertificateGroups_DefaultHttpsGroup_TrustListOutOfDate_ConditionSubClassName = "i=23025";
         /// <remarks />
         public const string ServerConfiguration_CertificateGroups_DefaultHttpsGroup_TrustListOutOfDate_ConditionName = "i=23026";
         /// <remarks />
@@ -16337,10 +16229,6 @@ namespace Opc.Ua.WebApi
         /// <remarks />
         public const string ServerConfiguration_CertificateGroups_DefaultUserTokenGroup_CertificateExpired_ConditionClassName = "i=23171";
         /// <remarks />
-        public const string ServerConfiguration_CertificateGroups_DefaultUserTokenGroup_CertificateExpired_ConditionSubClassId = "i=23172";
-        /// <remarks />
-        public const string ServerConfiguration_CertificateGroups_DefaultUserTokenGroup_CertificateExpired_ConditionSubClassName = "i=23173";
-        /// <remarks />
         public const string ServerConfiguration_CertificateGroups_DefaultUserTokenGroup_CertificateExpired_ConditionName = "i=23174";
         /// <remarks />
         public const string ServerConfiguration_CertificateGroups_DefaultUserTokenGroup_CertificateExpired_BranchId = "i=23175";
@@ -16448,10 +16336,6 @@ namespace Opc.Ua.WebApi
         public const string ServerConfiguration_CertificateGroups_DefaultUserTokenGroup_TrustListOutOfDate_ConditionClassId = "i=23318";
         /// <remarks />
         public const string ServerConfiguration_CertificateGroups_DefaultUserTokenGroup_TrustListOutOfDate_ConditionClassName = "i=23319";
-        /// <remarks />
-        public const string ServerConfiguration_CertificateGroups_DefaultUserTokenGroup_TrustListOutOfDate_ConditionSubClassId = "i=23320";
-        /// <remarks />
-        public const string ServerConfiguration_CertificateGroups_DefaultUserTokenGroup_TrustListOutOfDate_ConditionSubClassName = "i=23321";
         /// <remarks />
         public const string ServerConfiguration_CertificateGroups_DefaultUserTokenGroup_TrustListOutOfDate_ConditionName = "i=23322";
         /// <remarks />
@@ -19341,10 +19225,6 @@ namespace Opc.Ua.WebApi
         /// <remarks />
         public const string ProvisionableDeviceType_ApplicationName_Placeholder_CertificateGroups_DefaultApplicationGroup_CertificateExpired_ConditionClassName = "i=26932";
         /// <remarks />
-        public const string ProvisionableDeviceType_ApplicationName_Placeholder_CertificateGroups_DefaultApplicationGroup_CertificateExpired_ConditionSubClassId = "i=26933";
-        /// <remarks />
-        public const string ProvisionableDeviceType_ApplicationName_Placeholder_CertificateGroups_DefaultApplicationGroup_CertificateExpired_ConditionSubClassName = "i=26934";
-        /// <remarks />
         public const string ProvisionableDeviceType_ApplicationName_Placeholder_CertificateGroups_DefaultApplicationGroup_CertificateExpired_ConditionName = "i=26935";
         /// <remarks />
         public const string ProvisionableDeviceType_ApplicationName_Placeholder_CertificateGroups_DefaultApplicationGroup_CertificateExpired_BranchId = "i=26936";
@@ -19452,10 +19332,6 @@ namespace Opc.Ua.WebApi
         public const string ProvisionableDeviceType_ApplicationName_Placeholder_CertificateGroups_DefaultApplicationGroup_TrustListOutOfDate_ConditionClassId = "i=27097";
         /// <remarks />
         public const string ProvisionableDeviceType_ApplicationName_Placeholder_CertificateGroups_DefaultApplicationGroup_TrustListOutOfDate_ConditionClassName = "i=27098";
-        /// <remarks />
-        public const string ProvisionableDeviceType_ApplicationName_Placeholder_CertificateGroups_DefaultApplicationGroup_TrustListOutOfDate_ConditionSubClassId = "i=27099";
-        /// <remarks />
-        public const string ProvisionableDeviceType_ApplicationName_Placeholder_CertificateGroups_DefaultApplicationGroup_TrustListOutOfDate_ConditionSubClassName = "i=27100";
         /// <remarks />
         public const string ProvisionableDeviceType_ApplicationName_Placeholder_CertificateGroups_DefaultApplicationGroup_TrustListOutOfDate_ConditionName = "i=27101";
         /// <remarks />
@@ -19609,10 +19485,6 @@ namespace Opc.Ua.WebApi
         /// <remarks />
         public const string ProvisionableDeviceType_ApplicationName_Placeholder_CertificateGroups_DefaultHttpsGroup_CertificateExpired_ConditionClassName = "i=27304";
         /// <remarks />
-        public const string ProvisionableDeviceType_ApplicationName_Placeholder_CertificateGroups_DefaultHttpsGroup_CertificateExpired_ConditionSubClassId = "i=27305";
-        /// <remarks />
-        public const string ProvisionableDeviceType_ApplicationName_Placeholder_CertificateGroups_DefaultHttpsGroup_CertificateExpired_ConditionSubClassName = "i=27306";
-        /// <remarks />
         public const string ProvisionableDeviceType_ApplicationName_Placeholder_CertificateGroups_DefaultHttpsGroup_CertificateExpired_ConditionName = "i=27307";
         /// <remarks />
         public const string ProvisionableDeviceType_ApplicationName_Placeholder_CertificateGroups_DefaultHttpsGroup_CertificateExpired_BranchId = "i=27308";
@@ -19720,10 +19592,6 @@ namespace Opc.Ua.WebApi
         public const string ProvisionableDeviceType_ApplicationName_Placeholder_CertificateGroups_DefaultHttpsGroup_TrustListOutOfDate_ConditionClassId = "i=27469";
         /// <remarks />
         public const string ProvisionableDeviceType_ApplicationName_Placeholder_CertificateGroups_DefaultHttpsGroup_TrustListOutOfDate_ConditionClassName = "i=27470";
-        /// <remarks />
-        public const string ProvisionableDeviceType_ApplicationName_Placeholder_CertificateGroups_DefaultHttpsGroup_TrustListOutOfDate_ConditionSubClassId = "i=27471";
-        /// <remarks />
-        public const string ProvisionableDeviceType_ApplicationName_Placeholder_CertificateGroups_DefaultHttpsGroup_TrustListOutOfDate_ConditionSubClassName = "i=27472";
         /// <remarks />
         public const string ProvisionableDeviceType_ApplicationName_Placeholder_CertificateGroups_DefaultHttpsGroup_TrustListOutOfDate_ConditionName = "i=27473";
         /// <remarks />
@@ -19877,10 +19745,6 @@ namespace Opc.Ua.WebApi
         /// <remarks />
         public const string ProvisionableDeviceType_ApplicationName_Placeholder_CertificateGroups_DefaultUserTokenGroup_CertificateExpired_ConditionClassName = "i=27676";
         /// <remarks />
-        public const string ProvisionableDeviceType_ApplicationName_Placeholder_CertificateGroups_DefaultUserTokenGroup_CertificateExpired_ConditionSubClassId = "i=27677";
-        /// <remarks />
-        public const string ProvisionableDeviceType_ApplicationName_Placeholder_CertificateGroups_DefaultUserTokenGroup_CertificateExpired_ConditionSubClassName = "i=27678";
-        /// <remarks />
         public const string ProvisionableDeviceType_ApplicationName_Placeholder_CertificateGroups_DefaultUserTokenGroup_CertificateExpired_ConditionName = "i=27679";
         /// <remarks />
         public const string ProvisionableDeviceType_ApplicationName_Placeholder_CertificateGroups_DefaultUserTokenGroup_CertificateExpired_BranchId = "i=27680";
@@ -19988,10 +19852,6 @@ namespace Opc.Ua.WebApi
         public const string ProvisionableDeviceType_ApplicationName_Placeholder_CertificateGroups_DefaultUserTokenGroup_TrustListOutOfDate_ConditionClassId = "i=27841";
         /// <remarks />
         public const string ProvisionableDeviceType_ApplicationName_Placeholder_CertificateGroups_DefaultUserTokenGroup_TrustListOutOfDate_ConditionClassName = "i=27842";
-        /// <remarks />
-        public const string ProvisionableDeviceType_ApplicationName_Placeholder_CertificateGroups_DefaultUserTokenGroup_TrustListOutOfDate_ConditionSubClassId = "i=27843";
-        /// <remarks />
-        public const string ProvisionableDeviceType_ApplicationName_Placeholder_CertificateGroups_DefaultUserTokenGroup_TrustListOutOfDate_ConditionSubClassName = "i=27844";
         /// <remarks />
         public const string ProvisionableDeviceType_ApplicationName_Placeholder_CertificateGroups_DefaultUserTokenGroup_TrustListOutOfDate_ConditionName = "i=27845";
         /// <remarks />

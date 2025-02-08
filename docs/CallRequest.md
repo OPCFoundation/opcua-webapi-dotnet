@@ -1,4 +1,5 @@
 # Opc.Ua.WebApi.Model.CallRequest
+[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.12.2/#5.12.2.2).
 
 ## Properties
 

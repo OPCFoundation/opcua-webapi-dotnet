@@ -1,4 +1,5 @@
 # Opc.Ua.WebApi.Model.ReadEventDetails
+[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part11/6.5.2/#6.5.2.1).
 
 ## Properties
 

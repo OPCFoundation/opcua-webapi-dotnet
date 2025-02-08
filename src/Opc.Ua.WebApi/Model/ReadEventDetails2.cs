@@ -27,7 +27,7 @@ using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 namespace Opc.Ua.WebApi.Model
 {
     /// <summary>
-    /// ReadEventDetails2
+    /// [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part11/6.5.2/#6.5.2.3).
     /// </summary>
     [DataContract(Name = "ReadEventDetails2")]
     public partial class ReadEventDetails2 : IValidatableObject

@@ -27,8 +27,9 @@ using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 namespace Opc.Ua.WebApi.Model
 {
     /// <summary>
-    /// Defines DataSetFieldContentMaskBits
+    /// [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part14/6.2.4/#6.2.4.2).
     /// </summary>
+    /// <value>[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part14/6.2.4/#6.2.4.2).</value>
     public enum DataSetFieldContentMaskBits
     {
         /// <summary>

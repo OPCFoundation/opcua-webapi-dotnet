@@ -27,7 +27,7 @@ using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 namespace Opc.Ua.WebApi.Model
 {
     /// <summary>
-    /// DataChangeNotification
+    /// [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/7.25.2).
     /// </summary>
     [DataContract(Name = "DataChangeNotification")]
     public partial class DataChangeNotification : IValidatableObject

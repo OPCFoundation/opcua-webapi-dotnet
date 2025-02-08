@@ -1,4 +1,5 @@
 # Opc.Ua.WebApi.Model.JsonDataSetMessage
+[Link to specification]().
 
 ## Properties
 

@@ -27,7 +27,7 @@ using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 namespace Opc.Ua.WebApi.Model
 {
     /// <summary>
-    /// SignatureData
+    /// [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/7.37).
     /// </summary>
     [DataContract(Name = "SignatureData")]
     public partial class SignatureData : IValidatableObject

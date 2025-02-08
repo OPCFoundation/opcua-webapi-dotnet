@@ -1,4 +1,5 @@
 # Opc.Ua.WebApi.Model.ContentFilter
+[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part5/12.3.4).
 
 ## Properties
 

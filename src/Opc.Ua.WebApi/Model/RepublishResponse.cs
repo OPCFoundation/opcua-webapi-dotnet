@@ -27,7 +27,7 @@ using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 namespace Opc.Ua.WebApi.Model
 {
     /// <summary>
-    /// RepublishResponse
+    /// [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.6/#5.14.6.2).
     /// </summary>
     [DataContract(Name = "RepublishResponse")]
     public partial class RepublishResponse : IValidatableObject

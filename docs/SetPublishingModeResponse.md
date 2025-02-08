@@ -1,4 +1,5 @@
 # Opc.Ua.WebApi.Model.SetPublishingModeResponse
+[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.4/#5.14.4.2).
 
 ## Properties
 

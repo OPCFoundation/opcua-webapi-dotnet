@@ -27,7 +27,7 @@ using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 namespace Opc.Ua.WebApi.Model
 {
     /// <summary>
-    /// SubscriptionAcknowledgement
+    /// [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.5/#5.14.5.2).
     /// </summary>
     [DataContract(Name = "SubscriptionAcknowledgement")]
     public partial class SubscriptionAcknowledgement : IValidatableObject

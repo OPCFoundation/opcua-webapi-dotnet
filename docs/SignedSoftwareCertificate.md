@@ -1,4 +1,5 @@
 # Opc.Ua.WebApi.Model.SignedSoftwareCertificate
+[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part5/12.3.13).
 
 ## Properties
 

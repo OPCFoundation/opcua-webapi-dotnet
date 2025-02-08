@@ -1,4 +1,5 @@
 # Opc.Ua.WebApi.Model.ReadAtTimeDetails
+[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part11/6.5.5/#6.5.5.1).
 
 ## Properties
 

@@ -1,4 +1,5 @@
 # Opc.Ua.WebApi.Model.RegisterNodesRequest
+[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.9.5/#5.9.5.2).
 
 ## Properties
 

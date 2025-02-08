@@ -27,7 +27,7 @@ using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 namespace Opc.Ua.WebApi.Model
 {
     /// <summary>
-    /// Decimal
+    /// [Link to specification](https://reference.opcfoundation.org/Core/Part6/v105/docs/5.4.3).
     /// </summary>
     [DataContract(Name = "Decimal")]
     public partial class Decimal : IValidatableObject

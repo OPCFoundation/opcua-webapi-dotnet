@@ -27,7 +27,7 @@ using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 namespace Opc.Ua.WebApi.Model
 {
     /// <summary>
-    /// PubSubGroupDataType
+    /// [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part14/6.2.5/#6.2.5.7).
     /// </summary>
     [DataContract(Name = "PubSubGroupDataType")]
     public partial class PubSubGroupDataType : IValidatableObject
@@ -37,7 +37,7 @@ namespace Opc.Ua.WebApi.Model
         /// </summary>
         /// <param name="name">name.</param>
         /// <param name="enabled">enabled (default to false).</param>
-        /// <param name="securityMode">securityMode.</param>
+        /// <param name="securityMode">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part5/12.3.10)..</param>
         /// <param name="securityGroupId">securityGroupId.</param>
         /// <param name="securityKeyServices">securityKeyServices.</param>
         /// <param name="maxNetworkMessageSize">maxNetworkMessageSize (default to 0).</param>
@@ -66,8 +66,9 @@ namespace Opc.Ua.WebApi.Model
         public bool Enabled { get; set; }
 
         /// <summary>
-        /// Gets or Sets SecurityMode
+        /// [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part5/12.3.10).
         /// </summary>
+        /// <value>[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part5/12.3.10).</value>
         [DataMember(Name = "SecurityMode", EmitDefaultValue = false)]
         public int SecurityMode { get; set; }
 

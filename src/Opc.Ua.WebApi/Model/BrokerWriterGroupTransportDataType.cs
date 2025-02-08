@@ -27,7 +27,7 @@ using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 namespace Opc.Ua.WebApi.Model
 {
     /// <summary>
-    /// BrokerWriterGroupTransportDataType
+    /// [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part14/6.4.2/#6.4.2.3.5).
     /// </summary>
     [DataContract(Name = "BrokerWriterGroupTransportDataType")]
     public partial class BrokerWriterGroupTransportDataType : IValidatableObject
@@ -38,7 +38,7 @@ namespace Opc.Ua.WebApi.Model
         /// <param name="queueName">queueName.</param>
         /// <param name="resourceUri">resourceUri.</param>
         /// <param name="authenticationProfileUri">authenticationProfileUri.</param>
-        /// <param name="requestedDeliveryGuarantee">requestedDeliveryGuarantee.</param>
+        /// <param name="requestedDeliveryGuarantee">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part14/6.4.2/#6.4.2.1)..</param>
         public BrokerWriterGroupTransportDataType(string queueName = default(string), string resourceUri = default(string), string authenticationProfileUri = default(string), int requestedDeliveryGuarantee = default(int))
         {
             this.QueueName = queueName;
@@ -66,8 +66,9 @@ namespace Opc.Ua.WebApi.Model
         public string AuthenticationProfileUri { get; set; }
 
         /// <summary>
-        /// Gets or Sets RequestedDeliveryGuarantee
+        /// [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part14/6.4.2/#6.4.2.1).
         /// </summary>
+        /// <value>[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part14/6.4.2/#6.4.2.1).</value>
         [DataMember(Name = "RequestedDeliveryGuarantee", EmitDefaultValue = false)]
         public int RequestedDeliveryGuarantee { get; set; }
 

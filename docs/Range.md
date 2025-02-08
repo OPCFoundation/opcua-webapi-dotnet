@@ -1,4 +1,5 @@
 # Opc.Ua.WebApi.Model.Range
+[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part8/5.6.2).
 
 ## Properties
 

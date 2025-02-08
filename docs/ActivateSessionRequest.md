@@ -1,4 +1,5 @@
 # Opc.Ua.WebApi.Model.ActivateSessionRequest
+[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.7.3/#5.7.3.2).
 
 ## Properties
 

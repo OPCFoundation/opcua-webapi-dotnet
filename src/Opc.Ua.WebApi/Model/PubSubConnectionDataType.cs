@@ -27,7 +27,7 @@ using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 namespace Opc.Ua.WebApi.Model
 {
     /// <summary>
-    /// PubSubConnectionDataType
+    /// [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part14/6.2.7/#6.2.7.5.1).
     /// </summary>
     [DataContract(Name = "PubSubConnectionDataType")]
     public partial class PubSubConnectionDataType : IValidatableObject

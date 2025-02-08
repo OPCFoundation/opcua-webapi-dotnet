@@ -27,7 +27,7 @@ using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 namespace Opc.Ua.WebApi.Model
 {
     /// <summary>
-    /// CreateSubscriptionResponse
+    /// [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.2/#5.14.2.2).
     /// </summary>
     [DataContract(Name = "CreateSubscriptionResponse")]
     public partial class CreateSubscriptionResponse : IValidatableObject

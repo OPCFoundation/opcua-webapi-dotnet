@@ -27,7 +27,7 @@ using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 namespace Opc.Ua.WebApi.Model
 {
     /// <summary>
-    /// AttributeOperand
+    /// [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/7.7.4/#7.7.4.4).
     /// </summary>
     [DataContract(Name = "AttributeOperand")]
     public partial class AttributeOperand : IValidatableObject

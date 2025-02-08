@@ -27,7 +27,7 @@ using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 namespace Opc.Ua.WebApi.Model
 {
     /// <summary>
-    /// FindServersRequest
+    /// [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.5.2/#5.5.2.2).
     /// </summary>
     [DataContract(Name = "FindServersRequest")]
     public partial class FindServersRequest : IValidatableObject

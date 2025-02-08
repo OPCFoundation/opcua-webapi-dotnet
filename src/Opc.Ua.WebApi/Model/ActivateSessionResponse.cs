@@ -27,7 +27,7 @@ using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 namespace Opc.Ua.WebApi.Model
 {
     /// <summary>
-    /// ActivateSessionResponse
+    /// [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.7.3/#5.7.3.2).
     /// </summary>
     [DataContract(Name = "ActivateSessionResponse")]
     public partial class ActivateSessionResponse : IValidatableObject

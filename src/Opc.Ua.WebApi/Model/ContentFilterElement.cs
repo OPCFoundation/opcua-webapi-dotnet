@@ -27,7 +27,7 @@ using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 namespace Opc.Ua.WebApi.Model
 {
     /// <summary>
-    /// ContentFilterElement
+    /// [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/7.7.1).
     /// </summary>
     [DataContract(Name = "ContentFilterElement")]
     public partial class ContentFilterElement : IValidatableObject
@@ -35,7 +35,7 @@ namespace Opc.Ua.WebApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ContentFilterElement" /> class.
         /// </summary>
-        /// <param name="filterOperator">filterOperator.</param>
+        /// <param name="filterOperator">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/7.7.3)..</param>
         /// <param name="filterOperands">filterOperands.</param>
         public ContentFilterElement(int filterOperator = default(int), List<ExtensionObject> filterOperands = default(List<ExtensionObject>))
         {
@@ -44,8 +44,9 @@ namespace Opc.Ua.WebApi.Model
         }
 
         /// <summary>
-        /// Gets or Sets FilterOperator
+        /// [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/7.7.3).
         /// </summary>
+        /// <value>[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/7.7.3).</value>
         [DataMember(Name = "FilterOperator", EmitDefaultValue = false)]
         public int FilterOperator { get; set; }
 

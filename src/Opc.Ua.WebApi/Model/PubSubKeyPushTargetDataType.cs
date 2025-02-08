@@ -27,7 +27,7 @@ using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 namespace Opc.Ua.WebApi.Model
 {
     /// <summary>
-    /// PubSubKeyPushTargetDataType
+    /// [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part14/6.2.12/#6.2.12.3).
     /// </summary>
     [DataContract(Name = "PubSubKeyPushTargetDataType")]
     public partial class PubSubKeyPushTargetDataType : IValidatableObject

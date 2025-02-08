@@ -75,7 +75,7 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:4840";
             var apiInstance = new DefaultApi(config);
-            var activateSessionRequest = new ActivateSessionRequest(); // ActivateSessionRequest | ActivateSessionRequestMessage (optional) 
+            var activateSessionRequest = new ActivateSessionRequest(); // ActivateSessionRequest | [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.7.3/#5.7.3.2). (optional) 
 
             try
             {

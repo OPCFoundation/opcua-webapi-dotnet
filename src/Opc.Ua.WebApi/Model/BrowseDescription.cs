@@ -27,7 +27,7 @@ using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 namespace Opc.Ua.WebApi.Model
 {
     /// <summary>
-    /// BrowseDescription
+    /// [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.9.2/#5.9.2.2).
     /// </summary>
     [DataContract(Name = "BrowseDescription")]
     public partial class BrowseDescription : IValidatableObject
@@ -36,7 +36,7 @@ namespace Opc.Ua.WebApi.Model
         /// Initializes a new instance of the <see cref="BrowseDescription" /> class.
         /// </summary>
         /// <param name="nodeId">nodeId.</param>
-        /// <param name="browseDirection">browseDirection.</param>
+        /// <param name="browseDirection">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/7.5)..</param>
         /// <param name="referenceTypeId">referenceTypeId.</param>
         /// <param name="includeSubtypes">includeSubtypes (default to false).</param>
         /// <param name="nodeClassMask">nodeClassMask (default to 0).</param>
@@ -58,8 +58,9 @@ namespace Opc.Ua.WebApi.Model
         public string NodeId { get; set; }
 
         /// <summary>
-        /// Gets or Sets BrowseDirection
+        /// [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/7.5).
         /// </summary>
+        /// <value>[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/7.5).</value>
         [DataMember(Name = "BrowseDirection", EmitDefaultValue = false)]
         public int BrowseDirection { get; set; }
 

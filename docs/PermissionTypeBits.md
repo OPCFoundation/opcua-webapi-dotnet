@@ -1,4 +1,5 @@
 # Opc.Ua.WebApi.Model.PermissionTypeBits
+[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part3/8.55).
 
 ## Properties
 

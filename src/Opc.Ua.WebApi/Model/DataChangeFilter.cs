@@ -27,7 +27,7 @@ using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 namespace Opc.Ua.WebApi.Model
 {
     /// <summary>
-    /// DataChangeFilter
+    /// [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/7.22.2).
     /// </summary>
     [DataContract(Name = "DataChangeFilter")]
     public partial class DataChangeFilter : IValidatableObject
@@ -35,7 +35,7 @@ namespace Opc.Ua.WebApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DataChangeFilter" /> class.
         /// </summary>
-        /// <param name="trigger">trigger.</param>
+        /// <param name="trigger">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/7.10)..</param>
         /// <param name="deadbandType">deadbandType (default to 0).</param>
         /// <param name="deadbandValue">deadbandValue (default to 0D).</param>
         public DataChangeFilter(int trigger = default(int), long deadbandType = 0, double deadbandValue = 0D)
@@ -46,8 +46,9 @@ namespace Opc.Ua.WebApi.Model
         }
 
         /// <summary>
-        /// Gets or Sets Trigger
+        /// [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/7.10).
         /// </summary>
+        /// <value>[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/7.10).</value>
         [DataMember(Name = "Trigger", EmitDefaultValue = false)]
         public int Trigger { get; set; }
 

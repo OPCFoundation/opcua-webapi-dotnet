@@ -27,7 +27,7 @@ using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 namespace Opc.Ua.WebApi.Model
 {
     /// <summary>
-    /// StructureDefinition
+    /// [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part5/12.2.12/#12.2.12.5).
     /// </summary>
     [DataContract(Name = "StructureDefinition")]
     public partial class StructureDefinition : IValidatableObject
@@ -37,7 +37,7 @@ namespace Opc.Ua.WebApi.Model
         /// </summary>
         /// <param name="defaultEncodingId">defaultEncodingId.</param>
         /// <param name="baseDataType">baseDataType.</param>
-        /// <param name="structureType">structureType.</param>
+        /// <param name="structureType">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part5/12.2.5/#12.2.5.3)..</param>
         /// <param name="fields">fields.</param>
         public StructureDefinition(string defaultEncodingId = default(string), string baseDataType = default(string), int structureType = default(int), List<StructureField> fields = default(List<StructureField>))
         {
@@ -60,8 +60,9 @@ namespace Opc.Ua.WebApi.Model
         public string BaseDataType { get; set; }
 
         /// <summary>
-        /// Gets or Sets StructureType
+        /// [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part5/12.2.5/#12.2.5.3).
         /// </summary>
+        /// <value>[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part5/12.2.5/#12.2.5.3).</value>
         [DataMember(Name = "StructureType", EmitDefaultValue = false)]
         public int StructureType { get; set; }
 

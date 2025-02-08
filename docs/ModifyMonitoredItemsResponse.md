@@ -1,4 +1,5 @@
 # Opc.Ua.WebApi.Model.ModifyMonitoredItemsResponse
+[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.13.3/#5.13.3.2).
 
 ## Properties
 

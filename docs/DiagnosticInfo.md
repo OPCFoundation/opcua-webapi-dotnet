@@ -1,4 +1,5 @@
 # Opc.Ua.WebApi.Model.DiagnosticInfo
+[Link to specification](https://reference.opcfoundation.org/Core/Part4/v105/docs/7.12).
 
 ## Properties
 

@@ -27,7 +27,7 @@ using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 namespace Opc.Ua.WebApi.Model
 {
     /// <summary>
-    /// ReferenceDescription
+    /// [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/7.30).
     /// </summary>
     [DataContract(Name = "ReferenceDescription")]
     public partial class ReferenceDescription : IValidatableObject
@@ -40,7 +40,7 @@ namespace Opc.Ua.WebApi.Model
         /// <param name="nodeId">nodeId.</param>
         /// <param name="browseName">browseName.</param>
         /// <param name="displayName">displayName.</param>
-        /// <param name="nodeClass">nodeClass.</param>
+        /// <param name="nodeClass">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part5/12.2.5/#12.2.5.2)..</param>
         /// <param name="typeDefinition">typeDefinition.</param>
         public ReferenceDescription(string referenceTypeId = default(string), bool isForward = false, string nodeId = default(string), string browseName = default(string), LocalizedText displayName = default(LocalizedText), int nodeClass = default(int), string typeDefinition = default(string))
         {
@@ -84,8 +84,9 @@ namespace Opc.Ua.WebApi.Model
         public LocalizedText DisplayName { get; set; }
 
         /// <summary>
-        /// Gets or Sets NodeClass
+        /// [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part5/12.2.5/#12.2.5.2).
         /// </summary>
+        /// <value>[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part5/12.2.5/#12.2.5.2).</value>
         [DataMember(Name = "NodeClass", EmitDefaultValue = false)]
         public int NodeClass { get; set; }
 

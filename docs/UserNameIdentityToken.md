@@ -1,4 +1,5 @@
 # Opc.Ua.WebApi.Model.UserNameIdentityToken
+[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part5/12.3.15/#12.3.15.3).
 
 ## Properties
 

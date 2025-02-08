@@ -27,7 +27,7 @@ using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 namespace Opc.Ua.WebApi.Model
 {
     /// <summary>
-    /// StandaloneSubscribedDataSetDataType
+    /// [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part14/6.2.10/#6.2.10.5).
     /// </summary>
     [DataContract(Name = "StandaloneSubscribedDataSetDataType")]
     public partial class StandaloneSubscribedDataSetDataType : IValidatableObject

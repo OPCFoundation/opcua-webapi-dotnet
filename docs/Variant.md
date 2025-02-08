@@ -1,4 +1,5 @@
 # Opc.Ua.WebApi.Model.Variant
+[Link to specification](https://reference.opcfoundation.org/Core/Part6/v105/docs/5.4.2.17).
 
 ## Properties
 

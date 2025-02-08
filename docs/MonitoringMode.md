@@ -1,4 +1,5 @@
 # Opc.Ua.WebApi.Model.MonitoringMode
+[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/7.23).
 
 ## Properties
 

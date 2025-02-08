@@ -1,4 +1,5 @@
 # Opc.Ua.WebApi.Model.Matrix
+[Link to specification](https://reference.opcfoundation.org/Core/Part6/v105/docs/5.4.5).
 
 ## Properties
 

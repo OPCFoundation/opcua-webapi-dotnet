@@ -1,4 +1,5 @@
 # Opc.Ua.WebApi.Model.JsonActionMetaDataMessage
+[Link to specification]().
 
 ## Properties
 

@@ -27,7 +27,7 @@ using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 namespace Opc.Ua.WebApi.Model
 {
     /// <summary>
-    /// DataSetMetaDataType
+    /// [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part14/6.2.3/#6.2.3.2.3).
     /// </summary>
     [DataContract(Name = "DataSetMetaDataType")]
     public partial class DataSetMetaDataType : IValidatableObject

@@ -1,10 +1,11 @@
 # Opc.Ua.WebApi.Model.DataChangeFilter
+[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/7.22.2).
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Trigger** | **int** |  | [optional] 
+**Trigger** | **int** | [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/7.10). | [optional] 
 **DeadbandType** | **long** |  | [optional] [default to 0]
 **DeadbandValue** | **double** |  | [optional] [default to 0D]
 

@@ -27,7 +27,7 @@ using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 namespace Opc.Ua.WebApi.Model
 {
     /// <summary>
-    /// SetPublishingModeRequest
+    /// [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.4/#5.14.4.2).
     /// </summary>
     [DataContract(Name = "SetPublishingModeRequest")]
     public partial class SetPublishingModeRequest : IValidatableObject

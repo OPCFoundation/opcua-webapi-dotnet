@@ -27,8 +27,9 @@ using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 namespace Opc.Ua.WebApi.Model
 {
     /// <summary>
-    /// Defines TimestampsToReturn
+    /// [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/7.40).
     /// </summary>
+    /// <value>[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/7.40).</value>
     public enum TimestampsToReturn
     {
         /// <summary>

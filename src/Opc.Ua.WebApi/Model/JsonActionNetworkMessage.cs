@@ -27,7 +27,7 @@ using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 namespace Opc.Ua.WebApi.Model
 {
     /// <summary>
-    /// JsonActionNetworkMessage
+    /// [Link to specification]().
     /// </summary>
     [DataContract(Name = "JsonActionNetworkMessage")]
     public partial class JsonActionNetworkMessage : IValidatableObject

@@ -27,8 +27,9 @@ using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 namespace Opc.Ua.WebApi.Model
 {
     /// <summary>
-    /// Defines UserTokenType
+    /// [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/7.43).
     /// </summary>
+    /// <value>[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/7.43).</value>
     public enum UserTokenType
     {
         /// <summary>

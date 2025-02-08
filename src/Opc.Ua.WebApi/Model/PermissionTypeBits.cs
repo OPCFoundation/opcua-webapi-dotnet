@@ -27,8 +27,9 @@ using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 namespace Opc.Ua.WebApi.Model
 {
     /// <summary>
-    /// Defines PermissionTypeBits
+    /// [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part3/8.55).
     /// </summary>
+    /// <value>[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part3/8.55).</value>
     public enum PermissionTypeBits
     {
         /// <summary>

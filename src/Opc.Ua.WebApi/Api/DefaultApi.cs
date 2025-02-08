@@ -31,7 +31,7 @@ namespace Opc.Ua.WebApi.Api
         /// 
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="activateSessionRequest">ActivateSessionRequestMessage (optional)</param>
+        /// <param name="activateSessionRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.7.3/#5.7.3.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ActivateSessionResponse</returns>
         ActivateSessionResponse ActivateSession(ActivateSessionRequest activateSessionRequest = default(ActivateSessionRequest), int operationIndex = 0);
@@ -43,7 +43,7 @@ namespace Opc.Ua.WebApi.Api
         /// 
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="activateSessionRequest">ActivateSessionRequestMessage (optional)</param>
+        /// <param name="activateSessionRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.7.3/#5.7.3.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ActivateSessionResponse</returns>
         ApiResponse<ActivateSessionResponse> ActivateSessionWithHttpInfo(ActivateSessionRequest activateSessionRequest = default(ActivateSessionRequest), int operationIndex = 0);
@@ -51,7 +51,7 @@ namespace Opc.Ua.WebApi.Api
         /// 
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="browseRequest">BrowseRequestMessage (optional)</param>
+        /// <param name="browseRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.9.2/#5.9.2.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>BrowseResponse</returns>
         BrowseResponse Browse(BrowseRequest browseRequest = default(BrowseRequest), int operationIndex = 0);
@@ -63,7 +63,7 @@ namespace Opc.Ua.WebApi.Api
         /// 
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="browseRequest">BrowseRequestMessage (optional)</param>
+        /// <param name="browseRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.9.2/#5.9.2.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of BrowseResponse</returns>
         ApiResponse<BrowseResponse> BrowseWithHttpInfo(BrowseRequest browseRequest = default(BrowseRequest), int operationIndex = 0);
@@ -71,7 +71,7 @@ namespace Opc.Ua.WebApi.Api
         /// 
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="browseNextRequest">BrowseNextRequestMessage (optional)</param>
+        /// <param name="browseNextRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.9.3/#5.9.3.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>BrowseNextResponse</returns>
         BrowseNextResponse BrowseNext(BrowseNextRequest browseNextRequest = default(BrowseNextRequest), int operationIndex = 0);
@@ -83,7 +83,7 @@ namespace Opc.Ua.WebApi.Api
         /// 
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="browseNextRequest">BrowseNextRequestMessage (optional)</param>
+        /// <param name="browseNextRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.9.3/#5.9.3.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of BrowseNextResponse</returns>
         ApiResponse<BrowseNextResponse> BrowseNextWithHttpInfo(BrowseNextRequest browseNextRequest = default(BrowseNextRequest), int operationIndex = 0);
@@ -91,7 +91,7 @@ namespace Opc.Ua.WebApi.Api
         /// 
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callRequest">CallRequestMessage (optional)</param>
+        /// <param name="callRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.12.2/#5.12.2.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>CallResponse</returns>
         CallResponse Call(CallRequest callRequest = default(CallRequest), int operationIndex = 0);
@@ -103,7 +103,7 @@ namespace Opc.Ua.WebApi.Api
         /// 
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callRequest">CallRequestMessage (optional)</param>
+        /// <param name="callRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.12.2/#5.12.2.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of CallResponse</returns>
         ApiResponse<CallResponse> CallWithHttpInfo(CallRequest callRequest = default(CallRequest), int operationIndex = 0);
@@ -111,7 +111,7 @@ namespace Opc.Ua.WebApi.Api
         /// 
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancelRequest">CancelRequestMessage (optional)</param>
+        /// <param name="cancelRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.7.5/#5.7.5.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>CancelResponse</returns>
         CancelResponse Cancel(CancelRequest cancelRequest = default(CancelRequest), int operationIndex = 0);
@@ -123,7 +123,7 @@ namespace Opc.Ua.WebApi.Api
         /// 
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancelRequest">CancelRequestMessage (optional)</param>
+        /// <param name="cancelRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.7.5/#5.7.5.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of CancelResponse</returns>
         ApiResponse<CancelResponse> CancelWithHttpInfo(CancelRequest cancelRequest = default(CancelRequest), int operationIndex = 0);
@@ -131,7 +131,7 @@ namespace Opc.Ua.WebApi.Api
         /// 
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="closeSessionRequest">CloseSessionRequestMessage (optional)</param>
+        /// <param name="closeSessionRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.7.4/#5.7.4.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>CloseSessionResponse</returns>
         CloseSessionResponse CloseSession(CloseSessionRequest closeSessionRequest = default(CloseSessionRequest), int operationIndex = 0);
@@ -143,7 +143,7 @@ namespace Opc.Ua.WebApi.Api
         /// 
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="closeSessionRequest">CloseSessionRequestMessage (optional)</param>
+        /// <param name="closeSessionRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.7.4/#5.7.4.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of CloseSessionResponse</returns>
         ApiResponse<CloseSessionResponse> CloseSessionWithHttpInfo(CloseSessionRequest closeSessionRequest = default(CloseSessionRequest), int operationIndex = 0);
@@ -151,7 +151,7 @@ namespace Opc.Ua.WebApi.Api
         /// 
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="createMonitoredItemsRequest">CreateMonitoredItemsRequestMessage (optional)</param>
+        /// <param name="createMonitoredItemsRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.13.2/#5.13.2.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>CreateMonitoredItemsResponse</returns>
         CreateMonitoredItemsResponse CreateMonitoredItems(CreateMonitoredItemsRequest createMonitoredItemsRequest = default(CreateMonitoredItemsRequest), int operationIndex = 0);
@@ -163,7 +163,7 @@ namespace Opc.Ua.WebApi.Api
         /// 
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="createMonitoredItemsRequest">CreateMonitoredItemsRequestMessage (optional)</param>
+        /// <param name="createMonitoredItemsRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.13.2/#5.13.2.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of CreateMonitoredItemsResponse</returns>
         ApiResponse<CreateMonitoredItemsResponse> CreateMonitoredItemsWithHttpInfo(CreateMonitoredItemsRequest createMonitoredItemsRequest = default(CreateMonitoredItemsRequest), int operationIndex = 0);
@@ -171,7 +171,7 @@ namespace Opc.Ua.WebApi.Api
         /// 
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="createSessionRequest">CreateSessionRequestMessage (optional)</param>
+        /// <param name="createSessionRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.7.2/#5.7.2.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>CreateSessionResponse</returns>
         CreateSessionResponse CreateSession(CreateSessionRequest createSessionRequest = default(CreateSessionRequest), int operationIndex = 0);
@@ -183,7 +183,7 @@ namespace Opc.Ua.WebApi.Api
         /// 
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="createSessionRequest">CreateSessionRequestMessage (optional)</param>
+        /// <param name="createSessionRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.7.2/#5.7.2.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of CreateSessionResponse</returns>
         ApiResponse<CreateSessionResponse> CreateSessionWithHttpInfo(CreateSessionRequest createSessionRequest = default(CreateSessionRequest), int operationIndex = 0);
@@ -191,7 +191,7 @@ namespace Opc.Ua.WebApi.Api
         /// 
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="createSubscriptionRequest">CreateSubscriptionRequestMessage (optional)</param>
+        /// <param name="createSubscriptionRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.2/#5.14.2.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>CreateSubscriptionResponse</returns>
         CreateSubscriptionResponse CreateSubscription(CreateSubscriptionRequest createSubscriptionRequest = default(CreateSubscriptionRequest), int operationIndex = 0);
@@ -203,7 +203,7 @@ namespace Opc.Ua.WebApi.Api
         /// 
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="createSubscriptionRequest">CreateSubscriptionRequestMessage (optional)</param>
+        /// <param name="createSubscriptionRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.2/#5.14.2.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of CreateSubscriptionResponse</returns>
         ApiResponse<CreateSubscriptionResponse> CreateSubscriptionWithHttpInfo(CreateSubscriptionRequest createSubscriptionRequest = default(CreateSubscriptionRequest), int operationIndex = 0);
@@ -211,7 +211,7 @@ namespace Opc.Ua.WebApi.Api
         /// 
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="deleteMonitoredItemsRequest">DeleteMonitoredItemsRequestMessage (optional)</param>
+        /// <param name="deleteMonitoredItemsRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.13.6/#5.13.6.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>DeleteMonitoredItemsResponse</returns>
         DeleteMonitoredItemsResponse DeleteMonitoredItems(DeleteMonitoredItemsRequest deleteMonitoredItemsRequest = default(DeleteMonitoredItemsRequest), int operationIndex = 0);
@@ -223,7 +223,7 @@ namespace Opc.Ua.WebApi.Api
         /// 
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="deleteMonitoredItemsRequest">DeleteMonitoredItemsRequestMessage (optional)</param>
+        /// <param name="deleteMonitoredItemsRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.13.6/#5.13.6.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of DeleteMonitoredItemsResponse</returns>
         ApiResponse<DeleteMonitoredItemsResponse> DeleteMonitoredItemsWithHttpInfo(DeleteMonitoredItemsRequest deleteMonitoredItemsRequest = default(DeleteMonitoredItemsRequest), int operationIndex = 0);
@@ -231,7 +231,7 @@ namespace Opc.Ua.WebApi.Api
         /// 
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="deleteSubscriptionsRequest">DeleteSubscriptionsRequestMessage (optional)</param>
+        /// <param name="deleteSubscriptionsRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.8/#5.14.8.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>DeleteSubscriptionsResponse</returns>
         DeleteSubscriptionsResponse DeleteSubscriptions(DeleteSubscriptionsRequest deleteSubscriptionsRequest = default(DeleteSubscriptionsRequest), int operationIndex = 0);
@@ -243,7 +243,7 @@ namespace Opc.Ua.WebApi.Api
         /// 
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="deleteSubscriptionsRequest">DeleteSubscriptionsRequestMessage (optional)</param>
+        /// <param name="deleteSubscriptionsRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.8/#5.14.8.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of DeleteSubscriptionsResponse</returns>
         ApiResponse<DeleteSubscriptionsResponse> DeleteSubscriptionsWithHttpInfo(DeleteSubscriptionsRequest deleteSubscriptionsRequest = default(DeleteSubscriptionsRequest), int operationIndex = 0);
@@ -251,7 +251,7 @@ namespace Opc.Ua.WebApi.Api
         /// 
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="findServersRequest">FindServersRequestMessage (optional)</param>
+        /// <param name="findServersRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.5.2/#5.5.2.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>FindServersResponse</returns>
         FindServersResponse FindServers(FindServersRequest findServersRequest = default(FindServersRequest), int operationIndex = 0);
@@ -263,7 +263,7 @@ namespace Opc.Ua.WebApi.Api
         /// 
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="findServersRequest">FindServersRequestMessage (optional)</param>
+        /// <param name="findServersRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.5.2/#5.5.2.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of FindServersResponse</returns>
         ApiResponse<FindServersResponse> FindServersWithHttpInfo(FindServersRequest findServersRequest = default(FindServersRequest), int operationIndex = 0);
@@ -271,7 +271,7 @@ namespace Opc.Ua.WebApi.Api
         /// 
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="getEndpointsRequest">GetEndpointsRequestMessage (optional)</param>
+        /// <param name="getEndpointsRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.5.4/#5.5.4.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>GetEndpointsResponse</returns>
         GetEndpointsResponse GetEndpoints(GetEndpointsRequest getEndpointsRequest = default(GetEndpointsRequest), int operationIndex = 0);
@@ -283,7 +283,7 @@ namespace Opc.Ua.WebApi.Api
         /// 
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="getEndpointsRequest">GetEndpointsRequestMessage (optional)</param>
+        /// <param name="getEndpointsRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.5.4/#5.5.4.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of GetEndpointsResponse</returns>
         ApiResponse<GetEndpointsResponse> GetEndpointsWithHttpInfo(GetEndpointsRequest getEndpointsRequest = default(GetEndpointsRequest), int operationIndex = 0);
@@ -291,7 +291,7 @@ namespace Opc.Ua.WebApi.Api
         /// 
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="historyReadRequest">HistoryReadRequestMessage (optional)</param>
+        /// <param name="historyReadRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.11.3/#5.11.3.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>HistoryReadResponse</returns>
         HistoryReadResponse HistoryRead(HistoryReadRequest historyReadRequest = default(HistoryReadRequest), int operationIndex = 0);
@@ -303,7 +303,7 @@ namespace Opc.Ua.WebApi.Api
         /// 
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="historyReadRequest">HistoryReadRequestMessage (optional)</param>
+        /// <param name="historyReadRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.11.3/#5.11.3.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of HistoryReadResponse</returns>
         ApiResponse<HistoryReadResponse> HistoryReadWithHttpInfo(HistoryReadRequest historyReadRequest = default(HistoryReadRequest), int operationIndex = 0);
@@ -311,7 +311,7 @@ namespace Opc.Ua.WebApi.Api
         /// 
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="historyUpdateRequest">HistoryUpdateRequestMessage (optional)</param>
+        /// <param name="historyUpdateRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.11.5/#5.11.5.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>HistoryUpdateResponse</returns>
         HistoryUpdateResponse HistoryUpdate(HistoryUpdateRequest historyUpdateRequest = default(HistoryUpdateRequest), int operationIndex = 0);
@@ -323,7 +323,7 @@ namespace Opc.Ua.WebApi.Api
         /// 
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="historyUpdateRequest">HistoryUpdateRequestMessage (optional)</param>
+        /// <param name="historyUpdateRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.11.5/#5.11.5.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of HistoryUpdateResponse</returns>
         ApiResponse<HistoryUpdateResponse> HistoryUpdateWithHttpInfo(HistoryUpdateRequest historyUpdateRequest = default(HistoryUpdateRequest), int operationIndex = 0);
@@ -331,7 +331,7 @@ namespace Opc.Ua.WebApi.Api
         /// 
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="modifyMonitoredItemsRequest">ModifyMonitoredItemsRequestMessage (optional)</param>
+        /// <param name="modifyMonitoredItemsRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.13.3/#5.13.3.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ModifyMonitoredItemsResponse</returns>
         ModifyMonitoredItemsResponse ModifyMonitoredItems(ModifyMonitoredItemsRequest modifyMonitoredItemsRequest = default(ModifyMonitoredItemsRequest), int operationIndex = 0);
@@ -343,7 +343,7 @@ namespace Opc.Ua.WebApi.Api
         /// 
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="modifyMonitoredItemsRequest">ModifyMonitoredItemsRequestMessage (optional)</param>
+        /// <param name="modifyMonitoredItemsRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.13.3/#5.13.3.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ModifyMonitoredItemsResponse</returns>
         ApiResponse<ModifyMonitoredItemsResponse> ModifyMonitoredItemsWithHttpInfo(ModifyMonitoredItemsRequest modifyMonitoredItemsRequest = default(ModifyMonitoredItemsRequest), int operationIndex = 0);
@@ -351,7 +351,7 @@ namespace Opc.Ua.WebApi.Api
         /// 
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="modifySubscriptionRequest">ModifySubscriptionRequestMessage (optional)</param>
+        /// <param name="modifySubscriptionRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.3/#5.14.3.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ModifySubscriptionResponse</returns>
         ModifySubscriptionResponse ModifySubscription(ModifySubscriptionRequest modifySubscriptionRequest = default(ModifySubscriptionRequest), int operationIndex = 0);
@@ -363,7 +363,7 @@ namespace Opc.Ua.WebApi.Api
         /// 
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="modifySubscriptionRequest">ModifySubscriptionRequestMessage (optional)</param>
+        /// <param name="modifySubscriptionRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.3/#5.14.3.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ModifySubscriptionResponse</returns>
         ApiResponse<ModifySubscriptionResponse> ModifySubscriptionWithHttpInfo(ModifySubscriptionRequest modifySubscriptionRequest = default(ModifySubscriptionRequest), int operationIndex = 0);
@@ -371,7 +371,7 @@ namespace Opc.Ua.WebApi.Api
         /// 
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="publishRequest">PublishRequestMessage (optional)</param>
+        /// <param name="publishRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.5/#5.14.5.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>PublishResponse</returns>
         PublishResponse Publish(PublishRequest publishRequest = default(PublishRequest), int operationIndex = 0);
@@ -383,7 +383,7 @@ namespace Opc.Ua.WebApi.Api
         /// 
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="publishRequest">PublishRequestMessage (optional)</param>
+        /// <param name="publishRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.5/#5.14.5.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of PublishResponse</returns>
         ApiResponse<PublishResponse> PublishWithHttpInfo(PublishRequest publishRequest = default(PublishRequest), int operationIndex = 0);
@@ -391,7 +391,7 @@ namespace Opc.Ua.WebApi.Api
         /// 
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="readRequest">ReadRequestMessage (optional)</param>
+        /// <param name="readRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.11.2/#5.11.2.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ReadResponse</returns>
         ReadResponse Read(ReadRequest readRequest = default(ReadRequest), int operationIndex = 0);
@@ -403,7 +403,7 @@ namespace Opc.Ua.WebApi.Api
         /// 
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="readRequest">ReadRequestMessage (optional)</param>
+        /// <param name="readRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.11.2/#5.11.2.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ReadResponse</returns>
         ApiResponse<ReadResponse> ReadWithHttpInfo(ReadRequest readRequest = default(ReadRequest), int operationIndex = 0);
@@ -411,7 +411,7 @@ namespace Opc.Ua.WebApi.Api
         /// 
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="registerNodesRequest">RegisterNodesRequestMessage (optional)</param>
+        /// <param name="registerNodesRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.9.5/#5.9.5.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>RegisterNodesResponse</returns>
         RegisterNodesResponse RegisterNodes(RegisterNodesRequest registerNodesRequest = default(RegisterNodesRequest), int operationIndex = 0);
@@ -423,7 +423,7 @@ namespace Opc.Ua.WebApi.Api
         /// 
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="registerNodesRequest">RegisterNodesRequestMessage (optional)</param>
+        /// <param name="registerNodesRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.9.5/#5.9.5.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of RegisterNodesResponse</returns>
         ApiResponse<RegisterNodesResponse> RegisterNodesWithHttpInfo(RegisterNodesRequest registerNodesRequest = default(RegisterNodesRequest), int operationIndex = 0);
@@ -431,7 +431,7 @@ namespace Opc.Ua.WebApi.Api
         /// 
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="republishRequest">RepublishRequestMessage (optional)</param>
+        /// <param name="republishRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.6/#5.14.6.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>RepublishResponse</returns>
         RepublishResponse Republish(RepublishRequest republishRequest = default(RepublishRequest), int operationIndex = 0);
@@ -443,7 +443,7 @@ namespace Opc.Ua.WebApi.Api
         /// 
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="republishRequest">RepublishRequestMessage (optional)</param>
+        /// <param name="republishRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.6/#5.14.6.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of RepublishResponse</returns>
         ApiResponse<RepublishResponse> RepublishWithHttpInfo(RepublishRequest republishRequest = default(RepublishRequest), int operationIndex = 0);
@@ -451,7 +451,7 @@ namespace Opc.Ua.WebApi.Api
         /// 
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="setMonitoringModeRequest">SetMonitoringModeRequestMessage (optional)</param>
+        /// <param name="setMonitoringModeRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.13.4/#5.13.4.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>SetMonitoringModeResponse</returns>
         SetMonitoringModeResponse SetMonitoringMode(SetMonitoringModeRequest setMonitoringModeRequest = default(SetMonitoringModeRequest), int operationIndex = 0);
@@ -463,7 +463,7 @@ namespace Opc.Ua.WebApi.Api
         /// 
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="setMonitoringModeRequest">SetMonitoringModeRequestMessage (optional)</param>
+        /// <param name="setMonitoringModeRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.13.4/#5.13.4.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of SetMonitoringModeResponse</returns>
         ApiResponse<SetMonitoringModeResponse> SetMonitoringModeWithHttpInfo(SetMonitoringModeRequest setMonitoringModeRequest = default(SetMonitoringModeRequest), int operationIndex = 0);
@@ -471,7 +471,7 @@ namespace Opc.Ua.WebApi.Api
         /// 
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="setPublishingModeRequest">SetPublishingModeRequestMessage (optional)</param>
+        /// <param name="setPublishingModeRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.4/#5.14.4.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>SetPublishingModeResponse</returns>
         SetPublishingModeResponse SetPublishingMode(SetPublishingModeRequest setPublishingModeRequest = default(SetPublishingModeRequest), int operationIndex = 0);
@@ -483,7 +483,7 @@ namespace Opc.Ua.WebApi.Api
         /// 
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="setPublishingModeRequest">SetPublishingModeRequestMessage (optional)</param>
+        /// <param name="setPublishingModeRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.4/#5.14.4.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of SetPublishingModeResponse</returns>
         ApiResponse<SetPublishingModeResponse> SetPublishingModeWithHttpInfo(SetPublishingModeRequest setPublishingModeRequest = default(SetPublishingModeRequest), int operationIndex = 0);
@@ -491,7 +491,7 @@ namespace Opc.Ua.WebApi.Api
         /// 
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="setTriggeringRequest">SetTriggeringRequestMessage (optional)</param>
+        /// <param name="setTriggeringRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.13.5/#5.13.5.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>SetTriggeringResponse</returns>
         SetTriggeringResponse SetTriggering(SetTriggeringRequest setTriggeringRequest = default(SetTriggeringRequest), int operationIndex = 0);
@@ -503,7 +503,7 @@ namespace Opc.Ua.WebApi.Api
         /// 
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="setTriggeringRequest">SetTriggeringRequestMessage (optional)</param>
+        /// <param name="setTriggeringRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.13.5/#5.13.5.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of SetTriggeringResponse</returns>
         ApiResponse<SetTriggeringResponse> SetTriggeringWithHttpInfo(SetTriggeringRequest setTriggeringRequest = default(SetTriggeringRequest), int operationIndex = 0);
@@ -511,7 +511,7 @@ namespace Opc.Ua.WebApi.Api
         /// 
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="transferSubscriptionsRequest">TransferSubscriptionsRequestMessage (optional)</param>
+        /// <param name="transferSubscriptionsRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.7/#5.14.7.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>TransferSubscriptionsResponse</returns>
         TransferSubscriptionsResponse TransferSubscriptions(TransferSubscriptionsRequest transferSubscriptionsRequest = default(TransferSubscriptionsRequest), int operationIndex = 0);
@@ -523,7 +523,7 @@ namespace Opc.Ua.WebApi.Api
         /// 
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="transferSubscriptionsRequest">TransferSubscriptionsRequestMessage (optional)</param>
+        /// <param name="transferSubscriptionsRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.7/#5.14.7.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of TransferSubscriptionsResponse</returns>
         ApiResponse<TransferSubscriptionsResponse> TransferSubscriptionsWithHttpInfo(TransferSubscriptionsRequest transferSubscriptionsRequest = default(TransferSubscriptionsRequest), int operationIndex = 0);
@@ -531,7 +531,7 @@ namespace Opc.Ua.WebApi.Api
         /// 
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="translateBrowsePathsToNodeIdsRequest">TranslateBrowsePathsToNodeIdsRequestMessage (optional)</param>
+        /// <param name="translateBrowsePathsToNodeIdsRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.9.4/#5.9.4.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>TranslateBrowsePathsToNodeIdsResponse</returns>
         TranslateBrowsePathsToNodeIdsResponse TranslateBrowsePathsToNodeIds(TranslateBrowsePathsToNodeIdsRequest translateBrowsePathsToNodeIdsRequest = default(TranslateBrowsePathsToNodeIdsRequest), int operationIndex = 0);
@@ -543,7 +543,7 @@ namespace Opc.Ua.WebApi.Api
         /// 
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="translateBrowsePathsToNodeIdsRequest">TranslateBrowsePathsToNodeIdsRequestMessage (optional)</param>
+        /// <param name="translateBrowsePathsToNodeIdsRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.9.4/#5.9.4.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of TranslateBrowsePathsToNodeIdsResponse</returns>
         ApiResponse<TranslateBrowsePathsToNodeIdsResponse> TranslateBrowsePathsToNodeIdsWithHttpInfo(TranslateBrowsePathsToNodeIdsRequest translateBrowsePathsToNodeIdsRequest = default(TranslateBrowsePathsToNodeIdsRequest), int operationIndex = 0);
@@ -551,7 +551,7 @@ namespace Opc.Ua.WebApi.Api
         /// 
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="unregisterNodesRequest">UnregisterNodesRequestMessage (optional)</param>
+        /// <param name="unregisterNodesRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.9.6/#5.9.6.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>UnregisterNodesResponse</returns>
         UnregisterNodesResponse UnregisterNodes(UnregisterNodesRequest unregisterNodesRequest = default(UnregisterNodesRequest), int operationIndex = 0);
@@ -563,7 +563,7 @@ namespace Opc.Ua.WebApi.Api
         /// 
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="unregisterNodesRequest">UnregisterNodesRequestMessage (optional)</param>
+        /// <param name="unregisterNodesRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.9.6/#5.9.6.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of UnregisterNodesResponse</returns>
         ApiResponse<UnregisterNodesResponse> UnregisterNodesWithHttpInfo(UnregisterNodesRequest unregisterNodesRequest = default(UnregisterNodesRequest), int operationIndex = 0);
@@ -571,7 +571,7 @@ namespace Opc.Ua.WebApi.Api
         /// 
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="writeRequest">WriteRequestMessage (optional)</param>
+        /// <param name="writeRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.11.4/#5.11.4.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>WriteResponse</returns>
         WriteResponse Write(WriteRequest writeRequest = default(WriteRequest), int operationIndex = 0);
@@ -583,7 +583,7 @@ namespace Opc.Ua.WebApi.Api
         /// 
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="writeRequest">WriteRequestMessage (optional)</param>
+        /// <param name="writeRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.11.4/#5.11.4.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of WriteResponse</returns>
         ApiResponse<WriteResponse> WriteWithHttpInfo(WriteRequest writeRequest = default(WriteRequest), int operationIndex = 0);
@@ -603,7 +603,7 @@ namespace Opc.Ua.WebApi.Api
         /// 
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="activateSessionRequest">ActivateSessionRequestMessage (optional)</param>
+        /// <param name="activateSessionRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.7.3/#5.7.3.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ActivateSessionResponse</returns>
@@ -616,7 +616,7 @@ namespace Opc.Ua.WebApi.Api
         /// 
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="activateSessionRequest">ActivateSessionRequestMessage (optional)</param>
+        /// <param name="activateSessionRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.7.3/#5.7.3.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ActivateSessionResponse)</returns>
@@ -628,7 +628,7 @@ namespace Opc.Ua.WebApi.Api
         /// 
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="browseRequest">BrowseRequestMessage (optional)</param>
+        /// <param name="browseRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.9.2/#5.9.2.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of BrowseResponse</returns>
@@ -641,7 +641,7 @@ namespace Opc.Ua.WebApi.Api
         /// 
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="browseRequest">BrowseRequestMessage (optional)</param>
+        /// <param name="browseRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.9.2/#5.9.2.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (BrowseResponse)</returns>
@@ -653,7 +653,7 @@ namespace Opc.Ua.WebApi.Api
         /// 
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="browseNextRequest">BrowseNextRequestMessage (optional)</param>
+        /// <param name="browseNextRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.9.3/#5.9.3.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of BrowseNextResponse</returns>
@@ -666,7 +666,7 @@ namespace Opc.Ua.WebApi.Api
         /// 
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="browseNextRequest">BrowseNextRequestMessage (optional)</param>
+        /// <param name="browseNextRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.9.3/#5.9.3.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (BrowseNextResponse)</returns>
@@ -678,7 +678,7 @@ namespace Opc.Ua.WebApi.Api
         /// 
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callRequest">CallRequestMessage (optional)</param>
+        /// <param name="callRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.12.2/#5.12.2.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CallResponse</returns>
@@ -691,7 +691,7 @@ namespace Opc.Ua.WebApi.Api
         /// 
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callRequest">CallRequestMessage (optional)</param>
+        /// <param name="callRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.12.2/#5.12.2.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CallResponse)</returns>
@@ -703,7 +703,7 @@ namespace Opc.Ua.WebApi.Api
         /// 
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancelRequest">CancelRequestMessage (optional)</param>
+        /// <param name="cancelRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.7.5/#5.7.5.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CancelResponse</returns>
@@ -716,7 +716,7 @@ namespace Opc.Ua.WebApi.Api
         /// 
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancelRequest">CancelRequestMessage (optional)</param>
+        /// <param name="cancelRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.7.5/#5.7.5.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CancelResponse)</returns>
@@ -728,7 +728,7 @@ namespace Opc.Ua.WebApi.Api
         /// 
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="closeSessionRequest">CloseSessionRequestMessage (optional)</param>
+        /// <param name="closeSessionRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.7.4/#5.7.4.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CloseSessionResponse</returns>
@@ -741,7 +741,7 @@ namespace Opc.Ua.WebApi.Api
         /// 
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="closeSessionRequest">CloseSessionRequestMessage (optional)</param>
+        /// <param name="closeSessionRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.7.4/#5.7.4.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CloseSessionResponse)</returns>
@@ -753,7 +753,7 @@ namespace Opc.Ua.WebApi.Api
         /// 
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="createMonitoredItemsRequest">CreateMonitoredItemsRequestMessage (optional)</param>
+        /// <param name="createMonitoredItemsRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.13.2/#5.13.2.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CreateMonitoredItemsResponse</returns>
@@ -766,7 +766,7 @@ namespace Opc.Ua.WebApi.Api
         /// 
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="createMonitoredItemsRequest">CreateMonitoredItemsRequestMessage (optional)</param>
+        /// <param name="createMonitoredItemsRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.13.2/#5.13.2.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CreateMonitoredItemsResponse)</returns>
@@ -778,7 +778,7 @@ namespace Opc.Ua.WebApi.Api
         /// 
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="createSessionRequest">CreateSessionRequestMessage (optional)</param>
+        /// <param name="createSessionRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.7.2/#5.7.2.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CreateSessionResponse</returns>
@@ -791,7 +791,7 @@ namespace Opc.Ua.WebApi.Api
         /// 
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="createSessionRequest">CreateSessionRequestMessage (optional)</param>
+        /// <param name="createSessionRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.7.2/#5.7.2.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CreateSessionResponse)</returns>
@@ -803,7 +803,7 @@ namespace Opc.Ua.WebApi.Api
         /// 
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="createSubscriptionRequest">CreateSubscriptionRequestMessage (optional)</param>
+        /// <param name="createSubscriptionRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.2/#5.14.2.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CreateSubscriptionResponse</returns>
@@ -816,7 +816,7 @@ namespace Opc.Ua.WebApi.Api
         /// 
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="createSubscriptionRequest">CreateSubscriptionRequestMessage (optional)</param>
+        /// <param name="createSubscriptionRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.2/#5.14.2.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CreateSubscriptionResponse)</returns>
@@ -828,7 +828,7 @@ namespace Opc.Ua.WebApi.Api
         /// 
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="deleteMonitoredItemsRequest">DeleteMonitoredItemsRequestMessage (optional)</param>
+        /// <param name="deleteMonitoredItemsRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.13.6/#5.13.6.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of DeleteMonitoredItemsResponse</returns>
@@ -841,7 +841,7 @@ namespace Opc.Ua.WebApi.Api
         /// 
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="deleteMonitoredItemsRequest">DeleteMonitoredItemsRequestMessage (optional)</param>
+        /// <param name="deleteMonitoredItemsRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.13.6/#5.13.6.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (DeleteMonitoredItemsResponse)</returns>
@@ -853,7 +853,7 @@ namespace Opc.Ua.WebApi.Api
         /// 
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="deleteSubscriptionsRequest">DeleteSubscriptionsRequestMessage (optional)</param>
+        /// <param name="deleteSubscriptionsRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.8/#5.14.8.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of DeleteSubscriptionsResponse</returns>
@@ -866,7 +866,7 @@ namespace Opc.Ua.WebApi.Api
         /// 
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="deleteSubscriptionsRequest">DeleteSubscriptionsRequestMessage (optional)</param>
+        /// <param name="deleteSubscriptionsRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.8/#5.14.8.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (DeleteSubscriptionsResponse)</returns>
@@ -878,7 +878,7 @@ namespace Opc.Ua.WebApi.Api
         /// 
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="findServersRequest">FindServersRequestMessage (optional)</param>
+        /// <param name="findServersRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.5.2/#5.5.2.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of FindServersResponse</returns>
@@ -891,7 +891,7 @@ namespace Opc.Ua.WebApi.Api
         /// 
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="findServersRequest">FindServersRequestMessage (optional)</param>
+        /// <param name="findServersRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.5.2/#5.5.2.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (FindServersResponse)</returns>
@@ -903,7 +903,7 @@ namespace Opc.Ua.WebApi.Api
         /// 
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="getEndpointsRequest">GetEndpointsRequestMessage (optional)</param>
+        /// <param name="getEndpointsRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.5.4/#5.5.4.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of GetEndpointsResponse</returns>
@@ -916,7 +916,7 @@ namespace Opc.Ua.WebApi.Api
         /// 
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="getEndpointsRequest">GetEndpointsRequestMessage (optional)</param>
+        /// <param name="getEndpointsRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.5.4/#5.5.4.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (GetEndpointsResponse)</returns>
@@ -928,7 +928,7 @@ namespace Opc.Ua.WebApi.Api
         /// 
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="historyReadRequest">HistoryReadRequestMessage (optional)</param>
+        /// <param name="historyReadRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.11.3/#5.11.3.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of HistoryReadResponse</returns>
@@ -941,7 +941,7 @@ namespace Opc.Ua.WebApi.Api
         /// 
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="historyReadRequest">HistoryReadRequestMessage (optional)</param>
+        /// <param name="historyReadRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.11.3/#5.11.3.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (HistoryReadResponse)</returns>
@@ -953,7 +953,7 @@ namespace Opc.Ua.WebApi.Api
         /// 
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="historyUpdateRequest">HistoryUpdateRequestMessage (optional)</param>
+        /// <param name="historyUpdateRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.11.5/#5.11.5.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of HistoryUpdateResponse</returns>
@@ -966,7 +966,7 @@ namespace Opc.Ua.WebApi.Api
         /// 
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="historyUpdateRequest">HistoryUpdateRequestMessage (optional)</param>
+        /// <param name="historyUpdateRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.11.5/#5.11.5.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (HistoryUpdateResponse)</returns>
@@ -978,7 +978,7 @@ namespace Opc.Ua.WebApi.Api
         /// 
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="modifyMonitoredItemsRequest">ModifyMonitoredItemsRequestMessage (optional)</param>
+        /// <param name="modifyMonitoredItemsRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.13.3/#5.13.3.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ModifyMonitoredItemsResponse</returns>
@@ -991,7 +991,7 @@ namespace Opc.Ua.WebApi.Api
         /// 
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="modifyMonitoredItemsRequest">ModifyMonitoredItemsRequestMessage (optional)</param>
+        /// <param name="modifyMonitoredItemsRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.13.3/#5.13.3.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ModifyMonitoredItemsResponse)</returns>
@@ -1003,7 +1003,7 @@ namespace Opc.Ua.WebApi.Api
         /// 
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="modifySubscriptionRequest">ModifySubscriptionRequestMessage (optional)</param>
+        /// <param name="modifySubscriptionRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.3/#5.14.3.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ModifySubscriptionResponse</returns>
@@ -1016,7 +1016,7 @@ namespace Opc.Ua.WebApi.Api
         /// 
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="modifySubscriptionRequest">ModifySubscriptionRequestMessage (optional)</param>
+        /// <param name="modifySubscriptionRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.3/#5.14.3.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ModifySubscriptionResponse)</returns>
@@ -1028,7 +1028,7 @@ namespace Opc.Ua.WebApi.Api
         /// 
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="publishRequest">PublishRequestMessage (optional)</param>
+        /// <param name="publishRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.5/#5.14.5.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of PublishResponse</returns>
@@ -1041,7 +1041,7 @@ namespace Opc.Ua.WebApi.Api
         /// 
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="publishRequest">PublishRequestMessage (optional)</param>
+        /// <param name="publishRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.5/#5.14.5.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (PublishResponse)</returns>
@@ -1053,7 +1053,7 @@ namespace Opc.Ua.WebApi.Api
         /// 
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="readRequest">ReadRequestMessage (optional)</param>
+        /// <param name="readRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.11.2/#5.11.2.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ReadResponse</returns>
@@ -1066,7 +1066,7 @@ namespace Opc.Ua.WebApi.Api
         /// 
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="readRequest">ReadRequestMessage (optional)</param>
+        /// <param name="readRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.11.2/#5.11.2.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ReadResponse)</returns>
@@ -1078,7 +1078,7 @@ namespace Opc.Ua.WebApi.Api
         /// 
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="registerNodesRequest">RegisterNodesRequestMessage (optional)</param>
+        /// <param name="registerNodesRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.9.5/#5.9.5.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of RegisterNodesResponse</returns>
@@ -1091,7 +1091,7 @@ namespace Opc.Ua.WebApi.Api
         /// 
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="registerNodesRequest">RegisterNodesRequestMessage (optional)</param>
+        /// <param name="registerNodesRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.9.5/#5.9.5.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RegisterNodesResponse)</returns>
@@ -1103,7 +1103,7 @@ namespace Opc.Ua.WebApi.Api
         /// 
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="republishRequest">RepublishRequestMessage (optional)</param>
+        /// <param name="republishRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.6/#5.14.6.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of RepublishResponse</returns>
@@ -1116,7 +1116,7 @@ namespace Opc.Ua.WebApi.Api
         /// 
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="republishRequest">RepublishRequestMessage (optional)</param>
+        /// <param name="republishRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.6/#5.14.6.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RepublishResponse)</returns>
@@ -1128,7 +1128,7 @@ namespace Opc.Ua.WebApi.Api
         /// 
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="setMonitoringModeRequest">SetMonitoringModeRequestMessage (optional)</param>
+        /// <param name="setMonitoringModeRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.13.4/#5.13.4.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of SetMonitoringModeResponse</returns>
@@ -1141,7 +1141,7 @@ namespace Opc.Ua.WebApi.Api
         /// 
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="setMonitoringModeRequest">SetMonitoringModeRequestMessage (optional)</param>
+        /// <param name="setMonitoringModeRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.13.4/#5.13.4.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (SetMonitoringModeResponse)</returns>
@@ -1153,7 +1153,7 @@ namespace Opc.Ua.WebApi.Api
         /// 
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="setPublishingModeRequest">SetPublishingModeRequestMessage (optional)</param>
+        /// <param name="setPublishingModeRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.4/#5.14.4.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of SetPublishingModeResponse</returns>
@@ -1166,7 +1166,7 @@ namespace Opc.Ua.WebApi.Api
         /// 
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="setPublishingModeRequest">SetPublishingModeRequestMessage (optional)</param>
+        /// <param name="setPublishingModeRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.4/#5.14.4.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (SetPublishingModeResponse)</returns>
@@ -1178,7 +1178,7 @@ namespace Opc.Ua.WebApi.Api
         /// 
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="setTriggeringRequest">SetTriggeringRequestMessage (optional)</param>
+        /// <param name="setTriggeringRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.13.5/#5.13.5.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of SetTriggeringResponse</returns>
@@ -1191,7 +1191,7 @@ namespace Opc.Ua.WebApi.Api
         /// 
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="setTriggeringRequest">SetTriggeringRequestMessage (optional)</param>
+        /// <param name="setTriggeringRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.13.5/#5.13.5.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (SetTriggeringResponse)</returns>
@@ -1203,7 +1203,7 @@ namespace Opc.Ua.WebApi.Api
         /// 
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="transferSubscriptionsRequest">TransferSubscriptionsRequestMessage (optional)</param>
+        /// <param name="transferSubscriptionsRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.7/#5.14.7.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of TransferSubscriptionsResponse</returns>
@@ -1216,7 +1216,7 @@ namespace Opc.Ua.WebApi.Api
         /// 
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="transferSubscriptionsRequest">TransferSubscriptionsRequestMessage (optional)</param>
+        /// <param name="transferSubscriptionsRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.7/#5.14.7.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (TransferSubscriptionsResponse)</returns>
@@ -1228,7 +1228,7 @@ namespace Opc.Ua.WebApi.Api
         /// 
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="translateBrowsePathsToNodeIdsRequest">TranslateBrowsePathsToNodeIdsRequestMessage (optional)</param>
+        /// <param name="translateBrowsePathsToNodeIdsRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.9.4/#5.9.4.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of TranslateBrowsePathsToNodeIdsResponse</returns>
@@ -1241,7 +1241,7 @@ namespace Opc.Ua.WebApi.Api
         /// 
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="translateBrowsePathsToNodeIdsRequest">TranslateBrowsePathsToNodeIdsRequestMessage (optional)</param>
+        /// <param name="translateBrowsePathsToNodeIdsRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.9.4/#5.9.4.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (TranslateBrowsePathsToNodeIdsResponse)</returns>
@@ -1253,7 +1253,7 @@ namespace Opc.Ua.WebApi.Api
         /// 
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="unregisterNodesRequest">UnregisterNodesRequestMessage (optional)</param>
+        /// <param name="unregisterNodesRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.9.6/#5.9.6.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of UnregisterNodesResponse</returns>
@@ -1266,7 +1266,7 @@ namespace Opc.Ua.WebApi.Api
         /// 
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="unregisterNodesRequest">UnregisterNodesRequestMessage (optional)</param>
+        /// <param name="unregisterNodesRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.9.6/#5.9.6.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (UnregisterNodesResponse)</returns>
@@ -1278,7 +1278,7 @@ namespace Opc.Ua.WebApi.Api
         /// 
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="writeRequest">WriteRequestMessage (optional)</param>
+        /// <param name="writeRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.11.4/#5.11.4.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of WriteResponse</returns>
@@ -1291,7 +1291,7 @@ namespace Opc.Ua.WebApi.Api
         /// 
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="writeRequest">WriteRequestMessage (optional)</param>
+        /// <param name="writeRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.11.4/#5.11.4.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (WriteResponse)</returns>
@@ -1420,7 +1420,7 @@ namespace Opc.Ua.WebApi.Api
         ///  
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="activateSessionRequest">ActivateSessionRequestMessage (optional)</param>
+        /// <param name="activateSessionRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.7.3/#5.7.3.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ActivateSessionResponse</returns>
         public ActivateSessionResponse ActivateSession(ActivateSessionRequest activateSessionRequest = default(ActivateSessionRequest), int operationIndex = 0)
@@ -1433,7 +1433,7 @@ namespace Opc.Ua.WebApi.Api
         ///  
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="activateSessionRequest">ActivateSessionRequestMessage (optional)</param>
+        /// <param name="activateSessionRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.7.3/#5.7.3.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ActivateSessionResponse</returns>
         public Opc.Ua.WebApi.Client.ApiResponse<ActivateSessionResponse> ActivateSessionWithHttpInfo(ActivateSessionRequest activateSessionRequest = default(ActivateSessionRequest), int operationIndex = 0)
@@ -1485,7 +1485,7 @@ namespace Opc.Ua.WebApi.Api
         ///  
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="activateSessionRequest">ActivateSessionRequestMessage (optional)</param>
+        /// <param name="activateSessionRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.7.3/#5.7.3.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ActivateSessionResponse</returns>
@@ -1499,7 +1499,7 @@ namespace Opc.Ua.WebApi.Api
         ///  
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="activateSessionRequest">ActivateSessionRequestMessage (optional)</param>
+        /// <param name="activateSessionRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.7.3/#5.7.3.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ActivateSessionResponse)</returns>
@@ -1554,7 +1554,7 @@ namespace Opc.Ua.WebApi.Api
         ///  
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="browseRequest">BrowseRequestMessage (optional)</param>
+        /// <param name="browseRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.9.2/#5.9.2.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>BrowseResponse</returns>
         public BrowseResponse Browse(BrowseRequest browseRequest = default(BrowseRequest), int operationIndex = 0)
@@ -1567,7 +1567,7 @@ namespace Opc.Ua.WebApi.Api
         ///  
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="browseRequest">BrowseRequestMessage (optional)</param>
+        /// <param name="browseRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.9.2/#5.9.2.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of BrowseResponse</returns>
         public Opc.Ua.WebApi.Client.ApiResponse<BrowseResponse> BrowseWithHttpInfo(BrowseRequest browseRequest = default(BrowseRequest), int operationIndex = 0)
@@ -1619,7 +1619,7 @@ namespace Opc.Ua.WebApi.Api
         ///  
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="browseRequest">BrowseRequestMessage (optional)</param>
+        /// <param name="browseRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.9.2/#5.9.2.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of BrowseResponse</returns>
@@ -1633,7 +1633,7 @@ namespace Opc.Ua.WebApi.Api
         ///  
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="browseRequest">BrowseRequestMessage (optional)</param>
+        /// <param name="browseRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.9.2/#5.9.2.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (BrowseResponse)</returns>
@@ -1688,7 +1688,7 @@ namespace Opc.Ua.WebApi.Api
         ///  
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="browseNextRequest">BrowseNextRequestMessage (optional)</param>
+        /// <param name="browseNextRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.9.3/#5.9.3.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>BrowseNextResponse</returns>
         public BrowseNextResponse BrowseNext(BrowseNextRequest browseNextRequest = default(BrowseNextRequest), int operationIndex = 0)
@@ -1701,7 +1701,7 @@ namespace Opc.Ua.WebApi.Api
         ///  
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="browseNextRequest">BrowseNextRequestMessage (optional)</param>
+        /// <param name="browseNextRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.9.3/#5.9.3.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of BrowseNextResponse</returns>
         public Opc.Ua.WebApi.Client.ApiResponse<BrowseNextResponse> BrowseNextWithHttpInfo(BrowseNextRequest browseNextRequest = default(BrowseNextRequest), int operationIndex = 0)
@@ -1753,7 +1753,7 @@ namespace Opc.Ua.WebApi.Api
         ///  
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="browseNextRequest">BrowseNextRequestMessage (optional)</param>
+        /// <param name="browseNextRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.9.3/#5.9.3.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of BrowseNextResponse</returns>
@@ -1767,7 +1767,7 @@ namespace Opc.Ua.WebApi.Api
         ///  
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="browseNextRequest">BrowseNextRequestMessage (optional)</param>
+        /// <param name="browseNextRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.9.3/#5.9.3.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (BrowseNextResponse)</returns>
@@ -1822,7 +1822,7 @@ namespace Opc.Ua.WebApi.Api
         ///  
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callRequest">CallRequestMessage (optional)</param>
+        /// <param name="callRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.12.2/#5.12.2.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>CallResponse</returns>
         public CallResponse Call(CallRequest callRequest = default(CallRequest), int operationIndex = 0)
@@ -1835,7 +1835,7 @@ namespace Opc.Ua.WebApi.Api
         ///  
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callRequest">CallRequestMessage (optional)</param>
+        /// <param name="callRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.12.2/#5.12.2.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of CallResponse</returns>
         public Opc.Ua.WebApi.Client.ApiResponse<CallResponse> CallWithHttpInfo(CallRequest callRequest = default(CallRequest), int operationIndex = 0)
@@ -1887,7 +1887,7 @@ namespace Opc.Ua.WebApi.Api
         ///  
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callRequest">CallRequestMessage (optional)</param>
+        /// <param name="callRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.12.2/#5.12.2.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CallResponse</returns>
@@ -1901,7 +1901,7 @@ namespace Opc.Ua.WebApi.Api
         ///  
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="callRequest">CallRequestMessage (optional)</param>
+        /// <param name="callRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.12.2/#5.12.2.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CallResponse)</returns>
@@ -1956,7 +1956,7 @@ namespace Opc.Ua.WebApi.Api
         ///  
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancelRequest">CancelRequestMessage (optional)</param>
+        /// <param name="cancelRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.7.5/#5.7.5.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>CancelResponse</returns>
         public CancelResponse Cancel(CancelRequest cancelRequest = default(CancelRequest), int operationIndex = 0)
@@ -1969,7 +1969,7 @@ namespace Opc.Ua.WebApi.Api
         ///  
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancelRequest">CancelRequestMessage (optional)</param>
+        /// <param name="cancelRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.7.5/#5.7.5.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of CancelResponse</returns>
         public Opc.Ua.WebApi.Client.ApiResponse<CancelResponse> CancelWithHttpInfo(CancelRequest cancelRequest = default(CancelRequest), int operationIndex = 0)
@@ -2021,7 +2021,7 @@ namespace Opc.Ua.WebApi.Api
         ///  
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancelRequest">CancelRequestMessage (optional)</param>
+        /// <param name="cancelRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.7.5/#5.7.5.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CancelResponse</returns>
@@ -2035,7 +2035,7 @@ namespace Opc.Ua.WebApi.Api
         ///  
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="cancelRequest">CancelRequestMessage (optional)</param>
+        /// <param name="cancelRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.7.5/#5.7.5.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CancelResponse)</returns>
@@ -2090,7 +2090,7 @@ namespace Opc.Ua.WebApi.Api
         ///  
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="closeSessionRequest">CloseSessionRequestMessage (optional)</param>
+        /// <param name="closeSessionRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.7.4/#5.7.4.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>CloseSessionResponse</returns>
         public CloseSessionResponse CloseSession(CloseSessionRequest closeSessionRequest = default(CloseSessionRequest), int operationIndex = 0)
@@ -2103,7 +2103,7 @@ namespace Opc.Ua.WebApi.Api
         ///  
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="closeSessionRequest">CloseSessionRequestMessage (optional)</param>
+        /// <param name="closeSessionRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.7.4/#5.7.4.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of CloseSessionResponse</returns>
         public Opc.Ua.WebApi.Client.ApiResponse<CloseSessionResponse> CloseSessionWithHttpInfo(CloseSessionRequest closeSessionRequest = default(CloseSessionRequest), int operationIndex = 0)
@@ -2155,7 +2155,7 @@ namespace Opc.Ua.WebApi.Api
         ///  
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="closeSessionRequest">CloseSessionRequestMessage (optional)</param>
+        /// <param name="closeSessionRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.7.4/#5.7.4.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CloseSessionResponse</returns>
@@ -2169,7 +2169,7 @@ namespace Opc.Ua.WebApi.Api
         ///  
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="closeSessionRequest">CloseSessionRequestMessage (optional)</param>
+        /// <param name="closeSessionRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.7.4/#5.7.4.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CloseSessionResponse)</returns>
@@ -2224,7 +2224,7 @@ namespace Opc.Ua.WebApi.Api
         ///  
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="createMonitoredItemsRequest">CreateMonitoredItemsRequestMessage (optional)</param>
+        /// <param name="createMonitoredItemsRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.13.2/#5.13.2.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>CreateMonitoredItemsResponse</returns>
         public CreateMonitoredItemsResponse CreateMonitoredItems(CreateMonitoredItemsRequest createMonitoredItemsRequest = default(CreateMonitoredItemsRequest), int operationIndex = 0)
@@ -2237,7 +2237,7 @@ namespace Opc.Ua.WebApi.Api
         ///  
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="createMonitoredItemsRequest">CreateMonitoredItemsRequestMessage (optional)</param>
+        /// <param name="createMonitoredItemsRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.13.2/#5.13.2.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of CreateMonitoredItemsResponse</returns>
         public Opc.Ua.WebApi.Client.ApiResponse<CreateMonitoredItemsResponse> CreateMonitoredItemsWithHttpInfo(CreateMonitoredItemsRequest createMonitoredItemsRequest = default(CreateMonitoredItemsRequest), int operationIndex = 0)
@@ -2289,7 +2289,7 @@ namespace Opc.Ua.WebApi.Api
         ///  
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="createMonitoredItemsRequest">CreateMonitoredItemsRequestMessage (optional)</param>
+        /// <param name="createMonitoredItemsRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.13.2/#5.13.2.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CreateMonitoredItemsResponse</returns>
@@ -2303,7 +2303,7 @@ namespace Opc.Ua.WebApi.Api
         ///  
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="createMonitoredItemsRequest">CreateMonitoredItemsRequestMessage (optional)</param>
+        /// <param name="createMonitoredItemsRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.13.2/#5.13.2.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CreateMonitoredItemsResponse)</returns>
@@ -2358,7 +2358,7 @@ namespace Opc.Ua.WebApi.Api
         ///  
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="createSessionRequest">CreateSessionRequestMessage (optional)</param>
+        /// <param name="createSessionRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.7.2/#5.7.2.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>CreateSessionResponse</returns>
         public CreateSessionResponse CreateSession(CreateSessionRequest createSessionRequest = default(CreateSessionRequest), int operationIndex = 0)
@@ -2371,7 +2371,7 @@ namespace Opc.Ua.WebApi.Api
         ///  
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="createSessionRequest">CreateSessionRequestMessage (optional)</param>
+        /// <param name="createSessionRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.7.2/#5.7.2.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of CreateSessionResponse</returns>
         public Opc.Ua.WebApi.Client.ApiResponse<CreateSessionResponse> CreateSessionWithHttpInfo(CreateSessionRequest createSessionRequest = default(CreateSessionRequest), int operationIndex = 0)
@@ -2423,7 +2423,7 @@ namespace Opc.Ua.WebApi.Api
         ///  
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="createSessionRequest">CreateSessionRequestMessage (optional)</param>
+        /// <param name="createSessionRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.7.2/#5.7.2.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CreateSessionResponse</returns>
@@ -2437,7 +2437,7 @@ namespace Opc.Ua.WebApi.Api
         ///  
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="createSessionRequest">CreateSessionRequestMessage (optional)</param>
+        /// <param name="createSessionRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.7.2/#5.7.2.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CreateSessionResponse)</returns>
@@ -2492,7 +2492,7 @@ namespace Opc.Ua.WebApi.Api
         ///  
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="createSubscriptionRequest">CreateSubscriptionRequestMessage (optional)</param>
+        /// <param name="createSubscriptionRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.2/#5.14.2.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>CreateSubscriptionResponse</returns>
         public CreateSubscriptionResponse CreateSubscription(CreateSubscriptionRequest createSubscriptionRequest = default(CreateSubscriptionRequest), int operationIndex = 0)
@@ -2505,7 +2505,7 @@ namespace Opc.Ua.WebApi.Api
         ///  
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="createSubscriptionRequest">CreateSubscriptionRequestMessage (optional)</param>
+        /// <param name="createSubscriptionRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.2/#5.14.2.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of CreateSubscriptionResponse</returns>
         public Opc.Ua.WebApi.Client.ApiResponse<CreateSubscriptionResponse> CreateSubscriptionWithHttpInfo(CreateSubscriptionRequest createSubscriptionRequest = default(CreateSubscriptionRequest), int operationIndex = 0)
@@ -2557,7 +2557,7 @@ namespace Opc.Ua.WebApi.Api
         ///  
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="createSubscriptionRequest">CreateSubscriptionRequestMessage (optional)</param>
+        /// <param name="createSubscriptionRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.2/#5.14.2.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CreateSubscriptionResponse</returns>
@@ -2571,7 +2571,7 @@ namespace Opc.Ua.WebApi.Api
         ///  
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="createSubscriptionRequest">CreateSubscriptionRequestMessage (optional)</param>
+        /// <param name="createSubscriptionRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.2/#5.14.2.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CreateSubscriptionResponse)</returns>
@@ -2626,7 +2626,7 @@ namespace Opc.Ua.WebApi.Api
         ///  
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="deleteMonitoredItemsRequest">DeleteMonitoredItemsRequestMessage (optional)</param>
+        /// <param name="deleteMonitoredItemsRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.13.6/#5.13.6.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>DeleteMonitoredItemsResponse</returns>
         public DeleteMonitoredItemsResponse DeleteMonitoredItems(DeleteMonitoredItemsRequest deleteMonitoredItemsRequest = default(DeleteMonitoredItemsRequest), int operationIndex = 0)
@@ -2639,7 +2639,7 @@ namespace Opc.Ua.WebApi.Api
         ///  
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="deleteMonitoredItemsRequest">DeleteMonitoredItemsRequestMessage (optional)</param>
+        /// <param name="deleteMonitoredItemsRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.13.6/#5.13.6.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of DeleteMonitoredItemsResponse</returns>
         public Opc.Ua.WebApi.Client.ApiResponse<DeleteMonitoredItemsResponse> DeleteMonitoredItemsWithHttpInfo(DeleteMonitoredItemsRequest deleteMonitoredItemsRequest = default(DeleteMonitoredItemsRequest), int operationIndex = 0)
@@ -2691,7 +2691,7 @@ namespace Opc.Ua.WebApi.Api
         ///  
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="deleteMonitoredItemsRequest">DeleteMonitoredItemsRequestMessage (optional)</param>
+        /// <param name="deleteMonitoredItemsRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.13.6/#5.13.6.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of DeleteMonitoredItemsResponse</returns>
@@ -2705,7 +2705,7 @@ namespace Opc.Ua.WebApi.Api
         ///  
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="deleteMonitoredItemsRequest">DeleteMonitoredItemsRequestMessage (optional)</param>
+        /// <param name="deleteMonitoredItemsRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.13.6/#5.13.6.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (DeleteMonitoredItemsResponse)</returns>
@@ -2760,7 +2760,7 @@ namespace Opc.Ua.WebApi.Api
         ///  
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="deleteSubscriptionsRequest">DeleteSubscriptionsRequestMessage (optional)</param>
+        /// <param name="deleteSubscriptionsRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.8/#5.14.8.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>DeleteSubscriptionsResponse</returns>
         public DeleteSubscriptionsResponse DeleteSubscriptions(DeleteSubscriptionsRequest deleteSubscriptionsRequest = default(DeleteSubscriptionsRequest), int operationIndex = 0)
@@ -2773,7 +2773,7 @@ namespace Opc.Ua.WebApi.Api
         ///  
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="deleteSubscriptionsRequest">DeleteSubscriptionsRequestMessage (optional)</param>
+        /// <param name="deleteSubscriptionsRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.8/#5.14.8.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of DeleteSubscriptionsResponse</returns>
         public Opc.Ua.WebApi.Client.ApiResponse<DeleteSubscriptionsResponse> DeleteSubscriptionsWithHttpInfo(DeleteSubscriptionsRequest deleteSubscriptionsRequest = default(DeleteSubscriptionsRequest), int operationIndex = 0)
@@ -2825,7 +2825,7 @@ namespace Opc.Ua.WebApi.Api
         ///  
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="deleteSubscriptionsRequest">DeleteSubscriptionsRequestMessage (optional)</param>
+        /// <param name="deleteSubscriptionsRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.8/#5.14.8.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of DeleteSubscriptionsResponse</returns>
@@ -2839,7 +2839,7 @@ namespace Opc.Ua.WebApi.Api
         ///  
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="deleteSubscriptionsRequest">DeleteSubscriptionsRequestMessage (optional)</param>
+        /// <param name="deleteSubscriptionsRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.8/#5.14.8.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (DeleteSubscriptionsResponse)</returns>
@@ -2894,7 +2894,7 @@ namespace Opc.Ua.WebApi.Api
         ///  
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="findServersRequest">FindServersRequestMessage (optional)</param>
+        /// <param name="findServersRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.5.2/#5.5.2.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>FindServersResponse</returns>
         public FindServersResponse FindServers(FindServersRequest findServersRequest = default(FindServersRequest), int operationIndex = 0)
@@ -2907,7 +2907,7 @@ namespace Opc.Ua.WebApi.Api
         ///  
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="findServersRequest">FindServersRequestMessage (optional)</param>
+        /// <param name="findServersRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.5.2/#5.5.2.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of FindServersResponse</returns>
         public Opc.Ua.WebApi.Client.ApiResponse<FindServersResponse> FindServersWithHttpInfo(FindServersRequest findServersRequest = default(FindServersRequest), int operationIndex = 0)
@@ -2959,7 +2959,7 @@ namespace Opc.Ua.WebApi.Api
         ///  
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="findServersRequest">FindServersRequestMessage (optional)</param>
+        /// <param name="findServersRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.5.2/#5.5.2.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of FindServersResponse</returns>
@@ -2973,7 +2973,7 @@ namespace Opc.Ua.WebApi.Api
         ///  
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="findServersRequest">FindServersRequestMessage (optional)</param>
+        /// <param name="findServersRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.5.2/#5.5.2.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (FindServersResponse)</returns>
@@ -3028,7 +3028,7 @@ namespace Opc.Ua.WebApi.Api
         ///  
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="getEndpointsRequest">GetEndpointsRequestMessage (optional)</param>
+        /// <param name="getEndpointsRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.5.4/#5.5.4.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>GetEndpointsResponse</returns>
         public GetEndpointsResponse GetEndpoints(GetEndpointsRequest getEndpointsRequest = default(GetEndpointsRequest), int operationIndex = 0)
@@ -3041,7 +3041,7 @@ namespace Opc.Ua.WebApi.Api
         ///  
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="getEndpointsRequest">GetEndpointsRequestMessage (optional)</param>
+        /// <param name="getEndpointsRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.5.4/#5.5.4.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of GetEndpointsResponse</returns>
         public Opc.Ua.WebApi.Client.ApiResponse<GetEndpointsResponse> GetEndpointsWithHttpInfo(GetEndpointsRequest getEndpointsRequest = default(GetEndpointsRequest), int operationIndex = 0)
@@ -3093,7 +3093,7 @@ namespace Opc.Ua.WebApi.Api
         ///  
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="getEndpointsRequest">GetEndpointsRequestMessage (optional)</param>
+        /// <param name="getEndpointsRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.5.4/#5.5.4.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of GetEndpointsResponse</returns>
@@ -3107,7 +3107,7 @@ namespace Opc.Ua.WebApi.Api
         ///  
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="getEndpointsRequest">GetEndpointsRequestMessage (optional)</param>
+        /// <param name="getEndpointsRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.5.4/#5.5.4.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (GetEndpointsResponse)</returns>
@@ -3162,7 +3162,7 @@ namespace Opc.Ua.WebApi.Api
         ///  
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="historyReadRequest">HistoryReadRequestMessage (optional)</param>
+        /// <param name="historyReadRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.11.3/#5.11.3.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>HistoryReadResponse</returns>
         public HistoryReadResponse HistoryRead(HistoryReadRequest historyReadRequest = default(HistoryReadRequest), int operationIndex = 0)
@@ -3175,7 +3175,7 @@ namespace Opc.Ua.WebApi.Api
         ///  
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="historyReadRequest">HistoryReadRequestMessage (optional)</param>
+        /// <param name="historyReadRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.11.3/#5.11.3.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of HistoryReadResponse</returns>
         public Opc.Ua.WebApi.Client.ApiResponse<HistoryReadResponse> HistoryReadWithHttpInfo(HistoryReadRequest historyReadRequest = default(HistoryReadRequest), int operationIndex = 0)
@@ -3227,7 +3227,7 @@ namespace Opc.Ua.WebApi.Api
         ///  
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="historyReadRequest">HistoryReadRequestMessage (optional)</param>
+        /// <param name="historyReadRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.11.3/#5.11.3.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of HistoryReadResponse</returns>
@@ -3241,7 +3241,7 @@ namespace Opc.Ua.WebApi.Api
         ///  
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="historyReadRequest">HistoryReadRequestMessage (optional)</param>
+        /// <param name="historyReadRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.11.3/#5.11.3.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (HistoryReadResponse)</returns>
@@ -3296,7 +3296,7 @@ namespace Opc.Ua.WebApi.Api
         ///  
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="historyUpdateRequest">HistoryUpdateRequestMessage (optional)</param>
+        /// <param name="historyUpdateRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.11.5/#5.11.5.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>HistoryUpdateResponse</returns>
         public HistoryUpdateResponse HistoryUpdate(HistoryUpdateRequest historyUpdateRequest = default(HistoryUpdateRequest), int operationIndex = 0)
@@ -3309,7 +3309,7 @@ namespace Opc.Ua.WebApi.Api
         ///  
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="historyUpdateRequest">HistoryUpdateRequestMessage (optional)</param>
+        /// <param name="historyUpdateRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.11.5/#5.11.5.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of HistoryUpdateResponse</returns>
         public Opc.Ua.WebApi.Client.ApiResponse<HistoryUpdateResponse> HistoryUpdateWithHttpInfo(HistoryUpdateRequest historyUpdateRequest = default(HistoryUpdateRequest), int operationIndex = 0)
@@ -3361,7 +3361,7 @@ namespace Opc.Ua.WebApi.Api
         ///  
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="historyUpdateRequest">HistoryUpdateRequestMessage (optional)</param>
+        /// <param name="historyUpdateRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.11.5/#5.11.5.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of HistoryUpdateResponse</returns>
@@ -3375,7 +3375,7 @@ namespace Opc.Ua.WebApi.Api
         ///  
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="historyUpdateRequest">HistoryUpdateRequestMessage (optional)</param>
+        /// <param name="historyUpdateRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.11.5/#5.11.5.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (HistoryUpdateResponse)</returns>
@@ -3430,7 +3430,7 @@ namespace Opc.Ua.WebApi.Api
         ///  
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="modifyMonitoredItemsRequest">ModifyMonitoredItemsRequestMessage (optional)</param>
+        /// <param name="modifyMonitoredItemsRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.13.3/#5.13.3.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ModifyMonitoredItemsResponse</returns>
         public ModifyMonitoredItemsResponse ModifyMonitoredItems(ModifyMonitoredItemsRequest modifyMonitoredItemsRequest = default(ModifyMonitoredItemsRequest), int operationIndex = 0)
@@ -3443,7 +3443,7 @@ namespace Opc.Ua.WebApi.Api
         ///  
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="modifyMonitoredItemsRequest">ModifyMonitoredItemsRequestMessage (optional)</param>
+        /// <param name="modifyMonitoredItemsRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.13.3/#5.13.3.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ModifyMonitoredItemsResponse</returns>
         public Opc.Ua.WebApi.Client.ApiResponse<ModifyMonitoredItemsResponse> ModifyMonitoredItemsWithHttpInfo(ModifyMonitoredItemsRequest modifyMonitoredItemsRequest = default(ModifyMonitoredItemsRequest), int operationIndex = 0)
@@ -3495,7 +3495,7 @@ namespace Opc.Ua.WebApi.Api
         ///  
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="modifyMonitoredItemsRequest">ModifyMonitoredItemsRequestMessage (optional)</param>
+        /// <param name="modifyMonitoredItemsRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.13.3/#5.13.3.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ModifyMonitoredItemsResponse</returns>
@@ -3509,7 +3509,7 @@ namespace Opc.Ua.WebApi.Api
         ///  
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="modifyMonitoredItemsRequest">ModifyMonitoredItemsRequestMessage (optional)</param>
+        /// <param name="modifyMonitoredItemsRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.13.3/#5.13.3.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ModifyMonitoredItemsResponse)</returns>
@@ -3564,7 +3564,7 @@ namespace Opc.Ua.WebApi.Api
         ///  
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="modifySubscriptionRequest">ModifySubscriptionRequestMessage (optional)</param>
+        /// <param name="modifySubscriptionRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.3/#5.14.3.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ModifySubscriptionResponse</returns>
         public ModifySubscriptionResponse ModifySubscription(ModifySubscriptionRequest modifySubscriptionRequest = default(ModifySubscriptionRequest), int operationIndex = 0)
@@ -3577,7 +3577,7 @@ namespace Opc.Ua.WebApi.Api
         ///  
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="modifySubscriptionRequest">ModifySubscriptionRequestMessage (optional)</param>
+        /// <param name="modifySubscriptionRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.3/#5.14.3.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ModifySubscriptionResponse</returns>
         public Opc.Ua.WebApi.Client.ApiResponse<ModifySubscriptionResponse> ModifySubscriptionWithHttpInfo(ModifySubscriptionRequest modifySubscriptionRequest = default(ModifySubscriptionRequest), int operationIndex = 0)
@@ -3629,7 +3629,7 @@ namespace Opc.Ua.WebApi.Api
         ///  
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="modifySubscriptionRequest">ModifySubscriptionRequestMessage (optional)</param>
+        /// <param name="modifySubscriptionRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.3/#5.14.3.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ModifySubscriptionResponse</returns>
@@ -3643,7 +3643,7 @@ namespace Opc.Ua.WebApi.Api
         ///  
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="modifySubscriptionRequest">ModifySubscriptionRequestMessage (optional)</param>
+        /// <param name="modifySubscriptionRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.3/#5.14.3.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ModifySubscriptionResponse)</returns>
@@ -3698,7 +3698,7 @@ namespace Opc.Ua.WebApi.Api
         ///  
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="publishRequest">PublishRequestMessage (optional)</param>
+        /// <param name="publishRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.5/#5.14.5.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>PublishResponse</returns>
         public PublishResponse Publish(PublishRequest publishRequest = default(PublishRequest), int operationIndex = 0)
@@ -3711,7 +3711,7 @@ namespace Opc.Ua.WebApi.Api
         ///  
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="publishRequest">PublishRequestMessage (optional)</param>
+        /// <param name="publishRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.5/#5.14.5.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of PublishResponse</returns>
         public Opc.Ua.WebApi.Client.ApiResponse<PublishResponse> PublishWithHttpInfo(PublishRequest publishRequest = default(PublishRequest), int operationIndex = 0)
@@ -3763,7 +3763,7 @@ namespace Opc.Ua.WebApi.Api
         ///  
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="publishRequest">PublishRequestMessage (optional)</param>
+        /// <param name="publishRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.5/#5.14.5.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of PublishResponse</returns>
@@ -3777,7 +3777,7 @@ namespace Opc.Ua.WebApi.Api
         ///  
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="publishRequest">PublishRequestMessage (optional)</param>
+        /// <param name="publishRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.5/#5.14.5.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (PublishResponse)</returns>
@@ -3832,7 +3832,7 @@ namespace Opc.Ua.WebApi.Api
         ///  
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="readRequest">ReadRequestMessage (optional)</param>
+        /// <param name="readRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.11.2/#5.11.2.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ReadResponse</returns>
         public ReadResponse Read(ReadRequest readRequest = default(ReadRequest), int operationIndex = 0)
@@ -3845,7 +3845,7 @@ namespace Opc.Ua.WebApi.Api
         ///  
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="readRequest">ReadRequestMessage (optional)</param>
+        /// <param name="readRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.11.2/#5.11.2.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ReadResponse</returns>
         public Opc.Ua.WebApi.Client.ApiResponse<ReadResponse> ReadWithHttpInfo(ReadRequest readRequest = default(ReadRequest), int operationIndex = 0)
@@ -3897,7 +3897,7 @@ namespace Opc.Ua.WebApi.Api
         ///  
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="readRequest">ReadRequestMessage (optional)</param>
+        /// <param name="readRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.11.2/#5.11.2.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ReadResponse</returns>
@@ -3911,7 +3911,7 @@ namespace Opc.Ua.WebApi.Api
         ///  
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="readRequest">ReadRequestMessage (optional)</param>
+        /// <param name="readRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.11.2/#5.11.2.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ReadResponse)</returns>
@@ -3966,7 +3966,7 @@ namespace Opc.Ua.WebApi.Api
         ///  
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="registerNodesRequest">RegisterNodesRequestMessage (optional)</param>
+        /// <param name="registerNodesRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.9.5/#5.9.5.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>RegisterNodesResponse</returns>
         public RegisterNodesResponse RegisterNodes(RegisterNodesRequest registerNodesRequest = default(RegisterNodesRequest), int operationIndex = 0)
@@ -3979,7 +3979,7 @@ namespace Opc.Ua.WebApi.Api
         ///  
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="registerNodesRequest">RegisterNodesRequestMessage (optional)</param>
+        /// <param name="registerNodesRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.9.5/#5.9.5.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of RegisterNodesResponse</returns>
         public Opc.Ua.WebApi.Client.ApiResponse<RegisterNodesResponse> RegisterNodesWithHttpInfo(RegisterNodesRequest registerNodesRequest = default(RegisterNodesRequest), int operationIndex = 0)
@@ -4031,7 +4031,7 @@ namespace Opc.Ua.WebApi.Api
         ///  
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="registerNodesRequest">RegisterNodesRequestMessage (optional)</param>
+        /// <param name="registerNodesRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.9.5/#5.9.5.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of RegisterNodesResponse</returns>
@@ -4045,7 +4045,7 @@ namespace Opc.Ua.WebApi.Api
         ///  
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="registerNodesRequest">RegisterNodesRequestMessage (optional)</param>
+        /// <param name="registerNodesRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.9.5/#5.9.5.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RegisterNodesResponse)</returns>
@@ -4100,7 +4100,7 @@ namespace Opc.Ua.WebApi.Api
         ///  
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="republishRequest">RepublishRequestMessage (optional)</param>
+        /// <param name="republishRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.6/#5.14.6.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>RepublishResponse</returns>
         public RepublishResponse Republish(RepublishRequest republishRequest = default(RepublishRequest), int operationIndex = 0)
@@ -4113,7 +4113,7 @@ namespace Opc.Ua.WebApi.Api
         ///  
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="republishRequest">RepublishRequestMessage (optional)</param>
+        /// <param name="republishRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.6/#5.14.6.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of RepublishResponse</returns>
         public Opc.Ua.WebApi.Client.ApiResponse<RepublishResponse> RepublishWithHttpInfo(RepublishRequest republishRequest = default(RepublishRequest), int operationIndex = 0)
@@ -4165,7 +4165,7 @@ namespace Opc.Ua.WebApi.Api
         ///  
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="republishRequest">RepublishRequestMessage (optional)</param>
+        /// <param name="republishRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.6/#5.14.6.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of RepublishResponse</returns>
@@ -4179,7 +4179,7 @@ namespace Opc.Ua.WebApi.Api
         ///  
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="republishRequest">RepublishRequestMessage (optional)</param>
+        /// <param name="republishRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.6/#5.14.6.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RepublishResponse)</returns>
@@ -4234,7 +4234,7 @@ namespace Opc.Ua.WebApi.Api
         ///  
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="setMonitoringModeRequest">SetMonitoringModeRequestMessage (optional)</param>
+        /// <param name="setMonitoringModeRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.13.4/#5.13.4.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>SetMonitoringModeResponse</returns>
         public SetMonitoringModeResponse SetMonitoringMode(SetMonitoringModeRequest setMonitoringModeRequest = default(SetMonitoringModeRequest), int operationIndex = 0)
@@ -4247,7 +4247,7 @@ namespace Opc.Ua.WebApi.Api
         ///  
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="setMonitoringModeRequest">SetMonitoringModeRequestMessage (optional)</param>
+        /// <param name="setMonitoringModeRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.13.4/#5.13.4.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of SetMonitoringModeResponse</returns>
         public Opc.Ua.WebApi.Client.ApiResponse<SetMonitoringModeResponse> SetMonitoringModeWithHttpInfo(SetMonitoringModeRequest setMonitoringModeRequest = default(SetMonitoringModeRequest), int operationIndex = 0)
@@ -4299,7 +4299,7 @@ namespace Opc.Ua.WebApi.Api
         ///  
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="setMonitoringModeRequest">SetMonitoringModeRequestMessage (optional)</param>
+        /// <param name="setMonitoringModeRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.13.4/#5.13.4.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of SetMonitoringModeResponse</returns>
@@ -4313,7 +4313,7 @@ namespace Opc.Ua.WebApi.Api
         ///  
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="setMonitoringModeRequest">SetMonitoringModeRequestMessage (optional)</param>
+        /// <param name="setMonitoringModeRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.13.4/#5.13.4.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (SetMonitoringModeResponse)</returns>
@@ -4368,7 +4368,7 @@ namespace Opc.Ua.WebApi.Api
         ///  
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="setPublishingModeRequest">SetPublishingModeRequestMessage (optional)</param>
+        /// <param name="setPublishingModeRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.4/#5.14.4.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>SetPublishingModeResponse</returns>
         public SetPublishingModeResponse SetPublishingMode(SetPublishingModeRequest setPublishingModeRequest = default(SetPublishingModeRequest), int operationIndex = 0)
@@ -4381,7 +4381,7 @@ namespace Opc.Ua.WebApi.Api
         ///  
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="setPublishingModeRequest">SetPublishingModeRequestMessage (optional)</param>
+        /// <param name="setPublishingModeRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.4/#5.14.4.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of SetPublishingModeResponse</returns>
         public Opc.Ua.WebApi.Client.ApiResponse<SetPublishingModeResponse> SetPublishingModeWithHttpInfo(SetPublishingModeRequest setPublishingModeRequest = default(SetPublishingModeRequest), int operationIndex = 0)
@@ -4433,7 +4433,7 @@ namespace Opc.Ua.WebApi.Api
         ///  
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="setPublishingModeRequest">SetPublishingModeRequestMessage (optional)</param>
+        /// <param name="setPublishingModeRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.4/#5.14.4.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of SetPublishingModeResponse</returns>
@@ -4447,7 +4447,7 @@ namespace Opc.Ua.WebApi.Api
         ///  
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="setPublishingModeRequest">SetPublishingModeRequestMessage (optional)</param>
+        /// <param name="setPublishingModeRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.4/#5.14.4.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (SetPublishingModeResponse)</returns>
@@ -4502,7 +4502,7 @@ namespace Opc.Ua.WebApi.Api
         ///  
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="setTriggeringRequest">SetTriggeringRequestMessage (optional)</param>
+        /// <param name="setTriggeringRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.13.5/#5.13.5.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>SetTriggeringResponse</returns>
         public SetTriggeringResponse SetTriggering(SetTriggeringRequest setTriggeringRequest = default(SetTriggeringRequest), int operationIndex = 0)
@@ -4515,7 +4515,7 @@ namespace Opc.Ua.WebApi.Api
         ///  
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="setTriggeringRequest">SetTriggeringRequestMessage (optional)</param>
+        /// <param name="setTriggeringRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.13.5/#5.13.5.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of SetTriggeringResponse</returns>
         public Opc.Ua.WebApi.Client.ApiResponse<SetTriggeringResponse> SetTriggeringWithHttpInfo(SetTriggeringRequest setTriggeringRequest = default(SetTriggeringRequest), int operationIndex = 0)
@@ -4567,7 +4567,7 @@ namespace Opc.Ua.WebApi.Api
         ///  
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="setTriggeringRequest">SetTriggeringRequestMessage (optional)</param>
+        /// <param name="setTriggeringRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.13.5/#5.13.5.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of SetTriggeringResponse</returns>
@@ -4581,7 +4581,7 @@ namespace Opc.Ua.WebApi.Api
         ///  
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="setTriggeringRequest">SetTriggeringRequestMessage (optional)</param>
+        /// <param name="setTriggeringRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.13.5/#5.13.5.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (SetTriggeringResponse)</returns>
@@ -4636,7 +4636,7 @@ namespace Opc.Ua.WebApi.Api
         ///  
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="transferSubscriptionsRequest">TransferSubscriptionsRequestMessage (optional)</param>
+        /// <param name="transferSubscriptionsRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.7/#5.14.7.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>TransferSubscriptionsResponse</returns>
         public TransferSubscriptionsResponse TransferSubscriptions(TransferSubscriptionsRequest transferSubscriptionsRequest = default(TransferSubscriptionsRequest), int operationIndex = 0)
@@ -4649,7 +4649,7 @@ namespace Opc.Ua.WebApi.Api
         ///  
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="transferSubscriptionsRequest">TransferSubscriptionsRequestMessage (optional)</param>
+        /// <param name="transferSubscriptionsRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.7/#5.14.7.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of TransferSubscriptionsResponse</returns>
         public Opc.Ua.WebApi.Client.ApiResponse<TransferSubscriptionsResponse> TransferSubscriptionsWithHttpInfo(TransferSubscriptionsRequest transferSubscriptionsRequest = default(TransferSubscriptionsRequest), int operationIndex = 0)
@@ -4701,7 +4701,7 @@ namespace Opc.Ua.WebApi.Api
         ///  
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="transferSubscriptionsRequest">TransferSubscriptionsRequestMessage (optional)</param>
+        /// <param name="transferSubscriptionsRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.7/#5.14.7.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of TransferSubscriptionsResponse</returns>
@@ -4715,7 +4715,7 @@ namespace Opc.Ua.WebApi.Api
         ///  
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="transferSubscriptionsRequest">TransferSubscriptionsRequestMessage (optional)</param>
+        /// <param name="transferSubscriptionsRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.7/#5.14.7.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (TransferSubscriptionsResponse)</returns>
@@ -4770,7 +4770,7 @@ namespace Opc.Ua.WebApi.Api
         ///  
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="translateBrowsePathsToNodeIdsRequest">TranslateBrowsePathsToNodeIdsRequestMessage (optional)</param>
+        /// <param name="translateBrowsePathsToNodeIdsRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.9.4/#5.9.4.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>TranslateBrowsePathsToNodeIdsResponse</returns>
         public TranslateBrowsePathsToNodeIdsResponse TranslateBrowsePathsToNodeIds(TranslateBrowsePathsToNodeIdsRequest translateBrowsePathsToNodeIdsRequest = default(TranslateBrowsePathsToNodeIdsRequest), int operationIndex = 0)
@@ -4783,7 +4783,7 @@ namespace Opc.Ua.WebApi.Api
         ///  
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="translateBrowsePathsToNodeIdsRequest">TranslateBrowsePathsToNodeIdsRequestMessage (optional)</param>
+        /// <param name="translateBrowsePathsToNodeIdsRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.9.4/#5.9.4.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of TranslateBrowsePathsToNodeIdsResponse</returns>
         public Opc.Ua.WebApi.Client.ApiResponse<TranslateBrowsePathsToNodeIdsResponse> TranslateBrowsePathsToNodeIdsWithHttpInfo(TranslateBrowsePathsToNodeIdsRequest translateBrowsePathsToNodeIdsRequest = default(TranslateBrowsePathsToNodeIdsRequest), int operationIndex = 0)
@@ -4835,7 +4835,7 @@ namespace Opc.Ua.WebApi.Api
         ///  
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="translateBrowsePathsToNodeIdsRequest">TranslateBrowsePathsToNodeIdsRequestMessage (optional)</param>
+        /// <param name="translateBrowsePathsToNodeIdsRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.9.4/#5.9.4.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of TranslateBrowsePathsToNodeIdsResponse</returns>
@@ -4849,7 +4849,7 @@ namespace Opc.Ua.WebApi.Api
         ///  
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="translateBrowsePathsToNodeIdsRequest">TranslateBrowsePathsToNodeIdsRequestMessage (optional)</param>
+        /// <param name="translateBrowsePathsToNodeIdsRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.9.4/#5.9.4.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (TranslateBrowsePathsToNodeIdsResponse)</returns>
@@ -4904,7 +4904,7 @@ namespace Opc.Ua.WebApi.Api
         ///  
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="unregisterNodesRequest">UnregisterNodesRequestMessage (optional)</param>
+        /// <param name="unregisterNodesRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.9.6/#5.9.6.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>UnregisterNodesResponse</returns>
         public UnregisterNodesResponse UnregisterNodes(UnregisterNodesRequest unregisterNodesRequest = default(UnregisterNodesRequest), int operationIndex = 0)
@@ -4917,7 +4917,7 @@ namespace Opc.Ua.WebApi.Api
         ///  
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="unregisterNodesRequest">UnregisterNodesRequestMessage (optional)</param>
+        /// <param name="unregisterNodesRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.9.6/#5.9.6.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of UnregisterNodesResponse</returns>
         public Opc.Ua.WebApi.Client.ApiResponse<UnregisterNodesResponse> UnregisterNodesWithHttpInfo(UnregisterNodesRequest unregisterNodesRequest = default(UnregisterNodesRequest), int operationIndex = 0)
@@ -4969,7 +4969,7 @@ namespace Opc.Ua.WebApi.Api
         ///  
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="unregisterNodesRequest">UnregisterNodesRequestMessage (optional)</param>
+        /// <param name="unregisterNodesRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.9.6/#5.9.6.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of UnregisterNodesResponse</returns>
@@ -4983,7 +4983,7 @@ namespace Opc.Ua.WebApi.Api
         ///  
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="unregisterNodesRequest">UnregisterNodesRequestMessage (optional)</param>
+        /// <param name="unregisterNodesRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.9.6/#5.9.6.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (UnregisterNodesResponse)</returns>
@@ -5038,7 +5038,7 @@ namespace Opc.Ua.WebApi.Api
         ///  
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="writeRequest">WriteRequestMessage (optional)</param>
+        /// <param name="writeRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.11.4/#5.11.4.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>WriteResponse</returns>
         public WriteResponse Write(WriteRequest writeRequest = default(WriteRequest), int operationIndex = 0)
@@ -5051,7 +5051,7 @@ namespace Opc.Ua.WebApi.Api
         ///  
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="writeRequest">WriteRequestMessage (optional)</param>
+        /// <param name="writeRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.11.4/#5.11.4.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of WriteResponse</returns>
         public Opc.Ua.WebApi.Client.ApiResponse<WriteResponse> WriteWithHttpInfo(WriteRequest writeRequest = default(WriteRequest), int operationIndex = 0)
@@ -5103,7 +5103,7 @@ namespace Opc.Ua.WebApi.Api
         ///  
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="writeRequest">WriteRequestMessage (optional)</param>
+        /// <param name="writeRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.11.4/#5.11.4.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of WriteResponse</returns>
@@ -5117,7 +5117,7 @@ namespace Opc.Ua.WebApi.Api
         ///  
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="writeRequest">WriteRequestMessage (optional)</param>
+        /// <param name="writeRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.11.4/#5.11.4.2). (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (WriteResponse)</returns>

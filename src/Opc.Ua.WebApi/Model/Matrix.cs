@@ -27,7 +27,7 @@ using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 namespace Opc.Ua.WebApi.Model
 {
     /// <summary>
-    /// Matrix
+    /// [Link to specification](https://reference.opcfoundation.org/Core/Part6/v105/docs/5.4.5).
     /// </summary>
     [DataContract(Name = "Matrix")]
     public partial class Matrix : IValidatableObject

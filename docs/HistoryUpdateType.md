@@ -1,4 +1,5 @@
 # Opc.Ua.WebApi.Model.HistoryUpdateType
+[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part11/6.7).
 
 ## Properties
 

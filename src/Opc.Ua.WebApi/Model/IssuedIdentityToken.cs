@@ -27,7 +27,7 @@ using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 namespace Opc.Ua.WebApi.Model
 {
     /// <summary>
-    /// IssuedIdentityToken
+    /// [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part5/12.3.15/#12.3.15.2).
     /// </summary>
     [DataContract(Name = "IssuedIdentityToken")]
     public partial class IssuedIdentityToken : IValidatableObject

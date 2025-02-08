@@ -27,7 +27,7 @@ using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 namespace Opc.Ua.WebApi.Model
 {
     /// <summary>
-    /// ReaderGroupDataType
+    /// [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part14/6.2.8/#6.2.8.2.1).
     /// </summary>
     [DataContract(Name = "ReaderGroupDataType")]
     public partial class ReaderGroupDataType : IValidatableObject
@@ -40,7 +40,7 @@ namespace Opc.Ua.WebApi.Model
         /// <param name="dataSetReaders">dataSetReaders.</param>
         /// <param name="name">name.</param>
         /// <param name="enabled">enabled (default to false).</param>
-        /// <param name="securityMode">securityMode.</param>
+        /// <param name="securityMode">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part5/12.3.10)..</param>
         /// <param name="securityGroupId">securityGroupId.</param>
         /// <param name="securityKeyServices">securityKeyServices.</param>
         /// <param name="maxNetworkMessageSize">maxNetworkMessageSize (default to 0).</param>
@@ -90,8 +90,9 @@ namespace Opc.Ua.WebApi.Model
         public bool Enabled { get; set; }
 
         /// <summary>
-        /// Gets or Sets SecurityMode
+        /// [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part5/12.3.10).
         /// </summary>
+        /// <value>[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part5/12.3.10).</value>
         [DataMember(Name = "SecurityMode", EmitDefaultValue = false)]
         public int SecurityMode { get; set; }
 

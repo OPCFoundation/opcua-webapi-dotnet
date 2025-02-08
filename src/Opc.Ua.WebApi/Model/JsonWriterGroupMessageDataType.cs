@@ -27,7 +27,7 @@ using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 namespace Opc.Ua.WebApi.Model
 {
     /// <summary>
-    /// JsonWriterGroupMessageDataType
+    /// [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part14/6.3.2/#6.3.2.1.2).
     /// </summary>
     [DataContract(Name = "JsonWriterGroupMessageDataType")]
     public partial class JsonWriterGroupMessageDataType : IValidatableObject

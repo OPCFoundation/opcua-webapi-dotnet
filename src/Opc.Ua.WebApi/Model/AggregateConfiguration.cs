@@ -27,7 +27,7 @@ using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 namespace Opc.Ua.WebApi.Model
 {
     /// <summary>
-    /// AggregateConfiguration
+    /// [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part11/6.5.4/#6.5.4.1).
     /// </summary>
     [DataContract(Name = "AggregateConfiguration")]
     public partial class AggregateConfiguration : IValidatableObject

@@ -27,7 +27,7 @@ using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 namespace Opc.Ua.WebApi.Model
 {
     /// <summary>
-    /// RelativePath
+    /// [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/7.31).
     /// </summary>
     [DataContract(Name = "RelativePath")]
     public partial class RelativePath : IValidatableObject

@@ -1,4 +1,5 @@
 # Opc.Ua.WebApi.Model.JsonPubSubConnectionMessage
+[Link to specification]().
 
 ## Properties
 

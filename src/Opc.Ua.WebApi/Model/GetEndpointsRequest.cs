@@ -27,7 +27,7 @@ using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 namespace Opc.Ua.WebApi.Model
 {
     /// <summary>
-    /// GetEndpointsRequest
+    /// [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.5.4/#5.5.4.2).
     /// </summary>
     [DataContract(Name = "GetEndpointsRequest")]
     public partial class GetEndpointsRequest : IValidatableObject

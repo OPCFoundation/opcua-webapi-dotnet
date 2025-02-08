@@ -1,4 +1,5 @@
 # Opc.Ua.WebApi.Model.CreateSubscriptionResponse
+[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.2/#5.14.2.2).
 
 ## Properties
 

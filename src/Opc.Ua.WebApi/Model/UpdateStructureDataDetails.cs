@@ -27,7 +27,7 @@ using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 namespace Opc.Ua.WebApi.Model
 {
     /// <summary>
-    /// UpdateStructureDataDetails
+    /// [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part11/6.9.3/#6.9.3.1).
     /// </summary>
     [DataContract(Name = "UpdateStructureDataDetails")]
     public partial class UpdateStructureDataDetails : IValidatableObject
@@ -36,7 +36,7 @@ namespace Opc.Ua.WebApi.Model
         /// Initializes a new instance of the <see cref="UpdateStructureDataDetails" /> class.
         /// </summary>
         /// <param name="nodeId">nodeId.</param>
-        /// <param name="performInsertReplace">performInsertReplace.</param>
+        /// <param name="performInsertReplace">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part11/6.8)..</param>
         /// <param name="updateValues">updateValues.</param>
         public UpdateStructureDataDetails(string nodeId = default(string), int performInsertReplace = default(int), List<DataValue> updateValues = default(List<DataValue>))
         {
@@ -52,8 +52,9 @@ namespace Opc.Ua.WebApi.Model
         public string NodeId { get; set; }
 
         /// <summary>
-        /// Gets or Sets PerformInsertReplace
+        /// [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part11/6.8).
         /// </summary>
+        /// <value>[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part11/6.8).</value>
         [DataMember(Name = "PerformInsertReplace", EmitDefaultValue = false)]
         public int PerformInsertReplace { get; set; }
 

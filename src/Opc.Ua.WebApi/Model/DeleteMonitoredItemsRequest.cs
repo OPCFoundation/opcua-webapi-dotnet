@@ -27,7 +27,7 @@ using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 namespace Opc.Ua.WebApi.Model
 {
     /// <summary>
-    /// DeleteMonitoredItemsRequest
+    /// [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.13.6/#5.13.6.2).
     /// </summary>
     [DataContract(Name = "DeleteMonitoredItemsRequest")]
     public partial class DeleteMonitoredItemsRequest : IValidatableObject

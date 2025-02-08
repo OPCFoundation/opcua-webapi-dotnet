@@ -27,7 +27,7 @@ using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 namespace Opc.Ua.WebApi.Model
 {
     /// <summary>
-    /// MonitoredItemNotification
+    /// [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/7.25.2).
     /// </summary>
     [DataContract(Name = "MonitoredItemNotification")]
     public partial class MonitoredItemNotification : IValidatableObject

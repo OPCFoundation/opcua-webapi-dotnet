@@ -1,4 +1,5 @@
 # Opc.Ua.WebApi.Model.DataSetReaderDataType
+[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part14/6.2.9/#6.2.9.13.1).
 
 ## Properties
 
@@ -14,7 +15,7 @@ Name | Type | Description | Notes
 **MessageReceiveTimeout** | **double** |  | [optional] [default to 0D]
 **KeyFrameCount** | **long** |  | [optional] [default to 0]
 **HeaderLayoutUri** | **string** |  | [optional] 
-**SecurityMode** | **int** |  | [optional] 
+**SecurityMode** | **int** | [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part5/12.3.10). | [optional] 
 **SecurityGroupId** | **string** |  | [optional] 
 **SecurityKeyServices** | [**List&lt;EndpointDescription&gt;**](EndpointDescription.md) |  | [optional] 
 **DataSetReaderProperties** | [**List&lt;KeyValuePair&gt;**](KeyValuePair.md) |  | [optional] 

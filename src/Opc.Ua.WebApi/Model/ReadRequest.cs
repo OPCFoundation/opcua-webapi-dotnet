@@ -27,7 +27,7 @@ using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 namespace Opc.Ua.WebApi.Model
 {
     /// <summary>
-    /// ReadRequest
+    /// [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.11.2/#5.11.2.2).
     /// </summary>
     [DataContract(Name = "ReadRequest")]
     public partial class ReadRequest : IValidatableObject
@@ -37,7 +37,7 @@ namespace Opc.Ua.WebApi.Model
         /// </summary>
         /// <param name="requestHeader">requestHeader.</param>
         /// <param name="maxAge">maxAge (default to 0D).</param>
-        /// <param name="timestampsToReturn">timestampsToReturn.</param>
+        /// <param name="timestampsToReturn">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/7.40)..</param>
         /// <param name="nodesToRead">nodesToRead.</param>
         public ReadRequest(RequestHeader requestHeader = default(RequestHeader), double maxAge = 0D, int timestampsToReturn = default(int), List<ReadValueId> nodesToRead = default(List<ReadValueId>))
         {
@@ -60,8 +60,9 @@ namespace Opc.Ua.WebApi.Model
         public double MaxAge { get; set; }
 
         /// <summary>
-        /// Gets or Sets TimestampsToReturn
+        /// [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/7.40).
         /// </summary>
+        /// <value>[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/7.40).</value>
         [DataMember(Name = "TimestampsToReturn", EmitDefaultValue = false)]
         public int TimestampsToReturn { get; set; }
 

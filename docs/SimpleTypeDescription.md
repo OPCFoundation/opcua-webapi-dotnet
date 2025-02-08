@@ -1,4 +1,5 @@
 # Opc.Ua.WebApi.Model.SimpleTypeDescription
+[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part5/12.35).
 
 ## Properties
 

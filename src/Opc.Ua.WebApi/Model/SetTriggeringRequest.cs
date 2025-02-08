@@ -27,7 +27,7 @@ using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 namespace Opc.Ua.WebApi.Model
 {
     /// <summary>
-    /// SetTriggeringRequest
+    /// [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.13.5/#5.13.5.2).
     /// </summary>
     [DataContract(Name = "SetTriggeringRequest")]
     public partial class SetTriggeringRequest : IValidatableObject

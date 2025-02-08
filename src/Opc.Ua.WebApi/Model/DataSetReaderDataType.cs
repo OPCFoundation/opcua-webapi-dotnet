@@ -27,7 +27,7 @@ using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 namespace Opc.Ua.WebApi.Model
 {
     /// <summary>
-    /// DataSetReaderDataType
+    /// [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part14/6.2.9/#6.2.9.13.1).
     /// </summary>
     [DataContract(Name = "DataSetReaderDataType")]
     public partial class DataSetReaderDataType : IValidatableObject
@@ -45,7 +45,7 @@ namespace Opc.Ua.WebApi.Model
         /// <param name="messageReceiveTimeout">messageReceiveTimeout (default to 0D).</param>
         /// <param name="keyFrameCount">keyFrameCount (default to 0).</param>
         /// <param name="headerLayoutUri">headerLayoutUri.</param>
-        /// <param name="securityMode">securityMode.</param>
+        /// <param name="securityMode">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part5/12.3.10)..</param>
         /// <param name="securityGroupId">securityGroupId.</param>
         /// <param name="securityKeyServices">securityKeyServices.</param>
         /// <param name="dataSetReaderProperties">dataSetReaderProperties.</param>
@@ -134,8 +134,9 @@ namespace Opc.Ua.WebApi.Model
         public string HeaderLayoutUri { get; set; }
 
         /// <summary>
-        /// Gets or Sets SecurityMode
+        /// [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part5/12.3.10).
         /// </summary>
+        /// <value>[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part5/12.3.10).</value>
         [DataMember(Name = "SecurityMode", EmitDefaultValue = false)]
         public int SecurityMode { get; set; }
 

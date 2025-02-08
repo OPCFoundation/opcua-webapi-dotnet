@@ -1,4 +1,5 @@
 # Opc.Ua.WebApi.Model.ViewDescription
+[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/7.45).
 
 ## Properties
 

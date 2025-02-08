@@ -27,7 +27,7 @@ using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 namespace Opc.Ua.WebApi.Model
 {
     /// <summary>
-    /// MonitoredItemCreateRequest
+    /// [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.13.2/#5.13.2.2).
     /// </summary>
     [DataContract(Name = "MonitoredItemCreateRequest")]
     public partial class MonitoredItemCreateRequest : IValidatableObject
@@ -36,7 +36,7 @@ namespace Opc.Ua.WebApi.Model
         /// Initializes a new instance of the <see cref="MonitoredItemCreateRequest" /> class.
         /// </summary>
         /// <param name="itemToMonitor">itemToMonitor.</param>
-        /// <param name="monitoringMode">monitoringMode.</param>
+        /// <param name="monitoringMode">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/7.23)..</param>
         /// <param name="requestedParameters">requestedParameters.</param>
         public MonitoredItemCreateRequest(ReadValueId itemToMonitor = default(ReadValueId), int monitoringMode = default(int), MonitoringParameters requestedParameters = default(MonitoringParameters))
         {
@@ -52,8 +52,9 @@ namespace Opc.Ua.WebApi.Model
         public ReadValueId ItemToMonitor { get; set; }
 
         /// <summary>
-        /// Gets or Sets MonitoringMode
+        /// [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/7.23).
         /// </summary>
+        /// <value>[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/7.23).</value>
         [DataMember(Name = "MonitoringMode", EmitDefaultValue = false)]
         public int MonitoringMode { get; set; }
 

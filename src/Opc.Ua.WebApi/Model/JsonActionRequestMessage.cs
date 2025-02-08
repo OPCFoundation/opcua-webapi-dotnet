@@ -27,7 +27,7 @@ using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 namespace Opc.Ua.WebApi.Model
 {
     /// <summary>
-    /// JsonActionRequestMessage
+    /// [Link to specification]().
     /// </summary>
     [DataContract(Name = "JsonActionRequestMessage")]
     public partial class JsonActionRequestMessage : IValidatableObject
@@ -44,7 +44,7 @@ namespace Opc.Ua.WebApi.Model
         /// <param name="timestamp">timestamp (default to &quot;0001-01-01T00:00Z&quot;).</param>
         /// <param name="messageType">messageType.</param>
         /// <param name="requestId">requestId (default to 0).</param>
-        /// <param name="actionState">actionState.</param>
+        /// <param name="actionState">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part14/6.2.11/#6.2.11.2.1)..</param>
         /// <param name="payload">payload.</param>
         public JsonActionRequestMessage(int dataSetWriterId = 0, int actionTargetId = 0, string dataSetWriterName = default(string), string writerGroupName = default(string), ConfigurationVersionDataType metaDataVersion = default(ConfigurationVersionDataType), long minorVersion = 0, DateTime timestamp = default(DateTime), string messageType = default(string), int requestId = 0, int actionState = default(int), Object payload = default(Object))
         {
@@ -116,8 +116,9 @@ namespace Opc.Ua.WebApi.Model
         public int RequestId { get; set; }
 
         /// <summary>
-        /// Gets or Sets ActionState
+        /// [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part14/6.2.11/#6.2.11.2.1).
         /// </summary>
+        /// <value>[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part14/6.2.11/#6.2.11.2.1).</value>
         [DataMember(Name = "ActionState", EmitDefaultValue = false)]
         public int ActionState { get; set; }
 

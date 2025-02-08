@@ -27,7 +27,7 @@ using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 namespace Opc.Ua.WebApi.Model
 {
     /// <summary>
-    /// RolePermissionType
+    /// [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part5/12.2.12/#12.2.12.9).
     /// </summary>
     [DataContract(Name = "RolePermissionType")]
     public partial class RolePermissionType : IValidatableObject

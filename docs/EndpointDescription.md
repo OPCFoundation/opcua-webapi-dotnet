@@ -1,4 +1,5 @@
 # Opc.Ua.WebApi.Model.EndpointDescription
+[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/7.14).
 
 ## Properties
 
@@ -7,7 +8,7 @@ Name | Type | Description | Notes
 **EndpointUrl** | **string** |  | [optional] 
 **Server** | [**ApplicationDescription**](ApplicationDescription.md) |  | [optional] 
 **ServerCertificate** | **byte[]** |  | [optional] 
-**SecurityMode** | **int** |  | [optional] 
+**SecurityMode** | **int** | [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part5/12.3.10). | [optional] 
 **SecurityPolicyUri** | **string** |  | [optional] 
 **UserIdentityTokens** | [**List&lt;UserTokenPolicy&gt;**](UserTokenPolicy.md) |  | [optional] 
 **TransportProfileUri** | **string** |  | [optional] 
