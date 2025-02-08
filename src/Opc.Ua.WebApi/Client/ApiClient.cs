@@ -456,7 +456,7 @@ namespace Opc.Ua.WebApi.Client
             var clientOptions = new RestClientOptions(baseUrl)
             {
                 ClientCertificates = configuration.ClientCertificates,
-                MaxTimeout = configuration.Timeout,
+                Timeout = new TimeSpan(configuration.Timeout * TimeSpan.TicksPerMillisecond),
                 Proxy = configuration.Proxy,
                 UserAgent = configuration.UserAgent,
                 UseDefaultCredentials = configuration.UseDefaultCredentials,
@@ -538,7 +538,7 @@ namespace Opc.Ua.WebApi.Client
         {
             if (policyResult.Outcome == OutcomeType.Successful) 
             {
-                return client.Deserialize<T>(policyResult.Result);
+                return client.Deserialize<T>(policyResult.Result, CancellationToken.None).Result;
             }
             else
             {
