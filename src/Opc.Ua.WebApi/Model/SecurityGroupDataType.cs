@@ -22,6 +22,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
+using FileParameter = Opc.Ua.WebApi.Client.FileParameter;
 using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 
 namespace Opc.Ua.WebApi.Model
@@ -44,7 +45,7 @@ namespace Opc.Ua.WebApi.Model
         /// <param name="securityGroupId">securityGroupId.</param>
         /// <param name="rolePermissions">rolePermissions.</param>
         /// <param name="groupProperties">groupProperties.</param>
-        public SecurityGroupDataType(string name = default(string), List<string> securityGroupFolder = default(List<string>), double keyLifetime = 0D, string securityPolicyUri = default(string), long maxFutureKeyCount = 0, long maxPastKeyCount = 0, string securityGroupId = default(string), List<RolePermissionType> rolePermissions = default(List<RolePermissionType>), List<KeyValuePair> groupProperties = default(List<KeyValuePair>))
+        public SecurityGroupDataType(string name = default, List<string> securityGroupFolder = default, double keyLifetime = 0D, string securityPolicyUri = default, long maxFutureKeyCount = 0, long maxPastKeyCount = 0, string securityGroupId = default, List<RolePermissionType> rolePermissions = default, List<KeyValuePair> groupProperties = default)
         {
             this.Name = name;
             this.SecurityGroupFolder = securityGroupFolder;

@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **RequestHeader** | [**RequestHeader**](RequestHeader.md) |  | [optional] 
 **HistoryReadDetails** | [**ExtensionObject**](ExtensionObject.md) |  | [optional] 
-**TimestampsToReturn** | **int** | [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/7.40). | [optional] 
+**TimestampsToReturn** | **int** | [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/7.39). | [optional] 
 **ReleaseContinuationPoints** | **bool** |  | [optional] [default to false]
 **NodesToRead** | [**List&lt;HistoryReadValueId&gt;**](HistoryReadValueId.md) |  | [optional] 
 

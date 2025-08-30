@@ -22,6 +22,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
+using FileParameter = Opc.Ua.WebApi.Client.FileParameter;
 using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 
 namespace Opc.Ua.WebApi.Model
@@ -41,7 +42,7 @@ namespace Opc.Ua.WebApi.Model
         /// <param name="writerGroupName">writerGroupName.</param>
         /// <param name="dataSetClassId">dataSetClassId.</param>
         /// <param name="messages">messages.</param>
-        public JsonNetworkMessage(string messageId = default(string), string messageType = default(string), string publisherId = default(string), string writerGroupName = default(string), string dataSetClassId = default(string), Object messages = default(Object))
+        public JsonNetworkMessage(string messageId = default, string messageType = default, string publisherId = default, string writerGroupName = default, string dataSetClassId = default, Object messages = default)
         {
             this.MessageId = messageId;
             this.MessageType = messageType;

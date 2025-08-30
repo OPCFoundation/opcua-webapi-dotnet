@@ -22,6 +22,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
+using FileParameter = Opc.Ua.WebApi.Client.FileParameter;
 using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 
 namespace Opc.Ua.WebApi.Model
@@ -39,7 +40,7 @@ namespace Opc.Ua.WebApi.Model
         /// <param name="startTime">startTime (default to &quot;0001-01-01T00:00Z&quot;).</param>
         /// <param name="endTime">endTime (default to &quot;0001-01-01T00:00Z&quot;).</param>
         /// <param name="filter">filter.</param>
-        public ReadEventDetails(long numValuesPerNode = 0, DateTime startTime = default(DateTime), DateTime endTime = default(DateTime), EventFilter filter = default(EventFilter))
+        public ReadEventDetails(long numValuesPerNode = 0, DateTime startTime = default, DateTime endTime = default, EventFilter filter = default)
         {
             this.NumValuesPerNode = numValuesPerNode;
             this.StartTime = startTime;

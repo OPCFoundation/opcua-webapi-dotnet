@@ -22,6 +22,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
+using FileParameter = Opc.Ua.WebApi.Client.FileParameter;
 using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 
 namespace Opc.Ua.WebApi.Model
@@ -44,7 +45,7 @@ namespace Opc.Ua.WebApi.Model
         /// <param name="structureDataTypes">structureDataTypes.</param>
         /// <param name="enumDataTypes">enumDataTypes.</param>
         /// <param name="simpleDataTypes">simpleDataTypes.</param>
-        public DataSetMetaDataType(string name = default(string), LocalizedText description = default(LocalizedText), List<FieldMetaData> fields = default(List<FieldMetaData>), Guid dataSetClassId = default(Guid), ConfigurationVersionDataType configurationVersion = default(ConfigurationVersionDataType), List<string> namespaces = default(List<string>), List<StructureDescription> structureDataTypes = default(List<StructureDescription>), List<EnumDescription> enumDataTypes = default(List<EnumDescription>), List<SimpleTypeDescription> simpleDataTypes = default(List<SimpleTypeDescription>))
+        public DataSetMetaDataType(string name = default, LocalizedText description = default, List<FieldMetaData> fields = default, Guid dataSetClassId = default, ConfigurationVersionDataType configurationVersion = default, List<string> namespaces = default, List<StructureDescription> structureDataTypes = default, List<EnumDescription> enumDataTypes = default, List<SimpleTypeDescription> simpleDataTypes = default)
         {
             this.Name = name;
             this.Description = description;

@@ -22,6 +22,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
+using FileParameter = Opc.Ua.WebApi.Client.FileParameter;
 using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 
 namespace Opc.Ua.WebApi.Model
@@ -38,7 +39,7 @@ namespace Opc.Ua.WebApi.Model
         /// <param name="publishedDataSets">publishedDataSets.</param>
         /// <param name="connections">connections.</param>
         /// <param name="enabled">enabled (default to false).</param>
-        public PubSubConfigurationDataType(List<PublishedDataSetDataType> publishedDataSets = default(List<PublishedDataSetDataType>), List<PubSubConnectionDataType> connections = default(List<PubSubConnectionDataType>), bool enabled = false)
+        public PubSubConfigurationDataType(List<PublishedDataSetDataType> publishedDataSets = default, List<PubSubConnectionDataType> connections = default, bool enabled = false)
         {
             this.PublishedDataSets = publishedDataSets;
             this.Connections = connections;

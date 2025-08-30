@@ -22,6 +22,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
+using FileParameter = Opc.Ua.WebApi.Client.FileParameter;
 using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 
 namespace Opc.Ua.WebApi.Model
@@ -37,7 +38,7 @@ namespace Opc.Ua.WebApi.Model
         /// </summary>
         /// <param name="array">array.</param>
         /// <param name="dimensions">dimensions.</param>
-        public Matrix(List<Object> array = default(List<Object>), List<int> dimensions = default(List<int>))
+        public Matrix(List<Object> array = default, List<int> dimensions = default)
         {
             this.Array = array;
             this.Dimensions = dimensions;

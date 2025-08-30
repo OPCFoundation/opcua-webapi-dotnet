@@ -22,6 +22,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
+using FileParameter = Opc.Ua.WebApi.Client.FileParameter;
 using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 
 namespace Opc.Ua.WebApi.Model
@@ -42,7 +43,7 @@ namespace Opc.Ua.WebApi.Model
         /// <param name="maxNotificationsPerPublish">maxNotificationsPerPublish (default to 0).</param>
         /// <param name="publishingEnabled">publishingEnabled (default to false).</param>
         /// <param name="priority">priority (default to 0).</param>
-        public CreateSubscriptionRequest(RequestHeader requestHeader = default(RequestHeader), double requestedPublishingInterval = 0D, long requestedLifetimeCount = 0, long requestedMaxKeepAliveCount = 0, long maxNotificationsPerPublish = 0, bool publishingEnabled = false, int priority = 0)
+        public CreateSubscriptionRequest(RequestHeader requestHeader = default, double requestedPublishingInterval = 0D, long requestedLifetimeCount = 0, long requestedMaxKeepAliveCount = 0, long maxNotificationsPerPublish = 0, bool publishingEnabled = false, int priority = 0)
         {
             this.RequestHeader = requestHeader;
             this.RequestedPublishingInterval = requestedPublishingInterval;

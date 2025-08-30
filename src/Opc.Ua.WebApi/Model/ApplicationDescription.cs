@@ -22,12 +22,13 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
+using FileParameter = Opc.Ua.WebApi.Client.FileParameter;
 using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 
 namespace Opc.Ua.WebApi.Model
 {
     /// <summary>
-    /// [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part14/7.2.4/#7.2.4.6.5).
+    /// [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part5/12.3.3).
     /// </summary>
     [DataContract(Name = "ApplicationDescription")]
     public partial class ApplicationDescription : IValidatableObject
@@ -42,7 +43,7 @@ namespace Opc.Ua.WebApi.Model
         /// <param name="gatewayServerUri">gatewayServerUri.</param>
         /// <param name="discoveryProfileUri">discoveryProfileUri.</param>
         /// <param name="discoveryUrls">discoveryUrls.</param>
-        public ApplicationDescription(string applicationUri = default(string), string productUri = default(string), LocalizedText applicationName = default(LocalizedText), int applicationType = default(int), string gatewayServerUri = default(string), string discoveryProfileUri = default(string), List<string> discoveryUrls = default(List<string>))
+        public ApplicationDescription(string applicationUri = default, string productUri = default, LocalizedText applicationName = default, int applicationType = default, string gatewayServerUri = default, string discoveryProfileUri = default, List<string> discoveryUrls = default)
         {
             this.ApplicationUri = applicationUri;
             this.ProductUri = productUri;

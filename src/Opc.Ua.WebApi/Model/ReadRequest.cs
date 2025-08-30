@@ -22,6 +22,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
+using FileParameter = Opc.Ua.WebApi.Client.FileParameter;
 using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 
 namespace Opc.Ua.WebApi.Model
@@ -37,9 +38,9 @@ namespace Opc.Ua.WebApi.Model
         /// </summary>
         /// <param name="requestHeader">requestHeader.</param>
         /// <param name="maxAge">maxAge (default to 0D).</param>
-        /// <param name="timestampsToReturn">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/7.40)..</param>
+        /// <param name="timestampsToReturn">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/7.39)..</param>
         /// <param name="nodesToRead">nodesToRead.</param>
-        public ReadRequest(RequestHeader requestHeader = default(RequestHeader), double maxAge = 0D, int timestampsToReturn = default(int), List<ReadValueId> nodesToRead = default(List<ReadValueId>))
+        public ReadRequest(RequestHeader requestHeader = default, double maxAge = 0D, int timestampsToReturn = default, List<ReadValueId> nodesToRead = default)
         {
             this.RequestHeader = requestHeader;
             this.MaxAge = maxAge;
@@ -60,9 +61,9 @@ namespace Opc.Ua.WebApi.Model
         public double MaxAge { get; set; }
 
         /// <summary>
-        /// [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/7.40).
+        /// [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/7.39).
         /// </summary>
-        /// <value>[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/7.40).</value>
+        /// <value>[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/7.39).</value>
         [DataMember(Name = "TimestampsToReturn", EmitDefaultValue = false)]
         public int TimestampsToReturn { get; set; }
 

@@ -22,6 +22,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
+using FileParameter = Opc.Ua.WebApi.Client.FileParameter;
 using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 
 namespace Opc.Ua.WebApi.Model
@@ -37,7 +38,7 @@ namespace Opc.Ua.WebApi.Model
         /// </summary>
         /// <param name="responseHeader">responseHeader.</param>
         /// <param name="servers">servers.</param>
-        public FindServersResponse(ResponseHeader responseHeader = default(ResponseHeader), List<ApplicationDescription> servers = default(List<ApplicationDescription>))
+        public FindServersResponse(ResponseHeader responseHeader = default, List<ApplicationDescription> servers = default)
         {
             this.ResponseHeader = responseHeader;
             this.Servers = servers;

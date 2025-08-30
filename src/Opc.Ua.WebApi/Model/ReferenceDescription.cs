@@ -22,12 +22,13 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
+using FileParameter = Opc.Ua.WebApi.Client.FileParameter;
 using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 
 namespace Opc.Ua.WebApi.Model
 {
     /// <summary>
-    /// [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/7.30).
+    /// [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/7.29).
     /// </summary>
     [DataContract(Name = "ReferenceDescription")]
     public partial class ReferenceDescription : IValidatableObject
@@ -42,7 +43,7 @@ namespace Opc.Ua.WebApi.Model
         /// <param name="displayName">displayName.</param>
         /// <param name="nodeClass">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part5/12.2.5/#12.2.5.2)..</param>
         /// <param name="typeDefinition">typeDefinition.</param>
-        public ReferenceDescription(string referenceTypeId = default(string), bool isForward = false, string nodeId = default(string), string browseName = default(string), LocalizedText displayName = default(LocalizedText), int nodeClass = default(int), string typeDefinition = default(string))
+        public ReferenceDescription(string referenceTypeId = default, bool isForward = false, string nodeId = default, string browseName = default, LocalizedText displayName = default, int nodeClass = default, string typeDefinition = default)
         {
             this.ReferenceTypeId = referenceTypeId;
             this.IsForward = isForward;

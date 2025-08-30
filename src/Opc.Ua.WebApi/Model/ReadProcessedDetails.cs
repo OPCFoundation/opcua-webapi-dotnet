@@ -22,6 +22,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
+using FileParameter = Opc.Ua.WebApi.Client.FileParameter;
 using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 
 namespace Opc.Ua.WebApi.Model
@@ -40,7 +41,7 @@ namespace Opc.Ua.WebApi.Model
         /// <param name="processingInterval">processingInterval (default to 0D).</param>
         /// <param name="aggregateType">aggregateType.</param>
         /// <param name="aggregateConfiguration">aggregateConfiguration.</param>
-        public ReadProcessedDetails(DateTime startTime = default(DateTime), DateTime endTime = default(DateTime), double processingInterval = 0D, List<string> aggregateType = default(List<string>), AggregateConfiguration aggregateConfiguration = default(AggregateConfiguration))
+        public ReadProcessedDetails(DateTime startTime = default, DateTime endTime = default, double processingInterval = 0D, List<string> aggregateType = default, AggregateConfiguration aggregateConfiguration = default)
         {
             this.StartTime = startTime;
             this.EndTime = endTime;

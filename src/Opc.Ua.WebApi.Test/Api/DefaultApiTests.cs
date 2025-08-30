@@ -14,7 +14,6 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Reflection;
-using RestSharp;
 using Xunit;
 
 using Opc.Ua.WebApi.Client;
@@ -62,7 +61,7 @@ namespace Opc.Ua.WebApi.Test.Api
         public void ActivateSessionTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //ActivateSessionRequest? activateSessionRequest = null;
+            //ActivateSessionRequest activateSessionRequest = null;
             //var response = instance.ActivateSession(activateSessionRequest);
             //Assert.IsType<ActivateSessionResponse>(response);
         }
@@ -74,7 +73,7 @@ namespace Opc.Ua.WebApi.Test.Api
         public void BrowseTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //BrowseRequest? browseRequest = null;
+            //BrowseRequest browseRequest = null;
             //var response = instance.Browse(browseRequest);
             //Assert.IsType<BrowseResponse>(response);
         }
@@ -86,7 +85,7 @@ namespace Opc.Ua.WebApi.Test.Api
         public void BrowseNextTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //BrowseNextRequest? browseNextRequest = null;
+            //BrowseNextRequest browseNextRequest = null;
             //var response = instance.BrowseNext(browseNextRequest);
             //Assert.IsType<BrowseNextResponse>(response);
         }
@@ -98,7 +97,7 @@ namespace Opc.Ua.WebApi.Test.Api
         public void CallTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //CallRequest? callRequest = null;
+            //CallRequest callRequest = null;
             //var response = instance.Call(callRequest);
             //Assert.IsType<CallResponse>(response);
         }
@@ -110,7 +109,7 @@ namespace Opc.Ua.WebApi.Test.Api
         public void CancelTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //CancelRequest? cancelRequest = null;
+            //CancelRequest cancelRequest = null;
             //var response = instance.Cancel(cancelRequest);
             //Assert.IsType<CancelResponse>(response);
         }
@@ -122,7 +121,7 @@ namespace Opc.Ua.WebApi.Test.Api
         public void CloseSessionTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //CloseSessionRequest? closeSessionRequest = null;
+            //CloseSessionRequest closeSessionRequest = null;
             //var response = instance.CloseSession(closeSessionRequest);
             //Assert.IsType<CloseSessionResponse>(response);
         }
@@ -134,7 +133,7 @@ namespace Opc.Ua.WebApi.Test.Api
         public void CreateMonitoredItemsTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //CreateMonitoredItemsRequest? createMonitoredItemsRequest = null;
+            //CreateMonitoredItemsRequest createMonitoredItemsRequest = null;
             //var response = instance.CreateMonitoredItems(createMonitoredItemsRequest);
             //Assert.IsType<CreateMonitoredItemsResponse>(response);
         }
@@ -146,7 +145,7 @@ namespace Opc.Ua.WebApi.Test.Api
         public void CreateSessionTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //CreateSessionRequest? createSessionRequest = null;
+            //CreateSessionRequest createSessionRequest = null;
             //var response = instance.CreateSession(createSessionRequest);
             //Assert.IsType<CreateSessionResponse>(response);
         }
@@ -158,7 +157,7 @@ namespace Opc.Ua.WebApi.Test.Api
         public void CreateSubscriptionTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //CreateSubscriptionRequest? createSubscriptionRequest = null;
+            //CreateSubscriptionRequest createSubscriptionRequest = null;
             //var response = instance.CreateSubscription(createSubscriptionRequest);
             //Assert.IsType<CreateSubscriptionResponse>(response);
         }
@@ -170,7 +169,7 @@ namespace Opc.Ua.WebApi.Test.Api
         public void DeleteMonitoredItemsTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //DeleteMonitoredItemsRequest? deleteMonitoredItemsRequest = null;
+            //DeleteMonitoredItemsRequest deleteMonitoredItemsRequest = null;
             //var response = instance.DeleteMonitoredItems(deleteMonitoredItemsRequest);
             //Assert.IsType<DeleteMonitoredItemsResponse>(response);
         }
@@ -182,7 +181,7 @@ namespace Opc.Ua.WebApi.Test.Api
         public void DeleteSubscriptionsTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //DeleteSubscriptionsRequest? deleteSubscriptionsRequest = null;
+            //DeleteSubscriptionsRequest deleteSubscriptionsRequest = null;
             //var response = instance.DeleteSubscriptions(deleteSubscriptionsRequest);
             //Assert.IsType<DeleteSubscriptionsResponse>(response);
         }
@@ -194,7 +193,7 @@ namespace Opc.Ua.WebApi.Test.Api
         public void FindServersTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //FindServersRequest? findServersRequest = null;
+            //FindServersRequest findServersRequest = null;
             //var response = instance.FindServers(findServersRequest);
             //Assert.IsType<FindServersResponse>(response);
         }
@@ -206,7 +205,7 @@ namespace Opc.Ua.WebApi.Test.Api
         public void GetEndpointsTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //GetEndpointsRequest? getEndpointsRequest = null;
+            //GetEndpointsRequest getEndpointsRequest = null;
             //var response = instance.GetEndpoints(getEndpointsRequest);
             //Assert.IsType<GetEndpointsResponse>(response);
         }
@@ -218,7 +217,7 @@ namespace Opc.Ua.WebApi.Test.Api
         public void HistoryReadTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //HistoryReadRequest? historyReadRequest = null;
+            //HistoryReadRequest historyReadRequest = null;
             //var response = instance.HistoryRead(historyReadRequest);
             //Assert.IsType<HistoryReadResponse>(response);
         }
@@ -230,7 +229,7 @@ namespace Opc.Ua.WebApi.Test.Api
         public void HistoryUpdateTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //HistoryUpdateRequest? historyUpdateRequest = null;
+            //HistoryUpdateRequest historyUpdateRequest = null;
             //var response = instance.HistoryUpdate(historyUpdateRequest);
             //Assert.IsType<HistoryUpdateResponse>(response);
         }
@@ -242,7 +241,7 @@ namespace Opc.Ua.WebApi.Test.Api
         public void ModifyMonitoredItemsTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //ModifyMonitoredItemsRequest? modifyMonitoredItemsRequest = null;
+            //ModifyMonitoredItemsRequest modifyMonitoredItemsRequest = null;
             //var response = instance.ModifyMonitoredItems(modifyMonitoredItemsRequest);
             //Assert.IsType<ModifyMonitoredItemsResponse>(response);
         }
@@ -254,7 +253,7 @@ namespace Opc.Ua.WebApi.Test.Api
         public void ModifySubscriptionTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //ModifySubscriptionRequest? modifySubscriptionRequest = null;
+            //ModifySubscriptionRequest modifySubscriptionRequest = null;
             //var response = instance.ModifySubscription(modifySubscriptionRequest);
             //Assert.IsType<ModifySubscriptionResponse>(response);
         }
@@ -266,7 +265,7 @@ namespace Opc.Ua.WebApi.Test.Api
         public void PublishTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //PublishRequest? publishRequest = null;
+            //PublishRequest publishRequest = null;
             //var response = instance.Publish(publishRequest);
             //Assert.IsType<PublishResponse>(response);
         }
@@ -278,7 +277,7 @@ namespace Opc.Ua.WebApi.Test.Api
         public void ReadTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //ReadRequest? readRequest = null;
+            //ReadRequest readRequest = null;
             //var response = instance.Read(readRequest);
             //Assert.IsType<ReadResponse>(response);
         }
@@ -290,7 +289,7 @@ namespace Opc.Ua.WebApi.Test.Api
         public void RegisterNodesTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //RegisterNodesRequest? registerNodesRequest = null;
+            //RegisterNodesRequest registerNodesRequest = null;
             //var response = instance.RegisterNodes(registerNodesRequest);
             //Assert.IsType<RegisterNodesResponse>(response);
         }
@@ -302,7 +301,7 @@ namespace Opc.Ua.WebApi.Test.Api
         public void RepublishTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //RepublishRequest? republishRequest = null;
+            //RepublishRequest republishRequest = null;
             //var response = instance.Republish(republishRequest);
             //Assert.IsType<RepublishResponse>(response);
         }
@@ -314,7 +313,7 @@ namespace Opc.Ua.WebApi.Test.Api
         public void SetMonitoringModeTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //SetMonitoringModeRequest? setMonitoringModeRequest = null;
+            //SetMonitoringModeRequest setMonitoringModeRequest = null;
             //var response = instance.SetMonitoringMode(setMonitoringModeRequest);
             //Assert.IsType<SetMonitoringModeResponse>(response);
         }
@@ -326,7 +325,7 @@ namespace Opc.Ua.WebApi.Test.Api
         public void SetPublishingModeTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //SetPublishingModeRequest? setPublishingModeRequest = null;
+            //SetPublishingModeRequest setPublishingModeRequest = null;
             //var response = instance.SetPublishingMode(setPublishingModeRequest);
             //Assert.IsType<SetPublishingModeResponse>(response);
         }
@@ -338,7 +337,7 @@ namespace Opc.Ua.WebApi.Test.Api
         public void SetTriggeringTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //SetTriggeringRequest? setTriggeringRequest = null;
+            //SetTriggeringRequest setTriggeringRequest = null;
             //var response = instance.SetTriggering(setTriggeringRequest);
             //Assert.IsType<SetTriggeringResponse>(response);
         }
@@ -350,7 +349,7 @@ namespace Opc.Ua.WebApi.Test.Api
         public void TransferSubscriptionsTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //TransferSubscriptionsRequest? transferSubscriptionsRequest = null;
+            //TransferSubscriptionsRequest transferSubscriptionsRequest = null;
             //var response = instance.TransferSubscriptions(transferSubscriptionsRequest);
             //Assert.IsType<TransferSubscriptionsResponse>(response);
         }
@@ -362,7 +361,7 @@ namespace Opc.Ua.WebApi.Test.Api
         public void TranslateBrowsePathsToNodeIdsTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //TranslateBrowsePathsToNodeIdsRequest? translateBrowsePathsToNodeIdsRequest = null;
+            //TranslateBrowsePathsToNodeIdsRequest translateBrowsePathsToNodeIdsRequest = null;
             //var response = instance.TranslateBrowsePathsToNodeIds(translateBrowsePathsToNodeIdsRequest);
             //Assert.IsType<TranslateBrowsePathsToNodeIdsResponse>(response);
         }
@@ -374,7 +373,7 @@ namespace Opc.Ua.WebApi.Test.Api
         public void UnregisterNodesTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //UnregisterNodesRequest? unregisterNodesRequest = null;
+            //UnregisterNodesRequest unregisterNodesRequest = null;
             //var response = instance.UnregisterNodes(unregisterNodesRequest);
             //Assert.IsType<UnregisterNodesResponse>(response);
         }
@@ -386,7 +385,7 @@ namespace Opc.Ua.WebApi.Test.Api
         public void WriteTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //WriteRequest? writeRequest = null;
+            //WriteRequest writeRequest = null;
             //var response = instance.Write(writeRequest);
             //Assert.IsType<WriteResponse>(response);
         }

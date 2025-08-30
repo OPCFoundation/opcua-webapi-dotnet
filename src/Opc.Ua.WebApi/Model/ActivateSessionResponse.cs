@@ -22,6 +22,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
+using FileParameter = Opc.Ua.WebApi.Client.FileParameter;
 using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 
 namespace Opc.Ua.WebApi.Model
@@ -39,7 +40,7 @@ namespace Opc.Ua.WebApi.Model
         /// <param name="serverNonce">serverNonce.</param>
         /// <param name="results">results.</param>
         /// <param name="diagnosticInfos">diagnosticInfos.</param>
-        public ActivateSessionResponse(ResponseHeader responseHeader = default(ResponseHeader), byte[] serverNonce = default(byte[]), List<StatusCode> results = default(List<StatusCode>), List<DiagnosticInfo> diagnosticInfos = default(List<DiagnosticInfo>))
+        public ActivateSessionResponse(ResponseHeader responseHeader = default, byte[] serverNonce = default, List<StatusCode> results = default, List<DiagnosticInfo> diagnosticInfos = default)
         {
             this.ResponseHeader = responseHeader;
             this.ServerNonce = serverNonce;

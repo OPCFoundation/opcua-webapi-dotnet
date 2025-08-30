@@ -22,12 +22,13 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
+using FileParameter = Opc.Ua.WebApi.Client.FileParameter;
 using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 
 namespace Opc.Ua.WebApi.Model
 {
     /// <summary>
-    /// [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/7.31).
+    /// [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/7.30).
     /// </summary>
     [DataContract(Name = "RelativePathElement")]
     public partial class RelativePathElement : IValidatableObject
@@ -39,7 +40,7 @@ namespace Opc.Ua.WebApi.Model
         /// <param name="isInverse">isInverse (default to false).</param>
         /// <param name="includeSubtypes">includeSubtypes (default to false).</param>
         /// <param name="targetName">targetName.</param>
-        public RelativePathElement(string referenceTypeId = default(string), bool isInverse = false, bool includeSubtypes = false, string targetName = default(string))
+        public RelativePathElement(string referenceTypeId = default, bool isInverse = false, bool includeSubtypes = false, string targetName = default)
         {
             this.ReferenceTypeId = referenceTypeId;
             this.IsInverse = isInverse;

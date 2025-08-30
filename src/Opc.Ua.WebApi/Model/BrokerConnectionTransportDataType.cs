@@ -22,6 +22,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
+using FileParameter = Opc.Ua.WebApi.Client.FileParameter;
 using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 
 namespace Opc.Ua.WebApi.Model
@@ -37,7 +38,7 @@ namespace Opc.Ua.WebApi.Model
         /// </summary>
         /// <param name="resourceUri">resourceUri.</param>
         /// <param name="authenticationProfileUri">authenticationProfileUri.</param>
-        public BrokerConnectionTransportDataType(string resourceUri = default(string), string authenticationProfileUri = default(string))
+        public BrokerConnectionTransportDataType(string resourceUri = default, string authenticationProfileUri = default)
         {
             this.ResourceUri = resourceUri;
             this.AuthenticationProfileUri = authenticationProfileUri;

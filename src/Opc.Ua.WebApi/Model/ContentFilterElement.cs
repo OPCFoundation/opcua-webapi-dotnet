@@ -22,6 +22,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
+using FileParameter = Opc.Ua.WebApi.Client.FileParameter;
 using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 
 namespace Opc.Ua.WebApi.Model
@@ -37,7 +38,7 @@ namespace Opc.Ua.WebApi.Model
         /// </summary>
         /// <param name="filterOperator">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/7.7.3)..</param>
         /// <param name="filterOperands">filterOperands.</param>
-        public ContentFilterElement(int filterOperator = default(int), List<ExtensionObject> filterOperands = default(List<ExtensionObject>))
+        public ContentFilterElement(int filterOperator = default, List<ExtensionObject> filterOperands = default)
         {
             this.FilterOperator = filterOperator;
             this.FilterOperands = filterOperands;

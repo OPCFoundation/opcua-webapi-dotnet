@@ -22,6 +22,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
+using FileParameter = Opc.Ua.WebApi.Client.FileParameter;
 using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 
 namespace Opc.Ua.WebApi.Model
@@ -40,7 +41,7 @@ namespace Opc.Ua.WebApi.Model
         /// <param name="filter">filter.</param>
         /// <param name="queueSize">queueSize (default to 0).</param>
         /// <param name="discardOldest">discardOldest (default to false).</param>
-        public MonitoringParameters(long clientHandle = 0, double samplingInterval = 0D, ExtensionObject filter = default(ExtensionObject), long queueSize = 0, bool discardOldest = false)
+        public MonitoringParameters(long clientHandle = 0, double samplingInterval = 0D, ExtensionObject filter = default, long queueSize = 0, bool discardOldest = false)
         {
             this.ClientHandle = clientHandle;
             this.SamplingInterval = samplingInterval;

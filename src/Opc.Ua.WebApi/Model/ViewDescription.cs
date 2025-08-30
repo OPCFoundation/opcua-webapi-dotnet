@@ -22,12 +22,13 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
+using FileParameter = Opc.Ua.WebApi.Client.FileParameter;
 using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 
 namespace Opc.Ua.WebApi.Model
 {
     /// <summary>
-    /// [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/7.45).
+    /// [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/7.44).
     /// </summary>
     [DataContract(Name = "ViewDescription")]
     public partial class ViewDescription : IValidatableObject
@@ -38,7 +39,7 @@ namespace Opc.Ua.WebApi.Model
         /// <param name="viewId">viewId.</param>
         /// <param name="timestamp">timestamp (default to &quot;0001-01-01T00:00Z&quot;).</param>
         /// <param name="viewVersion">viewVersion (default to 0).</param>
-        public ViewDescription(string viewId = default(string), DateTime timestamp = default(DateTime), long viewVersion = 0)
+        public ViewDescription(string viewId = default, DateTime timestamp = default, long viewVersion = 0)
         {
             this.ViewId = viewId;
             this.Timestamp = timestamp;

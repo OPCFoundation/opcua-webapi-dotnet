@@ -22,6 +22,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
+using FileParameter = Opc.Ua.WebApi.Client.FileParameter;
 using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 
 namespace Opc.Ua.WebApi.Model
@@ -39,7 +40,7 @@ namespace Opc.Ua.WebApi.Model
         /// <param name="value">value (default to 0).</param>
         /// <param name="displayName">displayName.</param>
         /// <param name="description">description.</param>
-        public EnumField(string name = default(string), long value = 0, LocalizedText displayName = default(LocalizedText), LocalizedText description = default(LocalizedText))
+        public EnumField(string name = default, long value = 0, LocalizedText displayName = default, LocalizedText description = default)
         {
             this.Name = name;
             this.Value = value;

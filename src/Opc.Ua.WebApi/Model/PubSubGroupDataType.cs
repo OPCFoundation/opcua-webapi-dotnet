@@ -22,6 +22,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
+using FileParameter = Opc.Ua.WebApi.Client.FileParameter;
 using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 
 namespace Opc.Ua.WebApi.Model
@@ -42,7 +43,7 @@ namespace Opc.Ua.WebApi.Model
         /// <param name="securityKeyServices">securityKeyServices.</param>
         /// <param name="maxNetworkMessageSize">maxNetworkMessageSize (default to 0).</param>
         /// <param name="groupProperties">groupProperties.</param>
-        public PubSubGroupDataType(string name = default(string), bool enabled = false, int securityMode = default(int), string securityGroupId = default(string), List<EndpointDescription> securityKeyServices = default(List<EndpointDescription>), long maxNetworkMessageSize = 0, List<KeyValuePair> groupProperties = default(List<KeyValuePair>))
+        public PubSubGroupDataType(string name = default, bool enabled = false, int securityMode = default, string securityGroupId = default, List<EndpointDescription> securityKeyServices = default, long maxNetworkMessageSize = 0, List<KeyValuePair> groupProperties = default)
         {
             this.Name = name;
             this.Enabled = enabled;

@@ -22,6 +22,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
+using FileParameter = Opc.Ua.WebApi.Client.FileParameter;
 using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 
 namespace Opc.Ua.WebApi.Model
@@ -39,7 +40,7 @@ namespace Opc.Ua.WebApi.Model
         /// <param name="view">view.</param>
         /// <param name="requestedMaxReferencesPerNode">requestedMaxReferencesPerNode (default to 0).</param>
         /// <param name="nodesToBrowse">nodesToBrowse.</param>
-        public BrowseRequest(RequestHeader requestHeader = default(RequestHeader), ViewDescription view = default(ViewDescription), long requestedMaxReferencesPerNode = 0, List<BrowseDescription> nodesToBrowse = default(List<BrowseDescription>))
+        public BrowseRequest(RequestHeader requestHeader = default, ViewDescription view = default, long requestedMaxReferencesPerNode = 0, List<BrowseDescription> nodesToBrowse = default)
         {
             this.RequestHeader = requestHeader;
             this.View = view;

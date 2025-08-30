@@ -1,5 +1,5 @@
 # Opc.Ua.WebApi.Model.ApplicationDescription
-[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part14/7.2.4/#7.2.4.6.5).
+[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part5/12.3.3).
 
 ## Properties
 

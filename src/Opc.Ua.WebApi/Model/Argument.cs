@@ -22,6 +22,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
+using FileParameter = Opc.Ua.WebApi.Client.FileParameter;
 using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 
 namespace Opc.Ua.WebApi.Model
@@ -40,7 +41,7 @@ namespace Opc.Ua.WebApi.Model
         /// <param name="valueRank">valueRank (default to 0).</param>
         /// <param name="arrayDimensions">arrayDimensions.</param>
         /// <param name="description">description.</param>
-        public Argument(string name = default(string), string dataType = default(string), int valueRank = 0, List<long> arrayDimensions = default(List<long>), LocalizedText description = default(LocalizedText))
+        public Argument(string name = default, string dataType = default, int valueRank = 0, List<long> arrayDimensions = default, LocalizedText description = default)
         {
             this.Name = name;
             this.DataType = dataType;

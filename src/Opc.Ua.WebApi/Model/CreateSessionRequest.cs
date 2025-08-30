@@ -22,6 +22,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
+using FileParameter = Opc.Ua.WebApi.Client.FileParameter;
 using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 
 namespace Opc.Ua.WebApi.Model
@@ -44,7 +45,7 @@ namespace Opc.Ua.WebApi.Model
         /// <param name="clientCertificate">clientCertificate.</param>
         /// <param name="requestedSessionTimeout">requestedSessionTimeout (default to 0D).</param>
         /// <param name="maxResponseMessageSize">maxResponseMessageSize (default to 0).</param>
-        public CreateSessionRequest(RequestHeader requestHeader = default(RequestHeader), ApplicationDescription clientDescription = default(ApplicationDescription), string serverUri = default(string), string endpointUrl = default(string), string sessionName = default(string), byte[] clientNonce = default(byte[]), byte[] clientCertificate = default(byte[]), double requestedSessionTimeout = 0D, long maxResponseMessageSize = 0)
+        public CreateSessionRequest(RequestHeader requestHeader = default, ApplicationDescription clientDescription = default, string serverUri = default, string endpointUrl = default, string sessionName = default, byte[] clientNonce = default, byte[] clientCertificate = default, double requestedSessionTimeout = 0D, long maxResponseMessageSize = 0)
         {
             this.RequestHeader = requestHeader;
             this.ClientDescription = clientDescription;

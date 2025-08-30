@@ -1,5 +1,5 @@
 # Opc.Ua.WebApi.Model.BrowsePath
-[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.9.4/#5.9.4.2).
+[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part3/6.2.5).
 
 ## Properties
 

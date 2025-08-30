@@ -22,6 +22,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
+using FileParameter = Opc.Ua.WebApi.Client.FileParameter;
 using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 
 namespace Opc.Ua.WebApi.Model
@@ -37,7 +38,7 @@ namespace Opc.Ua.WebApi.Model
         /// </summary>
         /// <param name="roleId">roleId.</param>
         /// <param name="permissions">permissions (default to 0).</param>
-        public RolePermissionType(string roleId = default(string), long permissions = 0)
+        public RolePermissionType(string roleId = default, long permissions = 0)
         {
             this.RoleId = roleId;
             this.Permissions = permissions;

@@ -43,6 +43,7 @@ All URIs are relative to *http://localhost:4840*
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using Opc.Ua.WebApi.Api;
 using Opc.Ua.WebApi.Client;
 using Opc.Ua.WebApi.Model;
@@ -55,7 +56,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:4840";
-            var apiInstance = new DefaultApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new DefaultApi(httpClient, config, httpClientHandler);
             var activateSessionRequest = new ActivateSessionRequest(); // ActivateSessionRequest | [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.7.3/#5.7.3.2). (optional) 
 
             try
@@ -130,6 +134,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using Opc.Ua.WebApi.Api;
 using Opc.Ua.WebApi.Client;
 using Opc.Ua.WebApi.Model;
@@ -142,7 +147,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:4840";
-            var apiInstance = new DefaultApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new DefaultApi(httpClient, config, httpClientHandler);
             var browseRequest = new BrowseRequest(); // BrowseRequest | [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.9.2/#5.9.2.2). (optional) 
 
             try
@@ -217,6 +225,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using Opc.Ua.WebApi.Api;
 using Opc.Ua.WebApi.Client;
 using Opc.Ua.WebApi.Model;
@@ -229,7 +238,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:4840";
-            var apiInstance = new DefaultApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new DefaultApi(httpClient, config, httpClientHandler);
             var browseNextRequest = new BrowseNextRequest(); // BrowseNextRequest | [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.9.3/#5.9.3.2). (optional) 
 
             try
@@ -304,6 +316,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using Opc.Ua.WebApi.Api;
 using Opc.Ua.WebApi.Client;
 using Opc.Ua.WebApi.Model;
@@ -316,7 +329,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:4840";
-            var apiInstance = new DefaultApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new DefaultApi(httpClient, config, httpClientHandler);
             var callRequest = new CallRequest(); // CallRequest | [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.12.2/#5.12.2.2). (optional) 
 
             try
@@ -391,6 +407,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using Opc.Ua.WebApi.Api;
 using Opc.Ua.WebApi.Client;
 using Opc.Ua.WebApi.Model;
@@ -403,7 +420,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:4840";
-            var apiInstance = new DefaultApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new DefaultApi(httpClient, config, httpClientHandler);
             var cancelRequest = new CancelRequest(); // CancelRequest | [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.7.5/#5.7.5.2). (optional) 
 
             try
@@ -478,6 +498,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using Opc.Ua.WebApi.Api;
 using Opc.Ua.WebApi.Client;
 using Opc.Ua.WebApi.Model;
@@ -490,7 +511,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:4840";
-            var apiInstance = new DefaultApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new DefaultApi(httpClient, config, httpClientHandler);
             var closeSessionRequest = new CloseSessionRequest(); // CloseSessionRequest | [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.7.4/#5.7.4.2). (optional) 
 
             try
@@ -565,6 +589,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using Opc.Ua.WebApi.Api;
 using Opc.Ua.WebApi.Client;
 using Opc.Ua.WebApi.Model;
@@ -577,7 +602,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:4840";
-            var apiInstance = new DefaultApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new DefaultApi(httpClient, config, httpClientHandler);
             var createMonitoredItemsRequest = new CreateMonitoredItemsRequest(); // CreateMonitoredItemsRequest | [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.13.2/#5.13.2.2). (optional) 
 
             try
@@ -652,6 +680,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using Opc.Ua.WebApi.Api;
 using Opc.Ua.WebApi.Client;
 using Opc.Ua.WebApi.Model;
@@ -664,7 +693,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:4840";
-            var apiInstance = new DefaultApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new DefaultApi(httpClient, config, httpClientHandler);
             var createSessionRequest = new CreateSessionRequest(); // CreateSessionRequest | [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.7.2/#5.7.2.2). (optional) 
 
             try
@@ -739,6 +771,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using Opc.Ua.WebApi.Api;
 using Opc.Ua.WebApi.Client;
 using Opc.Ua.WebApi.Model;
@@ -751,7 +784,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:4840";
-            var apiInstance = new DefaultApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new DefaultApi(httpClient, config, httpClientHandler);
             var createSubscriptionRequest = new CreateSubscriptionRequest(); // CreateSubscriptionRequest | [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.2/#5.14.2.2). (optional) 
 
             try
@@ -826,6 +862,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using Opc.Ua.WebApi.Api;
 using Opc.Ua.WebApi.Client;
 using Opc.Ua.WebApi.Model;
@@ -838,7 +875,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:4840";
-            var apiInstance = new DefaultApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new DefaultApi(httpClient, config, httpClientHandler);
             var deleteMonitoredItemsRequest = new DeleteMonitoredItemsRequest(); // DeleteMonitoredItemsRequest | [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.13.6/#5.13.6.2). (optional) 
 
             try
@@ -913,6 +953,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using Opc.Ua.WebApi.Api;
 using Opc.Ua.WebApi.Client;
 using Opc.Ua.WebApi.Model;
@@ -925,7 +966,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:4840";
-            var apiInstance = new DefaultApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new DefaultApi(httpClient, config, httpClientHandler);
             var deleteSubscriptionsRequest = new DeleteSubscriptionsRequest(); // DeleteSubscriptionsRequest | [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.8/#5.14.8.2). (optional) 
 
             try
@@ -1000,6 +1044,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using Opc.Ua.WebApi.Api;
 using Opc.Ua.WebApi.Client;
 using Opc.Ua.WebApi.Model;
@@ -1012,7 +1057,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:4840";
-            var apiInstance = new DefaultApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new DefaultApi(httpClient, config, httpClientHandler);
             var findServersRequest = new FindServersRequest(); // FindServersRequest | [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.5.2/#5.5.2.2). (optional) 
 
             try
@@ -1087,6 +1135,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using Opc.Ua.WebApi.Api;
 using Opc.Ua.WebApi.Client;
 using Opc.Ua.WebApi.Model;
@@ -1099,7 +1148,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:4840";
-            var apiInstance = new DefaultApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new DefaultApi(httpClient, config, httpClientHandler);
             var getEndpointsRequest = new GetEndpointsRequest(); // GetEndpointsRequest | [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.5.4/#5.5.4.2). (optional) 
 
             try
@@ -1174,6 +1226,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using Opc.Ua.WebApi.Api;
 using Opc.Ua.WebApi.Client;
 using Opc.Ua.WebApi.Model;
@@ -1186,7 +1239,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:4840";
-            var apiInstance = new DefaultApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new DefaultApi(httpClient, config, httpClientHandler);
             var historyReadRequest = new HistoryReadRequest(); // HistoryReadRequest | [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.11.3/#5.11.3.2). (optional) 
 
             try
@@ -1261,6 +1317,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using Opc.Ua.WebApi.Api;
 using Opc.Ua.WebApi.Client;
 using Opc.Ua.WebApi.Model;
@@ -1273,7 +1330,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:4840";
-            var apiInstance = new DefaultApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new DefaultApi(httpClient, config, httpClientHandler);
             var historyUpdateRequest = new HistoryUpdateRequest(); // HistoryUpdateRequest | [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.11.5/#5.11.5.2). (optional) 
 
             try
@@ -1348,6 +1408,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using Opc.Ua.WebApi.Api;
 using Opc.Ua.WebApi.Client;
 using Opc.Ua.WebApi.Model;
@@ -1360,7 +1421,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:4840";
-            var apiInstance = new DefaultApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new DefaultApi(httpClient, config, httpClientHandler);
             var modifyMonitoredItemsRequest = new ModifyMonitoredItemsRequest(); // ModifyMonitoredItemsRequest | [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.13.3/#5.13.3.2). (optional) 
 
             try
@@ -1435,6 +1499,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using Opc.Ua.WebApi.Api;
 using Opc.Ua.WebApi.Client;
 using Opc.Ua.WebApi.Model;
@@ -1447,7 +1512,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:4840";
-            var apiInstance = new DefaultApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new DefaultApi(httpClient, config, httpClientHandler);
             var modifySubscriptionRequest = new ModifySubscriptionRequest(); // ModifySubscriptionRequest | [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.3/#5.14.3.2). (optional) 
 
             try
@@ -1522,6 +1590,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using Opc.Ua.WebApi.Api;
 using Opc.Ua.WebApi.Client;
 using Opc.Ua.WebApi.Model;
@@ -1534,7 +1603,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:4840";
-            var apiInstance = new DefaultApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new DefaultApi(httpClient, config, httpClientHandler);
             var publishRequest = new PublishRequest(); // PublishRequest | [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.5/#5.14.5.2). (optional) 
 
             try
@@ -1609,6 +1681,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using Opc.Ua.WebApi.Api;
 using Opc.Ua.WebApi.Client;
 using Opc.Ua.WebApi.Model;
@@ -1621,7 +1694,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:4840";
-            var apiInstance = new DefaultApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new DefaultApi(httpClient, config, httpClientHandler);
             var readRequest = new ReadRequest(); // ReadRequest | [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.11.2/#5.11.2.2). (optional) 
 
             try
@@ -1696,6 +1772,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using Opc.Ua.WebApi.Api;
 using Opc.Ua.WebApi.Client;
 using Opc.Ua.WebApi.Model;
@@ -1708,7 +1785,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:4840";
-            var apiInstance = new DefaultApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new DefaultApi(httpClient, config, httpClientHandler);
             var registerNodesRequest = new RegisterNodesRequest(); // RegisterNodesRequest | [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.9.5/#5.9.5.2). (optional) 
 
             try
@@ -1783,6 +1863,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using Opc.Ua.WebApi.Api;
 using Opc.Ua.WebApi.Client;
 using Opc.Ua.WebApi.Model;
@@ -1795,7 +1876,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:4840";
-            var apiInstance = new DefaultApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new DefaultApi(httpClient, config, httpClientHandler);
             var republishRequest = new RepublishRequest(); // RepublishRequest | [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.6/#5.14.6.2). (optional) 
 
             try
@@ -1870,6 +1954,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using Opc.Ua.WebApi.Api;
 using Opc.Ua.WebApi.Client;
 using Opc.Ua.WebApi.Model;
@@ -1882,7 +1967,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:4840";
-            var apiInstance = new DefaultApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new DefaultApi(httpClient, config, httpClientHandler);
             var setMonitoringModeRequest = new SetMonitoringModeRequest(); // SetMonitoringModeRequest | [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.13.4/#5.13.4.2). (optional) 
 
             try
@@ -1957,6 +2045,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using Opc.Ua.WebApi.Api;
 using Opc.Ua.WebApi.Client;
 using Opc.Ua.WebApi.Model;
@@ -1969,7 +2058,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:4840";
-            var apiInstance = new DefaultApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new DefaultApi(httpClient, config, httpClientHandler);
             var setPublishingModeRequest = new SetPublishingModeRequest(); // SetPublishingModeRequest | [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.4/#5.14.4.2). (optional) 
 
             try
@@ -2044,6 +2136,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using Opc.Ua.WebApi.Api;
 using Opc.Ua.WebApi.Client;
 using Opc.Ua.WebApi.Model;
@@ -2056,7 +2149,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:4840";
-            var apiInstance = new DefaultApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new DefaultApi(httpClient, config, httpClientHandler);
             var setTriggeringRequest = new SetTriggeringRequest(); // SetTriggeringRequest | [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.13.5/#5.13.5.2). (optional) 
 
             try
@@ -2131,6 +2227,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using Opc.Ua.WebApi.Api;
 using Opc.Ua.WebApi.Client;
 using Opc.Ua.WebApi.Model;
@@ -2143,7 +2240,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:4840";
-            var apiInstance = new DefaultApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new DefaultApi(httpClient, config, httpClientHandler);
             var transferSubscriptionsRequest = new TransferSubscriptionsRequest(); // TransferSubscriptionsRequest | [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.7/#5.14.7.2). (optional) 
 
             try
@@ -2218,6 +2318,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using Opc.Ua.WebApi.Api;
 using Opc.Ua.WebApi.Client;
 using Opc.Ua.WebApi.Model;
@@ -2230,7 +2331,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:4840";
-            var apiInstance = new DefaultApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new DefaultApi(httpClient, config, httpClientHandler);
             var translateBrowsePathsToNodeIdsRequest = new TranslateBrowsePathsToNodeIdsRequest(); // TranslateBrowsePathsToNodeIdsRequest | [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.9.4/#5.9.4.2). (optional) 
 
             try
@@ -2305,6 +2409,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using Opc.Ua.WebApi.Api;
 using Opc.Ua.WebApi.Client;
 using Opc.Ua.WebApi.Model;
@@ -2317,7 +2422,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:4840";
-            var apiInstance = new DefaultApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new DefaultApi(httpClient, config, httpClientHandler);
             var unregisterNodesRequest = new UnregisterNodesRequest(); // UnregisterNodesRequest | [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.9.6/#5.9.6.2). (optional) 
 
             try
@@ -2392,6 +2500,7 @@ No authorization required
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Net.Http;
 using Opc.Ua.WebApi.Api;
 using Opc.Ua.WebApi.Client;
 using Opc.Ua.WebApi.Model;
@@ -2404,7 +2513,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:4840";
-            var apiInstance = new DefaultApi(config);
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new DefaultApi(httpClient, config, httpClientHandler);
             var writeRequest = new WriteRequest(); // WriteRequest | [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.11.4/#5.11.4.2). (optional) 
 
             try

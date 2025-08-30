@@ -22,6 +22,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
+using FileParameter = Opc.Ua.WebApi.Client.FileParameter;
 using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 
 namespace Opc.Ua.WebApi.Model
@@ -39,7 +40,7 @@ namespace Opc.Ua.WebApi.Model
         /// <param name="revisedPublishingInterval">revisedPublishingInterval (default to 0D).</param>
         /// <param name="revisedLifetimeCount">revisedLifetimeCount (default to 0).</param>
         /// <param name="revisedMaxKeepAliveCount">revisedMaxKeepAliveCount (default to 0).</param>
-        public ModifySubscriptionResponse(ResponseHeader responseHeader = default(ResponseHeader), double revisedPublishingInterval = 0D, long revisedLifetimeCount = 0, long revisedMaxKeepAliveCount = 0)
+        public ModifySubscriptionResponse(ResponseHeader responseHeader = default, double revisedPublishingInterval = 0D, long revisedLifetimeCount = 0, long revisedMaxKeepAliveCount = 0)
         {
             this.ResponseHeader = responseHeader;
             this.RevisedPublishingInterval = revisedPublishingInterval;

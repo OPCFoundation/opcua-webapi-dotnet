@@ -22,6 +22,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
+using FileParameter = Opc.Ua.WebApi.Client.FileParameter;
 using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 
 namespace Opc.Ua.WebApi.Model
@@ -44,7 +45,7 @@ namespace Opc.Ua.WebApi.Model
         /// <param name="retryInterval">retryInterval (default to 0D).</param>
         /// <param name="pushTargetProperties">pushTargetProperties.</param>
         /// <param name="securityGroups">securityGroups.</param>
-        public PubSubKeyPushTargetDataType(string applicationUri = default(string), List<string> pushTargetFolder = default(List<string>), string endpointUrl = default(string), string securityPolicyUri = default(string), UserTokenPolicy userTokenType = default(UserTokenPolicy), int requestedKeyCount = 0, double retryInterval = 0D, List<KeyValuePair> pushTargetProperties = default(List<KeyValuePair>), List<string> securityGroups = default(List<string>))
+        public PubSubKeyPushTargetDataType(string applicationUri = default, List<string> pushTargetFolder = default, string endpointUrl = default, string securityPolicyUri = default, UserTokenPolicy userTokenType = default, int requestedKeyCount = 0, double retryInterval = 0D, List<KeyValuePair> pushTargetProperties = default, List<string> securityGroups = default)
         {
             this.ApplicationUri = applicationUri;
             this.PushTargetFolder = pushTargetFolder;

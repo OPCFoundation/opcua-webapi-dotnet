@@ -22,12 +22,13 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
+using FileParameter = Opc.Ua.WebApi.Client.FileParameter;
 using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 
 namespace Opc.Ua.WebApi.Model
 {
     /// <summary>
-    /// [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/7.37).
+    /// [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/7.36).
     /// </summary>
     [DataContract(Name = "SignatureData")]
     public partial class SignatureData : IValidatableObject
@@ -37,7 +38,7 @@ namespace Opc.Ua.WebApi.Model
         /// </summary>
         /// <param name="algorithm">algorithm.</param>
         /// <param name="signature">signature.</param>
-        public SignatureData(string algorithm = default(string), byte[] signature = default(byte[]))
+        public SignatureData(string algorithm = default, byte[] signature = default)
         {
             this.Algorithm = algorithm;
             this.Signature = signature;

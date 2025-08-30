@@ -22,6 +22,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
+using FileParameter = Opc.Ua.WebApi.Client.FileParameter;
 using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 
 namespace Opc.Ua.WebApi.Model
@@ -38,7 +39,7 @@ namespace Opc.Ua.WebApi.Model
         /// <param name="objectId">objectId.</param>
         /// <param name="methodId">methodId.</param>
         /// <param name="inputArguments">inputArguments.</param>
-        public CallMethodRequest(string objectId = default(string), string methodId = default(string), List<Variant> inputArguments = default(List<Variant>))
+        public CallMethodRequest(string objectId = default, string methodId = default, List<Variant> inputArguments = default)
         {
             this.ObjectId = objectId;
             this.MethodId = methodId;

@@ -22,6 +22,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
+using FileParameter = Opc.Ua.WebApi.Client.FileParameter;
 using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 
 namespace Opc.Ua.WebApi.Model
@@ -37,7 +38,7 @@ namespace Opc.Ua.WebApi.Model
         /// </summary>
         /// <param name="responseHeader">responseHeader.</param>
         /// <param name="cancelCount">cancelCount (default to 0).</param>
-        public CancelResponse(ResponseHeader responseHeader = default(ResponseHeader), long cancelCount = 0)
+        public CancelResponse(ResponseHeader responseHeader = default, long cancelCount = 0)
         {
             this.ResponseHeader = responseHeader;
             this.CancelCount = cancelCount;

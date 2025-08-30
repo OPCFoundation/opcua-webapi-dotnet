@@ -22,6 +22,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
+using FileParameter = Opc.Ua.WebApi.Client.FileParameter;
 using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 
 namespace Opc.Ua.WebApi.Model
@@ -38,7 +39,7 @@ namespace Opc.Ua.WebApi.Model
         /// <param name="requestHeader">requestHeader.</param>
         /// <param name="releaseContinuationPoints">releaseContinuationPoints (default to false).</param>
         /// <param name="continuationPoints">continuationPoints.</param>
-        public BrowseNextRequest(RequestHeader requestHeader = default(RequestHeader), bool releaseContinuationPoints = false, List<byte[]> continuationPoints = default(List<byte[]>))
+        public BrowseNextRequest(RequestHeader requestHeader = default, bool releaseContinuationPoints = false, List<byte[]> continuationPoints = default)
         {
             this.RequestHeader = requestHeader;
             this.ReleaseContinuationPoints = releaseContinuationPoints;

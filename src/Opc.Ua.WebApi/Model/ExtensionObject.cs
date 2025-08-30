@@ -22,6 +22,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
+using FileParameter = Opc.Ua.WebApi.Client.FileParameter;
 using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 
 namespace Opc.Ua.WebApi.Model
@@ -38,7 +39,7 @@ namespace Opc.Ua.WebApi.Model
         /// <param name="uaTypeId">uaTypeId.</param>
         /// <param name="uaEncoding">uaEncoding.</param>
         /// <param name="uaBody">uaBody.</param>
-        public ExtensionObject(string uaTypeId = default(string), int uaEncoding = default(int), byte[] uaBody = default(byte[]))
+        public ExtensionObject(string uaTypeId = default, int uaEncoding = default, byte[] uaBody = default)
         {
             this.UaTypeId = uaTypeId;
             this.UaEncoding = uaEncoding;

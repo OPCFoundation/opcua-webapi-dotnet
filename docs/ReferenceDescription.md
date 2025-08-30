@@ -1,5 +1,5 @@
 # Opc.Ua.WebApi.Model.ReferenceDescription
-[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/7.30).
+[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/7.29).
 
 ## Properties
 

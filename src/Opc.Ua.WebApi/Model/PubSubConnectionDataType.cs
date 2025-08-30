@@ -22,6 +22,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
+using FileParameter = Opc.Ua.WebApi.Client.FileParameter;
 using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 
 namespace Opc.Ua.WebApi.Model
@@ -44,7 +45,7 @@ namespace Opc.Ua.WebApi.Model
         /// <param name="transportSettings">transportSettings.</param>
         /// <param name="writerGroups">writerGroups.</param>
         /// <param name="readerGroups">readerGroups.</param>
-        public PubSubConnectionDataType(string name = default(string), bool enabled = false, Variant publisherId = default(Variant), string transportProfileUri = default(string), Object address = default(Object), List<KeyValuePair> connectionProperties = default(List<KeyValuePair>), Object transportSettings = default(Object), List<WriterGroupDataType> writerGroups = default(List<WriterGroupDataType>), List<ReaderGroupDataType> readerGroups = default(List<ReaderGroupDataType>))
+        public PubSubConnectionDataType(string name = default, bool enabled = false, Variant publisherId = default, string transportProfileUri = default, Object address = default, List<KeyValuePair> connectionProperties = default, Object transportSettings = default, List<WriterGroupDataType> writerGroups = default, List<ReaderGroupDataType> readerGroups = default)
         {
             this.Name = name;
             this.Enabled = enabled;

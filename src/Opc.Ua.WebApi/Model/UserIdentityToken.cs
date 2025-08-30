@@ -22,6 +22,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
+using FileParameter = Opc.Ua.WebApi.Client.FileParameter;
 using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 
 namespace Opc.Ua.WebApi.Model
@@ -36,7 +37,7 @@ namespace Opc.Ua.WebApi.Model
         /// Initializes a new instance of the <see cref="UserIdentityToken" /> class.
         /// </summary>
         /// <param name="policyId">policyId.</param>
-        public UserIdentityToken(string policyId = default(string))
+        public UserIdentityToken(string policyId = default)
         {
             this.PolicyId = policyId;
         }

@@ -22,12 +22,13 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
+using FileParameter = Opc.Ua.WebApi.Client.FileParameter;
 using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 
 namespace Opc.Ua.WebApi.Model
 {
     /// <summary>
-    /// [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/7.31).
+    /// [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/7.30).
     /// </summary>
     [DataContract(Name = "RelativePath")]
     public partial class RelativePath : IValidatableObject
@@ -36,7 +37,7 @@ namespace Opc.Ua.WebApi.Model
         /// Initializes a new instance of the <see cref="RelativePath" /> class.
         /// </summary>
         /// <param name="elements">elements.</param>
-        public RelativePath(List<RelativePathElement> elements = default(List<RelativePathElement>))
+        public RelativePath(List<RelativePathElement> elements = default)
         {
             this.Elements = elements;
         }

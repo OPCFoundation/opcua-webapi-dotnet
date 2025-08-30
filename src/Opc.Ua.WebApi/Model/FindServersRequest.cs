@@ -22,6 +22,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
+using FileParameter = Opc.Ua.WebApi.Client.FileParameter;
 using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 
 namespace Opc.Ua.WebApi.Model
@@ -39,7 +40,7 @@ namespace Opc.Ua.WebApi.Model
         /// <param name="endpointUrl">endpointUrl.</param>
         /// <param name="localeIds">localeIds.</param>
         /// <param name="serverUris">serverUris.</param>
-        public FindServersRequest(RequestHeader requestHeader = default(RequestHeader), string endpointUrl = default(string), List<string> localeIds = default(List<string>), List<string> serverUris = default(List<string>))
+        public FindServersRequest(RequestHeader requestHeader = default, string endpointUrl = default, List<string> localeIds = default, List<string> serverUris = default)
         {
             this.RequestHeader = requestHeader;
             this.EndpointUrl = endpointUrl;

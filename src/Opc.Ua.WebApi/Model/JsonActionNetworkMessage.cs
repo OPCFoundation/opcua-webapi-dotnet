@@ -22,6 +22,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
+using FileParameter = Opc.Ua.WebApi.Client.FileParameter;
 using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 
 namespace Opc.Ua.WebApi.Model
@@ -44,7 +45,7 @@ namespace Opc.Ua.WebApi.Model
         /// <param name="requestorId">requestorId.</param>
         /// <param name="timeoutHint">timeoutHint (default to 0D).</param>
         /// <param name="messages">messages.</param>
-        public JsonActionNetworkMessage(string messageId = default(string), string messageType = default(string), string publisherId = default(string), DateTime timestamp = default(DateTime), string responseAddress = default(string), byte[] correlationData = default(byte[]), string requestorId = default(string), double timeoutHint = 0D, List<Object> messages = default(List<Object>))
+        public JsonActionNetworkMessage(string messageId = default, string messageType = default, string publisherId = default, DateTime timestamp = default, string responseAddress = default, byte[] correlationData = default, string requestorId = default, double timeoutHint = 0D, List<Object> messages = default)
         {
             this.MessageId = messageId;
             this.MessageType = messageType;

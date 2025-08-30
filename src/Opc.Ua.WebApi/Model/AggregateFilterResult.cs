@@ -22,6 +22,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
+using FileParameter = Opc.Ua.WebApi.Client.FileParameter;
 using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 
 namespace Opc.Ua.WebApi.Model
@@ -38,7 +39,7 @@ namespace Opc.Ua.WebApi.Model
         /// <param name="revisedStartTime">revisedStartTime (default to &quot;0001-01-01T00:00Z&quot;).</param>
         /// <param name="revisedProcessingInterval">revisedProcessingInterval (default to 0D).</param>
         /// <param name="revisedAggregateConfiguration">revisedAggregateConfiguration.</param>
-        public AggregateFilterResult(DateTime revisedStartTime = default(DateTime), double revisedProcessingInterval = 0D, AggregateConfiguration revisedAggregateConfiguration = default(AggregateConfiguration))
+        public AggregateFilterResult(DateTime revisedStartTime = default, double revisedProcessingInterval = 0D, AggregateConfiguration revisedAggregateConfiguration = default)
         {
             this.RevisedStartTime = revisedStartTime;
             this.RevisedProcessingInterval = revisedProcessingInterval;

@@ -1,5 +1,5 @@
 # Opc.Ua.WebApi.Model.AggregateConfiguration
-[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part11/6.5.4/#6.5.4.1).
+[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/7.22.4).
 
 ## Properties
 

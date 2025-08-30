@@ -22,6 +22,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
+using FileParameter = Opc.Ua.WebApi.Client.FileParameter;
 using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 
 namespace Opc.Ua.WebApi.Model
@@ -38,7 +39,7 @@ namespace Opc.Ua.WebApi.Model
         /// <param name="selectClauseResults">selectClauseResults.</param>
         /// <param name="selectClauseDiagnosticInfos">selectClauseDiagnosticInfos.</param>
         /// <param name="whereClauseResult">whereClauseResult.</param>
-        public EventFilterResult(List<StatusCode> selectClauseResults = default(List<StatusCode>), List<DiagnosticInfo> selectClauseDiagnosticInfos = default(List<DiagnosticInfo>), ContentFilterResult whereClauseResult = default(ContentFilterResult))
+        public EventFilterResult(List<StatusCode> selectClauseResults = default, List<DiagnosticInfo> selectClauseDiagnosticInfos = default, ContentFilterResult whereClauseResult = default)
         {
             this.SelectClauseResults = selectClauseResults;
             this.SelectClauseDiagnosticInfos = selectClauseDiagnosticInfos;

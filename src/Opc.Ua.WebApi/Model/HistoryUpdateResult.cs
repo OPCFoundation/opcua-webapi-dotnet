@@ -22,6 +22,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
+using FileParameter = Opc.Ua.WebApi.Client.FileParameter;
 using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 
 namespace Opc.Ua.WebApi.Model
@@ -38,7 +39,7 @@ namespace Opc.Ua.WebApi.Model
         /// <param name="statusCode">statusCode.</param>
         /// <param name="operationResults">operationResults.</param>
         /// <param name="diagnosticInfos">diagnosticInfos.</param>
-        public HistoryUpdateResult(StatusCode statusCode = default(StatusCode), List<StatusCode> operationResults = default(List<StatusCode>), List<DiagnosticInfo> diagnosticInfos = default(List<DiagnosticInfo>))
+        public HistoryUpdateResult(StatusCode statusCode = default, List<StatusCode> operationResults = default, List<DiagnosticInfo> diagnosticInfos = default)
         {
             this.StatusCode = statusCode;
             this.OperationResults = operationResults;

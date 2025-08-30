@@ -22,6 +22,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
+using FileParameter = Opc.Ua.WebApi.Client.FileParameter;
 using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 
 namespace Opc.Ua.WebApi.Model
@@ -37,7 +38,7 @@ namespace Opc.Ua.WebApi.Model
         /// </summary>
         /// <param name="code">code.</param>
         /// <param name="symbol">symbol.</param>
-        public StatusCode(long code = default(long), string symbol = default(string))
+        public StatusCode(long code = default, string symbol = default)
         {
             this.Code = code;
             this.Symbol = symbol;

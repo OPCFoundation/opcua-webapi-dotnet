@@ -22,6 +22,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
+using FileParameter = Opc.Ua.WebApi.Client.FileParameter;
 using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 
 namespace Opc.Ua.WebApi.Model
@@ -39,7 +40,7 @@ namespace Opc.Ua.WebApi.Model
         /// <param name="subscriptionId">subscriptionId (default to 0).</param>
         /// <param name="monitoringMode">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/7.23)..</param>
         /// <param name="monitoredItemIds">monitoredItemIds.</param>
-        public SetMonitoringModeRequest(RequestHeader requestHeader = default(RequestHeader), long subscriptionId = 0, int monitoringMode = default(int), List<long> monitoredItemIds = default(List<long>))
+        public SetMonitoringModeRequest(RequestHeader requestHeader = default, long subscriptionId = 0, int monitoringMode = default, List<long> monitoredItemIds = default)
         {
             this.RequestHeader = requestHeader;
             this.SubscriptionId = subscriptionId;

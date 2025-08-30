@@ -22,6 +22,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
+using FileParameter = Opc.Ua.WebApi.Client.FileParameter;
 using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 
 namespace Opc.Ua.WebApi.Model
@@ -38,7 +39,7 @@ namespace Opc.Ua.WebApi.Model
         /// <param name="requestHeader">requestHeader.</param>
         /// <param name="publishingEnabled">publishingEnabled (default to false).</param>
         /// <param name="subscriptionIds">subscriptionIds.</param>
-        public SetPublishingModeRequest(RequestHeader requestHeader = default(RequestHeader), bool publishingEnabled = false, List<long> subscriptionIds = default(List<long>))
+        public SetPublishingModeRequest(RequestHeader requestHeader = default, bool publishingEnabled = false, List<long> subscriptionIds = default)
         {
             this.RequestHeader = requestHeader;
             this.PublishingEnabled = publishingEnabled;

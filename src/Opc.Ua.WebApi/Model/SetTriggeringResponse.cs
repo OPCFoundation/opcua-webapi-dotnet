@@ -22,6 +22,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
+using FileParameter = Opc.Ua.WebApi.Client.FileParameter;
 using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 
 namespace Opc.Ua.WebApi.Model
@@ -40,7 +41,7 @@ namespace Opc.Ua.WebApi.Model
         /// <param name="addDiagnosticInfos">addDiagnosticInfos.</param>
         /// <param name="removeResults">removeResults.</param>
         /// <param name="removeDiagnosticInfos">removeDiagnosticInfos.</param>
-        public SetTriggeringResponse(ResponseHeader responseHeader = default(ResponseHeader), List<StatusCode> addResults = default(List<StatusCode>), List<DiagnosticInfo> addDiagnosticInfos = default(List<DiagnosticInfo>), List<StatusCode> removeResults = default(List<StatusCode>), List<DiagnosticInfo> removeDiagnosticInfos = default(List<DiagnosticInfo>))
+        public SetTriggeringResponse(ResponseHeader responseHeader = default, List<StatusCode> addResults = default, List<DiagnosticInfo> addDiagnosticInfos = default, List<StatusCode> removeResults = default, List<DiagnosticInfo> removeDiagnosticInfos = default)
         {
             this.ResponseHeader = responseHeader;
             this.AddResults = addResults;

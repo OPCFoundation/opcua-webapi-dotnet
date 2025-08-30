@@ -22,6 +22,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
+using FileParameter = Opc.Ua.WebApi.Client.FileParameter;
 using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 
 namespace Opc.Ua.WebApi.Model
@@ -38,7 +39,7 @@ namespace Opc.Ua.WebApi.Model
         /// <param name="actionTargetId">actionTargetId (default to 0).</param>
         /// <param name="name">name.</param>
         /// <param name="description">description.</param>
-        public ActionTargetDataType(int actionTargetId = 0, string name = default(string), LocalizedText description = default(LocalizedText))
+        public ActionTargetDataType(int actionTargetId = 0, string name = default, LocalizedText description = default)
         {
             this.ActionTargetId = actionTargetId;
             this.Name = name;

@@ -22,6 +22,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
+using FileParameter = Opc.Ua.WebApi.Client.FileParameter;
 using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 
 namespace Opc.Ua.WebApi.Model
@@ -39,7 +40,7 @@ namespace Opc.Ua.WebApi.Model
         /// <param name="performInsertReplace">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part11/6.8)..</param>
         /// <param name="filter">filter.</param>
         /// <param name="eventData">eventData.</param>
-        public UpdateEventDetails(string nodeId = default(string), int performInsertReplace = default(int), EventFilter filter = default(EventFilter), List<HistoryEventFieldList> eventData = default(List<HistoryEventFieldList>))
+        public UpdateEventDetails(string nodeId = default, int performInsertReplace = default, EventFilter filter = default, List<HistoryEventFieldList> eventData = default)
         {
             this.NodeId = nodeId;
             this.PerformInsertReplace = performInsertReplace;

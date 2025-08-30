@@ -22,6 +22,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
+using FileParameter = Opc.Ua.WebApi.Client.FileParameter;
 using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 
 namespace Opc.Ua.WebApi.Model
@@ -38,7 +39,7 @@ namespace Opc.Ua.WebApi.Model
         /// <param name="responseHeader">responseHeader.</param>
         /// <param name="results">results.</param>
         /// <param name="diagnosticInfos">diagnosticInfos.</param>
-        public CreateMonitoredItemsResponse(ResponseHeader responseHeader = default(ResponseHeader), List<MonitoredItemCreateResult> results = default(List<MonitoredItemCreateResult>), List<DiagnosticInfo> diagnosticInfos = default(List<DiagnosticInfo>))
+        public CreateMonitoredItemsResponse(ResponseHeader responseHeader = default, List<MonitoredItemCreateResult> results = default, List<DiagnosticInfo> diagnosticInfos = default)
         {
             this.ResponseHeader = responseHeader;
             this.Results = results;

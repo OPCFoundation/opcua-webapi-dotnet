@@ -22,6 +22,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
+using FileParameter = Opc.Ua.WebApi.Client.FileParameter;
 using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 
 namespace Opc.Ua.WebApi.Model
@@ -43,7 +44,7 @@ namespace Opc.Ua.WebApi.Model
         /// <param name="sourcePicoseconds">sourcePicoseconds.</param>
         /// <param name="serverTimestamp">serverTimestamp.</param>
         /// <param name="serverPicoseconds">serverPicoseconds.</param>
-        public DataValue(int uaType = 0, Object value = default(Object), List<int> dimensions = default(List<int>), StatusCode statusCode = default(StatusCode), DateTime sourceTimestamp = default(DateTime), int sourcePicoseconds = default(int), DateTime serverTimestamp = default(DateTime), int serverPicoseconds = default(int))
+        public DataValue(int uaType = 0, Object value = default, List<int> dimensions = default, StatusCode statusCode = default, DateTime sourceTimestamp = default, int sourcePicoseconds = default, DateTime serverTimestamp = default, int serverPicoseconds = default)
         {
             this.UaType = uaType;
             this.Value = value;

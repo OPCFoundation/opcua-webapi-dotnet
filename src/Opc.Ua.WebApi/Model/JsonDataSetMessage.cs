@@ -22,6 +22,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
+using FileParameter = Opc.Ua.WebApi.Client.FileParameter;
 using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 
 namespace Opc.Ua.WebApi.Model
@@ -46,7 +47,7 @@ namespace Opc.Ua.WebApi.Model
         /// <param name="status">status.</param>
         /// <param name="messageType">messageType.</param>
         /// <param name="payload">payload.</param>
-        public JsonDataSetMessage(int dataSetWriterId = 0, string dataSetWriterName = default(string), string publisherId = default(string), string writerGroupName = default(string), long sequenceNumber = 0, ConfigurationVersionDataType metaDataVersion = default(ConfigurationVersionDataType), long minorVersion = 0, DateTime timestamp = default(DateTime), StatusCode status = default(StatusCode), string messageType = default(string), Object payload = default(Object))
+        public JsonDataSetMessage(int dataSetWriterId = 0, string dataSetWriterName = default, string publisherId = default, string writerGroupName = default, long sequenceNumber = 0, ConfigurationVersionDataType metaDataVersion = default, long minorVersion = 0, DateTime timestamp = default, StatusCode status = default, string messageType = default, Object payload = default)
         {
             this.DataSetWriterId = dataSetWriterId;
             this.DataSetWriterName = dataSetWriterName;

@@ -22,6 +22,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
+using FileParameter = Opc.Ua.WebApi.Client.FileParameter;
 using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 
 namespace Opc.Ua.WebApi.Model
@@ -39,7 +40,7 @@ namespace Opc.Ua.WebApi.Model
         /// <param name="indexRange">indexRange.</param>
         /// <param name="dataEncoding">dataEncoding.</param>
         /// <param name="continuationPoint">continuationPoint.</param>
-        public HistoryReadValueId(string nodeId = default(string), string indexRange = default(string), string dataEncoding = default(string), byte[] continuationPoint = default(byte[]))
+        public HistoryReadValueId(string nodeId = default, string indexRange = default, string dataEncoding = default, byte[] continuationPoint = default)
         {
             this.NodeId = nodeId;
             this.IndexRange = indexRange;

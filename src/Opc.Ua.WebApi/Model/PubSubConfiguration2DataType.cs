@@ -22,6 +22,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
+using FileParameter = Opc.Ua.WebApi.Client.FileParameter;
 using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 
 namespace Opc.Ua.WebApi.Model
@@ -45,7 +46,7 @@ namespace Opc.Ua.WebApi.Model
         /// <param name="publishedDataSets">publishedDataSets.</param>
         /// <param name="connections">connections.</param>
         /// <param name="enabled">enabled (default to false).</param>
-        public PubSubConfiguration2DataType(List<StandaloneSubscribedDataSetDataType> subscribedDataSets = default(List<StandaloneSubscribedDataSetDataType>), List<DataSetMetaDataType> dataSetClasses = default(List<DataSetMetaDataType>), List<EndpointDescription> defaultSecurityKeyServices = default(List<EndpointDescription>), List<SecurityGroupDataType> securityGroups = default(List<SecurityGroupDataType>), List<PubSubKeyPushTargetDataType> pubSubKeyPushTargets = default(List<PubSubKeyPushTargetDataType>), long configurationVersion = 0, List<KeyValuePair> configurationProperties = default(List<KeyValuePair>), List<PublishedDataSetDataType> publishedDataSets = default(List<PublishedDataSetDataType>), List<PubSubConnectionDataType> connections = default(List<PubSubConnectionDataType>), bool enabled = false)
+        public PubSubConfiguration2DataType(List<StandaloneSubscribedDataSetDataType> subscribedDataSets = default, List<DataSetMetaDataType> dataSetClasses = default, List<EndpointDescription> defaultSecurityKeyServices = default, List<SecurityGroupDataType> securityGroups = default, List<PubSubKeyPushTargetDataType> pubSubKeyPushTargets = default, long configurationVersion = 0, List<KeyValuePair> configurationProperties = default, List<PublishedDataSetDataType> publishedDataSets = default, List<PubSubConnectionDataType> connections = default, bool enabled = false)
         {
             this.SubscribedDataSets = subscribedDataSets;
             this.DataSetClasses = dataSetClasses;

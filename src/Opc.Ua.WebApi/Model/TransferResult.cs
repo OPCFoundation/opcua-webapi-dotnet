@@ -22,6 +22,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
+using FileParameter = Opc.Ua.WebApi.Client.FileParameter;
 using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 
 namespace Opc.Ua.WebApi.Model
@@ -37,7 +38,7 @@ namespace Opc.Ua.WebApi.Model
         /// </summary>
         /// <param name="statusCode">statusCode.</param>
         /// <param name="availableSequenceNumbers">availableSequenceNumbers.</param>
-        public TransferResult(StatusCode statusCode = default(StatusCode), List<long> availableSequenceNumbers = default(List<long>))
+        public TransferResult(StatusCode statusCode = default, List<long> availableSequenceNumbers = default)
         {
             this.StatusCode = statusCode;
             this.AvailableSequenceNumbers = availableSequenceNumbers;

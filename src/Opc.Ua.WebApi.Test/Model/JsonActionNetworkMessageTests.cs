@@ -128,12 +128,12 @@ namespace Opc.Ua.WebApi.Test.Model
         }
 
         /// <summary>
-        /// Test the property 'Message'
+        /// Test the property 'Messages'
         /// </summary>
         [Fact]
-        public void MessageTest()
+        public void MessagesTest()
         {
-            // TODO unit test for the property 'Message'
+            // TODO unit test for the property 'Messages'
         }
     }
 }

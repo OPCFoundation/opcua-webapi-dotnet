@@ -65,12 +65,12 @@ namespace Opc.Ua.WebApi.Test.Model
         }
 
         /// <summary>
-        /// Test the property 'Body'
+        /// Test the property 'Value'
         /// </summary>
         [Fact]
-        public void BodyTest()
+        public void ValueTest()
         {
-            // TODO unit test for the property 'Body'
+            // TODO unit test for the property 'Value'
         }
 
         /// <summary>

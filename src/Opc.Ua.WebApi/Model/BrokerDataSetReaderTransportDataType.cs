@@ -22,6 +22,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
+using FileParameter = Opc.Ua.WebApi.Client.FileParameter;
 using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 
 namespace Opc.Ua.WebApi.Model
@@ -40,7 +41,7 @@ namespace Opc.Ua.WebApi.Model
         /// <param name="authenticationProfileUri">authenticationProfileUri.</param>
         /// <param name="requestedDeliveryGuarantee">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part14/6.4.2/#6.4.2.1)..</param>
         /// <param name="metaDataQueueName">metaDataQueueName.</param>
-        public BrokerDataSetReaderTransportDataType(string queueName = default(string), string resourceUri = default(string), string authenticationProfileUri = default(string), int requestedDeliveryGuarantee = default(int), string metaDataQueueName = default(string))
+        public BrokerDataSetReaderTransportDataType(string queueName = default, string resourceUri = default, string authenticationProfileUri = default, int requestedDeliveryGuarantee = default, string metaDataQueueName = default)
         {
             this.QueueName = queueName;
             this.ResourceUri = resourceUri;

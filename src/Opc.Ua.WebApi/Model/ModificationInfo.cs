@@ -22,6 +22,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
+using FileParameter = Opc.Ua.WebApi.Client.FileParameter;
 using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 
 namespace Opc.Ua.WebApi.Model
@@ -38,7 +39,7 @@ namespace Opc.Ua.WebApi.Model
         /// <param name="modificationTime">modificationTime (default to &quot;0001-01-01T00:00Z&quot;).</param>
         /// <param name="updateType">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part11/6.7)..</param>
         /// <param name="userName">userName.</param>
-        public ModificationInfo(DateTime modificationTime = default(DateTime), int updateType = default(int), string userName = default(string))
+        public ModificationInfo(DateTime modificationTime = default, int updateType = default, string userName = default)
         {
             this.ModificationTime = modificationTime;
             this.UpdateType = updateType;

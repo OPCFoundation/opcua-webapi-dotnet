@@ -22,12 +22,13 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
+using FileParameter = Opc.Ua.WebApi.Client.FileParameter;
 using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 
 namespace Opc.Ua.WebApi.Model
 {
     /// <summary>
-    /// [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/7.33).
+    /// [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/7.32).
     /// </summary>
     [DataContract(Name = "RequestHeader")]
     public partial class RequestHeader : IValidatableObject
@@ -42,7 +43,7 @@ namespace Opc.Ua.WebApi.Model
         /// <param name="auditEntryId">auditEntryId.</param>
         /// <param name="timeoutHint">timeoutHint (default to 0).</param>
         /// <param name="additionalHeader">additionalHeader.</param>
-        public RequestHeader(string authenticationToken = default(string), DateTime timestamp = default(DateTime), long requestHandle = 0, long returnDiagnostics = 0, string auditEntryId = default(string), long timeoutHint = 0, ExtensionObject additionalHeader = default(ExtensionObject))
+        public RequestHeader(string authenticationToken = default, DateTime timestamp = default, long requestHandle = 0, long returnDiagnostics = 0, string auditEntryId = default, long timeoutHint = 0, ExtensionObject additionalHeader = default)
         {
             this.AuthenticationToken = authenticationToken;
             this.Timestamp = timestamp;

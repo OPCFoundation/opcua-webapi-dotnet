@@ -22,6 +22,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
+using FileParameter = Opc.Ua.WebApi.Client.FileParameter;
 using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 
 namespace Opc.Ua.WebApi.Model
@@ -45,7 +46,7 @@ namespace Opc.Ua.WebApi.Model
         /// <param name="serverSoftwareCertificates">serverSoftwareCertificates.</param>
         /// <param name="serverSignature">serverSignature.</param>
         /// <param name="maxRequestMessageSize">maxRequestMessageSize (default to 0).</param>
-        public CreateSessionResponse(ResponseHeader responseHeader = default(ResponseHeader), string sessionId = default(string), string authenticationToken = default(string), double revisedSessionTimeout = 0D, byte[] serverNonce = default(byte[]), byte[] serverCertificate = default(byte[]), List<EndpointDescription> serverEndpoints = default(List<EndpointDescription>), List<SignedSoftwareCertificate> serverSoftwareCertificates = default(List<SignedSoftwareCertificate>), SignatureData serverSignature = default(SignatureData), long maxRequestMessageSize = 0)
+        public CreateSessionResponse(ResponseHeader responseHeader = default, string sessionId = default, string authenticationToken = default, double revisedSessionTimeout = 0D, byte[] serverNonce = default, byte[] serverCertificate = default, List<EndpointDescription> serverEndpoints = default, List<SignedSoftwareCertificate> serverSoftwareCertificates = default, SignatureData serverSignature = default, long maxRequestMessageSize = 0)
         {
             this.ResponseHeader = responseHeader;
             this.SessionId = sessionId;

@@ -22,6 +22,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
+using FileParameter = Opc.Ua.WebApi.Client.FileParameter;
 using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 
 namespace Opc.Ua.WebApi.Model
@@ -38,7 +39,7 @@ namespace Opc.Ua.WebApi.Model
         /// <param name="itemToMonitor">itemToMonitor.</param>
         /// <param name="monitoringMode">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/7.23)..</param>
         /// <param name="requestedParameters">requestedParameters.</param>
-        public MonitoredItemCreateRequest(ReadValueId itemToMonitor = default(ReadValueId), int monitoringMode = default(int), MonitoringParameters requestedParameters = default(MonitoringParameters))
+        public MonitoredItemCreateRequest(ReadValueId itemToMonitor = default, int monitoringMode = default, MonitoringParameters requestedParameters = default)
         {
             this.ItemToMonitor = itemToMonitor;
             this.MonitoringMode = monitoringMode;

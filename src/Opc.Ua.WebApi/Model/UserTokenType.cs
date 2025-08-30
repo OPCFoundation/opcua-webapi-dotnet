@@ -22,14 +22,15 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
+using FileParameter = Opc.Ua.WebApi.Client.FileParameter;
 using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 
 namespace Opc.Ua.WebApi.Model
 {
     /// <summary>
-    /// [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/7.43).
+    /// [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/7.42).
     /// </summary>
-    /// <value>[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/7.43).</value>
+    /// <value>[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/7.42).</value>
     public enum UserTokenType
     {
         /// <summary>

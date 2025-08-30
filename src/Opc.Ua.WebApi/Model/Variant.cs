@@ -22,6 +22,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
+using FileParameter = Opc.Ua.WebApi.Client.FileParameter;
 using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 
 namespace Opc.Ua.WebApi.Model
@@ -38,7 +39,7 @@ namespace Opc.Ua.WebApi.Model
         /// <param name="uaType">uaType.</param>
         /// <param name="value">value.</param>
         /// <param name="dimensions">dimensions.</param>
-        public Variant(int uaType = default(int), Object value = default(Object), List<int> dimensions = default(List<int>))
+        public Variant(int uaType = default, Object value = default, List<int> dimensions = default)
         {
             this.UaType = uaType;
             this.Value = value;

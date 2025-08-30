@@ -22,6 +22,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
+using FileParameter = Opc.Ua.WebApi.Client.FileParameter;
 using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 
 namespace Opc.Ua.WebApi.Model
@@ -42,7 +43,7 @@ namespace Opc.Ua.WebApi.Model
         /// <param name="additionalInfo">additionalInfo.</param>
         /// <param name="innerStatusCode">innerStatusCode.</param>
         /// <param name="innerDiagnosticInfo">innerDiagnosticInfo.</param>
-        public DiagnosticInfo(int symbolicId = default(int), int namespaceUri = default(int), int locale = default(int), int localizedText = default(int), string additionalInfo = default(string), StatusCode innerStatusCode = default(StatusCode), DiagnosticInfo innerDiagnosticInfo = default(DiagnosticInfo))
+        public DiagnosticInfo(int symbolicId = default, int namespaceUri = default, int locale = default, int localizedText = default, string additionalInfo = default, StatusCode innerStatusCode = default, DiagnosticInfo innerDiagnosticInfo = default)
         {
             this.SymbolicId = symbolicId;
             this.NamespaceUri = namespaceUri;

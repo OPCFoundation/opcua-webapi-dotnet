@@ -22,6 +22,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
+using FileParameter = Opc.Ua.WebApi.Client.FileParameter;
 using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 
 namespace Opc.Ua.WebApi.Model
@@ -39,7 +40,7 @@ namespace Opc.Ua.WebApi.Model
         /// <param name="revisedSamplingInterval">revisedSamplingInterval (default to 0D).</param>
         /// <param name="revisedQueueSize">revisedQueueSize (default to 0).</param>
         /// <param name="filterResult">filterResult.</param>
-        public MonitoredItemModifyResult(StatusCode statusCode = default(StatusCode), double revisedSamplingInterval = 0D, long revisedQueueSize = 0, ExtensionObject filterResult = default(ExtensionObject))
+        public MonitoredItemModifyResult(StatusCode statusCode = default, double revisedSamplingInterval = 0D, long revisedQueueSize = 0, ExtensionObject filterResult = default)
         {
             this.StatusCode = statusCode;
             this.RevisedSamplingInterval = revisedSamplingInterval;

@@ -22,6 +22,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
+using FileParameter = Opc.Ua.WebApi.Client.FileParameter;
 using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 
 namespace Opc.Ua.WebApi.Model
@@ -45,7 +46,7 @@ namespace Opc.Ua.WebApi.Model
         /// <param name="maxStringLength">maxStringLength (default to 0).</param>
         /// <param name="dataSetFieldId">dataSetFieldId.</param>
         /// <param name="properties">properties.</param>
-        public FieldMetaData(string name = default(string), LocalizedText description = default(LocalizedText), int fieldFlags = 0, int builtInType = 0, string dataType = default(string), int valueRank = 0, List<long> arrayDimensions = default(List<long>), long maxStringLength = 0, Guid dataSetFieldId = default(Guid), List<KeyValuePair> properties = default(List<KeyValuePair>))
+        public FieldMetaData(string name = default, LocalizedText description = default, int fieldFlags = 0, int builtInType = 0, string dataType = default, int valueRank = 0, List<long> arrayDimensions = default, long maxStringLength = 0, Guid dataSetFieldId = default, List<KeyValuePair> properties = default)
         {
             this.Name = name;
             this.Description = description;

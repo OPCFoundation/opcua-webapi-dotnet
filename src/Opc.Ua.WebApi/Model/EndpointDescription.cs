@@ -22,6 +22,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
+using FileParameter = Opc.Ua.WebApi.Client.FileParameter;
 using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 
 namespace Opc.Ua.WebApi.Model
@@ -43,7 +44,7 @@ namespace Opc.Ua.WebApi.Model
         /// <param name="userIdentityTokens">userIdentityTokens.</param>
         /// <param name="transportProfileUri">transportProfileUri.</param>
         /// <param name="securityLevel">securityLevel (default to 0).</param>
-        public EndpointDescription(string endpointUrl = default(string), ApplicationDescription server = default(ApplicationDescription), byte[] serverCertificate = default(byte[]), int securityMode = default(int), string securityPolicyUri = default(string), List<UserTokenPolicy> userIdentityTokens = default(List<UserTokenPolicy>), string transportProfileUri = default(string), int securityLevel = 0)
+        public EndpointDescription(string endpointUrl = default, ApplicationDescription server = default, byte[] serverCertificate = default, int securityMode = default, string securityPolicyUri = default, List<UserTokenPolicy> userIdentityTokens = default, string transportProfileUri = default, int securityLevel = 0)
         {
             this.EndpointUrl = endpointUrl;
             this.Server = server;

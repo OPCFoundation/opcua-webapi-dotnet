@@ -22,6 +22,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
+using FileParameter = Opc.Ua.WebApi.Client.FileParameter;
 using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 
 namespace Opc.Ua.WebApi.Model
@@ -44,7 +45,7 @@ namespace Opc.Ua.WebApi.Model
         /// <param name="dataSetWriterProperties">dataSetWriterProperties.</param>
         /// <param name="transportSettings">transportSettings.</param>
         /// <param name="messageSettings">messageSettings.</param>
-        public DataSetWriterDataType(string name = default(string), bool enabled = false, int dataSetWriterId = 0, long dataSetFieldContentMask = 0, long keyFrameCount = 0, string dataSetName = default(string), List<KeyValuePair> dataSetWriterProperties = default(List<KeyValuePair>), Object transportSettings = default(Object), Object messageSettings = default(Object))
+        public DataSetWriterDataType(string name = default, bool enabled = false, int dataSetWriterId = 0, long dataSetFieldContentMask = 0, long keyFrameCount = 0, string dataSetName = default, List<KeyValuePair> dataSetWriterProperties = default, Object transportSettings = default, Object messageSettings = default)
         {
             this.Name = name;
             this.Enabled = enabled;

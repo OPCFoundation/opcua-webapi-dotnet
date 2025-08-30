@@ -22,6 +22,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
+using FileParameter = Opc.Ua.WebApi.Client.FileParameter;
 using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 
 namespace Opc.Ua.WebApi.Model
@@ -38,7 +39,7 @@ namespace Opc.Ua.WebApi.Model
         /// <param name="sequenceNumber">sequenceNumber (default to 0).</param>
         /// <param name="publishTime">publishTime (default to &quot;0001-01-01T00:00Z&quot;).</param>
         /// <param name="notificationData">notificationData.</param>
-        public NotificationMessage(long sequenceNumber = 0, DateTime publishTime = default(DateTime), List<ExtensionObject> notificationData = default(List<ExtensionObject>))
+        public NotificationMessage(long sequenceNumber = 0, DateTime publishTime = default, List<ExtensionObject> notificationData = default)
         {
             this.SequenceNumber = sequenceNumber;
             this.PublishTime = publishTime;

@@ -22,6 +22,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
+using FileParameter = Opc.Ua.WebApi.Client.FileParameter;
 using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 
 namespace Opc.Ua.WebApi.Model
@@ -37,7 +38,7 @@ namespace Opc.Ua.WebApi.Model
         /// </summary>
         /// <param name="requestHeader">requestHeader.</param>
         /// <param name="nodesToWrite">nodesToWrite.</param>
-        public WriteRequest(RequestHeader requestHeader = default(RequestHeader), List<WriteValue> nodesToWrite = default(List<WriteValue>))
+        public WriteRequest(RequestHeader requestHeader = default, List<WriteValue> nodesToWrite = default)
         {
             this.RequestHeader = requestHeader;
             this.NodesToWrite = nodesToWrite;

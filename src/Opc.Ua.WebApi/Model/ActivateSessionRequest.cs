@@ -22,6 +22,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
+using FileParameter = Opc.Ua.WebApi.Client.FileParameter;
 using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 
 namespace Opc.Ua.WebApi.Model
@@ -41,7 +42,7 @@ namespace Opc.Ua.WebApi.Model
         /// <param name="localeIds">localeIds.</param>
         /// <param name="userIdentityToken">userIdentityToken.</param>
         /// <param name="userTokenSignature">userTokenSignature.</param>
-        public ActivateSessionRequest(RequestHeader requestHeader = default(RequestHeader), SignatureData clientSignature = default(SignatureData), List<SignedSoftwareCertificate> clientSoftwareCertificates = default(List<SignedSoftwareCertificate>), List<string> localeIds = default(List<string>), ExtensionObject userIdentityToken = default(ExtensionObject), SignatureData userTokenSignature = default(SignatureData))
+        public ActivateSessionRequest(RequestHeader requestHeader = default, SignatureData clientSignature = default, List<SignedSoftwareCertificate> clientSoftwareCertificates = default, List<string> localeIds = default, ExtensionObject userIdentityToken = default, SignatureData userTokenSignature = default)
         {
             this.RequestHeader = requestHeader;
             this.ClientSignature = clientSignature;

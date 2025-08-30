@@ -22,14 +22,15 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
+using FileParameter = Opc.Ua.WebApi.Client.FileParameter;
 using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 
 namespace Opc.Ua.WebApi.Model
 {
     /// <summary>
-    /// [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/7.40).
+    /// [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/7.39).
     /// </summary>
-    /// <value>[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/7.40).</value>
+    /// <value>[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/7.39).</value>
     public enum TimestampsToReturn
     {
         /// <summary>

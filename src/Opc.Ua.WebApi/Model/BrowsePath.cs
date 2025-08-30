@@ -22,12 +22,13 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
+using FileParameter = Opc.Ua.WebApi.Client.FileParameter;
 using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 
 namespace Opc.Ua.WebApi.Model
 {
     /// <summary>
-    /// [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.9.4/#5.9.4.2).
+    /// [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part3/6.2.5).
     /// </summary>
     [DataContract(Name = "BrowsePath")]
     public partial class BrowsePath : IValidatableObject
@@ -37,7 +38,7 @@ namespace Opc.Ua.WebApi.Model
         /// </summary>
         /// <param name="startingNode">startingNode.</param>
         /// <param name="relativePath">relativePath.</param>
-        public BrowsePath(string startingNode = default(string), RelativePath relativePath = default(RelativePath))
+        public BrowsePath(string startingNode = default, RelativePath relativePath = default)
         {
             this.StartingNode = startingNode;
             this.RelativePath = relativePath;

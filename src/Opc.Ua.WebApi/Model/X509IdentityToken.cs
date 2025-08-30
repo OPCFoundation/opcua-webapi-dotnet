@@ -22,6 +22,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
+using FileParameter = Opc.Ua.WebApi.Client.FileParameter;
 using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 
 namespace Opc.Ua.WebApi.Model
@@ -37,7 +38,7 @@ namespace Opc.Ua.WebApi.Model
         /// </summary>
         /// <param name="certificateData">certificateData.</param>
         /// <param name="policyId">policyId.</param>
-        public X509IdentityToken(byte[] certificateData = default(byte[]), string policyId = default(string))
+        public X509IdentityToken(byte[] certificateData = default, string policyId = default)
         {
             this.CertificateData = certificateData;
             this.PolicyId = policyId;

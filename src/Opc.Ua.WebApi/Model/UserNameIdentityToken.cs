@@ -22,6 +22,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
+using FileParameter = Opc.Ua.WebApi.Client.FileParameter;
 using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 
 namespace Opc.Ua.WebApi.Model
@@ -39,7 +40,7 @@ namespace Opc.Ua.WebApi.Model
         /// <param name="password">password.</param>
         /// <param name="encryptionAlgorithm">encryptionAlgorithm.</param>
         /// <param name="policyId">policyId.</param>
-        public UserNameIdentityToken(string userName = default(string), byte[] password = default(byte[]), string encryptionAlgorithm = default(string), string policyId = default(string))
+        public UserNameIdentityToken(string userName = default, byte[] password = default, string encryptionAlgorithm = default, string policyId = default)
         {
             this.UserName = userName;
             this.Password = password;

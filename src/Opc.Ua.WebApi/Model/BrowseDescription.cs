@@ -22,6 +22,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
+using FileParameter = Opc.Ua.WebApi.Client.FileParameter;
 using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 
 namespace Opc.Ua.WebApi.Model
@@ -41,7 +42,7 @@ namespace Opc.Ua.WebApi.Model
         /// <param name="includeSubtypes">includeSubtypes (default to false).</param>
         /// <param name="nodeClassMask">nodeClassMask (default to 0).</param>
         /// <param name="resultMask">resultMask (default to 0).</param>
-        public BrowseDescription(string nodeId = default(string), int browseDirection = default(int), string referenceTypeId = default(string), bool includeSubtypes = false, long nodeClassMask = 0, long resultMask = 0)
+        public BrowseDescription(string nodeId = default, int browseDirection = default, string referenceTypeId = default, bool includeSubtypes = false, long nodeClassMask = 0, long resultMask = 0)
         {
             this.NodeId = nodeId;
             this.BrowseDirection = browseDirection;

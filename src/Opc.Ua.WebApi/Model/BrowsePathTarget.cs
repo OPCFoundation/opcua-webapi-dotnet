@@ -22,6 +22,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
+using FileParameter = Opc.Ua.WebApi.Client.FileParameter;
 using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 
 namespace Opc.Ua.WebApi.Model
@@ -37,7 +38,7 @@ namespace Opc.Ua.WebApi.Model
         /// </summary>
         /// <param name="targetId">targetId.</param>
         /// <param name="remainingPathIndex">remainingPathIndex (default to 0).</param>
-        public BrowsePathTarget(string targetId = default(string), long remainingPathIndex = 0)
+        public BrowsePathTarget(string targetId = default, long remainingPathIndex = 0)
         {
             this.TargetId = targetId;
             this.RemainingPathIndex = remainingPathIndex;

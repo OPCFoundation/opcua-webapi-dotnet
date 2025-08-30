@@ -22,6 +22,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
+using FileParameter = Opc.Ua.WebApi.Client.FileParameter;
 using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 
 namespace Opc.Ua.WebApi.Model
@@ -37,7 +38,7 @@ namespace Opc.Ua.WebApi.Model
         /// </summary>
         /// <param name="monitoredItems">monitoredItems.</param>
         /// <param name="diagnosticInfos">diagnosticInfos.</param>
-        public DataChangeNotification(List<MonitoredItemNotification> monitoredItems = default(List<MonitoredItemNotification>), List<DiagnosticInfo> diagnosticInfos = default(List<DiagnosticInfo>))
+        public DataChangeNotification(List<MonitoredItemNotification> monitoredItems = default, List<DiagnosticInfo> diagnosticInfos = default)
         {
             this.MonitoredItems = monitoredItems;
             this.DiagnosticInfos = diagnosticInfos;

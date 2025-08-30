@@ -14,6 +14,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Net;
+using System.Net.Http;
 using System.Net.Mime;
 using Opc.Ua.WebApi.Client;
 using Opc.Ua.WebApi.Model;
@@ -32,9 +33,8 @@ namespace Opc.Ua.WebApi.Api
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="activateSessionRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.7.3/#5.7.3.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ActivateSessionResponse</returns>
-        ActivateSessionResponse ActivateSession(ActivateSessionRequest activateSessionRequest = default(ActivateSessionRequest), int operationIndex = 0);
+        ActivateSessionResponse ActivateSession(ActivateSessionRequest activateSessionRequest = default);
 
         /// <summary>
         /// 
@@ -44,17 +44,15 @@ namespace Opc.Ua.WebApi.Api
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="activateSessionRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.7.3/#5.7.3.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ActivateSessionResponse</returns>
-        ApiResponse<ActivateSessionResponse> ActivateSessionWithHttpInfo(ActivateSessionRequest activateSessionRequest = default(ActivateSessionRequest), int operationIndex = 0);
+        ApiResponse<ActivateSessionResponse> ActivateSessionWithHttpInfo(ActivateSessionRequest activateSessionRequest = default);
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="browseRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.9.2/#5.9.2.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>BrowseResponse</returns>
-        BrowseResponse Browse(BrowseRequest browseRequest = default(BrowseRequest), int operationIndex = 0);
+        BrowseResponse Browse(BrowseRequest browseRequest = default);
 
         /// <summary>
         /// 
@@ -64,17 +62,15 @@ namespace Opc.Ua.WebApi.Api
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="browseRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.9.2/#5.9.2.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of BrowseResponse</returns>
-        ApiResponse<BrowseResponse> BrowseWithHttpInfo(BrowseRequest browseRequest = default(BrowseRequest), int operationIndex = 0);
+        ApiResponse<BrowseResponse> BrowseWithHttpInfo(BrowseRequest browseRequest = default);
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="browseNextRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.9.3/#5.9.3.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>BrowseNextResponse</returns>
-        BrowseNextResponse BrowseNext(BrowseNextRequest browseNextRequest = default(BrowseNextRequest), int operationIndex = 0);
+        BrowseNextResponse BrowseNext(BrowseNextRequest browseNextRequest = default);
 
         /// <summary>
         /// 
@@ -84,17 +80,15 @@ namespace Opc.Ua.WebApi.Api
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="browseNextRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.9.3/#5.9.3.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of BrowseNextResponse</returns>
-        ApiResponse<BrowseNextResponse> BrowseNextWithHttpInfo(BrowseNextRequest browseNextRequest = default(BrowseNextRequest), int operationIndex = 0);
+        ApiResponse<BrowseNextResponse> BrowseNextWithHttpInfo(BrowseNextRequest browseNextRequest = default);
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="callRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.12.2/#5.12.2.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>CallResponse</returns>
-        CallResponse Call(CallRequest callRequest = default(CallRequest), int operationIndex = 0);
+        CallResponse Call(CallRequest callRequest = default);
 
         /// <summary>
         /// 
@@ -104,17 +98,15 @@ namespace Opc.Ua.WebApi.Api
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="callRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.12.2/#5.12.2.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of CallResponse</returns>
-        ApiResponse<CallResponse> CallWithHttpInfo(CallRequest callRequest = default(CallRequest), int operationIndex = 0);
+        ApiResponse<CallResponse> CallWithHttpInfo(CallRequest callRequest = default);
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancelRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.7.5/#5.7.5.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>CancelResponse</returns>
-        CancelResponse Cancel(CancelRequest cancelRequest = default(CancelRequest), int operationIndex = 0);
+        CancelResponse Cancel(CancelRequest cancelRequest = default);
 
         /// <summary>
         /// 
@@ -124,17 +116,15 @@ namespace Opc.Ua.WebApi.Api
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancelRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.7.5/#5.7.5.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of CancelResponse</returns>
-        ApiResponse<CancelResponse> CancelWithHttpInfo(CancelRequest cancelRequest = default(CancelRequest), int operationIndex = 0);
+        ApiResponse<CancelResponse> CancelWithHttpInfo(CancelRequest cancelRequest = default);
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="closeSessionRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.7.4/#5.7.4.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>CloseSessionResponse</returns>
-        CloseSessionResponse CloseSession(CloseSessionRequest closeSessionRequest = default(CloseSessionRequest), int operationIndex = 0);
+        CloseSessionResponse CloseSession(CloseSessionRequest closeSessionRequest = default);
 
         /// <summary>
         /// 
@@ -144,17 +134,15 @@ namespace Opc.Ua.WebApi.Api
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="closeSessionRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.7.4/#5.7.4.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of CloseSessionResponse</returns>
-        ApiResponse<CloseSessionResponse> CloseSessionWithHttpInfo(CloseSessionRequest closeSessionRequest = default(CloseSessionRequest), int operationIndex = 0);
+        ApiResponse<CloseSessionResponse> CloseSessionWithHttpInfo(CloseSessionRequest closeSessionRequest = default);
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createMonitoredItemsRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.13.2/#5.13.2.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>CreateMonitoredItemsResponse</returns>
-        CreateMonitoredItemsResponse CreateMonitoredItems(CreateMonitoredItemsRequest createMonitoredItemsRequest = default(CreateMonitoredItemsRequest), int operationIndex = 0);
+        CreateMonitoredItemsResponse CreateMonitoredItems(CreateMonitoredItemsRequest createMonitoredItemsRequest = default);
 
         /// <summary>
         /// 
@@ -164,17 +152,15 @@ namespace Opc.Ua.WebApi.Api
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createMonitoredItemsRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.13.2/#5.13.2.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of CreateMonitoredItemsResponse</returns>
-        ApiResponse<CreateMonitoredItemsResponse> CreateMonitoredItemsWithHttpInfo(CreateMonitoredItemsRequest createMonitoredItemsRequest = default(CreateMonitoredItemsRequest), int operationIndex = 0);
+        ApiResponse<CreateMonitoredItemsResponse> CreateMonitoredItemsWithHttpInfo(CreateMonitoredItemsRequest createMonitoredItemsRequest = default);
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createSessionRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.7.2/#5.7.2.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>CreateSessionResponse</returns>
-        CreateSessionResponse CreateSession(CreateSessionRequest createSessionRequest = default(CreateSessionRequest), int operationIndex = 0);
+        CreateSessionResponse CreateSession(CreateSessionRequest createSessionRequest = default);
 
         /// <summary>
         /// 
@@ -184,17 +170,15 @@ namespace Opc.Ua.WebApi.Api
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createSessionRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.7.2/#5.7.2.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of CreateSessionResponse</returns>
-        ApiResponse<CreateSessionResponse> CreateSessionWithHttpInfo(CreateSessionRequest createSessionRequest = default(CreateSessionRequest), int operationIndex = 0);
+        ApiResponse<CreateSessionResponse> CreateSessionWithHttpInfo(CreateSessionRequest createSessionRequest = default);
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createSubscriptionRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.2/#5.14.2.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>CreateSubscriptionResponse</returns>
-        CreateSubscriptionResponse CreateSubscription(CreateSubscriptionRequest createSubscriptionRequest = default(CreateSubscriptionRequest), int operationIndex = 0);
+        CreateSubscriptionResponse CreateSubscription(CreateSubscriptionRequest createSubscriptionRequest = default);
 
         /// <summary>
         /// 
@@ -204,17 +188,15 @@ namespace Opc.Ua.WebApi.Api
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createSubscriptionRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.2/#5.14.2.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of CreateSubscriptionResponse</returns>
-        ApiResponse<CreateSubscriptionResponse> CreateSubscriptionWithHttpInfo(CreateSubscriptionRequest createSubscriptionRequest = default(CreateSubscriptionRequest), int operationIndex = 0);
+        ApiResponse<CreateSubscriptionResponse> CreateSubscriptionWithHttpInfo(CreateSubscriptionRequest createSubscriptionRequest = default);
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteMonitoredItemsRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.13.6/#5.13.6.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>DeleteMonitoredItemsResponse</returns>
-        DeleteMonitoredItemsResponse DeleteMonitoredItems(DeleteMonitoredItemsRequest deleteMonitoredItemsRequest = default(DeleteMonitoredItemsRequest), int operationIndex = 0);
+        DeleteMonitoredItemsResponse DeleteMonitoredItems(DeleteMonitoredItemsRequest deleteMonitoredItemsRequest = default);
 
         /// <summary>
         /// 
@@ -224,17 +206,15 @@ namespace Opc.Ua.WebApi.Api
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteMonitoredItemsRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.13.6/#5.13.6.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of DeleteMonitoredItemsResponse</returns>
-        ApiResponse<DeleteMonitoredItemsResponse> DeleteMonitoredItemsWithHttpInfo(DeleteMonitoredItemsRequest deleteMonitoredItemsRequest = default(DeleteMonitoredItemsRequest), int operationIndex = 0);
+        ApiResponse<DeleteMonitoredItemsResponse> DeleteMonitoredItemsWithHttpInfo(DeleteMonitoredItemsRequest deleteMonitoredItemsRequest = default);
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteSubscriptionsRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.8/#5.14.8.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>DeleteSubscriptionsResponse</returns>
-        DeleteSubscriptionsResponse DeleteSubscriptions(DeleteSubscriptionsRequest deleteSubscriptionsRequest = default(DeleteSubscriptionsRequest), int operationIndex = 0);
+        DeleteSubscriptionsResponse DeleteSubscriptions(DeleteSubscriptionsRequest deleteSubscriptionsRequest = default);
 
         /// <summary>
         /// 
@@ -244,17 +224,15 @@ namespace Opc.Ua.WebApi.Api
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteSubscriptionsRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.8/#5.14.8.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of DeleteSubscriptionsResponse</returns>
-        ApiResponse<DeleteSubscriptionsResponse> DeleteSubscriptionsWithHttpInfo(DeleteSubscriptionsRequest deleteSubscriptionsRequest = default(DeleteSubscriptionsRequest), int operationIndex = 0);
+        ApiResponse<DeleteSubscriptionsResponse> DeleteSubscriptionsWithHttpInfo(DeleteSubscriptionsRequest deleteSubscriptionsRequest = default);
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="findServersRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.5.2/#5.5.2.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>FindServersResponse</returns>
-        FindServersResponse FindServers(FindServersRequest findServersRequest = default(FindServersRequest), int operationIndex = 0);
+        FindServersResponse FindServers(FindServersRequest findServersRequest = default);
 
         /// <summary>
         /// 
@@ -264,17 +242,15 @@ namespace Opc.Ua.WebApi.Api
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="findServersRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.5.2/#5.5.2.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of FindServersResponse</returns>
-        ApiResponse<FindServersResponse> FindServersWithHttpInfo(FindServersRequest findServersRequest = default(FindServersRequest), int operationIndex = 0);
+        ApiResponse<FindServersResponse> FindServersWithHttpInfo(FindServersRequest findServersRequest = default);
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="getEndpointsRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.5.4/#5.5.4.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>GetEndpointsResponse</returns>
-        GetEndpointsResponse GetEndpoints(GetEndpointsRequest getEndpointsRequest = default(GetEndpointsRequest), int operationIndex = 0);
+        GetEndpointsResponse GetEndpoints(GetEndpointsRequest getEndpointsRequest = default);
 
         /// <summary>
         /// 
@@ -284,17 +260,15 @@ namespace Opc.Ua.WebApi.Api
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="getEndpointsRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.5.4/#5.5.4.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of GetEndpointsResponse</returns>
-        ApiResponse<GetEndpointsResponse> GetEndpointsWithHttpInfo(GetEndpointsRequest getEndpointsRequest = default(GetEndpointsRequest), int operationIndex = 0);
+        ApiResponse<GetEndpointsResponse> GetEndpointsWithHttpInfo(GetEndpointsRequest getEndpointsRequest = default);
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="historyReadRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.11.3/#5.11.3.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>HistoryReadResponse</returns>
-        HistoryReadResponse HistoryRead(HistoryReadRequest historyReadRequest = default(HistoryReadRequest), int operationIndex = 0);
+        HistoryReadResponse HistoryRead(HistoryReadRequest historyReadRequest = default);
 
         /// <summary>
         /// 
@@ -304,17 +278,15 @@ namespace Opc.Ua.WebApi.Api
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="historyReadRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.11.3/#5.11.3.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of HistoryReadResponse</returns>
-        ApiResponse<HistoryReadResponse> HistoryReadWithHttpInfo(HistoryReadRequest historyReadRequest = default(HistoryReadRequest), int operationIndex = 0);
+        ApiResponse<HistoryReadResponse> HistoryReadWithHttpInfo(HistoryReadRequest historyReadRequest = default);
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="historyUpdateRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.11.5/#5.11.5.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>HistoryUpdateResponse</returns>
-        HistoryUpdateResponse HistoryUpdate(HistoryUpdateRequest historyUpdateRequest = default(HistoryUpdateRequest), int operationIndex = 0);
+        HistoryUpdateResponse HistoryUpdate(HistoryUpdateRequest historyUpdateRequest = default);
 
         /// <summary>
         /// 
@@ -324,17 +296,15 @@ namespace Opc.Ua.WebApi.Api
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="historyUpdateRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.11.5/#5.11.5.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of HistoryUpdateResponse</returns>
-        ApiResponse<HistoryUpdateResponse> HistoryUpdateWithHttpInfo(HistoryUpdateRequest historyUpdateRequest = default(HistoryUpdateRequest), int operationIndex = 0);
+        ApiResponse<HistoryUpdateResponse> HistoryUpdateWithHttpInfo(HistoryUpdateRequest historyUpdateRequest = default);
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="modifyMonitoredItemsRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.13.3/#5.13.3.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ModifyMonitoredItemsResponse</returns>
-        ModifyMonitoredItemsResponse ModifyMonitoredItems(ModifyMonitoredItemsRequest modifyMonitoredItemsRequest = default(ModifyMonitoredItemsRequest), int operationIndex = 0);
+        ModifyMonitoredItemsResponse ModifyMonitoredItems(ModifyMonitoredItemsRequest modifyMonitoredItemsRequest = default);
 
         /// <summary>
         /// 
@@ -344,17 +314,15 @@ namespace Opc.Ua.WebApi.Api
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="modifyMonitoredItemsRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.13.3/#5.13.3.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ModifyMonitoredItemsResponse</returns>
-        ApiResponse<ModifyMonitoredItemsResponse> ModifyMonitoredItemsWithHttpInfo(ModifyMonitoredItemsRequest modifyMonitoredItemsRequest = default(ModifyMonitoredItemsRequest), int operationIndex = 0);
+        ApiResponse<ModifyMonitoredItemsResponse> ModifyMonitoredItemsWithHttpInfo(ModifyMonitoredItemsRequest modifyMonitoredItemsRequest = default);
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="modifySubscriptionRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.3/#5.14.3.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ModifySubscriptionResponse</returns>
-        ModifySubscriptionResponse ModifySubscription(ModifySubscriptionRequest modifySubscriptionRequest = default(ModifySubscriptionRequest), int operationIndex = 0);
+        ModifySubscriptionResponse ModifySubscription(ModifySubscriptionRequest modifySubscriptionRequest = default);
 
         /// <summary>
         /// 
@@ -364,17 +332,15 @@ namespace Opc.Ua.WebApi.Api
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="modifySubscriptionRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.3/#5.14.3.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ModifySubscriptionResponse</returns>
-        ApiResponse<ModifySubscriptionResponse> ModifySubscriptionWithHttpInfo(ModifySubscriptionRequest modifySubscriptionRequest = default(ModifySubscriptionRequest), int operationIndex = 0);
+        ApiResponse<ModifySubscriptionResponse> ModifySubscriptionWithHttpInfo(ModifySubscriptionRequest modifySubscriptionRequest = default);
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="publishRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.5/#5.14.5.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>PublishResponse</returns>
-        PublishResponse Publish(PublishRequest publishRequest = default(PublishRequest), int operationIndex = 0);
+        PublishResponse Publish(PublishRequest publishRequest = default);
 
         /// <summary>
         /// 
@@ -384,17 +350,15 @@ namespace Opc.Ua.WebApi.Api
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="publishRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.5/#5.14.5.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of PublishResponse</returns>
-        ApiResponse<PublishResponse> PublishWithHttpInfo(PublishRequest publishRequest = default(PublishRequest), int operationIndex = 0);
+        ApiResponse<PublishResponse> PublishWithHttpInfo(PublishRequest publishRequest = default);
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="readRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.11.2/#5.11.2.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ReadResponse</returns>
-        ReadResponse Read(ReadRequest readRequest = default(ReadRequest), int operationIndex = 0);
+        ReadResponse Read(ReadRequest readRequest = default);
 
         /// <summary>
         /// 
@@ -404,17 +368,15 @@ namespace Opc.Ua.WebApi.Api
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="readRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.11.2/#5.11.2.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ReadResponse</returns>
-        ApiResponse<ReadResponse> ReadWithHttpInfo(ReadRequest readRequest = default(ReadRequest), int operationIndex = 0);
+        ApiResponse<ReadResponse> ReadWithHttpInfo(ReadRequest readRequest = default);
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="registerNodesRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.9.5/#5.9.5.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>RegisterNodesResponse</returns>
-        RegisterNodesResponse RegisterNodes(RegisterNodesRequest registerNodesRequest = default(RegisterNodesRequest), int operationIndex = 0);
+        RegisterNodesResponse RegisterNodes(RegisterNodesRequest registerNodesRequest = default);
 
         /// <summary>
         /// 
@@ -424,17 +386,15 @@ namespace Opc.Ua.WebApi.Api
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="registerNodesRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.9.5/#5.9.5.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of RegisterNodesResponse</returns>
-        ApiResponse<RegisterNodesResponse> RegisterNodesWithHttpInfo(RegisterNodesRequest registerNodesRequest = default(RegisterNodesRequest), int operationIndex = 0);
+        ApiResponse<RegisterNodesResponse> RegisterNodesWithHttpInfo(RegisterNodesRequest registerNodesRequest = default);
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="republishRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.6/#5.14.6.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>RepublishResponse</returns>
-        RepublishResponse Republish(RepublishRequest republishRequest = default(RepublishRequest), int operationIndex = 0);
+        RepublishResponse Republish(RepublishRequest republishRequest = default);
 
         /// <summary>
         /// 
@@ -444,17 +404,15 @@ namespace Opc.Ua.WebApi.Api
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="republishRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.6/#5.14.6.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of RepublishResponse</returns>
-        ApiResponse<RepublishResponse> RepublishWithHttpInfo(RepublishRequest republishRequest = default(RepublishRequest), int operationIndex = 0);
+        ApiResponse<RepublishResponse> RepublishWithHttpInfo(RepublishRequest republishRequest = default);
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="setMonitoringModeRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.13.4/#5.13.4.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>SetMonitoringModeResponse</returns>
-        SetMonitoringModeResponse SetMonitoringMode(SetMonitoringModeRequest setMonitoringModeRequest = default(SetMonitoringModeRequest), int operationIndex = 0);
+        SetMonitoringModeResponse SetMonitoringMode(SetMonitoringModeRequest setMonitoringModeRequest = default);
 
         /// <summary>
         /// 
@@ -464,17 +422,15 @@ namespace Opc.Ua.WebApi.Api
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="setMonitoringModeRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.13.4/#5.13.4.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of SetMonitoringModeResponse</returns>
-        ApiResponse<SetMonitoringModeResponse> SetMonitoringModeWithHttpInfo(SetMonitoringModeRequest setMonitoringModeRequest = default(SetMonitoringModeRequest), int operationIndex = 0);
+        ApiResponse<SetMonitoringModeResponse> SetMonitoringModeWithHttpInfo(SetMonitoringModeRequest setMonitoringModeRequest = default);
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="setPublishingModeRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.4/#5.14.4.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>SetPublishingModeResponse</returns>
-        SetPublishingModeResponse SetPublishingMode(SetPublishingModeRequest setPublishingModeRequest = default(SetPublishingModeRequest), int operationIndex = 0);
+        SetPublishingModeResponse SetPublishingMode(SetPublishingModeRequest setPublishingModeRequest = default);
 
         /// <summary>
         /// 
@@ -484,17 +440,15 @@ namespace Opc.Ua.WebApi.Api
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="setPublishingModeRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.4/#5.14.4.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of SetPublishingModeResponse</returns>
-        ApiResponse<SetPublishingModeResponse> SetPublishingModeWithHttpInfo(SetPublishingModeRequest setPublishingModeRequest = default(SetPublishingModeRequest), int operationIndex = 0);
+        ApiResponse<SetPublishingModeResponse> SetPublishingModeWithHttpInfo(SetPublishingModeRequest setPublishingModeRequest = default);
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="setTriggeringRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.13.5/#5.13.5.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>SetTriggeringResponse</returns>
-        SetTriggeringResponse SetTriggering(SetTriggeringRequest setTriggeringRequest = default(SetTriggeringRequest), int operationIndex = 0);
+        SetTriggeringResponse SetTriggering(SetTriggeringRequest setTriggeringRequest = default);
 
         /// <summary>
         /// 
@@ -504,17 +458,15 @@ namespace Opc.Ua.WebApi.Api
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="setTriggeringRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.13.5/#5.13.5.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of SetTriggeringResponse</returns>
-        ApiResponse<SetTriggeringResponse> SetTriggeringWithHttpInfo(SetTriggeringRequest setTriggeringRequest = default(SetTriggeringRequest), int operationIndex = 0);
+        ApiResponse<SetTriggeringResponse> SetTriggeringWithHttpInfo(SetTriggeringRequest setTriggeringRequest = default);
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="transferSubscriptionsRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.7/#5.14.7.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>TransferSubscriptionsResponse</returns>
-        TransferSubscriptionsResponse TransferSubscriptions(TransferSubscriptionsRequest transferSubscriptionsRequest = default(TransferSubscriptionsRequest), int operationIndex = 0);
+        TransferSubscriptionsResponse TransferSubscriptions(TransferSubscriptionsRequest transferSubscriptionsRequest = default);
 
         /// <summary>
         /// 
@@ -524,17 +476,15 @@ namespace Opc.Ua.WebApi.Api
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="transferSubscriptionsRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.7/#5.14.7.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of TransferSubscriptionsResponse</returns>
-        ApiResponse<TransferSubscriptionsResponse> TransferSubscriptionsWithHttpInfo(TransferSubscriptionsRequest transferSubscriptionsRequest = default(TransferSubscriptionsRequest), int operationIndex = 0);
+        ApiResponse<TransferSubscriptionsResponse> TransferSubscriptionsWithHttpInfo(TransferSubscriptionsRequest transferSubscriptionsRequest = default);
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="translateBrowsePathsToNodeIdsRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.9.4/#5.9.4.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>TranslateBrowsePathsToNodeIdsResponse</returns>
-        TranslateBrowsePathsToNodeIdsResponse TranslateBrowsePathsToNodeIds(TranslateBrowsePathsToNodeIdsRequest translateBrowsePathsToNodeIdsRequest = default(TranslateBrowsePathsToNodeIdsRequest), int operationIndex = 0);
+        TranslateBrowsePathsToNodeIdsResponse TranslateBrowsePathsToNodeIds(TranslateBrowsePathsToNodeIdsRequest translateBrowsePathsToNodeIdsRequest = default);
 
         /// <summary>
         /// 
@@ -544,17 +494,15 @@ namespace Opc.Ua.WebApi.Api
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="translateBrowsePathsToNodeIdsRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.9.4/#5.9.4.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of TranslateBrowsePathsToNodeIdsResponse</returns>
-        ApiResponse<TranslateBrowsePathsToNodeIdsResponse> TranslateBrowsePathsToNodeIdsWithHttpInfo(TranslateBrowsePathsToNodeIdsRequest translateBrowsePathsToNodeIdsRequest = default(TranslateBrowsePathsToNodeIdsRequest), int operationIndex = 0);
+        ApiResponse<TranslateBrowsePathsToNodeIdsResponse> TranslateBrowsePathsToNodeIdsWithHttpInfo(TranslateBrowsePathsToNodeIdsRequest translateBrowsePathsToNodeIdsRequest = default);
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="unregisterNodesRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.9.6/#5.9.6.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>UnregisterNodesResponse</returns>
-        UnregisterNodesResponse UnregisterNodes(UnregisterNodesRequest unregisterNodesRequest = default(UnregisterNodesRequest), int operationIndex = 0);
+        UnregisterNodesResponse UnregisterNodes(UnregisterNodesRequest unregisterNodesRequest = default);
 
         /// <summary>
         /// 
@@ -564,17 +512,15 @@ namespace Opc.Ua.WebApi.Api
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="unregisterNodesRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.9.6/#5.9.6.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of UnregisterNodesResponse</returns>
-        ApiResponse<UnregisterNodesResponse> UnregisterNodesWithHttpInfo(UnregisterNodesRequest unregisterNodesRequest = default(UnregisterNodesRequest), int operationIndex = 0);
+        ApiResponse<UnregisterNodesResponse> UnregisterNodesWithHttpInfo(UnregisterNodesRequest unregisterNodesRequest = default);
         /// <summary>
         /// 
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="writeRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.11.4/#5.11.4.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>WriteResponse</returns>
-        WriteResponse Write(WriteRequest writeRequest = default(WriteRequest), int operationIndex = 0);
+        WriteResponse Write(WriteRequest writeRequest = default);
 
         /// <summary>
         /// 
@@ -584,9 +530,8 @@ namespace Opc.Ua.WebApi.Api
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="writeRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.11.4/#5.11.4.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of WriteResponse</returns>
-        ApiResponse<WriteResponse> WriteWithHttpInfo(WriteRequest writeRequest = default(WriteRequest), int operationIndex = 0);
+        ApiResponse<WriteResponse> WriteWithHttpInfo(WriteRequest writeRequest = default);
         #endregion Synchronous Operations
     }
 
@@ -604,10 +549,9 @@ namespace Opc.Ua.WebApi.Api
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="activateSessionRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.7.3/#5.7.3.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ActivateSessionResponse</returns>
-        System.Threading.Tasks.Task<ActivateSessionResponse> ActivateSessionAsync(ActivateSessionRequest activateSessionRequest = default(ActivateSessionRequest), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ActivateSessionResponse> ActivateSessionAsync(ActivateSessionRequest activateSessionRequest = default, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// 
@@ -617,10 +561,9 @@ namespace Opc.Ua.WebApi.Api
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="activateSessionRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.7.3/#5.7.3.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ActivateSessionResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ActivateSessionResponse>> ActivateSessionWithHttpInfoAsync(ActivateSessionRequest activateSessionRequest = default(ActivateSessionRequest), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ActivateSessionResponse>> ActivateSessionWithHttpInfoAsync(ActivateSessionRequest activateSessionRequest = default, System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// 
         /// </summary>
@@ -629,10 +572,9 @@ namespace Opc.Ua.WebApi.Api
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="browseRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.9.2/#5.9.2.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of BrowseResponse</returns>
-        System.Threading.Tasks.Task<BrowseResponse> BrowseAsync(BrowseRequest browseRequest = default(BrowseRequest), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<BrowseResponse> BrowseAsync(BrowseRequest browseRequest = default, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// 
@@ -642,10 +584,9 @@ namespace Opc.Ua.WebApi.Api
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="browseRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.9.2/#5.9.2.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (BrowseResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<BrowseResponse>> BrowseWithHttpInfoAsync(BrowseRequest browseRequest = default(BrowseRequest), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<BrowseResponse>> BrowseWithHttpInfoAsync(BrowseRequest browseRequest = default, System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// 
         /// </summary>
@@ -654,10 +595,9 @@ namespace Opc.Ua.WebApi.Api
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="browseNextRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.9.3/#5.9.3.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of BrowseNextResponse</returns>
-        System.Threading.Tasks.Task<BrowseNextResponse> BrowseNextAsync(BrowseNextRequest browseNextRequest = default(BrowseNextRequest), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<BrowseNextResponse> BrowseNextAsync(BrowseNextRequest browseNextRequest = default, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// 
@@ -667,10 +607,9 @@ namespace Opc.Ua.WebApi.Api
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="browseNextRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.9.3/#5.9.3.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (BrowseNextResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<BrowseNextResponse>> BrowseNextWithHttpInfoAsync(BrowseNextRequest browseNextRequest = default(BrowseNextRequest), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<BrowseNextResponse>> BrowseNextWithHttpInfoAsync(BrowseNextRequest browseNextRequest = default, System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// 
         /// </summary>
@@ -679,10 +618,9 @@ namespace Opc.Ua.WebApi.Api
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="callRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.12.2/#5.12.2.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CallResponse</returns>
-        System.Threading.Tasks.Task<CallResponse> CallAsync(CallRequest callRequest = default(CallRequest), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<CallResponse> CallAsync(CallRequest callRequest = default, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// 
@@ -692,10 +630,9 @@ namespace Opc.Ua.WebApi.Api
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="callRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.12.2/#5.12.2.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CallResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CallResponse>> CallWithHttpInfoAsync(CallRequest callRequest = default(CallRequest), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<CallResponse>> CallWithHttpInfoAsync(CallRequest callRequest = default, System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// 
         /// </summary>
@@ -704,10 +641,9 @@ namespace Opc.Ua.WebApi.Api
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancelRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.7.5/#5.7.5.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CancelResponse</returns>
-        System.Threading.Tasks.Task<CancelResponse> CancelAsync(CancelRequest cancelRequest = default(CancelRequest), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<CancelResponse> CancelAsync(CancelRequest cancelRequest = default, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// 
@@ -717,10 +653,9 @@ namespace Opc.Ua.WebApi.Api
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancelRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.7.5/#5.7.5.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CancelResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CancelResponse>> CancelWithHttpInfoAsync(CancelRequest cancelRequest = default(CancelRequest), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<CancelResponse>> CancelWithHttpInfoAsync(CancelRequest cancelRequest = default, System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// 
         /// </summary>
@@ -729,10 +664,9 @@ namespace Opc.Ua.WebApi.Api
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="closeSessionRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.7.4/#5.7.4.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CloseSessionResponse</returns>
-        System.Threading.Tasks.Task<CloseSessionResponse> CloseSessionAsync(CloseSessionRequest closeSessionRequest = default(CloseSessionRequest), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<CloseSessionResponse> CloseSessionAsync(CloseSessionRequest closeSessionRequest = default, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// 
@@ -742,10 +676,9 @@ namespace Opc.Ua.WebApi.Api
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="closeSessionRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.7.4/#5.7.4.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CloseSessionResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CloseSessionResponse>> CloseSessionWithHttpInfoAsync(CloseSessionRequest closeSessionRequest = default(CloseSessionRequest), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<CloseSessionResponse>> CloseSessionWithHttpInfoAsync(CloseSessionRequest closeSessionRequest = default, System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// 
         /// </summary>
@@ -754,10 +687,9 @@ namespace Opc.Ua.WebApi.Api
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createMonitoredItemsRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.13.2/#5.13.2.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CreateMonitoredItemsResponse</returns>
-        System.Threading.Tasks.Task<CreateMonitoredItemsResponse> CreateMonitoredItemsAsync(CreateMonitoredItemsRequest createMonitoredItemsRequest = default(CreateMonitoredItemsRequest), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<CreateMonitoredItemsResponse> CreateMonitoredItemsAsync(CreateMonitoredItemsRequest createMonitoredItemsRequest = default, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// 
@@ -767,10 +699,9 @@ namespace Opc.Ua.WebApi.Api
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createMonitoredItemsRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.13.2/#5.13.2.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CreateMonitoredItemsResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CreateMonitoredItemsResponse>> CreateMonitoredItemsWithHttpInfoAsync(CreateMonitoredItemsRequest createMonitoredItemsRequest = default(CreateMonitoredItemsRequest), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<CreateMonitoredItemsResponse>> CreateMonitoredItemsWithHttpInfoAsync(CreateMonitoredItemsRequest createMonitoredItemsRequest = default, System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// 
         /// </summary>
@@ -779,10 +710,9 @@ namespace Opc.Ua.WebApi.Api
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createSessionRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.7.2/#5.7.2.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CreateSessionResponse</returns>
-        System.Threading.Tasks.Task<CreateSessionResponse> CreateSessionAsync(CreateSessionRequest createSessionRequest = default(CreateSessionRequest), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<CreateSessionResponse> CreateSessionAsync(CreateSessionRequest createSessionRequest = default, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// 
@@ -792,10 +722,9 @@ namespace Opc.Ua.WebApi.Api
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createSessionRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.7.2/#5.7.2.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CreateSessionResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CreateSessionResponse>> CreateSessionWithHttpInfoAsync(CreateSessionRequest createSessionRequest = default(CreateSessionRequest), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<CreateSessionResponse>> CreateSessionWithHttpInfoAsync(CreateSessionRequest createSessionRequest = default, System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// 
         /// </summary>
@@ -804,10 +733,9 @@ namespace Opc.Ua.WebApi.Api
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createSubscriptionRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.2/#5.14.2.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CreateSubscriptionResponse</returns>
-        System.Threading.Tasks.Task<CreateSubscriptionResponse> CreateSubscriptionAsync(CreateSubscriptionRequest createSubscriptionRequest = default(CreateSubscriptionRequest), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<CreateSubscriptionResponse> CreateSubscriptionAsync(CreateSubscriptionRequest createSubscriptionRequest = default, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// 
@@ -817,10 +745,9 @@ namespace Opc.Ua.WebApi.Api
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createSubscriptionRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.2/#5.14.2.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CreateSubscriptionResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CreateSubscriptionResponse>> CreateSubscriptionWithHttpInfoAsync(CreateSubscriptionRequest createSubscriptionRequest = default(CreateSubscriptionRequest), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<CreateSubscriptionResponse>> CreateSubscriptionWithHttpInfoAsync(CreateSubscriptionRequest createSubscriptionRequest = default, System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// 
         /// </summary>
@@ -829,10 +756,9 @@ namespace Opc.Ua.WebApi.Api
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteMonitoredItemsRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.13.6/#5.13.6.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of DeleteMonitoredItemsResponse</returns>
-        System.Threading.Tasks.Task<DeleteMonitoredItemsResponse> DeleteMonitoredItemsAsync(DeleteMonitoredItemsRequest deleteMonitoredItemsRequest = default(DeleteMonitoredItemsRequest), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<DeleteMonitoredItemsResponse> DeleteMonitoredItemsAsync(DeleteMonitoredItemsRequest deleteMonitoredItemsRequest = default, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// 
@@ -842,10 +768,9 @@ namespace Opc.Ua.WebApi.Api
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteMonitoredItemsRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.13.6/#5.13.6.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (DeleteMonitoredItemsResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DeleteMonitoredItemsResponse>> DeleteMonitoredItemsWithHttpInfoAsync(DeleteMonitoredItemsRequest deleteMonitoredItemsRequest = default(DeleteMonitoredItemsRequest), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<DeleteMonitoredItemsResponse>> DeleteMonitoredItemsWithHttpInfoAsync(DeleteMonitoredItemsRequest deleteMonitoredItemsRequest = default, System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// 
         /// </summary>
@@ -854,10 +779,9 @@ namespace Opc.Ua.WebApi.Api
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteSubscriptionsRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.8/#5.14.8.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of DeleteSubscriptionsResponse</returns>
-        System.Threading.Tasks.Task<DeleteSubscriptionsResponse> DeleteSubscriptionsAsync(DeleteSubscriptionsRequest deleteSubscriptionsRequest = default(DeleteSubscriptionsRequest), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<DeleteSubscriptionsResponse> DeleteSubscriptionsAsync(DeleteSubscriptionsRequest deleteSubscriptionsRequest = default, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// 
@@ -867,10 +791,9 @@ namespace Opc.Ua.WebApi.Api
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteSubscriptionsRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.8/#5.14.8.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (DeleteSubscriptionsResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DeleteSubscriptionsResponse>> DeleteSubscriptionsWithHttpInfoAsync(DeleteSubscriptionsRequest deleteSubscriptionsRequest = default(DeleteSubscriptionsRequest), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<DeleteSubscriptionsResponse>> DeleteSubscriptionsWithHttpInfoAsync(DeleteSubscriptionsRequest deleteSubscriptionsRequest = default, System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// 
         /// </summary>
@@ -879,10 +802,9 @@ namespace Opc.Ua.WebApi.Api
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="findServersRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.5.2/#5.5.2.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of FindServersResponse</returns>
-        System.Threading.Tasks.Task<FindServersResponse> FindServersAsync(FindServersRequest findServersRequest = default(FindServersRequest), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<FindServersResponse> FindServersAsync(FindServersRequest findServersRequest = default, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// 
@@ -892,10 +814,9 @@ namespace Opc.Ua.WebApi.Api
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="findServersRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.5.2/#5.5.2.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (FindServersResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<FindServersResponse>> FindServersWithHttpInfoAsync(FindServersRequest findServersRequest = default(FindServersRequest), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<FindServersResponse>> FindServersWithHttpInfoAsync(FindServersRequest findServersRequest = default, System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// 
         /// </summary>
@@ -904,10 +825,9 @@ namespace Opc.Ua.WebApi.Api
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="getEndpointsRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.5.4/#5.5.4.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of GetEndpointsResponse</returns>
-        System.Threading.Tasks.Task<GetEndpointsResponse> GetEndpointsAsync(GetEndpointsRequest getEndpointsRequest = default(GetEndpointsRequest), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<GetEndpointsResponse> GetEndpointsAsync(GetEndpointsRequest getEndpointsRequest = default, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// 
@@ -917,10 +837,9 @@ namespace Opc.Ua.WebApi.Api
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="getEndpointsRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.5.4/#5.5.4.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (GetEndpointsResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<GetEndpointsResponse>> GetEndpointsWithHttpInfoAsync(GetEndpointsRequest getEndpointsRequest = default(GetEndpointsRequest), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<GetEndpointsResponse>> GetEndpointsWithHttpInfoAsync(GetEndpointsRequest getEndpointsRequest = default, System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// 
         /// </summary>
@@ -929,10 +848,9 @@ namespace Opc.Ua.WebApi.Api
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="historyReadRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.11.3/#5.11.3.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of HistoryReadResponse</returns>
-        System.Threading.Tasks.Task<HistoryReadResponse> HistoryReadAsync(HistoryReadRequest historyReadRequest = default(HistoryReadRequest), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<HistoryReadResponse> HistoryReadAsync(HistoryReadRequest historyReadRequest = default, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// 
@@ -942,10 +860,9 @@ namespace Opc.Ua.WebApi.Api
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="historyReadRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.11.3/#5.11.3.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (HistoryReadResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<HistoryReadResponse>> HistoryReadWithHttpInfoAsync(HistoryReadRequest historyReadRequest = default(HistoryReadRequest), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<HistoryReadResponse>> HistoryReadWithHttpInfoAsync(HistoryReadRequest historyReadRequest = default, System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// 
         /// </summary>
@@ -954,10 +871,9 @@ namespace Opc.Ua.WebApi.Api
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="historyUpdateRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.11.5/#5.11.5.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of HistoryUpdateResponse</returns>
-        System.Threading.Tasks.Task<HistoryUpdateResponse> HistoryUpdateAsync(HistoryUpdateRequest historyUpdateRequest = default(HistoryUpdateRequest), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<HistoryUpdateResponse> HistoryUpdateAsync(HistoryUpdateRequest historyUpdateRequest = default, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// 
@@ -967,10 +883,9 @@ namespace Opc.Ua.WebApi.Api
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="historyUpdateRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.11.5/#5.11.5.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (HistoryUpdateResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<HistoryUpdateResponse>> HistoryUpdateWithHttpInfoAsync(HistoryUpdateRequest historyUpdateRequest = default(HistoryUpdateRequest), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<HistoryUpdateResponse>> HistoryUpdateWithHttpInfoAsync(HistoryUpdateRequest historyUpdateRequest = default, System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// 
         /// </summary>
@@ -979,10 +894,9 @@ namespace Opc.Ua.WebApi.Api
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="modifyMonitoredItemsRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.13.3/#5.13.3.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ModifyMonitoredItemsResponse</returns>
-        System.Threading.Tasks.Task<ModifyMonitoredItemsResponse> ModifyMonitoredItemsAsync(ModifyMonitoredItemsRequest modifyMonitoredItemsRequest = default(ModifyMonitoredItemsRequest), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ModifyMonitoredItemsResponse> ModifyMonitoredItemsAsync(ModifyMonitoredItemsRequest modifyMonitoredItemsRequest = default, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// 
@@ -992,10 +906,9 @@ namespace Opc.Ua.WebApi.Api
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="modifyMonitoredItemsRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.13.3/#5.13.3.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ModifyMonitoredItemsResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ModifyMonitoredItemsResponse>> ModifyMonitoredItemsWithHttpInfoAsync(ModifyMonitoredItemsRequest modifyMonitoredItemsRequest = default(ModifyMonitoredItemsRequest), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ModifyMonitoredItemsResponse>> ModifyMonitoredItemsWithHttpInfoAsync(ModifyMonitoredItemsRequest modifyMonitoredItemsRequest = default, System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// 
         /// </summary>
@@ -1004,10 +917,9 @@ namespace Opc.Ua.WebApi.Api
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="modifySubscriptionRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.3/#5.14.3.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ModifySubscriptionResponse</returns>
-        System.Threading.Tasks.Task<ModifySubscriptionResponse> ModifySubscriptionAsync(ModifySubscriptionRequest modifySubscriptionRequest = default(ModifySubscriptionRequest), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ModifySubscriptionResponse> ModifySubscriptionAsync(ModifySubscriptionRequest modifySubscriptionRequest = default, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// 
@@ -1017,10 +929,9 @@ namespace Opc.Ua.WebApi.Api
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="modifySubscriptionRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.3/#5.14.3.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ModifySubscriptionResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ModifySubscriptionResponse>> ModifySubscriptionWithHttpInfoAsync(ModifySubscriptionRequest modifySubscriptionRequest = default(ModifySubscriptionRequest), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ModifySubscriptionResponse>> ModifySubscriptionWithHttpInfoAsync(ModifySubscriptionRequest modifySubscriptionRequest = default, System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// 
         /// </summary>
@@ -1029,10 +940,9 @@ namespace Opc.Ua.WebApi.Api
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="publishRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.5/#5.14.5.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of PublishResponse</returns>
-        System.Threading.Tasks.Task<PublishResponse> PublishAsync(PublishRequest publishRequest = default(PublishRequest), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<PublishResponse> PublishAsync(PublishRequest publishRequest = default, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// 
@@ -1042,10 +952,9 @@ namespace Opc.Ua.WebApi.Api
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="publishRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.5/#5.14.5.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (PublishResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PublishResponse>> PublishWithHttpInfoAsync(PublishRequest publishRequest = default(PublishRequest), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<PublishResponse>> PublishWithHttpInfoAsync(PublishRequest publishRequest = default, System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// 
         /// </summary>
@@ -1054,10 +963,9 @@ namespace Opc.Ua.WebApi.Api
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="readRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.11.2/#5.11.2.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ReadResponse</returns>
-        System.Threading.Tasks.Task<ReadResponse> ReadAsync(ReadRequest readRequest = default(ReadRequest), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ReadResponse> ReadAsync(ReadRequest readRequest = default, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// 
@@ -1067,10 +975,9 @@ namespace Opc.Ua.WebApi.Api
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="readRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.11.2/#5.11.2.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ReadResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ReadResponse>> ReadWithHttpInfoAsync(ReadRequest readRequest = default(ReadRequest), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ReadResponse>> ReadWithHttpInfoAsync(ReadRequest readRequest = default, System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// 
         /// </summary>
@@ -1079,10 +986,9 @@ namespace Opc.Ua.WebApi.Api
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="registerNodesRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.9.5/#5.9.5.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of RegisterNodesResponse</returns>
-        System.Threading.Tasks.Task<RegisterNodesResponse> RegisterNodesAsync(RegisterNodesRequest registerNodesRequest = default(RegisterNodesRequest), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<RegisterNodesResponse> RegisterNodesAsync(RegisterNodesRequest registerNodesRequest = default, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// 
@@ -1092,10 +998,9 @@ namespace Opc.Ua.WebApi.Api
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="registerNodesRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.9.5/#5.9.5.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RegisterNodesResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RegisterNodesResponse>> RegisterNodesWithHttpInfoAsync(RegisterNodesRequest registerNodesRequest = default(RegisterNodesRequest), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<RegisterNodesResponse>> RegisterNodesWithHttpInfoAsync(RegisterNodesRequest registerNodesRequest = default, System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// 
         /// </summary>
@@ -1104,10 +1009,9 @@ namespace Opc.Ua.WebApi.Api
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="republishRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.6/#5.14.6.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of RepublishResponse</returns>
-        System.Threading.Tasks.Task<RepublishResponse> RepublishAsync(RepublishRequest republishRequest = default(RepublishRequest), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<RepublishResponse> RepublishAsync(RepublishRequest republishRequest = default, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// 
@@ -1117,10 +1021,9 @@ namespace Opc.Ua.WebApi.Api
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="republishRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.6/#5.14.6.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RepublishResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RepublishResponse>> RepublishWithHttpInfoAsync(RepublishRequest republishRequest = default(RepublishRequest), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<RepublishResponse>> RepublishWithHttpInfoAsync(RepublishRequest republishRequest = default, System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// 
         /// </summary>
@@ -1129,10 +1032,9 @@ namespace Opc.Ua.WebApi.Api
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="setMonitoringModeRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.13.4/#5.13.4.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of SetMonitoringModeResponse</returns>
-        System.Threading.Tasks.Task<SetMonitoringModeResponse> SetMonitoringModeAsync(SetMonitoringModeRequest setMonitoringModeRequest = default(SetMonitoringModeRequest), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<SetMonitoringModeResponse> SetMonitoringModeAsync(SetMonitoringModeRequest setMonitoringModeRequest = default, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// 
@@ -1142,10 +1044,9 @@ namespace Opc.Ua.WebApi.Api
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="setMonitoringModeRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.13.4/#5.13.4.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (SetMonitoringModeResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<SetMonitoringModeResponse>> SetMonitoringModeWithHttpInfoAsync(SetMonitoringModeRequest setMonitoringModeRequest = default(SetMonitoringModeRequest), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<SetMonitoringModeResponse>> SetMonitoringModeWithHttpInfoAsync(SetMonitoringModeRequest setMonitoringModeRequest = default, System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// 
         /// </summary>
@@ -1154,10 +1055,9 @@ namespace Opc.Ua.WebApi.Api
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="setPublishingModeRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.4/#5.14.4.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of SetPublishingModeResponse</returns>
-        System.Threading.Tasks.Task<SetPublishingModeResponse> SetPublishingModeAsync(SetPublishingModeRequest setPublishingModeRequest = default(SetPublishingModeRequest), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<SetPublishingModeResponse> SetPublishingModeAsync(SetPublishingModeRequest setPublishingModeRequest = default, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// 
@@ -1167,10 +1067,9 @@ namespace Opc.Ua.WebApi.Api
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="setPublishingModeRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.4/#5.14.4.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (SetPublishingModeResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<SetPublishingModeResponse>> SetPublishingModeWithHttpInfoAsync(SetPublishingModeRequest setPublishingModeRequest = default(SetPublishingModeRequest), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<SetPublishingModeResponse>> SetPublishingModeWithHttpInfoAsync(SetPublishingModeRequest setPublishingModeRequest = default, System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// 
         /// </summary>
@@ -1179,10 +1078,9 @@ namespace Opc.Ua.WebApi.Api
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="setTriggeringRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.13.5/#5.13.5.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of SetTriggeringResponse</returns>
-        System.Threading.Tasks.Task<SetTriggeringResponse> SetTriggeringAsync(SetTriggeringRequest setTriggeringRequest = default(SetTriggeringRequest), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<SetTriggeringResponse> SetTriggeringAsync(SetTriggeringRequest setTriggeringRequest = default, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// 
@@ -1192,10 +1090,9 @@ namespace Opc.Ua.WebApi.Api
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="setTriggeringRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.13.5/#5.13.5.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (SetTriggeringResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<SetTriggeringResponse>> SetTriggeringWithHttpInfoAsync(SetTriggeringRequest setTriggeringRequest = default(SetTriggeringRequest), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<SetTriggeringResponse>> SetTriggeringWithHttpInfoAsync(SetTriggeringRequest setTriggeringRequest = default, System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// 
         /// </summary>
@@ -1204,10 +1101,9 @@ namespace Opc.Ua.WebApi.Api
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="transferSubscriptionsRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.7/#5.14.7.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of TransferSubscriptionsResponse</returns>
-        System.Threading.Tasks.Task<TransferSubscriptionsResponse> TransferSubscriptionsAsync(TransferSubscriptionsRequest transferSubscriptionsRequest = default(TransferSubscriptionsRequest), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<TransferSubscriptionsResponse> TransferSubscriptionsAsync(TransferSubscriptionsRequest transferSubscriptionsRequest = default, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// 
@@ -1217,10 +1113,9 @@ namespace Opc.Ua.WebApi.Api
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="transferSubscriptionsRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.7/#5.14.7.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (TransferSubscriptionsResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TransferSubscriptionsResponse>> TransferSubscriptionsWithHttpInfoAsync(TransferSubscriptionsRequest transferSubscriptionsRequest = default(TransferSubscriptionsRequest), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<TransferSubscriptionsResponse>> TransferSubscriptionsWithHttpInfoAsync(TransferSubscriptionsRequest transferSubscriptionsRequest = default, System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// 
         /// </summary>
@@ -1229,10 +1124,9 @@ namespace Opc.Ua.WebApi.Api
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="translateBrowsePathsToNodeIdsRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.9.4/#5.9.4.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of TranslateBrowsePathsToNodeIdsResponse</returns>
-        System.Threading.Tasks.Task<TranslateBrowsePathsToNodeIdsResponse> TranslateBrowsePathsToNodeIdsAsync(TranslateBrowsePathsToNodeIdsRequest translateBrowsePathsToNodeIdsRequest = default(TranslateBrowsePathsToNodeIdsRequest), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<TranslateBrowsePathsToNodeIdsResponse> TranslateBrowsePathsToNodeIdsAsync(TranslateBrowsePathsToNodeIdsRequest translateBrowsePathsToNodeIdsRequest = default, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// 
@@ -1242,10 +1136,9 @@ namespace Opc.Ua.WebApi.Api
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="translateBrowsePathsToNodeIdsRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.9.4/#5.9.4.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (TranslateBrowsePathsToNodeIdsResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TranslateBrowsePathsToNodeIdsResponse>> TranslateBrowsePathsToNodeIdsWithHttpInfoAsync(TranslateBrowsePathsToNodeIdsRequest translateBrowsePathsToNodeIdsRequest = default(TranslateBrowsePathsToNodeIdsRequest), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<TranslateBrowsePathsToNodeIdsResponse>> TranslateBrowsePathsToNodeIdsWithHttpInfoAsync(TranslateBrowsePathsToNodeIdsRequest translateBrowsePathsToNodeIdsRequest = default, System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// 
         /// </summary>
@@ -1254,10 +1147,9 @@ namespace Opc.Ua.WebApi.Api
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="unregisterNodesRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.9.6/#5.9.6.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of UnregisterNodesResponse</returns>
-        System.Threading.Tasks.Task<UnregisterNodesResponse> UnregisterNodesAsync(UnregisterNodesRequest unregisterNodesRequest = default(UnregisterNodesRequest), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<UnregisterNodesResponse> UnregisterNodesAsync(UnregisterNodesRequest unregisterNodesRequest = default, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// 
@@ -1267,10 +1159,9 @@ namespace Opc.Ua.WebApi.Api
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="unregisterNodesRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.9.6/#5.9.6.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (UnregisterNodesResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<UnregisterNodesResponse>> UnregisterNodesWithHttpInfoAsync(UnregisterNodesRequest unregisterNodesRequest = default(UnregisterNodesRequest), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<UnregisterNodesResponse>> UnregisterNodesWithHttpInfoAsync(UnregisterNodesRequest unregisterNodesRequest = default, System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// 
         /// </summary>
@@ -1279,10 +1170,9 @@ namespace Opc.Ua.WebApi.Api
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="writeRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.11.4/#5.11.4.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of WriteResponse</returns>
-        System.Threading.Tasks.Task<WriteResponse> WriteAsync(WriteRequest writeRequest = default(WriteRequest), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<WriteResponse> WriteAsync(WriteRequest writeRequest = default, System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
         /// 
@@ -1292,10 +1182,9 @@ namespace Opc.Ua.WebApi.Api
         /// </remarks>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="writeRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.11.4/#5.11.4.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (WriteResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<WriteResponse>> WriteWithHttpInfoAsync(WriteRequest writeRequest = default(WriteRequest), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<WriteResponse>> WriteWithHttpInfoAsync(WriteRequest writeRequest = default, System.Threading.CancellationToken cancellationToken = default);
         #endregion Asynchronous Operations
     }
 
@@ -1310,12 +1199,14 @@ namespace Opc.Ua.WebApi.Api
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    public partial class DefaultApi : IDefaultApi
+    public partial class DefaultApi : IDisposable, IDefaultApi
     {
         private Opc.Ua.WebApi.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="DefaultApi"/> class.
+        /// **IMPORTANT** This will also create an instance of HttpClient, which is less than ideal.
+        /// It's better to reuse the <see href="https://docs.microsoft.com/en-us/dotnet/architecture/microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests#issues-with-the-original-httpclient-class-available-in-net">HttpClient and HttpClientHandler</see>.
         /// </summary>
         /// <returns></returns>
         public DefaultApi() : this((string)null)
@@ -1324,7 +1215,11 @@ namespace Opc.Ua.WebApi.Api
 
         /// <summary>
         /// Initializes a new instance of the <see cref="DefaultApi"/> class.
+        /// **IMPORTANT** This will also create an instance of HttpClient, which is less than ideal.
+        /// It's better to reuse the <see href="https://docs.microsoft.com/en-us/dotnet/architecture/microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests#issues-with-the-original-httpclient-class-available-in-net">HttpClient and HttpClientHandler</see>.
         /// </summary>
+        /// <param name="basePath">The target service's base path in URL format.</param>
+        /// <exception cref="ArgumentException"></exception>
         /// <returns></returns>
         public DefaultApi(string basePath)
         {
@@ -1332,16 +1227,19 @@ namespace Opc.Ua.WebApi.Api
                 Opc.Ua.WebApi.Client.GlobalConfiguration.Instance,
                 new Opc.Ua.WebApi.Client.Configuration { BasePath = basePath }
             );
-            this.Client = new Opc.Ua.WebApi.Client.ApiClient(this.Configuration.BasePath);
-            this.AsynchronousClient = new Opc.Ua.WebApi.Client.ApiClient(this.Configuration.BasePath);
+            this.ApiClient = new Opc.Ua.WebApi.Client.ApiClient(this.Configuration.BasePath);
+            this.Client =  this.ApiClient;
+            this.AsynchronousClient = this.ApiClient;
             this.ExceptionFactory = Opc.Ua.WebApi.Client.Configuration.DefaultExceptionFactory;
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="DefaultApi"/> class
-        /// using Configuration object
+        /// Initializes a new instance of the <see cref="DefaultApi"/> class using Configuration object.
+        /// **IMPORTANT** This will also create an instance of HttpClient, which is less than ideal.
+        /// It's better to reuse the <see href="https://docs.microsoft.com/en-us/dotnet/architecture/microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests#issues-with-the-original-httpclient-class-available-in-net">HttpClient and HttpClientHandler</see>.
         /// </summary>
-        /// <param name="configuration">An instance of Configuration</param>
+        /// <param name="configuration">An instance of Configuration.</param>
+        /// <exception cref="ArgumentNullException"></exception>
         /// <returns></returns>
         public DefaultApi(Opc.Ua.WebApi.Client.Configuration configuration)
         {
@@ -1351,8 +1249,78 @@ namespace Opc.Ua.WebApi.Api
                 Opc.Ua.WebApi.Client.GlobalConfiguration.Instance,
                 configuration
             );
-            this.Client = new Opc.Ua.WebApi.Client.ApiClient(this.Configuration.BasePath);
-            this.AsynchronousClient = new Opc.Ua.WebApi.Client.ApiClient(this.Configuration.BasePath);
+            this.ApiClient = new Opc.Ua.WebApi.Client.ApiClient(this.Configuration.BasePath);
+            this.Client = this.ApiClient;
+            this.AsynchronousClient = this.ApiClient;
+            ExceptionFactory = Opc.Ua.WebApi.Client.Configuration.DefaultExceptionFactory;
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="DefaultApi"/> class.
+        /// </summary>
+        /// <param name="client">An instance of HttpClient.</param>
+        /// <param name="handler">An optional instance of HttpClientHandler that is used by HttpClient.</param>
+        /// <exception cref="ArgumentNullException"></exception>
+        /// <returns></returns>
+        /// <remarks>
+        /// Some configuration settings will not be applied without passing an HttpClientHandler.
+        /// The features affected are: Setting and Retrieving Cookies, Client Certificates, Proxy settings.
+        /// </remarks>
+        public DefaultApi(HttpClient client, HttpClientHandler handler = null) : this(client, (string)null, handler)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="DefaultApi"/> class.
+        /// </summary>
+        /// <param name="client">An instance of HttpClient.</param>
+        /// <param name="basePath">The target service's base path in URL format.</param>
+        /// <param name="handler">An optional instance of HttpClientHandler that is used by HttpClient.</param>
+        /// <exception cref="ArgumentNullException"></exception>
+        /// <exception cref="ArgumentException"></exception>
+        /// <returns></returns>
+        /// <remarks>
+        /// Some configuration settings will not be applied without passing an HttpClientHandler.
+        /// The features affected are: Setting and Retrieving Cookies, Client Certificates, Proxy settings.
+        /// </remarks>
+        public DefaultApi(HttpClient client, string basePath, HttpClientHandler handler = null)
+        {
+            if (client == null) throw new ArgumentNullException("client");
+
+            this.Configuration = Opc.Ua.WebApi.Client.Configuration.MergeConfigurations(
+                Opc.Ua.WebApi.Client.GlobalConfiguration.Instance,
+                new Opc.Ua.WebApi.Client.Configuration { BasePath = basePath }
+            );
+            this.ApiClient = new Opc.Ua.WebApi.Client.ApiClient(client, this.Configuration.BasePath, handler);
+            this.Client =  this.ApiClient;
+            this.AsynchronousClient = this.ApiClient;
+            this.ExceptionFactory = Opc.Ua.WebApi.Client.Configuration.DefaultExceptionFactory;
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="DefaultApi"/> class using Configuration object.
+        /// </summary>
+        /// <param name="client">An instance of HttpClient.</param>
+        /// <param name="configuration">An instance of Configuration.</param>
+        /// <param name="handler">An optional instance of HttpClientHandler that is used by HttpClient.</param>
+        /// <exception cref="ArgumentNullException"></exception>
+        /// <returns></returns>
+        /// <remarks>
+        /// Some configuration settings will not be applied without passing an HttpClientHandler.
+        /// The features affected are: Setting and Retrieving Cookies, Client Certificates, Proxy settings.
+        /// </remarks>
+        public DefaultApi(HttpClient client, Opc.Ua.WebApi.Client.Configuration configuration, HttpClientHandler handler = null)
+        {
+            if (configuration == null) throw new ArgumentNullException("configuration");
+            if (client == null) throw new ArgumentNullException("client");
+
+            this.Configuration = Opc.Ua.WebApi.Client.Configuration.MergeConfigurations(
+                Opc.Ua.WebApi.Client.GlobalConfiguration.Instance,
+                configuration
+            );
+            this.ApiClient = new Opc.Ua.WebApi.Client.ApiClient(client, this.Configuration.BasePath, handler);
+            this.Client = this.ApiClient;
+            this.AsynchronousClient = this.ApiClient;
             ExceptionFactory = Opc.Ua.WebApi.Client.Configuration.DefaultExceptionFactory;
         }
 
@@ -1363,6 +1331,7 @@ namespace Opc.Ua.WebApi.Api
         /// <param name="client">The client interface for synchronous API access.</param>
         /// <param name="asyncClient">The client interface for asynchronous API access.</param>
         /// <param name="configuration">The configuration object.</param>
+        /// <exception cref="ArgumentNullException"></exception>
         public DefaultApi(Opc.Ua.WebApi.Client.ISynchronousClient client, Opc.Ua.WebApi.Client.IAsynchronousClient asyncClient, Opc.Ua.WebApi.Client.IReadableConfiguration configuration)
         {
             if (client == null) throw new ArgumentNullException("client");
@@ -1374,6 +1343,19 @@ namespace Opc.Ua.WebApi.Api
             this.Configuration = configuration;
             this.ExceptionFactory = Opc.Ua.WebApi.Client.Configuration.DefaultExceptionFactory;
         }
+
+        /// <summary>
+        /// Disposes resources if they were created by us
+        /// </summary>
+        public void Dispose()
+        {
+            this.ApiClient?.Dispose();
+        }
+
+        /// <summary>
+        /// Holds the ApiClient if created
+        /// </summary>
+        public Opc.Ua.WebApi.Client.ApiClient ApiClient { get; set; } = null;
 
         /// <summary>
         /// The client for accessing this underlying API asynchronously.
@@ -1421,9 +1403,8 @@ namespace Opc.Ua.WebApi.Api
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="activateSessionRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.7.3/#5.7.3.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ActivateSessionResponse</returns>
-        public ActivateSessionResponse ActivateSession(ActivateSessionRequest activateSessionRequest = default(ActivateSessionRequest), int operationIndex = 0)
+        public ActivateSessionResponse ActivateSession(ActivateSessionRequest activateSessionRequest = default)
         {
             Opc.Ua.WebApi.Client.ApiResponse<ActivateSessionResponse> localVarResponse = ActivateSessionWithHttpInfo(activateSessionRequest);
             return localVarResponse.Data;
@@ -1434,9 +1415,8 @@ namespace Opc.Ua.WebApi.Api
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="activateSessionRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.7.3/#5.7.3.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ActivateSessionResponse</returns>
-        public Opc.Ua.WebApi.Client.ApiResponse<ActivateSessionResponse> ActivateSessionWithHttpInfo(ActivateSessionRequest activateSessionRequest = default(ActivateSessionRequest), int operationIndex = 0)
+        public Opc.Ua.WebApi.Client.ApiResponse<ActivateSessionResponse> ActivateSessionWithHttpInfo(ActivateSessionRequest activateSessionRequest = default)
         {
             Opc.Ua.WebApi.Client.RequestOptions localVarRequestOptions = new Opc.Ua.WebApi.Client.RequestOptions();
 
@@ -1450,32 +1430,21 @@ namespace Opc.Ua.WebApi.Api
             };
 
             var localVarContentType = Opc.Ua.WebApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Opc.Ua.WebApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.Data = activateSessionRequest;
-
-            localVarRequestOptions.Operation = "DefaultApi.ActivateSession";
-            localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<ActivateSessionResponse>("/activatesession", localVarRequestOptions, this.Configuration);
+
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ActivateSession", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -1486,12 +1455,11 @@ namespace Opc.Ua.WebApi.Api
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="activateSessionRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.7.3/#5.7.3.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ActivateSessionResponse</returns>
-        public async System.Threading.Tasks.Task<ActivateSessionResponse> ActivateSessionAsync(ActivateSessionRequest activateSessionRequest = default(ActivateSessionRequest), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ActivateSessionResponse> ActivateSessionAsync(ActivateSessionRequest activateSessionRequest = default, System.Threading.CancellationToken cancellationToken = default)
         {
-            Opc.Ua.WebApi.Client.ApiResponse<ActivateSessionResponse> localVarResponse = await ActivateSessionWithHttpInfoAsync(activateSessionRequest, operationIndex, cancellationToken).ConfigureAwait(false);
+            Opc.Ua.WebApi.Client.ApiResponse<ActivateSessionResponse> localVarResponse = await ActivateSessionWithHttpInfoAsync(activateSessionRequest, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1500,10 +1468,9 @@ namespace Opc.Ua.WebApi.Api
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="activateSessionRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.7.3/#5.7.3.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ActivateSessionResponse)</returns>
-        public async System.Threading.Tasks.Task<Opc.Ua.WebApi.Client.ApiResponse<ActivateSessionResponse>> ActivateSessionWithHttpInfoAsync(ActivateSessionRequest activateSessionRequest = default(ActivateSessionRequest), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Opc.Ua.WebApi.Client.ApiResponse<ActivateSessionResponse>> ActivateSessionWithHttpInfoAsync(ActivateSessionRequest activateSessionRequest = default, System.Threading.CancellationToken cancellationToken = default)
         {
 
             Opc.Ua.WebApi.Client.RequestOptions localVarRequestOptions = new Opc.Ua.WebApi.Client.RequestOptions();
@@ -1517,34 +1484,24 @@ namespace Opc.Ua.WebApi.Api
                 "application/json"
             };
 
+
             var localVarContentType = Opc.Ua.WebApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Opc.Ua.WebApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.Data = activateSessionRequest;
 
-            localVarRequestOptions.Operation = "DefaultApi.ActivateSession";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
 
             // make the HTTP request
+
             var localVarResponse = await this.AsynchronousClient.PostAsync<ActivateSessionResponse>("/activatesession", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ActivateSession", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -1555,9 +1512,8 @@ namespace Opc.Ua.WebApi.Api
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="browseRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.9.2/#5.9.2.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>BrowseResponse</returns>
-        public BrowseResponse Browse(BrowseRequest browseRequest = default(BrowseRequest), int operationIndex = 0)
+        public BrowseResponse Browse(BrowseRequest browseRequest = default)
         {
             Opc.Ua.WebApi.Client.ApiResponse<BrowseResponse> localVarResponse = BrowseWithHttpInfo(browseRequest);
             return localVarResponse.Data;
@@ -1568,9 +1524,8 @@ namespace Opc.Ua.WebApi.Api
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="browseRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.9.2/#5.9.2.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of BrowseResponse</returns>
-        public Opc.Ua.WebApi.Client.ApiResponse<BrowseResponse> BrowseWithHttpInfo(BrowseRequest browseRequest = default(BrowseRequest), int operationIndex = 0)
+        public Opc.Ua.WebApi.Client.ApiResponse<BrowseResponse> BrowseWithHttpInfo(BrowseRequest browseRequest = default)
         {
             Opc.Ua.WebApi.Client.RequestOptions localVarRequestOptions = new Opc.Ua.WebApi.Client.RequestOptions();
 
@@ -1584,32 +1539,21 @@ namespace Opc.Ua.WebApi.Api
             };
 
             var localVarContentType = Opc.Ua.WebApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Opc.Ua.WebApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.Data = browseRequest;
-
-            localVarRequestOptions.Operation = "DefaultApi.Browse";
-            localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<BrowseResponse>("/browse", localVarRequestOptions, this.Configuration);
+
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("Browse", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -1620,12 +1564,11 @@ namespace Opc.Ua.WebApi.Api
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="browseRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.9.2/#5.9.2.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of BrowseResponse</returns>
-        public async System.Threading.Tasks.Task<BrowseResponse> BrowseAsync(BrowseRequest browseRequest = default(BrowseRequest), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<BrowseResponse> BrowseAsync(BrowseRequest browseRequest = default, System.Threading.CancellationToken cancellationToken = default)
         {
-            Opc.Ua.WebApi.Client.ApiResponse<BrowseResponse> localVarResponse = await BrowseWithHttpInfoAsync(browseRequest, operationIndex, cancellationToken).ConfigureAwait(false);
+            Opc.Ua.WebApi.Client.ApiResponse<BrowseResponse> localVarResponse = await BrowseWithHttpInfoAsync(browseRequest, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1634,10 +1577,9 @@ namespace Opc.Ua.WebApi.Api
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="browseRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.9.2/#5.9.2.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (BrowseResponse)</returns>
-        public async System.Threading.Tasks.Task<Opc.Ua.WebApi.Client.ApiResponse<BrowseResponse>> BrowseWithHttpInfoAsync(BrowseRequest browseRequest = default(BrowseRequest), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Opc.Ua.WebApi.Client.ApiResponse<BrowseResponse>> BrowseWithHttpInfoAsync(BrowseRequest browseRequest = default, System.Threading.CancellationToken cancellationToken = default)
         {
 
             Opc.Ua.WebApi.Client.RequestOptions localVarRequestOptions = new Opc.Ua.WebApi.Client.RequestOptions();
@@ -1651,34 +1593,24 @@ namespace Opc.Ua.WebApi.Api
                 "application/json"
             };
 
+
             var localVarContentType = Opc.Ua.WebApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Opc.Ua.WebApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.Data = browseRequest;
 
-            localVarRequestOptions.Operation = "DefaultApi.Browse";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
 
             // make the HTTP request
+
             var localVarResponse = await this.AsynchronousClient.PostAsync<BrowseResponse>("/browse", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("Browse", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -1689,9 +1621,8 @@ namespace Opc.Ua.WebApi.Api
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="browseNextRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.9.3/#5.9.3.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>BrowseNextResponse</returns>
-        public BrowseNextResponse BrowseNext(BrowseNextRequest browseNextRequest = default(BrowseNextRequest), int operationIndex = 0)
+        public BrowseNextResponse BrowseNext(BrowseNextRequest browseNextRequest = default)
         {
             Opc.Ua.WebApi.Client.ApiResponse<BrowseNextResponse> localVarResponse = BrowseNextWithHttpInfo(browseNextRequest);
             return localVarResponse.Data;
@@ -1702,9 +1633,8 @@ namespace Opc.Ua.WebApi.Api
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="browseNextRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.9.3/#5.9.3.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of BrowseNextResponse</returns>
-        public Opc.Ua.WebApi.Client.ApiResponse<BrowseNextResponse> BrowseNextWithHttpInfo(BrowseNextRequest browseNextRequest = default(BrowseNextRequest), int operationIndex = 0)
+        public Opc.Ua.WebApi.Client.ApiResponse<BrowseNextResponse> BrowseNextWithHttpInfo(BrowseNextRequest browseNextRequest = default)
         {
             Opc.Ua.WebApi.Client.RequestOptions localVarRequestOptions = new Opc.Ua.WebApi.Client.RequestOptions();
 
@@ -1718,32 +1648,21 @@ namespace Opc.Ua.WebApi.Api
             };
 
             var localVarContentType = Opc.Ua.WebApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Opc.Ua.WebApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.Data = browseNextRequest;
-
-            localVarRequestOptions.Operation = "DefaultApi.BrowseNext";
-            localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<BrowseNextResponse>("/browsenext", localVarRequestOptions, this.Configuration);
+
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("BrowseNext", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -1754,12 +1673,11 @@ namespace Opc.Ua.WebApi.Api
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="browseNextRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.9.3/#5.9.3.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of BrowseNextResponse</returns>
-        public async System.Threading.Tasks.Task<BrowseNextResponse> BrowseNextAsync(BrowseNextRequest browseNextRequest = default(BrowseNextRequest), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<BrowseNextResponse> BrowseNextAsync(BrowseNextRequest browseNextRequest = default, System.Threading.CancellationToken cancellationToken = default)
         {
-            Opc.Ua.WebApi.Client.ApiResponse<BrowseNextResponse> localVarResponse = await BrowseNextWithHttpInfoAsync(browseNextRequest, operationIndex, cancellationToken).ConfigureAwait(false);
+            Opc.Ua.WebApi.Client.ApiResponse<BrowseNextResponse> localVarResponse = await BrowseNextWithHttpInfoAsync(browseNextRequest, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1768,10 +1686,9 @@ namespace Opc.Ua.WebApi.Api
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="browseNextRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.9.3/#5.9.3.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (BrowseNextResponse)</returns>
-        public async System.Threading.Tasks.Task<Opc.Ua.WebApi.Client.ApiResponse<BrowseNextResponse>> BrowseNextWithHttpInfoAsync(BrowseNextRequest browseNextRequest = default(BrowseNextRequest), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Opc.Ua.WebApi.Client.ApiResponse<BrowseNextResponse>> BrowseNextWithHttpInfoAsync(BrowseNextRequest browseNextRequest = default, System.Threading.CancellationToken cancellationToken = default)
         {
 
             Opc.Ua.WebApi.Client.RequestOptions localVarRequestOptions = new Opc.Ua.WebApi.Client.RequestOptions();
@@ -1785,34 +1702,24 @@ namespace Opc.Ua.WebApi.Api
                 "application/json"
             };
 
+
             var localVarContentType = Opc.Ua.WebApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Opc.Ua.WebApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.Data = browseNextRequest;
 
-            localVarRequestOptions.Operation = "DefaultApi.BrowseNext";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
 
             // make the HTTP request
+
             var localVarResponse = await this.AsynchronousClient.PostAsync<BrowseNextResponse>("/browsenext", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("BrowseNext", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -1823,9 +1730,8 @@ namespace Opc.Ua.WebApi.Api
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="callRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.12.2/#5.12.2.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>CallResponse</returns>
-        public CallResponse Call(CallRequest callRequest = default(CallRequest), int operationIndex = 0)
+        public CallResponse Call(CallRequest callRequest = default)
         {
             Opc.Ua.WebApi.Client.ApiResponse<CallResponse> localVarResponse = CallWithHttpInfo(callRequest);
             return localVarResponse.Data;
@@ -1836,9 +1742,8 @@ namespace Opc.Ua.WebApi.Api
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="callRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.12.2/#5.12.2.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of CallResponse</returns>
-        public Opc.Ua.WebApi.Client.ApiResponse<CallResponse> CallWithHttpInfo(CallRequest callRequest = default(CallRequest), int operationIndex = 0)
+        public Opc.Ua.WebApi.Client.ApiResponse<CallResponse> CallWithHttpInfo(CallRequest callRequest = default)
         {
             Opc.Ua.WebApi.Client.RequestOptions localVarRequestOptions = new Opc.Ua.WebApi.Client.RequestOptions();
 
@@ -1852,32 +1757,21 @@ namespace Opc.Ua.WebApi.Api
             };
 
             var localVarContentType = Opc.Ua.WebApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Opc.Ua.WebApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.Data = callRequest;
-
-            localVarRequestOptions.Operation = "DefaultApi.Call";
-            localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<CallResponse>("/call", localVarRequestOptions, this.Configuration);
+
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("Call", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -1888,12 +1782,11 @@ namespace Opc.Ua.WebApi.Api
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="callRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.12.2/#5.12.2.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CallResponse</returns>
-        public async System.Threading.Tasks.Task<CallResponse> CallAsync(CallRequest callRequest = default(CallRequest), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CallResponse> CallAsync(CallRequest callRequest = default, System.Threading.CancellationToken cancellationToken = default)
         {
-            Opc.Ua.WebApi.Client.ApiResponse<CallResponse> localVarResponse = await CallWithHttpInfoAsync(callRequest, operationIndex, cancellationToken).ConfigureAwait(false);
+            Opc.Ua.WebApi.Client.ApiResponse<CallResponse> localVarResponse = await CallWithHttpInfoAsync(callRequest, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1902,10 +1795,9 @@ namespace Opc.Ua.WebApi.Api
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="callRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.12.2/#5.12.2.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CallResponse)</returns>
-        public async System.Threading.Tasks.Task<Opc.Ua.WebApi.Client.ApiResponse<CallResponse>> CallWithHttpInfoAsync(CallRequest callRequest = default(CallRequest), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Opc.Ua.WebApi.Client.ApiResponse<CallResponse>> CallWithHttpInfoAsync(CallRequest callRequest = default, System.Threading.CancellationToken cancellationToken = default)
         {
 
             Opc.Ua.WebApi.Client.RequestOptions localVarRequestOptions = new Opc.Ua.WebApi.Client.RequestOptions();
@@ -1919,34 +1811,24 @@ namespace Opc.Ua.WebApi.Api
                 "application/json"
             };
 
+
             var localVarContentType = Opc.Ua.WebApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Opc.Ua.WebApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.Data = callRequest;
 
-            localVarRequestOptions.Operation = "DefaultApi.Call";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
 
             // make the HTTP request
+
             var localVarResponse = await this.AsynchronousClient.PostAsync<CallResponse>("/call", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("Call", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -1957,9 +1839,8 @@ namespace Opc.Ua.WebApi.Api
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancelRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.7.5/#5.7.5.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>CancelResponse</returns>
-        public CancelResponse Cancel(CancelRequest cancelRequest = default(CancelRequest), int operationIndex = 0)
+        public CancelResponse Cancel(CancelRequest cancelRequest = default)
         {
             Opc.Ua.WebApi.Client.ApiResponse<CancelResponse> localVarResponse = CancelWithHttpInfo(cancelRequest);
             return localVarResponse.Data;
@@ -1970,9 +1851,8 @@ namespace Opc.Ua.WebApi.Api
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancelRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.7.5/#5.7.5.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of CancelResponse</returns>
-        public Opc.Ua.WebApi.Client.ApiResponse<CancelResponse> CancelWithHttpInfo(CancelRequest cancelRequest = default(CancelRequest), int operationIndex = 0)
+        public Opc.Ua.WebApi.Client.ApiResponse<CancelResponse> CancelWithHttpInfo(CancelRequest cancelRequest = default)
         {
             Opc.Ua.WebApi.Client.RequestOptions localVarRequestOptions = new Opc.Ua.WebApi.Client.RequestOptions();
 
@@ -1986,32 +1866,21 @@ namespace Opc.Ua.WebApi.Api
             };
 
             var localVarContentType = Opc.Ua.WebApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Opc.Ua.WebApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.Data = cancelRequest;
-
-            localVarRequestOptions.Operation = "DefaultApi.Cancel";
-            localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<CancelResponse>("/cancel", localVarRequestOptions, this.Configuration);
+
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("Cancel", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -2022,12 +1891,11 @@ namespace Opc.Ua.WebApi.Api
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancelRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.7.5/#5.7.5.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CancelResponse</returns>
-        public async System.Threading.Tasks.Task<CancelResponse> CancelAsync(CancelRequest cancelRequest = default(CancelRequest), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CancelResponse> CancelAsync(CancelRequest cancelRequest = default, System.Threading.CancellationToken cancellationToken = default)
         {
-            Opc.Ua.WebApi.Client.ApiResponse<CancelResponse> localVarResponse = await CancelWithHttpInfoAsync(cancelRequest, operationIndex, cancellationToken).ConfigureAwait(false);
+            Opc.Ua.WebApi.Client.ApiResponse<CancelResponse> localVarResponse = await CancelWithHttpInfoAsync(cancelRequest, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -2036,10 +1904,9 @@ namespace Opc.Ua.WebApi.Api
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancelRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.7.5/#5.7.5.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CancelResponse)</returns>
-        public async System.Threading.Tasks.Task<Opc.Ua.WebApi.Client.ApiResponse<CancelResponse>> CancelWithHttpInfoAsync(CancelRequest cancelRequest = default(CancelRequest), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Opc.Ua.WebApi.Client.ApiResponse<CancelResponse>> CancelWithHttpInfoAsync(CancelRequest cancelRequest = default, System.Threading.CancellationToken cancellationToken = default)
         {
 
             Opc.Ua.WebApi.Client.RequestOptions localVarRequestOptions = new Opc.Ua.WebApi.Client.RequestOptions();
@@ -2053,34 +1920,24 @@ namespace Opc.Ua.WebApi.Api
                 "application/json"
             };
 
+
             var localVarContentType = Opc.Ua.WebApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Opc.Ua.WebApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.Data = cancelRequest;
 
-            localVarRequestOptions.Operation = "DefaultApi.Cancel";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
 
             // make the HTTP request
+
             var localVarResponse = await this.AsynchronousClient.PostAsync<CancelResponse>("/cancel", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("Cancel", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -2091,9 +1948,8 @@ namespace Opc.Ua.WebApi.Api
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="closeSessionRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.7.4/#5.7.4.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>CloseSessionResponse</returns>
-        public CloseSessionResponse CloseSession(CloseSessionRequest closeSessionRequest = default(CloseSessionRequest), int operationIndex = 0)
+        public CloseSessionResponse CloseSession(CloseSessionRequest closeSessionRequest = default)
         {
             Opc.Ua.WebApi.Client.ApiResponse<CloseSessionResponse> localVarResponse = CloseSessionWithHttpInfo(closeSessionRequest);
             return localVarResponse.Data;
@@ -2104,9 +1960,8 @@ namespace Opc.Ua.WebApi.Api
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="closeSessionRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.7.4/#5.7.4.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of CloseSessionResponse</returns>
-        public Opc.Ua.WebApi.Client.ApiResponse<CloseSessionResponse> CloseSessionWithHttpInfo(CloseSessionRequest closeSessionRequest = default(CloseSessionRequest), int operationIndex = 0)
+        public Opc.Ua.WebApi.Client.ApiResponse<CloseSessionResponse> CloseSessionWithHttpInfo(CloseSessionRequest closeSessionRequest = default)
         {
             Opc.Ua.WebApi.Client.RequestOptions localVarRequestOptions = new Opc.Ua.WebApi.Client.RequestOptions();
 
@@ -2120,32 +1975,21 @@ namespace Opc.Ua.WebApi.Api
             };
 
             var localVarContentType = Opc.Ua.WebApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Opc.Ua.WebApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.Data = closeSessionRequest;
-
-            localVarRequestOptions.Operation = "DefaultApi.CloseSession";
-            localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<CloseSessionResponse>("/closesession", localVarRequestOptions, this.Configuration);
+
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("CloseSession", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -2156,12 +2000,11 @@ namespace Opc.Ua.WebApi.Api
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="closeSessionRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.7.4/#5.7.4.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CloseSessionResponse</returns>
-        public async System.Threading.Tasks.Task<CloseSessionResponse> CloseSessionAsync(CloseSessionRequest closeSessionRequest = default(CloseSessionRequest), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CloseSessionResponse> CloseSessionAsync(CloseSessionRequest closeSessionRequest = default, System.Threading.CancellationToken cancellationToken = default)
         {
-            Opc.Ua.WebApi.Client.ApiResponse<CloseSessionResponse> localVarResponse = await CloseSessionWithHttpInfoAsync(closeSessionRequest, operationIndex, cancellationToken).ConfigureAwait(false);
+            Opc.Ua.WebApi.Client.ApiResponse<CloseSessionResponse> localVarResponse = await CloseSessionWithHttpInfoAsync(closeSessionRequest, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -2170,10 +2013,9 @@ namespace Opc.Ua.WebApi.Api
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="closeSessionRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.7.4/#5.7.4.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CloseSessionResponse)</returns>
-        public async System.Threading.Tasks.Task<Opc.Ua.WebApi.Client.ApiResponse<CloseSessionResponse>> CloseSessionWithHttpInfoAsync(CloseSessionRequest closeSessionRequest = default(CloseSessionRequest), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Opc.Ua.WebApi.Client.ApiResponse<CloseSessionResponse>> CloseSessionWithHttpInfoAsync(CloseSessionRequest closeSessionRequest = default, System.Threading.CancellationToken cancellationToken = default)
         {
 
             Opc.Ua.WebApi.Client.RequestOptions localVarRequestOptions = new Opc.Ua.WebApi.Client.RequestOptions();
@@ -2187,34 +2029,24 @@ namespace Opc.Ua.WebApi.Api
                 "application/json"
             };
 
+
             var localVarContentType = Opc.Ua.WebApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Opc.Ua.WebApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.Data = closeSessionRequest;
 
-            localVarRequestOptions.Operation = "DefaultApi.CloseSession";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
 
             // make the HTTP request
+
             var localVarResponse = await this.AsynchronousClient.PostAsync<CloseSessionResponse>("/closesession", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("CloseSession", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -2225,9 +2057,8 @@ namespace Opc.Ua.WebApi.Api
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createMonitoredItemsRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.13.2/#5.13.2.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>CreateMonitoredItemsResponse</returns>
-        public CreateMonitoredItemsResponse CreateMonitoredItems(CreateMonitoredItemsRequest createMonitoredItemsRequest = default(CreateMonitoredItemsRequest), int operationIndex = 0)
+        public CreateMonitoredItemsResponse CreateMonitoredItems(CreateMonitoredItemsRequest createMonitoredItemsRequest = default)
         {
             Opc.Ua.WebApi.Client.ApiResponse<CreateMonitoredItemsResponse> localVarResponse = CreateMonitoredItemsWithHttpInfo(createMonitoredItemsRequest);
             return localVarResponse.Data;
@@ -2238,9 +2069,8 @@ namespace Opc.Ua.WebApi.Api
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createMonitoredItemsRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.13.2/#5.13.2.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of CreateMonitoredItemsResponse</returns>
-        public Opc.Ua.WebApi.Client.ApiResponse<CreateMonitoredItemsResponse> CreateMonitoredItemsWithHttpInfo(CreateMonitoredItemsRequest createMonitoredItemsRequest = default(CreateMonitoredItemsRequest), int operationIndex = 0)
+        public Opc.Ua.WebApi.Client.ApiResponse<CreateMonitoredItemsResponse> CreateMonitoredItemsWithHttpInfo(CreateMonitoredItemsRequest createMonitoredItemsRequest = default)
         {
             Opc.Ua.WebApi.Client.RequestOptions localVarRequestOptions = new Opc.Ua.WebApi.Client.RequestOptions();
 
@@ -2254,32 +2084,21 @@ namespace Opc.Ua.WebApi.Api
             };
 
             var localVarContentType = Opc.Ua.WebApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Opc.Ua.WebApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.Data = createMonitoredItemsRequest;
-
-            localVarRequestOptions.Operation = "DefaultApi.CreateMonitoredItems";
-            localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<CreateMonitoredItemsResponse>("/createmonitoreditems", localVarRequestOptions, this.Configuration);
+
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("CreateMonitoredItems", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -2290,12 +2109,11 @@ namespace Opc.Ua.WebApi.Api
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createMonitoredItemsRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.13.2/#5.13.2.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CreateMonitoredItemsResponse</returns>
-        public async System.Threading.Tasks.Task<CreateMonitoredItemsResponse> CreateMonitoredItemsAsync(CreateMonitoredItemsRequest createMonitoredItemsRequest = default(CreateMonitoredItemsRequest), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CreateMonitoredItemsResponse> CreateMonitoredItemsAsync(CreateMonitoredItemsRequest createMonitoredItemsRequest = default, System.Threading.CancellationToken cancellationToken = default)
         {
-            Opc.Ua.WebApi.Client.ApiResponse<CreateMonitoredItemsResponse> localVarResponse = await CreateMonitoredItemsWithHttpInfoAsync(createMonitoredItemsRequest, operationIndex, cancellationToken).ConfigureAwait(false);
+            Opc.Ua.WebApi.Client.ApiResponse<CreateMonitoredItemsResponse> localVarResponse = await CreateMonitoredItemsWithHttpInfoAsync(createMonitoredItemsRequest, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -2304,10 +2122,9 @@ namespace Opc.Ua.WebApi.Api
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createMonitoredItemsRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.13.2/#5.13.2.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CreateMonitoredItemsResponse)</returns>
-        public async System.Threading.Tasks.Task<Opc.Ua.WebApi.Client.ApiResponse<CreateMonitoredItemsResponse>> CreateMonitoredItemsWithHttpInfoAsync(CreateMonitoredItemsRequest createMonitoredItemsRequest = default(CreateMonitoredItemsRequest), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Opc.Ua.WebApi.Client.ApiResponse<CreateMonitoredItemsResponse>> CreateMonitoredItemsWithHttpInfoAsync(CreateMonitoredItemsRequest createMonitoredItemsRequest = default, System.Threading.CancellationToken cancellationToken = default)
         {
 
             Opc.Ua.WebApi.Client.RequestOptions localVarRequestOptions = new Opc.Ua.WebApi.Client.RequestOptions();
@@ -2321,34 +2138,24 @@ namespace Opc.Ua.WebApi.Api
                 "application/json"
             };
 
+
             var localVarContentType = Opc.Ua.WebApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Opc.Ua.WebApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.Data = createMonitoredItemsRequest;
 
-            localVarRequestOptions.Operation = "DefaultApi.CreateMonitoredItems";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
 
             // make the HTTP request
+
             var localVarResponse = await this.AsynchronousClient.PostAsync<CreateMonitoredItemsResponse>("/createmonitoreditems", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("CreateMonitoredItems", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -2359,9 +2166,8 @@ namespace Opc.Ua.WebApi.Api
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createSessionRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.7.2/#5.7.2.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>CreateSessionResponse</returns>
-        public CreateSessionResponse CreateSession(CreateSessionRequest createSessionRequest = default(CreateSessionRequest), int operationIndex = 0)
+        public CreateSessionResponse CreateSession(CreateSessionRequest createSessionRequest = default)
         {
             Opc.Ua.WebApi.Client.ApiResponse<CreateSessionResponse> localVarResponse = CreateSessionWithHttpInfo(createSessionRequest);
             return localVarResponse.Data;
@@ -2372,9 +2178,8 @@ namespace Opc.Ua.WebApi.Api
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createSessionRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.7.2/#5.7.2.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of CreateSessionResponse</returns>
-        public Opc.Ua.WebApi.Client.ApiResponse<CreateSessionResponse> CreateSessionWithHttpInfo(CreateSessionRequest createSessionRequest = default(CreateSessionRequest), int operationIndex = 0)
+        public Opc.Ua.WebApi.Client.ApiResponse<CreateSessionResponse> CreateSessionWithHttpInfo(CreateSessionRequest createSessionRequest = default)
         {
             Opc.Ua.WebApi.Client.RequestOptions localVarRequestOptions = new Opc.Ua.WebApi.Client.RequestOptions();
 
@@ -2388,32 +2193,21 @@ namespace Opc.Ua.WebApi.Api
             };
 
             var localVarContentType = Opc.Ua.WebApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Opc.Ua.WebApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.Data = createSessionRequest;
-
-            localVarRequestOptions.Operation = "DefaultApi.CreateSession";
-            localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<CreateSessionResponse>("/createsession", localVarRequestOptions, this.Configuration);
+
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("CreateSession", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -2424,12 +2218,11 @@ namespace Opc.Ua.WebApi.Api
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createSessionRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.7.2/#5.7.2.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CreateSessionResponse</returns>
-        public async System.Threading.Tasks.Task<CreateSessionResponse> CreateSessionAsync(CreateSessionRequest createSessionRequest = default(CreateSessionRequest), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CreateSessionResponse> CreateSessionAsync(CreateSessionRequest createSessionRequest = default, System.Threading.CancellationToken cancellationToken = default)
         {
-            Opc.Ua.WebApi.Client.ApiResponse<CreateSessionResponse> localVarResponse = await CreateSessionWithHttpInfoAsync(createSessionRequest, operationIndex, cancellationToken).ConfigureAwait(false);
+            Opc.Ua.WebApi.Client.ApiResponse<CreateSessionResponse> localVarResponse = await CreateSessionWithHttpInfoAsync(createSessionRequest, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -2438,10 +2231,9 @@ namespace Opc.Ua.WebApi.Api
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createSessionRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.7.2/#5.7.2.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CreateSessionResponse)</returns>
-        public async System.Threading.Tasks.Task<Opc.Ua.WebApi.Client.ApiResponse<CreateSessionResponse>> CreateSessionWithHttpInfoAsync(CreateSessionRequest createSessionRequest = default(CreateSessionRequest), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Opc.Ua.WebApi.Client.ApiResponse<CreateSessionResponse>> CreateSessionWithHttpInfoAsync(CreateSessionRequest createSessionRequest = default, System.Threading.CancellationToken cancellationToken = default)
         {
 
             Opc.Ua.WebApi.Client.RequestOptions localVarRequestOptions = new Opc.Ua.WebApi.Client.RequestOptions();
@@ -2455,34 +2247,24 @@ namespace Opc.Ua.WebApi.Api
                 "application/json"
             };
 
+
             var localVarContentType = Opc.Ua.WebApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Opc.Ua.WebApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.Data = createSessionRequest;
 
-            localVarRequestOptions.Operation = "DefaultApi.CreateSession";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
 
             // make the HTTP request
+
             var localVarResponse = await this.AsynchronousClient.PostAsync<CreateSessionResponse>("/createsession", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("CreateSession", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -2493,9 +2275,8 @@ namespace Opc.Ua.WebApi.Api
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createSubscriptionRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.2/#5.14.2.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>CreateSubscriptionResponse</returns>
-        public CreateSubscriptionResponse CreateSubscription(CreateSubscriptionRequest createSubscriptionRequest = default(CreateSubscriptionRequest), int operationIndex = 0)
+        public CreateSubscriptionResponse CreateSubscription(CreateSubscriptionRequest createSubscriptionRequest = default)
         {
             Opc.Ua.WebApi.Client.ApiResponse<CreateSubscriptionResponse> localVarResponse = CreateSubscriptionWithHttpInfo(createSubscriptionRequest);
             return localVarResponse.Data;
@@ -2506,9 +2287,8 @@ namespace Opc.Ua.WebApi.Api
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createSubscriptionRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.2/#5.14.2.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of CreateSubscriptionResponse</returns>
-        public Opc.Ua.WebApi.Client.ApiResponse<CreateSubscriptionResponse> CreateSubscriptionWithHttpInfo(CreateSubscriptionRequest createSubscriptionRequest = default(CreateSubscriptionRequest), int operationIndex = 0)
+        public Opc.Ua.WebApi.Client.ApiResponse<CreateSubscriptionResponse> CreateSubscriptionWithHttpInfo(CreateSubscriptionRequest createSubscriptionRequest = default)
         {
             Opc.Ua.WebApi.Client.RequestOptions localVarRequestOptions = new Opc.Ua.WebApi.Client.RequestOptions();
 
@@ -2522,32 +2302,21 @@ namespace Opc.Ua.WebApi.Api
             };
 
             var localVarContentType = Opc.Ua.WebApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Opc.Ua.WebApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.Data = createSubscriptionRequest;
-
-            localVarRequestOptions.Operation = "DefaultApi.CreateSubscription";
-            localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<CreateSubscriptionResponse>("/createsubscription", localVarRequestOptions, this.Configuration);
+
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("CreateSubscription", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -2558,12 +2327,11 @@ namespace Opc.Ua.WebApi.Api
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createSubscriptionRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.2/#5.14.2.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of CreateSubscriptionResponse</returns>
-        public async System.Threading.Tasks.Task<CreateSubscriptionResponse> CreateSubscriptionAsync(CreateSubscriptionRequest createSubscriptionRequest = default(CreateSubscriptionRequest), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CreateSubscriptionResponse> CreateSubscriptionAsync(CreateSubscriptionRequest createSubscriptionRequest = default, System.Threading.CancellationToken cancellationToken = default)
         {
-            Opc.Ua.WebApi.Client.ApiResponse<CreateSubscriptionResponse> localVarResponse = await CreateSubscriptionWithHttpInfoAsync(createSubscriptionRequest, operationIndex, cancellationToken).ConfigureAwait(false);
+            Opc.Ua.WebApi.Client.ApiResponse<CreateSubscriptionResponse> localVarResponse = await CreateSubscriptionWithHttpInfoAsync(createSubscriptionRequest, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -2572,10 +2340,9 @@ namespace Opc.Ua.WebApi.Api
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createSubscriptionRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.2/#5.14.2.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (CreateSubscriptionResponse)</returns>
-        public async System.Threading.Tasks.Task<Opc.Ua.WebApi.Client.ApiResponse<CreateSubscriptionResponse>> CreateSubscriptionWithHttpInfoAsync(CreateSubscriptionRequest createSubscriptionRequest = default(CreateSubscriptionRequest), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Opc.Ua.WebApi.Client.ApiResponse<CreateSubscriptionResponse>> CreateSubscriptionWithHttpInfoAsync(CreateSubscriptionRequest createSubscriptionRequest = default, System.Threading.CancellationToken cancellationToken = default)
         {
 
             Opc.Ua.WebApi.Client.RequestOptions localVarRequestOptions = new Opc.Ua.WebApi.Client.RequestOptions();
@@ -2589,34 +2356,24 @@ namespace Opc.Ua.WebApi.Api
                 "application/json"
             };
 
+
             var localVarContentType = Opc.Ua.WebApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Opc.Ua.WebApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.Data = createSubscriptionRequest;
 
-            localVarRequestOptions.Operation = "DefaultApi.CreateSubscription";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
 
             // make the HTTP request
+
             var localVarResponse = await this.AsynchronousClient.PostAsync<CreateSubscriptionResponse>("/createsubscription", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("CreateSubscription", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -2627,9 +2384,8 @@ namespace Opc.Ua.WebApi.Api
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteMonitoredItemsRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.13.6/#5.13.6.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>DeleteMonitoredItemsResponse</returns>
-        public DeleteMonitoredItemsResponse DeleteMonitoredItems(DeleteMonitoredItemsRequest deleteMonitoredItemsRequest = default(DeleteMonitoredItemsRequest), int operationIndex = 0)
+        public DeleteMonitoredItemsResponse DeleteMonitoredItems(DeleteMonitoredItemsRequest deleteMonitoredItemsRequest = default)
         {
             Opc.Ua.WebApi.Client.ApiResponse<DeleteMonitoredItemsResponse> localVarResponse = DeleteMonitoredItemsWithHttpInfo(deleteMonitoredItemsRequest);
             return localVarResponse.Data;
@@ -2640,9 +2396,8 @@ namespace Opc.Ua.WebApi.Api
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteMonitoredItemsRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.13.6/#5.13.6.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of DeleteMonitoredItemsResponse</returns>
-        public Opc.Ua.WebApi.Client.ApiResponse<DeleteMonitoredItemsResponse> DeleteMonitoredItemsWithHttpInfo(DeleteMonitoredItemsRequest deleteMonitoredItemsRequest = default(DeleteMonitoredItemsRequest), int operationIndex = 0)
+        public Opc.Ua.WebApi.Client.ApiResponse<DeleteMonitoredItemsResponse> DeleteMonitoredItemsWithHttpInfo(DeleteMonitoredItemsRequest deleteMonitoredItemsRequest = default)
         {
             Opc.Ua.WebApi.Client.RequestOptions localVarRequestOptions = new Opc.Ua.WebApi.Client.RequestOptions();
 
@@ -2656,32 +2411,21 @@ namespace Opc.Ua.WebApi.Api
             };
 
             var localVarContentType = Opc.Ua.WebApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Opc.Ua.WebApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.Data = deleteMonitoredItemsRequest;
-
-            localVarRequestOptions.Operation = "DefaultApi.DeleteMonitoredItems";
-            localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<DeleteMonitoredItemsResponse>("/deletemonitoreditems", localVarRequestOptions, this.Configuration);
+
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("DeleteMonitoredItems", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -2692,12 +2436,11 @@ namespace Opc.Ua.WebApi.Api
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteMonitoredItemsRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.13.6/#5.13.6.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of DeleteMonitoredItemsResponse</returns>
-        public async System.Threading.Tasks.Task<DeleteMonitoredItemsResponse> DeleteMonitoredItemsAsync(DeleteMonitoredItemsRequest deleteMonitoredItemsRequest = default(DeleteMonitoredItemsRequest), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<DeleteMonitoredItemsResponse> DeleteMonitoredItemsAsync(DeleteMonitoredItemsRequest deleteMonitoredItemsRequest = default, System.Threading.CancellationToken cancellationToken = default)
         {
-            Opc.Ua.WebApi.Client.ApiResponse<DeleteMonitoredItemsResponse> localVarResponse = await DeleteMonitoredItemsWithHttpInfoAsync(deleteMonitoredItemsRequest, operationIndex, cancellationToken).ConfigureAwait(false);
+            Opc.Ua.WebApi.Client.ApiResponse<DeleteMonitoredItemsResponse> localVarResponse = await DeleteMonitoredItemsWithHttpInfoAsync(deleteMonitoredItemsRequest, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -2706,10 +2449,9 @@ namespace Opc.Ua.WebApi.Api
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteMonitoredItemsRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.13.6/#5.13.6.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (DeleteMonitoredItemsResponse)</returns>
-        public async System.Threading.Tasks.Task<Opc.Ua.WebApi.Client.ApiResponse<DeleteMonitoredItemsResponse>> DeleteMonitoredItemsWithHttpInfoAsync(DeleteMonitoredItemsRequest deleteMonitoredItemsRequest = default(DeleteMonitoredItemsRequest), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Opc.Ua.WebApi.Client.ApiResponse<DeleteMonitoredItemsResponse>> DeleteMonitoredItemsWithHttpInfoAsync(DeleteMonitoredItemsRequest deleteMonitoredItemsRequest = default, System.Threading.CancellationToken cancellationToken = default)
         {
 
             Opc.Ua.WebApi.Client.RequestOptions localVarRequestOptions = new Opc.Ua.WebApi.Client.RequestOptions();
@@ -2723,34 +2465,24 @@ namespace Opc.Ua.WebApi.Api
                 "application/json"
             };
 
+
             var localVarContentType = Opc.Ua.WebApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Opc.Ua.WebApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.Data = deleteMonitoredItemsRequest;
 
-            localVarRequestOptions.Operation = "DefaultApi.DeleteMonitoredItems";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
 
             // make the HTTP request
+
             var localVarResponse = await this.AsynchronousClient.PostAsync<DeleteMonitoredItemsResponse>("/deletemonitoreditems", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("DeleteMonitoredItems", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -2761,9 +2493,8 @@ namespace Opc.Ua.WebApi.Api
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteSubscriptionsRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.8/#5.14.8.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>DeleteSubscriptionsResponse</returns>
-        public DeleteSubscriptionsResponse DeleteSubscriptions(DeleteSubscriptionsRequest deleteSubscriptionsRequest = default(DeleteSubscriptionsRequest), int operationIndex = 0)
+        public DeleteSubscriptionsResponse DeleteSubscriptions(DeleteSubscriptionsRequest deleteSubscriptionsRequest = default)
         {
             Opc.Ua.WebApi.Client.ApiResponse<DeleteSubscriptionsResponse> localVarResponse = DeleteSubscriptionsWithHttpInfo(deleteSubscriptionsRequest);
             return localVarResponse.Data;
@@ -2774,9 +2505,8 @@ namespace Opc.Ua.WebApi.Api
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteSubscriptionsRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.8/#5.14.8.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of DeleteSubscriptionsResponse</returns>
-        public Opc.Ua.WebApi.Client.ApiResponse<DeleteSubscriptionsResponse> DeleteSubscriptionsWithHttpInfo(DeleteSubscriptionsRequest deleteSubscriptionsRequest = default(DeleteSubscriptionsRequest), int operationIndex = 0)
+        public Opc.Ua.WebApi.Client.ApiResponse<DeleteSubscriptionsResponse> DeleteSubscriptionsWithHttpInfo(DeleteSubscriptionsRequest deleteSubscriptionsRequest = default)
         {
             Opc.Ua.WebApi.Client.RequestOptions localVarRequestOptions = new Opc.Ua.WebApi.Client.RequestOptions();
 
@@ -2790,32 +2520,21 @@ namespace Opc.Ua.WebApi.Api
             };
 
             var localVarContentType = Opc.Ua.WebApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Opc.Ua.WebApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.Data = deleteSubscriptionsRequest;
-
-            localVarRequestOptions.Operation = "DefaultApi.DeleteSubscriptions";
-            localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<DeleteSubscriptionsResponse>("/deletesubscriptions", localVarRequestOptions, this.Configuration);
+
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("DeleteSubscriptions", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -2826,12 +2545,11 @@ namespace Opc.Ua.WebApi.Api
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteSubscriptionsRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.8/#5.14.8.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of DeleteSubscriptionsResponse</returns>
-        public async System.Threading.Tasks.Task<DeleteSubscriptionsResponse> DeleteSubscriptionsAsync(DeleteSubscriptionsRequest deleteSubscriptionsRequest = default(DeleteSubscriptionsRequest), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<DeleteSubscriptionsResponse> DeleteSubscriptionsAsync(DeleteSubscriptionsRequest deleteSubscriptionsRequest = default, System.Threading.CancellationToken cancellationToken = default)
         {
-            Opc.Ua.WebApi.Client.ApiResponse<DeleteSubscriptionsResponse> localVarResponse = await DeleteSubscriptionsWithHttpInfoAsync(deleteSubscriptionsRequest, operationIndex, cancellationToken).ConfigureAwait(false);
+            Opc.Ua.WebApi.Client.ApiResponse<DeleteSubscriptionsResponse> localVarResponse = await DeleteSubscriptionsWithHttpInfoAsync(deleteSubscriptionsRequest, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -2840,10 +2558,9 @@ namespace Opc.Ua.WebApi.Api
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deleteSubscriptionsRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.8/#5.14.8.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (DeleteSubscriptionsResponse)</returns>
-        public async System.Threading.Tasks.Task<Opc.Ua.WebApi.Client.ApiResponse<DeleteSubscriptionsResponse>> DeleteSubscriptionsWithHttpInfoAsync(DeleteSubscriptionsRequest deleteSubscriptionsRequest = default(DeleteSubscriptionsRequest), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Opc.Ua.WebApi.Client.ApiResponse<DeleteSubscriptionsResponse>> DeleteSubscriptionsWithHttpInfoAsync(DeleteSubscriptionsRequest deleteSubscriptionsRequest = default, System.Threading.CancellationToken cancellationToken = default)
         {
 
             Opc.Ua.WebApi.Client.RequestOptions localVarRequestOptions = new Opc.Ua.WebApi.Client.RequestOptions();
@@ -2857,34 +2574,24 @@ namespace Opc.Ua.WebApi.Api
                 "application/json"
             };
 
+
             var localVarContentType = Opc.Ua.WebApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Opc.Ua.WebApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.Data = deleteSubscriptionsRequest;
 
-            localVarRequestOptions.Operation = "DefaultApi.DeleteSubscriptions";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
 
             // make the HTTP request
+
             var localVarResponse = await this.AsynchronousClient.PostAsync<DeleteSubscriptionsResponse>("/deletesubscriptions", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("DeleteSubscriptions", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -2895,9 +2602,8 @@ namespace Opc.Ua.WebApi.Api
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="findServersRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.5.2/#5.5.2.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>FindServersResponse</returns>
-        public FindServersResponse FindServers(FindServersRequest findServersRequest = default(FindServersRequest), int operationIndex = 0)
+        public FindServersResponse FindServers(FindServersRequest findServersRequest = default)
         {
             Opc.Ua.WebApi.Client.ApiResponse<FindServersResponse> localVarResponse = FindServersWithHttpInfo(findServersRequest);
             return localVarResponse.Data;
@@ -2908,9 +2614,8 @@ namespace Opc.Ua.WebApi.Api
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="findServersRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.5.2/#5.5.2.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of FindServersResponse</returns>
-        public Opc.Ua.WebApi.Client.ApiResponse<FindServersResponse> FindServersWithHttpInfo(FindServersRequest findServersRequest = default(FindServersRequest), int operationIndex = 0)
+        public Opc.Ua.WebApi.Client.ApiResponse<FindServersResponse> FindServersWithHttpInfo(FindServersRequest findServersRequest = default)
         {
             Opc.Ua.WebApi.Client.RequestOptions localVarRequestOptions = new Opc.Ua.WebApi.Client.RequestOptions();
 
@@ -2924,32 +2629,21 @@ namespace Opc.Ua.WebApi.Api
             };
 
             var localVarContentType = Opc.Ua.WebApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Opc.Ua.WebApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.Data = findServersRequest;
-
-            localVarRequestOptions.Operation = "DefaultApi.FindServers";
-            localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<FindServersResponse>("/findservers", localVarRequestOptions, this.Configuration);
+
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("FindServers", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -2960,12 +2654,11 @@ namespace Opc.Ua.WebApi.Api
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="findServersRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.5.2/#5.5.2.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of FindServersResponse</returns>
-        public async System.Threading.Tasks.Task<FindServersResponse> FindServersAsync(FindServersRequest findServersRequest = default(FindServersRequest), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<FindServersResponse> FindServersAsync(FindServersRequest findServersRequest = default, System.Threading.CancellationToken cancellationToken = default)
         {
-            Opc.Ua.WebApi.Client.ApiResponse<FindServersResponse> localVarResponse = await FindServersWithHttpInfoAsync(findServersRequest, operationIndex, cancellationToken).ConfigureAwait(false);
+            Opc.Ua.WebApi.Client.ApiResponse<FindServersResponse> localVarResponse = await FindServersWithHttpInfoAsync(findServersRequest, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -2974,10 +2667,9 @@ namespace Opc.Ua.WebApi.Api
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="findServersRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.5.2/#5.5.2.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (FindServersResponse)</returns>
-        public async System.Threading.Tasks.Task<Opc.Ua.WebApi.Client.ApiResponse<FindServersResponse>> FindServersWithHttpInfoAsync(FindServersRequest findServersRequest = default(FindServersRequest), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Opc.Ua.WebApi.Client.ApiResponse<FindServersResponse>> FindServersWithHttpInfoAsync(FindServersRequest findServersRequest = default, System.Threading.CancellationToken cancellationToken = default)
         {
 
             Opc.Ua.WebApi.Client.RequestOptions localVarRequestOptions = new Opc.Ua.WebApi.Client.RequestOptions();
@@ -2991,34 +2683,24 @@ namespace Opc.Ua.WebApi.Api
                 "application/json"
             };
 
+
             var localVarContentType = Opc.Ua.WebApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Opc.Ua.WebApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.Data = findServersRequest;
 
-            localVarRequestOptions.Operation = "DefaultApi.FindServers";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
 
             // make the HTTP request
+
             var localVarResponse = await this.AsynchronousClient.PostAsync<FindServersResponse>("/findservers", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("FindServers", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -3029,9 +2711,8 @@ namespace Opc.Ua.WebApi.Api
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="getEndpointsRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.5.4/#5.5.4.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>GetEndpointsResponse</returns>
-        public GetEndpointsResponse GetEndpoints(GetEndpointsRequest getEndpointsRequest = default(GetEndpointsRequest), int operationIndex = 0)
+        public GetEndpointsResponse GetEndpoints(GetEndpointsRequest getEndpointsRequest = default)
         {
             Opc.Ua.WebApi.Client.ApiResponse<GetEndpointsResponse> localVarResponse = GetEndpointsWithHttpInfo(getEndpointsRequest);
             return localVarResponse.Data;
@@ -3042,9 +2723,8 @@ namespace Opc.Ua.WebApi.Api
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="getEndpointsRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.5.4/#5.5.4.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of GetEndpointsResponse</returns>
-        public Opc.Ua.WebApi.Client.ApiResponse<GetEndpointsResponse> GetEndpointsWithHttpInfo(GetEndpointsRequest getEndpointsRequest = default(GetEndpointsRequest), int operationIndex = 0)
+        public Opc.Ua.WebApi.Client.ApiResponse<GetEndpointsResponse> GetEndpointsWithHttpInfo(GetEndpointsRequest getEndpointsRequest = default)
         {
             Opc.Ua.WebApi.Client.RequestOptions localVarRequestOptions = new Opc.Ua.WebApi.Client.RequestOptions();
 
@@ -3058,32 +2738,21 @@ namespace Opc.Ua.WebApi.Api
             };
 
             var localVarContentType = Opc.Ua.WebApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Opc.Ua.WebApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.Data = getEndpointsRequest;
-
-            localVarRequestOptions.Operation = "DefaultApi.GetEndpoints";
-            localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<GetEndpointsResponse>("/getendpoints", localVarRequestOptions, this.Configuration);
+
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("GetEndpoints", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -3094,12 +2763,11 @@ namespace Opc.Ua.WebApi.Api
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="getEndpointsRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.5.4/#5.5.4.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of GetEndpointsResponse</returns>
-        public async System.Threading.Tasks.Task<GetEndpointsResponse> GetEndpointsAsync(GetEndpointsRequest getEndpointsRequest = default(GetEndpointsRequest), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<GetEndpointsResponse> GetEndpointsAsync(GetEndpointsRequest getEndpointsRequest = default, System.Threading.CancellationToken cancellationToken = default)
         {
-            Opc.Ua.WebApi.Client.ApiResponse<GetEndpointsResponse> localVarResponse = await GetEndpointsWithHttpInfoAsync(getEndpointsRequest, operationIndex, cancellationToken).ConfigureAwait(false);
+            Opc.Ua.WebApi.Client.ApiResponse<GetEndpointsResponse> localVarResponse = await GetEndpointsWithHttpInfoAsync(getEndpointsRequest, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -3108,10 +2776,9 @@ namespace Opc.Ua.WebApi.Api
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="getEndpointsRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.5.4/#5.5.4.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (GetEndpointsResponse)</returns>
-        public async System.Threading.Tasks.Task<Opc.Ua.WebApi.Client.ApiResponse<GetEndpointsResponse>> GetEndpointsWithHttpInfoAsync(GetEndpointsRequest getEndpointsRequest = default(GetEndpointsRequest), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Opc.Ua.WebApi.Client.ApiResponse<GetEndpointsResponse>> GetEndpointsWithHttpInfoAsync(GetEndpointsRequest getEndpointsRequest = default, System.Threading.CancellationToken cancellationToken = default)
         {
 
             Opc.Ua.WebApi.Client.RequestOptions localVarRequestOptions = new Opc.Ua.WebApi.Client.RequestOptions();
@@ -3125,34 +2792,24 @@ namespace Opc.Ua.WebApi.Api
                 "application/json"
             };
 
+
             var localVarContentType = Opc.Ua.WebApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Opc.Ua.WebApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.Data = getEndpointsRequest;
 
-            localVarRequestOptions.Operation = "DefaultApi.GetEndpoints";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
 
             // make the HTTP request
+
             var localVarResponse = await this.AsynchronousClient.PostAsync<GetEndpointsResponse>("/getendpoints", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("GetEndpoints", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -3163,9 +2820,8 @@ namespace Opc.Ua.WebApi.Api
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="historyReadRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.11.3/#5.11.3.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>HistoryReadResponse</returns>
-        public HistoryReadResponse HistoryRead(HistoryReadRequest historyReadRequest = default(HistoryReadRequest), int operationIndex = 0)
+        public HistoryReadResponse HistoryRead(HistoryReadRequest historyReadRequest = default)
         {
             Opc.Ua.WebApi.Client.ApiResponse<HistoryReadResponse> localVarResponse = HistoryReadWithHttpInfo(historyReadRequest);
             return localVarResponse.Data;
@@ -3176,9 +2832,8 @@ namespace Opc.Ua.WebApi.Api
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="historyReadRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.11.3/#5.11.3.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of HistoryReadResponse</returns>
-        public Opc.Ua.WebApi.Client.ApiResponse<HistoryReadResponse> HistoryReadWithHttpInfo(HistoryReadRequest historyReadRequest = default(HistoryReadRequest), int operationIndex = 0)
+        public Opc.Ua.WebApi.Client.ApiResponse<HistoryReadResponse> HistoryReadWithHttpInfo(HistoryReadRequest historyReadRequest = default)
         {
             Opc.Ua.WebApi.Client.RequestOptions localVarRequestOptions = new Opc.Ua.WebApi.Client.RequestOptions();
 
@@ -3192,32 +2847,21 @@ namespace Opc.Ua.WebApi.Api
             };
 
             var localVarContentType = Opc.Ua.WebApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Opc.Ua.WebApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.Data = historyReadRequest;
-
-            localVarRequestOptions.Operation = "DefaultApi.HistoryRead";
-            localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<HistoryReadResponse>("/historyread", localVarRequestOptions, this.Configuration);
+
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("HistoryRead", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -3228,12 +2872,11 @@ namespace Opc.Ua.WebApi.Api
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="historyReadRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.11.3/#5.11.3.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of HistoryReadResponse</returns>
-        public async System.Threading.Tasks.Task<HistoryReadResponse> HistoryReadAsync(HistoryReadRequest historyReadRequest = default(HistoryReadRequest), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<HistoryReadResponse> HistoryReadAsync(HistoryReadRequest historyReadRequest = default, System.Threading.CancellationToken cancellationToken = default)
         {
-            Opc.Ua.WebApi.Client.ApiResponse<HistoryReadResponse> localVarResponse = await HistoryReadWithHttpInfoAsync(historyReadRequest, operationIndex, cancellationToken).ConfigureAwait(false);
+            Opc.Ua.WebApi.Client.ApiResponse<HistoryReadResponse> localVarResponse = await HistoryReadWithHttpInfoAsync(historyReadRequest, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -3242,10 +2885,9 @@ namespace Opc.Ua.WebApi.Api
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="historyReadRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.11.3/#5.11.3.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (HistoryReadResponse)</returns>
-        public async System.Threading.Tasks.Task<Opc.Ua.WebApi.Client.ApiResponse<HistoryReadResponse>> HistoryReadWithHttpInfoAsync(HistoryReadRequest historyReadRequest = default(HistoryReadRequest), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Opc.Ua.WebApi.Client.ApiResponse<HistoryReadResponse>> HistoryReadWithHttpInfoAsync(HistoryReadRequest historyReadRequest = default, System.Threading.CancellationToken cancellationToken = default)
         {
 
             Opc.Ua.WebApi.Client.RequestOptions localVarRequestOptions = new Opc.Ua.WebApi.Client.RequestOptions();
@@ -3259,34 +2901,24 @@ namespace Opc.Ua.WebApi.Api
                 "application/json"
             };
 
+
             var localVarContentType = Opc.Ua.WebApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Opc.Ua.WebApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.Data = historyReadRequest;
 
-            localVarRequestOptions.Operation = "DefaultApi.HistoryRead";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
 
             // make the HTTP request
+
             var localVarResponse = await this.AsynchronousClient.PostAsync<HistoryReadResponse>("/historyread", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("HistoryRead", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -3297,9 +2929,8 @@ namespace Opc.Ua.WebApi.Api
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="historyUpdateRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.11.5/#5.11.5.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>HistoryUpdateResponse</returns>
-        public HistoryUpdateResponse HistoryUpdate(HistoryUpdateRequest historyUpdateRequest = default(HistoryUpdateRequest), int operationIndex = 0)
+        public HistoryUpdateResponse HistoryUpdate(HistoryUpdateRequest historyUpdateRequest = default)
         {
             Opc.Ua.WebApi.Client.ApiResponse<HistoryUpdateResponse> localVarResponse = HistoryUpdateWithHttpInfo(historyUpdateRequest);
             return localVarResponse.Data;
@@ -3310,9 +2941,8 @@ namespace Opc.Ua.WebApi.Api
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="historyUpdateRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.11.5/#5.11.5.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of HistoryUpdateResponse</returns>
-        public Opc.Ua.WebApi.Client.ApiResponse<HistoryUpdateResponse> HistoryUpdateWithHttpInfo(HistoryUpdateRequest historyUpdateRequest = default(HistoryUpdateRequest), int operationIndex = 0)
+        public Opc.Ua.WebApi.Client.ApiResponse<HistoryUpdateResponse> HistoryUpdateWithHttpInfo(HistoryUpdateRequest historyUpdateRequest = default)
         {
             Opc.Ua.WebApi.Client.RequestOptions localVarRequestOptions = new Opc.Ua.WebApi.Client.RequestOptions();
 
@@ -3326,32 +2956,21 @@ namespace Opc.Ua.WebApi.Api
             };
 
             var localVarContentType = Opc.Ua.WebApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Opc.Ua.WebApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.Data = historyUpdateRequest;
-
-            localVarRequestOptions.Operation = "DefaultApi.HistoryUpdate";
-            localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<HistoryUpdateResponse>("/historyupdate", localVarRequestOptions, this.Configuration);
+
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("HistoryUpdate", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -3362,12 +2981,11 @@ namespace Opc.Ua.WebApi.Api
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="historyUpdateRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.11.5/#5.11.5.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of HistoryUpdateResponse</returns>
-        public async System.Threading.Tasks.Task<HistoryUpdateResponse> HistoryUpdateAsync(HistoryUpdateRequest historyUpdateRequest = default(HistoryUpdateRequest), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<HistoryUpdateResponse> HistoryUpdateAsync(HistoryUpdateRequest historyUpdateRequest = default, System.Threading.CancellationToken cancellationToken = default)
         {
-            Opc.Ua.WebApi.Client.ApiResponse<HistoryUpdateResponse> localVarResponse = await HistoryUpdateWithHttpInfoAsync(historyUpdateRequest, operationIndex, cancellationToken).ConfigureAwait(false);
+            Opc.Ua.WebApi.Client.ApiResponse<HistoryUpdateResponse> localVarResponse = await HistoryUpdateWithHttpInfoAsync(historyUpdateRequest, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -3376,10 +2994,9 @@ namespace Opc.Ua.WebApi.Api
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="historyUpdateRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.11.5/#5.11.5.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (HistoryUpdateResponse)</returns>
-        public async System.Threading.Tasks.Task<Opc.Ua.WebApi.Client.ApiResponse<HistoryUpdateResponse>> HistoryUpdateWithHttpInfoAsync(HistoryUpdateRequest historyUpdateRequest = default(HistoryUpdateRequest), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Opc.Ua.WebApi.Client.ApiResponse<HistoryUpdateResponse>> HistoryUpdateWithHttpInfoAsync(HistoryUpdateRequest historyUpdateRequest = default, System.Threading.CancellationToken cancellationToken = default)
         {
 
             Opc.Ua.WebApi.Client.RequestOptions localVarRequestOptions = new Opc.Ua.WebApi.Client.RequestOptions();
@@ -3393,34 +3010,24 @@ namespace Opc.Ua.WebApi.Api
                 "application/json"
             };
 
+
             var localVarContentType = Opc.Ua.WebApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Opc.Ua.WebApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.Data = historyUpdateRequest;
 
-            localVarRequestOptions.Operation = "DefaultApi.HistoryUpdate";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
 
             // make the HTTP request
+
             var localVarResponse = await this.AsynchronousClient.PostAsync<HistoryUpdateResponse>("/historyupdate", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("HistoryUpdate", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -3431,9 +3038,8 @@ namespace Opc.Ua.WebApi.Api
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="modifyMonitoredItemsRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.13.3/#5.13.3.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ModifyMonitoredItemsResponse</returns>
-        public ModifyMonitoredItemsResponse ModifyMonitoredItems(ModifyMonitoredItemsRequest modifyMonitoredItemsRequest = default(ModifyMonitoredItemsRequest), int operationIndex = 0)
+        public ModifyMonitoredItemsResponse ModifyMonitoredItems(ModifyMonitoredItemsRequest modifyMonitoredItemsRequest = default)
         {
             Opc.Ua.WebApi.Client.ApiResponse<ModifyMonitoredItemsResponse> localVarResponse = ModifyMonitoredItemsWithHttpInfo(modifyMonitoredItemsRequest);
             return localVarResponse.Data;
@@ -3444,9 +3050,8 @@ namespace Opc.Ua.WebApi.Api
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="modifyMonitoredItemsRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.13.3/#5.13.3.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ModifyMonitoredItemsResponse</returns>
-        public Opc.Ua.WebApi.Client.ApiResponse<ModifyMonitoredItemsResponse> ModifyMonitoredItemsWithHttpInfo(ModifyMonitoredItemsRequest modifyMonitoredItemsRequest = default(ModifyMonitoredItemsRequest), int operationIndex = 0)
+        public Opc.Ua.WebApi.Client.ApiResponse<ModifyMonitoredItemsResponse> ModifyMonitoredItemsWithHttpInfo(ModifyMonitoredItemsRequest modifyMonitoredItemsRequest = default)
         {
             Opc.Ua.WebApi.Client.RequestOptions localVarRequestOptions = new Opc.Ua.WebApi.Client.RequestOptions();
 
@@ -3460,32 +3065,21 @@ namespace Opc.Ua.WebApi.Api
             };
 
             var localVarContentType = Opc.Ua.WebApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Opc.Ua.WebApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.Data = modifyMonitoredItemsRequest;
-
-            localVarRequestOptions.Operation = "DefaultApi.ModifyMonitoredItems";
-            localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<ModifyMonitoredItemsResponse>("/modifymonitoreditems", localVarRequestOptions, this.Configuration);
+
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ModifyMonitoredItems", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -3496,12 +3090,11 @@ namespace Opc.Ua.WebApi.Api
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="modifyMonitoredItemsRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.13.3/#5.13.3.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ModifyMonitoredItemsResponse</returns>
-        public async System.Threading.Tasks.Task<ModifyMonitoredItemsResponse> ModifyMonitoredItemsAsync(ModifyMonitoredItemsRequest modifyMonitoredItemsRequest = default(ModifyMonitoredItemsRequest), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ModifyMonitoredItemsResponse> ModifyMonitoredItemsAsync(ModifyMonitoredItemsRequest modifyMonitoredItemsRequest = default, System.Threading.CancellationToken cancellationToken = default)
         {
-            Opc.Ua.WebApi.Client.ApiResponse<ModifyMonitoredItemsResponse> localVarResponse = await ModifyMonitoredItemsWithHttpInfoAsync(modifyMonitoredItemsRequest, operationIndex, cancellationToken).ConfigureAwait(false);
+            Opc.Ua.WebApi.Client.ApiResponse<ModifyMonitoredItemsResponse> localVarResponse = await ModifyMonitoredItemsWithHttpInfoAsync(modifyMonitoredItemsRequest, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -3510,10 +3103,9 @@ namespace Opc.Ua.WebApi.Api
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="modifyMonitoredItemsRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.13.3/#5.13.3.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ModifyMonitoredItemsResponse)</returns>
-        public async System.Threading.Tasks.Task<Opc.Ua.WebApi.Client.ApiResponse<ModifyMonitoredItemsResponse>> ModifyMonitoredItemsWithHttpInfoAsync(ModifyMonitoredItemsRequest modifyMonitoredItemsRequest = default(ModifyMonitoredItemsRequest), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Opc.Ua.WebApi.Client.ApiResponse<ModifyMonitoredItemsResponse>> ModifyMonitoredItemsWithHttpInfoAsync(ModifyMonitoredItemsRequest modifyMonitoredItemsRequest = default, System.Threading.CancellationToken cancellationToken = default)
         {
 
             Opc.Ua.WebApi.Client.RequestOptions localVarRequestOptions = new Opc.Ua.WebApi.Client.RequestOptions();
@@ -3527,34 +3119,24 @@ namespace Opc.Ua.WebApi.Api
                 "application/json"
             };
 
+
             var localVarContentType = Opc.Ua.WebApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Opc.Ua.WebApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.Data = modifyMonitoredItemsRequest;
 
-            localVarRequestOptions.Operation = "DefaultApi.ModifyMonitoredItems";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
 
             // make the HTTP request
+
             var localVarResponse = await this.AsynchronousClient.PostAsync<ModifyMonitoredItemsResponse>("/modifymonitoreditems", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ModifyMonitoredItems", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -3565,9 +3147,8 @@ namespace Opc.Ua.WebApi.Api
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="modifySubscriptionRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.3/#5.14.3.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ModifySubscriptionResponse</returns>
-        public ModifySubscriptionResponse ModifySubscription(ModifySubscriptionRequest modifySubscriptionRequest = default(ModifySubscriptionRequest), int operationIndex = 0)
+        public ModifySubscriptionResponse ModifySubscription(ModifySubscriptionRequest modifySubscriptionRequest = default)
         {
             Opc.Ua.WebApi.Client.ApiResponse<ModifySubscriptionResponse> localVarResponse = ModifySubscriptionWithHttpInfo(modifySubscriptionRequest);
             return localVarResponse.Data;
@@ -3578,9 +3159,8 @@ namespace Opc.Ua.WebApi.Api
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="modifySubscriptionRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.3/#5.14.3.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ModifySubscriptionResponse</returns>
-        public Opc.Ua.WebApi.Client.ApiResponse<ModifySubscriptionResponse> ModifySubscriptionWithHttpInfo(ModifySubscriptionRequest modifySubscriptionRequest = default(ModifySubscriptionRequest), int operationIndex = 0)
+        public Opc.Ua.WebApi.Client.ApiResponse<ModifySubscriptionResponse> ModifySubscriptionWithHttpInfo(ModifySubscriptionRequest modifySubscriptionRequest = default)
         {
             Opc.Ua.WebApi.Client.RequestOptions localVarRequestOptions = new Opc.Ua.WebApi.Client.RequestOptions();
 
@@ -3594,32 +3174,21 @@ namespace Opc.Ua.WebApi.Api
             };
 
             var localVarContentType = Opc.Ua.WebApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Opc.Ua.WebApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.Data = modifySubscriptionRequest;
-
-            localVarRequestOptions.Operation = "DefaultApi.ModifySubscription";
-            localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<ModifySubscriptionResponse>("/modifysubscription", localVarRequestOptions, this.Configuration);
+
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ModifySubscription", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -3630,12 +3199,11 @@ namespace Opc.Ua.WebApi.Api
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="modifySubscriptionRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.3/#5.14.3.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ModifySubscriptionResponse</returns>
-        public async System.Threading.Tasks.Task<ModifySubscriptionResponse> ModifySubscriptionAsync(ModifySubscriptionRequest modifySubscriptionRequest = default(ModifySubscriptionRequest), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ModifySubscriptionResponse> ModifySubscriptionAsync(ModifySubscriptionRequest modifySubscriptionRequest = default, System.Threading.CancellationToken cancellationToken = default)
         {
-            Opc.Ua.WebApi.Client.ApiResponse<ModifySubscriptionResponse> localVarResponse = await ModifySubscriptionWithHttpInfoAsync(modifySubscriptionRequest, operationIndex, cancellationToken).ConfigureAwait(false);
+            Opc.Ua.WebApi.Client.ApiResponse<ModifySubscriptionResponse> localVarResponse = await ModifySubscriptionWithHttpInfoAsync(modifySubscriptionRequest, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -3644,10 +3212,9 @@ namespace Opc.Ua.WebApi.Api
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="modifySubscriptionRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.3/#5.14.3.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ModifySubscriptionResponse)</returns>
-        public async System.Threading.Tasks.Task<Opc.Ua.WebApi.Client.ApiResponse<ModifySubscriptionResponse>> ModifySubscriptionWithHttpInfoAsync(ModifySubscriptionRequest modifySubscriptionRequest = default(ModifySubscriptionRequest), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Opc.Ua.WebApi.Client.ApiResponse<ModifySubscriptionResponse>> ModifySubscriptionWithHttpInfoAsync(ModifySubscriptionRequest modifySubscriptionRequest = default, System.Threading.CancellationToken cancellationToken = default)
         {
 
             Opc.Ua.WebApi.Client.RequestOptions localVarRequestOptions = new Opc.Ua.WebApi.Client.RequestOptions();
@@ -3661,34 +3228,24 @@ namespace Opc.Ua.WebApi.Api
                 "application/json"
             };
 
+
             var localVarContentType = Opc.Ua.WebApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Opc.Ua.WebApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.Data = modifySubscriptionRequest;
 
-            localVarRequestOptions.Operation = "DefaultApi.ModifySubscription";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
 
             // make the HTTP request
+
             var localVarResponse = await this.AsynchronousClient.PostAsync<ModifySubscriptionResponse>("/modifysubscription", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("ModifySubscription", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -3699,9 +3256,8 @@ namespace Opc.Ua.WebApi.Api
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="publishRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.5/#5.14.5.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>PublishResponse</returns>
-        public PublishResponse Publish(PublishRequest publishRequest = default(PublishRequest), int operationIndex = 0)
+        public PublishResponse Publish(PublishRequest publishRequest = default)
         {
             Opc.Ua.WebApi.Client.ApiResponse<PublishResponse> localVarResponse = PublishWithHttpInfo(publishRequest);
             return localVarResponse.Data;
@@ -3712,9 +3268,8 @@ namespace Opc.Ua.WebApi.Api
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="publishRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.5/#5.14.5.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of PublishResponse</returns>
-        public Opc.Ua.WebApi.Client.ApiResponse<PublishResponse> PublishWithHttpInfo(PublishRequest publishRequest = default(PublishRequest), int operationIndex = 0)
+        public Opc.Ua.WebApi.Client.ApiResponse<PublishResponse> PublishWithHttpInfo(PublishRequest publishRequest = default)
         {
             Opc.Ua.WebApi.Client.RequestOptions localVarRequestOptions = new Opc.Ua.WebApi.Client.RequestOptions();
 
@@ -3728,32 +3283,21 @@ namespace Opc.Ua.WebApi.Api
             };
 
             var localVarContentType = Opc.Ua.WebApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Opc.Ua.WebApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.Data = publishRequest;
-
-            localVarRequestOptions.Operation = "DefaultApi.Publish";
-            localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<PublishResponse>("/publish", localVarRequestOptions, this.Configuration);
+
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("Publish", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -3764,12 +3308,11 @@ namespace Opc.Ua.WebApi.Api
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="publishRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.5/#5.14.5.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of PublishResponse</returns>
-        public async System.Threading.Tasks.Task<PublishResponse> PublishAsync(PublishRequest publishRequest = default(PublishRequest), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<PublishResponse> PublishAsync(PublishRequest publishRequest = default, System.Threading.CancellationToken cancellationToken = default)
         {
-            Opc.Ua.WebApi.Client.ApiResponse<PublishResponse> localVarResponse = await PublishWithHttpInfoAsync(publishRequest, operationIndex, cancellationToken).ConfigureAwait(false);
+            Opc.Ua.WebApi.Client.ApiResponse<PublishResponse> localVarResponse = await PublishWithHttpInfoAsync(publishRequest, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -3778,10 +3321,9 @@ namespace Opc.Ua.WebApi.Api
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="publishRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.5/#5.14.5.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (PublishResponse)</returns>
-        public async System.Threading.Tasks.Task<Opc.Ua.WebApi.Client.ApiResponse<PublishResponse>> PublishWithHttpInfoAsync(PublishRequest publishRequest = default(PublishRequest), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Opc.Ua.WebApi.Client.ApiResponse<PublishResponse>> PublishWithHttpInfoAsync(PublishRequest publishRequest = default, System.Threading.CancellationToken cancellationToken = default)
         {
 
             Opc.Ua.WebApi.Client.RequestOptions localVarRequestOptions = new Opc.Ua.WebApi.Client.RequestOptions();
@@ -3795,34 +3337,24 @@ namespace Opc.Ua.WebApi.Api
                 "application/json"
             };
 
+
             var localVarContentType = Opc.Ua.WebApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Opc.Ua.WebApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.Data = publishRequest;
 
-            localVarRequestOptions.Operation = "DefaultApi.Publish";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
 
             // make the HTTP request
+
             var localVarResponse = await this.AsynchronousClient.PostAsync<PublishResponse>("/publish", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("Publish", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -3833,9 +3365,8 @@ namespace Opc.Ua.WebApi.Api
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="readRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.11.2/#5.11.2.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ReadResponse</returns>
-        public ReadResponse Read(ReadRequest readRequest = default(ReadRequest), int operationIndex = 0)
+        public ReadResponse Read(ReadRequest readRequest = default)
         {
             Opc.Ua.WebApi.Client.ApiResponse<ReadResponse> localVarResponse = ReadWithHttpInfo(readRequest);
             return localVarResponse.Data;
@@ -3846,9 +3377,8 @@ namespace Opc.Ua.WebApi.Api
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="readRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.11.2/#5.11.2.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of ReadResponse</returns>
-        public Opc.Ua.WebApi.Client.ApiResponse<ReadResponse> ReadWithHttpInfo(ReadRequest readRequest = default(ReadRequest), int operationIndex = 0)
+        public Opc.Ua.WebApi.Client.ApiResponse<ReadResponse> ReadWithHttpInfo(ReadRequest readRequest = default)
         {
             Opc.Ua.WebApi.Client.RequestOptions localVarRequestOptions = new Opc.Ua.WebApi.Client.RequestOptions();
 
@@ -3862,32 +3392,21 @@ namespace Opc.Ua.WebApi.Api
             };
 
             var localVarContentType = Opc.Ua.WebApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Opc.Ua.WebApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.Data = readRequest;
-
-            localVarRequestOptions.Operation = "DefaultApi.Read";
-            localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<ReadResponse>("/read", localVarRequestOptions, this.Configuration);
+
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("Read", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -3898,12 +3417,11 @@ namespace Opc.Ua.WebApi.Api
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="readRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.11.2/#5.11.2.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ReadResponse</returns>
-        public async System.Threading.Tasks.Task<ReadResponse> ReadAsync(ReadRequest readRequest = default(ReadRequest), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ReadResponse> ReadAsync(ReadRequest readRequest = default, System.Threading.CancellationToken cancellationToken = default)
         {
-            Opc.Ua.WebApi.Client.ApiResponse<ReadResponse> localVarResponse = await ReadWithHttpInfoAsync(readRequest, operationIndex, cancellationToken).ConfigureAwait(false);
+            Opc.Ua.WebApi.Client.ApiResponse<ReadResponse> localVarResponse = await ReadWithHttpInfoAsync(readRequest, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -3912,10 +3430,9 @@ namespace Opc.Ua.WebApi.Api
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="readRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.11.2/#5.11.2.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (ReadResponse)</returns>
-        public async System.Threading.Tasks.Task<Opc.Ua.WebApi.Client.ApiResponse<ReadResponse>> ReadWithHttpInfoAsync(ReadRequest readRequest = default(ReadRequest), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Opc.Ua.WebApi.Client.ApiResponse<ReadResponse>> ReadWithHttpInfoAsync(ReadRequest readRequest = default, System.Threading.CancellationToken cancellationToken = default)
         {
 
             Opc.Ua.WebApi.Client.RequestOptions localVarRequestOptions = new Opc.Ua.WebApi.Client.RequestOptions();
@@ -3929,34 +3446,24 @@ namespace Opc.Ua.WebApi.Api
                 "application/json"
             };
 
+
             var localVarContentType = Opc.Ua.WebApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Opc.Ua.WebApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.Data = readRequest;
 
-            localVarRequestOptions.Operation = "DefaultApi.Read";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
 
             // make the HTTP request
+
             var localVarResponse = await this.AsynchronousClient.PostAsync<ReadResponse>("/read", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("Read", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -3967,9 +3474,8 @@ namespace Opc.Ua.WebApi.Api
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="registerNodesRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.9.5/#5.9.5.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>RegisterNodesResponse</returns>
-        public RegisterNodesResponse RegisterNodes(RegisterNodesRequest registerNodesRequest = default(RegisterNodesRequest), int operationIndex = 0)
+        public RegisterNodesResponse RegisterNodes(RegisterNodesRequest registerNodesRequest = default)
         {
             Opc.Ua.WebApi.Client.ApiResponse<RegisterNodesResponse> localVarResponse = RegisterNodesWithHttpInfo(registerNodesRequest);
             return localVarResponse.Data;
@@ -3980,9 +3486,8 @@ namespace Opc.Ua.WebApi.Api
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="registerNodesRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.9.5/#5.9.5.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of RegisterNodesResponse</returns>
-        public Opc.Ua.WebApi.Client.ApiResponse<RegisterNodesResponse> RegisterNodesWithHttpInfo(RegisterNodesRequest registerNodesRequest = default(RegisterNodesRequest), int operationIndex = 0)
+        public Opc.Ua.WebApi.Client.ApiResponse<RegisterNodesResponse> RegisterNodesWithHttpInfo(RegisterNodesRequest registerNodesRequest = default)
         {
             Opc.Ua.WebApi.Client.RequestOptions localVarRequestOptions = new Opc.Ua.WebApi.Client.RequestOptions();
 
@@ -3996,32 +3501,21 @@ namespace Opc.Ua.WebApi.Api
             };
 
             var localVarContentType = Opc.Ua.WebApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Opc.Ua.WebApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.Data = registerNodesRequest;
-
-            localVarRequestOptions.Operation = "DefaultApi.RegisterNodes";
-            localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<RegisterNodesResponse>("/registernodes", localVarRequestOptions, this.Configuration);
+
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("RegisterNodes", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -4032,12 +3526,11 @@ namespace Opc.Ua.WebApi.Api
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="registerNodesRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.9.5/#5.9.5.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of RegisterNodesResponse</returns>
-        public async System.Threading.Tasks.Task<RegisterNodesResponse> RegisterNodesAsync(RegisterNodesRequest registerNodesRequest = default(RegisterNodesRequest), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<RegisterNodesResponse> RegisterNodesAsync(RegisterNodesRequest registerNodesRequest = default, System.Threading.CancellationToken cancellationToken = default)
         {
-            Opc.Ua.WebApi.Client.ApiResponse<RegisterNodesResponse> localVarResponse = await RegisterNodesWithHttpInfoAsync(registerNodesRequest, operationIndex, cancellationToken).ConfigureAwait(false);
+            Opc.Ua.WebApi.Client.ApiResponse<RegisterNodesResponse> localVarResponse = await RegisterNodesWithHttpInfoAsync(registerNodesRequest, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -4046,10 +3539,9 @@ namespace Opc.Ua.WebApi.Api
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="registerNodesRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.9.5/#5.9.5.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RegisterNodesResponse)</returns>
-        public async System.Threading.Tasks.Task<Opc.Ua.WebApi.Client.ApiResponse<RegisterNodesResponse>> RegisterNodesWithHttpInfoAsync(RegisterNodesRequest registerNodesRequest = default(RegisterNodesRequest), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Opc.Ua.WebApi.Client.ApiResponse<RegisterNodesResponse>> RegisterNodesWithHttpInfoAsync(RegisterNodesRequest registerNodesRequest = default, System.Threading.CancellationToken cancellationToken = default)
         {
 
             Opc.Ua.WebApi.Client.RequestOptions localVarRequestOptions = new Opc.Ua.WebApi.Client.RequestOptions();
@@ -4063,34 +3555,24 @@ namespace Opc.Ua.WebApi.Api
                 "application/json"
             };
 
+
             var localVarContentType = Opc.Ua.WebApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Opc.Ua.WebApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.Data = registerNodesRequest;
 
-            localVarRequestOptions.Operation = "DefaultApi.RegisterNodes";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
 
             // make the HTTP request
+
             var localVarResponse = await this.AsynchronousClient.PostAsync<RegisterNodesResponse>("/registernodes", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("RegisterNodes", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -4101,9 +3583,8 @@ namespace Opc.Ua.WebApi.Api
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="republishRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.6/#5.14.6.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>RepublishResponse</returns>
-        public RepublishResponse Republish(RepublishRequest republishRequest = default(RepublishRequest), int operationIndex = 0)
+        public RepublishResponse Republish(RepublishRequest republishRequest = default)
         {
             Opc.Ua.WebApi.Client.ApiResponse<RepublishResponse> localVarResponse = RepublishWithHttpInfo(republishRequest);
             return localVarResponse.Data;
@@ -4114,9 +3595,8 @@ namespace Opc.Ua.WebApi.Api
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="republishRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.6/#5.14.6.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of RepublishResponse</returns>
-        public Opc.Ua.WebApi.Client.ApiResponse<RepublishResponse> RepublishWithHttpInfo(RepublishRequest republishRequest = default(RepublishRequest), int operationIndex = 0)
+        public Opc.Ua.WebApi.Client.ApiResponse<RepublishResponse> RepublishWithHttpInfo(RepublishRequest republishRequest = default)
         {
             Opc.Ua.WebApi.Client.RequestOptions localVarRequestOptions = new Opc.Ua.WebApi.Client.RequestOptions();
 
@@ -4130,32 +3610,21 @@ namespace Opc.Ua.WebApi.Api
             };
 
             var localVarContentType = Opc.Ua.WebApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Opc.Ua.WebApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.Data = republishRequest;
-
-            localVarRequestOptions.Operation = "DefaultApi.Republish";
-            localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<RepublishResponse>("/republish", localVarRequestOptions, this.Configuration);
+
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("Republish", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -4166,12 +3635,11 @@ namespace Opc.Ua.WebApi.Api
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="republishRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.6/#5.14.6.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of RepublishResponse</returns>
-        public async System.Threading.Tasks.Task<RepublishResponse> RepublishAsync(RepublishRequest republishRequest = default(RepublishRequest), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<RepublishResponse> RepublishAsync(RepublishRequest republishRequest = default, System.Threading.CancellationToken cancellationToken = default)
         {
-            Opc.Ua.WebApi.Client.ApiResponse<RepublishResponse> localVarResponse = await RepublishWithHttpInfoAsync(republishRequest, operationIndex, cancellationToken).ConfigureAwait(false);
+            Opc.Ua.WebApi.Client.ApiResponse<RepublishResponse> localVarResponse = await RepublishWithHttpInfoAsync(republishRequest, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -4180,10 +3648,9 @@ namespace Opc.Ua.WebApi.Api
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="republishRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.6/#5.14.6.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (RepublishResponse)</returns>
-        public async System.Threading.Tasks.Task<Opc.Ua.WebApi.Client.ApiResponse<RepublishResponse>> RepublishWithHttpInfoAsync(RepublishRequest republishRequest = default(RepublishRequest), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Opc.Ua.WebApi.Client.ApiResponse<RepublishResponse>> RepublishWithHttpInfoAsync(RepublishRequest republishRequest = default, System.Threading.CancellationToken cancellationToken = default)
         {
 
             Opc.Ua.WebApi.Client.RequestOptions localVarRequestOptions = new Opc.Ua.WebApi.Client.RequestOptions();
@@ -4197,34 +3664,24 @@ namespace Opc.Ua.WebApi.Api
                 "application/json"
             };
 
+
             var localVarContentType = Opc.Ua.WebApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Opc.Ua.WebApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.Data = republishRequest;
 
-            localVarRequestOptions.Operation = "DefaultApi.Republish";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
 
             // make the HTTP request
+
             var localVarResponse = await this.AsynchronousClient.PostAsync<RepublishResponse>("/republish", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("Republish", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -4235,9 +3692,8 @@ namespace Opc.Ua.WebApi.Api
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="setMonitoringModeRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.13.4/#5.13.4.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>SetMonitoringModeResponse</returns>
-        public SetMonitoringModeResponse SetMonitoringMode(SetMonitoringModeRequest setMonitoringModeRequest = default(SetMonitoringModeRequest), int operationIndex = 0)
+        public SetMonitoringModeResponse SetMonitoringMode(SetMonitoringModeRequest setMonitoringModeRequest = default)
         {
             Opc.Ua.WebApi.Client.ApiResponse<SetMonitoringModeResponse> localVarResponse = SetMonitoringModeWithHttpInfo(setMonitoringModeRequest);
             return localVarResponse.Data;
@@ -4248,9 +3704,8 @@ namespace Opc.Ua.WebApi.Api
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="setMonitoringModeRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.13.4/#5.13.4.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of SetMonitoringModeResponse</returns>
-        public Opc.Ua.WebApi.Client.ApiResponse<SetMonitoringModeResponse> SetMonitoringModeWithHttpInfo(SetMonitoringModeRequest setMonitoringModeRequest = default(SetMonitoringModeRequest), int operationIndex = 0)
+        public Opc.Ua.WebApi.Client.ApiResponse<SetMonitoringModeResponse> SetMonitoringModeWithHttpInfo(SetMonitoringModeRequest setMonitoringModeRequest = default)
         {
             Opc.Ua.WebApi.Client.RequestOptions localVarRequestOptions = new Opc.Ua.WebApi.Client.RequestOptions();
 
@@ -4264,32 +3719,21 @@ namespace Opc.Ua.WebApi.Api
             };
 
             var localVarContentType = Opc.Ua.WebApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Opc.Ua.WebApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.Data = setMonitoringModeRequest;
-
-            localVarRequestOptions.Operation = "DefaultApi.SetMonitoringMode";
-            localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<SetMonitoringModeResponse>("/setmonitoringmode", localVarRequestOptions, this.Configuration);
+
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("SetMonitoringMode", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -4300,12 +3744,11 @@ namespace Opc.Ua.WebApi.Api
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="setMonitoringModeRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.13.4/#5.13.4.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of SetMonitoringModeResponse</returns>
-        public async System.Threading.Tasks.Task<SetMonitoringModeResponse> SetMonitoringModeAsync(SetMonitoringModeRequest setMonitoringModeRequest = default(SetMonitoringModeRequest), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<SetMonitoringModeResponse> SetMonitoringModeAsync(SetMonitoringModeRequest setMonitoringModeRequest = default, System.Threading.CancellationToken cancellationToken = default)
         {
-            Opc.Ua.WebApi.Client.ApiResponse<SetMonitoringModeResponse> localVarResponse = await SetMonitoringModeWithHttpInfoAsync(setMonitoringModeRequest, operationIndex, cancellationToken).ConfigureAwait(false);
+            Opc.Ua.WebApi.Client.ApiResponse<SetMonitoringModeResponse> localVarResponse = await SetMonitoringModeWithHttpInfoAsync(setMonitoringModeRequest, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -4314,10 +3757,9 @@ namespace Opc.Ua.WebApi.Api
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="setMonitoringModeRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.13.4/#5.13.4.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (SetMonitoringModeResponse)</returns>
-        public async System.Threading.Tasks.Task<Opc.Ua.WebApi.Client.ApiResponse<SetMonitoringModeResponse>> SetMonitoringModeWithHttpInfoAsync(SetMonitoringModeRequest setMonitoringModeRequest = default(SetMonitoringModeRequest), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Opc.Ua.WebApi.Client.ApiResponse<SetMonitoringModeResponse>> SetMonitoringModeWithHttpInfoAsync(SetMonitoringModeRequest setMonitoringModeRequest = default, System.Threading.CancellationToken cancellationToken = default)
         {
 
             Opc.Ua.WebApi.Client.RequestOptions localVarRequestOptions = new Opc.Ua.WebApi.Client.RequestOptions();
@@ -4331,34 +3773,24 @@ namespace Opc.Ua.WebApi.Api
                 "application/json"
             };
 
+
             var localVarContentType = Opc.Ua.WebApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Opc.Ua.WebApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.Data = setMonitoringModeRequest;
 
-            localVarRequestOptions.Operation = "DefaultApi.SetMonitoringMode";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
 
             // make the HTTP request
+
             var localVarResponse = await this.AsynchronousClient.PostAsync<SetMonitoringModeResponse>("/setmonitoringmode", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("SetMonitoringMode", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -4369,9 +3801,8 @@ namespace Opc.Ua.WebApi.Api
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="setPublishingModeRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.4/#5.14.4.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>SetPublishingModeResponse</returns>
-        public SetPublishingModeResponse SetPublishingMode(SetPublishingModeRequest setPublishingModeRequest = default(SetPublishingModeRequest), int operationIndex = 0)
+        public SetPublishingModeResponse SetPublishingMode(SetPublishingModeRequest setPublishingModeRequest = default)
         {
             Opc.Ua.WebApi.Client.ApiResponse<SetPublishingModeResponse> localVarResponse = SetPublishingModeWithHttpInfo(setPublishingModeRequest);
             return localVarResponse.Data;
@@ -4382,9 +3813,8 @@ namespace Opc.Ua.WebApi.Api
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="setPublishingModeRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.4/#5.14.4.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of SetPublishingModeResponse</returns>
-        public Opc.Ua.WebApi.Client.ApiResponse<SetPublishingModeResponse> SetPublishingModeWithHttpInfo(SetPublishingModeRequest setPublishingModeRequest = default(SetPublishingModeRequest), int operationIndex = 0)
+        public Opc.Ua.WebApi.Client.ApiResponse<SetPublishingModeResponse> SetPublishingModeWithHttpInfo(SetPublishingModeRequest setPublishingModeRequest = default)
         {
             Opc.Ua.WebApi.Client.RequestOptions localVarRequestOptions = new Opc.Ua.WebApi.Client.RequestOptions();
 
@@ -4398,32 +3828,21 @@ namespace Opc.Ua.WebApi.Api
             };
 
             var localVarContentType = Opc.Ua.WebApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Opc.Ua.WebApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.Data = setPublishingModeRequest;
-
-            localVarRequestOptions.Operation = "DefaultApi.SetPublishingMode";
-            localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<SetPublishingModeResponse>("/setpublishingmode", localVarRequestOptions, this.Configuration);
+
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("SetPublishingMode", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -4434,12 +3853,11 @@ namespace Opc.Ua.WebApi.Api
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="setPublishingModeRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.4/#5.14.4.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of SetPublishingModeResponse</returns>
-        public async System.Threading.Tasks.Task<SetPublishingModeResponse> SetPublishingModeAsync(SetPublishingModeRequest setPublishingModeRequest = default(SetPublishingModeRequest), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<SetPublishingModeResponse> SetPublishingModeAsync(SetPublishingModeRequest setPublishingModeRequest = default, System.Threading.CancellationToken cancellationToken = default)
         {
-            Opc.Ua.WebApi.Client.ApiResponse<SetPublishingModeResponse> localVarResponse = await SetPublishingModeWithHttpInfoAsync(setPublishingModeRequest, operationIndex, cancellationToken).ConfigureAwait(false);
+            Opc.Ua.WebApi.Client.ApiResponse<SetPublishingModeResponse> localVarResponse = await SetPublishingModeWithHttpInfoAsync(setPublishingModeRequest, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -4448,10 +3866,9 @@ namespace Opc.Ua.WebApi.Api
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="setPublishingModeRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.4/#5.14.4.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (SetPublishingModeResponse)</returns>
-        public async System.Threading.Tasks.Task<Opc.Ua.WebApi.Client.ApiResponse<SetPublishingModeResponse>> SetPublishingModeWithHttpInfoAsync(SetPublishingModeRequest setPublishingModeRequest = default(SetPublishingModeRequest), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Opc.Ua.WebApi.Client.ApiResponse<SetPublishingModeResponse>> SetPublishingModeWithHttpInfoAsync(SetPublishingModeRequest setPublishingModeRequest = default, System.Threading.CancellationToken cancellationToken = default)
         {
 
             Opc.Ua.WebApi.Client.RequestOptions localVarRequestOptions = new Opc.Ua.WebApi.Client.RequestOptions();
@@ -4465,34 +3882,24 @@ namespace Opc.Ua.WebApi.Api
                 "application/json"
             };
 
+
             var localVarContentType = Opc.Ua.WebApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Opc.Ua.WebApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.Data = setPublishingModeRequest;
 
-            localVarRequestOptions.Operation = "DefaultApi.SetPublishingMode";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
 
             // make the HTTP request
+
             var localVarResponse = await this.AsynchronousClient.PostAsync<SetPublishingModeResponse>("/setpublishingmode", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("SetPublishingMode", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -4503,9 +3910,8 @@ namespace Opc.Ua.WebApi.Api
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="setTriggeringRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.13.5/#5.13.5.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>SetTriggeringResponse</returns>
-        public SetTriggeringResponse SetTriggering(SetTriggeringRequest setTriggeringRequest = default(SetTriggeringRequest), int operationIndex = 0)
+        public SetTriggeringResponse SetTriggering(SetTriggeringRequest setTriggeringRequest = default)
         {
             Opc.Ua.WebApi.Client.ApiResponse<SetTriggeringResponse> localVarResponse = SetTriggeringWithHttpInfo(setTriggeringRequest);
             return localVarResponse.Data;
@@ -4516,9 +3922,8 @@ namespace Opc.Ua.WebApi.Api
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="setTriggeringRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.13.5/#5.13.5.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of SetTriggeringResponse</returns>
-        public Opc.Ua.WebApi.Client.ApiResponse<SetTriggeringResponse> SetTriggeringWithHttpInfo(SetTriggeringRequest setTriggeringRequest = default(SetTriggeringRequest), int operationIndex = 0)
+        public Opc.Ua.WebApi.Client.ApiResponse<SetTriggeringResponse> SetTriggeringWithHttpInfo(SetTriggeringRequest setTriggeringRequest = default)
         {
             Opc.Ua.WebApi.Client.RequestOptions localVarRequestOptions = new Opc.Ua.WebApi.Client.RequestOptions();
 
@@ -4532,32 +3937,21 @@ namespace Opc.Ua.WebApi.Api
             };
 
             var localVarContentType = Opc.Ua.WebApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Opc.Ua.WebApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.Data = setTriggeringRequest;
-
-            localVarRequestOptions.Operation = "DefaultApi.SetTriggering";
-            localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<SetTriggeringResponse>("/settriggering", localVarRequestOptions, this.Configuration);
+
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("SetTriggering", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -4568,12 +3962,11 @@ namespace Opc.Ua.WebApi.Api
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="setTriggeringRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.13.5/#5.13.5.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of SetTriggeringResponse</returns>
-        public async System.Threading.Tasks.Task<SetTriggeringResponse> SetTriggeringAsync(SetTriggeringRequest setTriggeringRequest = default(SetTriggeringRequest), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<SetTriggeringResponse> SetTriggeringAsync(SetTriggeringRequest setTriggeringRequest = default, System.Threading.CancellationToken cancellationToken = default)
         {
-            Opc.Ua.WebApi.Client.ApiResponse<SetTriggeringResponse> localVarResponse = await SetTriggeringWithHttpInfoAsync(setTriggeringRequest, operationIndex, cancellationToken).ConfigureAwait(false);
+            Opc.Ua.WebApi.Client.ApiResponse<SetTriggeringResponse> localVarResponse = await SetTriggeringWithHttpInfoAsync(setTriggeringRequest, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -4582,10 +3975,9 @@ namespace Opc.Ua.WebApi.Api
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="setTriggeringRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.13.5/#5.13.5.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (SetTriggeringResponse)</returns>
-        public async System.Threading.Tasks.Task<Opc.Ua.WebApi.Client.ApiResponse<SetTriggeringResponse>> SetTriggeringWithHttpInfoAsync(SetTriggeringRequest setTriggeringRequest = default(SetTriggeringRequest), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Opc.Ua.WebApi.Client.ApiResponse<SetTriggeringResponse>> SetTriggeringWithHttpInfoAsync(SetTriggeringRequest setTriggeringRequest = default, System.Threading.CancellationToken cancellationToken = default)
         {
 
             Opc.Ua.WebApi.Client.RequestOptions localVarRequestOptions = new Opc.Ua.WebApi.Client.RequestOptions();
@@ -4599,34 +3991,24 @@ namespace Opc.Ua.WebApi.Api
                 "application/json"
             };
 
+
             var localVarContentType = Opc.Ua.WebApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Opc.Ua.WebApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.Data = setTriggeringRequest;
 
-            localVarRequestOptions.Operation = "DefaultApi.SetTriggering";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
 
             // make the HTTP request
+
             var localVarResponse = await this.AsynchronousClient.PostAsync<SetTriggeringResponse>("/settriggering", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("SetTriggering", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -4637,9 +4019,8 @@ namespace Opc.Ua.WebApi.Api
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="transferSubscriptionsRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.7/#5.14.7.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>TransferSubscriptionsResponse</returns>
-        public TransferSubscriptionsResponse TransferSubscriptions(TransferSubscriptionsRequest transferSubscriptionsRequest = default(TransferSubscriptionsRequest), int operationIndex = 0)
+        public TransferSubscriptionsResponse TransferSubscriptions(TransferSubscriptionsRequest transferSubscriptionsRequest = default)
         {
             Opc.Ua.WebApi.Client.ApiResponse<TransferSubscriptionsResponse> localVarResponse = TransferSubscriptionsWithHttpInfo(transferSubscriptionsRequest);
             return localVarResponse.Data;
@@ -4650,9 +4031,8 @@ namespace Opc.Ua.WebApi.Api
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="transferSubscriptionsRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.7/#5.14.7.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of TransferSubscriptionsResponse</returns>
-        public Opc.Ua.WebApi.Client.ApiResponse<TransferSubscriptionsResponse> TransferSubscriptionsWithHttpInfo(TransferSubscriptionsRequest transferSubscriptionsRequest = default(TransferSubscriptionsRequest), int operationIndex = 0)
+        public Opc.Ua.WebApi.Client.ApiResponse<TransferSubscriptionsResponse> TransferSubscriptionsWithHttpInfo(TransferSubscriptionsRequest transferSubscriptionsRequest = default)
         {
             Opc.Ua.WebApi.Client.RequestOptions localVarRequestOptions = new Opc.Ua.WebApi.Client.RequestOptions();
 
@@ -4666,32 +4046,21 @@ namespace Opc.Ua.WebApi.Api
             };
 
             var localVarContentType = Opc.Ua.WebApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Opc.Ua.WebApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.Data = transferSubscriptionsRequest;
-
-            localVarRequestOptions.Operation = "DefaultApi.TransferSubscriptions";
-            localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<TransferSubscriptionsResponse>("/transfersubscriptions", localVarRequestOptions, this.Configuration);
+
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("TransferSubscriptions", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -4702,12 +4071,11 @@ namespace Opc.Ua.WebApi.Api
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="transferSubscriptionsRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.7/#5.14.7.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of TransferSubscriptionsResponse</returns>
-        public async System.Threading.Tasks.Task<TransferSubscriptionsResponse> TransferSubscriptionsAsync(TransferSubscriptionsRequest transferSubscriptionsRequest = default(TransferSubscriptionsRequest), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<TransferSubscriptionsResponse> TransferSubscriptionsAsync(TransferSubscriptionsRequest transferSubscriptionsRequest = default, System.Threading.CancellationToken cancellationToken = default)
         {
-            Opc.Ua.WebApi.Client.ApiResponse<TransferSubscriptionsResponse> localVarResponse = await TransferSubscriptionsWithHttpInfoAsync(transferSubscriptionsRequest, operationIndex, cancellationToken).ConfigureAwait(false);
+            Opc.Ua.WebApi.Client.ApiResponse<TransferSubscriptionsResponse> localVarResponse = await TransferSubscriptionsWithHttpInfoAsync(transferSubscriptionsRequest, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -4716,10 +4084,9 @@ namespace Opc.Ua.WebApi.Api
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="transferSubscriptionsRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.14.7/#5.14.7.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (TransferSubscriptionsResponse)</returns>
-        public async System.Threading.Tasks.Task<Opc.Ua.WebApi.Client.ApiResponse<TransferSubscriptionsResponse>> TransferSubscriptionsWithHttpInfoAsync(TransferSubscriptionsRequest transferSubscriptionsRequest = default(TransferSubscriptionsRequest), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Opc.Ua.WebApi.Client.ApiResponse<TransferSubscriptionsResponse>> TransferSubscriptionsWithHttpInfoAsync(TransferSubscriptionsRequest transferSubscriptionsRequest = default, System.Threading.CancellationToken cancellationToken = default)
         {
 
             Opc.Ua.WebApi.Client.RequestOptions localVarRequestOptions = new Opc.Ua.WebApi.Client.RequestOptions();
@@ -4733,34 +4100,24 @@ namespace Opc.Ua.WebApi.Api
                 "application/json"
             };
 
+
             var localVarContentType = Opc.Ua.WebApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Opc.Ua.WebApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.Data = transferSubscriptionsRequest;
 
-            localVarRequestOptions.Operation = "DefaultApi.TransferSubscriptions";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
 
             // make the HTTP request
+
             var localVarResponse = await this.AsynchronousClient.PostAsync<TransferSubscriptionsResponse>("/transfersubscriptions", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("TransferSubscriptions", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -4771,9 +4128,8 @@ namespace Opc.Ua.WebApi.Api
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="translateBrowsePathsToNodeIdsRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.9.4/#5.9.4.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>TranslateBrowsePathsToNodeIdsResponse</returns>
-        public TranslateBrowsePathsToNodeIdsResponse TranslateBrowsePathsToNodeIds(TranslateBrowsePathsToNodeIdsRequest translateBrowsePathsToNodeIdsRequest = default(TranslateBrowsePathsToNodeIdsRequest), int operationIndex = 0)
+        public TranslateBrowsePathsToNodeIdsResponse TranslateBrowsePathsToNodeIds(TranslateBrowsePathsToNodeIdsRequest translateBrowsePathsToNodeIdsRequest = default)
         {
             Opc.Ua.WebApi.Client.ApiResponse<TranslateBrowsePathsToNodeIdsResponse> localVarResponse = TranslateBrowsePathsToNodeIdsWithHttpInfo(translateBrowsePathsToNodeIdsRequest);
             return localVarResponse.Data;
@@ -4784,9 +4140,8 @@ namespace Opc.Ua.WebApi.Api
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="translateBrowsePathsToNodeIdsRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.9.4/#5.9.4.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of TranslateBrowsePathsToNodeIdsResponse</returns>
-        public Opc.Ua.WebApi.Client.ApiResponse<TranslateBrowsePathsToNodeIdsResponse> TranslateBrowsePathsToNodeIdsWithHttpInfo(TranslateBrowsePathsToNodeIdsRequest translateBrowsePathsToNodeIdsRequest = default(TranslateBrowsePathsToNodeIdsRequest), int operationIndex = 0)
+        public Opc.Ua.WebApi.Client.ApiResponse<TranslateBrowsePathsToNodeIdsResponse> TranslateBrowsePathsToNodeIdsWithHttpInfo(TranslateBrowsePathsToNodeIdsRequest translateBrowsePathsToNodeIdsRequest = default)
         {
             Opc.Ua.WebApi.Client.RequestOptions localVarRequestOptions = new Opc.Ua.WebApi.Client.RequestOptions();
 
@@ -4800,32 +4155,21 @@ namespace Opc.Ua.WebApi.Api
             };
 
             var localVarContentType = Opc.Ua.WebApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Opc.Ua.WebApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.Data = translateBrowsePathsToNodeIdsRequest;
-
-            localVarRequestOptions.Operation = "DefaultApi.TranslateBrowsePathsToNodeIds";
-            localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<TranslateBrowsePathsToNodeIdsResponse>("/translate", localVarRequestOptions, this.Configuration);
+
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("TranslateBrowsePathsToNodeIds", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -4836,12 +4180,11 @@ namespace Opc.Ua.WebApi.Api
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="translateBrowsePathsToNodeIdsRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.9.4/#5.9.4.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of TranslateBrowsePathsToNodeIdsResponse</returns>
-        public async System.Threading.Tasks.Task<TranslateBrowsePathsToNodeIdsResponse> TranslateBrowsePathsToNodeIdsAsync(TranslateBrowsePathsToNodeIdsRequest translateBrowsePathsToNodeIdsRequest = default(TranslateBrowsePathsToNodeIdsRequest), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<TranslateBrowsePathsToNodeIdsResponse> TranslateBrowsePathsToNodeIdsAsync(TranslateBrowsePathsToNodeIdsRequest translateBrowsePathsToNodeIdsRequest = default, System.Threading.CancellationToken cancellationToken = default)
         {
-            Opc.Ua.WebApi.Client.ApiResponse<TranslateBrowsePathsToNodeIdsResponse> localVarResponse = await TranslateBrowsePathsToNodeIdsWithHttpInfoAsync(translateBrowsePathsToNodeIdsRequest, operationIndex, cancellationToken).ConfigureAwait(false);
+            Opc.Ua.WebApi.Client.ApiResponse<TranslateBrowsePathsToNodeIdsResponse> localVarResponse = await TranslateBrowsePathsToNodeIdsWithHttpInfoAsync(translateBrowsePathsToNodeIdsRequest, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -4850,10 +4193,9 @@ namespace Opc.Ua.WebApi.Api
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="translateBrowsePathsToNodeIdsRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.9.4/#5.9.4.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (TranslateBrowsePathsToNodeIdsResponse)</returns>
-        public async System.Threading.Tasks.Task<Opc.Ua.WebApi.Client.ApiResponse<TranslateBrowsePathsToNodeIdsResponse>> TranslateBrowsePathsToNodeIdsWithHttpInfoAsync(TranslateBrowsePathsToNodeIdsRequest translateBrowsePathsToNodeIdsRequest = default(TranslateBrowsePathsToNodeIdsRequest), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Opc.Ua.WebApi.Client.ApiResponse<TranslateBrowsePathsToNodeIdsResponse>> TranslateBrowsePathsToNodeIdsWithHttpInfoAsync(TranslateBrowsePathsToNodeIdsRequest translateBrowsePathsToNodeIdsRequest = default, System.Threading.CancellationToken cancellationToken = default)
         {
 
             Opc.Ua.WebApi.Client.RequestOptions localVarRequestOptions = new Opc.Ua.WebApi.Client.RequestOptions();
@@ -4867,34 +4209,24 @@ namespace Opc.Ua.WebApi.Api
                 "application/json"
             };
 
+
             var localVarContentType = Opc.Ua.WebApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Opc.Ua.WebApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.Data = translateBrowsePathsToNodeIdsRequest;
 
-            localVarRequestOptions.Operation = "DefaultApi.TranslateBrowsePathsToNodeIds";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
 
             // make the HTTP request
+
             var localVarResponse = await this.AsynchronousClient.PostAsync<TranslateBrowsePathsToNodeIdsResponse>("/translate", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("TranslateBrowsePathsToNodeIds", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -4905,9 +4237,8 @@ namespace Opc.Ua.WebApi.Api
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="unregisterNodesRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.9.6/#5.9.6.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>UnregisterNodesResponse</returns>
-        public UnregisterNodesResponse UnregisterNodes(UnregisterNodesRequest unregisterNodesRequest = default(UnregisterNodesRequest), int operationIndex = 0)
+        public UnregisterNodesResponse UnregisterNodes(UnregisterNodesRequest unregisterNodesRequest = default)
         {
             Opc.Ua.WebApi.Client.ApiResponse<UnregisterNodesResponse> localVarResponse = UnregisterNodesWithHttpInfo(unregisterNodesRequest);
             return localVarResponse.Data;
@@ -4918,9 +4249,8 @@ namespace Opc.Ua.WebApi.Api
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="unregisterNodesRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.9.6/#5.9.6.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of UnregisterNodesResponse</returns>
-        public Opc.Ua.WebApi.Client.ApiResponse<UnregisterNodesResponse> UnregisterNodesWithHttpInfo(UnregisterNodesRequest unregisterNodesRequest = default(UnregisterNodesRequest), int operationIndex = 0)
+        public Opc.Ua.WebApi.Client.ApiResponse<UnregisterNodesResponse> UnregisterNodesWithHttpInfo(UnregisterNodesRequest unregisterNodesRequest = default)
         {
             Opc.Ua.WebApi.Client.RequestOptions localVarRequestOptions = new Opc.Ua.WebApi.Client.RequestOptions();
 
@@ -4934,32 +4264,21 @@ namespace Opc.Ua.WebApi.Api
             };
 
             var localVarContentType = Opc.Ua.WebApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Opc.Ua.WebApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.Data = unregisterNodesRequest;
-
-            localVarRequestOptions.Operation = "DefaultApi.UnregisterNodes";
-            localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<UnregisterNodesResponse>("/unregisternodes", localVarRequestOptions, this.Configuration);
+
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("UnregisterNodes", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -4970,12 +4289,11 @@ namespace Opc.Ua.WebApi.Api
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="unregisterNodesRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.9.6/#5.9.6.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of UnregisterNodesResponse</returns>
-        public async System.Threading.Tasks.Task<UnregisterNodesResponse> UnregisterNodesAsync(UnregisterNodesRequest unregisterNodesRequest = default(UnregisterNodesRequest), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<UnregisterNodesResponse> UnregisterNodesAsync(UnregisterNodesRequest unregisterNodesRequest = default, System.Threading.CancellationToken cancellationToken = default)
         {
-            Opc.Ua.WebApi.Client.ApiResponse<UnregisterNodesResponse> localVarResponse = await UnregisterNodesWithHttpInfoAsync(unregisterNodesRequest, operationIndex, cancellationToken).ConfigureAwait(false);
+            Opc.Ua.WebApi.Client.ApiResponse<UnregisterNodesResponse> localVarResponse = await UnregisterNodesWithHttpInfoAsync(unregisterNodesRequest, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -4984,10 +4302,9 @@ namespace Opc.Ua.WebApi.Api
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="unregisterNodesRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.9.6/#5.9.6.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (UnregisterNodesResponse)</returns>
-        public async System.Threading.Tasks.Task<Opc.Ua.WebApi.Client.ApiResponse<UnregisterNodesResponse>> UnregisterNodesWithHttpInfoAsync(UnregisterNodesRequest unregisterNodesRequest = default(UnregisterNodesRequest), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Opc.Ua.WebApi.Client.ApiResponse<UnregisterNodesResponse>> UnregisterNodesWithHttpInfoAsync(UnregisterNodesRequest unregisterNodesRequest = default, System.Threading.CancellationToken cancellationToken = default)
         {
 
             Opc.Ua.WebApi.Client.RequestOptions localVarRequestOptions = new Opc.Ua.WebApi.Client.RequestOptions();
@@ -5001,34 +4318,24 @@ namespace Opc.Ua.WebApi.Api
                 "application/json"
             };
 
+
             var localVarContentType = Opc.Ua.WebApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Opc.Ua.WebApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.Data = unregisterNodesRequest;
 
-            localVarRequestOptions.Operation = "DefaultApi.UnregisterNodes";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
 
             // make the HTTP request
+
             var localVarResponse = await this.AsynchronousClient.PostAsync<UnregisterNodesResponse>("/unregisternodes", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("UnregisterNodes", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -5039,9 +4346,8 @@ namespace Opc.Ua.WebApi.Api
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="writeRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.11.4/#5.11.4.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>WriteResponse</returns>
-        public WriteResponse Write(WriteRequest writeRequest = default(WriteRequest), int operationIndex = 0)
+        public WriteResponse Write(WriteRequest writeRequest = default)
         {
             Opc.Ua.WebApi.Client.ApiResponse<WriteResponse> localVarResponse = WriteWithHttpInfo(writeRequest);
             return localVarResponse.Data;
@@ -5052,9 +4358,8 @@ namespace Opc.Ua.WebApi.Api
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="writeRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.11.4/#5.11.4.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of WriteResponse</returns>
-        public Opc.Ua.WebApi.Client.ApiResponse<WriteResponse> WriteWithHttpInfo(WriteRequest writeRequest = default(WriteRequest), int operationIndex = 0)
+        public Opc.Ua.WebApi.Client.ApiResponse<WriteResponse> WriteWithHttpInfo(WriteRequest writeRequest = default)
         {
             Opc.Ua.WebApi.Client.RequestOptions localVarRequestOptions = new Opc.Ua.WebApi.Client.RequestOptions();
 
@@ -5068,32 +4373,21 @@ namespace Opc.Ua.WebApi.Api
             };
 
             var localVarContentType = Opc.Ua.WebApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Opc.Ua.WebApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.Data = writeRequest;
-
-            localVarRequestOptions.Operation = "DefaultApi.Write";
-            localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
             var localVarResponse = this.Client.Post<WriteResponse>("/write", localVarRequestOptions, this.Configuration);
+
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("Write", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;
@@ -5104,12 +4398,11 @@ namespace Opc.Ua.WebApi.Api
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="writeRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.11.4/#5.11.4.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of WriteResponse</returns>
-        public async System.Threading.Tasks.Task<WriteResponse> WriteAsync(WriteRequest writeRequest = default(WriteRequest), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<WriteResponse> WriteAsync(WriteRequest writeRequest = default, System.Threading.CancellationToken cancellationToken = default)
         {
-            Opc.Ua.WebApi.Client.ApiResponse<WriteResponse> localVarResponse = await WriteWithHttpInfoAsync(writeRequest, operationIndex, cancellationToken).ConfigureAwait(false);
+            Opc.Ua.WebApi.Client.ApiResponse<WriteResponse> localVarResponse = await WriteWithHttpInfoAsync(writeRequest, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -5118,10 +4411,9 @@ namespace Opc.Ua.WebApi.Api
         /// </summary>
         /// <exception cref="Opc.Ua.WebApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="writeRequest">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/5.11.4/#5.11.4.2). (optional)</param>
-        /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (WriteResponse)</returns>
-        public async System.Threading.Tasks.Task<Opc.Ua.WebApi.Client.ApiResponse<WriteResponse>> WriteWithHttpInfoAsync(WriteRequest writeRequest = default(WriteRequest), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Opc.Ua.WebApi.Client.ApiResponse<WriteResponse>> WriteWithHttpInfoAsync(WriteRequest writeRequest = default, System.Threading.CancellationToken cancellationToken = default)
         {
 
             Opc.Ua.WebApi.Client.RequestOptions localVarRequestOptions = new Opc.Ua.WebApi.Client.RequestOptions();
@@ -5135,34 +4427,24 @@ namespace Opc.Ua.WebApi.Api
                 "application/json"
             };
 
+
             var localVarContentType = Opc.Ua.WebApi.Client.ClientUtils.SelectHeaderContentType(_contentTypes);
-            if (localVarContentType != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
-            }
+            if (localVarContentType != null) localVarRequestOptions.HeaderParameters.Add("Content-Type", localVarContentType);
 
             var localVarAccept = Opc.Ua.WebApi.Client.ClientUtils.SelectHeaderAccept(_accepts);
-            if (localVarAccept != null)
-            {
-                localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
-            }
+            if (localVarAccept != null) localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
 
             localVarRequestOptions.Data = writeRequest;
 
-            localVarRequestOptions.Operation = "DefaultApi.Write";
-            localVarRequestOptions.OperationIndex = operationIndex;
-
 
             // make the HTTP request
+
             var localVarResponse = await this.AsynchronousClient.PostAsync<WriteResponse>("/write", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("Write", localVarResponse);
-                if (_exception != null)
-                {
-                    throw _exception;
-                }
+                if (_exception != null) throw _exception;
             }
 
             return localVarResponse;

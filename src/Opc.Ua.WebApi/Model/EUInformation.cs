@@ -22,6 +22,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
+using FileParameter = Opc.Ua.WebApi.Client.FileParameter;
 using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 
 namespace Opc.Ua.WebApi.Model
@@ -39,7 +40,7 @@ namespace Opc.Ua.WebApi.Model
         /// <param name="unitId">unitId (default to 0).</param>
         /// <param name="displayName">displayName.</param>
         /// <param name="description">description.</param>
-        public EUInformation(string namespaceUri = default(string), int unitId = 0, LocalizedText displayName = default(LocalizedText), LocalizedText description = default(LocalizedText))
+        public EUInformation(string namespaceUri = default, int unitId = 0, LocalizedText displayName = default, LocalizedText description = default)
         {
             this.NamespaceUri = namespaceUri;
             this.UnitId = unitId;

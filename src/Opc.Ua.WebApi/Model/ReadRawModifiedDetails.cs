@@ -22,6 +22,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
+using FileParameter = Opc.Ua.WebApi.Client.FileParameter;
 using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 
 namespace Opc.Ua.WebApi.Model
@@ -40,7 +41,7 @@ namespace Opc.Ua.WebApi.Model
         /// <param name="endTime">endTime (default to &quot;0001-01-01T00:00Z&quot;).</param>
         /// <param name="numValuesPerNode">numValuesPerNode (default to 0).</param>
         /// <param name="returnBounds">returnBounds (default to false).</param>
-        public ReadRawModifiedDetails(bool isReadModified = false, DateTime startTime = default(DateTime), DateTime endTime = default(DateTime), long numValuesPerNode = 0, bool returnBounds = false)
+        public ReadRawModifiedDetails(bool isReadModified = false, DateTime startTime = default, DateTime endTime = default, long numValuesPerNode = 0, bool returnBounds = false)
         {
             this.IsReadModified = isReadModified;
             this.StartTime = startTime;

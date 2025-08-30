@@ -22,6 +22,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
+using FileParameter = Opc.Ua.WebApi.Client.FileParameter;
 using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 
 namespace Opc.Ua.WebApi.Model
@@ -37,7 +38,7 @@ namespace Opc.Ua.WebApi.Model
         /// </summary>
         /// <param name="elementResults">elementResults.</param>
         /// <param name="elementDiagnosticInfos">elementDiagnosticInfos.</param>
-        public ContentFilterResult(List<ContentFilterElementResult> elementResults = default(List<ContentFilterElementResult>), List<DiagnosticInfo> elementDiagnosticInfos = default(List<DiagnosticInfo>))
+        public ContentFilterResult(List<ContentFilterElementResult> elementResults = default, List<DiagnosticInfo> elementDiagnosticInfos = default)
         {
             this.ElementResults = elementResults;
             this.ElementDiagnosticInfos = elementDiagnosticInfos;

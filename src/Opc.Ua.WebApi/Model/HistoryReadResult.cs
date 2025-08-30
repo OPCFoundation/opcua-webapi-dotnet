@@ -22,6 +22,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
+using FileParameter = Opc.Ua.WebApi.Client.FileParameter;
 using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 
 namespace Opc.Ua.WebApi.Model
@@ -38,7 +39,7 @@ namespace Opc.Ua.WebApi.Model
         /// <param name="statusCode">statusCode.</param>
         /// <param name="continuationPoint">continuationPoint.</param>
         /// <param name="historyData">historyData.</param>
-        public HistoryReadResult(StatusCode statusCode = default(StatusCode), byte[] continuationPoint = default(byte[]), ExtensionObject historyData = default(ExtensionObject))
+        public HistoryReadResult(StatusCode statusCode = default, byte[] continuationPoint = default, ExtensionObject historyData = default)
         {
             this.StatusCode = statusCode;
             this.ContinuationPoint = continuationPoint;

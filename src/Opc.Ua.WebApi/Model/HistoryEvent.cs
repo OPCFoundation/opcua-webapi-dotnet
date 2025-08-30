@@ -22,6 +22,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
+using FileParameter = Opc.Ua.WebApi.Client.FileParameter;
 using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 
 namespace Opc.Ua.WebApi.Model
@@ -36,7 +37,7 @@ namespace Opc.Ua.WebApi.Model
         /// Initializes a new instance of the <see cref="HistoryEvent" /> class.
         /// </summary>
         /// <param name="events">events.</param>
-        public HistoryEvent(List<HistoryEventFieldList> events = default(List<HistoryEventFieldList>))
+        public HistoryEvent(List<HistoryEventFieldList> events = default)
         {
             this.Events = events;
         }

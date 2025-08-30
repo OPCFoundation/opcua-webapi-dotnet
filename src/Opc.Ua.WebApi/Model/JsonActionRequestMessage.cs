@@ -22,6 +22,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
+using FileParameter = Opc.Ua.WebApi.Client.FileParameter;
 using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 
 namespace Opc.Ua.WebApi.Model
@@ -46,7 +47,7 @@ namespace Opc.Ua.WebApi.Model
         /// <param name="requestId">requestId (default to 0).</param>
         /// <param name="actionState">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part14/6.2.11/#6.2.11.2.1)..</param>
         /// <param name="payload">payload.</param>
-        public JsonActionRequestMessage(int dataSetWriterId = 0, int actionTargetId = 0, string dataSetWriterName = default(string), string writerGroupName = default(string), ConfigurationVersionDataType metaDataVersion = default(ConfigurationVersionDataType), long minorVersion = 0, DateTime timestamp = default(DateTime), string messageType = default(string), int requestId = 0, int actionState = default(int), Object payload = default(Object))
+        public JsonActionRequestMessage(int dataSetWriterId = 0, int actionTargetId = 0, string dataSetWriterName = default, string writerGroupName = default, ConfigurationVersionDataType metaDataVersion = default, long minorVersion = 0, DateTime timestamp = default, string messageType = default, int requestId = 0, int actionState = default, Object payload = default)
         {
             this.DataSetWriterId = dataSetWriterId;
             this.ActionTargetId = actionTargetId;

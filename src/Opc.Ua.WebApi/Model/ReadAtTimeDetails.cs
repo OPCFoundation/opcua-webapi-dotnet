@@ -22,6 +22,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
+using FileParameter = Opc.Ua.WebApi.Client.FileParameter;
 using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 
 namespace Opc.Ua.WebApi.Model
@@ -37,7 +38,7 @@ namespace Opc.Ua.WebApi.Model
         /// </summary>
         /// <param name="reqTimes">reqTimes.</param>
         /// <param name="useSimpleBounds">useSimpleBounds (default to false).</param>
-        public ReadAtTimeDetails(List<DateTime> reqTimes = default(List<DateTime>), bool useSimpleBounds = false)
+        public ReadAtTimeDetails(List<DateTime> reqTimes = default, bool useSimpleBounds = false)
         {
             this.ReqTimes = reqTimes;
             this.UseSimpleBounds = useSimpleBounds;

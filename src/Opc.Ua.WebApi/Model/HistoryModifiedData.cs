@@ -22,6 +22,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
+using FileParameter = Opc.Ua.WebApi.Client.FileParameter;
 using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 
 namespace Opc.Ua.WebApi.Model
@@ -37,7 +38,7 @@ namespace Opc.Ua.WebApi.Model
         /// </summary>
         /// <param name="modificationInfos">modificationInfos.</param>
         /// <param name="dataValues">dataValues.</param>
-        public HistoryModifiedData(List<ModificationInfo> modificationInfos = default(List<ModificationInfo>), List<DataValue> dataValues = default(List<DataValue>))
+        public HistoryModifiedData(List<ModificationInfo> modificationInfos = default, List<DataValue> dataValues = default)
         {
             this.ModificationInfos = modificationInfos;
             this.DataValues = dataValues;

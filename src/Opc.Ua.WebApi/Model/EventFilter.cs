@@ -22,6 +22,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
+using FileParameter = Opc.Ua.WebApi.Client.FileParameter;
 using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 
 namespace Opc.Ua.WebApi.Model
@@ -37,7 +38,7 @@ namespace Opc.Ua.WebApi.Model
         /// </summary>
         /// <param name="selectClauses">selectClauses.</param>
         /// <param name="whereClause">whereClause.</param>
-        public EventFilter(List<SimpleAttributeOperand> selectClauses = default(List<SimpleAttributeOperand>), ContentFilter whereClause = default(ContentFilter))
+        public EventFilter(List<SimpleAttributeOperand> selectClauses = default, ContentFilter whereClause = default)
         {
             this.SelectClauses = selectClauses;
             this.WhereClause = whereClause;

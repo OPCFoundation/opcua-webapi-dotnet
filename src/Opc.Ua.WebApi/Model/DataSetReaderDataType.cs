@@ -22,6 +22,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
+using FileParameter = Opc.Ua.WebApi.Client.FileParameter;
 using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 
 namespace Opc.Ua.WebApi.Model
@@ -52,7 +53,7 @@ namespace Opc.Ua.WebApi.Model
         /// <param name="transportSettings">transportSettings.</param>
         /// <param name="messageSettings">messageSettings.</param>
         /// <param name="subscribedDataSet">subscribedDataSet.</param>
-        public DataSetReaderDataType(string name = default(string), bool enabled = false, Variant publisherId = default(Variant), int writerGroupId = 0, int dataSetWriterId = 0, DataSetMetaDataType dataSetMetaData = default(DataSetMetaDataType), long dataSetFieldContentMask = 0, double messageReceiveTimeout = 0D, long keyFrameCount = 0, string headerLayoutUri = default(string), int securityMode = default(int), string securityGroupId = default(string), List<EndpointDescription> securityKeyServices = default(List<EndpointDescription>), List<KeyValuePair> dataSetReaderProperties = default(List<KeyValuePair>), Object transportSettings = default(Object), Object messageSettings = default(Object), Object subscribedDataSet = default(Object))
+        public DataSetReaderDataType(string name = default, bool enabled = false, Variant publisherId = default, int writerGroupId = 0, int dataSetWriterId = 0, DataSetMetaDataType dataSetMetaData = default, long dataSetFieldContentMask = 0, double messageReceiveTimeout = 0D, long keyFrameCount = 0, string headerLayoutUri = default, int securityMode = default, string securityGroupId = default, List<EndpointDescription> securityKeyServices = default, List<KeyValuePair> dataSetReaderProperties = default, Object transportSettings = default, Object messageSettings = default, Object subscribedDataSet = default)
         {
             this.Name = name;
             this.Enabled = enabled;

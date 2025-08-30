@@ -22,6 +22,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
+using FileParameter = Opc.Ua.WebApi.Client.FileParameter;
 using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 
 namespace Opc.Ua.WebApi.Model
@@ -37,7 +38,7 @@ namespace Opc.Ua.WebApi.Model
         /// </summary>
         /// <param name="monitoredItemId">monitoredItemId (default to 0).</param>
         /// <param name="requestedParameters">requestedParameters.</param>
-        public MonitoredItemModifyRequest(long monitoredItemId = 0, MonitoringParameters requestedParameters = default(MonitoringParameters))
+        public MonitoredItemModifyRequest(long monitoredItemId = 0, MonitoringParameters requestedParameters = default)
         {
             this.MonitoredItemId = monitoredItemId;
             this.RequestedParameters = requestedParameters;

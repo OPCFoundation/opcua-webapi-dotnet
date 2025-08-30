@@ -1,12 +1,12 @@
 # Opc.Ua.WebApi.Model.UserTokenPolicy
-[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/7.42).
+[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/7.41).
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **PolicyId** | **string** |  | [optional] 
-**TokenType** | **int** | [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/7.43). | [optional] 
+**TokenType** | **int** | [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/7.42). | [optional] 
 **IssuedTokenType** | **string** |  | [optional] 
 **IssuerEndpointUrl** | **string** |  | [optional] 
 **SecurityPolicyUri** | **string** |  | [optional] 

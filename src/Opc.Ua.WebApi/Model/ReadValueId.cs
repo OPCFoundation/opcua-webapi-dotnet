@@ -22,12 +22,13 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
+using FileParameter = Opc.Ua.WebApi.Client.FileParameter;
 using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 
 namespace Opc.Ua.WebApi.Model
 {
     /// <summary>
-    /// [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/7.29).
+    /// [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/7.28).
     /// </summary>
     [DataContract(Name = "ReadValueId")]
     public partial class ReadValueId : IValidatableObject
@@ -39,7 +40,7 @@ namespace Opc.Ua.WebApi.Model
         /// <param name="attributeId">attributeId (default to 0).</param>
         /// <param name="indexRange">indexRange.</param>
         /// <param name="dataEncoding">dataEncoding.</param>
-        public ReadValueId(string nodeId = default(string), long attributeId = 0, string indexRange = default(string), string dataEncoding = default(string))
+        public ReadValueId(string nodeId = default, long attributeId = 0, string indexRange = default, string dataEncoding = default)
         {
             this.NodeId = nodeId;
             this.AttributeId = attributeId;

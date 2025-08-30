@@ -22,12 +22,13 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
+using FileParameter = Opc.Ua.WebApi.Client.FileParameter;
 using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 
 namespace Opc.Ua.WebApi.Model
 {
     /// <summary>
-    /// [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part14/6.2.3/#6.2.3.2.2).
+    /// [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part5/12.31).
     /// </summary>
     [DataContract(Name = "DataTypeSchemaHeader")]
     public partial class DataTypeSchemaHeader : IValidatableObject
@@ -39,7 +40,7 @@ namespace Opc.Ua.WebApi.Model
         /// <param name="structureDataTypes">structureDataTypes.</param>
         /// <param name="enumDataTypes">enumDataTypes.</param>
         /// <param name="simpleDataTypes">simpleDataTypes.</param>
-        public DataTypeSchemaHeader(List<string> namespaces = default(List<string>), List<StructureDescription> structureDataTypes = default(List<StructureDescription>), List<EnumDescription> enumDataTypes = default(List<EnumDescription>), List<SimpleTypeDescription> simpleDataTypes = default(List<SimpleTypeDescription>))
+        public DataTypeSchemaHeader(List<string> namespaces = default, List<StructureDescription> structureDataTypes = default, List<EnumDescription> enumDataTypes = default, List<SimpleTypeDescription> simpleDataTypes = default)
         {
             this.Namespaces = namespaces;
             this.StructureDataTypes = structureDataTypes;

@@ -22,12 +22,13 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
+using FileParameter = Opc.Ua.WebApi.Client.FileParameter;
 using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 
 namespace Opc.Ua.WebApi.Model
 {
     /// <summary>
-    /// [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/7.34).
+    /// [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/7.33).
     /// </summary>
     [DataContract(Name = "ResponseHeader")]
     public partial class ResponseHeader : IValidatableObject
@@ -41,7 +42,7 @@ namespace Opc.Ua.WebApi.Model
         /// <param name="serviceDiagnostics">serviceDiagnostics.</param>
         /// <param name="stringTable">stringTable.</param>
         /// <param name="additionalHeader">additionalHeader.</param>
-        public ResponseHeader(DateTime timestamp = default(DateTime), long requestHandle = 0, StatusCode serviceResult = default(StatusCode), DiagnosticInfo serviceDiagnostics = default(DiagnosticInfo), List<string> stringTable = default(List<string>), ExtensionObject additionalHeader = default(ExtensionObject))
+        public ResponseHeader(DateTime timestamp = default, long requestHandle = 0, StatusCode serviceResult = default, DiagnosticInfo serviceDiagnostics = default, List<string> stringTable = default, ExtensionObject additionalHeader = default)
         {
             this.Timestamp = timestamp;
             this.RequestHandle = requestHandle;

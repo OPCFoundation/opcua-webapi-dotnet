@@ -10,7 +10,7 @@
 
 
 using Polly;
-using RestSharp;
+using System.Net.Http;
 
 namespace Opc.Ua.WebApi.Client
 {
@@ -22,11 +22,11 @@ namespace Opc.Ua.WebApi.Client
         /// <summary>
         /// Retry policy
         /// </summary>
-        public static Policy<RestResponse> RetryPolicy { get; set; }
+        public static ISyncPolicy<HttpResponseMessage> RetryPolicy { get; set; }
 
         /// <summary>
         /// Async retry policy
         /// </summary>
-        public static AsyncPolicy<RestResponse> AsyncRetryPolicy { get; set; }
+        public static IAsyncPolicy<HttpResponseMessage> AsyncRetryPolicy { get; set; }
     }
 }

@@ -22,6 +22,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
+using FileParameter = Opc.Ua.WebApi.Client.FileParameter;
 using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 
 namespace Opc.Ua.WebApi.Model
@@ -37,10 +38,10 @@ namespace Opc.Ua.WebApi.Model
         /// </summary>
         /// <param name="requestHeader">requestHeader.</param>
         /// <param name="historyReadDetails">historyReadDetails.</param>
-        /// <param name="timestampsToReturn">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/7.40)..</param>
+        /// <param name="timestampsToReturn">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/7.39)..</param>
         /// <param name="releaseContinuationPoints">releaseContinuationPoints (default to false).</param>
         /// <param name="nodesToRead">nodesToRead.</param>
-        public HistoryReadRequest(RequestHeader requestHeader = default(RequestHeader), ExtensionObject historyReadDetails = default(ExtensionObject), int timestampsToReturn = default(int), bool releaseContinuationPoints = false, List<HistoryReadValueId> nodesToRead = default(List<HistoryReadValueId>))
+        public HistoryReadRequest(RequestHeader requestHeader = default, ExtensionObject historyReadDetails = default, int timestampsToReturn = default, bool releaseContinuationPoints = false, List<HistoryReadValueId> nodesToRead = default)
         {
             this.RequestHeader = requestHeader;
             this.HistoryReadDetails = historyReadDetails;
@@ -62,9 +63,9 @@ namespace Opc.Ua.WebApi.Model
         public ExtensionObject HistoryReadDetails { get; set; }
 
         /// <summary>
-        /// [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/7.40).
+        /// [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/7.39).
         /// </summary>
-        /// <value>[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/7.40).</value>
+        /// <value>[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/7.39).</value>
         [DataMember(Name = "TimestampsToReturn", EmitDefaultValue = false)]
         public int TimestampsToReturn { get; set; }
 

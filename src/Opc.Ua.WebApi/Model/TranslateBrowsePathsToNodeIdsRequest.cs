@@ -22,6 +22,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
+using FileParameter = Opc.Ua.WebApi.Client.FileParameter;
 using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 
 namespace Opc.Ua.WebApi.Model
@@ -37,7 +38,7 @@ namespace Opc.Ua.WebApi.Model
         /// </summary>
         /// <param name="requestHeader">requestHeader.</param>
         /// <param name="browsePaths">browsePaths.</param>
-        public TranslateBrowsePathsToNodeIdsRequest(RequestHeader requestHeader = default(RequestHeader), List<BrowsePath> browsePaths = default(List<BrowsePath>))
+        public TranslateBrowsePathsToNodeIdsRequest(RequestHeader requestHeader = default, List<BrowsePath> browsePaths = default)
         {
             this.RequestHeader = requestHeader;
             this.BrowsePaths = browsePaths;

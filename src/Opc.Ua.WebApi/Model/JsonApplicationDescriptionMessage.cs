@@ -22,6 +22,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
+using FileParameter = Opc.Ua.WebApi.Client.FileParameter;
 using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 
 namespace Opc.Ua.WebApi.Model
@@ -41,7 +42,7 @@ namespace Opc.Ua.WebApi.Model
         /// <param name="timestamp">timestamp (default to &quot;0001-01-01T00:00Z&quot;).</param>
         /// <param name="description">description.</param>
         /// <param name="serverCapabilities">serverCapabilities.</param>
-        public JsonApplicationDescriptionMessage(string messageId = default(string), string messageType = default(string), string publisherId = default(string), DateTime timestamp = default(DateTime), ApplicationDescription description = default(ApplicationDescription), List<string> serverCapabilities = default(List<string>))
+        public JsonApplicationDescriptionMessage(string messageId = default, string messageType = default, string publisherId = default, DateTime timestamp = default, ApplicationDescription description = default, List<string> serverCapabilities = default)
         {
             this.MessageId = messageId;
             this.MessageType = messageType;

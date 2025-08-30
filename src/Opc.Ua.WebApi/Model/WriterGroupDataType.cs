@@ -22,6 +22,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
+using FileParameter = Opc.Ua.WebApi.Client.FileParameter;
 using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 
 namespace Opc.Ua.WebApi.Model
@@ -51,7 +52,7 @@ namespace Opc.Ua.WebApi.Model
         /// <param name="securityKeyServices">securityKeyServices.</param>
         /// <param name="maxNetworkMessageSize">maxNetworkMessageSize (default to 0).</param>
         /// <param name="groupProperties">groupProperties.</param>
-        public WriterGroupDataType(int writerGroupId = 0, double publishingInterval = 0D, double keepAliveTime = 0D, int priority = 0, List<string> localeIds = default(List<string>), string headerLayoutUri = default(string), Object transportSettings = default(Object), Object messageSettings = default(Object), List<DataSetWriterDataType> dataSetWriters = default(List<DataSetWriterDataType>), string name = default(string), bool enabled = false, int securityMode = default(int), string securityGroupId = default(string), List<EndpointDescription> securityKeyServices = default(List<EndpointDescription>), long maxNetworkMessageSize = 0, List<KeyValuePair> groupProperties = default(List<KeyValuePair>))
+        public WriterGroupDataType(int writerGroupId = 0, double publishingInterval = 0D, double keepAliveTime = 0D, int priority = 0, List<string> localeIds = default, string headerLayoutUri = default, Object transportSettings = default, Object messageSettings = default, List<DataSetWriterDataType> dataSetWriters = default, string name = default, bool enabled = false, int securityMode = default, string securityGroupId = default, List<EndpointDescription> securityKeyServices = default, long maxNetworkMessageSize = 0, List<KeyValuePair> groupProperties = default)
         {
             this.WriterGroupId = writerGroupId;
             this.PublishingInterval = publishingInterval;

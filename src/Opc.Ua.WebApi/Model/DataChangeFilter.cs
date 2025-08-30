@@ -22,6 +22,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
+using FileParameter = Opc.Ua.WebApi.Client.FileParameter;
 using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 
 namespace Opc.Ua.WebApi.Model
@@ -38,7 +39,7 @@ namespace Opc.Ua.WebApi.Model
         /// <param name="trigger">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/7.10)..</param>
         /// <param name="deadbandType">deadbandType (default to 0).</param>
         /// <param name="deadbandValue">deadbandValue (default to 0D).</param>
-        public DataChangeFilter(int trigger = default(int), long deadbandType = 0, double deadbandValue = 0D)
+        public DataChangeFilter(int trigger = default, long deadbandType = 0, double deadbandValue = 0D)
         {
             this.Trigger = trigger;
             this.DeadbandType = deadbandType;

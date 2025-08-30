@@ -22,6 +22,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
+using FileParameter = Opc.Ua.WebApi.Client.FileParameter;
 using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 
 namespace Opc.Ua.WebApi.Model
@@ -38,7 +39,7 @@ namespace Opc.Ua.WebApi.Model
         /// <param name="requestHeader">requestHeader.</param>
         /// <param name="subscriptionIds">subscriptionIds.</param>
         /// <param name="sendInitialValues">sendInitialValues (default to false).</param>
-        public TransferSubscriptionsRequest(RequestHeader requestHeader = default(RequestHeader), List<long> subscriptionIds = default(List<long>), bool sendInitialValues = false)
+        public TransferSubscriptionsRequest(RequestHeader requestHeader = default, List<long> subscriptionIds = default, bool sendInitialValues = false)
         {
             this.RequestHeader = requestHeader;
             this.SubscriptionIds = subscriptionIds;

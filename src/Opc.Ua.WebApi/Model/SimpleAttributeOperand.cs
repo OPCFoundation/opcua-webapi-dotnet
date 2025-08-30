@@ -22,6 +22,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
+using FileParameter = Opc.Ua.WebApi.Client.FileParameter;
 using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 
 namespace Opc.Ua.WebApi.Model
@@ -39,7 +40,7 @@ namespace Opc.Ua.WebApi.Model
         /// <param name="browsePath">browsePath.</param>
         /// <param name="attributeId">attributeId (default to 0).</param>
         /// <param name="indexRange">indexRange.</param>
-        public SimpleAttributeOperand(string typeDefinitionId = default(string), List<string> browsePath = default(List<string>), long attributeId = 0, string indexRange = default(string))
+        public SimpleAttributeOperand(string typeDefinitionId = default, List<string> browsePath = default, long attributeId = 0, string indexRange = default)
         {
             this.TypeDefinitionId = typeDefinitionId;
             this.BrowsePath = browsePath;

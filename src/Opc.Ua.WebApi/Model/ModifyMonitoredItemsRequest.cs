@@ -22,6 +22,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
+using FileParameter = Opc.Ua.WebApi.Client.FileParameter;
 using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 
 namespace Opc.Ua.WebApi.Model
@@ -37,9 +38,9 @@ namespace Opc.Ua.WebApi.Model
         /// </summary>
         /// <param name="requestHeader">requestHeader.</param>
         /// <param name="subscriptionId">subscriptionId (default to 0).</param>
-        /// <param name="timestampsToReturn">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/7.40)..</param>
+        /// <param name="timestampsToReturn">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/7.39)..</param>
         /// <param name="itemsToModify">itemsToModify.</param>
-        public ModifyMonitoredItemsRequest(RequestHeader requestHeader = default(RequestHeader), long subscriptionId = 0, int timestampsToReturn = default(int), List<MonitoredItemModifyRequest> itemsToModify = default(List<MonitoredItemModifyRequest>))
+        public ModifyMonitoredItemsRequest(RequestHeader requestHeader = default, long subscriptionId = 0, int timestampsToReturn = default, List<MonitoredItemModifyRequest> itemsToModify = default)
         {
             this.RequestHeader = requestHeader;
             this.SubscriptionId = subscriptionId;
@@ -60,9 +61,9 @@ namespace Opc.Ua.WebApi.Model
         public long SubscriptionId { get; set; }
 
         /// <summary>
-        /// [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/7.40).
+        /// [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/7.39).
         /// </summary>
-        /// <value>[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/7.40).</value>
+        /// <value>[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/7.39).</value>
         [DataMember(Name = "TimestampsToReturn", EmitDefaultValue = false)]
         public int TimestampsToReturn { get; set; }
 

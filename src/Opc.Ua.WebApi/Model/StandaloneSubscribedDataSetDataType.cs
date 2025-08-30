@@ -22,6 +22,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
+using FileParameter = Opc.Ua.WebApi.Client.FileParameter;
 using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 
 namespace Opc.Ua.WebApi.Model
@@ -39,7 +40,7 @@ namespace Opc.Ua.WebApi.Model
         /// <param name="dataSetFolder">dataSetFolder.</param>
         /// <param name="dataSetMetaData">dataSetMetaData.</param>
         /// <param name="subscribedDataSet">subscribedDataSet.</param>
-        public StandaloneSubscribedDataSetDataType(string name = default(string), List<string> dataSetFolder = default(List<string>), DataSetMetaDataType dataSetMetaData = default(DataSetMetaDataType), Object subscribedDataSet = default(Object))
+        public StandaloneSubscribedDataSetDataType(string name = default, List<string> dataSetFolder = default, DataSetMetaDataType dataSetMetaData = default, Object subscribedDataSet = default)
         {
             this.Name = name;
             this.DataSetFolder = dataSetFolder;

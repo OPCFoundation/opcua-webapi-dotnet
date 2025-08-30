@@ -22,6 +22,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
+using FileParameter = Opc.Ua.WebApi.Client.FileParameter;
 using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 
 namespace Opc.Ua.WebApi.Model
@@ -39,7 +40,7 @@ namespace Opc.Ua.WebApi.Model
         /// <param name="builtInType">builtInType (default to 0).</param>
         /// <param name="dataTypeId">dataTypeId.</param>
         /// <param name="name">name.</param>
-        public EnumDescription(EnumDefinition enumDefinition = default(EnumDefinition), int builtInType = 0, string dataTypeId = default(string), string name = default(string))
+        public EnumDescription(EnumDefinition enumDefinition = default, int builtInType = 0, string dataTypeId = default, string name = default)
         {
             this.EnumDefinition = enumDefinition;
             this.BuiltInType = builtInType;

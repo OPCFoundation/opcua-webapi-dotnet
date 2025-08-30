@@ -22,12 +22,13 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
+using FileParameter = Opc.Ua.WebApi.Client.FileParameter;
 using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 
 namespace Opc.Ua.WebApi.Model
 {
     /// <summary>
-    /// [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/7.42).
+    /// [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/7.41).
     /// </summary>
     [DataContract(Name = "UserTokenPolicy")]
     public partial class UserTokenPolicy : IValidatableObject
@@ -36,11 +37,11 @@ namespace Opc.Ua.WebApi.Model
         /// Initializes a new instance of the <see cref="UserTokenPolicy" /> class.
         /// </summary>
         /// <param name="policyId">policyId.</param>
-        /// <param name="tokenType">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/7.43)..</param>
+        /// <param name="tokenType">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/7.42)..</param>
         /// <param name="issuedTokenType">issuedTokenType.</param>
         /// <param name="issuerEndpointUrl">issuerEndpointUrl.</param>
         /// <param name="securityPolicyUri">securityPolicyUri.</param>
-        public UserTokenPolicy(string policyId = default(string), int tokenType = default(int), string issuedTokenType = default(string), string issuerEndpointUrl = default(string), string securityPolicyUri = default(string))
+        public UserTokenPolicy(string policyId = default, int tokenType = default, string issuedTokenType = default, string issuerEndpointUrl = default, string securityPolicyUri = default)
         {
             this.PolicyId = policyId;
             this.TokenType = tokenType;
@@ -56,9 +57,9 @@ namespace Opc.Ua.WebApi.Model
         public string PolicyId { get; set; }
 
         /// <summary>
-        /// [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/7.43).
+        /// [Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/7.42).
         /// </summary>
-        /// <value>[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/7.43).</value>
+        /// <value>[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part4/7.42).</value>
         [DataMember(Name = "TokenType", EmitDefaultValue = false)]
         public int TokenType { get; set; }
 

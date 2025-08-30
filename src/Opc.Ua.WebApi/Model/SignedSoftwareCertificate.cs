@@ -22,6 +22,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
+using FileParameter = Opc.Ua.WebApi.Client.FileParameter;
 using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 
 namespace Opc.Ua.WebApi.Model
@@ -37,7 +38,7 @@ namespace Opc.Ua.WebApi.Model
         /// </summary>
         /// <param name="certificateData">certificateData.</param>
         /// <param name="signature">signature.</param>
-        public SignedSoftwareCertificate(byte[] certificateData = default(byte[]), byte[] signature = default(byte[]))
+        public SignedSoftwareCertificate(byte[] certificateData = default, byte[] signature = default)
         {
             this.CertificateData = certificateData;
             this.Signature = signature;

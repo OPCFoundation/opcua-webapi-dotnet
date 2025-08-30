@@ -22,6 +22,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
 using System.ComponentModel.DataAnnotations;
+using FileParameter = Opc.Ua.WebApi.Client.FileParameter;
 using OpenAPIDateConverter = Opc.Ua.WebApi.Client.OpenAPIDateConverter;
 
 namespace Opc.Ua.WebApi.Model
@@ -39,7 +40,7 @@ namespace Opc.Ua.WebApi.Model
         /// <param name="baseDataType">baseDataType.</param>
         /// <param name="structureType">[Link to specification](https://reference.opcfoundation.org/v105/Core/docs/Part5/12.2.5/#12.2.5.3)..</param>
         /// <param name="fields">fields.</param>
-        public StructureDefinition(string defaultEncodingId = default(string), string baseDataType = default(string), int structureType = default(int), List<StructureField> fields = default(List<StructureField>))
+        public StructureDefinition(string defaultEncodingId = default, string baseDataType = default, int structureType = default, List<StructureField> fields = default)
         {
             this.DefaultEncodingId = defaultEncodingId;
             this.BaseDataType = baseDataType;
