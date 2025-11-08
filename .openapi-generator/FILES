@@ -1,5 +1,4 @@
 .gitignore
-.openapi-generator-ignore
 Opc.Ua.WebApi.sln
 README.md
 api/openapi.yaml

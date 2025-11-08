@@ -34,7 +34,7 @@ namespace Opc.Ua.WebApi.Client
         /// Version of the package.
         /// </summary>
         /// <value>Version of the package.</value>
-        public const string Version = "15.5.0";
+        public const string Version = "15.6.0";
 
         /// <summary>
         /// Identifier for ISO 8601 DateTime Format
@@ -113,7 +113,7 @@ namespace Opc.Ua.WebApi.Client
         public Configuration()
         {
             Proxy = null;
-            UserAgent = WebUtility.UrlEncode("OpenAPI-Generator/15.5.0/csharp");
+            UserAgent = WebUtility.UrlEncode("OpenAPI-Generator/15.6.0/csharp");
             BasePath = "http://localhost:4840";
             DefaultHeaders = new ConcurrentDictionary<string, string>();
             ApiKey = new ConcurrentDictionary<string, string>();
@@ -536,7 +536,7 @@ namespace Opc.Ua.WebApi.Client
             report += "    OS: " + System.Environment.OSVersion + "\n";
             report += "    .NET Framework Version: " + System.Environment.Version  + "\n";
             report += "    Version of the API: 1.05.4\n";
-            report += "    SDK Package Version: 15.5.0\n";
+            report += "    SDK Package Version: 15.6.0\n";
 
             return report;
         }
